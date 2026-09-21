@@ -3,7 +3,7 @@
 import { moduleUrl } from "./config.mjs";
 
 const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
-const safeColor = (c) => (/^(#[0-9a-f]{3,8}|[a-z]+|(rgb|hsl|oklch)a?\([\d\s.,%/-]+\))$/i.test(c ?? "") ? c : "#8a3b2a");
+const safeColor = (c) => (/^(#[0-9a-f]{3,8}|[a-z]+|(rgb|hsl|oklch)a?\([\d\s.,%/-]+\))$/i.test(c ?? "") ? c : "#ef8f78");
 
 export function renderHomepage(template, modules, images, base) {
   const available = modules.filter((m) => (m.status ?? "available") === "available");

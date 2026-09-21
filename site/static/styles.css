@@ -1,18 +1,20 @@
 /* Interactive Human Biology — homepage.
-   An anatomy-atlas look: warm paper, ink, hairline rules, and each lesson presented as a numbered plate.
-   The paper and ink come from the Types of Joints sandbox palette. One screen on desktop; tablets and phones stack. */
+   An anatomy-atlas layout (serif titles, hairline rules, each lesson a numbered plate) on a neutral charcoal that sits
+   between the two lessons' own backgrounds, so opening a lesson feels continuous. Warm ink from the Joints film UI.
+   One screen on desktop; tablets and phones stack. */
 :root {
-  --paper: #f3efe6;
-  --ink: #1b1e22;
-  --ink-2: #43484e;
-  --muted: #62666b;
-  --rule: #d6cdbc;
-  --terracotta: #a4402b;
+  --paper: #111316;
+  --ink: #f2f0ea;
+  --ink-2: #c9c6be;
+  --muted: #9a978f;
+  --rule: rgba(242, 240, 234, 0.13);
+  --rule-strong: rgba(242, 240, 234, 0.5);
+  --terracotta: #ef8f78;
   --serif: "Newsreader", "Iowan Old Style", Georgia, "Times New Roman", serif;
   --sans: "IBM Plex Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
   --gutter: clamp(18px, 4vw, 64px);
   --max: 1280px;
-  color-scheme: light;
+  color-scheme: dark;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -33,7 +35,7 @@ a { color: inherit; }
 img { display: block; max-width: 100%; }
 h1, h2, h3 { margin: 0; font-weight: 500; text-wrap: balance; }
 p, ul { margin: 0; }
-::selection { background: rgba(164, 64, 43, 0.18); }
+::selection { background: rgba(239, 143, 120, 0.3); }
 :focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
 .skip { position: absolute; left: 12px; top: -48px; z-index: 10; padding: 10px 14px; background: var(--ink); color: var(--paper); text-decoration: none; }
 .skip:focus { top: 12px; }
@@ -42,7 +44,7 @@ p, ul { margin: 0; }
 
 /* ── Masthead ─────────────────────────────────────────────────────────────── */
 .site-header { position: relative; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
-.site-header::after { content: ""; position: absolute; left: var(--gutter); right: var(--gutter); bottom: 0; border-bottom: 1px solid var(--ink); }
+.site-header::after { content: ""; position: absolute; left: var(--gutter); right: var(--gutter); bottom: 0; border-bottom: 1px solid var(--rule-strong); }
 .brand, .header-meta { padding-block: 20px 16px; }
 .brand { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; font: 500 19px/1 var(--serif); letter-spacing: -0.005em; }
 .brand-mark { color: var(--terracotta); flex: none; }
@@ -66,14 +68,16 @@ main { display: flex; align-items: center; padding-block: clamp(20px, 4vh, 48px)
 .card { --accent: var(--terracotta); display: flex; }
 .card article { position: relative; display: flex; flex-direction: column; width: 100%; }
 
-/* The plate: a dark 3D render mounted on the page. */
+/* The plate: the 3D render, framed by a hairline so it reads as mounted on the dark page. */
 .card-media {
-  aspect-ratio: 16 / 10; max-height: 33vh; overflow: hidden; border-radius: 3px; background: #15181c;
-  box-shadow: 0 0 0 1px rgba(27, 30, 34, 0.14), 0 20px 32px -24px rgba(27, 30, 34, 0.6);
+  aspect-ratio: 16 / 10; max-height: 33vh; overflow: hidden; border-radius: 3px; background: #0a0c0f;
+  box-shadow: 0 0 0 1px rgba(242, 240, 234, 0.12), 0 24px 40px -28px rgba(0, 0, 0, 0.9);
 }
+.card:hover .card-media { box-shadow: 0 0 0 1px color-mix(in srgb, var(--accent) 45%, transparent), 0 24px 40px -28px rgba(0, 0, 0, 0.9); }
+.card-media { transition: box-shadow 0.3s ease; }
 .card-media img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1); }
 .card:hover .card-media img { transform: scale(1.025); }
-.card-placeholder { display: grid; place-items: center; height: 100%; font: 400 64px/1 var(--serif); color: #cfc6b5; }
+.card-placeholder { display: grid; place-items: center; height: 100%; font: 400 64px/1 var(--serif); color: #3a3d42; }
 
 .card-kicker { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 8px; margin-top: 16px; font-size: 13px; color: var(--muted); }
 .plate { font: italic 400 16px/1 var(--serif); color: var(--accent); }
