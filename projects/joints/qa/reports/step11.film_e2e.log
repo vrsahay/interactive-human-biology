@@ -1,0 +1,111 @@
+[WebServer] [plugin builtin:vite-reporter] 
+[WebServer] (!) Some chunks are larger than 500 kB after minification. Consider:
+[WebServer] - Using dynamic import() to code-split the application
+[WebServer] - Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
+[WebServer] - Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+
+Running 10 tests using 1 worker
+
+  ok  1 tests\e2e\film.spec.ts:17:3 › video-first lesson (default route) › opens on the full-body intro with the title card, no joint asset, badges and chapter markers (8.7s)
+  ok  2 tests\e2e\film.spec.ts:33:3 › video-first lesson (default route) › play / pause, and the camera travels across a shot boundary into the skull (5.3s)
+  x   3 tests\e2e\film.spec.ts:59:3 › video-first lesson (default route) › chapter markers seek and reconstruct each section: fixed, pivot, ball-and-socket, hinge (4.0s)
+  x   4 tests\e2e\film.spec.ts:104:3 › video-first lesson (default route) › elbow hero: plays from 45° to 90°, extension reaches the approximate 145° and returns to 0° (13.4s)
+  x   5 tests\e2e\film.spec.ts:124:3 › video-first lesson (default route) › recap returns to the full body with all four joint types marked (9.5s)
+  ok  6 tests\e2e\film.spec.ts:145:3 › video-first lesson (default route) › timeline keyboard seeking, replay and reset (10.7s)
+  ok  7 tests\e2e\film.spec.ts:170:3 › video-first lesson (default route) › hinge chapter: dragging the forearm pauses the film, bends the elbow, and the film resumes (11.7s)
+  x   8 tests\e2e\film.spec.ts:218:3 › video-first lesson (default route) › interactive check: bending to about 90° with the keyboard completes the lesson (3.9s)
+  ok  9 tests\e2e\film.spec.ts:236:3 › video-first lesson (default route) › reduced motion: shot boundaries cut, poses hold keyframes, captions do not animate (10.2s)
+  ok 10 tests\e2e\film.spec.ts:258:3 › video-first lesson (default route) › mobile viewport: no horizontal scroll, controls reachable, subject centred (3.1s)
+
+
+  1) tests\e2e\film.spec.ts:59:3 › video-first lesson (default route) › chapter markers seek and reconstruct each section: fixed, pivot, ball-and-socket, hinge 
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: getByTestId('film-caption').locator('[data-provenance=source-excerpt]')
+    Expected substring: "The elbow bends and straightens in one direction, similar to a door hinge."
+    Error: strict mode violation: getByTestId('film-caption').locator('[data-provenance=source-excerpt]') resolved to 2 elements:
+        1) <p data-provenance="source-excerpt" data-text-key="source.elbow_hinge" class="film-caption__text is-source">…</p> aka getByText('The elbow bends and')
+        2) <span data-provenance="source-excerpt" class="film-badge film-badge--source" title="Sentence taken verbatim from the curriculum excerpt supplied in the project brief. The NCERT reference files are not in the repository, so the wording has not been verified against the textbook.">…</span> aka getByText('Source excerpt: Sentence')
+
+    Call log:
+      - Expect "toContainText" getByTestId('film-caption').locator('[data-provenance=source-excerpt]') with timeout 30000ms
+      - waiting for getByTestId('film-caption').locator('[data-provenance=source-excerpt]')
+
+
+      87 |     await expect(page.getByTestId("film")).toHaveAttribute("data-chapter", "hinge");
+      88 |     await seekShot(page, "hinge.source", 4000);
+    > 89 |     await expect(page.getByTestId("film-caption").locator("[data-provenance=source-excerpt]")).toContainText("The elbow bends and straightens in one direction, similar to a door hinge.");
+         |                                                                                                ^
+      90 |     await expect(page.getByTestId("film-caption").locator(".film-badge--source")).toHaveCount(1);
+      91 |     await seekShot(page, "hinge.bones", 3000);
+      92 |     const joint = await film<string[]>(page, "jointVisible");
+        at C:\Users\Admin\dev\joints-platform\tests\e2e\film.spec.ts:89:96
+
+    Error Context: test-results\film-video-first-lesson-de-903a8-pivot-ball-and-socket-hinge\error-context.md
+
+  2) tests\e2e\film.spec.ts:104:3 › video-first lesson (default route) › elbow hero: plays from 45° to 90°, extension reaches the approximate 145° and returns to 0° 
+
+    Error: expect(received).toBeCloseTo(expected, precision)
+
+    Expected: 90
+    Received: 89.99950316367901
+
+    Expected precision:    6
+    Expected difference: < 0.0000005
+    Received difference:   0.0004968363209911786
+
+      110 |     await page.waitForFunction(() => (window as any).__jointsQA.getDof("flexion") >= 89.999, null, { timeout: 15_000 });
+      111 |     await film(page, "pause");
+    > 112 |     expect(await qa<number>(page, "getDof", "flexion")).toBeCloseTo(90, 6);
+          |                                                         ^
+      113 |     await expect(page.getByTestId("film-caption").locator("[data-text-key='hinge.flexion']")).toBeVisible();
+      114 |     await seekShot(page, "hinge.extension", 3200);
+      115 |     expect(await qa<number>(page, "getDof", "flexion")).toBeCloseTo(145, 6);
+        at C:\Users\Admin\dev\joints-platform\tests\e2e\film.spec.ts:112:57
+
+    Error Context: test-results\film-video-first-lesson-de-dfbb0-mate-145°-and-returns-to-0°\error-context.md
+
+  3) tests\e2e\film.spec.ts:124:3 › video-first lesson (default route) › recap returns to the full body with all four joint types marked 
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+      132 |     expect(await film<string[]>(page, "jointVisible")).toEqual([]);
+      133 |     const b = await body(page);
+    > 134 |     expect(b.shell).toBe(true);
+          |                     ^
+      135 |     expect(b.handedOver).toEqual([]);
+      136 |     expect(b.visible).toBeGreaterThan(250);
+      137 |     const concepts = await film<string[]>(page, "concepts");
+        at C:\Users\Admin\dev\joints-platform\tests\e2e\film.spec.ts:134:21
+
+    Error Context: test-results\film-video-first-lesson-de-abac5-all-four-joint-types-marked\error-context.md
+
+  4) tests\e2e\film.spec.ts:218:3 › video-first lesson (default route) › interactive check: bending to about 90° with the keyboard completes the lesson 
+
+    Error: expect(received).toBeLessThanOrEqual(expected)
+
+    Expected: <= 5
+    Received:    90
+
+      227 |     for (let i = 0; i < 9; i++) await page.keyboard.press("PageUp");
+      228 |     const v = await qa<number>(page, "getDof", "flexion");
+    > 229 |     expect(Math.abs(v - 90)).toBeLessThanOrEqual(5);
+          |                              ^
+      230 |     await page.getByTestId("film-check").click();
+      231 |     await page.waitForFunction(() => (window as any).__jointsFilm.state().check.status === "correct", null, { timeout: 5_000 });
+      232 |     expect((await state(page)).ended).toBe(true);
+        at C:\Users\Admin\dev\joints-platform\tests\e2e\film.spec.ts:229:30
+
+    Error Context: test-results\film-video-first-lesson-de-8be7c-yboard-completes-the-lesson\error-context.md
+
+  4 failed
+    tests\e2e\film.spec.ts:59:3 › video-first lesson (default route) › chapter markers seek and reconstruct each section: fixed, pivot, ball-and-socket, hinge 
+    tests\e2e\film.spec.ts:104:3 › video-first lesson (default route) › elbow hero: plays from 45° to 90°, extension reaches the approximate 145° and returns to 0° 
+    tests\e2e\film.spec.ts:124:3 › video-first lesson (default route) › recap returns to the full body with all four joint types marked 
+    tests\e2e\film.spec.ts:218:3 › video-first lesson (default route) › interactive check: bending to about 90° with the keyboard completes the lesson 
+  6 passed (1.8m)
+EXIT 1

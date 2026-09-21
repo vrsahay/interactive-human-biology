@@ -1,0 +1,494 @@
+{
+ "forcedStyleLayout": [],
+ "breakdown": null,
+ "scenario": "orbit",
+ "profile": "mobile4x",
+ "dist": "dist",
+ "query": "",
+ "generatedAt": "2026-09-17T17:48:41.897Z",
+ "markers": {},
+ "mainThread": {
+  "totalTaskMs": 12206.1,
+  "topTasks": [
+   {
+    "atMs": 9.7,
+    "durMs": 576.6
+   },
+   {
+    "atMs": 9.7,
+    "durMs": 576.4
+   },
+   {
+    "atMs": 2642.9,
+    "durMs": 40.7
+   },
+   {
+    "atMs": 2642.9,
+    "durMs": 40.7
+   },
+   {
+    "atMs": 1726.5,
+    "durMs": 36.4
+   },
+   {
+    "atMs": 1726.5,
+    "durMs": 36
+   },
+   {
+    "atMs": 2942.4,
+    "durMs": 34.3
+   },
+   {
+    "atMs": 2942.4,
+    "durMs": 34.1
+   },
+   {
+    "atMs": 2737.7,
+    "durMs": 33.9
+   },
+   {
+    "atMs": 2737.7,
+    "durMs": 33.9
+   },
+   {
+    "atMs": 2992.6,
+    "durMs": 33.1
+   },
+   {
+    "atMs": 3083.1,
+    "durMs": 33
+   },
+   {
+    "atMs": 2992.6,
+    "durMs": 32.9
+   },
+   {
+    "atMs": 3083.1,
+    "durMs": 32.8
+   },
+   {
+    "atMs": 675.9,
+    "durMs": 32.7
+   }
+  ],
+  "byEvent": [
+   [
+    "v8.callFunction",
+    3772.3
+   ],
+   [
+    "FunctionCall",
+    3690.4
+   ],
+   [
+    "WebFrameWidgetImpl::BeginMainFrame",
+    2911.3
+   ],
+   [
+    "Blink.Animate.UpdateTime",
+    2836.2
+   ],
+   [
+    "AsyncTask Run",
+    2827.3
+   ],
+   [
+    "PageAnimator::serviceScriptedAnimations",
+    2820.9
+   ],
+   [
+    "FrameRequestCallbackCollection::ExecuteFrameCallbacks",
+    2782.7
+   ],
+   [
+    "FireAnimationFrame",
+    2780.6
+   ],
+   [
+    "EventHandler::handleMouseMoveEvent",
+    1229.1
+   ],
+   [
+    "EventDispatch",
+    1095.3
+   ],
+   [
+    "WebFrameWidgetImpl::UpdateLifecycle",
+    723.4
+   ],
+   [
+    "V8.StackGuard",
+    648.7
+   ],
+   [
+    "V8.HandleInterrupts",
+    645.7
+   ],
+   [
+    "Receive mojo message",
+    578.2
+   ],
+   [
+    "V8.InvokeApiInterruptCallbacks",
+    559.2
+   ],
+   [
+    "CpuProfiler::StartProfiling",
+    559
+   ],
+   [
+    "LocalFrameView::RunPaintLifecyclePhase",
+    286.1
+   ],
+   [
+    "LocalFrameView::UpdateStyleAndLayout",
+    271.1
+   ],
+   [
+    "Commit",
+    269.6
+   ],
+   [
+    "LocalFrameView::RunStyleAndLayoutLifecyclePhases",
+    263.7
+   ],
+   [
+    "Blink.Style.UpdateTime",
+    182.2
+   ],
+   [
+    "UpdateLayoutTree",
+    175.6
+   ],
+   [
+    "Document::updateStyle",
+    161.1
+   ],
+   [
+    "Blink.Paint.UpdateTime",
+    152.2
+   ],
+   [
+    "RunMicrotasks",
+    142.7
+   ],
+   [
+    "Document::recalcStyle",
+    138.9
+   ],
+   [
+    "LocalFrameView::pushPaintArtifactToCompositor",
+    118.5
+   ],
+   [
+    "Blink.CompositingCommit.UpdateTime",
+    114.8
+   ],
+   [
+    "PrePaint",
+    111.7
+   ],
+   [
+    "Layerize",
+    111.1
+   ],
+   [
+    "Paint",
+    97.6
+   ],
+   [
+    "PaintArtifactCompositor::Update",
+    93.9
+   ],
+   [
+    "CommandBufferHelper::Flush",
+    73.1
+   ],
+   [
+    "LocalFrameView::RunPrePaintLifecyclePhase",
+    73
+   ],
+   [
+    "Blink.PrePaint.UpdateTime",
+    68.9
+   ],
+   [
+    "TimerBase::run",
+    61.9
+   ],
+   [
+    "CommandBufferProxyImpl::Flush",
+    60.8
+   ],
+   [
+    "TimerFire",
+    57.2
+   ],
+   [
+    "Blink.Layout.UpdateTime",
+    54.2
+   ],
+   [
+    "Document::UpdateStyleAndLayout",
+    43.7
+   ]
+  ],
+  "gc": {
+   "minorMs": 45.1,
+   "majorMs": 0,
+   "count": 13
+  }
+ },
+ "cpuProfile": {
+  "sampledMs": 8568,
+  "bySource": [
+   [
+    "(program)",
+    3021
+   ],
+   [
+    "(idle)",
+    2491
+   ],
+   [
+    "three.js",
+    2155
+   ],
+   [
+    "(native)",
+    578
+   ],
+   [
+    "src/engine/overlays",
+    148
+   ],
+   [
+    "src/engine/core",
+    71
+   ],
+   [
+    "(garbage collector)",
+    42
+   ],
+   [
+    "src/engine/anatomy",
+    16
+   ],
+   [
+    "src/engine/rendering",
+    14
+   ],
+   [
+    "src/engine/joints",
+    12
+   ],
+   [
+    "src/engine/interaction",
+    11
+   ],
+   [
+    "nm/preact",
+    3
+   ],
+   [
+    "src/ui/video",
+    3
+   ],
+   [
+    "src/engine/perf",
+    2
+   ],
+   [
+    "src/engine/camera",
+    1
+   ]
+  ],
+  "topFunctions": [
+   [
+    "(program)",
+    3021
+   ],
+   [
+    "(idle)",
+    2491
+   ],
+   [
+    "getVertexPosition (nm/three/build/three.core.js:24135)",
+    524
+   ],
+   [
+    "Jn (nm/three/build/three.core.js:2688)",
+    239
+   ],
+   [
+    "intersectTriangle (nm/three/build/three.core.js:23536)",
+    193
+   ],
+   [
+    "(anonymous)",
+    142
+   ],
+   [
+    "getX (nm/three/build/three.core.js:17333)",
+    108
+   ],
+   [
+    "uniformMatrix4fv",
+    60
+   ],
+   [
+    "xt (nm/three/build/three.module.js:18407)",
+    55
+   ],
+   [
+    "update (src/engine/overlays/LabelSystem.ts:180)",
+    54
+   ],
+   [
+    "bindVertexArray",
+    51
+   ],
+   [
+    "renderBufferDirect (nm/three/build/three.module.js:17233)",
+    47
+   ],
+   [
+    "ka (nm/three/build/three.core.js:24411)",
+    47
+   ],
+   [
+    "setAttribute",
+    47
+   ],
+   [
+    "s (nm/three/build/three.module.js:1623)",
+    46
+   ],
+   [
+    "d (nm/three/build/three.module.js:1680)",
+    43
+   ],
+   [
+    "drawElements",
+    43
+   ],
+   [
+    "(garbage collector)",
+    42
+   ],
+   [
+    "_computeIntersections (nm/three/build/three.core.js:24243)",
+    42
+   ],
+   [
+    "p (nm/three/build/three.module.js:1759)",
+    42
+   ],
+   [
+    "Rh (src/engine/overlays/LabelSystem.ts:50)",
+    39
+   ],
+   [
+    "evaluate",
+    38
+   ],
+   [
+    "Ll (nm/three/build/three.module.js:5078)",
+    38
+   ],
+   [
+    "renderFrame (src/engine/core/App.ts:970)",
+    32
+   ],
+   [
+    "lt (nm/three/build/three.module.js:17897)",
+    32
+   ],
+   [
+    "_handleMouseMoveRotate (nm/three/examples/jsm/controls/OrbitControls.js:1110)",
+    29
+   ],
+   [
+    "Oa (nm/three/build/three.core.js:24380)",
+    28
+   ],
+   [
+    "hide (src/engine/overlays/LabelSystem.ts:293)",
+    28
+   ],
+   [
+    "updateMatrixWorld (nm/three/build/three.core.js:13067)",
+    28
+   ],
+   [
+    "requestAnimationFrame",
+    26
+   ],
+   [
+    "multiplyMatrices (nm/three/build/three.core.js:10570)",
+    25
+   ],
+   [
+    "c (nm/three/build/three.module.js:4192)",
+    24
+   ],
+   [
+    "o (nm/three/build/three.module.js:242)",
+    23
+   ],
+   [
+    "uniformMatrix3fv",
+    23
+   ],
+   [
+    "upload (nm/three/build/three.module.js:6123)",
+    20
+   ],
+   [
+    "setupDragListeners",
+    18
+   ],
+   [
+    "clear",
+    18
+   ],
+   [
+    "Il (nm/three/build/three.module.js:5064)",
+    17
+   ],
+   [
+    "addEventListener",
+    17
+   ],
+   [
+    "Gl (nm/three/build/three.module.js:5284)",
+    17
+   ],
+   [
+    "a (nm/three/build/three.module.js:15139)",
+    16
+   ],
+   [
+    "render (nm/three/build/three.module.js:17674)",
+    15
+   ],
+   [
+    "Vl (nm/three/build/three.module.js:5159)",
+    15
+   ],
+   [
+    "compose (nm/three/build/three.core.js:11030)",
+    15
+   ],
+   [
+    "gt (nm/three/build/three.module.js:18192)",
+    14
+   ]
+  ]
+ },
+ "frames": {
+  "count": 233,
+  "intervalP50": 33.699,
+  "intervalP95": 43.399
+ }
+}

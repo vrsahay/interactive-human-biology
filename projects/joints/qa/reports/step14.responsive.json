@@ -1,0 +1,182 @@
+{
+ "generatedAt": "2026-09-21T10:29:27.240Z",
+ "w390": [
+  {
+   "shot": "recall.open",
+   "playerHeight": 244,
+   "under": [],
+   "clipped": [],
+   "small": [],
+   "horizontalScroll": false,
+   "open": [
+    "caption"
+   ],
+   "opened": null
+  },
+  {
+   "shot": "hinge.check",
+   "playerHeight": 196,
+   "under": [],
+   "clipped": [],
+   "small": [],
+   "horizontalScroll": false,
+   "open": [
+    "caption",
+    "interact"
+   ],
+   "opened": null
+  },
+  {
+   "shot": "recall.open",
+   "playerHeight": 196,
+   "under": [],
+   "clipped": [],
+   "small": [],
+   "horizontalScroll": false,
+   "open": [
+    "recall"
+   ],
+   "opened": "recall"
+  },
+  {
+   "shot": "fixed.name",
+   "playerHeight": 0,
+   "under": [],
+   "clipped": [],
+   "small": [],
+   "horizontalScroll": false,
+   "open": [
+    "explore"
+   ],
+   "opened": "explore"
+  },
+  {
+   "shot": "pivot.rotate",
+   "playerHeight": 0,
+   "under": [],
+   "clipped": [],
+   "small": [],
+   "horizontalScroll": false,
+   "open": [
+    "explore"
+   ],
+   "opened": "explore"
+  },
+  {
+   "shot": "ball.move",
+   "playerHeight": 0,
+   "under": [],
+   "clipped": [],
+   "small": [],
+   "horizontalScroll": false,
+   "open": [
+    "explore"
+   ],
+   "opened": "explore"
+  },
+  {
+   "shot": "hinge.flexion",
+   "playerHeight": 0,
+   "under": [],
+   "clipped": [],
+   "small": [],
+   "horizontalScroll": false,
+   "open": [
+    "explore"
+   ],
+   "opened": "explore"
+  }
+ ],
+ "w412": [
+  {
+   "shot": "recall.open",
+   "playerHeight": 244,
+   "under": [],
+   "clipped": [],
+   "small": [],
+   "horizontalScroll": false,
+   "open": [
+    "caption"
+   ],
+   "opened": null
+  },
+  {
+   "shot": "hinge.check",
+   "playerHeight": 196,
+   "under": [],
+   "clipped": [],
+   "small": [],
+   "horizontalScroll": false,
+   "open": [
+    "caption",
+    "interact"
+   ],
+   "opened": null
+  },
+  {
+   "shot": "recall.open",
+   "playerHeight": 196,
+   "under": [],
+   "clipped": [],
+   "small": [],
+   "horizontalScroll": false,
+   "open": [
+    "recall"
+   ],
+   "opened": "recall"
+  },
+  {
+   "shot": "fixed.name",
+   "playerHeight": 0,
+   "under": [],
+   "clipped": [],
+   "small": [],
+   "horizontalScroll": false,
+   "open": [
+    "explore"
+   ],
+   "opened": "explore"
+  },
+  {
+   "shot": "pivot.rotate",
+   "playerHeight": 0,
+   "under": [],
+   "clipped": [],
+   "small": [],
+   "horizontalScroll": false,
+   "open": [
+    "explore"
+   ],
+   "opened": "explore"
+  },
+  {
+   "shot": "ball.move",
+   "playerHeight": 0,
+   "under": [],
+   "clipped": [],
+   "small": [],
+   "horizontalScroll": false,
+   "open": [
+    "explore"
+   ],
+   "opened": "explore"
+  },
+  {
+   "shot": "hinge.flexion",
+   "playerHeight": 0,
+   "under": [],
+   "clipped": [],
+   "small": [],
+   "horizontalScroll": false,
+   "open": [
+    "explore"
+   ],
+   "opened": "explore"
+  }
+ ],
+ "recallScope": {
+  "endedByEscape": true,
+  "filmResumes": true,
+  "endedByLeavingChapter": true
+ }
+}

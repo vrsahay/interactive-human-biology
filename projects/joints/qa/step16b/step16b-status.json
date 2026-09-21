@@ -1,0 +1,209 @@
+{
+  "step": "16B",
+  "title": "Teaching-depth pass - make the four joint categories equally explanatory, and make playback reliable",
+  "status": "COMPLETE",
+  "statusReason": "All four categories are now taught in the same six-beat shape with a reason of their own and a learner task, the spoken explanation is separated from the headline caption, shot length is derived from narration, the lesson starts from a learner gesture, and the film clock no longer slows down when frames are dropped. Every one of those is held by a test against the shipped content and the running build. The validated elbow, the frozen assets and the honesty system are unchanged.",
+  "generatedAt": "2026-09-20T16:30:00.000Z",
+  "branch": "step16b-teaching-depth",
+  "baseline": {
+    "from": "step16a-reference-audit (4828b3b), which is step15b-learner-clarity-complete (b8ca17e) plus the read-only Step-16 audit",
+    "step13Frozen": "step13-frozen-baseline (537ac71) - unchanged",
+    "step15aPackage": "qa/expert/step15/ - untouched",
+    "step15bPackage": "qa/expert/step15b/ - untouched",
+    "publicReleaseReady": false
+  },
+  "chapterDurations": {
+    "before": { "hook": 27.0, "what_is_joint": 21.0, "fixed": 14.0, "pivot": 21.0, "ball_socket": 22.5, "hinge": 98.1, "compare": 34.0, "recall": 11.0, "body_map": 31.0, "total": 279.6 },
+    "after": { "hook": 27.3, "what_is_joint": 21.9, "fixed": 49.3, "pivot": 44.5, "ball_socket": 43.9, "hinge": 115.6, "compare": 40.7, "recall": 11.7, "body_map": 30.4, "total": 385.3 },
+    "note": "The three chapters that were introductions are now within a factor of 1.12 of each other (49.3 / 44.5 / 43.9 s). The thinnest was one seventh of the elbow chapter; it is now 38 % of it."
+  },
+  "teachingBeats": {
+    "shape": ["arrive", "look", "movement", "reason", "name", "explore task"],
+    "declaredAsContent": "chapter.teaching in content/lessons/hinge-elbow.json, validated at build time",
+    "fixed": { "shots": 6, "spokenWords": 138, "beatsInOrder": true },
+    "pivot": { "shots": 6, "spokenWords": 124, "beatsInOrder": true },
+    "ball_socket": { "shots": 6, "spokenWords": 118, "beatsInOrder": true },
+    "hinge": { "shots": 13, "spokenWords": 185, "beatsInOrder": true }
+  },
+  "whyExplanations": {
+    "before": 1,
+    "after": 4,
+    "beats": ["fixed.why", "pivot.why", "ball.why", "hinge.why"],
+    "words": { "fixed.why": 36, "pivot.why": 38, "ball.why": 42, "hinge.why": 47 },
+    "allSpoken": true,
+    "namingFollowsReason": true,
+    "provenance": "draft-enrichment, expert review required, recorded in qa/step16b/reason-statements.md"
+  },
+  "exploreTasks": {
+    "before": 0,
+    "after": 4,
+    "goals": { "explore.fixed": "attempt", "explore.pivot": "reach 40 deg", "explore.ball": "twoWay 25/15 deg", "explore.hinge": "reach 85 deg" },
+    "filmHandsOverAt": ["fixed.task", "pivot.task", "ball.task"],
+    "hingeHandsOverInsideTheFilm": "hinge.try then the 90 degree check - not opened a second time",
+    "completableByKeyboardAlone": true,
+    "statusDistinctionPreserved": { "teaching-simulation": 3, "validated-rig": 1 }
+  },
+  "narration": {
+    "architecture": "short headline caption + separately authored spoken explanation (narrationKey), subtitled a sentence at a time",
+    "shotClips": 52,
+    "cueClips": 24,
+    "silentShots": 0,
+    "overruns": 0,
+    "orphanClips": 0,
+    "everyClipAtNaturalRate": true,
+    "spokenWords": { "before": 356, "after": 878 },
+    "spokenWordsPerSecond": { "before": 1.27, "after": 2.28, "reference": 2.54 },
+    "shotsWithOwnSpokenExplanation": 45,
+    "audioKB": { "before": 765, "after": 1493 },
+    "voice": "en-IN-Chirp3-HD-Aoede",
+    "keyHandling": "TTS_KEY from the environment at build time only; never written to a file, a manifest or the web build"
+  },
+  "shotTiming": {
+    "rule": "durationFrom \"speech\": durationMs = ceil(max(minDurationMs, leadIn + measuredSpeech + tail) / 100) * 100",
+    "speechTimedShots": 43,
+    "retimedThisRun": 28,
+    "authoredShots": "transitions and learner-paced beats keep their authored length"
+  },
+  "compareReadability": {
+    "before": "four indicators 10-30 px wide on a full body at scale 1.12",
+    "after": "four close framings at site scale 2.4-3.2, one indicator each, then a summary with four labels and no indicators",
+    "measuredFrameFraction": { "compare.fixed": 0.545, "compare.pivot": 0.269, "compare.ball": 1.183, "compare.hinge": 1.934 },
+    "summaryLabels": 4
+  },
+  "shoulderFraming": {
+    "before": "frontRight, scale 2.9 - the humerus left the bottom of the frame and the hollow was not visible",
+    "after": "front, elevation 0.40, scale 2.0 -> 1.85, chosen by rendering and comparing 14 candidates",
+    "captures": "qa/visual/step16b/ball_trials/",
+    "measured": { "siteInFrame": true, "humerusWidthFraction": 0.386, "scapulaWidthFraction": 0.430 },
+    "manifestChanged": false
+  },
+  "landingAndStart": {
+    "card": "9 parts, about 6 minutes, the lesson's thesis, Start lesson, \"Narrated. Turn your sound on.\"",
+    "audioBeforeGesture": "none - verified paused",
+    "audioAfterGesture": "running, positioned by the film clock, autoplay block clear",
+    "autoplayZeroPreservesOldBehaviour": true,
+    "universalBrowserCompatibilityClaimed": false
+  },
+  "frameTiming": {
+    "problem": "RenderLoop clamps its frame delta at 100 ms; the film inherited that clamp, so below ~10 fps the lesson ran in slow motion while narration kept real time (measured 0.125x at 1.6 fps in the Step-16 audit)",
+    "fix": "lesson time comes from the frame timestamp, not the clamped render delta; a gap longer than 4 s is treated as a suspended page and skipped rather than fast-forwarded",
+    "measured": { "fps": 4, "filmMs": 6229, "wallMs": 6218, "ratio": 1.002 },
+    "exploreUnaffected": true,
+    "bugFoundAndFixed": "seeking to the end while assets were still loading never marked the lesson finished"
+  },
+  "completion": {
+    "card": "Lesson complete - Replay / Try the recall again / Explore the body",
+    "reachableByKeyboard": true,
+    "tabOrder": ["film-end-replay", "film-end-recall", "film-end-explore"]
+  },
+  "hip": {
+    "decision": "the ball.hip beat was removed rather than explained",
+    "reason": "it was an eight-second unexplained statement and the hip's classification is still PENDING EXPERT CONFIRMATION",
+    "taughtAnywhere": false,
+    "askedInRecall": false,
+    "bodyMapLabelTouched": false
+  },
+  "accessibility": {
+    "axeStates": 24,
+    "axeViolations": 0,
+    "measuredContrastRuns": { "lesson": 346, "exploreAndRecall": 120 },
+    "contrastBelowThreshold": 0,
+    "newTextMeasured": {
+      "film-subtitle": "lowest 13.08:1 (needed a feathered scrim: it measured 2.65:1 before)",
+      "film-explore__task": "16.35:1",
+      "film-explore__task-label": "9.41:1",
+      "film-start__*": "lowest 6.84:1",
+      "film-end__title": "16.21:1"
+    },
+    "defectsFoundByTheNewSweep": [
+      "the spoken-line subtitle was unreadable over lit bone on wide screens - fixed with the same feathered backdrop the caption got in Step 13",
+      "the caption was still rendered behind the landing and completion cards - no longer rendered while either card is up"
+    ],
+    "keyboardJourney": "pass - all nine chapters, the four exploration tasks, the guided check, the completion card",
+    "reducedMotion": "pass across all 52 shots",
+    "viewports": [1280, 1440, 768, 412, 390, 320],
+    "screenReaderTested": false,
+    "screenReaderNote": "NVDA and VoiceOver still NOT TESTED; unchanged from Step 12",
+    "openIssue": "the sr-only draft disclaimer is still announced once per caption - raised by the Step-16 audit, not addressed here"
+  },
+  "performance": {
+    "newAssets": 0,
+    "bytesBeforeFirst3D": "unchanged - no new GLB, texture, font or script",
+    "narrationFetch": "per clip, after the film starts; not on the path to the first 3D frame",
+    "abAgainstPreviousCandidate": false,
+    "abReason": "this machine's CPU benchmark drifts by a factor of four between sessions, so a cross-session number is meaningless; a meaningful A/B means rebuilding the baseline from its tag and alternating runs",
+    "step12EmulatedMisses": "unchanged and still open: phone x4 first 3D 2742 ms vs 2500 ms, drag p95 45.1 ms vs 22 ms",
+    "mobileCertification": false
+  },
+  "tests": {
+    "typecheck": "clean",
+    "unit": { "passed": 98, "failed": 0 },
+    "e2e": { "passed": 93, "failed": 0 },
+    "newSpec": { "file": "tests/e2e/step16b-teaching.spec.ts", "tests": 10 },
+    "consoleErrors": 0,
+    "testsChanged": [
+      "eight specs renamed fixed.detail -> fixed.name, ball.shoulder -> ball.move, and dropped ball.hip",
+      "video-lesson unit: 52 shots; the camera-site sequence is asserted as order plus repetition; ADDED - every narr.* string must be draft-enrichment",
+      "narration unit: a shot's narrationKey may be spoken in place of its caption; ADDED - content provenance for every spoken string except the interaction prompt, and a new test that every speech-timed shot is at rate 1.0, exactly the computed length, and has no dead tail",
+      "step15b-clarity: learnerText now includes the spoken explanation, so every Step-15B invariant is checked over more text than before",
+      "step14b-lesson: explorations are opened from the button on the beat before the handover; the compare summary is asserted to carry labels instead of indicators",
+      "step12-motion-visual: the full-lesson traversal steps past an open exploration as it already did the recall panel",
+      "film.spec: map.all marks all four by label instead of by indicator",
+      "contrast sweeps extended with the subtitle, the landing card, the completion card and the exploration task"
+    ]
+  },
+  "integrity": {
+    "frozenFilesVerified": 29,
+    "frozenFilesTotal": 29,
+    "masterSha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0",
+    "masterMatchesPin": true,
+    "productionAssetsChanged": 0,
+    "blenderFilesChanged": 0,
+    "newGlbs": 0,
+    "newRigs": 0,
+    "newJointCategories": 0
+  },
+  "filesChanged": {
+    "content": ["content/lessons/hinge-elbow.json", "content/locales/en/hinge-elbow.json", "content/schemas/video-lesson.schema.json"],
+    "engine": [
+      "src/engine/video/videoTypes.ts",
+      "src/engine/video/validateVideoLesson.ts",
+      "src/engine/video/AppVideoRuntime.ts",
+      "src/engine/video/VideoTimeline.ts",
+      "src/engine/explore/exploreTypes.ts",
+      "src/engine/video/generated/* (regenerated validators)"
+    ],
+    "ui": ["src/ui/video/FilmShell.tsx", "src/ui/video/film.css", "src/ui/video/filmQa.ts"],
+    "pipeline": ["pipeline/audio/build_narration.ts"],
+    "audio": "public/assets/audio/narration/* - 52 shot clips + 24 cue clips regenerated, 3 orphans removed",
+    "tests": [
+      "tests/e2e/step16b-teaching.spec.ts (new)",
+      "tests/e2e/film.spec.ts", "tests/e2e/film-visual.spec.ts", "tests/e2e/step12-a11y.spec.ts",
+      "tests/e2e/step12-motion-visual.spec.ts", "tests/e2e/step13-bugsweep.spec.ts", "tests/e2e/step14-a11y.spec.ts",
+      "tests/e2e/step14-explore.spec.ts", "tests/e2e/step14-responsive.spec.ts", "tests/e2e/step14b-lesson.spec.ts",
+      "tests/e2e/step15b-clarity.spec.ts", "tests/perf/perf-lab.spec.ts",
+      "tests/unit/narration.test.ts", "tests/unit/step12-delivery.test.ts", "tests/unit/video-lesson.test.ts"
+    ],
+    "qa": ["qa/step16b/* (this package)", "qa/visual/step16b/ball_trials/* (14 framing candidates)"],
+    "notChanged": ["public/assets/joints", "public/assets/body", "public/assets/shared", "blender", "Human_Body_Master.blend", "qa/expert/step15", "qa/expert/step15b"]
+  },
+  "openItems": [
+    "Step 12 remains FAIL: no real Android device, no real iPad, no real NVDA/VoiceOver test, two emulated x4 misses",
+    "expert review remains PENDING on every item: anatomy, curriculum, landmarks, the 0-145 range, human accessibility, asset licence",
+    "all 126 draft-enrichment strings, including the 70 added here, need subject-expert review",
+    "asset licence is still a RELEASE BLOCKER",
+    "formal Gate 3 still PENDING EXPERT LANDMARK APPROVAL; qa/elbow_r.poses.draft.json is still a draft",
+    "the hip's ball-and-socket classification is still PENDING EXPERT CONFIRMATION",
+    "the sr-only draft disclaimer is still announced once per caption",
+    "Explore still offers free orbit with no content in the five non-category chapters",
+    "no A/B performance comparison was run for this step"
+  ],
+  "doesNotClaim": [
+    "public release readiness",
+    "expert approval",
+    "device certification",
+    "screen-reader certification",
+    "universal browser autoplay compatibility",
+    "that any teaching simulation is a validated biomechanical rig"
+  ]
+}

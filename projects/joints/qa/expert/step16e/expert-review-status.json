@@ -1,0 +1,33 @@
+{
+ "build": "step16e-mobile-finalization-complete",
+ "expertReview": "PENDING",
+ "anatomy": "PENDING",
+ "curriculum": "PENDING",
+ "landmarks": "PENDING",
+ "145DegreeRange": "PENDING",
+ "accessibilityHuman": "PENDING",
+ "assetLicence": "PENDING",
+ "taxonomy": "PENDING",
+ "hipClassification": "PENDING",
+ "draftEnrichmentStrings": "PENDING (the 125 draft-enrichment strings a learner can reach, listed in strings-inventory.json; the 126th in the locale, hinge.axis_note, is unreferenced - see reviewer-checklist.md 2.9)",
+ "mobileExploreComposition": "PENDING (Step 16E: the learner-facing result, reviewed on a real phone)",
+ "document": "Expert decisions for the step16e-mobile-finalization-complete candidate build. Every item starts PENDING and may only be changed by the named human reviewer who made the decision. No automated test result may move an item off PENDING.",
+ "commit": "d947e0b5bb649549a88d5b27d8c61cede584b9c9",
+ "createdAt": "2026-09-21T07:52:43.182Z",
+ "reviewers": {
+  "curriculum": null,
+  "anatomy": null,
+  "accessibility": null,
+  "licensing": null
+ },
+ "decisions": [],
+ "publicReleaseReady": false,
+ "publicReleaseBlockers": [
+  "asset licence provenance unknown (RELEASE BLOCKER)",
+  "no expert sign-off of any kind",
+  "Step 12 performance: two emulated phone x4 misses, no real Android or iPad measurement",
+  "no real NVDA or VoiceOver test",
+  "no real phone or tablet test: every narrow-layout result is viewport emulation in one desktop browser",
+  "hip ball-and-socket classification unconfirmed"
+ ]
+}

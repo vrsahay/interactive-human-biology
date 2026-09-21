@@ -1,0 +1,127 @@
+{
+ "step": "13",
+ "phase": "A (freeze the validated core)",
+ "recordedAt": "2026-09-18T05:03:53.020Z",
+ "files": {
+  "<desktop>/Human_Body_Master.blend": {
+   "bytes": 224401653,
+   "sha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0"
+  },
+  "blender/Joints_Working.blend": {
+   "bytes": 3539188,
+   "sha256": "9fb76d8c5b799d1bf65dc8e865c400299a3cc52fb8bf7ceab8c903a1671187f9"
+  },
+  "blender/Joints_Working.v001.blend": {
+   "bytes": 3514520,
+   "sha256": "323ba6c1ae4b58001e20ad1edb6c50ab7e35225c72204ab5e42127872a7b8f75"
+  },
+  "blender/Joints_Working.v002.blend": {
+   "bytes": 3520906,
+   "sha256": "9518004b2de8a749f0d1308c7fce9edd59399381588516f3b2a77f20bcc94f8f"
+  },
+  "blender/Joints_Working.v003.blend": {
+   "bytes": 3538356,
+   "sha256": "817123863ec3601589cfdfdc4461742ca8580e015f77c09780acb5729c4b7c1b"
+  },
+  "blender/Joints_Working.v004.blend": {
+   "bytes": 3539188,
+   "sha256": "9fb76d8c5b799d1bf65dc8e865c400299a3cc52fb8bf7ceab8c903a1671187f9"
+  },
+  "public/assets/joints/elbow_r/elbow_r.core.glb": {
+   "bytes": 306880,
+   "sha256": "61c046262a823e95b141992f8bbaa13e5810c2bc7e7c76088dc3f9c6b1be93c1"
+  },
+  "public/assets/joints/elbow_r/elbow_r.detail.glb": {
+   "bytes": 93936,
+   "sha256": "c767e24c51c65d17034b11368ecb480618a690d9847505f0f013437d293c38b6"
+  },
+  "public/assets/joints/elbow_r/elbow_r.context.glb": {
+   "bytes": 628008,
+   "sha256": "a7d7fdc482d7e6bc30f65e524180cb4a613388b3406ce1e82cfc6677b31dfdbc"
+  },
+  "public/assets/joints/elbow_r/joint-manifest.json": {
+   "bytes": 93064,
+   "sha256": "009d51528bf5a6d84b2ab14499d4a1346f4cc1bcaff0ab1a0f99b1ccfd135e66"
+  },
+  "public/assets/shared/body-materials.glb": {
+   "bytes": 37404,
+   "sha256": "3a85c2b741a85532d689925db2479107b427467c7c5274895cfe7f70ff44c743"
+  },
+  "public/assets/shared/env/environment.json": {
+   "bytes": 881,
+   "sha256": "9b910ea782608eee0e45ae1d93c0c43310422cf3614319443bae7c9802663ee3"
+  },
+  "public/assets/shared/env/room_env_cubeuv_64.rgbe": {
+   "bytes": 344064,
+   "sha256": "16f42df04448703d03203455d023074d9f278d04f0b2b4963f063506d7251510"
+  },
+  "public/assets/body/body.skeleton.glb": {
+   "bytes": 2015164,
+   "sha256": "702a2d393cd8346ff2d68b8f9893d18334084a8c326023fba654de99c3096d15"
+  },
+  "public/assets/body/body.skin.glb": {
+   "bytes": 787444,
+   "sha256": "cb52db1f52107c4bdd0730437da209571de00a0305bd65a0c1cf3d70803e91ab"
+  },
+  "public/assets/body/body-manifest.json": {
+   "bytes": 276921,
+   "sha256": "a252c2672ddd6d71bdc3bb25e6a5cedce953a543923ad3cafd8faf7cc3e92e24"
+  },
+  "public/assets/body/v2/body-delivery.json": {
+   "bytes": 391943,
+   "sha256": "e288fd41c6b526f1103939902546af9370dae88c096699507699ef67e799fc22"
+  },
+  "public/assets/body/v2/body.closeup.glb": {
+   "bytes": 1316784,
+   "sha256": "0b3c153f5d24ef3036a362e0c023ddb51240d0e4265160fd134806668f1abae4"
+  },
+  "public/assets/body/v2/body.context.glb": {
+   "bytes": 153648,
+   "sha256": "710bc55288dbc32a423ad0ce05dccbd84ac288ff98770226b12489e13b8502a1"
+  },
+  "public/assets/body/v2/body.overview.glb": {
+   "bytes": 740180,
+   "sha256": "28452b6a22da1c65ba093ea512e3007ba6f724d4999340168387bc2ef00d7ff3"
+  },
+  "public/assets/body/v2/body.skin.glb": {
+   "bytes": 318684,
+   "sha256": "9e4d7565b333b78638ee2fed682b6deaad622e43201db068abd76db3dd9e1fd0"
+  },
+  "public/assets/body/v2/body.skin_lod1.glb": {
+   "bytes": 160176,
+   "sha256": "a8ab08fa8f5eca3493c37ca8feab4c3d246f4de0a513c290e7d6611957df90b5"
+  },
+  "public/assets/body/v3/body-delivery.json": {
+   "bytes": 391309,
+   "sha256": "271bec0c1b3b70dcca957dd55cddfb938e05a080f25e50169aa922f1318f7819"
+  },
+  "public/assets/body/v3/body.closeup.glb": {
+   "bytes": 1316784,
+   "sha256": "0b3c153f5d24ef3036a362e0c023ddb51240d0e4265160fd134806668f1abae4"
+  },
+  "public/assets/body/v3/body.context.glb": {
+   "bytes": 153648,
+   "sha256": "710bc55288dbc32a423ad0ce05dccbd84ac288ff98770226b12489e13b8502a1"
+  },
+  "public/assets/body/v3/body.context_lod1.glb": {
+   "bytes": 74404,
+   "sha256": "8deea4864e4b910a5956bff986f42b5c9836830efc42fbe76ef9c0ad9a7347e3"
+  },
+  "public/assets/body/v3/body.intro.glb": {
+   "bytes": 163204,
+   "sha256": "c1e705c6f59e946020a20afb92a3ccae66b90c81bd594149551da8d22a2fc253"
+  },
+  "public/assets/body/v3/body.skin.glb": {
+   "bytes": 318684,
+   "sha256": "9e4d7565b333b78638ee2fed682b6deaad622e43201db068abd76db3dd9e1fd0"
+  },
+  "public/assets/body/v3/body.skin_intro.glb": {
+   "bytes": 95540,
+   "sha256": "34f0aee756dc056e9577d640d1efccd37460316ca2b8c6f656efc277b61959ea"
+  },
+  "public/assets/body/v3/body.skin_lod1.glb": {
+   "bytes": 160176,
+   "sha256": "a8ab08fa8f5eca3493c37ca8feab4c3d246f4de0a513c290e7d6611957df90b5"
+  }
+ }
+}

@@ -1,0 +1,55 @@
+{
+ "generatedAt": "2026-09-21T10:29:04.896Z",
+ "steps": [
+  {
+   "stepId": "skull",
+   "question": "These skull bones hardly move at all.",
+   "revealedBeforeAnswer": false,
+   "reveal": "Yes. That is right. Fixed: the bones hold firm, so there is little or no movement."
+  },
+  {
+   "stepId": "neck",
+   "question": "The head turns around the bone below it.",
+   "revealedBeforeAnswer": false,
+   "reveal": "Yes. That is right. Pivot: one bone rotates around another."
+  },
+  {
+   "stepId": "shoulder",
+   "question": "The arm moves in many directions.",
+   "revealedBeforeAnswer": false,
+   "reveal": "Yes. That is right. Ball-and-socket: the rounded end sits in a socket, so it moves many ways."
+  },
+  {
+   "stepId": "elbow",
+   "question": "This joint bends and straightens in one direction.",
+   "revealedBeforeAnswer": false,
+   "reveal": "Yes. That is right. Hinge: it bends and straightens in one main direction."
+  },
+  {
+   "stepId": "knee",
+   "question": "This joint in the leg bends and straightens one way.",
+   "revealedBeforeAnswer": false,
+   "reveal": "Yes. That is right. Hinge: the knee bends and straightens, like the elbow."
+  }
+ ],
+ "wrongAnswer": {
+  "feedback": "Not that one. Look at how it moves.",
+  "advancedOnWrongAnswer": false
+ },
+ "nonColourSignals": {
+  "right": {
+   "pressed": "true",
+   "after": "\" ✓\""
+  },
+  "wrong": {
+   "pressed": "true",
+   "after": "\" ✕\""
+  },
+  "feedbackRole": "status"
+ },
+ "closing": {
+  "chapter": "body_map",
+  "shot": "map.all",
+  "siteLabels": 6
+ }
+}

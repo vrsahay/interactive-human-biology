@@ -1,0 +1,1192 @@
+{
+ "schema": 1,
+ "localeId": "hinge-elbow",
+ "language": "en",
+ "provenanceLegend": {
+  "source-excerpt": "Sentence taken verbatim from the curriculum excerpt supplied in the project brief. The NCERT reference files are not in the repository, so the wording has not been verified against the textbook.",
+  "figure-reference": "Joint-category name or body location as shown in the supplied NCERT 'Types of joints' figure. No wording, artwork or layout is copied from it.",
+  "draft-enrichment": "Draft explanatory text written for this lesson. Not curriculum wording. Requires subject-expert review before release.",
+  "ui": "Interface text or accessibility description. Not educational content."
+ },
+ "sources": {
+  "brief-excerpt-hinge": {
+   "description": "Curriculum excerpt supplied by the project owner in the project brief under the heading 'Hinge joint'. The original NCERT reference files are not present in the repository.",
+   "verifiedAgainstTextbook": false
+  },
+  "elbow-rom-normative": {
+   "description": "Normative range-of-motion reference for the approximate 0-145 deg teaching range. Zwerus EL, Willigenburg NW, Scholtes VA, Somford MP, Eygendaal D, van den Bekerom MPJ. 'Normative values and affecting factors for the elbow range of motion.' Shoulder & Elbow 11(3):215-224 (2019). doi:10.1177/1758573217728711, PMCID PMC6555111. Mean active flexion of the dominant hand was 146 deg across 352 healthy adults; the paper cites a literature range of 130-154 deg and reports that elbow range varies with age, sex and BMI. It supports the reasonableness of the teaching range only: it does not validate the geometry, axis or limits of this 3D model, which remain pending expert review.",
+   "verifiedAgainstTextbook": false
+  }
+ },
+ "strings": {
+  "lesson.title": {
+   "text": "Types of Joints",
+   "provenance": "figure-reference"
+  },
+  "lesson.subtitle": {
+   "text": "A short anatomy film",
+   "provenance": "ui"
+  },
+  "lesson.curriculum_note": {
+   "text": "Draft lesson. Joint categories and locations follow the NCERT figure; the sentence marked Source is from the supplied curriculum excerpt; everything marked Draft is awaiting subject review.",
+   "provenance": "ui"
+  },
+  "source.elbow_hinge": {
+   "text": "The elbow bends and straightens in one direction, similar to a door hinge.",
+   "provenance": "source-excerpt",
+   "sourceId": "brief-excerpt-hinge"
+  },
+  "chapter.fixed": {
+   "text": "Fixed joint",
+   "provenance": "figure-reference"
+  },
+  "chapter.pivot": {
+   "text": "Pivot joint",
+   "provenance": "figure-reference"
+  },
+  "chapter.ball_socket": {
+   "text": "Ball-and-socket joint",
+   "provenance": "figure-reference"
+  },
+  "chapter.hinge": {
+   "text": "Hinge joint",
+   "provenance": "figure-reference"
+  },
+  "intro.title": {
+   "text": "Types of Joints",
+   "provenance": "figure-reference"
+  },
+  "intro.subtitle": {
+   "text": "How different joints allow different kinds of movement.",
+   "provenance": "draft-enrichment"
+  },
+  "intro.where": {
+   "text": "You have joints like these all over your body. We will look at four kinds.",
+   "provenance": "draft-enrichment"
+  },
+  "fixed.label": {
+   "text": "Fixed joint · skull",
+   "provenance": "figure-reference"
+  },
+  "fixed.text": {
+   "text": "The bones of the skull meet at fixed joints. These bones do not move against each other.",
+   "provenance": "draft-enrichment"
+  },
+  "pivot.label": {
+   "text": "Pivot joint · top of the neck",
+   "provenance": "figure-reference"
+  },
+  "pivot.text": {
+   "text": "The upper bone turns around the one below it. Your head turns with it.",
+   "provenance": "draft-enrichment"
+  },
+  "ball.label.shoulder": {
+   "text": "Ball-and-socket joint · shoulder",
+   "provenance": "figure-reference"
+  },
+  "ball.text.shoulder": {
+   "text": "At the shoulder, the rounded top of the upper arm bone sits in a hollow of the shoulder bone, so the arm can move in many directions.",
+   "provenance": "draft-enrichment"
+  },
+  "hinge.label.elbow": {
+   "text": "Hinge joint · elbow",
+   "provenance": "figure-reference"
+  },
+  "hinge.label.knee": {
+   "text": "Hinge joint · knee",
+   "provenance": "figure-reference"
+  },
+  "hinge.bones": {
+   "text": "Three bones meet here",
+   "provenance": "draft-enrichment"
+  },
+  "hinge.axis": {
+   "text": "This blue line shows the direction the elbow bends around. We call that line the axis.",
+   "provenance": "draft-enrichment"
+  },
+  "hinge.axis_note": {
+   "text": "Blue line: the hinge axis fitted to this 3D model.",
+   "provenance": "draft-enrichment"
+  },
+  "hinge.flexion": {
+   "text": "When the elbow bends, that is called flexion.",
+   "provenance": "draft-enrichment"
+  },
+  "hinge.extension": {
+   "text": "When it straightens again, that is called extension.",
+   "provenance": "draft-enrichment"
+  },
+  "hinge.range_note": {
+   "text": "0-145 deg is an approximate teaching range for this model; adult elbow flexion varies between people (see Sources).",
+   "provenance": "draft-enrichment"
+  },
+  "hinge.try": {
+   "text": "Your turn: bend and straighten the elbow.",
+   "provenance": "draft-enrichment"
+  },
+  "hinge.try_prompt": {
+   "text": "Drag the forearm, or use the slider.",
+   "provenance": "ui"
+  },
+  "hinge.support": {
+   "text": "A joint capsule and ligaments surround the elbow.",
+   "provenance": "draft-enrichment"
+  },
+  "hinge.bands_note": {
+   "text": "The thin coloured lines mark where the ligaments run. They are a guide, not real tissue.",
+   "provenance": "draft-enrichment"
+  },
+  "hinge.knee": {
+   "text": "The knee is another hinge joint.",
+   "provenance": "draft-enrichment"
+  },
+  "note.schematic_indicator": {
+   "text": "Schematic indicator: it shows the kind of movement only. This part of the body is not animated.",
+   "provenance": "ui"
+  },
+  "note.recap_schematic": {
+   "text": "Schematic indicators mark the four joint types. Only the elbow moves from a validated 3D rig.",
+   "provenance": "ui"
+  },
+  "recap.title": {
+   "text": "Four types of joints",
+   "provenance": "figure-reference"
+  },
+  "recap.compare": {
+   "text": "Fixed: no movement · Pivot: turning · Ball and socket: many directions · Hinge: one direction",
+   "provenance": "draft-enrichment"
+  },
+  "recap.label.fixed": {
+   "text": "Fixed",
+   "provenance": "figure-reference"
+  },
+  "recap.label.pivot": {
+   "text": "Pivot",
+   "provenance": "figure-reference"
+  },
+  "recap.label.ball": {
+   "text": "Ball and socket",
+   "provenance": "figure-reference"
+  },
+  "recap.label.hinge": {
+   "text": "Hinge",
+   "provenance": "figure-reference"
+  },
+  "check.prompt": {
+   "text": "Try it: bend the elbow to about 90°.",
+   "provenance": "draft-enrichment"
+  },
+  "check.correct": {
+   "text": "That is about 90°. Well done.",
+   "provenance": "draft-enrichment"
+  },
+  "check.incorrect": {
+   "text": "Not quite yet. Aim for about 90°.",
+   "provenance": "draft-enrichment"
+  },
+  "ui.play": {
+   "text": "Play",
+   "provenance": "ui"
+  },
+  "ui.pause": {
+   "text": "Pause",
+   "provenance": "ui"
+  },
+  "ui.replay": {
+   "text": "Replay",
+   "provenance": "ui"
+  },
+  "ui.narration_on": {
+   "text": "Turn narration on",
+   "provenance": "ui"
+  },
+  "ui.narration_off": {
+   "text": "Turn narration off",
+   "provenance": "ui"
+  },
+  "ui.narration_blocked": {
+   "text": "Narration is ready - tap to start the voice",
+   "provenance": "ui"
+  },
+  "ui.fullscreen": {
+   "text": "Full screen",
+   "provenance": "ui"
+  },
+  "ui.exit_fullscreen": {
+   "text": "Exit full screen",
+   "provenance": "ui"
+  },
+  "ui.explore": {
+   "text": "Explore",
+   "provenance": "ui"
+  },
+  "ui.resume": {
+   "text": "Resume film",
+   "provenance": "ui"
+  },
+  "ui.continue": {
+   "text": "Continue",
+   "provenance": "ui"
+  },
+  "ui.check": {
+   "text": "Check my pose",
+   "provenance": "ui"
+  },
+  "ui.draft": {
+   "text": "Draft",
+   "provenance": "ui"
+  },
+  "ui.source": {
+   "text": "Source excerpt",
+   "provenance": "ui"
+  },
+  "ui.figure": {
+   "text": "NCERT figure",
+   "provenance": "ui"
+  },
+  "ui.timeline": {
+   "text": "Lesson timeline",
+   "provenance": "ui"
+  },
+  "ui.return_guided": {
+   "text": "Return to film view",
+   "provenance": "ui"
+  },
+  "a11y.intro.title": {
+   "text": "A full human skeleton inside a faint outline of the body, seen from the front.",
+   "provenance": "ui"
+  },
+  "a11y.intro.map": {
+   "text": "The camera turns slightly. The skull, neck, right shoulder, right hip, right elbow and right knee are softly highlighted.",
+   "provenance": "ui"
+  },
+  "a11y.fixed.travel": {
+   "text": "The camera moves up to the skull. The skull bones are highlighted.",
+   "provenance": "ui"
+  },
+  "a11y.fixed.detail": {
+   "text": "Side view of the skull. The frontal and right parietal bones are highlighted where they meet; a dashed ring marks a fixed joint.",
+   "provenance": "ui"
+  },
+  "a11y.pivot.travel": {
+   "text": "The camera moves down to the top of the neck. The first two neck vertebrae are highlighted.",
+   "provenance": "ui"
+  },
+  "a11y.pivot.rotate": {
+   "text": "An arrow circles around a vertical line at the top of the neck, showing turning.",
+   "provenance": "ui"
+  },
+  "a11y.ball.travel": {
+   "text": "The camera moves to the right shoulder. The upper arm bone and shoulder blade are highlighted.",
+   "provenance": "ui"
+  },
+  "a11y.ball.shoulder": {
+   "text": "Two curved arrows around the head of the upper arm bone show movement in many directions.",
+   "provenance": "ui"
+  },
+  "a11y.ball.hip": {
+   "text": "The camera moves down to the right hip, where similar arrows show many directions of movement.",
+   "provenance": "ui"
+  },
+  "a11y.hinge.travel": {
+   "text": "The camera moves to the right elbow.",
+   "provenance": "ui"
+  },
+  "a11y.hinge.source": {
+   "text": "Side view of the right elbow, highlighted.",
+   "provenance": "ui"
+  },
+  "a11y.hinge.bones": {
+   "text": "Close-up of the elbow. The humerus, radius and ulna are highlighted and labelled.",
+   "provenance": "ui"
+  },
+  "a11y.hinge.axis": {
+   "text": "A blue line through the elbow shows the hinge axis. The forearm straightens to 0 degrees.",
+   "provenance": "ui"
+  },
+  "a11y.hinge.flexion": {
+   "text": "The forearm bends around the axis from 0 to 45 and then 90 degrees. An orange arc shows the angle.",
+   "provenance": "ui"
+  },
+  "a11y.hinge.extension": {
+   "text": "The forearm bends further to 145 degrees and then straightens back to 0 degrees.",
+   "provenance": "ui"
+  },
+  "a11y.hinge.try": {
+   "text": "The elbow can be bent by dragging the forearm or with the slider.",
+   "provenance": "ui"
+  },
+  "a11y.hinge.support": {
+   "text": "The joint capsule and ligaments appear around the elbow, with two thin schematic bands.",
+   "provenance": "ui"
+  },
+  "a11y.hinge.return": {
+   "text": "The elbow returns to its resting position.",
+   "provenance": "ui"
+  },
+  "a11y.hinge.knee": {
+   "text": "The camera moves down to the right knee, where an arc shows bending in one direction.",
+   "provenance": "ui"
+  },
+  "a11y.recap.pullback": {
+   "text": "The camera pulls back to the whole body. Six joint locations are labelled with their joint type.",
+   "provenance": "ui"
+  },
+  "a11y.recap.compare": {
+   "text": "All four kinds of movement indicator are shown on the body at once.",
+   "provenance": "ui"
+  },
+  "a11y.recap.check": {
+   "text": "Close-up of the elbow with its angle shown, ready to be bent to about 90 degrees.",
+   "provenance": "ui"
+  },
+  "ui.settings": {
+   "text": "Settings",
+   "provenance": "ui"
+  },
+  "ui.sources": {
+   "text": "Sources & draft status",
+   "provenance": "ui"
+  },
+  "ui.close": {
+   "text": "Close",
+   "provenance": "ui"
+  },
+  "ui.quality": {
+   "text": "Visual quality",
+   "provenance": "ui"
+  },
+  "ui.quality_auto": {
+   "text": "Automatic",
+   "provenance": "ui"
+  },
+  "ui.quality_high": {
+   "text": "High",
+   "provenance": "ui"
+  },
+  "ui.quality_medium": {
+   "text": "Medium",
+   "provenance": "ui"
+  },
+  "ui.quality_low": {
+   "text": "Low",
+   "provenance": "ui"
+  },
+  "ui.quality_note": {
+   "text": "Quality is chosen before the anatomy downloads, so a change applies when the lesson reloads.",
+   "provenance": "ui"
+  },
+  "ui.reload": {
+   "text": "Reload lesson",
+   "provenance": "ui"
+  },
+  "ui.motion": {
+   "text": "Motion",
+   "provenance": "ui"
+  },
+  "ui.motion_system": {
+   "text": "Follow system setting",
+   "provenance": "ui"
+  },
+  "ui.motion_reduce": {
+   "text": "Reduce motion",
+   "provenance": "ui"
+  },
+  "ui.motion_full": {
+   "text": "Full motion",
+   "provenance": "ui"
+  },
+  "ui.captions": {
+   "text": "Caption size",
+   "provenance": "ui"
+  },
+  "ui.captions_standard": {
+   "text": "Standard",
+   "provenance": "ui"
+  },
+  "ui.captions_large": {
+   "text": "Large",
+   "provenance": "ui"
+  },
+  "ui.shortcuts": {
+   "text": "Keyboard",
+   "provenance": "ui"
+  },
+  "ui.shortcuts_text": {
+   "text": "Space or K: play or pause. On the timeline: arrow keys move 5 seconds (with Shift, 15 seconds); Home and End jump to the start and end. Escape closes a panel.",
+   "provenance": "ui"
+  },
+  "ui.loading_part": {
+   "text": "Loading the next part of the film",
+   "provenance": "ui"
+  },
+  "ui.load_error": {
+   "text": "This part of the lesson could not be loaded.",
+   "provenance": "ui"
+  },
+  "ui.retry": {
+   "text": "Try again",
+   "provenance": "ui"
+  },
+  "ui.playing": {
+   "text": "Playing",
+   "provenance": "ui"
+  },
+  "ui.paused": {
+   "text": "Paused",
+   "provenance": "ui"
+  },
+  "ui.complete": {
+   "text": "Lesson complete.",
+   "provenance": "ui"
+  },
+  "ui.selected": {
+   "text": "Selected",
+   "provenance": "ui"
+  },
+  "ui.chapters": {
+   "text": "Chapters",
+   "provenance": "ui"
+  },
+  "ui.film_controls": {
+   "text": "Film controls",
+   "provenance": "ui"
+  },
+  "ui.current_quality": {
+   "text": "Current",
+   "provenance": "ui"
+  },
+  "ui.explore_this_joint": {
+   "text": "Explore this joint",
+   "provenance": "ui"
+  },
+  "ui.explore_reset": {
+   "text": "Reset",
+   "provenance": "ui"
+  },
+  "ui.explore_return": {
+   "text": "Return to the lesson",
+   "provenance": "ui"
+  },
+  "ui.explore_status_validated": {
+   "text": "3D joint model",
+   "provenance": "ui"
+  },
+  "ui.explore_status_teaching": {
+   "text": "Teaching simulation",
+   "provenance": "ui"
+  },
+  "ui.explore_keys": {
+   "text": "Use the arrow keys to move, R to reset, Escape to return.",
+   "provenance": "ui"
+  },
+  "explore.fixed.title": {
+   "text": "Fixed joint · skull",
+   "provenance": "figure-reference"
+  },
+  "explore.fixed.instruction": {
+   "text": "Try to move the skull bones.",
+   "provenance": "draft-enrichment"
+  },
+  "explore.fixed.explanation": {
+   "text": "These bones barely move. A fixed joint holds bones firmly together.",
+   "provenance": "draft-enrichment"
+  },
+  "explore.pivot.title": {
+   "text": "Pivot joint · top of the neck",
+   "provenance": "figure-reference"
+  },
+  "explore.pivot.instruction": {
+   "text": "Drag left and right to turn the head.",
+   "provenance": "draft-enrichment"
+  },
+  "explore.pivot.explanation": {
+   "text": "The head turns around the bone below it. A pivot joint allows rotation.",
+   "provenance": "draft-enrichment"
+  },
+  "explore.ball.title": {
+   "text": "Ball-and-socket joint · shoulder",
+   "provenance": "figure-reference"
+  },
+  "explore.ball.instruction": {
+   "text": "Drag in any direction to move the arm.",
+   "provenance": "draft-enrichment"
+  },
+  "explore.ball.explanation": {
+   "text": "The arm moves in many directions, not just one. That is a ball-and-socket joint.",
+   "provenance": "draft-enrichment"
+  },
+  "explore.hinge.title": {
+   "text": "Hinge joint · elbow",
+   "provenance": "figure-reference"
+  },
+  "explore.hinge.instruction": {
+   "text": "Drag to bend and straighten the elbow.",
+   "provenance": "draft-enrichment"
+  },
+  "explore.hinge.explanation": {
+   "text": "Bending is flexion. Straightening is extension. A hinge joint does both, in one direction.",
+   "provenance": "draft-enrichment"
+  },
+  "recall.prompt": {
+   "text": "Which type of joint is this?",
+   "provenance": "draft-enrichment"
+  },
+  "recall.correct": {
+   "text": "Yes. That is right.",
+   "provenance": "draft-enrichment"
+  },
+  "recall.incorrect": {
+   "text": "Not that one. Look at how it moves.",
+   "provenance": "draft-enrichment"
+  },
+  "recall.complete": {
+   "text": "You named every joint from the way it moves.",
+   "provenance": "draft-enrichment"
+  },
+  "recall.q.skull": {
+   "text": "These skull bones hardly move at all.",
+   "provenance": "draft-enrichment"
+  },
+  "recall.q.neck": {
+   "text": "The head turns around the bone below it.",
+   "provenance": "draft-enrichment"
+  },
+  "recall.q.shoulder": {
+   "text": "The arm moves in many directions.",
+   "provenance": "draft-enrichment"
+  },
+  "recall.q.elbow": {
+   "text": "This joint bends and straightens in one direction.",
+   "provenance": "draft-enrichment"
+  },
+  "recall.a.skull": {
+   "text": "Fixed: the bones hold firm, so there is little or no movement.",
+   "provenance": "draft-enrichment"
+  },
+  "recall.a.neck": {
+   "text": "Pivot: one bone rotates around another.",
+   "provenance": "draft-enrichment"
+  },
+  "recall.a.shoulder": {
+   "text": "Ball-and-socket: the rounded end sits in a socket, so it moves many ways.",
+   "provenance": "draft-enrichment"
+  },
+  "recall.a.elbow": {
+   "text": "Hinge: it bends and straightens in one main direction.",
+   "provenance": "draft-enrichment"
+  },
+  "ui.recall_answer": {
+   "text": "Choose the joint type",
+   "provenance": "ui"
+  },
+  "ui.recall_next": {
+   "text": "Next",
+   "provenance": "ui"
+  },
+  "ui.recall_finish": {
+   "text": "See the body map",
+   "provenance": "ui"
+  },
+  "ui.recall_progress": {
+   "text": "Question",
+   "provenance": "ui"
+  },
+  "hook.shoulder": {
+   "text": "Your shoulder can swing your arm in almost any direction.",
+   "provenance": "draft-enrichment"
+  },
+  "hook.elbow": {
+   "text": "Your elbow mainly bends and straightens.",
+   "provenance": "draft-enrichment"
+  },
+  "hook.question": {
+   "text": "Both are joints. So why do they move so differently?",
+   "provenance": "draft-enrichment"
+  },
+  "concept.meet": {
+   "text": "A joint is a place where bones meet.",
+   "provenance": "draft-enrichment"
+  },
+  "concept.different": {
+   "text": "The way the bones meet decides how they can move.",
+   "provenance": "draft-enrichment"
+  },
+  "compare.intro": {
+   "text": "Four joints. Four different ways of moving.",
+   "provenance": "draft-enrichment"
+  },
+  "compare.together": {
+   "text": "The type of joint tells you the pattern of movement.",
+   "provenance": "draft-enrichment"
+  },
+  "recall.open": {
+   "text": "Your turn. Name each joint from the way it moves.",
+   "provenance": "draft-enrichment"
+  },
+  "recall.start_hint": {
+   "text": "Choose the joint type for each movement.",
+   "provenance": "draft-enrichment"
+  },
+  "recall.q.knee": {
+   "text": "This joint in the leg bends and straightens one way.",
+   "provenance": "draft-enrichment"
+  },
+  "recall.a.knee": {
+   "text": "Hinge: the knee bends and straightens, like the elbow.",
+   "provenance": "draft-enrichment"
+  },
+  "map.intro": {
+   "text": "Here they are, together, in one body.",
+   "provenance": "draft-enrichment"
+  },
+  "map.fixed.label": {
+   "text": "Fixed · skull",
+   "provenance": "figure-reference"
+  },
+  "map.pivot.label": {
+   "text": "Pivot · top of the neck",
+   "provenance": "figure-reference"
+  },
+  "map.ball.label": {
+   "text": "Ball and socket · shoulder",
+   "provenance": "figure-reference"
+  },
+  "map.hinge.label": {
+   "text": "Hinge · elbow",
+   "provenance": "figure-reference"
+  },
+  "chapter.hook": {
+   "text": "Two joints, two movements",
+   "provenance": "ui"
+  },
+  "chapter.what_is_joint": {
+   "text": "What is a joint?",
+   "provenance": "ui"
+  },
+  "chapter.compare": {
+   "text": "Comparing the four",
+   "provenance": "ui"
+  },
+  "chapter.recall": {
+   "text": "Recall challenge",
+   "provenance": "ui"
+  },
+  "chapter.body_map": {
+   "text": "The body map",
+   "provenance": "ui"
+  },
+  "a11y.hook.shoulder": {
+   "text": "The right shoulder, seen from the front and right. Curved arrows around the top of the upper arm bone show movement in many directions.",
+   "provenance": "ui"
+  },
+  "a11y.hook.elbow": {
+   "text": "The right elbow, seen from the side. An arc shows the forearm bending in one direction.",
+   "provenance": "ui"
+  },
+  "a11y.hook.question": {
+   "text": "The whole skeleton, with the shoulder and elbow indicators still moving.",
+   "provenance": "ui"
+  },
+  "a11y.concept.meet": {
+   "text": "Close view of the right elbow, where the upper arm bone meets the two forearm bones.",
+   "provenance": "ui"
+  },
+  "a11y.concept.different": {
+   "text": "The head, the top of the neck and the right shoulder together, each with its own movement indicator.",
+   "provenance": "ui"
+  },
+  "a11y.compare.pullback": {
+   "text": "The camera pulls back to the whole body.",
+   "provenance": "ui"
+  },
+  "a11y.compare.fixed": {
+   "text": "The skull, with the fixed-joint indicator, labelled Fixed.",
+   "provenance": "ui"
+  },
+  "a11y.compare.pivot": {
+   "text": "The top of the neck, with the turning indicator, labelled Pivot.",
+   "provenance": "ui"
+  },
+  "a11y.compare.ball": {
+   "text": "The right shoulder, with the many-directions indicator, labelled Ball and socket.",
+   "provenance": "ui"
+  },
+  "a11y.compare.hinge": {
+   "text": "The right elbow, with the bending indicator, labelled Hinge.",
+   "provenance": "ui"
+  },
+  "a11y.compare.together": {
+   "text": "The whole body with all four movement indicators running at once.",
+   "provenance": "ui"
+  },
+  "a11y.recall.open": {
+   "text": "The whole body, with no labels.",
+   "provenance": "ui"
+  },
+  "a11y.recall.challenge": {
+   "text": "The whole body. The recall questions begin.",
+   "provenance": "ui"
+  },
+  "a11y.map.intro": {
+   "text": "The whole skeleton inside a faint outline of the body.",
+   "provenance": "ui"
+  },
+  "a11y.map.fixed": {
+   "text": "The whole body with the skull labelled Fixed.",
+   "provenance": "ui"
+  },
+  "a11y.map.pivot": {
+   "text": "The whole body with the top of the neck labelled Pivot.",
+   "provenance": "ui"
+  },
+  "a11y.map.ball": {
+   "text": "The whole body with the right shoulder labelled Ball and socket.",
+   "provenance": "ui"
+  },
+  "a11y.map.hinge": {
+   "text": "The whole body with the right elbow labelled Hinge.",
+   "provenance": "ui"
+  },
+  "a11y.hinge.check": {
+   "text": "Close-up of the elbow with its angle shown, ready to be bent to about 90 degrees.",
+   "provenance": "ui"
+  },
+  "a11y.map.all": {
+   "text": "All four kinds of movement indicator are shown on the body at once, with every site labelled.",
+   "provenance": "ui"
+  },
+  "ui.teaching_view": {
+   "text": "Teaching view: the moving marks show the kind of movement.",
+   "provenance": "ui"
+  },
+  "ui.explore_teaching_note": {
+   "text": "This shows the movement pattern. The bones are real; the movement is a demonstration.",
+   "provenance": "ui"
+  },
+  "a11y.pivot.bones": {
+   "text": "Close view of the first two neck bones, seen from the front and right. They are highlighted; the skull is dimmed behind them.",
+   "provenance": "ui"
+  },
+  "hinge.return": {
+   "text": "The elbow settles back to rest.",
+   "provenance": "draft-enrichment"
+  },
+  "narr.concept.meet": {
+   "text": "A joint is any place where bones meet. Most joints are two bones meeting; here at the elbow, three bones come together.",
+   "provenance": "draft-enrichment"
+  },
+  "narr.concept.different": {
+   "text": "How the bones meet at a joint decides how that joint can move. Change the shape of the join and you change the movement.",
+   "provenance": "draft-enrichment"
+  },
+  "narr.intro.map": {
+   "text": "You have joints like these all over your body. We will look at four kinds, and at what each shape allows.",
+   "provenance": "draft-enrichment"
+  },
+  "narr.intro.title": {
+   "text": "Every time you move, bones move against each other at a joint. Different joints allow very different movements.",
+   "provenance": "draft-enrichment"
+  },
+  "narr.hook.shoulder": {
+   "text": "Start with the shoulder. Your arm can swing forward, out to the side, and round in a circle.",
+   "provenance": "draft-enrichment"
+  },
+  "narr.hook.elbow": {
+   "text": "Now the elbow, on the same arm. It does one thing: it bends and it straightens.",
+   "provenance": "draft-enrichment"
+  },
+  "narr.hook.question": {
+   "text": "Both are joints in the same arm. So why does one move in every direction and the other in only one?",
+   "provenance": "draft-enrichment"
+  },
+  "fixed.travel.head": {
+   "text": "Several bones, one skull",
+   "provenance": "draft-enrichment"
+  },
+  "narr.fixed.travel": {
+   "text": "Go up to the top of the head. The skull looks like a single piece, but it is several separate bones meeting along wavy lines.",
+   "provenance": "draft-enrichment"
+  },
+  "fixed.bones.head": {
+   "text": "Two bones, one join",
+   "provenance": "draft-enrichment"
+  },
+  "narr.fixed.bones": {
+   "text": "These are two of those bones, and this is the line where they meet. Look at how the edges follow each other.",
+   "provenance": "draft-enrichment"
+  },
+  "fixed.try.head": {
+   "text": "Almost no movement",
+   "provenance": "draft-enrichment"
+  },
+  "narr.fixed.try": {
+   "text": "Watch the join itself. Nothing slides, nothing bends, nothing shifts at all.",
+   "provenance": "draft-enrichment"
+  },
+  "fixed.why.head": {
+   "text": "Why they cannot move",
+   "provenance": "draft-enrichment"
+  },
+  "narr.fixed.why": {
+   "text": "The edges of these bones lock into each other, and tough fibres hold them tightly together. There is no gap for them to slide in, so they cannot move against each other.",
+   "provenance": "draft-enrichment"
+  },
+  "narr.fixed.name": {
+   "text": "A join that holds two bones still like this is called a fixed joint. Its job is strength, not movement: together these bones make one solid case around the brain.",
+   "provenance": "draft-enrichment"
+  },
+  "fixed.task.head": {
+   "text": "Your turn",
+   "provenance": "draft-enrichment"
+  },
+  "narr.fixed.task": {
+   "text": "Try it yourself. See whether you can move these two bones apart.",
+   "provenance": "draft-enrichment"
+  },
+  "pivot.travel.head": {
+   "text": "The top of the neck",
+   "provenance": "draft-enrichment"
+  },
+  "narr.pivot.travel": {
+   "text": "Now down to the top of the neck, just under the skull, where the head meets the backbone.",
+   "provenance": "draft-enrichment"
+  },
+  "pivot.bones.head": {
+   "text": "One bone on top of another",
+   "provenance": "draft-enrichment"
+  },
+  "narr.pivot.bones": {
+   "text": "At the top of the neck, one small bone sits on top of another. Nothing is moving yet. The lower bone is the one that stays still.",
+   "provenance": "draft-enrichment"
+  },
+  "pivot.rotate.head": {
+   "text": "The upper bone turns",
+   "provenance": "draft-enrichment"
+  },
+  "narr.pivot.rotate": {
+   "text": "Now the upper bone turns around the one below it, and your head turns with it.",
+   "provenance": "draft-enrichment"
+  },
+  "pivot.why.head": {
+   "text": "Turning, and nothing else",
+   "provenance": "draft-enrichment"
+  },
+  "narr.pivot.why": {
+   "text": "The upper bone turns around one line running straight up through both bones. Turning around that line is the only movement this shape allows, which is why the head swivels here rather than bending.",
+   "provenance": "draft-enrichment"
+  },
+  "narr.pivot.name": {
+   "text": "A joint where one bone turns around another like this is called a pivot joint.",
+   "provenance": "draft-enrichment"
+  },
+  "pivot.task.head": {
+   "text": "Your turn",
+   "provenance": "draft-enrichment"
+  },
+  "narr.pivot.task": {
+   "text": "Try it yourself. Turn the head as if you were looking over one shoulder.",
+   "provenance": "draft-enrichment"
+  },
+  "ball.travel.head": {
+   "text": "Where the arm meets the body",
+   "provenance": "draft-enrichment"
+  },
+  "narr.ball.travel": {
+   "text": "Back up to the shoulder, where the arm meets the body.",
+   "provenance": "draft-enrichment"
+  },
+  "ball.bones.head": {
+   "text": "A round end and a hollow",
+   "provenance": "draft-enrichment"
+  },
+  "narr.ball.bones": {
+   "text": "The top of the upper-arm bone is a smooth, rounded ball. Beside it, the shoulder blade has a shallow hollow, and the ball rests in it.",
+   "provenance": "draft-enrichment"
+  },
+  "ball.move.head": {
+   "text": "Movement in many directions",
+   "provenance": "draft-enrichment"
+  },
+  "narr.ball.move": {
+   "text": "From this one joint, the arm can move in many directions: forward, backwards, out sideways, and right round.",
+   "provenance": "draft-enrichment"
+  },
+  "ball.why.head": {
+   "text": "Why it moves so freely",
+   "provenance": "draft-enrichment"
+  },
+  "narr.ball.why": {
+   "text": "A rounded end sitting in a hollow can roll and turn in every direction at once. Nothing holds it to a single line, so the arm is not limited to one direction the way the elbow is.",
+   "provenance": "draft-enrichment"
+  },
+  "narr.ball.name": {
+   "text": "A rounded end sitting in a hollow like this is called a ball-and-socket joint.",
+   "provenance": "draft-enrichment"
+  },
+  "ball.task.head": {
+   "text": "Your turn",
+   "provenance": "draft-enrichment"
+  },
+  "narr.ball.task": {
+   "text": "Try it yourself. Move the arm in two different directions.",
+   "provenance": "draft-enrichment"
+  },
+  "hinge.travel.head": {
+   "text": "The elbow",
+   "provenance": "draft-enrichment"
+  },
+  "narr.hinge.travel": {
+   "text": "Down the same arm now, to the elbow.",
+   "provenance": "draft-enrichment"
+  },
+  "narr.hinge.source": {
+   "text": "The elbow bends and straightens in one direction, the way a door swings on its hinges.",
+   "provenance": "draft-enrichment"
+  },
+  "narr.hinge.bones": {
+   "text": "The elbow is where the upper-arm bone meets two bones in the forearm.",
+   "provenance": "draft-enrichment"
+  },
+  "narr.hinge.axis": {
+   "text": "This blue line shows the direction the elbow bends around. We call that line the axis.",
+   "provenance": "draft-enrichment"
+  },
+  "narr.hinge.flexion": {
+   "text": "Watch the forearm come up. When the elbow bends like this, the movement is called flexion.",
+   "provenance": "draft-enrichment"
+  },
+  "narr.hinge.extension": {
+   "text": "And as it straightens again, that movement is called extension.",
+   "provenance": "draft-enrichment"
+  },
+  "hinge.why.head": {
+   "text": "Why it bends only one way",
+   "provenance": "draft-enrichment"
+  },
+  "narr.hinge.why": {
+   "text": "Look at the shape of the join. The end of the upper-arm bone is like a spool, and the forearm bone wraps around it. A spool can only turn about its own line, so the elbow can only bend and straighten.",
+   "provenance": "draft-enrichment"
+  },
+  "hinge.name.label": {
+   "text": "Hinge joint",
+   "provenance": "figure-reference"
+  },
+  "narr.hinge.name": {
+   "text": "A joint that bends and straightens around one line like this is called a hinge joint.",
+   "provenance": "draft-enrichment"
+  },
+  "narr.hinge.support": {
+   "text": "A joint capsule and ligaments wrap around the elbow. They hold the bones together and keep the movement on that one line.",
+   "provenance": "draft-enrichment"
+  },
+  "narr.hinge.return": {
+   "text": "The elbow settles back to rest.",
+   "provenance": "draft-enrichment"
+  },
+  "narr.hinge.knee": {
+   "text": "The knee is another hinge joint. It is bigger, but it does the same thing: it bends and straightens one way.",
+   "provenance": "draft-enrichment"
+  },
+  "narr.compare.pullback": {
+   "text": "Four joints, in one body, with four different ways of moving. Look at each one again.",
+   "provenance": "draft-enrichment"
+  },
+  "compare.fixed.label": {
+   "text": "Fixed",
+   "provenance": "figure-reference"
+  },
+  "narr.compare.fixed": {
+   "text": "The skull: edges locked together, so almost no movement.",
+   "provenance": "draft-enrichment"
+  },
+  "compare.pivot.label": {
+   "text": "Pivot",
+   "provenance": "figure-reference"
+  },
+  "narr.compare.pivot": {
+   "text": "The top of the neck: one bone turning around another.",
+   "provenance": "draft-enrichment"
+  },
+  "compare.ball.label": {
+   "text": "Ball and socket",
+   "provenance": "figure-reference"
+  },
+  "narr.compare.ball": {
+   "text": "The shoulder: a round end in a hollow, so movement in many directions.",
+   "provenance": "draft-enrichment"
+  },
+  "compare.hinge.label": {
+   "text": "Hinge",
+   "provenance": "figure-reference"
+  },
+  "narr.compare.hinge": {
+   "text": "The elbow: bending and straightening around one line.",
+   "provenance": "draft-enrichment"
+  },
+  "narr.compare.together": {
+   "text": "Four different shapes, four different movements. The shape of the join decides what the joint can do.",
+   "provenance": "draft-enrichment"
+  },
+  "narr.recall.open": {
+   "text": "Your turn again. This time you name each joint from the way it moves.",
+   "provenance": "draft-enrichment"
+  },
+  "narr.map.intro": {
+   "text": "Here they are together, in one body.",
+   "provenance": "draft-enrichment"
+  },
+  "narr.map.all": {
+   "text": "Four joins, four shapes, four kinds of movement. The shape of the join is what decides.",
+   "provenance": "draft-enrichment"
+  },
+  "explore.fixed.task": {
+   "text": "Try to move the two skull bones apart.",
+   "provenance": "draft-enrichment"
+  },
+  "explore.fixed.done": {
+   "text": "They barely move, and they spring straight back. That is a fixed joint.",
+   "provenance": "draft-enrichment"
+  },
+  "explore.pivot.task": {
+   "text": "Turn the head as if you were looking over one shoulder.",
+   "provenance": "draft-enrichment"
+  },
+  "explore.pivot.done": {
+   "text": "The head turned, and the bone below stayed still. That is a pivot joint.",
+   "provenance": "draft-enrichment"
+  },
+  "explore.ball.task": {
+   "text": "Move the arm in two different directions.",
+   "provenance": "draft-enrichment"
+  },
+  "explore.ball.done": {
+   "text": "One joint, more than one direction. That is a ball-and-socket joint.",
+   "provenance": "draft-enrichment"
+  },
+  "explore.hinge.task": {
+   "text": "Bend the elbow until it is about half-way — around 90 degrees.",
+   "provenance": "draft-enrichment"
+  },
+  "explore.hinge.done": {
+   "text": "That is flexion. Straighten it again and that is extension — one line, two directions.",
+   "provenance": "draft-enrichment"
+  },
+  "ui.start_lesson": {
+   "text": "Start lesson",
+   "provenance": "ui"
+  },
+  "ui.start_meta": {
+   "text": "9 parts · about 6 minutes",
+   "provenance": "ui"
+  },
+  "ui.start_sound": {
+   "text": "Narrated. Turn your sound on.",
+   "provenance": "ui"
+  },
+  "ui.start_thesis": {
+   "text": "How the shape of a join decides the movement.",
+   "provenance": "ui"
+  },
+  "ui.complete_title": {
+   "text": "Lesson complete",
+   "provenance": "ui"
+  },
+  "ui.complete_replay": {
+   "text": "Replay",
+   "provenance": "ui"
+  },
+  "ui.complete_explore": {
+   "text": "Explore the body",
+   "provenance": "ui"
+  },
+  "ui.complete_recall": {
+   "text": "Try the recall again",
+   "provenance": "ui"
+  },
+  "ui.task": {
+   "text": "Your task",
+   "provenance": "ui"
+  },
+  "a11y.fixed.bones": {
+   "text": "Close view of two skull bones meeting along a wavy line. Nothing is moving.",
+   "provenance": "ui"
+  },
+  "a11y.fixed.try": {
+   "text": "The same two skull bones with the fixed-joint indicator pulsing at the join. Neither bone moves.",
+   "provenance": "ui"
+  },
+  "a11y.fixed.why": {
+   "text": "Close view of the join between the two skull bones, held still.",
+   "provenance": "ui"
+  },
+  "a11y.fixed.name": {
+   "text": "The two skull bones, lit, with the fixed joint labelled.",
+   "provenance": "ui"
+  },
+  "a11y.fixed.task": {
+   "text": "The skull, framed for the learner to try moving the bones.",
+   "provenance": "ui"
+  },
+  "a11y.pivot.why": {
+   "text": "The two bones at the top of the neck, with the rotation indicator turning around a vertical line.",
+   "provenance": "ui"
+  },
+  "a11y.pivot.name": {
+   "text": "The top of the neck, lit, with the pivot joint labelled.",
+   "provenance": "ui"
+  },
+  "a11y.pivot.task": {
+   "text": "The head and the top of the neck, framed for the learner to turn the head.",
+   "provenance": "ui"
+  },
+  "a11y.ball.bones": {
+   "text": "Close view of the rounded top of the upper-arm bone resting against the hollow on the shoulder blade.",
+   "provenance": "ui"
+  },
+  "a11y.ball.move": {
+   "text": "The shoulder with the multi-direction indicator sweeping around the top of the upper-arm bone.",
+   "provenance": "ui"
+  },
+  "a11y.ball.why": {
+   "text": "Close view of the rounded end of the upper-arm bone and the hollow it sits in.",
+   "provenance": "ui"
+  },
+  "a11y.ball.name": {
+   "text": "The shoulder, lit, with the ball-and-socket joint labelled.",
+   "provenance": "ui"
+  },
+  "a11y.ball.task": {
+   "text": "The shoulder and upper arm, framed for the learner to move the arm.",
+   "provenance": "ui"
+  },
+  "a11y.hinge.why": {
+   "text": "Close view of the elbow, showing the spool-shaped end of the upper-arm bone and the forearm bone wrapped around it.",
+   "provenance": "ui"
+  },
+  "a11y.hinge.name": {
+   "text": "The elbow at rest with the hinge axis drawn through it.",
+   "provenance": "ui"
+  },
+  "narr.map.fixed": {
+   "text": "Fixed joints hold the skull bones together.",
+   "provenance": "draft-enrichment"
+  },
+  "narr.map.pivot": {
+   "text": "A pivot joint at the top of the neck turns the head.",
+   "provenance": "draft-enrichment"
+  },
+  "narr.map.ball": {
+   "text": "A ball-and-socket joint at the shoulder moves many ways.",
+   "provenance": "draft-enrichment"
+  },
+  "narr.map.hinge": {
+   "text": "A hinge joint at the elbow bends and straightens.",
+   "provenance": "draft-enrichment"
+  },
+  "ui.for_teachers": {
+   "text": "For teachers",
+   "provenance": "ui"
+  }
+ }
+}

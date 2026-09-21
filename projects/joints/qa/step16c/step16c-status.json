@@ -1,0 +1,189 @@
+{
+  "step": "16C",
+  "status": "COMPLETE",
+  "title": "Explore isolation + narration synchronisation - targeted learner-facing bug fix",
+  "statusReason": "Both reported defects were reproduced in the running build, traced to their actual causes, fixed at the cause, and are each held by an automated invariant. A drag inside an exploration no longer moves the camera, and no render group outside the declared targets ever moves. Narration has exactly one owner and its clip is no longer pinned at zero by the corrector that was meant to keep it in sync.",
+  "generatedAt": "2026-09-20T18:20:00.000Z",
+  "branch": "step16c-explore-isolation-audio",
+  "baseline": { "from": "step16b-teaching-depth-complete", "commit": "1120d0e" },
+  "publicReleaseReady": false,
+
+  "problem1": {
+    "reported": "moving the arm in the ball-and-socket Explore moved the surrounding skeleton with it",
+    "rootCause": "Input ownership, not transform hierarchy. A teaching-simulation exploration sets interactionPolicy.mode = 'passive', so App.learnerOwnsJoint is false, so App.dragTargetFor returns null for every structure, so InteractionController classifies every gesture as an orbit and never calls setOrbitEnabled(false). FilmShell's own exploration pointer handler drove the teaching motion from the same gesture. One drag was therefore consumed twice: the target group rotated AND OrbitControls swung the camera around the body.",
+    "transformHierarchyInvolved": "None was at fault. Render-group nodes are siblings under one parent (BodyLayer.group), never nested, so no group inherits another's displacement. TeachingMotion writes only the declared groups' local matrices through BodyLayer.setGroupTransform, composed as displacement x delivered. Measured across all 35 groups in all four explorations: 0 groups ever moved outside the declared targets, before or after the fix.",
+    "whyItSurvivedTheExistingTests": [
+      "the Step-14 explore tests drive the motion through the QA API, which generates no pointer event, so OrbitControls was never involved",
+      "the only per-structure box available to tests was the manifest bbox, which is static by construction and cannot show a displacement"
+    ],
+    "fix": "App.setOrbitLocked(boolean), taken by AppVideoRuntime.openExplore and released by closeExplore. The InteractionController's setOrbitEnabled callback is 'enabled && !orbitLocked', so nothing can re-enable orbiting while an exploration is open.",
+    "notDoneBy": ["moving a shared parent", "changing group membership", "changing the camera framing to hide the sweep", "hiding context with opacity or visibility"],
+    "groupsAllowedToMove": {
+      "explore.fixed": ["skeleton.016.bone.closeup.skull.fixed.skull"],
+      "explore.pivot": ["skeleton.015.bone.closeup.skull", "skeleton.016.bone.closeup.skull.fixed.skull", "skeleton.033.teeth.closeup.skull"],
+      "explore.ball": ["skeleton.005...elbow_r_core (humerus_right)", "skeleton.004...elbow_r_core (radius_right)", "skeleton.006...elbow_r_core (ulna_right)", "skeleton.003.bone.closeup.elbow_r_core (27 right hand and wrist bones)"],
+      "explore.hinge": []
+    },
+    "measured": {
+      "cameraMovedPerDragBefore": { "fixed": 1.14, "pivot": 2.1, "ball": 2.28, "hinge": 1.14 },
+      "cameraMovedPerDragAfter": { "fixed": 0, "pivot": 0, "ball": 0, "hinge": 0 },
+      "groupsMeasured": 35,
+      "unexpectedGroupsMoved": 0,
+      "shoulderContextWorldBoxChange": { "body.scapula_right": 0, "body.humerus_left": 0, "body.frontal_bone": 0, "body.mandible": 0, "body.hip_bone_right": 0, "body.femur_right": 0, "body.atlas_c1": 0 },
+      "tolerance": 1e-4
+    },
+    "statusPreserved": { "teaching-simulation": 3, "validated-rig": 1, "newGlbs": 0, "newRigs": 0 }
+  },
+
+  "problem2": {
+    "reported": "narration sometimes breaks, starts late, has gaps, or overlaps when entering Explore",
+    "rootCauseA": "NarrationPlayer.sync() re-seeked the shot clip whenever it drifted more than 0.3 s from lesson time, and it is called on every timeline emit (~60 Hz). Assigning currentTime restarts the element's seek, so the next assignment 16 ms later cancelled the work that would have closed the drift. The clip reported itself as playing while currentTime stayed at 0. Proven by instrumenting HTMLMediaElement: 353 currentTime assignments and 353 seeking/seeked/waiting cycles on the first clip in nine seconds, frozen at 0.00 for 5.9 of them. Cold-clip only - the same shot on a second visit, cached, drifted by 0.03 s.",
+    "rootCauseB": "Nothing arbitrated between the two audio elements. playCue() never touched the shot clip and sync() never asked whether a cue was speaking, so the exploration handover produced 196 samples (about 3.9 s) of two voices at once.",
+    "rootCauseC": "seekTo() registered a loadedmetadata listener per call and removed it only when it fired, so a slow clip accumulated dozens, each closing over a stale offset.",
+    "rootCauseD": "The recall completion line was started and then stopped in the same call stack (playCue(completeKey) followed immediately by closeRecall() -> stopCue()).",
+    "ownershipModel": {
+      "states": ["none", "film", "cue"],
+      "rules": [
+        "playCue() takes ownership and stops the shot clip before starting the cue",
+        "sync() returns immediately while owner === 'cue', after pausing the shot clip",
+        "releasing a cue clears the shot key, so the next sync re-positions the clip from lesson time rather than resuming where it was paused",
+        "diagnostics() exposes owner and owners; owners is the number of elements actually audible and must never exceed 1"
+      ]
+    },
+    "correctorFix": ["skip while audio.seeking", "skip while readyState < 2", "at most one correction per 700 ms", "play() only when the element is paused", "at most one pending loadedmetadata listener"],
+    "loadingFix": ["prefetch the next shot's clip on every shot change (~25 KB)", "prefetch the first clip as soon as the manifest resolves, while the landing card is on screen"],
+    "handoverFix": "the film hands over to an exploration only once the handover shot has finished speaking (localMs >= leadIn + clip duration), so the shot is not cut off mid-sentence",
+    "measured": {
+      "overlapSamplesBefore": 196, "overlapSamplesAfter": 0,
+      "maxSimultaneousOwners": 1, "ownershipSamples": 2833,
+      "currentTimeAssignmentsFirstClipBefore": 353, "after": 2,
+      "seekCyclesFirstClipBefore": 353, "seekCyclesFirstClipAfter": 2,
+      "stallsBefore": ["intro.title 5.9s", "hook.question 1.4s", "fixed.bones 1.3s"],
+      "stallsAfter": ["intro.title 0.4s (initial decode)"],
+      "worstClipVsLessonOffsetAfter": "0.29-0.34 s across all 10 shots, a constant offset rather than a drift",
+      "staleClipsAfterAnyTransition": 0
+    },
+    "notDoneBy": ["adding delays", "widening the drift tolerance", "removing either audio element"]
+  },
+
+  "seekAndNavigation": {
+    "rule": "lesson time is the source of truth; caption, visual and narration each resolve from it",
+    "seekCasesChecked": ["inside the same shot", "into another shot", "across chapters", "exactly on a chapter boundary", "one millisecond before a boundary", "the end of the lesson"],
+    "chapterJumpsChecked": ["03 -> 05", "05 -> 04", "06 -> 01", "01 -> 09"],
+    "agreement": "10 of 10 - timeline shotId, caption data-shot and clip src all name the same shot",
+    "staleClips": 0,
+    "alsoChecked": ["pause/resume", "Explore -> Return", "Recall -> next chapter", "Replay", "End / completion"]
+  },
+
+  "frameDrop": {
+    "clampRemoved": false,
+    "note": "RenderLoop keeps its 100 ms frame-delta clamp; lesson time comes from the frame timestamp, as in Step 16B",
+    "measured": [
+      { "fps": 15, "lessonOverWall": 0.996, "narrationOverLesson": 1.003 },
+      { "fps": 10, "lessonOverWall": 1.002, "narrationOverLesson": 0.998 },
+      { "fps": 5, "lessonOverWall": 0.962, "narrationOverLesson": 1.04 },
+      { "fps": 4, "lessonOverWall": 0.988, "narrationOverLesson": 1.01 }
+    ]
+  },
+
+  "landingAndStart": {
+    "cardKept": true,
+    "soundPromptKept": true,
+    "noAudioBeforeGesture": true,
+    "audioAfterGesture": true,
+    "firstClipCorrect": "intro.title",
+    "firstClipDuplicated": false,
+    "replayWorks": true,
+    "universalAutoplayCompatibilityClaimed": false
+  },
+
+  "invariants": {
+    "A": "non-target anatomy never moves during Explore - step16c-invariants A1, A2, A3",
+    "B": "at most one narration owner is active - step16c-invariants B",
+    "C": "caption, visual and narration resolve from the same lesson time - step16c-invariants C, C2",
+    "D": "dropped frames do not permanently slow lesson playback - step16c-invariants D",
+    "E": "entering/exiting Explore cannot leave stale narration - step16c-invariants E",
+    "F": "validated elbow behaviour is unchanged - step16c-invariants F"
+  },
+
+  "tests": {
+    "typecheck": "clean",
+    "unit": { "passed": 98, "failed": 0 },
+    "e2e": { "passed": 102, "failed": 0 },
+    "newSpec": { "file": "tests/e2e/step16c-invariants.spec.ts", "tests": 9 },
+    "consoleErrors": 0,
+    "testsChanged": [
+      "step12-a11y 'live announcements': used a joint exploration, where picking is deliberately off, and passed only on a race with the async policy change. It now uses free-look Explore and asserts picking === true first.",
+      "step12-motion-visual reduced-motion traversal: closes a handover or recall panel and re-seeks before measuring, so it measures the shot's own camera behaviour rather than an authored handover move.",
+      "step16b-teaching §3: reaches the handover shot near its end, because the handover now waits for the shot to finish speaking."
+    ]
+  },
+
+  "accessibility": {
+    "axeViolations": 0,
+    "contrastBelowThreshold": 0,
+    "keyboardJourney": "pass",
+    "reducedMotion": "pass across all 52 shots",
+    "responsive": "pass at 390, 412, 768, 1280, 1440",
+    "exploreTaskAnnounced": true,
+    "exploreResetAndReturnAccessible": true,
+    "taskCompletableByKeyboardAlone": true,
+    "regressions": 0,
+    "screenReaderTested": false,
+    "openIssue": "the sr-only draft disclaimer is still announced once per caption - carried forward from the Step-16A audit"
+  },
+
+  "performance": {
+    "assetsChanged": 0,
+    "bytesBeforeFirst3D": "unchanged",
+    "workRemoved": ["353 -> 2 currentTime assignments on the first clip", "353 -> 2 media seek cycles", "play() once per frame -> only when paused", "unbounded loadedmetadata listeners -> at most one"],
+    "workAdded": ["one clip ahead prefetched per shot change (~25 KB)", "the first clip prefetched while the landing card is on screen"],
+    "lazyLoadingPreserved": true,
+    "abAgainstPreviousCandidate": false,
+    "mobileCertification": false
+  },
+
+  "integrity": {
+    "frozenFilesVerified": 29,
+    "frozenFilesTotal": 29,
+    "masterSha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0",
+    "masterMatchesPin": true,
+    "contentChanged": 0,
+    "audioChanged": 0,
+    "glbsChanged": 0,
+    "manifestsChanged": 0,
+    "blenderChanged": 0,
+    "expertPackagesChanged": 0
+  },
+
+  "filesChanged": {
+    "engine": ["src/engine/core/App.ts", "src/engine/video/AppVideoRuntime.ts", "src/engine/video/NarrationPlayer.ts", "src/engine/body/BodyLayer.ts"],
+    "ui": ["src/ui/video/FilmShell.tsx", "src/ui/video/filmQa.ts"],
+    "tests": ["tests/e2e/step16c-invariants.spec.ts (new)", "tests/e2e/step12-a11y.spec.ts", "tests/e2e/step12-motion-visual.spec.ts", "tests/e2e/step16b-teaching.spec.ts"],
+    "qa": ["qa/step16c/*", "qa/visual/step16c/*", "qa/reports/step16c.*"],
+    "diffSize": "190 insertions, 14 deletions across 6 source files and 3 specs",
+    "notChanged": ["content/**", "public/assets/**", "blender/**", "Human_Body_Master.blend", "qa/expert/step15", "qa/expert/step15b"]
+  },
+
+  "openItems": [
+    "Step 12 remains FAIL: no real Android device, no real iPad, no real NVDA/VoiceOver test, two emulated x4 misses",
+    "expert review remains PENDING on every item: anatomy, curriculum, landmarks, the 0-145 range, human accessibility, asset licence",
+    "all 126 draft-enrichment strings still need subject-expert review",
+    "asset licence is still a RELEASE BLOCKER",
+    "formal Gate 3 still PENDING EXPERT LANDMARK APPROVAL; qa/elbow_r.poses.draft.json is still a draft",
+    "the hip's ball-and-socket classification is still PENDING EXPERT CONFIRMATION",
+    "the sr-only draft disclaimer is still announced once per caption",
+    "Explore still offers free orbit with no content in the five non-category chapters",
+    "the site label is clipped by the exploration panel at 1280x800 - a layout issue noted in the Step-16A audit, not addressed here",
+    "no A/B performance comparison has been run since Step 15B"
+  ],
+
+  "doesNotClaim": [
+    "public release readiness",
+    "expert approval",
+    "device certification",
+    "screen-reader certification",
+    "universal browser autoplay compatibility",
+    "that any teaching simulation is a validated biomechanical rig"
+  ]
+}

@@ -1,0 +1,1221 @@
+{
+ "generatedAt": "2026-09-21T07:39:23.353Z",
+ "rows": [
+  {
+   "width": 390,
+   "explore": "explore.fixed",
+   "state": "1_before",
+   "covered": 0,
+   "prominence": 0.3538,
+   "framedRadius": 187,
+   "grip": {
+    "x": 195,
+    "y": 269
+   },
+   "gripHit": "canvas",
+   "labelsBehind": 0,
+   "labelsOff": 0,
+   "taskDone": false,
+   "draftBadges": 0,
+   "playerHidden": true,
+   "hScroll": false
+  },
+  {
+   "width": 390,
+   "explore": "explore.fixed",
+   "state": "2_task",
+   "covered": 0,
+   "prominence": 0.2821,
+   "framedRadius": 150,
+   "grip": {
+    "x": 195,
+    "y": 232
+   },
+   "gripHit": "canvas",
+   "labelsBehind": 0,
+   "labelsOff": 0,
+   "taskDone": true,
+   "draftBadges": 0,
+   "playerHidden": true,
+   "hScroll": false
+  },
+  {
+   "width": 390,
+   "explore": "explore.fixed",
+   "state": "3_mid",
+   "covered": 0,
+   "prominence": 0.3051,
+   "framedRadius": 163,
+   "grip": {
+    "x": 195,
+    "y": 245
+   },
+   "gripHit": "canvas",
+   "labelsBehind": 0,
+   "labelsOff": 0,
+   "taskDone": true,
+   "draftBadges": 0,
+   "playerHidden": true,
+   "hScroll": false
+  },
+  {
+   "width": 390,
+   "explore": "explore.fixed",
+   "state": "4_done",
+   "covered": 0,
+   "prominence": 0.3051,
+   "framedRadius": 163,
+   "grip": {
+    "x": 195,
+    "y": 245
+   },
+   "gripHit": "canvas",
+   "labelsBehind": 0,
+   "labelsOff": 0,
+   "taskDone": true,
+   "draftBadges": 0,
+   "playerHidden": true,
+   "hScroll": false
+  },
+  {
+   "width": 390,
+   "explore": "explore.pivot",
+   "state": "1_before",
+   "covered": 0,
+   "prominence": 0.1949,
+   "framedRadius": 171,
+   "grip": {
+    "x": 195,
+    "y": 253
+   },
+   "gripHit": "canvas",
+   "labelsBehind": 0,
+   "labelsOff": 0,
+   "taskDone": false,
+   "draftBadges": 0,
+   "playerHidden": true,
+   "hScroll": false
+  },
+  {
+   "width": 390,
+   "explore": "explore.pivot",
+   "state": "2_task",
+   "covered": 0,
+   "prominence": 0.1974,
+   "framedRadius": 171,
+   "grip": {
+    "x": 195,
+    "y": 253
+   },
+   "gripHit": "canvas",
+   "labelsBehind": 0,
+   "labelsOff": 0,
+   "taskDone": false,
+   "draftBadges": 0,
+   "playerHidden": true,
+   "hScroll": false
+  },
+  {
+   "width": 390,
+   "explore": "explore.pivot",
+   "state": "3_mid",
+   "covered": 0,
+   "prominence": 0.1949,
+   "framedRadius": 171,
+   "grip": {
+    "x": 195,
+    "y": 253
+   },
+   "gripHit": "canvas",
+   "labelsBehind": 0,
+   "labelsOff": 0,
+   "taskDone": false,
+   "draftBadges": 0,
+   "playerHidden": true,
+   "hScroll": false
+  },
+  {
+   "width": 390,
+   "explore": "explore.pivot",
+   "state": "4_done",
+   "covered": 0,
+   "prominence": 0.1718,
+   "framedRadius": 147,
+   "grip": {
+    "x": 195,
+    "y": 229
+   },
+   "gripHit": "canvas",
+   "labelsBehind": 0,
+   "labelsOff": 0,
+   "taskDone": true,
+   "draftBadges": 0,
+   "playerHidden": true,
+   "hScroll": false
+  },
+  {
+   "width": 390,
+   "explore": "explore.ball",
+   "state": "1_before",
+   "covered": 0,
+   "prominence": 0.459,
+   "framedRadius": 171,
+   "grip": {
+    "x": 195,
+    "y": 253
+   },
+   "gripHit": "canvas",
+   "labelsBehind": 0,
+   "labelsOff": 0,
+   "taskDone": false,
+   "draftBadges": 0,
+   "playerHidden": true,
+   "hScroll": false
+  },
+  {
+   "width": 390,
+   "explore": "explore.ball",
+   "state": "2_task",
+   "covered": 0,
+   "prominence": 0.4615,
+   "framedRadius": 171,
+   "grip": {
+    "x": 195,
+    "y": 253
+   },
+   "gripHit": "canvas",
+   "labelsBehind": 0,
+   "labelsOff": 0,
+   "taskDone": false,
+   "draftBadges": 0,
+   "playerHidden": true,
+   "hScroll": false
+  },
+  {
+   "width": 390,
+   "explore": "explore.ball",
+   "state": "3_mid",
+   "covered": 0,
+   "prominence": 0.4436,
+   "framedRadius": 171,
+   "grip": {
+    "x": 195,
+    "y": 253
+   },
+   "gripHit": "canvas",
+   "labelsBehind": 0,
+   "labelsOff": 0,
+   "taskDone": false,
+   "draftBadges": 0,
+   "playerHidden": true,
+   "hScroll": false
+  },
+  {
+   "width": 390,
+   "explore": "explore.ball",
+   "state": "4_done",
+   "covered": 0,
+   "prominence": 0.4128,
+   "framedRadius": 147,
+   "grip": {
+    "x": 195,
+    "y": 229
+   },
+   "gripHit": "canvas",
+   "labelsBehind": 0,
+   "labelsOff": 0,
+   "taskDone": true,
+   "draftBadges": 0,
+   "playerHidden": true,
+   "hScroll": false
+  },
+  {
+   "width": 390,
+   "explore": "explore.hinge",
+   "state": "1_before",
+   "covered": 0,
+   "prominence": 0.9231,
+   "framedRadius": 180,
+   "grip": {
+    "x": 208,
+    "y": 336
+   },
+   "gripHit": "canvas",
+   "labelsBehind": 0,
+   "labelsOff": 0,
+   "taskDone": false,
+   "draftBadges": 0,
+   "playerHidden": true,
+   "hScroll": false
+  },
+  {
+   "width": 390,
+   "explore": "explore.hinge",
+   "state": "2_task",
+   "covered": 0,
+   "prominence": 0.9231,
+   "framedRadius": 180,
+   "grip": {
+    "x": 232,
+    "y": 329
+   },
+   "gripHit": "canvas",
+   "labelsBehind": 0,
+   "labelsOff": 0,
+   "taskDone": false,
+   "draftBadges": 0,
+   "playerHidden": true,
+   "hScroll": false
+  },
+  {
+   "width": 390,
+   "explore": "explore.hinge",
+   "state": "3_mid",
+   "covered": 0,
+   "prominence": 0.5795,
+   "framedRadius": 180,
+   "grip": {
+    "x": 271,
+    "y": 276
+   },
+   "gripHit": "canvas",
+   "labelsBehind": 0,
+   "labelsOff": 0,
+   "taskDone": false,
+   "draftBadges": 0,
+   "playerHidden": true,
+   "hScroll": false
+  },
+  {
+   "width": 390,
+   "explore": "explore.hinge",
+   "state": "4_done",
+   "covered": 0,
+   "prominence": 0.4641,
+   "framedRadius": 156,
+   "grip": {
+    "x": 262,
+    "y": 244
+   },
+   "gripHit": "canvas",
+   "labelsBehind": 0,
+   "labelsOff": 0,
+   "taskDone": true,
+   "draftBadges": 0,
+   "playerHidden": true,
+   "hScroll": false
+  },
+  {
+   "width": 412,
+   "explore": "explore.fixed",
+   "state": "1_before",
+   "covered": 0,
+   "prominence": 0.3495,
+   "framedRadius": 197,
+   "grip": {
+    "x": 206,
+    "y": 279
+   },
+   "gripHit": "canvas",
+   "labelsBehind": 0,
+   "labelsOff": 0,
+   "taskDone": false,
+   "draftBadges": 0,
+   "playerHidden": true,
+   "hScroll": false
+  },
+  {
+   "width": 412,
+   "explore": "explore.fixed",
+   "state": "2_task",
+   "covered": 0,
+   "prominence": 0.284,
+   "framedRadius": 160,
+   "grip": {
+    "x": 206,
+    "y": 242
+   },
+   "gripHit": "canvas",
+   "labelsBehind": 0,
+   "labelsOff": 0,
+   "taskDone": true,
+   "draftBadges": 0,
+   "playerHidden": true,
+   "hScroll": false
+  },
+  {
+   "width": 412,
+   "explore": "explore.fixed",
+   "state": "3_mid",
+   "covered": 0,
+   "prominence": 0.3083,
+   "framedRadius": 173,
+   "grip": {
+    "x": 206,
+    "y": 255
+   },
+   "gripHit": "canvas",
+   "labelsBehind": 0,
+   "labelsOff": 0,
+   "taskDone": true,
+   "draftBadges": 0,
+   "playerHidden": true,
+   "hScroll": false
+  },
+  {
+   "width": 412,
+   "explore": "explore.fixed",
+   "state": "4_done",
+   "covered": 0,
+   "prominence": 0.3083,
+   "framedRadius": 173,
+   "grip": {
+    "x": 206,
+    "y": 255
+   },
+   "gripHit": "canvas",
+   "labelsBehind": 0,
+   "labelsOff": 0,
+   "taskDone": true,
+   "draftBadges": 0,
+   "playerHidden": true,
+   "hScroll": false
+  },
+  {
+   "width": 412,
+   "explore": "explore.pivot",
+   "state": "1_before",
+   "covered": 0,
+   "prominence": 0.1845,
+   "framedRadius": 171,
+   "grip": {
+    "x": 206,
+    "y": 253
+   },
+   "gripHit": "canvas",
+   "labelsBehind": 0,
+   "labelsOff": 0,
+   "taskDone": false,
+   "draftBadges": 0,
+   "playerHidden": true,
+   "hScroll": false
+  },
+  {
+   "width": 412,
+   "explore": "explore.pivot",
+   "state": "2_task",
+   "covered": 0,
+   "prominence": 0.1869,
+   "framedRadius": 171,
+   "grip": {
+    "x": 206,
+    "y": 253
+   },
+   "gripHit": "canvas",
+   "labelsBehind": 0,
+   "labelsOff": 0,
+   "taskDone": false,
+   "draftBadges": 0,
+   "playerHidden": true,
+   "hScroll": false
+  },
+  {
+   "width": 412,
+   "explore": "explore.pivot",
+   "state": "3_mid",
+   "covered": 0,
+   "prominence": 0.1845,
+   "framedRadius": 171,
+   "grip": {
+    "x": 206,
+    "y": 253
+   },
+   "gripHit": "canvas",
+   "labelsBehind": 0,
+   "labelsOff": 0,
+   "taskDone": false,
+   "draftBadges": 0,
+   "playerHidden": true,
+   "hScroll": false
+  },
+  {
+   "width": 412,
+   "explore": "explore.pivot",
+   "state": "4_done",
+   "covered": 0,
+   "prominence": 0.1626,
+   "framedRadius": 147,
+   "grip": {
+    "x": 206,
+    "y": 229
+   },
+   "gripHit": "canvas",
+   "labelsBehind": 0,
+   "labelsOff": 0,
+   "taskDone": true,
+   "draftBadges": 0,
+   "playerHidden": true,
+   "hScroll": false
+  },
+  {
+   "width": 412,
+   "explore": "explore.ball",
+   "state": "1_before",
+   "covered": 0,
+   "prominence": 0.4345,
+   "framedRadius": 171,
+   "grip": {
+    "x": 206,
+    "y": 253
+   },
+   "gripHit": "canvas",
+   "labelsBehind": 0,
+   "labelsOff": 0,
+   "taskDone": false,
+   "draftBadges": 0,
+   "playerHidden": true,
+   "hScroll": false
+  },
+  {
+   "width": 412,
+   "explore": "explore.ball",
+   "state": "2_task",
+   "covered": 0,
+   "prominence": 0.4369,
+   "framedRadius": 171,
+   "grip": {
+    "x": 206,
+    "y": 253
+   },
+   "gripHit": "canvas",
+   "labelsBehind": 0,
+   "labelsOff": 0,
+   "taskDone": false,
+   "draftBadges": 0,
+   "playerHidden": true,
+   "hScroll": false
+  },
+  {
+   "width": 412,
+   "explore": "explore.ball",
+   "state": "3_mid",
+   "covered": 0,
+   "prominence": 0.4199,
+   "framedRadius": 171,
+   "grip": {
+    "x": 206,
+    "y": 253
+   },
+   "gripHit": "canvas",
+   "labelsBehind": 0,
+   "labelsOff": 0,
+   "taskDone": false,
+   "draftBadges": 0,
+   "playerHidden": true,
+   "hScroll": false
+  },
+  {
+   "width": 412,
+   "explore": "explore.ball",
+   "state": "4_done",
+   "covered": 0,
+   "prominence": 0.3932,
+   "framedRadius": 147,
+   "grip": {
+    "x": 206,
+    "y": 229
+   },
+   "gripHit": "canvas",
+   "labelsBehind": 0,
+   "labelsOff": 0,
+   "taskDone": true,
+   "draftBadges": 0,
+   "playerHidden": true,
+   "hScroll": false
+  },
+  {
+   "width": 412,
+   "explore": "explore.hinge",
+   "state": "1_before",
+   "covered": 0,
+   "prominence": 0.8738,
+   "framedRadius": 180,
+   "grip": {
+    "x": 219,
+    "y": 336
+   },
+   "gripHit": "canvas",
+   "labelsBehind": 0,
+   "labelsOff": 0,
+   "taskDone": false,
+   "draftBadges": 0,
+   "playerHidden": true,
+   "hScroll": false
+  },
+  {
+   "width": 412,
+   "explore": "explore.hinge",
+   "state": "2_task",
+   "covered": 0,
+   "prominence": 0.8738,
+   "framedRadius": 180,
+   "grip": {
+    "x": 243,
+    "y": 329
+   },
+   "gripHit": "canvas",
+   "labelsBehind": 0,
+   "labelsOff": 0,
+   "taskDone": false,
+   "draftBadges": 0,
+   "playerHidden": true,
+   "hScroll": false
+  },
+  {
+   "width": 412,
+   "explore": "explore.hinge",
+   "state": "3_mid",
+   "covered": 0,
+   "prominence": 0.5485,
+   "framedRadius": 180,
+   "grip": {
+    "x": 282,
+    "y": 276
+   },
+   "gripHit": "canvas",
+   "labelsBehind": 0,
+   "labelsOff": 0,
+   "taskDone": false,
+   "draftBadges": 0,
+   "playerHidden": true,
+   "hScroll": false
+  },
+  {
+   "width": 412,
+   "explore": "explore.hinge",
+   "state": "4_done",
+   "covered": 0,
+   "prominence": 0.4369,
+   "framedRadius": 156,
+   "grip": {
+    "x": 273,
+    "y": 244
+   },
+   "gripHit": "canvas",
+   "labelsBehind": 0,
+   "labelsOff": 0,
+   "taskDone": true,
+   "draftBadges": 0,
+   "playerHidden": true,
+   "hScroll": false
+  },
+  {
+   "width": 1280,
+   "explore": "explore.fixed",
+   "state": "1_before",
+   "covered": 0,
+   "prominence": 0.3463,
+   "framedRadius": 385,
+   "grip": {
+    "x": 852,
+    "y": 400
+   },
+   "gripHit": "canvas",
+   "labelsBehind": 0,
+   "labelsOff": 0,
+   "taskDone": false,
+   "draftBadges": 0,
+   "playerHidden": false,
+   "hScroll": false
+  },
+  {
+   "width": 1280,
+   "explore": "explore.fixed",
+   "state": "2_task",
+   "covered": 0,
+   "prominence": 0.3463,
+   "framedRadius": 385,
+   "grip": {
+    "x": 852,
+    "y": 400
+   },
+   "gripHit": "canvas",
+   "labelsBehind": 0,
+   "labelsOff": 0,
+   "taskDone": true,
+   "draftBadges": 0,
+   "playerHidden": false,
+   "hScroll": false
+  },
+  {
+   "width": 1280,
+   "explore": "explore.fixed",
+   "state": "3_mid",
+   "covered": 0,
+   "prominence": 0.3463,
+   "framedRadius": 385,
+   "grip": {
+    "x": 852,
+    "y": 400
+   },
+   "gripHit": "canvas",
+   "labelsBehind": 0,
+   "labelsOff": 0,
+   "taskDone": true,
+   "draftBadges": 0,
+   "playerHidden": false,
+   "hScroll": false
+  },
+  {
+   "width": 1280,
+   "explore": "explore.fixed",
+   "state": "4_done",
+   "covered": 0,
+   "prominence": 0.3463,
+   "framedRadius": 385,
+   "grip": {
+    "x": 852,
+    "y": 400
+   },
+   "gripHit": "canvas",
+   "labelsBehind": 0,
+   "labelsOff": 0,
+   "taskDone": true,
+   "draftBadges": 0,
+   "playerHidden": false,
+   "hScroll": false
+  },
+  {
+   "width": 1280,
+   "explore": "explore.pivot",
+   "state": "1_before",
+   "covered": 0,
+   "prominence": 0.215,
+   "framedRadius": 385,
+   "grip": {
+    "x": 852,
+    "y": 400
+   },
+   "gripHit": "canvas",
+   "labelsBehind": 0,
+   "labelsOff": 0,
+   "taskDone": false,
+   "draftBadges": 0,
+   "playerHidden": false,
+   "hScroll": false
+  },
+  {
+   "width": 1280,
+   "explore": "explore.pivot",
+   "state": "2_task",
+   "covered": 0,
+   "prominence": 0.2162,
+   "framedRadius": 385,
+   "grip": {
+    "x": 852,
+    "y": 400
+   },
+   "gripHit": "canvas",
+   "labelsBehind": 0,
+   "labelsOff": 0,
+   "taskDone": false,
+   "draftBadges": 0,
+   "playerHidden": false,
+   "hScroll": false
+  },
+  {
+   "width": 1280,
+   "explore": "explore.pivot",
+   "state": "3_mid",
+   "covered": 0,
+   "prominence": 0.2162,
+   "framedRadius": 385,
+   "grip": {
+    "x": 852,
+    "y": 400
+   },
+   "gripHit": "canvas",
+   "labelsBehind": 0,
+   "labelsOff": 0,
+   "taskDone": false,
+   "draftBadges": 0,
+   "playerHidden": false,
+   "hScroll": false
+  },
+  {
+   "width": 1280,
+   "explore": "explore.pivot",
+   "state": "4_done",
+   "covered": 0,
+   "prominence": 0.22,
+   "framedRadius": 385,
+   "grip": {
+    "x": 852,
+    "y": 400
+   },
+   "gripHit": "canvas",
+   "labelsBehind": 0,
+   "labelsOff": 0,
+   "taskDone": true,
+   "draftBadges": 0,
+   "playerHidden": false,
+   "hScroll": false
+  },
+  {
+   "width": 1280,
+   "explore": "explore.ball",
+   "state": "1_before",
+   "covered": 0,
+   "prominence": 0.5038,
+   "framedRadius": 385,
+   "grip": {
+    "x": 852,
+    "y": 400
+   },
+   "gripHit": "canvas",
+   "labelsBehind": 0,
+   "labelsOff": 0,
+   "taskDone": false,
+   "draftBadges": 0,
+   "playerHidden": false,
+   "hScroll": false
+  },
+  {
+   "width": 1280,
+   "explore": "explore.ball",
+   "state": "2_task",
+   "covered": 0,
+   "prominence": 0.5075,
+   "framedRadius": 385,
+   "grip": {
+    "x": 852,
+    "y": 400
+   },
+   "gripHit": "canvas",
+   "labelsBehind": 0,
+   "labelsOff": 0,
+   "taskDone": false,
+   "draftBadges": 0,
+   "playerHidden": false,
+   "hScroll": false
+  },
+  {
+   "width": 1280,
+   "explore": "explore.ball",
+   "state": "3_mid",
+   "covered": 0,
+   "prominence": 0.5238,
+   "framedRadius": 385,
+   "grip": {
+    "x": 852,
+    "y": 400
+   },
+   "gripHit": "canvas",
+   "labelsBehind": 0,
+   "labelsOff": 0,
+   "taskDone": false,
+   "draftBadges": 0,
+   "playerHidden": false,
+   "hScroll": false
+  },
+  {
+   "width": 1280,
+   "explore": "explore.ball",
+   "state": "4_done",
+   "covered": 0,
+   "prominence": 0.5737,
+   "framedRadius": 385,
+   "grip": {
+    "x": 852,
+    "y": 400
+   },
+   "gripHit": "canvas",
+   "labelsBehind": 0,
+   "labelsOff": 0,
+   "taskDone": true,
+   "draftBadges": 0,
+   "playerHidden": false,
+   "hScroll": false
+  },
+  {
+   "width": 1280,
+   "explore": "explore.hinge",
+   "state": "1_before",
+   "covered": 0,
+   "prominence": 0.9625,
+   "framedRadius": 385,
+   "grip": {
+    "x": 879,
+    "y": 561
+   },
+   "gripHit": "canvas",
+   "labelsBehind": 0,
+   "labelsOff": 0,
+   "taskDone": false,
+   "draftBadges": 0,
+   "playerHidden": false,
+   "hScroll": false
+  },
+  {
+   "width": 1280,
+   "explore": "explore.hinge",
+   "state": "2_task",
+   "covered": 0,
+   "prominence": 0.9625,
+   "framedRadius": 385,
+   "grip": {
+    "x": 932,
+    "y": 546
+   },
+   "gripHit": "canvas",
+   "labelsBehind": 0,
+   "labelsOff": 0,
+   "taskDone": false,
+   "draftBadges": 0,
+   "playerHidden": false,
+   "hScroll": false
+  },
+  {
+   "width": 1280,
+   "explore": "explore.hinge",
+   "state": "3_mid",
+   "covered": 0,
+   "prominence": 0.9625,
+   "framedRadius": 385,
+   "grip": {
+    "x": 961,
+    "y": 528
+   },
+   "gripHit": "canvas",
+   "labelsBehind": 0,
+   "labelsOff": 0,
+   "taskDone": false,
+   "draftBadges": 0,
+   "playerHidden": false,
+   "hScroll": false
+  },
+  {
+   "width": 1280,
+   "explore": "explore.hinge",
+   "state": "4_done",
+   "covered": 0,
+   "prominence": 0.5825,
+   "framedRadius": 385,
+   "grip": {
+    "x": 1019,
+    "y": 422
+   },
+   "gripHit": "canvas",
+   "labelsBehind": 0,
+   "labelsOff": 0,
+   "taskDone": true,
+   "draftBadges": 0,
+   "playerHidden": false,
+   "hScroll": false
+  },
+  {
+   "width": 1440,
+   "explore": "explore.fixed",
+   "state": "1_before",
+   "covered": 0,
+   "prominence": 0.3467,
+   "framedRadius": 433,
+   "grip": {
+    "x": 936,
+    "y": 450
+   },
+   "gripHit": "canvas",
+   "labelsBehind": 0,
+   "labelsOff": 0,
+   "taskDone": false,
+   "draftBadges": 0,
+   "playerHidden": false,
+   "hScroll": false
+  },
+  {
+   "width": 1440,
+   "explore": "explore.fixed",
+   "state": "2_task",
+   "covered": 0,
+   "prominence": 0.3467,
+   "framedRadius": 433,
+   "grip": {
+    "x": 936,
+    "y": 450
+   },
+   "gripHit": "canvas",
+   "labelsBehind": 0,
+   "labelsOff": 0,
+   "taskDone": true,
+   "draftBadges": 0,
+   "playerHidden": false,
+   "hScroll": false
+  },
+  {
+   "width": 1440,
+   "explore": "explore.fixed",
+   "state": "3_mid",
+   "covered": 0,
+   "prominence": 0.3467,
+   "framedRadius": 433,
+   "grip": {
+    "x": 936,
+    "y": 450
+   },
+   "gripHit": "canvas",
+   "labelsBehind": 0,
+   "labelsOff": 0,
+   "taskDone": true,
+   "draftBadges": 0,
+   "playerHidden": false,
+   "hScroll": false
+  },
+  {
+   "width": 1440,
+   "explore": "explore.fixed",
+   "state": "4_done",
+   "covered": 0,
+   "prominence": 0.3467,
+   "framedRadius": 433,
+   "grip": {
+    "x": 936,
+    "y": 450
+   },
+   "gripHit": "canvas",
+   "labelsBehind": 0,
+   "labelsOff": 0,
+   "taskDone": true,
+   "draftBadges": 0,
+   "playerHidden": false,
+   "hScroll": false
+  },
+  {
+   "width": 1440,
+   "explore": "explore.pivot",
+   "state": "1_before",
+   "covered": 0,
+   "prominence": 0.2167,
+   "framedRadius": 433,
+   "grip": {
+    "x": 936,
+    "y": 450
+   },
+   "gripHit": "canvas",
+   "labelsBehind": 0,
+   "labelsOff": 0,
+   "taskDone": false,
+   "draftBadges": 0,
+   "playerHidden": false,
+   "hScroll": false
+  },
+  {
+   "width": 1440,
+   "explore": "explore.pivot",
+   "state": "2_task",
+   "covered": 0,
+   "prominence": 0.2167,
+   "framedRadius": 433,
+   "grip": {
+    "x": 936,
+    "y": 450
+   },
+   "gripHit": "canvas",
+   "labelsBehind": 0,
+   "labelsOff": 0,
+   "taskDone": false,
+   "draftBadges": 0,
+   "playerHidden": false,
+   "hScroll": false
+  },
+  {
+   "width": 1440,
+   "explore": "explore.pivot",
+   "state": "3_mid",
+   "covered": 0,
+   "prominence": 0.2167,
+   "framedRadius": 433,
+   "grip": {
+    "x": 936,
+    "y": 450
+   },
+   "gripHit": "canvas",
+   "labelsBehind": 0,
+   "labelsOff": 0,
+   "taskDone": false,
+   "draftBadges": 0,
+   "playerHidden": false,
+   "hScroll": false
+  },
+  {
+   "width": 1440,
+   "explore": "explore.pivot",
+   "state": "4_done",
+   "covered": 0,
+   "prominence": 0.22,
+   "framedRadius": 433,
+   "grip": {
+    "x": 936,
+    "y": 450
+   },
+   "gripHit": "canvas",
+   "labelsBehind": 0,
+   "labelsOff": 0,
+   "taskDone": true,
+   "draftBadges": 0,
+   "playerHidden": false,
+   "hScroll": false
+  },
+  {
+   "width": 1440,
+   "explore": "explore.ball",
+   "state": "1_before",
+   "covered": 0,
+   "prominence": 0.5033,
+   "framedRadius": 433,
+   "grip": {
+    "x": 936,
+    "y": 450
+   },
+   "gripHit": "canvas",
+   "labelsBehind": 0,
+   "labelsOff": 0,
+   "taskDone": false,
+   "draftBadges": 0,
+   "playerHidden": false,
+   "hScroll": false
+  },
+  {
+   "width": 1440,
+   "explore": "explore.ball",
+   "state": "2_task",
+   "covered": 0,
+   "prominence": 0.5067,
+   "framedRadius": 433,
+   "grip": {
+    "x": 936,
+    "y": 450
+   },
+   "gripHit": "canvas",
+   "labelsBehind": 0,
+   "labelsOff": 0,
+   "taskDone": false,
+   "draftBadges": 0,
+   "playerHidden": false,
+   "hScroll": false
+  },
+  {
+   "width": 1440,
+   "explore": "explore.ball",
+   "state": "3_mid",
+   "covered": 0,
+   "prominence": 0.5244,
+   "framedRadius": 433,
+   "grip": {
+    "x": 936,
+    "y": 450
+   },
+   "gripHit": "canvas",
+   "labelsBehind": 0,
+   "labelsOff": 0,
+   "taskDone": false,
+   "draftBadges": 0,
+   "playerHidden": false,
+   "hScroll": false
+  },
+  {
+   "width": 1440,
+   "explore": "explore.ball",
+   "state": "4_done",
+   "covered": 0,
+   "prominence": 0.5744,
+   "framedRadius": 433,
+   "grip": {
+    "x": 936,
+    "y": 450
+   },
+   "gripHit": "canvas",
+   "labelsBehind": 0,
+   "labelsOff": 0,
+   "taskDone": true,
+   "draftBadges": 0,
+   "playerHidden": false,
+   "hScroll": false
+  },
+  {
+   "width": 1440,
+   "explore": "explore.hinge",
+   "state": "1_before",
+   "covered": 0,
+   "prominence": 0.9622,
+   "framedRadius": 433,
+   "grip": {
+    "x": 967,
+    "y": 632
+   },
+   "gripHit": "canvas",
+   "labelsBehind": 0,
+   "labelsOff": 0,
+   "taskDone": false,
+   "draftBadges": 0,
+   "playerHidden": false,
+   "hScroll": false
+  },
+  {
+   "width": 1440,
+   "explore": "explore.hinge",
+   "state": "2_task",
+   "covered": 0,
+   "prominence": 0.9622,
+   "framedRadius": 433,
+   "grip": {
+    "x": 1027,
+    "y": 615
+   },
+   "gripHit": "canvas",
+   "labelsBehind": 0,
+   "labelsOff": 0,
+   "taskDone": false,
+   "draftBadges": 0,
+   "playerHidden": false,
+   "hScroll": false
+  },
+  {
+   "width": 1440,
+   "explore": "explore.hinge",
+   "state": "3_mid",
+   "covered": 0,
+   "prominence": 0.9622,
+   "framedRadius": 433,
+   "grip": {
+    "x": 1053,
+    "y": 598
+   },
+   "gripHit": "canvas",
+   "labelsBehind": 0,
+   "labelsOff": 0,
+   "taskDone": false,
+   "draftBadges": 0,
+   "playerHidden": false,
+   "hScroll": false
+  },
+  {
+   "width": 1440,
+   "explore": "explore.hinge",
+   "state": "4_done",
+   "covered": 0,
+   "prominence": 0.5567,
+   "framedRadius": 433,
+   "grip": {
+    "x": 1126,
+    "y": 466
+   },
+   "gripHit": "canvas",
+   "labelsBehind": 0,
+   "labelsOff": 0,
+   "taskDone": true,
+   "draftBadges": 0,
+   "playerHidden": false,
+   "hScroll": false
+  }
+ ]
+}

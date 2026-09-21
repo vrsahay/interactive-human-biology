@@ -1,0 +1,121 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "joints-platform/locale.schema.json",
+  "title": "Lesson locale strings (schema 1)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "localeId",
+    "language",
+    "provenanceLegend",
+    "sources",
+    "strings"
+  ],
+  "properties": {
+    "schema": {
+      "const": 1
+    },
+    "localeId": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+$"
+    },
+    "language": {
+      "type": "string",
+      "pattern": "^[a-z]{2}(-[A-Z]{2})?$"
+    },
+    "provenanceLegend": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source-excerpt",
+        "figure-reference",
+        "draft-enrichment",
+        "ui"
+      ],
+      "properties": {
+        "source-excerpt": {
+          "type": "string"
+        },
+        "draft-enrichment": {
+          "type": "string"
+        },
+        "ui": {
+          "type": "string"
+        },
+        "figure-reference": {
+          "type": "string"
+        }
+      }
+    },
+    "sources": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "description",
+          "verifiedAgainstTextbook"
+        ],
+        "properties": {
+          "description": {
+            "type": "string"
+          },
+          "verifiedAgainstTextbook": {
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    "strings": {
+      "type": "object",
+      "propertyNames": {
+        "pattern": "^[a-z0-9_.-]+$"
+      },
+      "additionalProperties": {
+        "oneOf": [
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "text",
+              "provenance",
+              "sourceId"
+            ],
+            "properties": {
+              "text": {
+                "type": "string"
+              },
+              "provenance": {
+                "const": "source-excerpt"
+              },
+              "sourceId": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "text",
+              "provenance"
+            ],
+            "properties": {
+              "text": {
+                "type": "string"
+              },
+              "provenance": {
+                "enum": [
+                  "figure-reference",
+                  "draft-enrichment",
+                  "ui"
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

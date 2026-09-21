@@ -1,0 +1,212 @@
+{
+ "step": "13-final",
+ "document": "Consolidated review status for Milestone 1. GREEN = evidence complete. AMBER = works, but evidence or a reviewer is required. RED = an actual defect. PENDING = the evidence cannot exist yet because it needs a person, a device or a licence.",
+ "generatedAt": "2026-09-18",
+ "productState": "FROZEN for expert sign-off. No implementation change is permitted while this status stands.",
+ "rules": [
+  "AMBER and PENDING are never converted to GREEN because the implementation works.",
+  "Automated evidence is not an expert pass.",
+  "Step 12 is recorded as FAIL and is not relabelled.",
+  "RED is recorded only if a new concrete defect is actually discovered."
+ ],
+ "headline": {
+  "step12": "FAIL",
+  "step13": "CONDITIONAL - READY FOR HUMAN EXPERT SIGN-OFF",
+  "publicRelease": "NOT READY",
+  "milestone1": "READY FOR HUMAN EXPERT SIGN-OFF"
+ },
+ "green": [
+  {
+   "item": "Runtime integrity",
+   "evidence": "Runtime matches the Blender rig at 0/45/90/145 deg: worst anchor deviation 0.0002 mm across 17 anchors and 49 structures. qa/reports/elbow_r.gate3.step12.json"
+  },
+  {
+   "item": "Asset integrity",
+   "evidence": "Master f7313dab... unchanged and matching its pin; working file, v001-v004, the three elbow GLBs and the elbow manifest byte-identical; v2 (6/6) and v3 (8/8) body assets verify against their manifests; Gate 2 19 checks 0 failures; body delivery 61 checks 0 failures. qa/expert/frozen-build.json"
+  },
+  {
+   "item": "Cross-layer consistency",
+   "evidence": "12 of 12 checks match across Blender -> GLB -> manifest -> Three.js, including the Z-up/Y-up pivot conversion. qa/expert/step13_cross_layer.json"
+  },
+  {
+   "item": "Automated accessibility",
+   "evidence": "axe 0 violations across 12 scopes (desktop and mobile); 201 measured contrast rows over the rendered scene, 0 failures, tightest 3.50:1 against 3:1. qa/reports/step12.accessibility.json"
+  },
+  {
+   "item": "Keyboard",
+   "evidence": "The whole lesson completes with visible focus and no traps; dialogs trap Tab, Escape closes, focus returns to the opener; targets >= 44 px; reflow at 320 px with no overflow."
+  },
+  {
+   "item": "Reduced motion",
+   "evidence": "Every shot cuts on entry, no dolly during playback, static indicators, stepped poses, 0 s caption transitions; the learner setting overrides the system preference. qa/reports/step12.reduced_motion.json"
+  },
+  {
+   "item": "Production UI",
+   "evidence": "Film shell with chapters, settings and sources dialogs, quality tiers, caption sizing, buffering and error states; exactly one semantic quiz prompt at 1280x800, 768x1024, 390x844 and 320x640."
+  },
+  {
+   "item": "Automated tests",
+   "evidence": "90 unit tests (9 files), 48 Playwright tests (10 files), typecheck clean, 0 console errors anywhere including the six performance-lab profiles."
+  },
+  {
+   "item": "Visual implementation",
+   "evidence": "Canvas-only comparison against the Step-11 build: high tier 52.0-58.4 dB PSNR, <= 0.015 % of pixels differing; medium/low 44.2-58.4 dB with the intended LOD1 skin on full-body shots. qa/reports/step12r.visual_tradeoff.canvas.json"
+  },
+  {
+   "item": "Provenance discipline",
+   "evidence": "114 visible strings classified with 0 unclassified: 1 source excerpt, 17 figure-reference names, 18 draft-enrichment (every one DRAFT-badged), 73 UI, 5 system honesty notes. A unit test rejects invented citations. qa/expert/content_provenance.json"
+  },
+  {
+   "item": "Schematic honesty mechanism",
+   "evidence": "Every captioned shot showing a schematic indicator carries a schematic note, enforced by a unit test with recap.pullback as the single documented exception; both ligament bands render as 'Schematic ligament band'; the fitted axis is labelled as fitted."
+  },
+  {
+   "item": "Narration key handling",
+   "evidence": "Audio is synthesized at build time from an environment variable and shipped as static MP3. A search for an AIza key pattern across the whole repository including the built bundle returns 0 files, so no Text-to-Speech key is exposed to visitors or billable by them."
+  }
+ ],
+ "amber": [
+  {
+   "item": "Expert anatomical review",
+   "status": "PENDING",
+   "why": "No anatomist has reviewed structure names, movement direction, movement plane, the single-axis simplification or the teaching range.",
+   "owner": "Subject-matter reviewer",
+   "artifact": "qa/expert/reviewer-checklist.md section A"
+  },
+  {
+   "item": "Expert curriculum review",
+   "status": "PENDING",
+   "why": "No curriculum reviewer has approved the wording. 18 draft-enrichment strings remain draft.",
+   "owner": "Subject-matter reviewer",
+   "artifact": "qa/expert/curriculum-review.md"
+  },
+  {
+   "item": "Hip claim (ball-and-socket)",
+   "status": "PENDING EXPERT CONFIRMATION",
+   "why": "No NCERT source reachable online states that the hip is a ball-and-socket joint; corroborated only by StatPearls, which is not NCERT. The claim is retained, not removed.",
+   "owner": "Subject-matter reviewer, or an NCERT citation",
+   "artifact": "qa/expert/reviewer-checklist.md item B2"
+  },
+  {
+   "item": "Formal Gate 3 landmark approval",
+   "status": "PENDING EXPERT LANDMARK APPROVAL",
+   "why": "8 draft landmarks exist with proposed tolerances; the file deliberately carries no approvedBy and is deliberately NOT renamed to qa/elbow_r.poses.json.",
+   "owner": "Subject-matter reviewer",
+   "artifact": "qa/elbow_r.poses.draft.json"
+  },
+  {
+   "item": "145 deg teaching range - final expert review",
+   "status": "PENDING",
+   "why": "Zwerus et al. 2019 (11(3):215-224, doi 10.1177/1758573217728711) supports the reasonableness of an approximate teaching range around 145 deg. It does not make 145 deg a universal anatomical maximum and does not validate this model's geometry. Reviewer decision required: PASS or REQUEST_FIX.",
+   "owner": "Subject-matter reviewer",
+   "artifact": "qa/expert/reviewer-checklist.md item B3"
+  },
+  {
+   "item": "Real Android certification",
+   "status": "NOT AVAILABLE",
+   "why": "No mid-range Android phone was ever available. All phone numbers are emulation on a development laptop.",
+   "owner": "Needs the device",
+   "artifact": "qa/release/device-certification.md"
+  },
+  {
+   "item": "Real iPad certification",
+   "status": "NOT AVAILABLE",
+   "why": "No iPad was ever available.",
+   "owner": "Needs the device",
+   "artifact": "qa/release/device-certification.md"
+  },
+  {
+   "item": "NVDA testing",
+   "status": "NOT TESTED",
+   "why": "No screen reader was available. No screen-reader certification is claimed.",
+   "owner": "Needs a screen reader",
+   "artifact": "qa/expert/screen-reader-checklist.md"
+  },
+  {
+   "item": "VoiceOver testing",
+   "status": "NOT TESTED",
+   "why": "No screen reader was available.",
+   "owner": "Needs a screen reader",
+   "artifact": "qa/expert/screen-reader-checklist.md"
+  },
+  {
+   "item": "Source anatomy licence",
+   "status": "RELEASE BLOCKER - PENDING",
+   "why": "No licence text, author, copyright metadata, vendor or acquisition record exists for Human_Body_Master.blend, and the web build ships derivative geometry and textures.",
+   "owner": "Project owner / legal",
+   "artifact": "qa/expert/asset-provenance-review.md"
+  },
+  {
+   "item": "Mobile performance certification",
+   "status": "PENDING",
+   "why": "Emulated phone at CPU x4 measured 2742 ms first meaningful 3D p50 (target 2500 ms) and 45.1 ms drag p95 (target 22 ms). Both MISSED, both emulation. Step 12R established the x4 frame loss does not respond to removing application work, so the next step is measurement on real hardware - not further optimisation.",
+   "owner": "Needs real devices",
+   "artifact": "qa/reports/step12r.perf.final.json"
+  },
+  {
+   "item": "Unshown elbow landmarks",
+   "status": "PENDING",
+   "why": "Head of radius, Olecranon, Coronoid process, Capitulum (region), Trochlea (region) and Annular ligament of radius are present and labelled in the validated asset but are never shown to the learner. Whether the teaching goal needs any of them is a curriculum decision.",
+   "owner": "Subject-matter reviewer",
+   "artifact": "qa/expert/reviewer-checklist.md item A18"
+  },
+  {
+   "item": "Mobile caption prominence",
+   "status": "PENDING",
+   "why": "On a 390 px screen the caption panel occupies roughly the lower third in text-heavy shots, compressing the anatomy. It never overlaps the subject and no layout check fails.",
+   "owner": "Reviewer / design decision",
+   "artifact": "qa/visual/step12/regression/390x844/"
+  },
+  {
+   "item": "Canonical NCERT source",
+   "status": "NOT AVAILABLE",
+   "why": "The Class 6 'Body Movements' chapter is no longer published on ncert.nic.in (chapter page renders, PDF and whole book return 404) and the repository still contains no NCERT reference files. Four other official NCERT publications were used as evidence instead.",
+   "owner": "Project owner",
+   "artifact": "qa/expert/content_provenance.json"
+  },
+  {
+   "item": "Narration (voice-over)",
+   "status": "PENDING EXPERT REVIEW",
+   "why": "Added after the first freeze on the project owner's instruction. The film speaks each caption in a synthesized Indian-English female voice (en-IN-Chirp3-HD-Aoede). It adds no new educational claim - the spoken text is assembled only from existing caption strings, enforced by a unit test - but the voice, the pronunciation of anatomical terms, the decision to duplicate the captions, and the decision not to speak the schematic disclaimers are all unreviewed.",
+   "owner": "Subject-matter reviewer",
+   "artifact": "qa/expert/reviewer-checklist.md section D"
+  },
+  {
+   "item": "Narration + screen reader interaction",
+   "status": "NOT TESTED",
+   "why": "A screen-reader user would hear the narration voice and their screen reader simultaneously. No screen reader was available to test it.",
+   "owner": "Needs a screen reader",
+   "artifact": "qa/expert/screen-reader-checklist.md"
+  }
+ ],
+ "red": [],
+ "redNote": "No outstanding defect. Four defects were found during the Step 13 review and all four were fixed and covered by regression tests before the freeze: the deferred-attach axis-overlay leak into the schematic chapters (was the only RED), three shots showing schematic indicators without a disclaimer, a requested band label silently dropped by the label layout, and a caption-contrast regression introduced by the added note (2.80:1, now 3.50:1). See qa/expert/step13_review.json fixesApplied.",
+ "step12UnresolvedItems": [
+  "1. Emulated phone x4 first meaningful 3D p50 2742 ms vs a 2500 ms target - OPEN",
+  "2. Emulated phone x4 interaction p95 45.1 ms vs a 22 ms target - OPEN",
+  "3. No real Android hardware - OPEN",
+  "4. No real iPad hardware - OPEN",
+  "5. No real NVDA/VoiceOver screen-reader test - OPEN"
+ ],
+ "expertPackage": [
+  "qa/expert/frozen-build.json",
+  "qa/expert/reviewer-checklist.md",
+  "qa/expert/review-manifest.json",
+  "qa/expert/curriculum-review.md",
+  "qa/expert/asset-provenance-review.md",
+  "qa/expert/screen-reader-checklist.md",
+  "qa/expert/review-status.json",
+  "qa/expert/step13_review.json",
+  "qa/expert/step13_review.md",
+  "qa/expert/step13_cross_layer.json",
+  "qa/expert/content_provenance.json",
+  "qa/expert/step13_integrity_before.json",
+  "qa/elbow_r.poses.draft.json",
+  "qa/release/device-certification.md",
+  "qa/release/screen-reader-checklist.md",
+  "qa/release/asset-provenance.md",
+  "qa/devices.md",
+  "docs/adr/step13-release-readiness.md",
+  "public/assets/audio/narration/narration.json"
+ ]
+}

@@ -1,0 +1,31 @@
+import { chromium } from "@playwright/test";
+import { spawn } from "node:child_process";
+const PORT = 4183;
+const server = spawn(process.execPath, ["pipeline/tools/serve_static.mjs", "dist", String(PORT)], { stdio: "ignore" });
+await new Promise((r) => setTimeout(r, 900));
+const browser = await chromium.launch({ channel: "chrome", headless: true, args: ["--enable-gpu", "--ignore-gpu-blocklist", "--use-angle=d3d11"] });
+try {
+  const page = await browser.newPage({ viewport: { width: 1280, height: 800 }, deviceScaleFactor: 1 });
+  const errors = [];
+  page.on("console", (m) => m.type() === "error" && errors.push(m.text()));
+  page.on("pageerror", (e) => errors.push("pageerror: " + e.message));
+  await page.emulateMedia({ reducedMotion: "reduce" });
+  await page.goto(`http://localhost:${PORT}/?qa=1&dpr=1&autoplay=0`);
+  await page.waitForFunction(() => window.__jointsFilm, null, { timeout: 180000 });
+  const settle = () => page.waitForFunction(() => window.__jointsQA?.idle() && !window.__jointsFilm?.state().buffering, null, { timeout: 120000 });
+  await page.evaluate(() => window.__jointsFilm.seekShot("hinge.check", 6000));
+  await settle();
+  await page.waitForTimeout(500);
+  console.log("state", JSON.stringify(await page.evaluate(() => { const s = window.__jointsFilm.state(); return { shotId: s.shotId, check: s.check.status, holding: s.holdingForCheck, learner: s.learner }; })));
+  console.log("interact panel:", await page.getByTestId("film-interact").count(), "check btn:", await page.getByTestId("film-check").count(), "feedback:", await page.getByTestId("film-check-feedback").count());
+  const slider = page.getByTestId("film-interact").getByRole("slider");
+  await slider.focus();
+  await page.keyboard.press("Home");
+  for (let i = 0; i < 6; i++) await page.keyboard.press("PageUp");
+  console.log("dof", await page.evaluate(() => window.__jointsQA.getDof("flexion")));
+  await page.getByTestId("film-check").click();
+  await page.waitForTimeout(400);
+  console.log("feedback text:", JSON.stringify(await page.getByTestId("film-check-feedback").textContent().catch(() => null)));
+  console.log("state after", JSON.stringify(await page.evaluate(() => { const s = window.__jointsFilm.state(); return { shotId: s.shotId, check: s.check.status }; })));
+  console.log("errors", errors);
+} finally { await browser.close(); server.kill(); }

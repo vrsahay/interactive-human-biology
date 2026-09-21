@@ -1,0 +1,7 @@
+
+Running 1 test using 1 worker
+
+  ok 1 tests\perf\perf-lab.spec.ts:395:1 › playthrough: buffering and asset readiness vs need (3.2m)
+
+  1 passed (3.2m)
+EXIT 0

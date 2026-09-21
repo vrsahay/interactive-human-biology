@@ -1,0 +1,383 @@
+{
+ "generatedAt": "2026-09-20T20:13:13.561Z",
+ "rows": [
+  {
+   "width": 1280,
+   "explore": "explore.fixed",
+   "labels": [
+    {
+     "text": "Fixed joint · skull",
+     "left": 457,
+     "right": 582
+    }
+   ],
+   "behindPanel": [],
+   "offscreen": [],
+   "panelRight": 424,
+   "hScroll": false
+  },
+  {
+   "width": 1280,
+   "explore": "explore.pivot",
+   "labels": [
+    {
+     "text": "Pivot joint · top of the neck",
+     "left": 428,
+     "right": 620
+    }
+   ],
+   "behindPanel": [],
+   "offscreen": [],
+   "panelRight": 424,
+   "hScroll": false
+  },
+  {
+   "width": 1280,
+   "explore": "explore.ball",
+   "labels": [
+    {
+     "text": "Ball-and-socket joint · shoulder",
+     "left": 428,
+     "right": 646
+    }
+   ],
+   "behindPanel": [],
+   "offscreen": [],
+   "panelRight": 424,
+   "hScroll": false
+  },
+  {
+   "width": 1280,
+   "explore": "explore.hinge",
+   "labels": [],
+   "behindPanel": [],
+   "offscreen": [],
+   "panelRight": 424,
+   "hScroll": false
+  },
+  {
+   "width": 1440,
+   "explore": "explore.fixed",
+   "labels": [
+    {
+     "text": "Fixed joint · skull",
+     "left": 537,
+     "right": 662
+    }
+   ],
+   "behindPanel": [],
+   "offscreen": [],
+   "panelRight": 432,
+   "hScroll": false
+  },
+  {
+   "width": 1440,
+   "explore": "explore.pivot",
+   "labels": [
+    {
+     "text": "Pivot joint · top of the neck",
+     "left": 470,
+     "right": 662
+    }
+   ],
+   "behindPanel": [],
+   "offscreen": [],
+   "panelRight": 432,
+   "hScroll": false
+  },
+  {
+   "width": 1440,
+   "explore": "explore.ball",
+   "labels": [
+    {
+     "text": "Ball-and-socket joint · shoulder",
+     "left": 444,
+     "right": 662
+    }
+   ],
+   "behindPanel": [],
+   "offscreen": [],
+   "panelRight": 432,
+   "hScroll": false
+  },
+  {
+   "width": 1440,
+   "explore": "explore.hinge",
+   "labels": [],
+   "behindPanel": [],
+   "offscreen": [],
+   "panelRight": 432,
+   "hScroll": false
+  },
+  {
+   "width": 1024,
+   "explore": "explore.fixed",
+   "labels": [
+    {
+     "text": "Fixed joint · skull",
+     "left": 415,
+     "right": 540
+    }
+   ],
+   "behindPanel": [],
+   "offscreen": [],
+   "panelRight": 411,
+   "hScroll": false
+  },
+  {
+   "width": 1024,
+   "explore": "explore.pivot",
+   "labels": [
+    {
+     "text": "Pivot joint · top of the neck",
+     "left": 415,
+     "right": 607
+    }
+   ],
+   "behindPanel": [],
+   "offscreen": [],
+   "panelRight": 411,
+   "hScroll": false
+  },
+  {
+   "width": 1024,
+   "explore": "explore.ball",
+   "labels": [
+    {
+     "text": "Ball-and-socket joint · shoulder",
+     "left": 415,
+     "right": 633
+    }
+   ],
+   "behindPanel": [],
+   "offscreen": [],
+   "panelRight": 411,
+   "hScroll": false
+  },
+  {
+   "width": 1024,
+   "explore": "explore.hinge",
+   "labels": [],
+   "behindPanel": [],
+   "offscreen": [],
+   "panelRight": 411,
+   "hScroll": false
+  },
+  {
+   "width": 768,
+   "explore": "explore.fixed",
+   "labels": [
+    {
+     "text": "Fixed joint · skull",
+     "left": 201,
+     "right": 326
+    }
+   ],
+   "behindPanel": [],
+   "offscreen": [],
+   "panelRight": 756,
+   "hScroll": false
+  },
+  {
+   "width": 768,
+   "explore": "explore.pivot",
+   "labels": [
+    {
+     "text": "Pivot joint · top of the neck",
+     "left": 134,
+     "right": 326
+    }
+   ],
+   "behindPanel": [],
+   "offscreen": [],
+   "panelRight": 756,
+   "hScroll": false
+  },
+  {
+   "width": 768,
+   "explore": "explore.ball",
+   "labels": [
+    {
+     "text": "Ball-and-socket joint · shoulder",
+     "left": 108,
+     "right": 326
+    }
+   ],
+   "behindPanel": [],
+   "offscreen": [],
+   "panelRight": 756,
+   "hScroll": false
+  },
+  {
+   "width": 768,
+   "explore": "explore.hinge",
+   "labels": [],
+   "behindPanel": [],
+   "offscreen": [],
+   "panelRight": 756,
+   "hScroll": false
+  },
+  {
+   "width": 412,
+   "explore": "explore.fixed",
+   "labels": [
+    {
+     "text": "Fixed joint · skull",
+     "left": 23,
+     "right": 148
+    }
+   ],
+   "behindPanel": [],
+   "offscreen": [],
+   "panelRight": 400,
+   "hScroll": false
+  },
+  {
+   "width": 412,
+   "explore": "explore.pivot",
+   "labels": [
+    {
+     "text": "Pivot joint · top of the neck",
+     "left": 14,
+     "right": 206
+    }
+   ],
+   "behindPanel": [],
+   "offscreen": [],
+   "panelRight": 400,
+   "hScroll": false
+  },
+  {
+   "width": 412,
+   "explore": "explore.ball",
+   "labels": [
+    {
+     "text": "Ball-and-socket joint · shoulder",
+     "left": 190,
+     "right": 408
+    }
+   ],
+   "behindPanel": [],
+   "offscreen": [],
+   "panelRight": 400,
+   "hScroll": false
+  },
+  {
+   "width": 412,
+   "explore": "explore.hinge",
+   "labels": [],
+   "behindPanel": [],
+   "offscreen": [],
+   "panelRight": 400,
+   "hScroll": false
+  },
+  {
+   "width": 390,
+   "explore": "explore.fixed",
+   "labels": [
+    {
+     "text": "Fixed joint · skull",
+     "left": 12,
+     "right": 137
+    }
+   ],
+   "behindPanel": [],
+   "offscreen": [],
+   "panelRight": 378,
+   "hScroll": false
+  },
+  {
+   "width": 390,
+   "explore": "explore.pivot",
+   "labels": [
+    {
+     "text": "Pivot joint · top of the neck",
+     "left": 194,
+     "right": 386
+    }
+   ],
+   "behindPanel": [],
+   "offscreen": [],
+   "panelRight": 378,
+   "hScroll": false
+  },
+  {
+   "width": 390,
+   "explore": "explore.ball",
+   "labels": [
+    {
+     "text": "Ball-and-socket joint · shoulder",
+     "left": 4,
+     "right": 222
+    }
+   ],
+   "behindPanel": [],
+   "offscreen": [],
+   "panelRight": 378,
+   "hScroll": false
+  },
+  {
+   "width": 390,
+   "explore": "explore.hinge",
+   "labels": [],
+   "behindPanel": [],
+   "offscreen": [],
+   "panelRight": 378,
+   "hScroll": false
+  },
+  {
+   "width": 320,
+   "explore": "explore.fixed",
+   "labels": [
+    {
+     "text": "Fixed joint · skull",
+     "left": 35,
+     "right": 160
+    }
+   ],
+   "behindPanel": [],
+   "offscreen": [],
+   "panelRight": 308,
+   "hScroll": false
+  },
+  {
+   "width": 320,
+   "explore": "explore.pivot",
+   "labels": [
+    {
+     "text": "Pivot joint · top of the neck",
+     "left": 124,
+     "right": 316
+    }
+   ],
+   "behindPanel": [],
+   "offscreen": [],
+   "panelRight": 308,
+   "hScroll": false
+  },
+  {
+   "width": 320,
+   "explore": "explore.ball",
+   "labels": [
+    {
+     "text": "Ball-and-socket joint · shoulder",
+     "left": 4,
+     "right": 222
+    }
+   ],
+   "behindPanel": [],
+   "offscreen": [],
+   "panelRight": 308,
+   "hScroll": false
+  },
+  {
+   "width": 320,
+   "explore": "explore.hinge",
+   "labels": [],
+   "behindPanel": [],
+   "offscreen": [],
+   "panelRight": 308,
+   "hScroll": false
+  }
+ ]
+}

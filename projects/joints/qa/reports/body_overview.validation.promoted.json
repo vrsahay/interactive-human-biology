@@ -1,0 +1,208 @@
+{
+ "dir": "C:\\Users\\Admin\\dev\\joints-platform\\public\\assets\\body",
+ "passed": true,
+ "checks": [
+  {
+   "name": "skeleton: bytes + sha256 match manifest",
+   "pass": true
+  },
+  {
+   "name": "skeleton: structure extras match manifest (ids, labels, source objects, unique)",
+   "pass": true,
+   "detail": {
+    "nodes": 287,
+    "manifest": 287
+   }
+  },
+  {
+   "name": "skeleton: triangle count",
+   "pass": true,
+   "detail": {
+    "tris": 168414,
+    "manifest": 168414
+   }
+  },
+  {
+   "name": "skeleton: Khronos validator 0 errors (compressed + decoded)",
+   "pass": true,
+   "detail": {
+    "compressed": {
+     "errors": 0,
+     "warnings": 287,
+     "infos": 1,
+     "codes": [
+      "UNSUPPORTED_EXTENSION",
+      "MESH_PRIMITIVE_GENERATED_TANGENT_SPACE"
+     ],
+     "triangles": 168414
+    },
+    "decoded": {
+     "errors": 0,
+     "warnings": 287,
+     "infos": 0,
+     "codes": [
+      "MESH_PRIMITIVE_GENERATED_TANGENT_SPACE"
+     ],
+     "triangles": 168414
+    }
+   }
+  },
+  {
+   "name": "skeleton: gzip within budget",
+   "pass": true,
+   "detail": {
+    "gzipBytes": 1355740,
+    "budgetKB": 2000
+   }
+  },
+  {
+   "name": "skin: bytes + sha256 match manifest",
+   "pass": true
+  },
+  {
+   "name": "skin: structure extras match manifest (ids, labels, source objects, unique)",
+   "pass": true,
+   "detail": {
+    "nodes": 248,
+    "manifest": 248
+   }
+  },
+  {
+   "name": "skin: triangle count",
+   "pass": true,
+   "detail": {
+    "tris": 33670,
+    "manifest": 33670
+   }
+  },
+  {
+   "name": "skin: Khronos validator 0 errors (compressed + decoded)",
+   "pass": true,
+   "detail": {
+    "compressed": {
+     "errors": 0,
+     "warnings": 248,
+     "infos": 1,
+     "codes": [
+      "UNSUPPORTED_EXTENSION",
+      "MESH_PRIMITIVE_GENERATED_TANGENT_SPACE"
+     ],
+     "triangles": 33670
+    },
+    "decoded": {
+     "errors": 0,
+     "warnings": 248,
+     "infos": 0,
+     "codes": [
+      "MESH_PRIMITIVE_GENERATED_TANGENT_SPACE"
+     ],
+     "triangles": 33670
+    }
+   }
+  },
+  {
+   "name": "skin: gzip within budget",
+   "pass": true,
+   "detail": {
+    "gzipBytes": 355096,
+    "budgetKB": 600
+   }
+  },
+  {
+   "name": "geometry finite",
+   "pass": true,
+   "detail": {
+    "nonFinite": 0
+   }
+  },
+  {
+   "name": "bbox matches manifest (<= 0.1 mm, quantization)",
+   "pass": true,
+   "detail": {
+    "worstMm": 0.0133
+   }
+  },
+  {
+   "name": "simplification bbox deviation vs source <= 2 mm",
+   "pass": true,
+   "detail": {
+    "worstMm": 1.369
+   }
+  },
+  {
+   "name": "joint sites reference exported structures and finite anchors",
+   "pass": true,
+   "detail": [
+    "fixed.skull",
+    "pivot.upper_neck",
+    "ball_socket.shoulder_right",
+    "ball_socket.hip_right",
+    "hinge.elbow_right",
+    "hinge.knee_right"
+   ]
+  },
+  {
+   "name": "regions present for every taught site",
+   "pass": true
+  },
+  {
+   "name": "elbow_r shares source objects with the body asset; stationary ones align within simplification tolerance (<= 2 mm)",
+   "pass": true,
+   "detail": {
+    "shared": 32,
+    "stationaryCompared": 3,
+    "worstMm": 0.802,
+    "sourcePoseFlexionDeg": 13.62510376997268
+   }
+  },
+  {
+   "name": "body source sha256 recorded",
+   "pass": true
+  }
+ ],
+ "khronos": {
+  "skeleton": {
+   "compressed": {
+    "errors": 0,
+    "warnings": 287,
+    "infos": 1,
+    "codes": [
+     "UNSUPPORTED_EXTENSION",
+     "MESH_PRIMITIVE_GENERATED_TANGENT_SPACE"
+    ],
+    "triangles": 168414
+   },
+   "decoded": {
+    "errors": 0,
+    "warnings": 287,
+    "infos": 0,
+    "codes": [
+     "MESH_PRIMITIVE_GENERATED_TANGENT_SPACE"
+    ],
+    "triangles": 168414
+   }
+  },
+  "skin": {
+   "compressed": {
+    "errors": 0,
+    "warnings": 248,
+    "infos": 1,
+    "codes": [
+     "UNSUPPORTED_EXTENSION",
+     "MESH_PRIMITIVE_GENERATED_TANGENT_SPACE"
+    ],
+    "triangles": 33670
+   },
+   "decoded": {
+    "errors": 0,
+    "warnings": 248,
+    "infos": 0,
+    "codes": [
+     "MESH_PRIMITIVE_GENERATED_TANGENT_SPACE"
+    ],
+    "triangles": 33670
+   }
+  }
+ },
+ "generatedAt": "2026-09-17T14:08:32.985Z"
+}

@@ -1,0 +1,65 @@
+{
+ "generatedAt": "2026-09-21T10:32:54.798Z",
+ "badges": {
+  "shotsChecked": 52,
+  "shotsWithABadge": 0
+ },
+ "sources": {
+  "onTeachingSurface": false,
+  "reachableFromSettings": true
+ },
+ "provenance": {
+  "classes": [
+   "draft-enrichment",
+   "figure-reference",
+   "source-excerpt",
+   "ui"
+  ],
+  "draftStrings": 126,
+  "sourceExcerpts": 1
+ },
+ "screenReader": {
+  "shotsChecked": 52,
+  "shotsRepeatingTheDisclaimer": 0,
+  "statusOnExploreEntry": true
+ },
+ "narrationDuplication": {
+  "nearDuplicatePairs": [
+   {
+    "a": "hinge.name",
+    "b": "map.hinge",
+    "score": 0.5
+   },
+   {
+    "a": "compare.together",
+    "b": "map.all",
+    "score": 0.45
+   }
+  ],
+  "collapsedLayers": [
+   "hinge.axis",
+   "hinge.check",
+   "hinge.return",
+   "recall.challenge",
+   "map.intro"
+  ]
+ },
+ "retainedRepetition": {
+  "elbowArc": true,
+  "thesisRestated": 3,
+  "takeawayPerCategory": 4
+ },
+ "labelClipping": {
+  "checks": 28,
+  "problems": 0
+ },
+ "invariantsStillHold": {
+  "navigationChecks": 3,
+  "elbowPoses": [
+   0,
+   45,
+   90,
+   145
+  ]
+ }
+}

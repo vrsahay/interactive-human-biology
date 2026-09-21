@@ -1,0 +1,81 @@
+{
+ "generatedAt": "2026-09-20T17:11:44.529Z",
+ "rows": [
+  {
+   "exploreId": "explore.fixed",
+   "status": "teaching-simulation",
+   "sessionLive": true,
+   "policyMode": "passive",
+   "orbitBefore": "n/a",
+   "orbitDuringDrag": "n/a",
+   "readoutBefore": {
+    "primary": 0,
+    "secondary": null,
+    "atLimit": false
+   },
+   "readoutAfter": {
+    "primary": 0,
+    "secondary": null,
+    "atLimit": false
+   },
+   "cameraMoved": 0
+  },
+  {
+   "exploreId": "explore.pivot",
+   "status": "teaching-simulation",
+   "sessionLive": true,
+   "policyMode": "passive",
+   "orbitBefore": "n/a",
+   "orbitDuringDrag": "n/a",
+   "readoutBefore": {
+    "primary": 0,
+    "secondary": null,
+    "atLimit": false
+   },
+   "readoutAfter": {
+    "primary": 0,
+    "secondary": null,
+    "atLimit": false
+   },
+   "cameraMoved": 0
+  },
+  {
+   "exploreId": "explore.ball",
+   "status": "teaching-simulation",
+   "sessionLive": true,
+   "policyMode": "passive",
+   "orbitBefore": "n/a",
+   "orbitDuringDrag": "n/a",
+   "readoutBefore": {
+    "primary": 0,
+    "secondary": 0,
+    "atLimit": false
+   },
+   "readoutAfter": {
+    "primary": 0,
+    "secondary": 0,
+    "atLimit": false
+   },
+   "cameraMoved": 0
+  },
+  {
+   "exploreId": "explore.hinge",
+   "status": "validated-rig",
+   "sessionLive": true,
+   "policyMode": "free",
+   "orbitBefore": "n/a",
+   "orbitDuringDrag": "n/a",
+   "readoutBefore": {
+    "primary": 0,
+    "secondary": null,
+    "atLimit": false
+   },
+   "readoutAfter": {
+    "primary": 0,
+    "secondary": null,
+    "atLimit": false
+   },
+   "cameraMoved": 0
+  }
+ ]
+}

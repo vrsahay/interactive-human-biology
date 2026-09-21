@@ -1,0 +1,72 @@
+{
+ "filmQa-BOAdxBZM.js": {
+  "total": 2071,
+  "modules": {
+   "ui: video/filmQa.ts": 1941
+  }
+ },
+ "index-BZMZmscT.js": {
+  "total": 891106,
+  "modules": {
+   "three core": 424315,
+   "three/examples: loaders/GLTFLoader.js": 43473,
+   "content JSON: lessons/index.ts": 31038,
+   "three/examples: libs/meshopt_decoder.module.js": 26459,
+   "engine: core": 25212,
+   "engine: video": 24594,
+   "preact + signals": 21240,
+   "engine: overlays": 19963,
+   "three/examples: controls/OrbitControls.js": 19854,
+   "ui: video/FilmShell.tsx": 17604,
+   "engine: body": 12306,
+   "engine: assets": 9154,
+   "engine: camera": 7168,
+   "engine: anatomy": 7043,
+   "engine: joints": 6456,
+   "engine: rendering": 6344,
+   "engine: interaction": 5568,
+   "three/examples: lines/LineSegments2.js": 3709,
+   "engine: quality": 2774,
+   "three/examples: lines/LineSegmentsGeometry.js": 2476,
+   "ui: FlexionSlider.tsx": 1974,
+   "three/examples: lines/LineMaterial.js": 1905,
+   "engine: perf": 1684,
+   "ui: video/FilmDialog.tsx": 1684,
+   "ui: store.ts": 1020,
+   "three/examples: utils/BufferGeometryUtils.js": 965,
+   "three/examples: lines/LineGeometry.js": 800,
+   "content JSON: joints/elbow_r.ts": 665,
+   "../../src/main.ts": 529,
+   "three/examples: utils/SkeletonUtils.js": 438,
+   "ui: sliderKeys.ts": 339,
+   "three/examples: lines/Line2.js": 130,
+   "content JSON: content/index.ts": 35
+  }
+ },
+ "manifestSchema-FJw0EKB2.js": {
+  "total": 68572,
+  "modules": {
+   "generated validators: manifestSchemaValidator.js": 68087,
+   "engine: assets": 358
+  }
+ },
+ "qaApi-VECgcOhJ.js": {
+  "total": 4771,
+  "modules": {
+   "engine: qa": 4644
+  }
+ },
+ "RoomEnvironment-BAAnwYUz.js": {
+  "total": 2096,
+  "modules": {
+   "three/examples: environments/RoomEnvironment.js": 1924
+  }
+ },
+ "Shell-OqUIP6_Q.js": {
+  "total": 7538,
+  "modules": {
+   "ui: Shell.tsx": 6225,
+   "ui: PerfHud.tsx": 1100
+  }
+ }
+}

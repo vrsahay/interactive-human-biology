@@ -1,0 +1,1514 @@
+{
+ "step": "13",
+ "phase": "D (source / draft provenance audit) with Phase C curriculum verification",
+ "generatedAt": "2026-09-18T05:54:35.556Z",
+ "generator": "pipeline/qa/build_content_provenance.ts",
+ "rules": {
+  "SOURCE": "The one sentence supplied in the project brief, plus the joint-category names and body locations of the approved NCERT figure. Nothing else may be labelled source-backed.",
+  "DRAFT_ENRICHMENT": "Written for this lesson. Not curriculum wording. Requires subject-expert review before release.",
+  "UI": "Interface text or accessibility description. Not educational content.",
+  "SYSTEM": "Statements the product makes about its own fidelity (schematic indicators, fitted axis, schematic bands, curriculum status).",
+  "unchanged": "Provenance badges are never removed for visual polish, and an inferred explanation is never labelled NCERT."
+ },
+ "legend": {
+  "source-excerpt": "Sentence taken verbatim from the curriculum excerpt supplied in the project brief. The NCERT reference files are not in the repository, so the wording has not been verified against the textbook.",
+  "figure-reference": "Joint-category name or body location as shown in the supplied NCERT 'Types of joints' figure. No wording, artwork or layout is copied from it.",
+  "draft-enrichment": "Draft explanatory text written for this lesson. Not curriculum wording. Requires subject-expert review before release.",
+  "ui": "Interface text or accessibility description. Not educational content."
+ },
+ "localeSources": {
+  "brief-excerpt-hinge": {
+   "description": "Curriculum excerpt supplied by the project owner in the project brief under the heading 'Hinge joint'. The original NCERT reference files are not present in the repository.",
+   "verifiedAgainstTextbook": false
+  },
+  "elbow-rom-normative": {
+   "description": "Normative range-of-motion reference for the approximate 0-145 deg teaching range. Zwerus EL, Willigenburg NW, Scholtes VA, Somford MP, Eygendaal D, van den Bekerom MPJ. 'Normative values and affecting factors for the elbow range of motion.' Shoulder & Elbow 11(3):215-224 (2019). doi:10.1177/1758573217728711, PMCID PMC6555111. Mean active flexion of the dominant hand was 146 deg across 352 healthy adults; the paper cites a literature range of 130-154 deg and reports that elbow range varies with age, sex and BMI. It supports the reasonableness of the teaching range only: it does not validate the geometry, axis or limits of this 3D model, which remain pending expert review.",
+   "verifiedAgainstTextbook": false
+  }
+ },
+ "counts": {
+  "SOURCE": 18,
+  "UI": 73,
+  "SYSTEM": 5,
+  "DRAFT_ENRICHMENT": 18
+ },
+ "onlySourceBackedSentence": [
+  "The elbow bends and straightens in one direction, similar to a door hinge."
+ ],
+ "curriculumVerification": {
+  "checkedOn": "2026-09-18",
+  "canonicalSourceStatus": "NOT AVAILABLE. The Class 6 Science chapter 'Body Movements' is no longer published on ncert.nic.in: the chapter page renders but its PDF (fesc108.pdf) and the whole book return HTTP 404, and the current Curiosity textbooks for Classes 6-8 contain no types-of-joints content. The repository still has no NCERT reference files.",
+  "sourcesConsulted": [
+   {
+    "id": "S1",
+    "title": "NCERT Laboratory Manual, Science, Classes VI-VIII - Theme 3 'The world of the living', ACTIVITY 27",
+    "url": "https://ncert.nic.in/pdf/publication/sciencelaboratorymanuals/classVItoVIII/science/fhelm204.pdf",
+    "pages": "75-77 (from the running headers)",
+    "editionYear": "not confirmed",
+    "caveat": "Student activity worksheet: it poses the joint-to-body-part pairings as questions and NCERT publishes no answer key for it."
+   },
+   {
+    "id": "S2",
+    "title": "NCERT Exemplar Problems, Science, Class VI - 'Body Movement' (Unit 8), with the published answer key",
+    "url": "https://ncert.nic.in/pdf/publication/exemplarproblem/classVI/science/feep208.pdf",
+    "answerKeyUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classVI/science/feep2an.pdf",
+    "pages": "questions 45-48, answers 121-123",
+    "editionYear": "not confirmed",
+    "note": "Uses only ball-and-socket, pivotal, hinge and fixed - the strongest support for keeping exactly four categories."
+   },
+   {
+    "id": "S3",
+    "title": "NCERT Biology, Class XI - 'Locomotion and Movement', chapter 17, section 17.4 Joints",
+    "url": "https://ncert.nic.in/textbook/pdf/kebo117.pdf",
+    "pages": "227",
+    "editionYear": "document stamped 'Reprint 2026-27'"
+   },
+   {
+    "id": "S4",
+    "title": "NCERT Exemplar Problems, Biology, Class XI - chapter 20 'Locomotion and Movement', answers in chapter 23",
+    "url": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/biology/keep420.pdf",
+    "answerKeyUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/biology/keep423.pdf",
+    "pages": "questions 114-115, answers from 129",
+    "editionYear": "files stamped '2025-26'"
+   }
+  ],
+  "nonNcertCorroboration": [
+   {
+    "id": "N1",
+    "title": "Anatomy, Joints (Juneja, Munjal, Hubbard) - StatPearls, NCBI Bookshelf",
+    "url": "https://www.ncbi.nlm.nih.gov/books/NBK507893/",
+    "quote": "The body's only ball-and-socket joints are the hip and shoulder joints.",
+    "warning": "NOT an NCERT source. Must never be cited as NCERT."
+   }
+  ],
+  "extraCategoriesInOfficialMaterial": "YES. S1 names 'Gliding joint' and 'Partially movable joint'; S3/S4 add gliding, saddle and the fibrous/cartilaginous/synovial classes. Only S2 (Class VI Exemplar) uses exactly the four categories this lesson teaches. Per the Step 13 brief the lesson deliberately keeps the four categories of the approved figure and does NOT add the others.",
+  "claims": {
+   "hinge = elbow and knee": {
+    "status": "CONFIRMED (NCERT)",
+    "evidence": [
+     "S2 answer to Q14: 'Elbow and knee are not made up of a single bone' -> '(Hinge joint)'",
+     "S4 Q8 'Knee joint and elbow joint are examples of' -> answer key '8- d' = Hinge joint"
+    ]
+   },
+   "pivot = joint between head and neck": {
+    "status": "CONFIRMED (NCERT)",
+    "evidence": [
+     "S2 answer to Q9.8: 'Joint where our neck joins the head.' -> 'Pivotal'",
+     "S1: 'We can turn our head from left and right because of' ... 'pivot joint'"
+    ],
+    "note": "Class XI NCERT (S3/S4) refines this to the atlas-axis joint. The lesson uses the age-appropriate school-level wording."
+   },
+   "fixed = bones of the skull, immovable": {
+    "status": "CONFIRMED (NCERT)",
+    "evidence": [
+     "S2 Q2 'Which of the following joints is immovable?' -> 'Upper jaw and skull'; Q9.3 -> 'Upper jaw with skull'",
+     "S3: 'Fibrous joints do not allow any movement.' and skull bones 'fuse end-to-end' as sutures"
+    ],
+    "note": "NCERT's named example is the upper jaw with the skull; this lesson highlights the frontal and right parietal bones (a cranial suture)."
+   },
+   "ball-and-socket = shoulder": {
+    "status": "CONFIRMED (NCERT)",
+    "evidence": [
+     "S3: 'Ball and socket joint (between humerus and pectoral girdle)'",
+     "S4 Q7 marks 'Hinge joint: between Humerus and Pectoral girdle' as the incorrect pair"
+    ]
+   },
+   "ball-and-socket = hip": {
+    "status": "NOT CONFIRMED FROM ANY NCERT SOURCE",
+    "evidence": [
+     "S3 exercise Q9 asks students to name the joint 'between ... femur/acetabulum' but publishes no answer",
+     "The Class XI exemplar model answers state only that the pelvic girdle 'articulates with femur through acetabulum'"
+    ],
+    "corroboratedBy": "N1 (StatPearls, NOT NCERT)",
+    "affectedLessonStrings": [
+     "ball.label.hip",
+     "ball.text.hip",
+     "recap.label.ball"
+    ],
+    "action": "PENDING_EXPERT. The claim is retained because it is in the project owner's approved curriculum figure and is anatomically standard, but it is NOT verifiable from NCERT material reachable online. A reviewer must either supply the NCERT citation or approve the claim on anatomical grounds."
+   }
+  }
+ },
+ "strings": [
+  {
+   "key": "lesson.title",
+   "bucket": "SOURCE",
+   "repoProvenance": "figure-reference",
+   "text": "Types of Joints",
+   "shownAt": [],
+   "curriculumClaim": null,
+   "externalVerification": null,
+   "needsExpertReview": false
+  },
+  {
+   "key": "lesson.subtitle",
+   "bucket": "UI",
+   "repoProvenance": "ui",
+   "text": "A short anatomy film",
+   "shownAt": [
+    "player / dialogs / accessibility text"
+   ],
+   "curriculumClaim": null,
+   "externalVerification": null,
+   "needsExpertReview": false
+  },
+  {
+   "key": "lesson.curriculum_note",
+   "bucket": "SYSTEM",
+   "repoProvenance": "ui",
+   "text": "Draft lesson. Joint categories and locations follow the NCERT figure; the sentence marked Source is from the supplied curriculum excerpt; everything marked Draft is awaiting subject review.",
+   "shownAt": [
+    "player / dialogs / accessibility text"
+   ],
+   "curriculumClaim": null,
+   "externalVerification": null,
+   "needsExpertReview": false
+  },
+  {
+   "key": "source.elbow_hinge",
+   "bucket": "SOURCE",
+   "repoProvenance": "source-excerpt",
+   "text": "The elbow bends and straightens in one direction, similar to a door hinge.",
+   "shownAt": [
+    "hinge.source caption.text"
+   ],
+   "curriculumClaim": null,
+   "externalVerification": null,
+   "needsExpertReview": false
+  },
+  {
+   "key": "chapter.intro",
+   "bucket": "UI",
+   "repoProvenance": "ui",
+   "text": "Introduction",
+   "shownAt": [
+    "player / dialogs / accessibility text"
+   ],
+   "curriculumClaim": null,
+   "externalVerification": null,
+   "needsExpertReview": false
+  },
+  {
+   "key": "chapter.fixed",
+   "bucket": "SOURCE",
+   "repoProvenance": "figure-reference",
+   "text": "Fixed joint",
+   "shownAt": [
+    "fixed.travel caption.title"
+   ],
+   "curriculumClaim": null,
+   "externalVerification": null,
+   "needsExpertReview": false
+  },
+  {
+   "key": "chapter.pivot",
+   "bucket": "SOURCE",
+   "repoProvenance": "figure-reference",
+   "text": "Pivot joint",
+   "shownAt": [
+    "pivot.travel caption.title"
+   ],
+   "curriculumClaim": null,
+   "externalVerification": null,
+   "needsExpertReview": false
+  },
+  {
+   "key": "chapter.ball_socket",
+   "bucket": "SOURCE",
+   "repoProvenance": "figure-reference",
+   "text": "Ball-and-socket joint",
+   "shownAt": [
+    "ball.travel caption.title"
+   ],
+   "curriculumClaim": null,
+   "externalVerification": null,
+   "needsExpertReview": false
+  },
+  {
+   "key": "chapter.hinge",
+   "bucket": "SOURCE",
+   "repoProvenance": "figure-reference",
+   "text": "Hinge joint",
+   "shownAt": [
+    "hinge.travel caption.title"
+   ],
+   "curriculumClaim": null,
+   "externalVerification": null,
+   "needsExpertReview": false
+  },
+  {
+   "key": "chapter.recap",
+   "bucket": "UI",
+   "repoProvenance": "ui",
+   "text": "Recap",
+   "shownAt": [
+    "player / dialogs / accessibility text"
+   ],
+   "curriculumClaim": null,
+   "externalVerification": null,
+   "needsExpertReview": false
+  },
+  {
+   "key": "chapter.number.02",
+   "bucket": "UI",
+   "repoProvenance": "ui",
+   "text": "Chapter 02",
+   "shownAt": [
+    "fixed.travel caption.eyebrow"
+   ],
+   "curriculumClaim": null,
+   "externalVerification": null,
+   "needsExpertReview": false
+  },
+  {
+   "key": "chapter.number.03",
+   "bucket": "UI",
+   "repoProvenance": "ui",
+   "text": "Chapter 03",
+   "shownAt": [
+    "pivot.travel caption.eyebrow"
+   ],
+   "curriculumClaim": null,
+   "externalVerification": null,
+   "needsExpertReview": false
+  },
+  {
+   "key": "chapter.number.04",
+   "bucket": "UI",
+   "repoProvenance": "ui",
+   "text": "Chapter 04",
+   "shownAt": [
+    "ball.travel caption.eyebrow"
+   ],
+   "curriculumClaim": null,
+   "externalVerification": null,
+   "needsExpertReview": false
+  },
+  {
+   "key": "chapter.number.05",
+   "bucket": "UI",
+   "repoProvenance": "ui",
+   "text": "Chapter 05",
+   "shownAt": [
+    "hinge.travel caption.eyebrow"
+   ],
+   "curriculumClaim": null,
+   "externalVerification": null,
+   "needsExpertReview": false
+  },
+  {
+   "key": "intro.title",
+   "bucket": "SOURCE",
+   "repoProvenance": "figure-reference",
+   "text": "Types of Joints",
+   "shownAt": [
+    "intro.title caption.title"
+   ],
+   "curriculumClaim": null,
+   "externalVerification": null,
+   "needsExpertReview": false
+  },
+  {
+   "key": "intro.subtitle",
+   "bucket": "DRAFT_ENRICHMENT",
+   "repoProvenance": "draft-enrichment",
+   "text": "How different joints allow different kinds of movement.",
+   "shownAt": [
+    "intro.title caption.text"
+   ],
+   "curriculumClaim": null,
+   "externalVerification": null,
+   "needsExpertReview": true
+  },
+  {
+   "key": "intro.where",
+   "bucket": "DRAFT_ENRICHMENT",
+   "repoProvenance": "draft-enrichment",
+   "text": "Joints are the places where bones meet. We will travel through the body from the head down to the knee.",
+   "shownAt": [
+    "intro.map caption.text"
+   ],
+   "curriculumClaim": null,
+   "externalVerification": null,
+   "needsExpertReview": true
+  },
+  {
+   "key": "fixed.label",
+   "bucket": "SOURCE",
+   "repoProvenance": "figure-reference",
+   "text": "Fixed joint · skull",
+   "shownAt": [
+    "fixed.detail site label"
+   ],
+   "curriculumClaim": "fixed = bones of the skull, immovable",
+   "externalVerification": "CONFIRMED (NCERT)",
+   "needsExpertReview": false
+  },
+  {
+   "key": "fixed.text",
+   "bucket": "DRAFT_ENRICHMENT",
+   "repoProvenance": "draft-enrichment",
+   "text": "The bones of the skull meet at fixed joints. These bones do not move against each other.",
+   "shownAt": [
+    "fixed.detail caption.text"
+   ],
+   "curriculumClaim": "fixed = bones of the skull, immovable",
+   "externalVerification": "CONFIRMED (NCERT)",
+   "needsExpertReview": true
+  },
+  {
+   "key": "pivot.label",
+   "bucket": "SOURCE",
+   "repoProvenance": "figure-reference",
+   "text": "Pivot joint · top of the neck",
+   "shownAt": [
+    "pivot.rotate site label"
+   ],
+   "curriculumClaim": "pivot = joint between head and neck",
+   "externalVerification": "CONFIRMED (NCERT)",
+   "needsExpertReview": false
+  },
+  {
+   "key": "pivot.text",
+   "bucket": "DRAFT_ENRICHMENT",
+   "repoProvenance": "draft-enrichment",
+   "text": "Where the skull meets the backbone, a pivot joint lets the head turn around an axis.",
+   "shownAt": [
+    "pivot.rotate caption.text"
+   ],
+   "curriculumClaim": "pivot = joint between head and neck",
+   "externalVerification": "CONFIRMED (NCERT)",
+   "needsExpertReview": true
+  },
+  {
+   "key": "ball.label.shoulder",
+   "bucket": "SOURCE",
+   "repoProvenance": "figure-reference",
+   "text": "Ball-and-socket joint · shoulder",
+   "shownAt": [
+    "ball.shoulder site label"
+   ],
+   "curriculumClaim": "ball-and-socket = shoulder",
+   "externalVerification": "CONFIRMED (NCERT)",
+   "needsExpertReview": false
+  },
+  {
+   "key": "ball.label.hip",
+   "bucket": "SOURCE",
+   "repoProvenance": "figure-reference",
+   "text": "Ball-and-socket joint · hip",
+   "shownAt": [
+    "ball.hip site label"
+   ],
+   "curriculumClaim": "ball-and-socket = hip",
+   "externalVerification": "NOT CONFIRMED FROM ANY NCERT SOURCE",
+   "needsExpertReview": true
+  },
+  {
+   "key": "ball.text.shoulder",
+   "bucket": "DRAFT_ENRICHMENT",
+   "repoProvenance": "draft-enrichment",
+   "text": "At the shoulder, the rounded top of the upper arm bone sits in a hollow of the shoulder bone, so the arm can move in many directions.",
+   "shownAt": [
+    "ball.shoulder caption.text"
+   ],
+   "curriculumClaim": "ball-and-socket = shoulder",
+   "externalVerification": "CONFIRMED (NCERT)",
+   "needsExpertReview": true
+  },
+  {
+   "key": "ball.text.hip",
+   "bucket": "DRAFT_ENRICHMENT",
+   "repoProvenance": "draft-enrichment",
+   "text": "The hip is another ball-and-socket joint.",
+   "shownAt": [
+    "ball.hip caption.text"
+   ],
+   "curriculumClaim": "ball-and-socket = hip",
+   "externalVerification": "NOT CONFIRMED FROM ANY NCERT SOURCE",
+   "needsExpertReview": true
+  },
+  {
+   "key": "hinge.label.elbow",
+   "bucket": "SOURCE",
+   "repoProvenance": "figure-reference",
+   "text": "Hinge joint · elbow",
+   "shownAt": [
+    "hinge.source site label"
+   ],
+   "curriculumClaim": "hinge = elbow and knee",
+   "externalVerification": "CONFIRMED (NCERT)",
+   "needsExpertReview": false
+  },
+  {
+   "key": "hinge.label.knee",
+   "bucket": "SOURCE",
+   "repoProvenance": "figure-reference",
+   "text": "Hinge joint · knee",
+   "shownAt": [
+    "hinge.knee site label"
+   ],
+   "curriculumClaim": "hinge = elbow and knee",
+   "externalVerification": "CONFIRMED (NCERT)",
+   "needsExpertReview": false
+  },
+  {
+   "key": "hinge.bones",
+   "bucket": "DRAFT_ENRICHMENT",
+   "repoProvenance": "draft-enrichment",
+   "text": "At the elbow, the humerus meets the radius and the ulna.",
+   "shownAt": [
+    "hinge.bones caption.text"
+   ],
+   "curriculumClaim": null,
+   "externalVerification": null,
+   "needsExpertReview": true
+  },
+  {
+   "key": "hinge.axis",
+   "bucket": "DRAFT_ENRICHMENT",
+   "repoProvenance": "draft-enrichment",
+   "text": "The forearm turns around one line: the hinge axis.",
+   "shownAt": [
+    "hinge.axis caption.text"
+   ],
+   "curriculumClaim": null,
+   "externalVerification": null,
+   "needsExpertReview": true
+  },
+  {
+   "key": "hinge.axis_note",
+   "bucket": "SYSTEM",
+   "repoProvenance": "draft-enrichment",
+   "text": "Blue line: the hinge axis fitted to this 3D model.",
+   "shownAt": [
+    "hinge.axis caption.note"
+   ],
+   "curriculumClaim": null,
+   "externalVerification": null,
+   "needsExpertReview": false
+  },
+  {
+   "key": "hinge.flexion",
+   "bucket": "DRAFT_ENRICHMENT",
+   "repoProvenance": "draft-enrichment",
+   "text": "Bending the elbow is called flexion.",
+   "shownAt": [
+    "hinge.flexion caption.text"
+   ],
+   "curriculumClaim": null,
+   "externalVerification": null,
+   "needsExpertReview": true
+  },
+  {
+   "key": "hinge.extension",
+   "bucket": "DRAFT_ENRICHMENT",
+   "repoProvenance": "draft-enrichment",
+   "text": "Straightening it again is called extension.",
+   "shownAt": [
+    "hinge.extension caption.text"
+   ],
+   "curriculumClaim": null,
+   "externalVerification": null,
+   "needsExpertReview": true
+  },
+  {
+   "key": "hinge.range_note",
+   "bucket": "DRAFT_ENRICHMENT",
+   "repoProvenance": "draft-enrichment",
+   "text": "0-145 deg is an approximate teaching range for this model; adult elbow flexion varies between people (see Sources).",
+   "shownAt": [
+    "hinge.extension caption.note"
+   ],
+   "curriculumClaim": null,
+   "externalVerification": null,
+   "needsExpertReview": true
+  },
+  {
+   "key": "hinge.try",
+   "bucket": "DRAFT_ENRICHMENT",
+   "repoProvenance": "draft-enrichment",
+   "text": "Your turn: bend and straighten the elbow.",
+   "shownAt": [
+    "hinge.try caption.text"
+   ],
+   "curriculumClaim": null,
+   "externalVerification": null,
+   "needsExpertReview": true
+  },
+  {
+   "key": "hinge.try_prompt",
+   "bucket": "UI",
+   "repoProvenance": "ui",
+   "text": "Drag the forearm to bend the elbow",
+   "shownAt": [
+    "hinge.try prompt"
+   ],
+   "curriculumClaim": null,
+   "externalVerification": null,
+   "needsExpertReview": false
+  },
+  {
+   "key": "hinge.support",
+   "bucket": "DRAFT_ENRICHMENT",
+   "repoProvenance": "draft-enrichment",
+   "text": "A joint capsule and ligaments surround the elbow.",
+   "shownAt": [
+    "hinge.support caption.text"
+   ],
+   "curriculumClaim": null,
+   "externalVerification": null,
+   "needsExpertReview": true
+  },
+  {
+   "key": "hinge.bands_note",
+   "bucket": "SYSTEM",
+   "repoProvenance": "draft-enrichment",
+   "text": "The thin coloured lines are schematic ligament bands, not real tissue.",
+   "shownAt": [
+    "hinge.support caption.note"
+   ],
+   "curriculumClaim": null,
+   "externalVerification": null,
+   "needsExpertReview": false
+  },
+  {
+   "key": "hinge.knee",
+   "bucket": "DRAFT_ENRICHMENT",
+   "repoProvenance": "draft-enrichment",
+   "text": "The knee is another hinge joint.",
+   "shownAt": [
+    "hinge.knee caption.text"
+   ],
+   "curriculumClaim": "hinge = elbow and knee",
+   "externalVerification": "CONFIRMED (NCERT)",
+   "needsExpertReview": true
+  },
+  {
+   "key": "note.schematic_indicator",
+   "bucket": "SYSTEM",
+   "repoProvenance": "ui",
+   "text": "Schematic indicator: it shows the kind of movement only. This part of the body is not animated.",
+   "shownAt": [
+    "fixed.detail caption.note",
+    "pivot.rotate caption.note",
+    "ball.shoulder caption.note",
+    "ball.hip caption.note",
+    "hinge.knee caption.note"
+   ],
+   "curriculumClaim": null,
+   "externalVerification": null,
+   "needsExpertReview": false
+  },
+  {
+   "key": "note.recap_schematic",
+   "bucket": "SYSTEM",
+   "repoProvenance": "ui",
+   "text": "Schematic indicators mark the four joint types. Only the elbow moves from a validated 3D rig.",
+   "shownAt": [
+    "recap.compare caption.note"
+   ],
+   "curriculumClaim": null,
+   "externalVerification": null,
+   "needsExpertReview": false
+  },
+  {
+   "key": "recap.title",
+   "bucket": "SOURCE",
+   "repoProvenance": "figure-reference",
+   "text": "Four types of joints",
+   "shownAt": [
+    "recap.pullback caption.title"
+   ],
+   "curriculumClaim": null,
+   "externalVerification": null,
+   "needsExpertReview": false
+  },
+  {
+   "key": "recap.compare",
+   "bucket": "DRAFT_ENRICHMENT",
+   "repoProvenance": "draft-enrichment",
+   "text": "Fixed: no movement · Pivot: turning · Ball and socket: many directions · Hinge: one direction",
+   "shownAt": [
+    "recap.compare caption.text"
+   ],
+   "curriculumClaim": null,
+   "externalVerification": null,
+   "needsExpertReview": true
+  },
+  {
+   "key": "recap.label.fixed",
+   "bucket": "SOURCE",
+   "repoProvenance": "figure-reference",
+   "text": "Fixed",
+   "shownAt": [
+    "recap.pullback site label",
+    "recap.compare site label"
+   ],
+   "curriculumClaim": null,
+   "externalVerification": null,
+   "needsExpertReview": false
+  },
+  {
+   "key": "recap.label.pivot",
+   "bucket": "SOURCE",
+   "repoProvenance": "figure-reference",
+   "text": "Pivot",
+   "shownAt": [
+    "recap.pullback site label",
+    "recap.compare site label"
+   ],
+   "curriculumClaim": null,
+   "externalVerification": null,
+   "needsExpertReview": false
+  },
+  {
+   "key": "recap.label.ball",
+   "bucket": "SOURCE",
+   "repoProvenance": "figure-reference",
+   "text": "Ball and socket",
+   "shownAt": [
+    "recap.pullback site label",
+    "recap.pullback site label",
+    "recap.compare site label",
+    "recap.compare site label"
+   ],
+   "curriculumClaim": null,
+   "externalVerification": null,
+   "needsExpertReview": false
+  },
+  {
+   "key": "recap.label.hinge",
+   "bucket": "SOURCE",
+   "repoProvenance": "figure-reference",
+   "text": "Hinge",
+   "shownAt": [
+    "recap.pullback site label",
+    "recap.pullback site label",
+    "recap.compare site label",
+    "recap.compare site label"
+   ],
+   "curriculumClaim": null,
+   "externalVerification": null,
+   "needsExpertReview": false
+  },
+  {
+   "key": "check.prompt",
+   "bucket": "DRAFT_ENRICHMENT",
+   "repoProvenance": "draft-enrichment",
+   "text": "Try it: bend the elbow to about 90°.",
+   "shownAt": [
+    "recap.check caption.text",
+    "recap.check prompt",
+    "recap.check check.prompt"
+   ],
+   "curriculumClaim": null,
+   "externalVerification": null,
+   "needsExpertReview": true
+  },
+  {
+   "key": "check.correct",
+   "bucket": "DRAFT_ENRICHMENT",
+   "repoProvenance": "draft-enrichment",
+   "text": "That is about 90°. Well done.",
+   "shownAt": [
+    "recap.check check.correct"
+   ],
+   "curriculumClaim": null,
+   "externalVerification": null,
+   "needsExpertReview": true
+  },
+  {
+   "key": "check.incorrect",
+   "bucket": "DRAFT_ENRICHMENT",
+   "repoProvenance": "draft-enrichment",
+   "text": "Not quite yet. Aim for about 90°.",
+   "shownAt": [
+    "recap.check check.incorrect"
+   ],
+   "curriculumClaim": null,
+   "externalVerification": null,
+   "needsExpertReview": true
+  },
+  {
+   "key": "ui.play",
+   "bucket": "UI",
+   "repoProvenance": "ui",
+   "text": "Play",
+   "shownAt": [
+    "player / dialogs / accessibility text"
+   ],
+   "curriculumClaim": null,
+   "externalVerification": null,
+   "needsExpertReview": false
+  },
+  {
+   "key": "ui.pause",
+   "bucket": "UI",
+   "repoProvenance": "ui",
+   "text": "Pause",
+   "shownAt": [
+    "player / dialogs / accessibility text"
+   ],
+   "curriculumClaim": null,
+   "externalVerification": null,
+   "needsExpertReview": false
+  },
+  {
+   "key": "ui.replay",
+   "bucket": "UI",
+   "repoProvenance": "ui",
+   "text": "Replay",
+   "shownAt": [
+    "player / dialogs / accessibility text"
+   ],
+   "curriculumClaim": null,
+   "externalVerification": null,
+   "needsExpertReview": false
+  },
+  {
+   "key": "ui.fullscreen",
+   "bucket": "UI",
+   "repoProvenance": "ui",
+   "text": "Full screen",
+   "shownAt": [
+    "player / dialogs / accessibility text"
+   ],
+   "curriculumClaim": null,
+   "externalVerification": null,
+   "needsExpertReview": false
+  },
+  {
+   "key": "ui.exit_fullscreen",
+   "bucket": "UI",
+   "repoProvenance": "ui",
+   "text": "Exit full screen",
+   "shownAt": [
+    "player / dialogs / accessibility text"
+   ],
+   "curriculumClaim": null,
+   "externalVerification": null,
+   "needsExpertReview": false
+  },
+  {
+   "key": "ui.explore",
+   "bucket": "UI",
+   "repoProvenance": "ui",
+   "text": "Explore",
+   "shownAt": [
+    "player / dialogs / accessibility text"
+   ],
+   "curriculumClaim": null,
+   "externalVerification": null,
+   "needsExpertReview": false
+  },
+  {
+   "key": "ui.resume",
+   "bucket": "UI",
+   "repoProvenance": "ui",
+   "text": "Resume film",
+   "shownAt": [
+    "player / dialogs / accessibility text"
+   ],
+   "curriculumClaim": null,
+   "externalVerification": null,
+   "needsExpertReview": false
+  },
+  {
+   "key": "ui.continue",
+   "bucket": "UI",
+   "repoProvenance": "ui",
+   "text": "Continue",
+   "shownAt": [
+    "player / dialogs / accessibility text"
+   ],
+   "curriculumClaim": null,
+   "externalVerification": null,
+   "needsExpertReview": false
+  },
+  {
+   "key": "ui.check",
+   "bucket": "UI",
+   "repoProvenance": "ui",
+   "text": "Check my pose",
+   "shownAt": [
+    "player / dialogs / accessibility text"
+   ],
+   "curriculumClaim": null,
+   "externalVerification": null,
+   "needsExpertReview": false
+  },
+  {
+   "key": "ui.draft",
+   "bucket": "UI",
+   "repoProvenance": "ui",
+   "text": "Draft",
+   "shownAt": [
+    "player / dialogs / accessibility text"
+   ],
+   "curriculumClaim": null,
+   "externalVerification": null,
+   "needsExpertReview": false
+  },
+  {
+   "key": "ui.source",
+   "bucket": "UI",
+   "repoProvenance": "ui",
+   "text": "Source excerpt",
+   "shownAt": [
+    "player / dialogs / accessibility text"
+   ],
+   "curriculumClaim": null,
+   "externalVerification": null,
+   "needsExpertReview": false
+  },
+  {
+   "key": "ui.figure",
+   "bucket": "UI",
+   "repoProvenance": "ui",
+   "text": "NCERT figure",
+   "shownAt": [
+    "player / dialogs / accessibility text"
+   ],
+   "curriculumClaim": null,
+   "externalVerification": null,
+   "needsExpertReview": false
+  },
+  {
+   "key": "ui.timeline",
+   "bucket": "UI",
+   "repoProvenance": "ui",
+   "text": "Lesson timeline",
+   "shownAt": [
+    "player / dialogs / accessibility text"
+   ],
+   "curriculumClaim": null,
+   "externalVerification": null,
+   "needsExpertReview": false
+  },
+  {
+   "key": "ui.return_guided",
+   "bucket": "UI",
+   "repoProvenance": "ui",
+   "text": "Return to film view",
+   "shownAt": [
+    "player / dialogs / accessibility text"
+   ],
+   "curriculumClaim": null,
+   "externalVerification": null,
+   "needsExpertReview": false
+  },
+  {
+   "key": "a11y.intro.title",
+   "bucket": "UI",
+   "repoProvenance": "ui",
+   "text": "A full human skeleton inside a faint outline of the body, seen from the front.",
+   "shownAt": [
+    "player / dialogs / accessibility text"
+   ],
+   "curriculumClaim": null,
+   "externalVerification": null,
+   "needsExpertReview": false
+  },
+  {
+   "key": "a11y.intro.map",
+   "bucket": "UI",
+   "repoProvenance": "ui",
+   "text": "The camera turns slightly. The skull, neck, right shoulder, right hip, right elbow and right knee are softly highlighted.",
+   "shownAt": [
+    "player / dialogs / accessibility text"
+   ],
+   "curriculumClaim": null,
+   "externalVerification": null,
+   "needsExpertReview": false
+  },
+  {
+   "key": "a11y.fixed.travel",
+   "bucket": "UI",
+   "repoProvenance": "ui",
+   "text": "The camera moves up to the skull. The skull bones are highlighted.",
+   "shownAt": [
+    "player / dialogs / accessibility text"
+   ],
+   "curriculumClaim": null,
+   "externalVerification": null,
+   "needsExpertReview": false
+  },
+  {
+   "key": "a11y.fixed.detail",
+   "bucket": "UI",
+   "repoProvenance": "ui",
+   "text": "Side view of the skull. The frontal and right parietal bones are highlighted where they meet; a dashed ring marks a fixed joint.",
+   "shownAt": [
+    "player / dialogs / accessibility text"
+   ],
+   "curriculumClaim": null,
+   "externalVerification": null,
+   "needsExpertReview": false
+  },
+  {
+   "key": "a11y.pivot.travel",
+   "bucket": "UI",
+   "repoProvenance": "ui",
+   "text": "The camera moves down to the top of the neck. The first two neck vertebrae are highlighted.",
+   "shownAt": [
+    "player / dialogs / accessibility text"
+   ],
+   "curriculumClaim": null,
+   "externalVerification": null,
+   "needsExpertReview": false
+  },
+  {
+   "key": "a11y.pivot.rotate",
+   "bucket": "UI",
+   "repoProvenance": "ui",
+   "text": "An arrow circles around a vertical line at the top of the neck, showing turning.",
+   "shownAt": [
+    "player / dialogs / accessibility text"
+   ],
+   "curriculumClaim": null,
+   "externalVerification": null,
+   "needsExpertReview": false
+  },
+  {
+   "key": "a11y.ball.travel",
+   "bucket": "UI",
+   "repoProvenance": "ui",
+   "text": "The camera moves to the right shoulder. The upper arm bone and shoulder blade are highlighted.",
+   "shownAt": [
+    "player / dialogs / accessibility text"
+   ],
+   "curriculumClaim": null,
+   "externalVerification": null,
+   "needsExpertReview": false
+  },
+  {
+   "key": "a11y.ball.shoulder",
+   "bucket": "UI",
+   "repoProvenance": "ui",
+   "text": "Two curved arrows around the head of the upper arm bone show movement in many directions.",
+   "shownAt": [
+    "player / dialogs / accessibility text"
+   ],
+   "curriculumClaim": null,
+   "externalVerification": null,
+   "needsExpertReview": false
+  },
+  {
+   "key": "a11y.ball.hip",
+   "bucket": "UI",
+   "repoProvenance": "ui",
+   "text": "The camera moves down to the right hip, where similar arrows show many directions of movement.",
+   "shownAt": [
+    "player / dialogs / accessibility text"
+   ],
+   "curriculumClaim": null,
+   "externalVerification": null,
+   "needsExpertReview": false
+  },
+  {
+   "key": "a11y.hinge.travel",
+   "bucket": "UI",
+   "repoProvenance": "ui",
+   "text": "The camera moves to the right elbow.",
+   "shownAt": [
+    "player / dialogs / accessibility text"
+   ],
+   "curriculumClaim": null,
+   "externalVerification": null,
+   "needsExpertReview": false
+  },
+  {
+   "key": "a11y.hinge.source",
+   "bucket": "UI",
+   "repoProvenance": "ui",
+   "text": "Side view of the right elbow, highlighted.",
+   "shownAt": [
+    "player / dialogs / accessibility text"
+   ],
+   "curriculumClaim": null,
+   "externalVerification": null,
+   "needsExpertReview": false
+  },
+  {
+   "key": "a11y.hinge.bones",
+   "bucket": "UI",
+   "repoProvenance": "ui",
+   "text": "Close-up of the elbow. The humerus, radius and ulna are highlighted and labelled.",
+   "shownAt": [
+    "player / dialogs / accessibility text"
+   ],
+   "curriculumClaim": null,
+   "externalVerification": null,
+   "needsExpertReview": false
+  },
+  {
+   "key": "a11y.hinge.axis",
+   "bucket": "UI",
+   "repoProvenance": "ui",
+   "text": "A blue line through the elbow shows the hinge axis. The forearm straightens to 0 degrees.",
+   "shownAt": [
+    "player / dialogs / accessibility text"
+   ],
+   "curriculumClaim": null,
+   "externalVerification": null,
+   "needsExpertReview": false
+  },
+  {
+   "key": "a11y.hinge.flexion",
+   "bucket": "UI",
+   "repoProvenance": "ui",
+   "text": "The forearm bends around the axis from 0 to 45 and then 90 degrees. An orange arc shows the angle.",
+   "shownAt": [
+    "player / dialogs / accessibility text"
+   ],
+   "curriculumClaim": null,
+   "externalVerification": null,
+   "needsExpertReview": false
+  },
+  {
+   "key": "a11y.hinge.extension",
+   "bucket": "UI",
+   "repoProvenance": "ui",
+   "text": "The forearm bends further to 145 degrees and then straightens back to 0 degrees.",
+   "shownAt": [
+    "player / dialogs / accessibility text"
+   ],
+   "curriculumClaim": null,
+   "externalVerification": null,
+   "needsExpertReview": false
+  },
+  {
+   "key": "a11y.hinge.try",
+   "bucket": "UI",
+   "repoProvenance": "ui",
+   "text": "The elbow can be bent by dragging the forearm or with the slider.",
+   "shownAt": [
+    "player / dialogs / accessibility text"
+   ],
+   "curriculumClaim": null,
+   "externalVerification": null,
+   "needsExpertReview": false
+  },
+  {
+   "key": "a11y.hinge.support",
+   "bucket": "UI",
+   "repoProvenance": "ui",
+   "text": "The joint capsule and ligaments appear around the elbow, with two thin schematic bands.",
+   "shownAt": [
+    "player / dialogs / accessibility text"
+   ],
+   "curriculumClaim": null,
+   "externalVerification": null,
+   "needsExpertReview": false
+  },
+  {
+   "key": "a11y.hinge.return",
+   "bucket": "UI",
+   "repoProvenance": "ui",
+   "text": "The elbow returns to its resting position.",
+   "shownAt": [
+    "player / dialogs / accessibility text"
+   ],
+   "curriculumClaim": null,
+   "externalVerification": null,
+   "needsExpertReview": false
+  },
+  {
+   "key": "a11y.hinge.knee",
+   "bucket": "UI",
+   "repoProvenance": "ui",
+   "text": "The camera moves down to the right knee, where an arc shows bending in one direction.",
+   "shownAt": [
+    "player / dialogs / accessibility text"
+   ],
+   "curriculumClaim": null,
+   "externalVerification": null,
+   "needsExpertReview": false
+  },
+  {
+   "key": "a11y.recap.pullback",
+   "bucket": "UI",
+   "repoProvenance": "ui",
+   "text": "The camera pulls back to the whole body. Six joint locations are labelled with their joint type.",
+   "shownAt": [
+    "player / dialogs / accessibility text"
+   ],
+   "curriculumClaim": null,
+   "externalVerification": null,
+   "needsExpertReview": false
+  },
+  {
+   "key": "a11y.recap.compare",
+   "bucket": "UI",
+   "repoProvenance": "ui",
+   "text": "All four kinds of movement indicator are shown on the body at once.",
+   "shownAt": [
+    "player / dialogs / accessibility text"
+   ],
+   "curriculumClaim": null,
+   "externalVerification": null,
+   "needsExpertReview": false
+  },
+  {
+   "key": "a11y.recap.check",
+   "bucket": "UI",
+   "repoProvenance": "ui",
+   "text": "Close-up of the elbow with its angle shown, ready to be bent to about 90 degrees.",
+   "shownAt": [
+    "player / dialogs / accessibility text"
+   ],
+   "curriculumClaim": null,
+   "externalVerification": null,
+   "needsExpertReview": false
+  },
+  {
+   "key": "ui.settings",
+   "bucket": "UI",
+   "repoProvenance": "ui",
+   "text": "Settings",
+   "shownAt": [
+    "player / dialogs / accessibility text"
+   ],
+   "curriculumClaim": null,
+   "externalVerification": null,
+   "needsExpertReview": false
+  },
+  {
+   "key": "ui.sources",
+   "bucket": "UI",
+   "repoProvenance": "ui",
+   "text": "Sources & draft status",
+   "shownAt": [
+    "player / dialogs / accessibility text"
+   ],
+   "curriculumClaim": null,
+   "externalVerification": null,
+   "needsExpertReview": false
+  },
+  {
+   "key": "ui.close",
+   "bucket": "UI",
+   "repoProvenance": "ui",
+   "text": "Close",
+   "shownAt": [
+    "player / dialogs / accessibility text"
+   ],
+   "curriculumClaim": null,
+   "externalVerification": null,
+   "needsExpertReview": false
+  },
+  {
+   "key": "ui.quality",
+   "bucket": "UI",
+   "repoProvenance": "ui",
+   "text": "Visual quality",
+   "shownAt": [
+    "player / dialogs / accessibility text"
+   ],
+   "curriculumClaim": null,
+   "externalVerification": null,
+   "needsExpertReview": false
+  },
+  {
+   "key": "ui.quality_auto",
+   "bucket": "UI",
+   "repoProvenance": "ui",
+   "text": "Automatic",
+   "shownAt": [
+    "player / dialogs / accessibility text"
+   ],
+   "curriculumClaim": null,
+   "externalVerification": null,
+   "needsExpertReview": false
+  },
+  {
+   "key": "ui.quality_high",
+   "bucket": "UI",
+   "repoProvenance": "ui",
+   "text": "High",
+   "shownAt": [
+    "player / dialogs / accessibility text"
+   ],
+   "curriculumClaim": null,
+   "externalVerification": null,
+   "needsExpertReview": false
+  },
+  {
+   "key": "ui.quality_medium",
+   "bucket": "UI",
+   "repoProvenance": "ui",
+   "text": "Medium",
+   "shownAt": [
+    "player / dialogs / accessibility text"
+   ],
+   "curriculumClaim": null,
+   "externalVerification": null,
+   "needsExpertReview": false
+  },
+  {
+   "key": "ui.quality_low",
+   "bucket": "UI",
+   "repoProvenance": "ui",
+   "text": "Low",
+   "shownAt": [
+    "player / dialogs / accessibility text"
+   ],
+   "curriculumClaim": null,
+   "externalVerification": null,
+   "needsExpertReview": false
+  },
+  {
+   "key": "ui.quality_note",
+   "bucket": "UI",
+   "repoProvenance": "ui",
+   "text": "Quality is chosen before the anatomy downloads, so a change applies when the lesson reloads.",
+   "shownAt": [
+    "player / dialogs / accessibility text"
+   ],
+   "curriculumClaim": null,
+   "externalVerification": null,
+   "needsExpertReview": false
+  },
+  {
+   "key": "ui.reload",
+   "bucket": "UI",
+   "repoProvenance": "ui",
+   "text": "Reload lesson",
+   "shownAt": [
+    "player / dialogs / accessibility text"
+   ],
+   "curriculumClaim": null,
+   "externalVerification": null,
+   "needsExpertReview": false
+  },
+  {
+   "key": "ui.motion",
+   "bucket": "UI",
+   "repoProvenance": "ui",
+   "text": "Motion",
+   "shownAt": [
+    "player / dialogs / accessibility text"
+   ],
+   "curriculumClaim": null,
+   "externalVerification": null,
+   "needsExpertReview": false
+  },
+  {
+   "key": "ui.motion_system",
+   "bucket": "UI",
+   "repoProvenance": "ui",
+   "text": "Follow system setting",
+   "shownAt": [
+    "player / dialogs / accessibility text"
+   ],
+   "curriculumClaim": null,
+   "externalVerification": null,
+   "needsExpertReview": false
+  },
+  {
+   "key": "ui.motion_reduce",
+   "bucket": "UI",
+   "repoProvenance": "ui",
+   "text": "Reduce motion",
+   "shownAt": [
+    "player / dialogs / accessibility text"
+   ],
+   "curriculumClaim": null,
+   "externalVerification": null,
+   "needsExpertReview": false
+  },
+  {
+   "key": "ui.motion_full",
+   "bucket": "UI",
+   "repoProvenance": "ui",
+   "text": "Full motion",
+   "shownAt": [
+    "player / dialogs / accessibility text"
+   ],
+   "curriculumClaim": null,
+   "externalVerification": null,
+   "needsExpertReview": false
+  },
+  {
+   "key": "ui.captions",
+   "bucket": "UI",
+   "repoProvenance": "ui",
+   "text": "Caption size",
+   "shownAt": [
+    "player / dialogs / accessibility text"
+   ],
+   "curriculumClaim": null,
+   "externalVerification": null,
+   "needsExpertReview": false
+  },
+  {
+   "key": "ui.captions_standard",
+   "bucket": "UI",
+   "repoProvenance": "ui",
+   "text": "Standard",
+   "shownAt": [
+    "player / dialogs / accessibility text"
+   ],
+   "curriculumClaim": null,
+   "externalVerification": null,
+   "needsExpertReview": false
+  },
+  {
+   "key": "ui.captions_large",
+   "bucket": "UI",
+   "repoProvenance": "ui",
+   "text": "Large",
+   "shownAt": [
+    "player / dialogs / accessibility text"
+   ],
+   "curriculumClaim": null,
+   "externalVerification": null,
+   "needsExpertReview": false
+  },
+  {
+   "key": "ui.shortcuts",
+   "bucket": "UI",
+   "repoProvenance": "ui",
+   "text": "Keyboard",
+   "shownAt": [
+    "player / dialogs / accessibility text"
+   ],
+   "curriculumClaim": null,
+   "externalVerification": null,
+   "needsExpertReview": false
+  },
+  {
+   "key": "ui.shortcuts_text",
+   "bucket": "UI",
+   "repoProvenance": "ui",
+   "text": "Space or K: play or pause. On the timeline: arrow keys move 5 seconds (with Shift, 15 seconds); Home and End jump to the start and end. Escape closes a panel.",
+   "shownAt": [
+    "player / dialogs / accessibility text"
+   ],
+   "curriculumClaim": null,
+   "externalVerification": null,
+   "needsExpertReview": false
+  },
+  {
+   "key": "ui.loading_part",
+   "bucket": "UI",
+   "repoProvenance": "ui",
+   "text": "Loading the next part of the film",
+   "shownAt": [
+    "player / dialogs / accessibility text"
+   ],
+   "curriculumClaim": null,
+   "externalVerification": null,
+   "needsExpertReview": false
+  },
+  {
+   "key": "ui.load_error",
+   "bucket": "UI",
+   "repoProvenance": "ui",
+   "text": "This part of the lesson could not be loaded.",
+   "shownAt": [
+    "player / dialogs / accessibility text"
+   ],
+   "curriculumClaim": null,
+   "externalVerification": null,
+   "needsExpertReview": false
+  },
+  {
+   "key": "ui.retry",
+   "bucket": "UI",
+   "repoProvenance": "ui",
+   "text": "Try again",
+   "shownAt": [
+    "player / dialogs / accessibility text"
+   ],
+   "curriculumClaim": null,
+   "externalVerification": null,
+   "needsExpertReview": false
+  },
+  {
+   "key": "ui.playing",
+   "bucket": "UI",
+   "repoProvenance": "ui",
+   "text": "Playing",
+   "shownAt": [
+    "player / dialogs / accessibility text"
+   ],
+   "curriculumClaim": null,
+   "externalVerification": null,
+   "needsExpertReview": false
+  },
+  {
+   "key": "ui.paused",
+   "bucket": "UI",
+   "repoProvenance": "ui",
+   "text": "Paused",
+   "shownAt": [
+    "player / dialogs / accessibility text"
+   ],
+   "curriculumClaim": null,
+   "externalVerification": null,
+   "needsExpertReview": false
+  },
+  {
+   "key": "ui.complete",
+   "bucket": "UI",
+   "repoProvenance": "ui",
+   "text": "Lesson complete.",
+   "shownAt": [
+    "player / dialogs / accessibility text"
+   ],
+   "curriculumClaim": null,
+   "externalVerification": null,
+   "needsExpertReview": false
+  },
+  {
+   "key": "ui.selected",
+   "bucket": "UI",
+   "repoProvenance": "ui",
+   "text": "Selected",
+   "shownAt": [
+    "player / dialogs / accessibility text"
+   ],
+   "curriculumClaim": null,
+   "externalVerification": null,
+   "needsExpertReview": false
+  },
+  {
+   "key": "ui.chapters",
+   "bucket": "UI",
+   "repoProvenance": "ui",
+   "text": "Chapters",
+   "shownAt": [
+    "player / dialogs / accessibility text"
+   ],
+   "curriculumClaim": null,
+   "externalVerification": null,
+   "needsExpertReview": false
+  },
+  {
+   "key": "ui.film_controls",
+   "bucket": "UI",
+   "repoProvenance": "ui",
+   "text": "Film controls",
+   "shownAt": [
+    "player / dialogs / accessibility text"
+   ],
+   "curriculumClaim": null,
+   "externalVerification": null,
+   "needsExpertReview": false
+  },
+  {
+   "key": "ui.current_quality",
+   "bucket": "UI",
+   "repoProvenance": "ui",
+   "text": "Current",
+   "shownAt": [
+    "player / dialogs / accessibility text"
+   ],
+   "curriculumClaim": null,
+   "externalVerification": null,
+   "needsExpertReview": false
+  }
+ ]
+}

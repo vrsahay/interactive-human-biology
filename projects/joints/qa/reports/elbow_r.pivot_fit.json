@@ -1,0 +1,252 @@
+{
+ "joint": "elbow_r",
+ "generated_at": "2026-09-17T14:48:21",
+ "environment": {
+  "blender_version": "5.2.2 LTS",
+  "blender_version_ok": true,
+  "master_sha256_ok": true,
+  "open_file": "C:\\Users\\Admin\\dev\\joints-platform\\blender\\Joints_Working.blend"
+ },
+ "method": "Fit the right elbow flexion axis from the extracted anatomy (READ-ONLY; run with Joints_Working.blend open).\n\nNo articular cartilage geometry exists, so articular surfaces are defined by bone-to-bone proximity.\n\nCandidates (all reported, Blender world coordinates, right arm: medial = +X, anterior = -Y, up = +Z):\n  A. sphere_centres  - line through sphere fits of the capitulum and trochlea proximity patches.\n  B. distal_band     - design-doc method: sphere fits to the lateral/medial halves of the distal 16 mm of the humerus.\n  C. functional      - FINAL. Axis (direction + position) found by Nelder-Mead minimising articular incongruence while the\n                       forearm is rotated about it through 0-145 deg of flexion:\n                         cost = trimmed mean over articular forearm vertices of the std-dev of their distance to the humerus\n                                + penalty for penetration into the humerus.\n                       Articular forearm vertices: ulnar trochlear notch and radial head vertices within 3 mm (+ min gap) of the\n                       humerus whose nearest humerus point lies in the distal 18 mm (trochlea / capitulum, not the fossae).\n                       Started from A and B; the lower-cost result is kept.\nCross-checks: epicondylar line (design gate <= 15 deg), candidate spread, congruence and penetration at 0/45/90/145.\nWrites qa/reports/elbow_r.pivot_fit.json.",
+ "parameters": {
+  "articular_band_m": 0.003,
+  "articular_z_m": 0.018,
+  "sweep_fit_deg": [
+   0,
+   20,
+   40,
+   60,
+   80,
+   100,
+   120,
+   145
+  ],
+  "penetration_weight": 4.0
+ },
+ "humerus_normals_outward": true,
+ "articular_sets": {
+  "ulnar_notch_vertices": 16,
+  "radial_head_vertices": 18,
+  "ulna_min_gap_mm": 0.032,
+  "radius_min_gap_mm": 4.597
+ },
+ "candidates": {
+  "sphere_centres": {
+   "point": [
+    -0.2269,
+    0.03782,
+    1.09549
+   ],
+   "axis_lat_to_med": [
+    0.85496,
+    0.50386,
+    0.1232
+   ],
+   "capitulum_r_mm": 8.87,
+   "capitulum_rms_mm": 0.861,
+   "trochlea_r_mm": 14.59,
+   "trochlea_rms_mm": 1.356,
+   "vs_epicondylar_deg": 39.12,
+   "sweep": {
+    "cost": 6.6948,
+    "gap_std_median_mm": 2.002,
+    "poses": {
+     "0": {
+      "articular_gap_mean_mm": 4.521,
+      "articular_gap_min_mm": 1.284,
+      "penetration_max_mm": 0.0,
+      "vertices_penetrating_over_0_5mm": 0
+     },
+     "45": {
+      "articular_gap_mean_mm": 4.372,
+      "articular_gap_min_mm": 0.311,
+      "penetration_max_mm": 0.698,
+      "vertices_penetrating_over_0_5mm": 2
+     },
+     "90": {
+      "articular_gap_mean_mm": 4.3,
+      "articular_gap_min_mm": 0.089,
+      "penetration_max_mm": 1.658,
+      "vertices_penetrating_over_0_5mm": 4
+     },
+     "145": {
+      "articular_gap_mean_mm": 5.641,
+      "articular_gap_min_mm": 0.431,
+      "penetration_max_mm": 7.726,
+      "vertices_penetrating_over_0_5mm": 9
+     }
+    }
+   }
+  },
+  "distal_band": {
+   "point": [
+    -0.21747,
+    0.03441,
+    1.10335
+   ],
+   "axis_lat_to_med": [
+    0.96801,
+    -0.08767,
+    -0.23511
+   ],
+   "lateral_r_mm": 13.9,
+   "lateral_rms_mm": 1.227,
+   "medial_r_mm": 12.92,
+   "medial_rms_mm": 0.731,
+   "vs_epicondylar_deg": 8.69,
+   "sweep": {
+    "cost": 0.5403,
+    "gap_std_median_mm": 0.493,
+    "poses": {
+     "0": {
+      "articular_gap_mean_mm": 4.521,
+      "articular_gap_min_mm": 1.284,
+      "penetration_max_mm": 0.0,
+      "vertices_penetrating_over_0_5mm": 0
+     },
+     "45": {
+      "articular_gap_mean_mm": 4.892,
+      "articular_gap_min_mm": 1.065,
+      "penetration_max_mm": 0.0,
+      "vertices_penetrating_over_0_5mm": 0
+     },
+     "90": {
+      "articular_gap_mean_mm": 5.322,
+      "articular_gap_min_mm": 0.768,
+      "penetration_max_mm": 0.0,
+      "vertices_penetrating_over_0_5mm": 0
+     },
+     "145": {
+      "articular_gap_mean_mm": 4.263,
+      "articular_gap_min_mm": 0.985,
+      "penetration_max_mm": 0.0,
+      "vertices_penetrating_over_0_5mm": 0
+     }
+    }
+   }
+  },
+  "functional_runs": {
+   "from_sphere_centres": {
+    "point": [
+     -0.22162,
+     0.03772,
+     1.09239
+    ],
+    "axis_lat_to_med": [
+     0.84213,
+     0.50454,
+     0.19039
+    ],
+    "cost_mm": 1.4211,
+    "evaluations": 291,
+    "vs_epicondylar_deg": 40.79
+   },
+   "from_distal_band": {
+    "point": [
+     -0.22139,
+     0.03484,
+     1.10336
+    ],
+    "axis_lat_to_med": [
+     0.97411,
+     -0.10983,
+     -0.19758
+    ],
+    "cost_mm": 0.254,
+    "evaluations": 194,
+    "vs_epicondylar_deg": 6.36
+   }
+  }
+ },
+ "final": {
+  "method": "functional (from_distal_band)",
+  "point": [
+   -0.22139,
+   0.03484,
+   1.10336
+  ],
+  "axis_lat_to_med": [
+   0.97411,
+   -0.10983,
+   -0.19758
+  ],
+  "flexion_axis_world": [
+   -0.97411,
+   0.10983,
+   0.19758
+  ],
+  "vs_epicondylar_deg": 6.36,
+  "vs_sphere_centres_deg": 41.14,
+  "vs_distal_band_deg": 2.52,
+  "functional_runs_agreement_deg": 43.34,
+  "functional_runs_point_separation_mm": 11.224,
+  "distance_to_epicondylar_line_mm": 8.64,
+  "sweep": {
+   "cost": 0.2911,
+   "gap_std_median_mm": 0.306,
+   "poses": {
+    "0": {
+     "articular_gap_mean_mm": 4.521,
+     "articular_gap_min_mm": 1.284,
+     "penetration_max_mm": 0.0,
+     "vertices_penetrating_over_0_5mm": 0
+    },
+    "45": {
+     "articular_gap_mean_mm": 4.671,
+     "articular_gap_min_mm": 1.336,
+     "penetration_max_mm": 0.0,
+     "vertices_penetrating_over_0_5mm": 0
+    },
+    "90": {
+     "articular_gap_mean_mm": 4.713,
+     "articular_gap_min_mm": 1.299,
+     "penetration_max_mm": 0.0,
+     "vertices_penetrating_over_0_5mm": 0
+    },
+    "145": {
+     "articular_gap_mean_mm": 3.445,
+     "articular_gap_min_mm": 0.0,
+     "penetration_max_mm": 0.0,
+     "vertices_penetrating_over_0_5mm": 0
+    }
+   }
+  }
+ },
+ "epicondyles": {
+  "lateral": [
+   -0.24883,
+   0.0433,
+   1.1128
+  ],
+  "medial": [
+   -0.1835,
+   0.03555,
+   1.10699
+  ],
+  "direction_lat_to_med": [
+   0.9892,
+   -0.11726,
+   -0.08799
+  ]
+ },
+ "start_costs_mm": {
+  "sphere_centres": 5.7716,
+  "distal_band": 0.516
+ },
+ "source_pose": {
+  "flexion_in_plane_deg": 25.97,
+  "ulna_flexed_anteriorly": true,
+  "carrying_angle_deg": 6.18,
+  "humerus_ulna_3d_angle_deg": 26.61,
+  "humerus_shaft_dir": [
+   -0.16032,
+   0.15226,
+   -0.97525
+  ],
+  "ulna_shaft_dir": [
+   -0.09582,
+   -0.30274,
+   -0.94824
+  ]
+ }
+}

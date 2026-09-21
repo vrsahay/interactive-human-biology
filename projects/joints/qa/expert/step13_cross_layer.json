@@ -1,0 +1,141 @@
+{
+ "step": "13",
+ "phase": "J (Blender / GLB / manifest / Three.js cross-layer review) - READ ONLY",
+ "generatedAt": "2026-09-18T06:03:50.420Z",
+ "generator": "pipeline/qa/build_cross_layer_review.ts",
+ "note": "No Blender write was performed. Every value is read from the validated reports and the promoted manifest.",
+ "sources": {
+  "blenderRig": "qa/reports/elbow_r.rig_validation.final.json",
+  "gate2": "qa/reports/elbow_r.gate2.promoted.json",
+  "gate3": "qa/reports/elbow_r.gate3.step12.json",
+  "manifest": "public/assets/joints/elbow_r/joint-manifest.json",
+  "blenderPoseReference": "qa/reports/elbow_r.blender_pose_reference.json"
+ },
+ "axisConvention": "Blender is Z-up; the glTF/manifest/runtime are Y-up. Comparisons apply (x, y, z)_Z-up -> (x, z, -y)_Y-up.",
+ "checks": [
+  {
+   "check": "pivot point",
+   "layers": "Blender -> manifest",
+   "result": "MATCH",
+   "detail": "max component difference 0.000000 mm (Blender Z-up [-0.2213899940252304,0.03483999893069267,1.1033600568771362] -> Y-up [-0.2213899940252304,1.1033600568771362,-0.03483999893069267] vs manifest [-0.2213899940252304,1.1033600568771362,-0.03483999893069267])"
+  },
+  {
+   "check": "flexion axis",
+   "layers": "Blender -> manifest",
+   "result": "MATCH",
+   "detail": "angle between axes 0.000000 deg"
+  },
+  {
+   "check": "neutral offset",
+   "layers": "Blender -> manifest/content",
+   "result": "MATCH",
+   "detail": "Blender rig neutral_offset_deg 13.62510376997268; the same constant is the documented elbow semantic (controller 0 deg = true extension). Source pose reproduction error 1.1920928955078125e-7"
+  },
+  {
+   "check": "degree of freedom",
+   "layers": "manifest -> runtime",
+   "result": "MATCH",
+   "detail": "manifest dof {\"id\":\"flexion\",\"axis\":\"+X\",\"min\":0,\"max\":145,\"neutral\":0,\"unit\":\"deg\",\"rangeStatus\":\"approximate, pending cited reference\"}; runtime drives it through the single JointController.setDof path"
+  },
+  {
+   "check": "controller limits in Blender",
+   "layers": "Blender -> manifest",
+   "result": "MATCH",
+   "detail": "Blender LIMIT_ROTATION constraint on elbow_r__ctrl; clamping report {\"150\":144.999998,\"-10\":0.000004}"
+  },
+  {
+   "check": "structure count",
+   "layers": "Blender -> GLB -> manifest -> runtime",
+   "result": "MATCH",
+   "detail": "Blender anatomy objects 49; manifest structures 49; runtime compared 49"
+  },
+  {
+   "check": "mesh integrity",
+   "layers": "Blender -> GLB",
+   "result": "MATCH",
+   "detail": "49/49 mesh hashes matched the master extraction"
+  },
+  {
+   "check": "anchor count",
+   "layers": "manifest -> runtime",
+   "result": "MATCH",
+   "detail": "manifest anchors 17; runtime compared 17 at every pose"
+  },
+  {
+   "check": "band anchors",
+   "layers": "Blender -> manifest -> runtime",
+   "result": "MATCH",
+   "detail": "2 schematic bands (elbow_r.band.radial_collateral_ligament [lateral, schematic], elbow_r.band.ulnar_collateral_ligament [medial, schematic]) built on 4 band-end anchors (elbow_r.anchor.rcl_dist, elbow_r.anchor.rcl_prox, elbow_r.anchor.ucl_dist, elbow_r.anchor.ucl_prox)"
+  },
+  {
+   "check": "band representation",
+   "layers": "manifest -> runtime -> UI",
+   "result": "MATCH",
+   "detail": "every band declares representation 'schematic' and deformationSimulation false; the UI label subtitle is 'Schematic ligament band'"
+  },
+  {
+   "check": "GLB gate 2",
+   "layers": "GLB",
+   "result": "MATCH",
+   "detail": "19 checks on the promoted GLBs, passed true"
+  },
+  {
+   "check": "manifest pinned in the build",
+   "layers": "manifest -> runtime",
+   "result": "MATCH",
+   "detail": "manifest SHA-256 009d51528bf5a6d84b2ab14499d4a1346f4cc1bcaff0ab1a0f99b1ccfd135e66; the Blender pose reference was generated for 009d51528bf5a6d84b2ab14499d4a1346f4cc1bcaff0ab1a0f99b1ccfd135e66"
+  }
+ ],
+ "runtimeVsBlenderPoses": {
+  "note": "Three.js runtime (production GLBs, all tiers, attachTo applied) vs the Blender rig driven through the controller. This is runtime pose consistency, NOT formal landmark validation.",
+  "poses": [
+   {
+    "flexionDeg": 0,
+    "anchorMaxMm": 0.0001625333678180171,
+    "bboxMaxMm": 0.012937385524929157,
+    "matrixTranslationMaxMm": 0.00033088388837117705,
+    "worstAnchor": "elbow_r.anchor.coronoid_process",
+    "worstStructure": "brachioradialis_r",
+    "passed": true
+   },
+   {
+    "flexionDeg": 45,
+    "anchorMaxMm": 0.0002021717586683225,
+    "bboxMaxMm": 0.012937385524929157,
+    "matrixTranslationMaxMm": 0.0004122040955655175,
+    "worstAnchor": "elbow_r.anchor.coronoid_process",
+    "worstStructure": "brachioradialis_r",
+    "passed": true
+   },
+   {
+    "flexionDeg": 90,
+    "anchorMaxMm": 0.0001585108924525235,
+    "bboxMaxMm": 0.012937385524929157,
+    "matrixTranslationMaxMm": 0.00020232745592274886,
+    "worstAnchor": "elbow_r.anchor.rcl_dist",
+    "worstStructure": "brachioradialis_r",
+    "passed": true
+   },
+   {
+    "flexionDeg": 145,
+    "anchorMaxMm": 0.00021564135400041728,
+    "bboxMaxMm": 0.012937385524929157,
+    "matrixTranslationMaxMm": 0.00023905649545083172,
+    "worstAnchor": "elbow_r.anchor.coronoid_process",
+    "worstStructure": "brachioradialis_r",
+    "passed": true
+   }
+  ],
+  "allPassed": true,
+  "worstAnchorDeviationMm": 0.00021564135400041728
+ },
+ "formalGate3": {
+  "status": "NOT AVAILABLE",
+  "reason": "approved landmark definitions missing",
+  "note": "PENDING EXPERT LANDMARK APPROVAL. A draft package now exists (qa/elbow_r.poses.draft.json) and is read for reporting only."
+ },
+ "summary": {
+  "mismatches": 0,
+  "checks": 12
+ }
+}

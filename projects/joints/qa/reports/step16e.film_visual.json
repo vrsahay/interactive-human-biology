@@ -1,0 +1,322 @@
+{
+ "generatedAt": "2026-09-21T07:23:06.607Z",
+ "viewport": {
+  "width": 1280,
+  "height": 800
+ },
+ "rows": [
+  {
+   "name": "01_intro_full_body",
+   "shotId": "intro.title",
+   "offset": 3500,
+   "flexion": null,
+   "labels": 0,
+   "overlaps": 0,
+   "chapter": "hook",
+   "concepts": [],
+   "body": {
+    "visible": 535,
+    "shell": true,
+    "highlighted": 0,
+    "handedOver": 0
+   },
+   "jointVisible": 0
+  },
+  {
+   "name": "01b_intro_joint_map",
+   "shotId": "intro.map",
+   "offset": 6000,
+   "flexion": null,
+   "labels": 0,
+   "overlaps": 0,
+   "chapter": "what_is_joint",
+   "concepts": [],
+   "body": {
+    "visible": 535,
+    "shell": true,
+    "highlighted": 68,
+    "handedOver": 0
+   },
+   "jointVisible": 0
+  },
+  {
+   "name": "02_fixed_skull",
+   "shotId": "fixed.name",
+   "offset": 6000,
+   "flexion": null,
+   "labels": 1,
+   "overlaps": 0,
+   "chapter": "fixed",
+   "concepts": [],
+   "body": {
+    "visible": 287,
+    "shell": false,
+    "highlighted": 2,
+    "handedOver": 0
+   },
+   "jointVisible": 0
+  },
+  {
+   "name": "03_pivot_upper_neck",
+   "shotId": "pivot.rotate",
+   "offset": 6500,
+   "flexion": null,
+   "labels": 1,
+   "overlaps": 0,
+   "chapter": "pivot",
+   "concepts": [
+    "pivot.upper_neck"
+   ],
+   "body": {
+    "visible": 287,
+    "shell": false,
+    "highlighted": 2,
+    "handedOver": 0
+   },
+   "jointVisible": 0
+  },
+  {
+   "name": "04_ball_socket_shoulder",
+   "shotId": "ball.move",
+   "offset": 5000,
+   "flexion": null,
+   "labels": 1,
+   "overlaps": 0,
+   "chapter": "ball_socket",
+   "concepts": [
+    "ball_socket.shoulder_right"
+   ],
+   "body": {
+    "visible": 287,
+    "shell": false,
+    "highlighted": 2,
+    "handedOver": 0
+   },
+   "jointVisible": 0
+  },
+  {
+   "name": "04b_ball_socket_bones",
+   "shotId": "ball.bones",
+   "offset": 5000,
+   "flexion": null,
+   "labels": 1,
+   "overlaps": 0,
+   "chapter": "ball_socket",
+   "concepts": [],
+   "body": {
+    "visible": 287,
+    "shell": false,
+    "highlighted": 2,
+    "handedOver": 0
+   },
+   "jointVisible": 0
+  },
+  {
+   "name": "06_hinge_elbow_source",
+   "shotId": "hinge.source",
+   "offset": 6000,
+   "flexion": null,
+   "labels": 1,
+   "overlaps": 0,
+   "chapter": "hinge",
+   "concepts": [],
+   "body": {
+    "visible": 287,
+    "shell": false,
+    "highlighted": 3,
+    "handedOver": 0
+   },
+   "jointVisible": 0
+  },
+  {
+   "name": "06b_hinge_elbow_bones",
+   "shotId": "hinge.bones",
+   "offset": 5000,
+   "flexion": 13.62510376997268,
+   "labels": 3,
+   "overlaps": 0,
+   "chapter": "hinge",
+   "concepts": [],
+   "body": {
+    "visible": 257,
+    "shell": false,
+    "highlighted": 0,
+    "handedOver": 30
+   },
+   "jointVisible": 30
+  },
+  {
+   "name": "06c_hinge_elbow_axis",
+   "shotId": "hinge.axis",
+   "offset": 6000,
+   "flexion": 0,
+   "labels": 2,
+   "overlaps": 0,
+   "chapter": "hinge",
+   "concepts": [],
+   "body": {
+    "visible": 257,
+    "shell": false,
+    "highlighted": 0,
+    "handedOver": 30
+   },
+   "jointVisible": 30
+  },
+  {
+   "name": "06d_hinge_elbow_support",
+   "shotId": "hinge.support",
+   "offset": 8000,
+   "flexion": 0,
+   "labels": 3,
+   "overlaps": 0,
+   "chapter": "hinge",
+   "concepts": [],
+   "body": {
+    "visible": 257,
+    "shell": false,
+    "highlighted": 0,
+    "handedOver": 30
+   },
+   "jointVisible": 34
+  },
+  {
+   "name": "07_hinge_knee",
+   "shotId": "hinge.knee",
+   "offset": 7500,
+   "flexion": 0,
+   "labels": 1,
+   "overlaps": 0,
+   "chapter": "hinge",
+   "concepts": [
+    "hinge.knee_right"
+   ],
+   "body": {
+    "visible": 287,
+    "shell": false,
+    "highlighted": 6,
+    "handedOver": 0
+   },
+   "jointVisible": 0
+  },
+  {
+   "name": "08_compare_full_body",
+   "shotId": "compare.pullback",
+   "offset": 4000,
+   "flexion": 0,
+   "labels": 0,
+   "overlaps": 0,
+   "chapter": "compare",
+   "concepts": [],
+   "body": {
+    "visible": 535,
+    "shell": true,
+    "highlighted": 68,
+    "handedOver": 0
+   },
+   "jointVisible": 0
+  },
+  {
+   "name": "08b_recap_compare",
+   "shotId": "map.all",
+   "offset": 6000,
+   "flexion": 0,
+   "labels": 6,
+   "overlaps": 0,
+   "chapter": "body_map",
+   "concepts": [],
+   "body": {
+    "visible": 287,
+    "shell": false,
+    "highlighted": 68,
+    "handedOver": 0
+   },
+   "jointVisible": 0
+  },
+  {
+   "name": "09_check",
+   "shotId": "hinge.check",
+   "offset": 9000,
+   "flexion": 0,
+   "labels": 1,
+   "overlaps": 0,
+   "chapter": "hinge",
+   "concepts": [],
+   "body": {
+    "visible": 257,
+    "shell": false,
+    "highlighted": 0,
+    "handedOver": 30
+   },
+   "jointVisible": 30
+  },
+  {
+   "name": "elbow_000",
+   "shotId": "hinge.flexion",
+   "offset": 1000,
+   "flexion": 0,
+   "labels": 4,
+   "overlaps": 0,
+   "chapter": "hinge",
+   "concepts": [],
+   "body": {
+    "visible": 257,
+    "shell": false,
+    "highlighted": 0,
+    "handedOver": 30
+   },
+   "jointVisible": 30
+  },
+  {
+   "name": "elbow_045",
+   "shotId": "hinge.flexion",
+   "offset": 5000,
+   "flexion": 45,
+   "labels": 4,
+   "overlaps": 0,
+   "chapter": "hinge",
+   "concepts": [],
+   "body": {
+    "visible": 257,
+    "shell": false,
+    "highlighted": 0,
+    "handedOver": 30
+   },
+   "jointVisible": 30
+  },
+  {
+   "name": "elbow_090",
+   "shotId": "hinge.flexion",
+   "offset": 9000,
+   "flexion": 90,
+   "labels": 4,
+   "overlaps": 0,
+   "chapter": "hinge",
+   "concepts": [],
+   "body": {
+    "visible": 257,
+    "shell": false,
+    "highlighted": 0,
+    "handedOver": 30
+   },
+   "jointVisible": 30
+  },
+  {
+   "name": "elbow_145",
+   "shotId": "hinge.extension",
+   "offset": 4000,
+   "flexion": 145,
+   "labels": 4,
+   "overlaps": 0,
+   "chapter": "hinge",
+   "concepts": [],
+   "body": {
+    "visible": 257,
+    "shell": false,
+    "highlighted": 0,
+    "handedOver": 30
+   },
+   "jointVisible": 30
+  }
+ ],
+ "consoleErrors": []
+}

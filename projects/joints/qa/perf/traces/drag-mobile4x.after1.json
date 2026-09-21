@@ -1,0 +1,510 @@
+{
+ "forcedStyleLayout": [],
+ "breakdown": null,
+ "scenario": "drag",
+ "profile": "mobile4x",
+ "dist": "dist",
+ "query": "",
+ "generatedAt": "2026-09-17T17:48:23.606Z",
+ "markers": {},
+ "mainThread": {
+  "totalTaskMs": 10588.4,
+  "topTasks": [
+   {
+    "atMs": 4.4,
+    "durMs": 717.7
+   },
+   {
+    "atMs": 4.5,
+    "durMs": 717.5
+   },
+   {
+    "atMs": 733.4,
+    "durMs": 30.1
+   },
+   {
+    "atMs": 733.4,
+    "durMs": 30.1
+   },
+   {
+    "atMs": 3915.6,
+    "durMs": 26.6
+   },
+   {
+    "atMs": 3915.6,
+    "durMs": 26.4
+   },
+   {
+    "atMs": 1398.8,
+    "durMs": 22.9
+   },
+   {
+    "atMs": 1398.8,
+    "durMs": 22.9
+   },
+   {
+    "atMs": 1475.3,
+    "durMs": 20.5
+   },
+   {
+    "atMs": 1475.3,
+    "durMs": 20.5
+   },
+   {
+    "atMs": 6765.5,
+    "durMs": 19.9
+   },
+   {
+    "atMs": 6765.5,
+    "durMs": 19.7
+   },
+   {
+    "atMs": 3132.3,
+    "durMs": 19.7
+   },
+   {
+    "atMs": 3132.3,
+    "durMs": 19.7
+   },
+   {
+    "atMs": 6732.1,
+    "durMs": 19.6
+   }
+  ],
+  "byEvent": [
+   [
+    "v8.callFunction",
+    3177.8
+   ],
+   [
+    "WebFrameWidgetImpl::BeginMainFrame",
+    2906.9
+   ],
+   [
+    "Blink.Animate.UpdateTime",
+    2879.2
+   ],
+   [
+    "PageAnimator::serviceScriptedAnimations",
+    2844.1
+   ],
+   [
+    "FrameRequestCallbackCollection::ExecuteFrameCallbacks",
+    2751.2
+   ],
+   [
+    "FireAnimationFrame",
+    2736.8
+   ],
+   [
+    "AsyncTask Run",
+    2707
+   ],
+   [
+    "FunctionCall",
+    2381.5
+   ],
+   [
+    "WebFrameWidgetImpl::UpdateLifecycle",
+    1061.5
+   ],
+   [
+    "V8.StackGuard",
+    774.6
+   ],
+   [
+    "V8.HandleInterrupts",
+    772
+   ],
+   [
+    "Receive mojo message",
+    717.1
+   ],
+   [
+    "V8.InvokeApiInterruptCallbacks",
+    697.6
+   ],
+   [
+    "CpuProfiler::StartProfiling",
+    695.4
+   ],
+   [
+    "EventDispatch",
+    630.4
+   ],
+   [
+    "LocalFrameView::RunPaintLifecyclePhase",
+    390.9
+   ],
+   [
+    "LocalFrameView::RunStyleAndLayoutLifecyclePhases",
+    382.4
+   ],
+   [
+    "Commit",
+    360.4
+   ],
+   [
+    "LocalFrameView::UpdateStyleAndLayout",
+    348.1
+   ],
+   [
+    "Blink.Paint.UpdateTime",
+    234.9
+   ],
+   [
+    "Paint",
+    201.7
+   ],
+   [
+    "PrePaint",
+    170.3
+   ],
+   [
+    "RunMicrotasks",
+    167.3
+   ],
+   [
+    "Blink.Layout.UpdateTime",
+    165
+   ],
+   [
+    "LocalFrameView::layout",
+    154.9
+   ],
+   [
+    "Layout",
+    153.4
+   ],
+   [
+    "Blink.Style.UpdateTime",
+    152.1
+   ],
+   [
+    "UpdateLayoutTree",
+    147.6
+   ],
+   [
+    "LocalFrameView::performLayout",
+    142.1
+   ],
+   [
+    "LocalFrameView::pushPaintArtifactToCompositor",
+    126.1
+   ],
+   [
+    "Document::updateStyle",
+    121.5
+   ],
+   [
+    "Blink.CompositingCommit.UpdateTime",
+    117.7
+   ],
+   [
+    "Layerize",
+    111.5
+   ],
+   [
+    "Document::recalcStyle",
+    106.4
+   ],
+   [
+    "LocalFrameView::RunPrePaintLifecyclePhase",
+    102.1
+   ],
+   [
+    "Blink.PrePaint.UpdateTime",
+    91.4
+   ],
+   [
+    "PaintArtifactCompositor::Update",
+    87
+   ],
+   [
+    "CommandBufferHelper::Flush",
+    80.3
+   ],
+   [
+    "CommandBufferProxyImpl::Flush",
+    68
+   ],
+   [
+    "LocalFrameView::RunCompositingInputsLifecyclePhase",
+    46.8
+   ]
+  ],
+  "gc": {
+   "minorMs": 14.2,
+   "majorMs": 0,
+   "count": 2
+  }
+ },
+ "cpuProfile": {
+  "sampledMs": 8678,
+  "bySource": [
+   [
+    "(idle)",
+    3371
+   ],
+   [
+    "(program)",
+    3052
+   ],
+   [
+    "three.js",
+    913
+   ],
+   [
+    "(native)",
+    685
+   ],
+   [
+    "nm/preact",
+    144
+   ],
+   [
+    "src/engine/interaction",
+    135
+   ],
+   [
+    "src/engine/core",
+    108
+   ],
+   [
+    "src/engine/overlays",
+    106
+   ],
+   [
+    "src/engine/video",
+    44
+   ],
+   [
+    "src/engine/joints",
+    36
+   ],
+   [
+    "(garbage collector)",
+    18
+   ],
+   [
+    "src/engine/anatomy",
+    17
+   ],
+   [
+    "nm/@preact",
+    17
+   ],
+   [
+    "src/engine/rendering",
+    13
+   ],
+   [
+    "src/ui/FlexionSlider.tsx",
+    9
+   ],
+   [
+    "src/ui/store.ts",
+    5
+   ],
+   [
+    "src/ui/video",
+    4
+   ],
+   [
+    "src/engine/perf",
+    1
+   ],
+   [
+    "src/content/joints",
+    1
+   ]
+  ],
+  "topFunctions": [
+   [
+    "(idle)",
+    3371
+   ],
+   [
+    "(program)",
+    3052
+   ],
+   [
+    "requestAnimationFrame",
+    134
+   ],
+   [
+    "dispatchEvent",
+    126
+   ],
+   [
+    "fire",
+    84
+   ],
+   [
+    "xt (nm/three/build/three.module.js:18407)",
+    58
+   ],
+   [
+    "pointerMove (src/engine/interaction/InteractionController.ts:80)",
+    58
+   ],
+   [
+    "bindVertexArray",
+    54
+   ],
+   [
+    "drawElements",
+    49
+   ],
+   [
+    "uniformMatrix4fv",
+    48
+   ],
+   [
+    "s (nm/three/build/three.module.js:1623)",
+    48
+   ],
+   [
+    "step",
+    47
+   ],
+   [
+    "p (nm/three/build/three.module.js:1759)",
+    44
+   ],
+   [
+    "renderBufferDirect (nm/three/build/three.module.js:17233)",
+    43
+   ],
+   [
+    "lt (nm/three/build/three.module.js:17897)",
+    42
+   ],
+   [
+    "updateMatrixWorld (nm/three/build/three.core.js:13067)",
+    39
+   ],
+   [
+    "c (nm/three/build/three.module.js:4192)",
+    37
+   ],
+   [
+    "updateWorldMatrix (nm/three/build/three.core.js:13116)",
+    36
+   ],
+   [
+    "uniformMatrix3fv",
+    34
+   ],
+   [
+    "multiplyMatrices (nm/three/build/three.core.js:10570)",
+    33
+   ],
+   [
+    "n (src/engine/interaction/InteractionController.ts:149)",
+    32
+   ],
+   [
+    "d (nm/three/build/three.module.js:1680)",
+    29
+   ],
+   [
+    "setAttribute",
+    28
+   ],
+   [
+    "F (nm/preact/dist/preact.module.js:1)",
+    27
+   ],
+   [
+    "compose (nm/three/build/three.core.js:11030)",
+    25
+   ],
+   [
+    "Ll (nm/three/build/three.module.js:5078)",
+    24
+   ],
+   [
+    "N (nm/preact/dist/preact.module.js:1)",
+    23
+   ],
+   [
+    "now (src/engine/video/AppVideoRuntime.ts:54)",
+    23
+   ],
+   [
+    "update (src/engine/overlays/LabelSystem.ts:180)",
+    22
+   ],
+   [
+    "o (nm/three/build/three.module.js:242)",
+    21
+   ],
+   [
+    "ht (nm/three/build/three.module.js:18165)",
+    19
+   ],
+   [
+    "updateMatrix (nm/three/build/three.core.js:13035)",
+    19
+   ],
+   [
+    "renderFrame (src/engine/core/App.ts:970)",
+    19
+   ],
+   [
+    "render (nm/three/build/three.module.js:17674)",
+    18
+   ],
+   [
+    "(garbage collector)",
+    18
+   ],
+   [
+    "z (nm/preact/dist/preact.module.js:1)",
+    17
+   ],
+   [
+    "Rh (src/engine/overlays/LabelSystem.ts:50)",
+    17
+   ],
+   [
+    "updateTitle (src/engine/overlays/LabelSystem.ts:146)",
+    16
+   ],
+   [
+    "setValue (nm/three/build/three.module.js:6107)",
+    15
+   ],
+   [
+    "step (src/engine/interaction/hingeDragMath.ts:89)",
+    15
+   ],
+   [
+    "a (nm/three/build/three.module.js:15139)",
+    15
+   ],
+   [
+    "hide (src/engine/overlays/LabelSystem.ts:293)",
+    14
+   ],
+   [
+    "gt (nm/three/build/three.module.js:18192)",
+    14
+   ],
+   [
+    "emit (src/engine/core/EventBus.ts:14)",
+    13
+   ],
+   [
+    "setDof (src/engine/core/App.ts:822)",
+    13
+   ]
+  ]
+ },
+ "frames": {
+  "count": 695,
+  "intervalP50": 11.183,
+  "intervalP95": 17.696
+ }
+}

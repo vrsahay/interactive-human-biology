@@ -1,0 +1,80 @@
+{
+ "generatedAt": "2026-09-21T10:21:24.619Z",
+ "perShotClip": {
+  "shot": "hinge.source",
+  "src": "hinge.source.mp3",
+  "voice": "en-IN-Chirp3-HD-Aoede"
+ },
+ "noLoop": {
+  "samples": 10,
+  "rewinds": 0,
+  "rows": [
+   {
+    "localMs": 713,
+    "audio": 0.3,
+    "paused": false,
+    "src": "pivot.rotate.mp3"
+   },
+   {
+    "localMs": 1413,
+    "audio": 1,
+    "paused": false,
+    "src": "pivot.rotate.mp3"
+   },
+   {
+    "localMs": 2096,
+    "audio": 1.7,
+    "paused": false,
+    "src": "pivot.rotate.mp3"
+   },
+   {
+    "localMs": 2813,
+    "audio": 2.41,
+    "paused": false,
+    "src": "pivot.rotate.mp3"
+   },
+   {
+    "localMs": 3496,
+    "audio": 3.11,
+    "paused": false,
+    "src": "pivot.rotate.mp3"
+   },
+   {
+    "localMs": 4213,
+    "audio": 3.82,
+    "paused": false,
+    "src": "pivot.rotate.mp3"
+   },
+   {
+    "localMs": 4896,
+    "audio": 4.25,
+    "paused": true,
+    "src": "pivot.rotate.mp3"
+   },
+   {
+    "localMs": 5596,
+    "audio": 4.25,
+    "paused": true,
+    "src": "pivot.rotate.mp3"
+   },
+   {
+    "localMs": 6296,
+    "audio": 4.25,
+    "paused": true,
+    "src": "pivot.rotate.mp3"
+   },
+   {
+    "localMs": 7012,
+    "audio": 4.25,
+    "paused": true,
+    "src": "pivot.rotate.mp3"
+   }
+  ]
+ },
+ "toggle": {
+  "offPaused": true,
+  "backOnPlaying": true,
+  "label": "Turn narration off"
+ },
+ "pausedWithFilm": true
+}

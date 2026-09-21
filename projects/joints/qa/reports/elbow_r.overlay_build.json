@@ -1,0 +1,402 @@
+{
+ "joint": "elbow_r",
+ "step": 7,
+ "generated_at": "2026-09-17T15:10:36",
+ "environment": {
+  "blender_version": "5.2.2 LTS",
+  "blender_version_ok": true,
+  "master_sha256_ok": true,
+  "open_file": "C:\\Users\\Admin\\dev\\joints-platform\\blender\\Joints_Working.blend"
+ },
+ "created": [
+  "elbow_r__anchor__humerus",
+  "elbow_r__anchor__radius",
+  "elbow_r__anchor__ulna",
+  "elbow_r__anchor__elbow_joint",
+  "elbow_r__anchor__capitulum",
+  "elbow_r__anchor__trochlea",
+  "elbow_r__anchor__radial_head",
+  "elbow_r__anchor__olecranon",
+  "elbow_r__anchor__coronoid_process",
+  "elbow_r__anchor__elbow_capsule",
+  "elbow_r__anchor__radial_collateral_ligament",
+  "elbow_r__anchor__ulnar_collateral_ligament",
+  "elbow_r__anchor__annular_ligament",
+  "elbow_r__overlay__registry",
+  "elbow_r__overlay__axis",
+  "elbow_r__overlay__forearm"
+ ],
+ "anchors": {
+  "humerus": {
+   "parent": "elbow_r__bone__humerus",
+   "vertexIndex": 607,
+   "localPosition": [
+    -0.2137538343667984,
+    0.031390491873025894,
+    1.2473888397216797
+   ],
+   "vertexNormalLocal": [
+    -0.9956948161125183,
+    0.038436517119407654,
+    0.08434733748435974
+   ],
+   "labelDirectionLocal": [
+    -0.7717789294897873,
+    -0.6243056900067189,
+    0.12082917454337186
+   ],
+   "labelTargetLocal": [
+    -0.23690720225149203,
+    0.012661321172824327,
+    1.2510137149579807
+   ],
+   "diagnostics": {
+    "band_vertices": 18,
+    "length_mm": 319.85
+   }
+  },
+  "radius": {
+   "parent": "elbow_r__bone__radius",
+   "vertexIndex": 194,
+   "localPosition": [
+    -0.25522148609161377,
+    0.013870539143681526,
+    1.0120351314544678
+   ],
+   "vertexNormalLocal": [
+    -0.3369285762310028,
+    -0.9400899410247803,
+    0.05205785483121872
+   ],
+   "labelDirectionLocal": [
+    -0.7372601243171065,
+    -0.612745631607968,
+    0.28458794780748736
+   ],
+   "labelTargetLocal": [
+    -0.277339289821127,
+    -0.004511829804557513,
+    1.0205727698886924
+   ],
+   "diagnostics": {
+    "band_vertices": 7,
+    "length_mm": 245.91
+   }
+  },
+  "ulna": {
+   "parent": "elbow_r__bone__ulna",
+   "vertexIndex": 110,
+   "localPosition": [
+    -0.22640442848205566,
+    0.025754962116479874,
+    1.0201529264450073
+   ],
+   "vertexNormalLocal": [
+    0.5731854438781738,
+    -0.8127885460853577,
+    0.10408288985490799
+   ],
+   "labelDirectionLocal": [
+    0.7372601243171065,
+    0.612745631607968,
+    -0.28458794780748736
+   ],
+   "labelTargetLocal": [
+    -0.20428662475254247,
+    0.04413733106471891,
+    1.0116152880107827
+   ],
+   "diagnostics": {
+    "band_vertices": 3,
+    "length_mm": 264.07
+   }
+  },
+  "elbow_joint": {
+   "parent": "elbow_r__pivot",
+   "vertexIndex": -1,
+   "localPosition": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "vertexNormalLocal": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "labelDirectionLocal": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "diagnostics": {
+    "note": "fitted pivot origin (pivot local frame)"
+   }
+  },
+  "capitulum": {
+   "parent": "elbow_r__bone__humerus",
+   "vertexIndex": 110,
+   "localPosition": [
+    -0.23613370954990387,
+    0.0354376882314682,
+    1.0957621335983276
+   ],
+   "vertexNormalLocal": [
+    0.18038274347782135,
+    -0.20664772391319275,
+    -0.9616437554359436
+   ],
+   "labelDirectionLocal": [
+    -0.7717789294897873,
+    -0.6243056900067189,
+    0.12082917454337186
+   ],
+   "labelTargetLocal": [
+    -0.2592870774345975,
+    0.016708517531266634,
+    1.0993870088346287
+   ],
+   "diagnostics": {
+    "region_vertices": 65,
+    "min_gap_mm": 4.674,
+    "lateral_of_pivot_mm": 12.93
+   }
+  },
+  "trochlea": {
+   "parent": "elbow_r__bone__humerus",
+   "vertexIndex": 439,
+   "localPosition": [
+    -0.21332044899463654,
+    0.041955266147851944,
+    1.0975596904754639
+   ],
+   "vertexNormalLocal": [
+    -0.439161092042923,
+    0.8168811798095703,
+    -0.37395527958869934
+   ],
+   "labelDirectionLocal": [
+    0.6058269763666798,
+    -0.7796294498949928,
+    -0.15859254573540735
+   ],
+   "labelTargetLocal": [
+    -0.19514563970363613,
+    0.018566382651002158,
+    1.0928019141034016
+   ],
+   "diagnostics": {
+    "region_vertices": 72,
+    "min_gap_mm": 0.53,
+    "lateral_of_pivot_mm": -8.23
+   }
+  },
+  "radial_head": {
+   "parent": "elbow_r__bone__radius",
+   "vertexIndex": 255,
+   "localPosition": [
+    -0.24919284880161285,
+    0.030675457790493965,
+    1.0904287099838257
+   ],
+   "vertexNormalLocal": [
+    -0.8560017943382263,
+    -0.007804387714713812,
+    0.5169140100479126
+   ],
+   "labelDirectionLocal": [
+    -0.9741144778430421,
+    0.10983048381773317,
+    0.1975809932178197
+   ],
+   "labelTargetLocal": [
+    -0.27841628313690414,
+    0.03397037230502596,
+    1.0963561397803603
+   ],
+   "diagnostics": {
+    "region_vertices": 89,
+    "depth_from_proximal_mm": 4.13
+   }
+  },
+  "olecranon": {
+   "parent": "elbow_r__bone__ulna",
+   "vertexIndex": 92,
+   "localPosition": [
+    -0.21292731165885925,
+    0.0475388765335083,
+    1.1110197305679321
+   ],
+   "vertexNormalLocal": [
+    0.06130388751626015,
+    0.13928046822547913,
+    0.9883535504341125
+   ],
+   "labelDirectionLocal": [
+    0.06852878904569495,
+    0.9763836663912487,
+    -0.20488714229134392
+   ],
+   "labelTargetLocal": [
+    -0.21087144798748841,
+    0.07683038652524576,
+    1.1048731162991918
+   ],
+   "diagnostics": {
+    "depth_from_proximal_mm": 0.0,
+    "anterior_of_proximal_centroid_mm": -2.32
+   }
+  },
+  "coronoid_process": {
+   "parent": "elbow_r__bone__ulna",
+   "vertexIndex": 343,
+   "localPosition": [
+    -0.21803772449493408,
+    0.022541159763932228,
+    1.0911906957626343
+   ],
+   "vertexNormalLocal": [
+    0.026163674890995026,
+    -0.9906629323959351,
+    0.13380005955696106
+   ],
+   "labelDirectionLocal": [
+    -0.06852878904569495,
+    -0.9763836663912487,
+    0.20488714229134392
+   ],
+   "labelTargetLocal": [
+    -0.22009358816630492,
+    -0.006750350227805235,
+    1.0973373100313746
+   ],
+   "diagnostics": {
+    "depth_from_proximal_mm": 25.66,
+    "anterior_of_proximal_centroid_mm": 18.38
+   }
+  },
+  "elbow_capsule": {
+   "parent": "elbow_r__soft__elbow_capsule",
+   "vertexIndex": 56,
+   "localPosition": [
+    -0.2199181467294693,
+    0.019319631159305573,
+    1.104956030845642
+   ],
+   "vertexNormalLocal": [
+    -0.034226156771183014,
+    -0.9758297204971313,
+    0.2158356010913849
+   ],
+   "labelDirectionLocal": [
+    -0.11734575148168266,
+    -0.9927320577618824,
+    -0.02670273583469822
+   ],
+   "labelTargetLocal": [
+    -0.22343851927391978,
+    -0.0104623305735509,
+    1.104154948770601
+   ],
+   "diagnostics": {
+    "vertices": 864,
+    "lateral_of_pivot_mm": -2.82
+   }
+  },
+  "radial_collateral_ligament": {
+   "parent": "elbow_r__soft__radial_collateral_ligament_elbow",
+   "vertexIndex": 6,
+   "localPosition": [
+    -0.249839186668396,
+    0.034384582191705704,
+    1.0987637042999268
+   ],
+   "vertexNormalLocal": [
+    -0.9857088327407837,
+    0.13245587050914764,
+    0.10408475995063782
+   ],
+   "labelDirectionLocal": [
+    -0.9741144778430421,
+    0.10983048381773317,
+    0.1975809932178197
+   ],
+   "labelTargetLocal": [
+    -0.2790626210036873,
+    0.0376794967062377,
+    1.1046911340964614
+   ],
+   "diagnostics": {
+    "vertices": 50,
+    "lateral_of_pivot_mm": 26.75
+   }
+  },
+  "ulnar_collateral_ligament": {
+   "parent": "elbow_r__soft__ulnar_collateral_ligament_elbow",
+   "vertexIndex": 14,
+   "localPosition": [
+    -0.2012883424758911,
+    0.023816391825675964,
+    1.0883264541625977
+   ],
+   "vertexNormalLocal": [
+    0.6349718570709229,
+    -0.5056685209274292,
+    -0.5840462446212769
+   ],
+   "labelDirectionLocal": [
+    0.9741144778430421,
+    -0.10983048381773317,
+    -0.1975809932178197
+   ],
+   "labelTargetLocal": [
+    -0.17206490814059985,
+    0.020521477311143968,
+    1.082399024366063
+   ],
+   "diagnostics": {
+    "vertices": 78,
+    "lateral_of_pivot_mm": -23.76
+   }
+  },
+  "annular_ligament": {
+   "parent": "elbow_r__soft__annular_ligament_radius",
+   "vertexIndex": 57,
+   "localPosition": [
+    -0.24983517825603485,
+    0.03177350014448166,
+    1.0859575271606445
+   ],
+   "vertexNormalLocal": [
+    -0.9713591933250427,
+    0.01427903026342392,
+    -0.2371862530708313
+   ],
+   "labelDirectionLocal": [
+    -0.9741144778430421,
+    0.10983048381773317,
+    0.1975809932178197
+   ],
+   "labelTargetLocal": [
+    -0.27905861259132614,
+    0.035068414659013655,
+    1.0918849569571791
+   ],
+   "diagnostics": {
+    "vertices": 190,
+    "lateral_of_pivot_mm": 23.93
+   }
+  }
+ },
+ "registry_groups": {
+  "fixed_bone": 1,
+  "forearm_bones": 2,
+  "hand": 27,
+  "forearm_soft": 4,
+  "cross_joint_soft": 3,
+  "context": 12
+ },
+ "candidate": "C:\\Users\\Admin\\dev\\joints-platform\\blender\\Joints_Working.step7_candidate.blend",
+ "candidate_sha256": "817123863ec3601589cfdfdc4461742ca8580e015f77c09780acb5729c4b7c1b",
+ "v002_sha256": "9518004b2de8a749f0d1308c7fce9edd59399381588516f3b2a77f20bcc94f8f"
+}

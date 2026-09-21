@@ -1,0 +1,499 @@
+{
+ "joint": "elbow_r",
+ "label": "prepromotion",
+ "dir": "C:\\Users\\Admin\\dev\\joints-platform\\qa\\export\\elbow_r\\optimized",
+ "validatedAt": "2026-09-17T10:14:21.576Z",
+ "passed": true,
+ "failed": [],
+ "checks": [
+  {
+   "id": 15,
+   "name": "manifest schema-valid",
+   "pass": true,
+   "detail": "valid"
+  },
+  {
+   "id": 16,
+   "name": "asset paths resolve (and sha256/bytes match manifest)",
+   "pass": true,
+   "detail": [
+    "elbow_r.core.glb",
+    "elbow_r.detail.glb",
+    "elbow_r.context.glb"
+   ]
+  },
+  {
+   "id": 9,
+   "name": "controller metadata present",
+   "pass": true,
+   "detail": {
+    "pivotFound": true,
+    "controllerFound": true,
+    "pivotPointDevMm": 0,
+    "pivotAxisVsManifestDeg": 0.0011857763388415904,
+    "controllerAxisVsManifestDeg": 0.0011857763388415904,
+    "controllerParent": "elbow_r__pivot",
+    "pivotRole": "pivot",
+    "controllerRole": "controller"
+   }
+  },
+  {
+   "id": 10,
+   "name": "pivot metadata present",
+   "pass": true,
+   "detail": {
+    "pivotFound": true,
+    "controllerFound": true,
+    "pivotPointDevMm": 0,
+    "pivotAxisVsManifestDeg": 0.0011857763388415904,
+    "controllerAxisVsManifestDeg": 0.0011857763388415904,
+    "controllerParent": "elbow_r__pivot",
+    "pivotRole": "pivot",
+    "controllerRole": "controller"
+   }
+  },
+  {
+   "id": 11,
+   "name": "neutral offset exactly matches spec",
+   "pass": true,
+   "detail": {
+    "manifest": 13.62510376997268,
+    "spec": 13.62510376997268,
+    "pivotExtras": 13.62510376997268
+   }
+  },
+  {
+   "id": 1,
+   "name": "Khronos glTF Validator: 0 errors (compressed file and meshopt-decoded copy)",
+   "pass": true,
+   "detail": {
+    "core": {
+     "errors": 0,
+     "warnings": 30,
+     "infos": 1,
+     "hints": 0,
+     "codes": [
+      "I:UNSUPPORTED_EXTENSION",
+      "W:MESH_PRIMITIVE_GENERATED_TANGENT_SPACE"
+     ],
+     "extensionsUsed": [
+      "EXT_meshopt_compression",
+      "EXT_texture_webp",
+      "KHR_materials_clearcoat",
+      "KHR_mesh_quantization"
+     ],
+     "animationCount": 0,
+     "totalTriangleCount": 19982,
+     "validatorVersion": "2.0.0-dev.3.10",
+     "decodedCopy": {
+      "errors": 0,
+      "warnings": 30,
+      "infos": 0,
+      "hints": 0,
+      "codes": [
+       "W:MESH_PRIMITIVE_GENERATED_TANGENT_SPACE"
+      ],
+      "extensionsUsed": [
+       "EXT_texture_webp",
+       "KHR_materials_clearcoat",
+       "KHR_mesh_quantization"
+      ],
+      "animationCount": 0,
+      "totalTriangleCount": 19982,
+      "validatorVersion": "2.0.0-dev.3.10"
+     }
+    },
+    "detail": {
+     "errors": 0,
+     "warnings": 7,
+     "infos": 1,
+     "hints": 0,
+     "codes": [
+      "I:UNSUPPORTED_EXTENSION",
+      "W:MESH_PRIMITIVE_GENERATED_TANGENT_SPACE"
+     ],
+     "extensionsUsed": [
+      "EXT_meshopt_compression",
+      "EXT_texture_webp",
+      "KHR_materials_clearcoat",
+      "KHR_mesh_quantization"
+     ],
+     "animationCount": 0,
+     "totalTriangleCount": 5142,
+     "validatorVersion": "2.0.0-dev.3.10",
+     "decodedCopy": {
+      "errors": 0,
+      "warnings": 7,
+      "infos": 0,
+      "hints": 0,
+      "codes": [
+       "W:MESH_PRIMITIVE_GENERATED_TANGENT_SPACE"
+      ],
+      "extensionsUsed": [
+       "EXT_texture_webp",
+       "KHR_materials_clearcoat",
+       "KHR_mesh_quantization"
+      ],
+      "animationCount": 0,
+      "totalTriangleCount": 5142,
+      "validatorVersion": "2.0.0-dev.3.10"
+     }
+    },
+    "context": {
+     "errors": 0,
+     "warnings": 12,
+     "infos": 1,
+     "hints": 0,
+     "codes": [
+      "I:UNSUPPORTED_EXTENSION",
+      "W:MESH_PRIMITIVE_GENERATED_TANGENT_SPACE"
+     ],
+     "extensionsUsed": [
+      "EXT_meshopt_compression",
+      "EXT_texture_webp",
+      "KHR_materials_clearcoat",
+      "KHR_mesh_quantization"
+     ],
+     "animationCount": 0,
+     "totalTriangleCount": 59512,
+     "validatorVersion": "2.0.0-dev.3.10",
+     "decodedCopy": {
+      "errors": 0,
+      "warnings": 12,
+      "infos": 0,
+      "hints": 0,
+      "codes": [
+       "W:MESH_PRIMITIVE_GENERATED_TANGENT_SPACE"
+      ],
+      "extensionsUsed": [
+       "EXT_texture_webp",
+       "KHR_materials_clearcoat",
+       "KHR_mesh_quantization"
+      ],
+      "animationCount": 0,
+      "totalTriangleCount": 59512,
+      "validatorVersion": "2.0.0-dev.3.10"
+     }
+    }
+   }
+  },
+  {
+   "id": 2,
+   "name": "manifest structureIds == exported node structureIds",
+   "pass": true,
+   "detail": {
+    "exported": 49,
+    "manifest": 49,
+    "spec": 49,
+    "problems": []
+   }
+  },
+  {
+   "id": 3,
+   "name": "triangle counts exact (Blender source; no LOD1 used)",
+   "pass": true,
+   "detail": {
+    "perTier": {
+     "core": 19982,
+     "detail": 5142,
+     "context": 59512
+    },
+    "problems": []
+   }
+  },
+  {
+   "id": 4,
+   "name": "world-space bounding boxes within 0.1 mm (Y-up)",
+   "pass": true,
+   "detail": {
+    "maxDeviationMm": {
+     "core": 0.005965333178731269,
+     "detail": 0.0017648231932995695,
+     "context": 0.011208579426255638
+    },
+    "problems": []
+   }
+  },
+  {
+   "id": 5,
+   "name": "IDs unique and complete",
+   "pass": true,
+   "detail": {
+    "anchors": 17,
+    "problems": []
+   }
+  },
+  {
+   "id": 6,
+   "name": "tier membership correct",
+   "pass": true,
+   "detail": []
+  },
+  {
+   "id": 7,
+   "name": "QA objects absent",
+   "pass": true,
+   "detail": []
+  },
+  {
+   "id": 8,
+   "name": "overlay anchors present (17) with exact positions/parents",
+   "pass": true,
+   "detail": {
+    "found": 17,
+    "problems": []
+   }
+  },
+  {
+   "id": 12,
+   "name": "DOF flexion +X 0-145 deg",
+   "pass": true,
+   "detail": {
+    "id": "flexion",
+    "axis": "+X",
+    "min": 0,
+    "max": 145,
+    "neutral": 0,
+    "unit": "deg",
+    "rangeStatus": "approximate, pending cited reference"
+   }
+  },
+  {
+   "id": 13,
+   "name": "no animation channels",
+   "pass": true,
+   "detail": {
+    "animationChannels": 0
+   }
+  },
+  {
+   "id": 14,
+   "name": "budgets (transfer, incl. embedded textures)",
+   "pass": true,
+   "detail": {
+    "core": {
+     "limitBytes": 350000,
+     "glbBytes": 306880,
+     "gzipBytes": 193848,
+     "brotliBytes": 178081,
+     "gzipExcludingTextures": 170087,
+     "pass": true,
+     "basis": "gzip -9 transfer size INCLUDING embedded textures (conservative)"
+    },
+    "detail": {
+     "limitBytes": 150000,
+     "glbBytes": 93936,
+     "gzipBytes": 72275,
+     "brotliBytes": 67625,
+     "gzipExcludingTextures": 48359,
+     "pass": true,
+     "basis": "gzip -9 transfer size INCLUDING embedded textures (conservative)"
+    },
+    "context": {
+     "limitBytes": 600000,
+     "glbBytes": 628008,
+     "gzipBytes": 530154,
+     "brotliBytes": 490737,
+     "gzipExcludingTextures": 409231,
+     "pass": true,
+     "basis": "gzip -9 transfer size INCLUDING embedded textures (conservative)"
+    }
+   }
+  },
+  {
+   "id": 17,
+   "name": "source hashes / provenance preserved",
+   "pass": true,
+   "detail": {
+    "master": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0",
+    "working": "9fb76d8c5b799d1bf65dc8e865c400299a3cc52fb8bf7ceab8c903a1671187f9",
+    "workingOnDisk": "9fb76d8c5b799d1bf65dc8e865c400299a3cc52fb8bf7ceab8c903a1671187f9"
+   }
+  },
+  {
+   "id": 18,
+   "name": "bands: schematic overlay distinct from real ligament mesh",
+   "pass": true,
+   "detail": [
+    {
+     "bandId": "elbow_r.band.radial_collateral_ligament",
+     "proximal": "elbow_r.anchor.rcl_prox",
+     "distal": "elbow_r.anchor.rcl_dist"
+    },
+    {
+     "bandId": "elbow_r.band.ulnar_collateral_ligament",
+     "proximal": "elbow_r.anchor.ucl_prox",
+     "distal": "elbow_r.anchor.ucl_dist"
+    }
+   ]
+  },
+  {
+   "id": 19,
+   "name": "no Draco, meshopt + quantization required",
+   "pass": true,
+   "detail": [
+    [
+     "EXT_texture_webp",
+     "KHR_mesh_quantization",
+     "EXT_meshopt_compression"
+    ],
+    [
+     "EXT_texture_webp",
+     "KHR_mesh_quantization",
+     "EXT_meshopt_compression"
+    ],
+    [
+     "EXT_texture_webp",
+     "KHR_mesh_quantization",
+     "EXT_meshopt_compression"
+    ]
+   ]
+  }
+ ],
+ "khronos": {
+  "core": {
+   "errors": 0,
+   "warnings": 30,
+   "infos": 1,
+   "hints": 0,
+   "codes": [
+    "I:UNSUPPORTED_EXTENSION",
+    "W:MESH_PRIMITIVE_GENERATED_TANGENT_SPACE"
+   ],
+   "extensionsUsed": [
+    "EXT_meshopt_compression",
+    "EXT_texture_webp",
+    "KHR_materials_clearcoat",
+    "KHR_mesh_quantization"
+   ],
+   "animationCount": 0,
+   "totalTriangleCount": 19982,
+   "validatorVersion": "2.0.0-dev.3.10",
+   "decodedCopy": {
+    "errors": 0,
+    "warnings": 30,
+    "infos": 0,
+    "hints": 0,
+    "codes": [
+     "W:MESH_PRIMITIVE_GENERATED_TANGENT_SPACE"
+    ],
+    "extensionsUsed": [
+     "EXT_texture_webp",
+     "KHR_materials_clearcoat",
+     "KHR_mesh_quantization"
+    ],
+    "animationCount": 0,
+    "totalTriangleCount": 19982,
+    "validatorVersion": "2.0.0-dev.3.10"
+   }
+  },
+  "detail": {
+   "errors": 0,
+   "warnings": 7,
+   "infos": 1,
+   "hints": 0,
+   "codes": [
+    "I:UNSUPPORTED_EXTENSION",
+    "W:MESH_PRIMITIVE_GENERATED_TANGENT_SPACE"
+   ],
+   "extensionsUsed": [
+    "EXT_meshopt_compression",
+    "EXT_texture_webp",
+    "KHR_materials_clearcoat",
+    "KHR_mesh_quantization"
+   ],
+   "animationCount": 0,
+   "totalTriangleCount": 5142,
+   "validatorVersion": "2.0.0-dev.3.10",
+   "decodedCopy": {
+    "errors": 0,
+    "warnings": 7,
+    "infos": 0,
+    "hints": 0,
+    "codes": [
+     "W:MESH_PRIMITIVE_GENERATED_TANGENT_SPACE"
+    ],
+    "extensionsUsed": [
+     "EXT_texture_webp",
+     "KHR_materials_clearcoat",
+     "KHR_mesh_quantization"
+    ],
+    "animationCount": 0,
+    "totalTriangleCount": 5142,
+    "validatorVersion": "2.0.0-dev.3.10"
+   }
+  },
+  "context": {
+   "errors": 0,
+   "warnings": 12,
+   "infos": 1,
+   "hints": 0,
+   "codes": [
+    "I:UNSUPPORTED_EXTENSION",
+    "W:MESH_PRIMITIVE_GENERATED_TANGENT_SPACE"
+   ],
+   "extensionsUsed": [
+    "EXT_meshopt_compression",
+    "EXT_texture_webp",
+    "KHR_materials_clearcoat",
+    "KHR_mesh_quantization"
+   ],
+   "animationCount": 0,
+   "totalTriangleCount": 59512,
+   "validatorVersion": "2.0.0-dev.3.10",
+   "decodedCopy": {
+    "errors": 0,
+    "warnings": 12,
+    "infos": 0,
+    "hints": 0,
+    "codes": [
+     "W:MESH_PRIMITIVE_GENERATED_TANGENT_SPACE"
+    ],
+    "extensionsUsed": [
+     "EXT_texture_webp",
+     "KHR_materials_clearcoat",
+     "KHR_mesh_quantization"
+    ],
+    "animationCount": 0,
+    "totalTriangleCount": 59512,
+    "validatorVersion": "2.0.0-dev.3.10"
+   }
+  }
+ },
+ "perTier": {
+  "core": {
+   "maxBBoxDeviationMm": 0.005965333178731269,
+   "nodes": 80,
+   "structureNodes": 30,
+   "carriers": 30,
+   "triangles": 19982,
+   "manifestTriangles": 19982,
+   "rig": {
+    "pivotFound": true,
+    "controllerFound": true,
+    "pivotPointDevMm": 0,
+    "pivotAxisVsManifestDeg": 0.0011857763388415904,
+    "controllerAxisVsManifestDeg": 0.0011857763388415904,
+    "controllerParent": "elbow_r__pivot",
+    "pivotRole": "pivot",
+    "controllerRole": "controller"
+   }
+  },
+  "detail": {
+   "maxBBoxDeviationMm": 0.0017648231932995695,
+   "nodes": 18,
+   "structureNodes": 7,
+   "carriers": 7,
+   "triangles": 5142,
+   "manifestTriangles": 5142
+  },
+  "context": {
+   "maxBBoxDeviationMm": 0.011208579426255638,
+   "nodes": 24,
+   "structureNodes": 12,
+   "carriers": 12,
+   "triangles": 59512,
+   "manifestTriangles": 59512
+  }
+ }
+}

@@ -1,0 +1,3579 @@
+{
+ "generatedAt": "2026-09-21T10:22:45.625Z",
+ "tags": [
+  "wcag2a",
+  "wcag2aa",
+  "wcag21a",
+  "wcag21aa",
+  "wcag22aa",
+  "best-practice"
+ ],
+ "results": {
+  "desktop:intro": {
+   "violations": [],
+   "incomplete": [
+    {
+     "id": "color-contrast",
+     "nodes": 18
+    }
+   ],
+   "passes": 35
+  },
+  "desktop:settings-dialog": {
+   "violations": [],
+   "incomplete": [
+    {
+     "id": "color-contrast",
+     "nodes": 32
+    }
+   ],
+   "passes": 41
+  },
+  "desktop:sources-dialog": {
+   "violations": [],
+   "incomplete": [
+    {
+     "id": "color-contrast",
+     "nodes": 24
+    }
+   ],
+   "passes": 41
+  },
+  "desktop:hinge-interactive": {
+   "violations": [],
+   "incomplete": [
+    {
+     "id": "color-contrast",
+     "nodes": 24
+    }
+   ],
+   "passes": 35
+  },
+  "desktop:quiz": {
+   "violations": [],
+   "incomplete": [
+    {
+     "id": "color-contrast",
+     "nodes": 23
+    }
+   ],
+   "passes": 35
+  },
+  "desktop:explore": {
+   "violations": [],
+   "incomplete": [
+    {
+     "id": "color-contrast",
+     "nodes": 27
+    }
+   ],
+   "passes": 37
+  },
+  "mobile:intro": {
+   "violations": [],
+   "incomplete": [
+    {
+     "id": "color-contrast",
+     "nodes": 17
+    }
+   ],
+   "passes": 35
+  },
+  "mobile:settings-dialog": {
+   "violations": [],
+   "incomplete": [
+    {
+     "id": "color-contrast",
+     "nodes": 33
+    }
+   ],
+   "passes": 40
+  },
+  "mobile:sources-dialog": {
+   "violations": [],
+   "incomplete": [
+    {
+     "id": "color-contrast",
+     "nodes": 24
+    }
+   ],
+   "passes": 41
+  },
+  "mobile:hinge-interactive": {
+   "violations": [],
+   "incomplete": [
+    {
+     "id": "color-contrast",
+     "nodes": 23
+    }
+   ],
+   "passes": 35
+  },
+  "mobile:quiz": {
+   "violations": [],
+   "incomplete": [
+    {
+     "id": "color-contrast",
+     "nodes": 22
+    }
+   ],
+   "passes": 35
+  },
+  "mobile:explore": {
+   "violations": [],
+   "incomplete": [
+    {
+     "id": "color-contrast",
+     "nodes": 14
+    }
+   ],
+   "passes": 34
+  },
+  "keyboardJourney": {
+   "tabOrder": [
+    {
+     "tag": "button",
+     "role": null,
+     "name": "Turn narration off",
+     "testid": "film-narration",
+     "indicator": true,
+     "w": 44,
+     "h": 44,
+     "visible": true
+    },
+    {
+     "tag": "button",
+     "role": null,
+     "name": "Settings",
+     "testid": "settings-toggle",
+     "indicator": true,
+     "w": 44,
+     "h": 44,
+     "visible": true
+    },
+    {
+     "tag": "button",
+     "role": null,
+     "name": "Play",
+     "testid": "film-play",
+     "indicator": true,
+     "w": 44,
+     "h": 44,
+     "visible": true
+    },
+    {
+     "tag": "button",
+     "role": null,
+     "name": "Replay",
+     "testid": "film-replay",
+     "indicator": true,
+     "w": 44,
+     "h": 44,
+     "visible": true
+    },
+    {
+     "tag": "div",
+     "role": "slider",
+     "name": "Lesson timeline",
+     "testid": "film-scrubber",
+     "indicator": true,
+     "w": 891,
+     "h": 44,
+     "visible": true
+    },
+    {
+     "tag": "button",
+     "role": null,
+     "name": "01 Two joints, two movements",
+     "testid": "film-chapter-hook",
+     "indicator": true,
+     "w": 44,
+     "h": 44,
+     "visible": true
+    },
+    {
+     "tag": "button",
+     "role": null,
+     "name": "02 What is a joint?",
+     "testid": "film-chapter-what_is_joint",
+     "indicator": true,
+     "w": 44,
+     "h": 44,
+     "visible": true
+    },
+    {
+     "tag": "button",
+     "role": null,
+     "name": "03 Fixed joint",
+     "testid": "film-chapter-fixed",
+     "indicator": true,
+     "w": 44,
+     "h": 44,
+     "visible": true
+    },
+    {
+     "tag": "button",
+     "role": null,
+     "name": "04 Pivot joint",
+     "testid": "film-chapter-pivot",
+     "indicator": true,
+     "w": 44,
+     "h": 44,
+     "visible": true
+    },
+    {
+     "tag": "button",
+     "role": null,
+     "name": "05 Ball-and-socket joint",
+     "testid": "film-chapter-ball_socket",
+     "indicator": true,
+     "w": 44,
+     "h": 44,
+     "visible": true
+    },
+    {
+     "tag": "button",
+     "role": null,
+     "name": "06 Hinge joint",
+     "testid": "film-chapter-hinge",
+     "indicator": true,
+     "w": 44,
+     "h": 44,
+     "visible": true
+    },
+    {
+     "tag": "button",
+     "role": null,
+     "name": "07 Comparing the four",
+     "testid": "film-chapter-compare",
+     "indicator": true,
+     "w": 44,
+     "h": 44,
+     "visible": true
+    },
+    {
+     "tag": "button",
+     "role": null,
+     "name": "08 Recall challenge",
+     "testid": "film-chapter-recall",
+     "indicator": true,
+     "w": 44,
+     "h": 44,
+     "visible": true
+    },
+    {
+     "tag": "button",
+     "role": null,
+     "name": "09 The body map",
+     "testid": "film-chapter-body_map",
+     "indicator": true,
+     "w": 44,
+     "h": 44,
+     "visible": true
+    },
+    {
+     "tag": "button",
+     "role": null,
+     "name": "Explore",
+     "testid": "film-explore",
+     "indicator": true,
+     "w": 83,
+     "h": 44,
+     "visible": true
+    },
+    {
+     "tag": "button",
+     "role": null,
+     "name": "Full screen",
+     "testid": "film-fullscreen",
+     "indicator": true,
+     "w": 44,
+     "h": 44,
+     "visible": true
+    },
+    {
+     "tag": "button",
+     "role": null,
+     "name": "Turn narration off",
+     "testid": "film-narration",
+     "indicator": true,
+     "w": 44,
+     "h": 44,
+     "visible": true
+    },
+    {
+     "tag": "button",
+     "role": null,
+     "name": "Settings",
+     "testid": "settings-toggle",
+     "indicator": true,
+     "w": 44,
+     "h": 44,
+     "visible": true
+    },
+    {
+     "tag": "button",
+     "role": null,
+     "name": "Play",
+     "testid": "film-play",
+     "indicator": true,
+     "w": 44,
+     "h": 44,
+     "visible": true
+    },
+    {
+     "tag": "button",
+     "role": null,
+     "name": "Replay",
+     "testid": "film-replay",
+     "indicator": true,
+     "w": 44,
+     "h": 44,
+     "visible": true
+    },
+    {
+     "tag": "div",
+     "role": "slider",
+     "name": "Lesson timeline",
+     "testid": "film-scrubber",
+     "indicator": true,
+     "w": 891,
+     "h": 44,
+     "visible": true
+    },
+    {
+     "tag": "button",
+     "role": null,
+     "name": "01 Two joints, two movements",
+     "testid": "film-chapter-hook",
+     "indicator": true,
+     "w": 44,
+     "h": 44,
+     "visible": true
+    },
+    {
+     "tag": "button",
+     "role": null,
+     "name": "02 What is a joint?",
+     "testid": "film-chapter-what_is_joint",
+     "indicator": true,
+     "w": 44,
+     "h": 44,
+     "visible": true
+    },
+    {
+     "tag": "button",
+     "role": null,
+     "name": "03 Fixed joint",
+     "testid": "film-chapter-fixed",
+     "indicator": true,
+     "w": 44,
+     "h": 44,
+     "visible": true
+    },
+    {
+     "tag": "button",
+     "role": null,
+     "name": "04 Pivot joint",
+     "testid": "film-chapter-pivot",
+     "indicator": true,
+     "w": 44,
+     "h": 44,
+     "visible": true
+    },
+    {
+     "tag": "button",
+     "role": null,
+     "name": "05 Ball-and-socket joint",
+     "testid": "film-chapter-ball_socket",
+     "indicator": true,
+     "w": 44,
+     "h": 44,
+     "visible": true
+    },
+    {
+     "tag": "button",
+     "role": null,
+     "name": "06 Hinge joint",
+     "testid": "film-chapter-hinge",
+     "indicator": true,
+     "w": 44,
+     "h": 44,
+     "visible": true
+    },
+    {
+     "tag": "button",
+     "role": null,
+     "name": "07 Comparing the four",
+     "testid": "film-chapter-compare",
+     "indicator": true,
+     "w": 44,
+     "h": 44,
+     "visible": true
+    },
+    {
+     "tag": "button",
+     "role": null,
+     "name": "08 Recall challenge",
+     "testid": "film-chapter-recall",
+     "indicator": true,
+     "w": 44,
+     "h": 44,
+     "visible": true
+    }
+   ],
+   "completed": true
+  },
+  "targets": {
+   "320x640": {
+    "small": [],
+    "overflow": 0,
+    "captionPx": 17
+   },
+   "390x844": {
+    "small": [],
+    "overflow": 0,
+    "captionPx": 17
+   },
+   "1280x800": {
+    "small": [],
+    "overflow": 0,
+    "captionPx": 22.016
+   }
+  },
+  "contrast": {
+   "method": "text hidden, rendered frame captured, 95th-percentile background luminance under each text box (5th for dark text), text colour alpha-composited; WCAG 1.4.3 thresholds",
+   "rows": [
+    {
+     "state": "intro",
+     "vp": "1280x800",
+     "selector": "film-top__brand",
+     "text": "Types of Joints",
+     "px": 12,
+     "large": false,
+     "ratio": 6.85,
+     "required": 4.5
+    },
+    {
+     "state": "intro",
+     "vp": "1280x800",
+     "selector": "film-top__chapter",
+     "text": "01 Two joints, two movements",
+     "px": 13,
+     "large": false,
+     "ratio": 9.32,
+     "required": 4.5
+    },
+    {
+     "state": "intro",
+     "vp": "1280x800",
+     "selector": "film-caption__title",
+     "text": "Types of Joints",
+     "px": 30.72,
+     "large": true,
+     "ratio": 16.34,
+     "required": 3
+    },
+    {
+     "state": "intro",
+     "vp": "1280x800",
+     "selector": "film-caption__text",
+     "text": "How different joints allow dif",
+     "px": 16,
+     "large": false,
+     "ratio": 8.63,
+     "required": 4.5
+    },
+    {
+     "state": "intro",
+     "vp": "1280x800",
+     "selector": "film-subtitle",
+     "text": "Different joints allow very di",
+     "px": 17.28,
+     "large": false,
+     "ratio": 14.85,
+     "required": 4.5
+    },
+    {
+     "state": "intro",
+     "vp": "1280x800",
+     "selector": "film-chapter__num",
+     "text": "01",
+     "px": 11,
+     "large": false,
+     "ratio": 9.51,
+     "required": 4.5
+    },
+    {
+     "state": "intro",
+     "vp": "1280x800",
+     "selector": "film-chapter__num",
+     "text": "02",
+     "px": 11,
+     "large": false,
+     "ratio": 9.5,
+     "required": 4.5
+    },
+    {
+     "state": "intro",
+     "vp": "1280x800",
+     "selector": "film-chapter__num",
+     "text": "03",
+     "px": 11,
+     "large": false,
+     "ratio": 9.5,
+     "required": 4.5
+    },
+    {
+     "state": "intro",
+     "vp": "1280x800",
+     "selector": "film-chapter__num",
+     "text": "04",
+     "px": 11,
+     "large": false,
+     "ratio": 9.45,
+     "required": 4.5
+    },
+    {
+     "state": "intro",
+     "vp": "1280x800",
+     "selector": "film-chapter__num",
+     "text": "05",
+     "px": 11,
+     "large": false,
+     "ratio": 9.45,
+     "required": 4.5
+    },
+    {
+     "state": "intro",
+     "vp": "1280x800",
+     "selector": "film-chapter__num",
+     "text": "06",
+     "px": 11,
+     "large": false,
+     "ratio": 9.45,
+     "required": 4.5
+    },
+    {
+     "state": "intro",
+     "vp": "1280x800",
+     "selector": "film-chapter__num",
+     "text": "07",
+     "px": 11,
+     "large": false,
+     "ratio": 9.45,
+     "required": 4.5
+    },
+    {
+     "state": "intro",
+     "vp": "1280x800",
+     "selector": "film-chapter__num",
+     "text": "08",
+     "px": 11,
+     "large": false,
+     "ratio": 9.45,
+     "required": 4.5
+    },
+    {
+     "state": "intro",
+     "vp": "1280x800",
+     "selector": "film-chapter__num",
+     "text": "09",
+     "px": 11,
+     "large": false,
+     "ratio": 9.45,
+     "required": 4.5
+    },
+    {
+     "state": "intro",
+     "vp": "1280x800",
+     "selector": "film-time",
+     "text": "0:05 / 6:21",
+     "px": 13,
+     "large": false,
+     "ratio": 17.23,
+     "required": 4.5
+    },
+    {
+     "state": "fixed",
+     "vp": "1280x800",
+     "selector": "label__title",
+     "text": "Fixed joint · skull",
+     "px": 13.5,
+     "large": false,
+     "ratio": 13.21,
+     "required": 4.5
+    },
+    {
+     "state": "fixed",
+     "vp": "1280x800",
+     "selector": "film-top__brand",
+     "text": "Types of Joints",
+     "px": 12,
+     "large": false,
+     "ratio": 6.86,
+     "required": 4.5
+    },
+    {
+     "state": "fixed",
+     "vp": "1280x800",
+     "selector": "film-top__chapter",
+     "text": "03 Fixed joint",
+     "px": 13,
+     "large": false,
+     "ratio": 9.37,
+     "required": 4.5
+    },
+    {
+     "state": "fixed",
+     "vp": "1280x800",
+     "selector": "film-caption__text",
+     "text": "The bones of the skull meet at",
+     "px": 22.016,
+     "large": false,
+     "ratio": 14.68,
+     "required": 4.5
+    },
+    {
+     "state": "fixed",
+     "vp": "1280x800",
+     "selector": "film-subtitle",
+     "text": "Its job is strength, not movem",
+     "px": 17.28,
+     "large": false,
+     "ratio": 13.03,
+     "required": 4.5
+    },
+    {
+     "state": "fixed",
+     "vp": "1280x800",
+     "selector": "film-chapter__num",
+     "text": "01",
+     "px": 11,
+     "large": false,
+     "ratio": 9.51,
+     "required": 4.5
+    },
+    {
+     "state": "fixed",
+     "vp": "1280x800",
+     "selector": "film-chapter__num",
+     "text": "02",
+     "px": 11,
+     "large": false,
+     "ratio": 9.51,
+     "required": 4.5
+    },
+    {
+     "state": "fixed",
+     "vp": "1280x800",
+     "selector": "film-chapter__num",
+     "text": "03",
+     "px": 11,
+     "large": false,
+     "ratio": 9.49,
+     "required": 4.5
+    },
+    {
+     "state": "fixed",
+     "vp": "1280x800",
+     "selector": "film-chapter__num",
+     "text": "04",
+     "px": 11,
+     "large": false,
+     "ratio": 9.45,
+     "required": 4.5
+    },
+    {
+     "state": "fixed",
+     "vp": "1280x800",
+     "selector": "film-chapter__num",
+     "text": "05",
+     "px": 11,
+     "large": false,
+     "ratio": 9.45,
+     "required": 4.5
+    },
+    {
+     "state": "fixed",
+     "vp": "1280x800",
+     "selector": "film-chapter__num",
+     "text": "06",
+     "px": 11,
+     "large": false,
+     "ratio": 9.45,
+     "required": 4.5
+    },
+    {
+     "state": "fixed",
+     "vp": "1280x800",
+     "selector": "film-chapter__num",
+     "text": "07",
+     "px": 11,
+     "large": false,
+     "ratio": 9.44,
+     "required": 4.5
+    },
+    {
+     "state": "fixed",
+     "vp": "1280x800",
+     "selector": "film-chapter__num",
+     "text": "08",
+     "px": 11,
+     "large": false,
+     "ratio": 9.36,
+     "required": 4.5
+    },
+    {
+     "state": "fixed",
+     "vp": "1280x800",
+     "selector": "film-chapter__num",
+     "text": "09",
+     "px": 11,
+     "large": false,
+     "ratio": 9.04,
+     "required": 4.5
+    },
+    {
+     "state": "fixed",
+     "vp": "1280x800",
+     "selector": "film-time",
+     "text": "1:26 / 6:21",
+     "px": 13,
+     "large": false,
+     "ratio": 17.19,
+     "required": 4.5
+    },
+    {
+     "state": "hinge-try",
+     "vp": "1280x800",
+     "selector": "label__title",
+     "text": "Radius",
+     "px": 13,
+     "large": false,
+     "ratio": 16.16,
+     "required": 4.5
+    },
+    {
+     "state": "hinge-try",
+     "vp": "1280x800",
+     "selector": "label__title",
+     "text": "Ulna",
+     "px": 13,
+     "large": false,
+     "ratio": 10.07,
+     "required": 4.5
+    },
+    {
+     "state": "hinge-try",
+     "vp": "1280x800",
+     "selector": "label__title",
+     "text": "1°",
+     "px": 13,
+     "large": false,
+     "ratio": 8.78,
+     "required": 4.5
+    },
+    {
+     "state": "hinge-try",
+     "vp": "1280x800",
+     "selector": "film-top__brand",
+     "text": "Types of Joints",
+     "px": 12,
+     "large": false,
+     "ratio": 6.86,
+     "required": 4.5
+    },
+    {
+     "state": "hinge-try",
+     "vp": "1280x800",
+     "selector": "film-top__chapter",
+     "text": "06 Hinge joint",
+     "px": 13,
+     "large": false,
+     "ratio": 9.33,
+     "required": 4.5
+    },
+    {
+     "state": "hinge-try",
+     "vp": "1280x800",
+     "selector": "film-caption__text",
+     "text": "Your turn: bend and straighten",
+     "px": 22.016,
+     "large": false,
+     "ratio": 14.96,
+     "required": 4.5
+    },
+    {
+     "state": "hinge-try",
+     "vp": "1280x800",
+     "selector": "film-interact__prompt",
+     "text": "Drag the forearm, or use the s",
+     "px": 15,
+     "large": false,
+     "ratio": 16.37,
+     "required": 4.5
+    },
+    {
+     "state": "hinge-try",
+     "vp": "1280x800",
+     "selector": "dof-slider__label",
+     "text": "Elbow flexion",
+     "px": 13,
+     "large": false,
+     "ratio": 9.28,
+     "required": 4.5
+    },
+    {
+     "state": "hinge-try",
+     "vp": "1280x800",
+     "selector": "dof-slider__scale",
+     "text": "0° · ExtendedFlexed · 145° (ap",
+     "px": 12,
+     "large": false,
+     "ratio": 6.8,
+     "required": 4.5
+    },
+    {
+     "state": "hinge-try",
+     "vp": "1280x800",
+     "selector": "film-chapter__num",
+     "text": "01",
+     "px": 11,
+     "large": false,
+     "ratio": 9.51,
+     "required": 4.5
+    },
+    {
+     "state": "hinge-try",
+     "vp": "1280x800",
+     "selector": "film-chapter__num",
+     "text": "02",
+     "px": 11,
+     "large": false,
+     "ratio": 9.51,
+     "required": 4.5
+    },
+    {
+     "state": "hinge-try",
+     "vp": "1280x800",
+     "selector": "film-chapter__num",
+     "text": "03",
+     "px": 11,
+     "large": false,
+     "ratio": 9.49,
+     "required": 4.5
+    },
+    {
+     "state": "hinge-try",
+     "vp": "1280x800",
+     "selector": "film-chapter__num",
+     "text": "04",
+     "px": 11,
+     "large": false,
+     "ratio": 9.45,
+     "required": 4.5
+    },
+    {
+     "state": "hinge-try",
+     "vp": "1280x800",
+     "selector": "film-chapter__num",
+     "text": "05",
+     "px": 11,
+     "large": false,
+     "ratio": 9.45,
+     "required": 4.5
+    },
+    {
+     "state": "hinge-try",
+     "vp": "1280x800",
+     "selector": "film-chapter__num",
+     "text": "06",
+     "px": 11,
+     "large": false,
+     "ratio": 9.45,
+     "required": 4.5
+    },
+    {
+     "state": "hinge-try",
+     "vp": "1280x800",
+     "selector": "film-chapter__num",
+     "text": "07",
+     "px": 11,
+     "large": false,
+     "ratio": 9.45,
+     "required": 4.5
+    },
+    {
+     "state": "hinge-try",
+     "vp": "1280x800",
+     "selector": "film-chapter__num",
+     "text": "08",
+     "px": 11,
+     "large": false,
+     "ratio": 9.45,
+     "required": 4.5
+    },
+    {
+     "state": "hinge-try",
+     "vp": "1280x800",
+     "selector": "film-chapter__num",
+     "text": "09",
+     "px": 11,
+     "large": false,
+     "ratio": 9.45,
+     "required": 4.5
+    },
+    {
+     "state": "hinge-try",
+     "vp": "1280x800",
+     "selector": "film-time",
+     "text": "4:11 / 6:21",
+     "px": 13,
+     "large": false,
+     "ratio": 17.19,
+     "required": 4.5
+    },
+    {
+     "state": "support",
+     "vp": "1280x800",
+     "selector": "label__title",
+     "text": "Radial collateral ligament",
+     "px": 13,
+     "large": false,
+     "ratio": 13.77,
+     "required": 4.5
+    },
+    {
+     "state": "support",
+     "vp": "1280x800",
+     "selector": "label__title",
+     "text": "Ulnar collateral ligament",
+     "px": 13,
+     "large": false,
+     "ratio": 6.79,
+     "required": 4.5
+    },
+    {
+     "state": "support",
+     "vp": "1280x800",
+     "selector": "label__title",
+     "text": "Articular capsule of elbow joi",
+     "px": 13,
+     "large": false,
+     "ratio": 9.6,
+     "required": 4.5
+    },
+    {
+     "state": "support",
+     "vp": "1280x800",
+     "selector": "film-top__brand",
+     "text": "Types of Joints",
+     "px": 12,
+     "large": false,
+     "ratio": 6.84,
+     "required": 4.5
+    },
+    {
+     "state": "support",
+     "vp": "1280x800",
+     "selector": "film-top__chapter",
+     "text": "06 Hinge joint",
+     "px": 13,
+     "large": false,
+     "ratio": 9.33,
+     "required": 4.5
+    },
+    {
+     "state": "support",
+     "vp": "1280x800",
+     "selector": "film-caption__text",
+     "text": "A joint capsule and ligaments ",
+     "px": 22.016,
+     "large": false,
+     "ratio": 14.85,
+     "required": 4.5
+    },
+    {
+     "state": "support",
+     "vp": "1280x800",
+     "selector": "film-caption__note",
+     "text": "The thin coloured lines mark w",
+     "px": 13,
+     "large": false,
+     "ratio": 6.4,
+     "required": 4.5
+    },
+    {
+     "state": "support",
+     "vp": "1280x800",
+     "selector": "film-subtitle",
+     "text": "They hold the bones together a",
+     "px": 17.28,
+     "large": false,
+     "ratio": 13.08,
+     "required": 4.5
+    },
+    {
+     "state": "support",
+     "vp": "1280x800",
+     "selector": "film-chapter__num",
+     "text": "01",
+     "px": 11,
+     "large": false,
+     "ratio": 9.51,
+     "required": 4.5
+    },
+    {
+     "state": "support",
+     "vp": "1280x800",
+     "selector": "film-chapter__num",
+     "text": "02",
+     "px": 11,
+     "large": false,
+     "ratio": 9.51,
+     "required": 4.5
+    },
+    {
+     "state": "support",
+     "vp": "1280x800",
+     "selector": "film-chapter__num",
+     "text": "03",
+     "px": 11,
+     "large": false,
+     "ratio": 9.49,
+     "required": 4.5
+    },
+    {
+     "state": "support",
+     "vp": "1280x800",
+     "selector": "film-chapter__num",
+     "text": "04",
+     "px": 11,
+     "large": false,
+     "ratio": 9.45,
+     "required": 4.5
+    },
+    {
+     "state": "support",
+     "vp": "1280x800",
+     "selector": "film-chapter__num",
+     "text": "05",
+     "px": 11,
+     "large": false,
+     "ratio": 9.45,
+     "required": 4.5
+    },
+    {
+     "state": "support",
+     "vp": "1280x800",
+     "selector": "film-chapter__num",
+     "text": "06",
+     "px": 11,
+     "large": false,
+     "ratio": 9.45,
+     "required": 4.5
+    },
+    {
+     "state": "support",
+     "vp": "1280x800",
+     "selector": "film-chapter__num",
+     "text": "07",
+     "px": 11,
+     "large": false,
+     "ratio": 6.5,
+     "required": 4.5
+    },
+    {
+     "state": "support",
+     "vp": "1280x800",
+     "selector": "film-chapter__num",
+     "text": "08",
+     "px": 11,
+     "large": false,
+     "ratio": 6.76,
+     "required": 4.5
+    },
+    {
+     "state": "support",
+     "vp": "1280x800",
+     "selector": "film-chapter__num",
+     "text": "09",
+     "px": 11,
+     "large": false,
+     "ratio": 6.5,
+     "required": 4.5
+    },
+    {
+     "state": "support",
+     "vp": "1280x800",
+     "selector": "film-time",
+     "text": "4:45 / 6:21",
+     "px": 13,
+     "large": false,
+     "ratio": 10.13,
+     "required": 4.5
+    },
+    {
+     "state": "recap",
+     "vp": "1280x800",
+     "selector": "label__title",
+     "text": "Fixed",
+     "px": 13.5,
+     "large": false,
+     "ratio": 16.58,
+     "required": 4.5
+    },
+    {
+     "state": "recap",
+     "vp": "1280x800",
+     "selector": "label__title",
+     "text": "Pivot",
+     "px": 13.5,
+     "large": false,
+     "ratio": 16.58,
+     "required": 4.5
+    },
+    {
+     "state": "recap",
+     "vp": "1280x800",
+     "selector": "label__title",
+     "text": "Ball and socket",
+     "px": 13.5,
+     "large": false,
+     "ratio": 16.56,
+     "required": 4.5
+    },
+    {
+     "state": "recap",
+     "vp": "1280x800",
+     "selector": "label__title",
+     "text": "Ball and socket",
+     "px": 13.5,
+     "large": false,
+     "ratio": 14.76,
+     "required": 4.5
+    },
+    {
+     "state": "recap",
+     "vp": "1280x800",
+     "selector": "label__title",
+     "text": "Hinge",
+     "px": 13.5,
+     "large": false,
+     "ratio": 16.45,
+     "required": 4.5
+    },
+    {
+     "state": "recap",
+     "vp": "1280x800",
+     "selector": "label__title",
+     "text": "Hinge",
+     "px": 13.5,
+     "large": false,
+     "ratio": 16.58,
+     "required": 4.5
+    },
+    {
+     "state": "recap",
+     "vp": "1280x800",
+     "selector": "film-top__brand",
+     "text": "Types of Joints",
+     "px": 12,
+     "large": false,
+     "ratio": 6.86,
+     "required": 4.5
+    },
+    {
+     "state": "recap",
+     "vp": "1280x800",
+     "selector": "film-top__chapter",
+     "text": "09 The body map",
+     "px": 13,
+     "large": false,
+     "ratio": 9.36,
+     "required": 4.5
+    },
+    {
+     "state": "recap",
+     "vp": "1280x800",
+     "selector": "film-caption__text",
+     "text": "Fixed: no movement · Pivot: tu",
+     "px": 22.016,
+     "large": false,
+     "ratio": 14.68,
+     "required": 4.5
+    },
+    {
+     "state": "recap",
+     "vp": "1280x800",
+     "selector": "film-subtitle",
+     "text": "The shape of the join is what ",
+     "px": 17.28,
+     "large": false,
+     "ratio": 17.3,
+     "required": 4.5
+    },
+    {
+     "state": "recap",
+     "vp": "1280x800",
+     "selector": "film-chapter__num",
+     "text": "01",
+     "px": 11,
+     "large": false,
+     "ratio": 9.51,
+     "required": 4.5
+    },
+    {
+     "state": "recap",
+     "vp": "1280x800",
+     "selector": "film-chapter__num",
+     "text": "02",
+     "px": 11,
+     "large": false,
+     "ratio": 9.5,
+     "required": 4.5
+    },
+    {
+     "state": "recap",
+     "vp": "1280x800",
+     "selector": "film-chapter__num",
+     "text": "03",
+     "px": 11,
+     "large": false,
+     "ratio": 9.5,
+     "required": 4.5
+    },
+    {
+     "state": "recap",
+     "vp": "1280x800",
+     "selector": "film-chapter__num",
+     "text": "04",
+     "px": 11,
+     "large": false,
+     "ratio": 9.45,
+     "required": 4.5
+    },
+    {
+     "state": "recap",
+     "vp": "1280x800",
+     "selector": "film-chapter__num",
+     "text": "05",
+     "px": 11,
+     "large": false,
+     "ratio": 9.45,
+     "required": 4.5
+    },
+    {
+     "state": "recap",
+     "vp": "1280x800",
+     "selector": "film-chapter__num",
+     "text": "06",
+     "px": 11,
+     "large": false,
+     "ratio": 9.45,
+     "required": 4.5
+    },
+    {
+     "state": "recap",
+     "vp": "1280x800",
+     "selector": "film-chapter__num",
+     "text": "07",
+     "px": 11,
+     "large": false,
+     "ratio": 9.45,
+     "required": 4.5
+    },
+    {
+     "state": "recap",
+     "vp": "1280x800",
+     "selector": "film-chapter__num",
+     "text": "08",
+     "px": 11,
+     "large": false,
+     "ratio": 9.45,
+     "required": 4.5
+    },
+    {
+     "state": "recap",
+     "vp": "1280x800",
+     "selector": "film-chapter__num",
+     "text": "09",
+     "px": 11,
+     "large": false,
+     "ratio": 9.45,
+     "required": 4.5
+    },
+    {
+     "state": "recap",
+     "vp": "1280x800",
+     "selector": "film-time",
+     "text": "6:19 / 6:21",
+     "px": 13,
+     "large": false,
+     "ratio": 17.23,
+     "required": 4.5
+    },
+    {
+     "state": "settings",
+     "vp": "1280x800",
+     "selector": "film-radio",
+     "text": "Automatic (current: High)",
+     "px": 14,
+     "large": false,
+     "ratio": 16.43,
+     "required": 4.5
+    },
+    {
+     "state": "settings",
+     "vp": "1280x800",
+     "selector": "film-radio",
+     "text": "High",
+     "px": 14,
+     "large": false,
+     "ratio": 16.17,
+     "required": 4.5
+    },
+    {
+     "state": "settings",
+     "vp": "1280x800",
+     "selector": "film-radio",
+     "text": "Medium",
+     "px": 14,
+     "large": false,
+     "ratio": 16.19,
+     "required": 4.5
+    },
+    {
+     "state": "settings",
+     "vp": "1280x800",
+     "selector": "film-radio",
+     "text": "Low",
+     "px": 14,
+     "large": false,
+     "ratio": 16.27,
+     "required": 4.5
+    },
+    {
+     "state": "settings",
+     "vp": "1280x800",
+     "selector": "film-dialog__small",
+     "text": "Quality is chosen before the a",
+     "px": 13,
+     "large": false,
+     "ratio": 6.76,
+     "required": 4.5
+    },
+    {
+     "state": "settings",
+     "vp": "1280x800",
+     "selector": "film-radio",
+     "text": "Follow system setting (full mo",
+     "px": 14,
+     "large": false,
+     "ratio": 16.29,
+     "required": 4.5
+    },
+    {
+     "state": "settings",
+     "vp": "1280x800",
+     "selector": "film-radio",
+     "text": "Reduce motion",
+     "px": 14,
+     "large": false,
+     "ratio": 16.29,
+     "required": 4.5
+    },
+    {
+     "state": "settings",
+     "vp": "1280x800",
+     "selector": "film-radio",
+     "text": "Full motion",
+     "px": 14,
+     "large": false,
+     "ratio": 16.29,
+     "required": 4.5
+    },
+    {
+     "state": "settings",
+     "vp": "1280x800",
+     "selector": "film-radio",
+     "text": "Standard",
+     "px": 14,
+     "large": false,
+     "ratio": 16.29,
+     "required": 4.5
+    },
+    {
+     "state": "settings",
+     "vp": "1280x800",
+     "selector": "film-radio",
+     "text": "Large",
+     "px": 14,
+     "large": false,
+     "ratio": 16.58,
+     "required": 4.5
+    },
+    {
+     "state": "settings",
+     "vp": "1280x800",
+     "selector": "film-dialog__small",
+     "text": "Space or K: play or pause. On ",
+     "px": 13,
+     "large": false,
+     "ratio": 6.81,
+     "required": 4.5
+    },
+    {
+     "state": "settings",
+     "vp": "1280x800",
+     "selector": "film-subtitle",
+     "text": "We will look at four kinds, an",
+     "px": 17.28,
+     "large": false,
+     "ratio": 16.56,
+     "required": 4.5
+    },
+    {
+     "state": "settings",
+     "vp": "1280x800",
+     "selector": "film-chapter__num",
+     "text": "01",
+     "px": 11,
+     "large": false,
+     "ratio": 9.61,
+     "required": 4.5
+    },
+    {
+     "state": "settings",
+     "vp": "1280x800",
+     "selector": "film-chapter__num",
+     "text": "02",
+     "px": 11,
+     "large": false,
+     "ratio": 9.61,
+     "required": 4.5
+    },
+    {
+     "state": "settings",
+     "vp": "1280x800",
+     "selector": "film-chapter__num",
+     "text": "03",
+     "px": 11,
+     "large": false,
+     "ratio": 9.61,
+     "required": 4.5
+    },
+    {
+     "state": "settings",
+     "vp": "1280x800",
+     "selector": "film-chapter__num",
+     "text": "04",
+     "px": 11,
+     "large": false,
+     "ratio": 9.57,
+     "required": 4.5
+    },
+    {
+     "state": "settings",
+     "vp": "1280x800",
+     "selector": "film-chapter__num",
+     "text": "05",
+     "px": 11,
+     "large": false,
+     "ratio": 9.57,
+     "required": 4.5
+    },
+    {
+     "state": "settings",
+     "vp": "1280x800",
+     "selector": "film-chapter__num",
+     "text": "06",
+     "px": 11,
+     "large": false,
+     "ratio": 9.56,
+     "required": 4.5
+    },
+    {
+     "state": "settings",
+     "vp": "1280x800",
+     "selector": "film-chapter__num",
+     "text": "07",
+     "px": 11,
+     "large": false,
+     "ratio": 9.11,
+     "required": 4.5
+    },
+    {
+     "state": "settings",
+     "vp": "1280x800",
+     "selector": "film-chapter__num",
+     "text": "08",
+     "px": 11,
+     "large": false,
+     "ratio": 9.11,
+     "required": 4.5
+    },
+    {
+     "state": "settings",
+     "vp": "1280x800",
+     "selector": "film-chapter__num",
+     "text": "09",
+     "px": 11,
+     "large": false,
+     "ratio": 9.11,
+     "required": 4.5
+    },
+    {
+     "state": "settings",
+     "vp": "1280x800",
+     "selector": "film-time",
+     "text": "0:48 / 6:21",
+     "px": 13,
+     "large": false,
+     "ratio": 16.69,
+     "required": 4.5
+    },
+    {
+     "state": "why",
+     "vp": "1280x800",
+     "selector": "label__title",
+     "text": "Ball-and-socket joint · should",
+     "px": 13.5,
+     "large": false,
+     "ratio": 12.9,
+     "required": 4.5
+    },
+    {
+     "state": "why",
+     "vp": "1280x800",
+     "selector": "film-top__brand",
+     "text": "Types of Joints",
+     "px": 12,
+     "large": false,
+     "ratio": 6.86,
+     "required": 4.5
+    },
+    {
+     "state": "why",
+     "vp": "1280x800",
+     "selector": "film-top__chapter",
+     "text": "05 Ball-and-socket joint",
+     "px": 13,
+     "large": false,
+     "ratio": 9.32,
+     "required": 4.5
+    },
+    {
+     "state": "why",
+     "vp": "1280x800",
+     "selector": "film-caption__title",
+     "text": "Why it moves so freely",
+     "px": 30.72,
+     "large": true,
+     "ratio": 15.16,
+     "required": 3
+    },
+    {
+     "state": "why",
+     "vp": "1280x800",
+     "selector": "film-subtitle",
+     "text": "Nothing holds it to a single l",
+     "px": 17.28,
+     "large": false,
+     "ratio": 14.77,
+     "required": 4.5
+    },
+    {
+     "state": "why",
+     "vp": "1280x800",
+     "selector": "film-chapter__num",
+     "text": "01",
+     "px": 11,
+     "large": false,
+     "ratio": 9.51,
+     "required": 4.5
+    },
+    {
+     "state": "why",
+     "vp": "1280x800",
+     "selector": "film-chapter__num",
+     "text": "02",
+     "px": 11,
+     "large": false,
+     "ratio": 9.51,
+     "required": 4.5
+    },
+    {
+     "state": "why",
+     "vp": "1280x800",
+     "selector": "film-chapter__num",
+     "text": "03",
+     "px": 11,
+     "large": false,
+     "ratio": 9.49,
+     "required": 4.5
+    },
+    {
+     "state": "why",
+     "vp": "1280x800",
+     "selector": "film-chapter__num",
+     "text": "04",
+     "px": 11,
+     "large": false,
+     "ratio": 9.45,
+     "required": 4.5
+    },
+    {
+     "state": "why",
+     "vp": "1280x800",
+     "selector": "film-chapter__num",
+     "text": "05",
+     "px": 11,
+     "large": false,
+     "ratio": 9.45,
+     "required": 4.5
+    },
+    {
+     "state": "why",
+     "vp": "1280x800",
+     "selector": "film-chapter__num",
+     "text": "06",
+     "px": 11,
+     "large": false,
+     "ratio": 9.45,
+     "required": 4.5
+    },
+    {
+     "state": "why",
+     "vp": "1280x800",
+     "selector": "film-chapter__num",
+     "text": "07",
+     "px": 11,
+     "large": false,
+     "ratio": 9.45,
+     "required": 4.5
+    },
+    {
+     "state": "why",
+     "vp": "1280x800",
+     "selector": "film-chapter__num",
+     "text": "08",
+     "px": 11,
+     "large": false,
+     "ratio": 9.45,
+     "required": 4.5
+    },
+    {
+     "state": "why",
+     "vp": "1280x800",
+     "selector": "film-chapter__num",
+     "text": "09",
+     "px": 11,
+     "large": false,
+     "ratio": 8.61,
+     "required": 4.5
+    },
+    {
+     "state": "why",
+     "vp": "1280x800",
+     "selector": "film-time",
+     "text": "2:48 / 6:21",
+     "px": 13,
+     "large": false,
+     "ratio": 9.09,
+     "required": 4.5
+    },
+    {
+     "state": "complete",
+     "vp": "1280x800",
+     "selector": "label__title",
+     "text": "Fixed",
+     "px": 13.5,
+     "large": false,
+     "ratio": 16.58,
+     "required": 4.5
+    },
+    {
+     "state": "complete",
+     "vp": "1280x800",
+     "selector": "label__title",
+     "text": "Pivot",
+     "px": 13.5,
+     "large": false,
+     "ratio": 16.58,
+     "required": 4.5
+    },
+    {
+     "state": "complete",
+     "vp": "1280x800",
+     "selector": "label__title",
+     "text": "Ball and socket",
+     "px": 13.5,
+     "large": false,
+     "ratio": 16.56,
+     "required": 4.5
+    },
+    {
+     "state": "complete",
+     "vp": "1280x800",
+     "selector": "label__title",
+     "text": "Ball and socket",
+     "px": 13.5,
+     "large": false,
+     "ratio": 14.76,
+     "required": 4.5
+    },
+    {
+     "state": "complete",
+     "vp": "1280x800",
+     "selector": "label__title",
+     "text": "Hinge",
+     "px": 13.5,
+     "large": false,
+     "ratio": 16.45,
+     "required": 4.5
+    },
+    {
+     "state": "complete",
+     "vp": "1280x800",
+     "selector": "label__title",
+     "text": "Hinge",
+     "px": 13.5,
+     "large": false,
+     "ratio": 15.18,
+     "required": 4.5
+    },
+    {
+     "state": "complete",
+     "vp": "1280x800",
+     "selector": "film-top__brand",
+     "text": "Types of Joints",
+     "px": 12,
+     "large": false,
+     "ratio": 6.84,
+     "required": 4.5
+    },
+    {
+     "state": "complete",
+     "vp": "1280x800",
+     "selector": "film-top__chapter",
+     "text": "09 The body map",
+     "px": 13,
+     "large": false,
+     "ratio": 9.33,
+     "required": 4.5
+    },
+    {
+     "state": "complete",
+     "vp": "1280x800",
+     "selector": "film-end__title",
+     "text": "Lesson complete",
+     "px": 20,
+     "large": false,
+     "ratio": 16.95,
+     "required": 4.5
+    },
+    {
+     "state": "complete",
+     "vp": "1280x800",
+     "selector": "film-chapter__num",
+     "text": "01",
+     "px": 11,
+     "large": false,
+     "ratio": 9.51,
+     "required": 4.5
+    },
+    {
+     "state": "complete",
+     "vp": "1280x800",
+     "selector": "film-chapter__num",
+     "text": "02",
+     "px": 11,
+     "large": false,
+     "ratio": 9.5,
+     "required": 4.5
+    },
+    {
+     "state": "complete",
+     "vp": "1280x800",
+     "selector": "film-chapter__num",
+     "text": "03",
+     "px": 11,
+     "large": false,
+     "ratio": 9.5,
+     "required": 4.5
+    },
+    {
+     "state": "complete",
+     "vp": "1280x800",
+     "selector": "film-chapter__num",
+     "text": "04",
+     "px": 11,
+     "large": false,
+     "ratio": 9.45,
+     "required": 4.5
+    },
+    {
+     "state": "complete",
+     "vp": "1280x800",
+     "selector": "film-chapter__num",
+     "text": "05",
+     "px": 11,
+     "large": false,
+     "ratio": 9.45,
+     "required": 4.5
+    },
+    {
+     "state": "complete",
+     "vp": "1280x800",
+     "selector": "film-chapter__num",
+     "text": "06",
+     "px": 11,
+     "large": false,
+     "ratio": 9.45,
+     "required": 4.5
+    },
+    {
+     "state": "complete",
+     "vp": "1280x800",
+     "selector": "film-chapter__num",
+     "text": "07",
+     "px": 11,
+     "large": false,
+     "ratio": 9.45,
+     "required": 4.5
+    },
+    {
+     "state": "complete",
+     "vp": "1280x800",
+     "selector": "film-chapter__num",
+     "text": "08",
+     "px": 11,
+     "large": false,
+     "ratio": 9.45,
+     "required": 4.5
+    },
+    {
+     "state": "complete",
+     "vp": "1280x800",
+     "selector": "film-chapter__num",
+     "text": "09",
+     "px": 11,
+     "large": false,
+     "ratio": 9.45,
+     "required": 4.5
+    },
+    {
+     "state": "complete",
+     "vp": "1280x800",
+     "selector": "film-time",
+     "text": "6:21 / 6:21",
+     "px": 13,
+     "large": false,
+     "ratio": 17.23,
+     "required": 4.5
+    },
+    {
+     "state": "start",
+     "vp": "1280x800",
+     "selector": "film-start__eyebrow",
+     "text": "9 parts · about 6 minutes",
+     "px": 12,
+     "large": false,
+     "ratio": 9.32,
+     "required": 4.5
+    },
+    {
+     "state": "start",
+     "vp": "1280x800",
+     "selector": "film-start__title",
+     "text": "Types of Joints",
+     "px": 44,
+     "large": true,
+     "ratio": 17.08,
+     "required": 3
+    },
+    {
+     "state": "start",
+     "vp": "1280x800",
+     "selector": "film-start__thesis",
+     "text": "How the shape of a join decide",
+     "px": 16,
+     "large": false,
+     "ratio": 9.41,
+     "required": 4.5
+    },
+    {
+     "state": "start",
+     "vp": "1280x800",
+     "selector": "film-start__sound",
+     "text": "Narrated. Turn your sound on.",
+     "px": 13,
+     "large": false,
+     "ratio": 6.89,
+     "required": 4.5
+    },
+    {
+     "state": "start",
+     "vp": "1280x800",
+     "selector": "film-top__brand",
+     "text": "Types of Joints",
+     "px": 12,
+     "large": false,
+     "ratio": 6.91,
+     "required": 4.5
+    },
+    {
+     "state": "start",
+     "vp": "1280x800",
+     "selector": "film-top__chapter",
+     "text": "01 Two joints, two movements",
+     "px": 13,
+     "large": false,
+     "ratio": 9.54,
+     "required": 4.5
+    },
+    {
+     "state": "start",
+     "vp": "1280x800",
+     "selector": "film-chapter__num",
+     "text": "01",
+     "px": 11,
+     "large": false,
+     "ratio": 9.55,
+     "required": 4.5
+    },
+    {
+     "state": "start",
+     "vp": "1280x800",
+     "selector": "film-chapter__num",
+     "text": "02",
+     "px": 11,
+     "large": false,
+     "ratio": 9.55,
+     "required": 4.5
+    },
+    {
+     "state": "start",
+     "vp": "1280x800",
+     "selector": "film-chapter__num",
+     "text": "03",
+     "px": 11,
+     "large": false,
+     "ratio": 9.55,
+     "required": 4.5
+    },
+    {
+     "state": "start",
+     "vp": "1280x800",
+     "selector": "film-chapter__num",
+     "text": "04",
+     "px": 11,
+     "large": false,
+     "ratio": 9.55,
+     "required": 4.5
+    },
+    {
+     "state": "start",
+     "vp": "1280x800",
+     "selector": "film-chapter__num",
+     "text": "05",
+     "px": 11,
+     "large": false,
+     "ratio": 9.55,
+     "required": 4.5
+    },
+    {
+     "state": "start",
+     "vp": "1280x800",
+     "selector": "film-chapter__num",
+     "text": "06",
+     "px": 11,
+     "large": false,
+     "ratio": 9.55,
+     "required": 4.5
+    },
+    {
+     "state": "start",
+     "vp": "1280x800",
+     "selector": "film-chapter__num",
+     "text": "07",
+     "px": 11,
+     "large": false,
+     "ratio": 9.55,
+     "required": 4.5
+    },
+    {
+     "state": "start",
+     "vp": "1280x800",
+     "selector": "film-chapter__num",
+     "text": "08",
+     "px": 11,
+     "large": false,
+     "ratio": 9.55,
+     "required": 4.5
+    },
+    {
+     "state": "start",
+     "vp": "1280x800",
+     "selector": "film-chapter__num",
+     "text": "09",
+     "px": 11,
+     "large": false,
+     "ratio": 9.55,
+     "required": 4.5
+    },
+    {
+     "state": "start",
+     "vp": "1280x800",
+     "selector": "film-time",
+     "text": "0:00 / 6:21",
+     "px": 13,
+     "large": false,
+     "ratio": 17.41,
+     "required": 4.5
+    },
+    {
+     "state": "intro",
+     "vp": "390x844",
+     "selector": "film-top__chapter",
+     "text": "01 Two joints, two movements",
+     "px": 13,
+     "large": false,
+     "ratio": 9.61,
+     "required": 4.5
+    },
+    {
+     "state": "intro",
+     "vp": "390x844",
+     "selector": "film-caption__title",
+     "text": "Types of Joints",
+     "px": 22,
+     "large": false,
+     "ratio": 17.2,
+     "required": 4.5
+    },
+    {
+     "state": "intro",
+     "vp": "390x844",
+     "selector": "film-caption__text",
+     "text": "How different joints allow dif",
+     "px": 15,
+     "large": false,
+     "ratio": 7.6,
+     "required": 4.5
+    },
+    {
+     "state": "intro",
+     "vp": "390x844",
+     "selector": "film-subtitle",
+     "text": "Different joints allow very di",
+     "px": 15,
+     "large": false,
+     "ratio": 16.96,
+     "required": 4.5
+    },
+    {
+     "state": "intro",
+     "vp": "390x844",
+     "selector": "film-chapter__num",
+     "text": "01",
+     "px": 11,
+     "large": false,
+     "ratio": 9.31,
+     "required": 4.5
+    },
+    {
+     "state": "intro",
+     "vp": "390x844",
+     "selector": "film-chapter__num",
+     "text": "02",
+     "px": 11,
+     "large": false,
+     "ratio": 9.21,
+     "required": 4.5
+    },
+    {
+     "state": "intro",
+     "vp": "390x844",
+     "selector": "film-chapter__num",
+     "text": "03",
+     "px": 11,
+     "large": false,
+     "ratio": 9.2,
+     "required": 4.5
+    },
+    {
+     "state": "intro",
+     "vp": "390x844",
+     "selector": "film-chapter__num",
+     "text": "04",
+     "px": 11,
+     "large": false,
+     "ratio": 9.2,
+     "required": 4.5
+    },
+    {
+     "state": "intro",
+     "vp": "390x844",
+     "selector": "film-chapter__num",
+     "text": "05",
+     "px": 11,
+     "large": false,
+     "ratio": 9.26,
+     "required": 4.5
+    },
+    {
+     "state": "intro",
+     "vp": "390x844",
+     "selector": "film-chapter__num",
+     "text": "06",
+     "px": 11,
+     "large": false,
+     "ratio": 9.49,
+     "required": 4.5
+    },
+    {
+     "state": "intro",
+     "vp": "390x844",
+     "selector": "film-chapter__num",
+     "text": "07",
+     "px": 11,
+     "large": false,
+     "ratio": 9.45,
+     "required": 4.5
+    },
+    {
+     "state": "intro",
+     "vp": "390x844",
+     "selector": "film-chapter__num",
+     "text": "08",
+     "px": 11,
+     "large": false,
+     "ratio": 9.45,
+     "required": 4.5
+    },
+    {
+     "state": "intro",
+     "vp": "390x844",
+     "selector": "film-chapter__num",
+     "text": "09",
+     "px": 11,
+     "large": false,
+     "ratio": 9.45,
+     "required": 4.5
+    },
+    {
+     "state": "intro",
+     "vp": "390x844",
+     "selector": "film-time",
+     "text": "0:05 / 6:21",
+     "px": 13,
+     "large": false,
+     "ratio": 17.38,
+     "required": 4.5
+    },
+    {
+     "state": "fixed",
+     "vp": "390x844",
+     "selector": "label__title",
+     "text": "Fixed joint · skull",
+     "px": 13.5,
+     "large": false,
+     "ratio": 14.26,
+     "required": 4.5
+    },
+    {
+     "state": "fixed",
+     "vp": "390x844",
+     "selector": "film-top__chapter",
+     "text": "03 Fixed joint",
+     "px": 13,
+     "large": false,
+     "ratio": 9.61,
+     "required": 4.5
+    },
+    {
+     "state": "fixed",
+     "vp": "390x844",
+     "selector": "film-caption__text",
+     "text": "The bones of the skull meet at",
+     "px": 17,
+     "large": false,
+     "ratio": 17.12,
+     "required": 4.5
+    },
+    {
+     "state": "fixed",
+     "vp": "390x844",
+     "selector": "film-subtitle",
+     "text": "Its job is strength, not movem",
+     "px": 15,
+     "large": false,
+     "ratio": 16.3,
+     "required": 4.5
+    },
+    {
+     "state": "fixed",
+     "vp": "390x844",
+     "selector": "film-chapter__num",
+     "text": "01",
+     "px": 11,
+     "large": false,
+     "ratio": 9.31,
+     "required": 4.5
+    },
+    {
+     "state": "fixed",
+     "vp": "390x844",
+     "selector": "film-chapter__num",
+     "text": "02",
+     "px": 11,
+     "large": false,
+     "ratio": 8.14,
+     "required": 4.5
+    },
+    {
+     "state": "fixed",
+     "vp": "390x844",
+     "selector": "film-chapter__num",
+     "text": "03",
+     "px": 11,
+     "large": false,
+     "ratio": 8.73,
+     "required": 4.5
+    },
+    {
+     "state": "fixed",
+     "vp": "390x844",
+     "selector": "film-chapter__num",
+     "text": "04",
+     "px": 11,
+     "large": false,
+     "ratio": 9.2,
+     "required": 4.5
+    },
+    {
+     "state": "fixed",
+     "vp": "390x844",
+     "selector": "film-chapter__num",
+     "text": "05",
+     "px": 11,
+     "large": false,
+     "ratio": 9.26,
+     "required": 4.5
+    },
+    {
+     "state": "fixed",
+     "vp": "390x844",
+     "selector": "film-chapter__num",
+     "text": "06",
+     "px": 11,
+     "large": false,
+     "ratio": 9.49,
+     "required": 4.5
+    },
+    {
+     "state": "fixed",
+     "vp": "390x844",
+     "selector": "film-chapter__num",
+     "text": "07",
+     "px": 11,
+     "large": false,
+     "ratio": 9.45,
+     "required": 4.5
+    },
+    {
+     "state": "fixed",
+     "vp": "390x844",
+     "selector": "film-chapter__num",
+     "text": "08",
+     "px": 11,
+     "large": false,
+     "ratio": 9.45,
+     "required": 4.5
+    },
+    {
+     "state": "fixed",
+     "vp": "390x844",
+     "selector": "film-chapter__num",
+     "text": "09",
+     "px": 11,
+     "large": false,
+     "ratio": 9.45,
+     "required": 4.5
+    },
+    {
+     "state": "fixed",
+     "vp": "390x844",
+     "selector": "film-time",
+     "text": "1:26 / 6:21",
+     "px": 13,
+     "large": false,
+     "ratio": 16.54,
+     "required": 4.5
+    },
+    {
+     "state": "hinge-try",
+     "vp": "390x844",
+     "selector": "label__title",
+     "text": "Radius",
+     "px": 13,
+     "large": false,
+     "ratio": 16.55,
+     "required": 4.5
+    },
+    {
+     "state": "hinge-try",
+     "vp": "390x844",
+     "selector": "label__title",
+     "text": "Ulna",
+     "px": 13,
+     "large": false,
+     "ratio": 10.08,
+     "required": 4.5
+    },
+    {
+     "state": "hinge-try",
+     "vp": "390x844",
+     "selector": "label__title",
+     "text": "1°",
+     "px": 13,
+     "large": false,
+     "ratio": 8.78,
+     "required": 4.5
+    },
+    {
+     "state": "hinge-try",
+     "vp": "390x844",
+     "selector": "film-top__chapter",
+     "text": "06 Hinge joint",
+     "px": 13,
+     "large": false,
+     "ratio": 9.61,
+     "required": 4.5
+    },
+    {
+     "state": "hinge-try",
+     "vp": "390x844",
+     "selector": "film-caption__text",
+     "text": "Your turn: bend and straighten",
+     "px": 17,
+     "large": false,
+     "ratio": 16.7,
+     "required": 4.5
+    },
+    {
+     "state": "hinge-try",
+     "vp": "390x844",
+     "selector": "film-interact__prompt",
+     "text": "Drag the forearm, or use the s",
+     "px": 15,
+     "large": false,
+     "ratio": 16.05,
+     "required": 4.5
+    },
+    {
+     "state": "hinge-try",
+     "vp": "390x844",
+     "selector": "dof-slider__label",
+     "text": "Elbow flexion",
+     "px": 13,
+     "large": false,
+     "ratio": 9.28,
+     "required": 4.5
+    },
+    {
+     "state": "hinge-try",
+     "vp": "390x844",
+     "selector": "dof-slider__scale",
+     "text": "0° · ExtendedFlexed · 145° (ap",
+     "px": 12,
+     "large": false,
+     "ratio": 6.78,
+     "required": 4.5
+    },
+    {
+     "state": "hinge-try",
+     "vp": "390x844",
+     "selector": "film-chapter__num",
+     "text": "01",
+     "px": 11,
+     "large": false,
+     "ratio": 9.31,
+     "required": 4.5
+    },
+    {
+     "state": "hinge-try",
+     "vp": "390x844",
+     "selector": "film-chapter__num",
+     "text": "02",
+     "px": 11,
+     "large": false,
+     "ratio": 9.21,
+     "required": 4.5
+    },
+    {
+     "state": "hinge-try",
+     "vp": "390x844",
+     "selector": "film-chapter__num",
+     "text": "03",
+     "px": 11,
+     "large": false,
+     "ratio": 9.2,
+     "required": 4.5
+    },
+    {
+     "state": "hinge-try",
+     "vp": "390x844",
+     "selector": "film-chapter__num",
+     "text": "04",
+     "px": 11,
+     "large": false,
+     "ratio": 9.2,
+     "required": 4.5
+    },
+    {
+     "state": "hinge-try",
+     "vp": "390x844",
+     "selector": "film-chapter__num",
+     "text": "05",
+     "px": 11,
+     "large": false,
+     "ratio": 9.26,
+     "required": 4.5
+    },
+    {
+     "state": "hinge-try",
+     "vp": "390x844",
+     "selector": "film-chapter__num",
+     "text": "06",
+     "px": 11,
+     "large": false,
+     "ratio": 9.49,
+     "required": 4.5
+    },
+    {
+     "state": "hinge-try",
+     "vp": "390x844",
+     "selector": "film-chapter__num",
+     "text": "07",
+     "px": 11,
+     "large": false,
+     "ratio": 9.45,
+     "required": 4.5
+    },
+    {
+     "state": "hinge-try",
+     "vp": "390x844",
+     "selector": "film-chapter__num",
+     "text": "08",
+     "px": 11,
+     "large": false,
+     "ratio": 9.45,
+     "required": 4.5
+    },
+    {
+     "state": "hinge-try",
+     "vp": "390x844",
+     "selector": "film-chapter__num",
+     "text": "09",
+     "px": 11,
+     "large": false,
+     "ratio": 9.45,
+     "required": 4.5
+    },
+    {
+     "state": "hinge-try",
+     "vp": "390x844",
+     "selector": "film-time",
+     "text": "4:11 / 6:21",
+     "px": 13,
+     "large": false,
+     "ratio": 17.36,
+     "required": 4.5
+    },
+    {
+     "state": "support",
+     "vp": "390x844",
+     "selector": "label__title",
+     "text": "Radial collateral ligament",
+     "px": 13,
+     "large": false,
+     "ratio": 14.1,
+     "required": 4.5
+    },
+    {
+     "state": "support",
+     "vp": "390x844",
+     "selector": "label__title",
+     "text": "Articular capsule of elbow joi",
+     "px": 13,
+     "large": false,
+     "ratio": 5.24,
+     "required": 4.5
+    },
+    {
+     "state": "support",
+     "vp": "390x844",
+     "selector": "film-top__chapter",
+     "text": "06 Hinge joint",
+     "px": 13,
+     "large": false,
+     "ratio": 9.56,
+     "required": 4.5
+    },
+    {
+     "state": "support",
+     "vp": "390x844",
+     "selector": "film-caption__text",
+     "text": "A joint capsule and ligaments ",
+     "px": 17,
+     "large": false,
+     "ratio": 13.8,
+     "required": 4.5
+    },
+    {
+     "state": "support",
+     "vp": "390x844",
+     "selector": "film-caption__note",
+     "text": "The thin coloured lines mark w",
+     "px": 13,
+     "large": false,
+     "ratio": 5.68,
+     "required": 4.5
+    },
+    {
+     "state": "support",
+     "vp": "390x844",
+     "selector": "film-subtitle",
+     "text": "They hold the bones together a",
+     "px": 15,
+     "large": false,
+     "ratio": 13.78,
+     "required": 4.5
+    },
+    {
+     "state": "support",
+     "vp": "390x844",
+     "selector": "film-chapter__num",
+     "text": "01",
+     "px": 11,
+     "large": false,
+     "ratio": 9.31,
+     "required": 4.5
+    },
+    {
+     "state": "support",
+     "vp": "390x844",
+     "selector": "film-chapter__num",
+     "text": "02",
+     "px": 11,
+     "large": false,
+     "ratio": 9.21,
+     "required": 4.5
+    },
+    {
+     "state": "support",
+     "vp": "390x844",
+     "selector": "film-chapter__num",
+     "text": "03",
+     "px": 11,
+     "large": false,
+     "ratio": 8.81,
+     "required": 4.5
+    },
+    {
+     "state": "support",
+     "vp": "390x844",
+     "selector": "film-chapter__num",
+     "text": "04",
+     "px": 11,
+     "large": false,
+     "ratio": 9.2,
+     "required": 4.5
+    },
+    {
+     "state": "support",
+     "vp": "390x844",
+     "selector": "film-chapter__num",
+     "text": "05",
+     "px": 11,
+     "large": false,
+     "ratio": 9.26,
+     "required": 4.5
+    },
+    {
+     "state": "support",
+     "vp": "390x844",
+     "selector": "film-chapter__num",
+     "text": "06",
+     "px": 11,
+     "large": false,
+     "ratio": 9.49,
+     "required": 4.5
+    },
+    {
+     "state": "support",
+     "vp": "390x844",
+     "selector": "film-chapter__num",
+     "text": "07",
+     "px": 11,
+     "large": false,
+     "ratio": 9.45,
+     "required": 4.5
+    },
+    {
+     "state": "support",
+     "vp": "390x844",
+     "selector": "film-chapter__num",
+     "text": "08",
+     "px": 11,
+     "large": false,
+     "ratio": 9.45,
+     "required": 4.5
+    },
+    {
+     "state": "support",
+     "vp": "390x844",
+     "selector": "film-chapter__num",
+     "text": "09",
+     "px": 11,
+     "large": false,
+     "ratio": 9.45,
+     "required": 4.5
+    },
+    {
+     "state": "support",
+     "vp": "390x844",
+     "selector": "film-time",
+     "text": "4:45 / 6:21",
+     "px": 13,
+     "large": false,
+     "ratio": 14.97,
+     "required": 4.5
+    },
+    {
+     "state": "recap",
+     "vp": "390x844",
+     "selector": "label__title",
+     "text": "Fixed",
+     "px": 13.5,
+     "large": false,
+     "ratio": 16.84,
+     "required": 4.5
+    },
+    {
+     "state": "recap",
+     "vp": "390x844",
+     "selector": "label__title",
+     "text": "Pivot",
+     "px": 13.5,
+     "large": false,
+     "ratio": 16.58,
+     "required": 4.5
+    },
+    {
+     "state": "recap",
+     "vp": "390x844",
+     "selector": "label__title",
+     "text": "Ball and socket",
+     "px": 13.5,
+     "large": false,
+     "ratio": 16.58,
+     "required": 4.5
+    },
+    {
+     "state": "recap",
+     "vp": "390x844",
+     "selector": "label__title",
+     "text": "Ball and socket",
+     "px": 13.5,
+     "large": false,
+     "ratio": 16.29,
+     "required": 4.5
+    },
+    {
+     "state": "recap",
+     "vp": "390x844",
+     "selector": "label__title",
+     "text": "Hinge",
+     "px": 13.5,
+     "large": false,
+     "ratio": 16.69,
+     "required": 4.5
+    },
+    {
+     "state": "recap",
+     "vp": "390x844",
+     "selector": "label__title",
+     "text": "Hinge",
+     "px": 13.5,
+     "large": false,
+     "ratio": 16.58,
+     "required": 4.5
+    },
+    {
+     "state": "recap",
+     "vp": "390x844",
+     "selector": "film-top__chapter",
+     "text": "09 The body map",
+     "px": 13,
+     "large": false,
+     "ratio": 9.61,
+     "required": 4.5
+    },
+    {
+     "state": "recap",
+     "vp": "390x844",
+     "selector": "film-caption__text",
+     "text": "Fixed: no movement · Pivot: tu",
+     "px": 17,
+     "large": false,
+     "ratio": 13.6,
+     "required": 4.5
+    },
+    {
+     "state": "recap",
+     "vp": "390x844",
+     "selector": "film-subtitle",
+     "text": "The shape of the join is what ",
+     "px": 15,
+     "large": false,
+     "ratio": 16.96,
+     "required": 4.5
+    },
+    {
+     "state": "recap",
+     "vp": "390x844",
+     "selector": "film-chapter__num",
+     "text": "01",
+     "px": 11,
+     "large": false,
+     "ratio": 9.31,
+     "required": 4.5
+    },
+    {
+     "state": "recap",
+     "vp": "390x844",
+     "selector": "film-chapter__num",
+     "text": "02",
+     "px": 11,
+     "large": false,
+     "ratio": 9.21,
+     "required": 4.5
+    },
+    {
+     "state": "recap",
+     "vp": "390x844",
+     "selector": "film-chapter__num",
+     "text": "03",
+     "px": 11,
+     "large": false,
+     "ratio": 9.2,
+     "required": 4.5
+    },
+    {
+     "state": "recap",
+     "vp": "390x844",
+     "selector": "film-chapter__num",
+     "text": "04",
+     "px": 11,
+     "large": false,
+     "ratio": 9.2,
+     "required": 4.5
+    },
+    {
+     "state": "recap",
+     "vp": "390x844",
+     "selector": "film-chapter__num",
+     "text": "05",
+     "px": 11,
+     "large": false,
+     "ratio": 9.26,
+     "required": 4.5
+    },
+    {
+     "state": "recap",
+     "vp": "390x844",
+     "selector": "film-chapter__num",
+     "text": "06",
+     "px": 11,
+     "large": false,
+     "ratio": 9.49,
+     "required": 4.5
+    },
+    {
+     "state": "recap",
+     "vp": "390x844",
+     "selector": "film-chapter__num",
+     "text": "07",
+     "px": 11,
+     "large": false,
+     "ratio": 9.45,
+     "required": 4.5
+    },
+    {
+     "state": "recap",
+     "vp": "390x844",
+     "selector": "film-chapter__num",
+     "text": "08",
+     "px": 11,
+     "large": false,
+     "ratio": 9.45,
+     "required": 4.5
+    },
+    {
+     "state": "recap",
+     "vp": "390x844",
+     "selector": "film-chapter__num",
+     "text": "09",
+     "px": 11,
+     "large": false,
+     "ratio": 9.45,
+     "required": 4.5
+    },
+    {
+     "state": "recap",
+     "vp": "390x844",
+     "selector": "film-time",
+     "text": "6:19 / 6:21",
+     "px": 13,
+     "large": false,
+     "ratio": 17.38,
+     "required": 4.5
+    },
+    {
+     "state": "settings",
+     "vp": "390x844",
+     "selector": "film-radio",
+     "text": "Automatic (current: Medium)",
+     "px": 14,
+     "large": false,
+     "ratio": 16.31,
+     "required": 4.5
+    },
+    {
+     "state": "settings",
+     "vp": "390x844",
+     "selector": "film-radio",
+     "text": "High",
+     "px": 14,
+     "large": false,
+     "ratio": 16.67,
+     "required": 4.5
+    },
+    {
+     "state": "settings",
+     "vp": "390x844",
+     "selector": "film-radio",
+     "text": "Medium",
+     "px": 14,
+     "large": false,
+     "ratio": 16.67,
+     "required": 4.5
+    },
+    {
+     "state": "settings",
+     "vp": "390x844",
+     "selector": "film-radio",
+     "text": "Low",
+     "px": 14,
+     "large": false,
+     "ratio": 16.67,
+     "required": 4.5
+    },
+    {
+     "state": "settings",
+     "vp": "390x844",
+     "selector": "film-dialog__small",
+     "text": "Quality is chosen before the a",
+     "px": 13,
+     "large": false,
+     "ratio": 6.76,
+     "required": 4.5
+    },
+    {
+     "state": "settings",
+     "vp": "390x844",
+     "selector": "film-radio",
+     "text": "Follow system setting (full mo",
+     "px": 14,
+     "large": false,
+     "ratio": 16.29,
+     "required": 4.5
+    },
+    {
+     "state": "settings",
+     "vp": "390x844",
+     "selector": "film-radio",
+     "text": "Reduce motion",
+     "px": 14,
+     "large": false,
+     "ratio": 16.56,
+     "required": 4.5
+    },
+    {
+     "state": "settings",
+     "vp": "390x844",
+     "selector": "film-radio",
+     "text": "Full motion",
+     "px": 14,
+     "large": false,
+     "ratio": 16.58,
+     "required": 4.5
+    },
+    {
+     "state": "settings",
+     "vp": "390x844",
+     "selector": "film-radio",
+     "text": "Standard",
+     "px": 14,
+     "large": false,
+     "ratio": 16.67,
+     "required": 4.5
+    },
+    {
+     "state": "settings",
+     "vp": "390x844",
+     "selector": "film-radio",
+     "text": "Large",
+     "px": 14,
+     "large": false,
+     "ratio": 16.69,
+     "required": 4.5
+    },
+    {
+     "state": "settings",
+     "vp": "390x844",
+     "selector": "film-dialog__small",
+     "text": "Space or K: play or pause. On ",
+     "px": 13,
+     "large": false,
+     "ratio": 6.81,
+     "required": 4.5
+    },
+    {
+     "state": "settings",
+     "vp": "390x844",
+     "selector": "film-subtitle",
+     "text": "We will look at four kinds, an",
+     "px": 15,
+     "large": false,
+     "ratio": 16.69,
+     "required": 4.5
+    },
+    {
+     "state": "settings",
+     "vp": "390x844",
+     "selector": "film-chapter__num",
+     "text": "01",
+     "px": 11,
+     "large": false,
+     "ratio": 9.11,
+     "required": 4.5
+    },
+    {
+     "state": "settings",
+     "vp": "390x844",
+     "selector": "film-chapter__num",
+     "text": "02",
+     "px": 11,
+     "large": false,
+     "ratio": 9.11,
+     "required": 4.5
+    },
+    {
+     "state": "settings",
+     "vp": "390x844",
+     "selector": "film-chapter__num",
+     "text": "03",
+     "px": 11,
+     "large": false,
+     "ratio": 9.11,
+     "required": 4.5
+    },
+    {
+     "state": "settings",
+     "vp": "390x844",
+     "selector": "film-chapter__num",
+     "text": "04",
+     "px": 11,
+     "large": false,
+     "ratio": 9.11,
+     "required": 4.5
+    },
+    {
+     "state": "settings",
+     "vp": "390x844",
+     "selector": "film-chapter__num",
+     "text": "05",
+     "px": 11,
+     "large": false,
+     "ratio": 9.11,
+     "required": 4.5
+    },
+    {
+     "state": "settings",
+     "vp": "390x844",
+     "selector": "film-chapter__num",
+     "text": "06",
+     "px": 11,
+     "large": false,
+     "ratio": 9.11,
+     "required": 4.5
+    },
+    {
+     "state": "settings",
+     "vp": "390x844",
+     "selector": "film-chapter__num",
+     "text": "07",
+     "px": 11,
+     "large": false,
+     "ratio": 9.11,
+     "required": 4.5
+    },
+    {
+     "state": "settings",
+     "vp": "390x844",
+     "selector": "film-chapter__num",
+     "text": "08",
+     "px": 11,
+     "large": false,
+     "ratio": 9.11,
+     "required": 4.5
+    },
+    {
+     "state": "settings",
+     "vp": "390x844",
+     "selector": "film-chapter__num",
+     "text": "09",
+     "px": 11,
+     "large": false,
+     "ratio": 9.11,
+     "required": 4.5
+    },
+    {
+     "state": "settings",
+     "vp": "390x844",
+     "selector": "film-time",
+     "text": "0:48 / 6:21",
+     "px": 13,
+     "large": false,
+     "ratio": 10.91,
+     "required": 4.5
+    },
+    {
+     "state": "why",
+     "vp": "390x844",
+     "selector": "label__title",
+     "text": "Ball-and-socket joint · should",
+     "px": 13.5,
+     "large": false,
+     "ratio": 13.07,
+     "required": 4.5
+    },
+    {
+     "state": "why",
+     "vp": "390x844",
+     "selector": "film-top__chapter",
+     "text": "05 Ball-and-socket joint",
+     "px": 13,
+     "large": false,
+     "ratio": 9.61,
+     "required": 4.5
+    },
+    {
+     "state": "why",
+     "vp": "390x844",
+     "selector": "film-caption__title",
+     "text": "Why it moves so freely",
+     "px": 22,
+     "large": false,
+     "ratio": 17.16,
+     "required": 4.5
+    },
+    {
+     "state": "why",
+     "vp": "390x844",
+     "selector": "film-subtitle",
+     "text": "Nothing holds it to a single l",
+     "px": 15,
+     "large": false,
+     "ratio": 16.17,
+     "required": 4.5
+    },
+    {
+     "state": "why",
+     "vp": "390x844",
+     "selector": "film-chapter__num",
+     "text": "01",
+     "px": 11,
+     "large": false,
+     "ratio": 9.31,
+     "required": 4.5
+    },
+    {
+     "state": "why",
+     "vp": "390x844",
+     "selector": "film-chapter__num",
+     "text": "02",
+     "px": 11,
+     "large": false,
+     "ratio": 9.21,
+     "required": 4.5
+    },
+    {
+     "state": "why",
+     "vp": "390x844",
+     "selector": "film-chapter__num",
+     "text": "03",
+     "px": 11,
+     "large": false,
+     "ratio": 9.2,
+     "required": 4.5
+    },
+    {
+     "state": "why",
+     "vp": "390x844",
+     "selector": "film-chapter__num",
+     "text": "04",
+     "px": 11,
+     "large": false,
+     "ratio": 7.71,
+     "required": 4.5
+    },
+    {
+     "state": "why",
+     "vp": "390x844",
+     "selector": "film-chapter__num",
+     "text": "05",
+     "px": 11,
+     "large": false,
+     "ratio": 9.26,
+     "required": 4.5
+    },
+    {
+     "state": "why",
+     "vp": "390x844",
+     "selector": "film-chapter__num",
+     "text": "06",
+     "px": 11,
+     "large": false,
+     "ratio": 9.49,
+     "required": 4.5
+    },
+    {
+     "state": "why",
+     "vp": "390x844",
+     "selector": "film-chapter__num",
+     "text": "07",
+     "px": 11,
+     "large": false,
+     "ratio": 9.45,
+     "required": 4.5
+    },
+    {
+     "state": "why",
+     "vp": "390x844",
+     "selector": "film-chapter__num",
+     "text": "08",
+     "px": 11,
+     "large": false,
+     "ratio": 9.14,
+     "required": 4.5
+    },
+    {
+     "state": "why",
+     "vp": "390x844",
+     "selector": "film-chapter__num",
+     "text": "09",
+     "px": 11,
+     "large": false,
+     "ratio": 9.45,
+     "required": 4.5
+    },
+    {
+     "state": "why",
+     "vp": "390x844",
+     "selector": "film-time",
+     "text": "2:48 / 6:21",
+     "px": 13,
+     "large": false,
+     "ratio": 17.36,
+     "required": 4.5
+    },
+    {
+     "state": "complete",
+     "vp": "390x844",
+     "selector": "label__title",
+     "text": "Fixed",
+     "px": 13.5,
+     "large": false,
+     "ratio": 16.69,
+     "required": 4.5
+    },
+    {
+     "state": "complete",
+     "vp": "390x844",
+     "selector": "label__title",
+     "text": "Pivot",
+     "px": 13.5,
+     "large": false,
+     "ratio": 16.58,
+     "required": 4.5
+    },
+    {
+     "state": "complete",
+     "vp": "390x844",
+     "selector": "label__title",
+     "text": "Ball and socket",
+     "px": 13.5,
+     "large": false,
+     "ratio": 16.58,
+     "required": 4.5
+    },
+    {
+     "state": "complete",
+     "vp": "390x844",
+     "selector": "label__title",
+     "text": "Ball and socket",
+     "px": 13.5,
+     "large": false,
+     "ratio": 16.29,
+     "required": 4.5
+    },
+    {
+     "state": "complete",
+     "vp": "390x844",
+     "selector": "label__title",
+     "text": "Hinge",
+     "px": 13.5,
+     "large": false,
+     "ratio": 16.69,
+     "required": 4.5
+    },
+    {
+     "state": "complete",
+     "vp": "390x844",
+     "selector": "label__title",
+     "text": "Hinge",
+     "px": 13.5,
+     "large": false,
+     "ratio": 16.58,
+     "required": 4.5
+    },
+    {
+     "state": "complete",
+     "vp": "390x844",
+     "selector": "film-top__chapter",
+     "text": "09 The body map",
+     "px": 13,
+     "large": false,
+     "ratio": 9.49,
+     "required": 4.5
+    },
+    {
+     "state": "complete",
+     "vp": "390x844",
+     "selector": "film-end__title",
+     "text": "Lesson complete",
+     "px": 20,
+     "large": false,
+     "ratio": 16.32,
+     "required": 4.5
+    },
+    {
+     "state": "complete",
+     "vp": "390x844",
+     "selector": "film-chapter__num",
+     "text": "01",
+     "px": 11,
+     "large": false,
+     "ratio": 9.31,
+     "required": 4.5
+    },
+    {
+     "state": "complete",
+     "vp": "390x844",
+     "selector": "film-chapter__num",
+     "text": "02",
+     "px": 11,
+     "large": false,
+     "ratio": 9.21,
+     "required": 4.5
+    },
+    {
+     "state": "complete",
+     "vp": "390x844",
+     "selector": "film-chapter__num",
+     "text": "03",
+     "px": 11,
+     "large": false,
+     "ratio": 9.2,
+     "required": 4.5
+    },
+    {
+     "state": "complete",
+     "vp": "390x844",
+     "selector": "film-chapter__num",
+     "text": "04",
+     "px": 11,
+     "large": false,
+     "ratio": 9.2,
+     "required": 4.5
+    },
+    {
+     "state": "complete",
+     "vp": "390x844",
+     "selector": "film-chapter__num",
+     "text": "05",
+     "px": 11,
+     "large": false,
+     "ratio": 9.26,
+     "required": 4.5
+    },
+    {
+     "state": "complete",
+     "vp": "390x844",
+     "selector": "film-chapter__num",
+     "text": "06",
+     "px": 11,
+     "large": false,
+     "ratio": 9.49,
+     "required": 4.5
+    },
+    {
+     "state": "complete",
+     "vp": "390x844",
+     "selector": "film-chapter__num",
+     "text": "07",
+     "px": 11,
+     "large": false,
+     "ratio": 9.45,
+     "required": 4.5
+    },
+    {
+     "state": "complete",
+     "vp": "390x844",
+     "selector": "film-chapter__num",
+     "text": "08",
+     "px": 11,
+     "large": false,
+     "ratio": 9.45,
+     "required": 4.5
+    },
+    {
+     "state": "complete",
+     "vp": "390x844",
+     "selector": "film-chapter__num",
+     "text": "09",
+     "px": 11,
+     "large": false,
+     "ratio": 9.45,
+     "required": 4.5
+    },
+    {
+     "state": "complete",
+     "vp": "390x844",
+     "selector": "film-time",
+     "text": "6:21 / 6:21",
+     "px": 13,
+     "large": false,
+     "ratio": 17.38,
+     "required": 4.5
+    },
+    {
+     "state": "start",
+     "vp": "390x844",
+     "selector": "film-start__eyebrow",
+     "text": "9 parts · about 6 minutes",
+     "px": 12,
+     "large": false,
+     "ratio": 9.32,
+     "required": 4.5
+    },
+    {
+     "state": "start",
+     "vp": "390x844",
+     "selector": "film-start__title",
+     "text": "Types of Joints",
+     "px": 30,
+     "large": true,
+     "ratio": 16.72,
+     "required": 3
+    },
+    {
+     "state": "start",
+     "vp": "390x844",
+     "selector": "film-start__thesis",
+     "text": "How the shape of a join decide",
+     "px": 16,
+     "large": false,
+     "ratio": 9.36,
+     "required": 4.5
+    },
+    {
+     "state": "start",
+     "vp": "390x844",
+     "selector": "film-start__sound",
+     "text": "Narrated. Turn your sound on.",
+     "px": 13,
+     "large": false,
+     "ratio": 6.84,
+     "required": 4.5
+    },
+    {
+     "state": "start",
+     "vp": "390x844",
+     "selector": "film-top__chapter",
+     "text": "01 Two joints, two movements",
+     "px": 13,
+     "large": false,
+     "ratio": 9.57,
+     "required": 4.5
+    },
+    {
+     "state": "start",
+     "vp": "390x844",
+     "selector": "film-chapter__num",
+     "text": "01",
+     "px": 11,
+     "large": false,
+     "ratio": 9.49,
+     "required": 4.5
+    },
+    {
+     "state": "start",
+     "vp": "390x844",
+     "selector": "film-chapter__num",
+     "text": "02",
+     "px": 11,
+     "large": false,
+     "ratio": 9.49,
+     "required": 4.5
+    },
+    {
+     "state": "start",
+     "vp": "390x844",
+     "selector": "film-chapter__num",
+     "text": "03",
+     "px": 11,
+     "large": false,
+     "ratio": 9.44,
+     "required": 4.5
+    },
+    {
+     "state": "start",
+     "vp": "390x844",
+     "selector": "film-chapter__num",
+     "text": "04",
+     "px": 11,
+     "large": false,
+     "ratio": 9.44,
+     "required": 4.5
+    },
+    {
+     "state": "start",
+     "vp": "390x844",
+     "selector": "film-chapter__num",
+     "text": "05",
+     "px": 11,
+     "large": false,
+     "ratio": 9.49,
+     "required": 4.5
+    },
+    {
+     "state": "start",
+     "vp": "390x844",
+     "selector": "film-chapter__num",
+     "text": "06",
+     "px": 11,
+     "large": false,
+     "ratio": 9.55,
+     "required": 4.5
+    },
+    {
+     "state": "start",
+     "vp": "390x844",
+     "selector": "film-chapter__num",
+     "text": "07",
+     "px": 11,
+     "large": false,
+     "ratio": 9.55,
+     "required": 4.5
+    },
+    {
+     "state": "start",
+     "vp": "390x844",
+     "selector": "film-chapter__num",
+     "text": "08",
+     "px": 11,
+     "large": false,
+     "ratio": 9.55,
+     "required": 4.5
+    },
+    {
+     "state": "start",
+     "vp": "390x844",
+     "selector": "film-chapter__num",
+     "text": "09",
+     "px": 11,
+     "large": false,
+     "ratio": 9.55,
+     "required": 4.5
+    },
+    {
+     "state": "start",
+     "vp": "390x844",
+     "selector": "film-time",
+     "text": "0:00 / 6:21",
+     "px": 13,
+     "large": false,
+     "ratio": 17.49,
+     "required": 4.5
+    }
+   ],
+   "failing": []
+  },
+  "quizPrompt": {
+   "1280x800": {
+    "domCount": 1,
+    "treeCount": 1,
+    "regionNamedByPrompt": true,
+    "snapshotLines": [
+     "  - paragraph: \"Try it: bend the elbow to about 90°.\"",
+     "  - 'region \"Try it: bend the elbow to about 90°.\"':"
+    ]
+   },
+   "768x1024": {
+    "domCount": 1,
+    "treeCount": 1,
+    "regionNamedByPrompt": true,
+    "snapshotLines": [
+     "  - paragraph: \"Try it: bend the elbow to about 90°.\"",
+     "  - 'region \"Try it: bend the elbow to about 90°.\"':"
+    ]
+   },
+   "390x844": {
+    "domCount": 1,
+    "treeCount": 1,
+    "regionNamedByPrompt": true,
+    "snapshotLines": [
+     "  - paragraph: \"Try it: bend the elbow to about 90°.\"",
+     "  - 'region \"Try it: bend the elbow to about 90°.\"':"
+    ]
+   },
+   "320x640": {
+    "domCount": 1,
+    "treeCount": 1,
+    "regionNamedByPrompt": true,
+    "snapshotLines": [
+     "  - paragraph: \"Try it: bend the elbow to about 90°.\"",
+     "  - 'region \"Try it: bend the elbow to about 90°.\"':"
+    ]
+   }
+  }
+ }
+}

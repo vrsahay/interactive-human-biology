@@ -1,0 +1,117 @@
+{
+ "step": "16E",
+ "document": "Mobile Explore visibility and final content cleanup, before expert review.",
+ "branch": "step16e-mobile-finalization",
+ "baseCommit": "f3c2ed2449aa9782eb9b397af142ee47107f99bb",
+ "status": "STEP 16E COMPLETE",
+ "statusBasis": "All acceptance criteria A-J pass. Every narrow-layout result is viewport emulation in one desktop Chrome; no real phone or tablet was used.",
+ "publicRelease": "NOT CLAIMED. This build is not public-release ready.",
+
+ "acceptance": {
+  "A_targetClearlyVisibleAt390And412": "pass - every exploration's target is fully above the panel; target height 2.0-2.3x what it was",
+  "B_panelNeverCoversTarget": "pass - 0 % covered in 36 of 36 width x exploration cases and in 64 of 64 state frames",
+  "C_targetInteractable": "pass - the grip point reaches the canvas in every case; a real drag starting on the target moves it at 390, 412 and 1280",
+  "D_noWholeBodyMovementRegression": "pass - 0 context groups and 0 camera movement from a target drag",
+  "E_noNarrationRegression": "pass - one clip regenerated, 75 reused; ownership, sync and stale-narration suites pass",
+  "F_unsourcedFreestJointClaimRemoved": "pass - narr.ball.move rewritten; 0 strings or clips carry a comparative claim",
+  "G_allAutomatedTestsPass": "pass - typecheck clean, unit 98/98, e2e 116/116",
+  "H_productionAssetsByteIdentical": "pass - 29/29 frozen files; master matches its pin; asset directories unchanged",
+  "I_validatedElbowUnchanged": "pass - 0/45/90/145 exact; assets byte-identical; DOF, range, axis, pivot and neutral untouched",
+  "J_expertReviewPending": "pass - every item PENDING; new package in qa/expert/step16e/"
+ },
+
+ "rootCause": [
+  "The composition reserved a fixed 40 % of a narrow screen for an open panel; the top bar, the panel and the 244 px player actually took 68-78 % at 390x844, so the joint site was projected inside the panel.",
+  "The composition shrank the subject by the reserved fraction whichever side it had been fitted to; in portrait the fit is width-limited, so the x0.6 shrink bought no clearance.",
+  "three.js setViewOffset sets camera.aspect = fullWidth / fullHeight. The old offset's taller virtual frame turned a 0.46 aspect into 0.33 before the exploration's framing was computed, so the camera stood 1.39x further back than the framing asked for."
+ ],
+ "solution": {
+  "chosen": ["A - on narrow layouts the paused film's player steps aside and the panel takes its place", "C - the subject is composed into the band the panel actually leaves, measured from the panel's own rectangle", "B (minimal) - the elbow's duplicate angle is visually hidden on narrow layouts; portrait tablets lay the same panel out in two columns"],
+  "rejected": { "D_collapseWhileDragging": "not needed once A + C clear the target in every state; would add motion and a hidden-content state", "E_panelFollowsTarget": "not predictable" },
+  "cameraDistance": "unchanged on desktop; on a phone back to the fit the exploration's own sphere asks for (e.g. 3.185 -> 2.284 at 390x844), never tighter than the reviewed desktop framing",
+  "deliveryBounds": "framing spheres, exploration scales, manifests and GLBs unchanged"
+ },
+
+ "measurements": {
+  "coveredBefore": { "320": "4/4 at 100 %", "360": "4/4 at 100 %", "390": "4/4 at 100 %", "412": "3/4 at 78-100 %", "430": "2/4 at 46-50 %", "768": "hinge 27 %", "1024": "fixed 10 %" },
+  "coveredAfter": "0 % at every required width, every exploration, every state",
+  "thresholds": { "coveredMax": 0.02, "prominenceParityMin": 0.8, "framedDiameterMinOfShorterSide": 0.5 },
+  "worstParity": { "value": 0.81, "at": "360x800 explore.ball" },
+  "targetHeight390": { "fixed": [0.044, 0.1], "pivot": [0.041, 0.084], "ball": [0.122, 0.254], "hinge": [0.241, 0.532] },
+  "pointerDragMovedDeg390": { "fixed": 0.5, "pivot": 18, "ball": 30, "hinge": 56.4 },
+  "roundTripCameraDelta": 0
+ },
+
+ "content": {
+  "changedKey": "narr.ball.move",
+  "old": "That one joint gives the arm more freedom than any other in the body: forward, backwards, out sideways, and right round.",
+  "new": "From this one joint, the arm can move in many directions: forward, backwards, out sideways, and right round.",
+  "reason": "unsourced comparative claim removed",
+  "provenance": "draft-enrichment (unchanged)",
+  "provenanceTotals": { "source-excerpt": 1, "figure-reference": 29, "draft-enrichment": 126, "ui": 136 },
+  "reclassified": 0
+ },
+
+ "narration": {
+  "clipsRegenerated": ["ball.move"],
+  "clipsReused": 75,
+  "speechMs": [7960, 6720],
+  "shotMs": [8800, 7500],
+  "speakingRate": 1.0,
+  "overruns": 0,
+  "totalKB": [1435, 1432],
+  "lessonDuration": ["6:23", "6:21"],
+  "apiKeyInManifest": 0
+ },
+
+ "tests": {
+  "typecheck": "clean",
+  "unit": { "passed": 98, "failed": 0 },
+  "e2e": { "suites": 21, "passed": 116, "failed": 0, "flaky": 0, "durationMinutes": 15.2 },
+  "newSuite": "tests/e2e/step16e-mobile.spec.ts (5 tests)",
+  "earlierRun": "115 passed, 1 failed: step14-a11y found 'Return to the lesson' at 1.27:1 on a phone - a latent hover-contrast defect this step's layout exposed; fixed, then the whole suite re-run"
+ },
+
+ "accessibility": {
+  "axeViolations": 0,
+  "focusIntoPanelWhenPlayerHidden": "pass",
+  "focusReturnsToOpener": "pass",
+  "primaryButtonHoverContrast": ["1.27:1", "pass"],
+  "controlsAtLeast44px": "pass at all 9 widths",
+  "nvda": "NOT TESTED",
+  "voiceover": "NOT TESTED",
+  "talkback": "NOT TESTED"
+ },
+
+ "performance": {
+  "appJsCssKB": [1071, 1075],
+  "narrationKB": [1435, 1432],
+  "bytesBeforeFirst3DExcludingAudioKB": [545, 547],
+  "audioBeforeFirst3DKB": "36 / 8 - the first clip's prefetch races the first frame on both builds",
+  "timings": "not reported: this machine's CPU benchmark drifts ~4x between sessions",
+  "deviceCertification": "NOT CLAIMED"
+ },
+
+ "integrity": {
+  "frozenFiles": "29/29 byte-identical",
+  "masterBlendMatchesPin": true,
+  "assetDirsDiffVsBase": "empty",
+  "expertPackagesStep15And15bDiffVsBase": "empty",
+  "newGlbs": 0,
+  "blenderOpened": false
+ },
+
+ "leftAlone": [
+  "Shot composition during the film (composeLift 0.28/0.40) has the same aspect side-effect as the old explore composition. It governs all 52 mobile shots and is outside this brief.",
+  "The recall panel keeps the old composition; it is not an Explore task.",
+  "In the fixed exploration the task ('Try to move the two skull bones apart.') and the instruction ('Try to move the skull bones.') are near-duplicates on screen; content, left for the expert review.",
+  "On desktop, 'Return to the lesson' still appears twice while an exploration is open (panel and player toggle); on a phone it now appears once."
+ ],
+
+ "expertReview": {
+  "overall": "PENDING",
+  "package": "qa/expert/step16e/",
+  "previousPackagesModified": false,
+  "items": "all PENDING - anatomy, curriculum, taxonomy, landmarks, 0-145 deg, hip classification, 126 draft strings, human accessibility, asset licence, mobile composition on a real device"
+ }
+}

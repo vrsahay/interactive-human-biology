@@ -1,0 +1,55 @@
+{
+ "generatedAt": "2026-09-20T17:40:28.221Z",
+ "rows": [
+  {
+   "capture": "fixed",
+   "declaredTargets": [
+    "skeleton.016.bone.closeup.skull.fixed.skull"
+   ],
+   "groupsChanged": [
+    "skeleton.016.bone.closeup.skull.fixed.skull"
+   ],
+   "unexpected": [],
+   "cameraMoved": 0
+  },
+  {
+   "capture": "pivot",
+   "declaredTargets": [
+    "skeleton.015.bone.closeup.skull",
+    "skeleton.016.bone.closeup.skull.fixed.skull",
+    "skeleton.033.teeth.closeup.skull"
+   ],
+   "groupsChanged": [
+    "skeleton.015.bone.closeup.skull",
+    "skeleton.016.bone.closeup.skull.fixed.skull",
+    "skeleton.033.teeth.closeup.skull"
+   ],
+   "unexpected": [],
+   "cameraMoved": 0
+  },
+  {
+   "capture": "ball",
+   "declaredTargets": [
+    "skeleton.005.bone.closeup.elbow_right.shoulder_right.ball_socket.shoulder_right.hinge.elbow_right.elbow_r_core",
+    "skeleton.004.bone.closeup.elbow_right.elbow_r_core",
+    "skeleton.006.bone.closeup.elbow_right.hinge.elbow_right.elbow_r_core",
+    "skeleton.003.bone.closeup.elbow_r_core"
+   ],
+   "groupsChanged": [
+    "skeleton.003.bone.closeup.elbow_r_core",
+    "skeleton.004.bone.closeup.elbow_right.elbow_r_core",
+    "skeleton.005.bone.closeup.elbow_right.shoulder_right.ball_socket.shoulder_right.hinge.elbow_right.elbow_r_core",
+    "skeleton.006.bone.closeup.elbow_right.hinge.elbow_right.elbow_r_core"
+   ],
+   "unexpected": [],
+   "cameraMoved": 0
+  },
+  {
+   "capture": "hinge",
+   "declaredTargets": [],
+   "groupsChanged": [],
+   "unexpected": [],
+   "cameraMoved": 0
+  }
+ ]
+}

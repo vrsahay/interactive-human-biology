@@ -1,0 +1,137 @@
+{
+ "generatedAt": "2026-09-20T20:57:07.934Z",
+ "rows": [
+  {
+   "width": 1280,
+   "explore": "explore.fixed",
+   "site": "fixed.skull",
+   "inView": true,
+   "x": 640,
+   "y": 400,
+   "underPanel": false,
+   "panelShare": 0.136,
+   "stageShare": 0.864
+  },
+  {
+   "width": 1280,
+   "explore": "explore.pivot",
+   "site": "pivot.upper_neck",
+   "inView": true,
+   "x": 640,
+   "y": 400,
+   "underPanel": false,
+   "panelShare": 0.147,
+   "stageShare": 0.853
+  },
+  {
+   "width": 1280,
+   "explore": "explore.ball",
+   "site": "ball_socket.shoulder_right",
+   "inView": true,
+   "x": 640,
+   "y": 400,
+   "underPanel": false,
+   "panelShare": 0.147,
+   "stageShare": 0.853
+  },
+  {
+   "width": 1280,
+   "explore": "explore.hinge",
+   "site": "hinge.elbow_right",
+   "inView": true,
+   "x": 640,
+   "y": 400,
+   "underPanel": false,
+   "panelShare": 0.153,
+   "stageShare": 0.847
+  },
+  {
+   "width": 390,
+   "explore": "explore.fixed",
+   "site": "fixed.skull",
+   "inView": true,
+   "x": 195,
+   "y": 253,
+   "underPanel": true,
+   "panelShare": 0.403,
+   "stageShare": 0.597
+  },
+  {
+   "width": 390,
+   "explore": "explore.pivot",
+   "site": "pivot.upper_neck",
+   "inView": true,
+   "x": 195,
+   "y": 253,
+   "underPanel": true,
+   "panelShare": 0.439,
+   "stageShare": 0.561
+  },
+  {
+   "width": 390,
+   "explore": "explore.ball",
+   "site": "ball_socket.shoulder_right",
+   "inView": true,
+   "x": 195,
+   "y": 253,
+   "underPanel": true,
+   "panelShare": 0.439,
+   "stageShare": 0.561
+  },
+  {
+   "width": 390,
+   "explore": "explore.hinge",
+   "site": "hinge.elbow_right",
+   "inView": true,
+   "x": 195,
+   "y": 253,
+   "underPanel": true,
+   "panelShare": 0.457,
+   "stageShare": 0.543
+  },
+  {
+   "width": 412,
+   "explore": "explore.fixed",
+   "site": "fixed.skull",
+   "inView": true,
+   "x": 206,
+   "y": 253,
+   "underPanel": false,
+   "panelShare": 0.381,
+   "stageShare": 0.619
+  },
+  {
+   "width": 412,
+   "explore": "explore.pivot",
+   "site": "pivot.upper_neck",
+   "inView": true,
+   "x": 206,
+   "y": 253,
+   "underPanel": true,
+   "panelShare": 0.44,
+   "stageShare": 0.56
+  },
+  {
+   "width": 412,
+   "explore": "explore.ball",
+   "site": "ball_socket.shoulder_right",
+   "inView": true,
+   "x": 206,
+   "y": 253,
+   "underPanel": true,
+   "panelShare": 0.44,
+   "stageShare": 0.56
+  },
+  {
+   "width": 412,
+   "explore": "explore.hinge",
+   "site": "hinge.elbow_right",
+   "inView": true,
+   "x": 206,
+   "y": 253,
+   "underPanel": true,
+   "panelShare": 0.458,
+   "stageShare": 0.542
+  }
+ ]
+}

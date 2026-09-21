@@ -1,0 +1,382 @@
+/* Video-first cinematic lesson. Dark scientific stage; the anatomy is the hero, the interface stays quiet. */
+
+body[data-mode="film"] {
+  --film-bg-0: #1a1f28;
+  --film-bg-1: #0b0e13;
+  --film-ink: #f2f0ea;
+  --film-ink-2: rgba(242, 240, 234, 0.74);
+  /* 0.62 keeps secondary text >= 4.5:1 on the darkest and lightest parts of the stage gradient */
+  --film-ink-3: rgba(242, 240, 234, 0.62);
+  --film-line: rgba(242, 240, 234, 0.16);
+  --film-warm: #e2a95c;
+  --film-cool: #7fb0e6;
+  --film-focus: #9cc7ff;
+  --film-display: "Inter", "Segoe UI Variable Display", "Segoe UI", system-ui, sans-serif;
+  background: var(--film-bg-1);
+  color: var(--film-ink);
+  overflow: hidden;
+}
+
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+
+.film {
+  position: relative; width: 100%; height: 100%; overflow: hidden;
+  background: radial-gradient(90% 75% at 55% 42%, #232a35 0%, var(--film-bg-0) 38%, var(--film-bg-1) 100%);
+}
+.film-stage { position: absolute; inset: 0; touch-action: none; }
+.film-stage[data-cursor="grab"] { cursor: grab; }
+.film-stage.is-dragging-joint { cursor: grabbing; }
+.film-vignette { position: absolute; inset: 0; pointer-events: none; background: radial-gradient(120% 95% at 50% 45%, transparent 55%, rgba(4, 6, 9, 0.55) 100%); }
+
+/* ---- loading ---- */
+.film-loading { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; pointer-events: none; }
+.film-loading__title { margin: 0; font: 600 clamp(28px, 4vw, 44px)/1.1 var(--film-display); letter-spacing: -0.02em; }
+.film-loading__step { margin: 0; color: var(--film-ink-3); font-size: 14px; letter-spacing: 0.04em; }
+.film-loading--error { pointer-events: auto; padding: 24px; text-align: center; }
+.film-loading__detail { max-width: 720px; white-space: pre-wrap; font: 12px/1.5 ui-monospace, Consolas, monospace; color: #ffb4a8; }
+
+/* ---- top bar ---- */
+.film-top { position: absolute; top: 0; left: 0; right: 0; display: flex; align-items: baseline; gap: 18px; padding: 22px 32px 30px; z-index: 3; transition: opacity 0.6s ease;
+  /* quiet scrim: top-bar text stays readable when bright anatomy is framed behind it (measured contrast, Step 12) */
+  background: linear-gradient(180deg, rgba(6, 8, 11, 0.78) 0%, rgba(6, 8, 11, 0.5) 55%, transparent 100%); }
+.film-top__brand { margin: 0; font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--film-ink-3); font-weight: 600; }
+.film-top__chapter { margin: 0; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--film-ink-2); animation: film-fade 0.8s ease both; }
+.film-top__num { color: var(--film-warm); font-variant-numeric: tabular-nums; margin-right: 6px; }
+.film-top__actions { margin-left: auto; display: flex; align-items: center; gap: 4px; }
+.film-top__settings svg { width: 20px; height: 20px; }
+.film-top__actions .film-icon svg { width: 20px; height: 20px; }
+.film-link { color: var(--film-ink-2) !important; background: none; border: none; color: var(--film-ink-3); font: inherit; font-size: 12px; letter-spacing: 0.04em; cursor: pointer; padding: 10px 4px; min-height: 44px; }
+.film-link:hover { color: var(--film-ink); }
+
+/* ---- dialogs (sources, settings) ---- */
+.film-dialog-layer { position: absolute; inset: 0; z-index: 20; display: flex; justify-content: flex-end; align-items: flex-start; padding: 64px 24px 24px; }
+.film-dialog-backdrop { position: absolute; inset: 0; background: rgba(4, 6, 9, 0.45); }
+.film-dialog {
+  position: relative; width: min(440px, 100%); max-height: calc(100% - 16px); overflow: auto; padding: 14px 20px 20px; border-radius: 16px;
+  background: rgba(14, 17, 23, 0.97); border: 1px solid var(--film-line); font-size: 14px; line-height: 1.5; color: var(--film-ink-2); outline: none;
+}
+.film-dialog__header { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.film-dialog__title { margin: 0; font: 650 17px/1.3 var(--film-display); color: var(--film-ink); }
+.film-dialog dt { color: var(--film-ink); font-weight: 600; margin-top: 10px; }
+.film-dialog dd { margin: 2px 0 0; }
+.film-dialog__small { font-size: 13px; color: var(--film-ink-3); }
+.film-setting { border: none; margin: 14px 0 0; padding: 0; }
+.film-setting__legend { margin: 16px 0 4px; padding: 0; font: 600 13px var(--film-display); letter-spacing: 0.06em; text-transform: uppercase; color: var(--film-ink); }
+.film-radio { display: flex; align-items: center; gap: 10px; min-height: 44px; cursor: pointer; color: var(--film-ink); }
+.film-radio input { width: 20px; height: 20px; margin: 0; accent-color: var(--film-warm); }
+.film-radio__detail { color: var(--film-ink-3); }
+
+/* ---- late assets ---- */
+.film-buffering { position: absolute; top: 72px; left: 50%; transform: translateX(-50%); z-index: 6; margin: 0; padding: 8px 16px; border-radius: 999px; background: rgba(12, 15, 20, 0.8); border: 1px solid var(--film-line); font-size: 13px; color: var(--film-ink-2); display: flex; align-items: center; gap: 10px; }
+.film-buffering__dot { width: 8px; height: 8px; border-radius: 50%; background: var(--film-warm); animation: film-pulse 1.2s ease-in-out infinite; }
+.film-alert { position: absolute; top: 72px; left: 50%; transform: translateX(-50%); z-index: 7; display: flex; align-items: center; gap: 14px; padding: 8px 10px 8px 18px; border-radius: 14px; background: rgba(40, 18, 14, 0.94); border: 1px solid rgba(255, 180, 168, 0.4); color: #ffd9d2; font-size: 14px; }
+.film-alert p { margin: 0; }
+@keyframes film-pulse { 50% { opacity: 0.35; } }
+
+/* ---- the lead: what am I learning? (Step 16F) ----
+   One visual grammar for every shot: the chapter line in the top bar, and directly beneath it the current topic, medium
+   sized and left aligned, with the teaching-view status (when it is shown) under that. The anatomy owns the middle of the
+   frame and the spoken sentence owns the bottom. This replaced a 54 px heading in a heavy lower-left card that competed
+   with the anatomy and read like a presentation slide. The caption keeps every key, string and class it had; only its
+   position and scale changed. */
+.film-lead {
+  /* one layer under the top bar: the chapter line and its controls always draw above the heading's shade */
+  position: absolute; left: 32px; top: 74px; z-index: 2; display: flex; flex-direction: column; align-items: flex-start;
+  gap: 12px; width: min(540px, 42vw); pointer-events: none;
+}
+.film-caption { position: relative; pointer-events: none; opacity: 0; transform: translateY(-6px); transition: opacity 0.9s ease, transform 0.9s cubic-bezier(0.2, 0.7, 0.2, 1); }
+.film-caption.is-visible { opacity: 1; transform: none; }
+/* No card: a feathered shade that fades out well before its edges, so bright bone behind the text cannot drop its
+   contrast (the reason the old scrim existed - 2.80:1 on the skull in Step 13) without drawing a box on the stage. */
+.film-caption::before {
+  content: ""; position: absolute; z-index: -1; inset: -34px -72px -30px -48px; pointer-events: none;
+  background: radial-gradient(closest-side at 32% 50%, rgba(6, 8, 11, 0.62) 0%, rgba(6, 8, 11, 0.4) 55%, transparent 100%);
+}
+.film-caption__eyebrow { margin: 0 0 6px; font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--film-warm); font-weight: 600; }
+.film-caption__title { margin: 0; font: 640 clamp(24px, 2.4vw, 34px)/1.12 var(--film-display); letter-spacing: -0.02em; text-wrap: balance; text-shadow: 0 2px 16px rgba(0, 0, 0, 0.6); }
+/* a caption that is a sentence rather than a headline is the topic for its shot too, one step smaller */
+.film-caption__text { margin: 0; font: 560 clamp(18px, 1.72vw, 24px)/1.28 var(--film-display); letter-spacing: -0.01em; max-width: 38ch; text-wrap: pretty; text-shadow: 0 2px 16px rgba(0, 0, 0, 0.6); }
+.film-caption__title + .film-caption__text { margin-top: 8px; font-weight: 500; font-size: clamp(15px, 1.25vw, 18px); color: var(--film-ink-2); }
+.film-caption__text.is-source::before { content: ""; display: block; width: 36px; height: 2px; margin-bottom: 10px; background: var(--film-warm); }
+.film-caption__note { margin: 10px 0 0; font-size: 13px; line-height: 1.45; color: var(--film-ink-3); max-width: 52ch; }
+/* a dialog covers the lead on a narrow screen: fade it with the top bar rather than leave text nobody can read */
+.film:has([role="dialog"]) .film-lead { opacity: 0; }
+.film-badge { display: inline-block; vertical-align: middle; margin-left: 8px; padding: 2px 7px; border-radius: 5px; font: 650 11px/1.5 var(--film-display); letter-spacing: 0.12em; text-transform: uppercase; white-space: nowrap; }
+.film-badge--draft { color: rgba(242, 240, 234, 0.92); border: 1px solid rgba(242, 240, 234, 0.42); background: rgba(8, 10, 14, 0.55); }
+.film-badge--source { color: #10151c; background: var(--film-warm); }
+
+/* ---- 3D labels on the dark stage ---- */
+.film .label { background: rgba(12, 15, 20, 0.88); border-color: rgba(242, 240, 234, 0.16); box-shadow: none; backdrop-filter: blur(6px); }
+.film .label__title { color: var(--film-ink); font-size: 13px; font-weight: 560; letter-spacing: 0.01em; }
+.film .label__subtitle { color: var(--film-ink-3); }
+.film .label--joint_site .label__title { font-size: 13.5px; letter-spacing: 0.02em; }
+.film .label.is-focus { border-color: rgba(226, 169, 92, 0.6); box-shadow: 0 0 0 1px rgba(226, 169, 92, 0.25); }
+.film .label.is-focus .label__title { color: #fff; }
+.film .label-leader { stroke: rgba(242, 240, 234, 0.45); }
+.film .label-dot { fill: #0e1218; stroke: rgba(242, 240, 234, 0.8); }
+.film .label--badge { background: var(--film-warm); min-width: 3.6em; text-align: center; }
+.film .label--badge .label__title { color: #10151c; }
+.film .label.is-occluded { opacity: 0.78; }
+
+/* ---- interactive moment ---- */
+.film-interact {
+  position: absolute; right: clamp(16px, 4vw, 56px); bottom: 124px; z-index: 4; width: min(360px, calc(100% - 32px)); padding: 16px 18px 14px; border-radius: 16px;
+  background: rgba(12, 15, 20, 0.78); border: 1px solid var(--film-line); backdrop-filter: blur(14px); animation: film-fade 0.5s ease both;
+}
+.film-interact__prompt { margin: 0 0 8px; font-size: 15px; font-weight: 600; color: var(--film-ink); }
+.film-interact .dof-slider__label { color: var(--film-ink-2); font-size: 13px; font-weight: 500; }
+.film-interact .dof-slider__readout { color: var(--film-ink); font-size: 30px; }
+.film-interact .dof-slider__unit, .film-interact .dof-slider__scale { color: var(--film-ink-3); }
+.film-interact .dof-slider__track { background: rgba(242, 240, 234, 0.18); }
+.film-interact .dof-slider__tick { background: rgba(242, 240, 234, 0.25); }
+.film-interact .dof-slider__thumb { background: #10151c; border-color: var(--film-warm); }
+.film-interact .dof-slider__control { min-height: 44px; }
+.film-interact__check { display: flex; align-items: center; gap: 12px; margin-top: 8px; }
+.film-interact__feedback { margin: 0; font-size: 14px; color: var(--film-ink-2); }
+.film-interact__feedback.is-correct { color: #9fe0a8; }
+.film-interact__feedback.is-incorrect { color: var(--film-warm); }
+.film-btn { min-height: 44px; padding: 0 16px; border-radius: 999px; border: 1px solid var(--film-line); background: rgba(242, 240, 234, 0.06); color: var(--film-ink); font: 600 14px var(--film-display); cursor: pointer; }
+.film-btn:hover { background: rgba(242, 240, 234, 0.12); }
+.film-btn--primary { margin-top: 10px; background: var(--film-ink); color: #10151c; border-color: transparent; }
+/* Step 16E: the generic hover above outranks the primary fill, which left dark text on a near-transparent background -
+   1.27:1. It went unnoticed until the exploration panel took the player's place on a phone and the learner's finger,
+   still resting where "Explore this joint" had been, landed on "Return to the lesson" (touch browsers keep :hover). */
+.film-btn--primary:hover { background: #ffffff; }
+.film-explore-hint { position: absolute; left: 50%; bottom: 124px; transform: translateX(-50%); margin: 0; padding: 6px 16px; border-radius: 999px; background: rgba(12, 15, 20, 0.72); border: 1px solid var(--film-line); font-size: 13px; color: var(--film-ink-2); z-index: 4; }
+
+/* Persistent teaching status: one quiet line, present for exactly as long as the movement marks are, instead of the
+   same technical disclaimer under every caption. Since Step 16F it flows in the lead, under the current topic. */
+.film-teachmark {
+  margin: 0; padding: 5px 12px; border-radius: 999px;
+  background: rgba(12, 15, 20, 0.72); border: 1px solid var(--film-line); color: var(--film-ink-2);
+  font-size: 12px; letter-spacing: 0.01em; pointer-events: none;
+}
+
+/* The plain-language version of the same fact, said once when an exploration opens. */
+.film-explore__teaching { margin: 10px 0 0; font-size: 13px; line-height: 1.45; color: var(--film-ink-2); }
+
+/* ---- player ---- */
+.film-player {
+  position: absolute; left: 0; right: 0; bottom: 0; z-index: 5; display: flex; align-items: center; gap: 10px; padding: 18px 28px 26px;
+  background: linear-gradient(0deg, rgba(6, 8, 11, 0.92) 0%, rgba(6, 8, 11, 0.72) 60%, transparent 100%); transition: opacity 0.6s ease;
+}
+.film-icon { flex: none; width: 44px; height: 44px; display: grid; place-items: center; border-radius: 50%; border: none; background: none; color: var(--film-ink); cursor: pointer; }
+/* Narration waiting for the user gesture a browser requires before audio may start. */
+.film-icon.is-attention { color: var(--film-warm); }
+.film-icon[aria-pressed="false"] { color: var(--film-ink-3); }
+.film-icon svg { width: 22px; height: 22px; fill: currentColor; }
+.film-icon:hover { background: rgba(242, 240, 234, 0.1); }
+.film-timeline { position: relative; flex: 1; min-width: 0; padding-top: 0; }
+/* 44 px pointer target; the visible bar stays 4 px */
+.film-timeline__track { position: relative; height: 44px; margin-bottom: -12px; cursor: pointer; outline: none; border-radius: 6px; touch-action: none; }
+.film-timeline__segment { position: absolute; top: 20px; height: 4px; padding: 0 2px; box-sizing: border-box; }
+.film-timeline__segment::before { content: ""; position: absolute; inset: 0 2px; border-radius: 2px; background: rgba(242, 240, 234, 0.2); }
+.film-timeline__fill { position: absolute; top: 0; bottom: 0; left: 2px; max-width: calc(100% - 4px); border-radius: 2px; background: var(--film-ink); }
+.film-timeline__segment.is-current .film-timeline__fill { background: var(--film-warm); }
+.film-timeline__track:hover .film-timeline__segment { top: 19px; height: 6px; }
+.film-timeline__track:focus-visible { box-shadow: 0 0 0 2px var(--film-focus); }
+.film-chapters { position: relative; list-style: none; margin: 2px 0 0; padding: 0; height: 44px; }
+.film-chapters li { position: absolute; top: 0; left: var(--start); }
+.film-chapter { display: flex; align-items: baseline; gap: 6px; min-width: 44px; min-height: 44px; padding: 4px 4px; background: none; border: none; color: var(--film-ink-3); font: 500 11px var(--film-display); letter-spacing: 0.08em; text-transform: uppercase; text-align: left; cursor: pointer; white-space: nowrap; }
+.film-chapter:hover, .film-chapter.is-current { color: var(--film-ink); }
+.film-chapter__num { color: var(--film-warm); font-variant-numeric: tabular-nums; }
+/* Only the current chapter shows its title in the timeline (others: number; full title on hover/focus). */
+/* Timeline markers show numbers; the title floats above on hover/focus (the top bar always names the current chapter),
+   so a marker never widens into its neighbour. */
+.film-chapter { position: relative; }
+.film-chapter__title { display: none; }
+.film-chapter:hover .film-chapter__title, .film-chapter:focus-visible .film-chapter__title { display: block; position: absolute; left: 0; bottom: calc(100% + 18px); z-index: 2; padding: 4px 8px; border-radius: 6px; background: rgba(8, 10, 14, 0.94); border: 1px solid var(--film-line); color: var(--film-ink); pointer-events: none; }
+.film-chapter.is-current .film-chapter__num { text-decoration: underline; text-decoration-color: var(--film-warm); text-underline-offset: 6px; text-decoration-thickness: 2px; }
+.film-time { flex: none; margin: 0 4px; font-size: 13px; font-variant-numeric: tabular-nums; color: var(--film-ink); }
+.film-time span { color: var(--film-ink-3); }
+.film-pill { flex: none; min-height: 44px; padding: 0 18px; border-radius: 999px; border: 1px solid var(--film-line); background: rgba(242, 240, 234, 0.06); color: var(--film-ink); font: 600 13px var(--film-display); letter-spacing: 0.02em; cursor: pointer; }
+.film-pill.is-on, .film-pill:hover { background: var(--film-ink); color: #10151c; }
+.film :focus-visible { outline: 2px solid var(--film-focus); outline-offset: 2px; }
+
+/* quiet playback: controls recede, never fully disappear */
+/* A dialog owns the screen. On a narrow layout it covers the top bar completely, so the chapter title behind it is
+   text the learner cannot read - and, measured over the rendered frame, text that cannot meet a contrast ratio. It is
+   hidden for as long as the dialog is open, and comes back with it. */
+.film:has([role="dialog"]) .film-top { opacity: 0; pointer-events: none; }
+
+.film.is-quiet .film-player { opacity: 0.12; }
+.film.is-quiet .film-top { opacity: 0.35; }
+.film.is-quiet .film-player:focus-within, .film.is-quiet .film-top:focus-within { opacity: 1; }
+
+/* learner caption size */
+.film[data-captions="large"] .film-caption__title { font-size: clamp(28px, 2.8vw, 40px); }
+.film[data-captions="large"] .film-caption__text { font-size: clamp(21px, 2vw, 28px); }
+.film[data-captions="large"] .film-caption__note { font-size: 16px; }
+.film[data-captions="large"] .label__title { font-size: 15px; }
+/* while a shot waits for its assets the previous picture stays; its caption is withheld */
+.film[data-buffering] .film-caption { opacity: 0; }
+
+
+/* ---- spoken line (Step 16B) ----
+   The caption is the headline a learner holds on to; this is the sentence being spoken, in its own band across the
+   bottom, one sentence at a time. It is aria-hidden: the caption and the shot's own description already carry the shot
+   for assistive technology, and a live region firing every few seconds would talk over both. */
+.film-subtitle {
+  /* centred with auto margins rather than a translate: the fade keyframe ends on transform:none, which would undo it */
+  position: absolute; left: 0; right: 0; margin: 0 auto; bottom: 116px; z-index: 3;
+  width: min(780px, 84vw); text-align: center; pointer-events: none;
+  font: 500 clamp(16px, 1.35vw, 21px)/1.4 var(--film-display); color: var(--film-ink);
+  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.75), 0 0 34px rgba(0, 0, 0, 0.55);
+  animation: film-fade 0.45s ease both;
+}
+/* Measured over the rendered frame, the spoken line came out at 2.65:1 against lit bone - the same problem the
+   caption scrim solved in Step 13, and the same answer: a feathered backdrop that restores contrast without boxing the
+   text in. Narrow screens already put it on an opaque panel. */
+@media (min-width: 901px) {
+  .film-subtitle::before {
+    content: ""; position: absolute; z-index: -1; inset: -16px -40px -14px -40px; border-radius: 26px;
+    background: radial-gradient(70% 140% at 50% 50%, rgba(6, 8, 11, 0.92) 0%, rgba(6, 8, 11, 0.8) 45%, rgba(6, 8, 11, 0.34) 78%, transparent 100%);
+  }
+}
+.film[data-captions="large"] .film-subtitle { font-size: clamp(19px, 1.7vw, 26px); }
+.film[data-motion="reduce"] .film-subtitle { animation: none; }
+.film[data-buffering] .film-subtitle { opacity: 0; }
+
+/* ---- landing card (Step 16B) ---- */
+.film-start { position: absolute; inset: 0; z-index: 9; display: flex; align-items: center; justify-content: center; padding: 24px; background: rgba(6, 8, 11, 0.62); backdrop-filter: blur(3px); }
+.film-start__card { width: min(460px, 100%); padding: 26px 28px 24px; border-radius: 20px; background: rgba(10, 13, 18, 0.94); border: 1px solid var(--film-line); }
+.film-start__eyebrow { margin: 0 0 12px; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--film-warm); font-weight: 600; }
+.film-start__title { margin: 0 0 10px; font: 650 clamp(30px, 4vw, 44px)/1.02 var(--film-display); letter-spacing: -0.03em; color: var(--film-ink); }
+.film-start__thesis { margin: 0 0 20px; font-size: 16px; line-height: 1.45; color: var(--film-ink-2); }
+.film-start__go { margin-top: 0; font-size: 16px; padding: 12px 22px; }
+.film-start__sound { margin: 14px 0 0; font-size: 13px; color: var(--film-ink-3); }
+
+/* ---- lesson complete (Step 16B) ---- */
+.film-end {
+  position: absolute; left: 50%; transform: translateX(-50%); bottom: var(--film-player-clear, 150px); z-index: 6;
+  display: flex; flex-direction: column; align-items: center; gap: 12px;
+  padding: 18px 24px; border-radius: 18px; background: rgba(10, 13, 18, 0.92); border: 1px solid var(--film-line); backdrop-filter: blur(10px);
+}
+.film-end__title { margin: 0; font: 650 20px/1.2 var(--film-display); color: var(--film-ink); }
+.film-end__actions { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
+.film-end__actions .film-btn { margin-top: 0; }
+
+/* ---- explore task (Step 16B) ---- */
+.film-explore__task { margin: 12px 0 0; font-size: 15px; line-height: 1.4; font-weight: 600; color: var(--film-ink); }
+.film-explore__task-label { display: inline-block; margin-right: 6px; padding: 2px 7px; border-radius: 6px; font: 650 11px/1.5 var(--film-display); letter-spacing: 0.08em; text-transform: uppercase; color: var(--film-ink-2); border: 1px solid var(--film-line); }
+.film-explore__task.is-done .film-explore__task-label { color: #10151c; background: var(--film-warm); border-color: transparent; }
+.film-explore__done { margin: 8px 0 0; font-size: 14px; line-height: 1.45; color: var(--film-warm); font-weight: 600; }
+
+@keyframes film-fade { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+
+@media (max-width: 900px) {
+  .film-top { padding: 14px 16px 22px; gap: 10px; flex-wrap: wrap; background: linear-gradient(180deg, rgba(6, 8, 11, 0.9) 0%, rgba(6, 8, 11, 0.72) 60%, transparent 100%); }
+  .film-top__brand { display: none; }
+  /* the control row wraps to a second line in a chapter that offers two actions (recall + explore), so the player is
+     not a fixed height. FilmShell measures it into --film-player-h; everything above it clears the height the player
+     actually has, with a fallback for the frame before the first measurement. */
+  .film { --film-player-clear: calc(var(--film-player-h, 150px) + 26px); }
+  .film-lead { left: 16px; right: 16px; top: 58px; width: auto; gap: 8px; }
+  /* On a phone the anatomy reaches the top of the frame, so the small feathered shade is not enough: measured 2.37-4.48:1
+     on the intro subtitle, the support note and the recap. The same edge-less vertical fade the top bar uses, continued
+     down behind the heading while it is shown - a shade across the top of the frame, not a card. */
+  .film-caption::before { display: none; }
+  .film-lead::before {
+    content: ""; position: absolute; z-index: -1; left: -16px; right: -16px; top: -58px; bottom: -34px; pointer-events: none;
+    background: linear-gradient(180deg, rgba(6, 8, 11, 0.88) 0%, rgba(6, 8, 11, 0.82) 72%, transparent 100%);
+    opacity: 0; transition: opacity 0.9s ease;
+  }
+  .film-lead:has(.film-caption.is-visible)::before { opacity: 1; }
+  .film-subtitle { left: 12px; right: 12px; width: auto; margin: 0; bottom: var(--film-player-clear); padding: 10px 12px; border-radius: 12px; background: rgba(8, 10, 14, 0.8); backdrop-filter: blur(8px); font-size: 15px; text-shadow: none; }
+  .film-end { left: 12px; right: 12px; width: auto; transform: none; }
+  /* with the joint controls open, the caption moves under the top bar so the two panels never stack on each other */
+  /* on narrow screens captions overlap the anatomy: a soft panel keeps them readable */
+  .film-caption__title { font-size: 22px; }
+  .film-caption__text { font-size: 17px; max-width: none; }
+  .film-caption__title + .film-caption__text { font-size: 15px; }
+  .film-interact { left: 12px; right: 12px; width: auto; bottom: var(--film-player-clear); padding: 12px 14px; }
+  .film-player { padding: 10px 10px 14px; gap: 4px; flex-wrap: wrap; }
+  .film-timeline { order: -1; flex-basis: 100%; }
+  /* Chapter navigation on a phone: equal targets (>= 44 px) instead of proportional markers, wrapping onto a second
+     row rather than shrinking below the touch target or scrolling sideways. The player measures its own height, so the
+     captions and panels above it clear the taller strip. */
+  .film-chapters { display: flex; flex-wrap: wrap; height: auto; gap: 2px; }
+  .film-chapters li { position: static; flex: 1 1 17%; min-width: 44px; }
+  .film-chapter { width: 100%; justify-content: center; }
+  .film-chapter:hover .film-chapter__title, .film-chapter:focus-visible .film-chapter__title { display: none; }
+  .film-chapter.is-current { box-shadow: inset 0 -2px 0 var(--film-warm); }
+  .film-top__actions .film-link { font-size: 12px; padding: 10px 6px; }
+  .film-dialog-layer { padding: 12px; align-items: stretch; }
+  .film-buffering, .film-alert { top: auto; bottom: calc(var(--film-player-clear) - 6px); max-width: calc(100% - 24px); }
+  .film-time { margin-left: auto; }
+}
+
+/* Reduced motion follows the learner setting (default: the system preference), set as data-motion on the film root. */
+.film[data-motion="reduce"] .film-caption, .film[data-motion="reduce"] .film-lead::before, .film[data-motion="reduce"] .film-top, .film[data-motion="reduce"] .film-player { transition: none; }
+.film[data-motion="reduce"] .film-top__chapter, .film[data-motion="reduce"] .film-interact, .film[data-motion="reduce"] .film-buffering__dot { animation: none; }
+
+/* ---- explore (Step 14) ----
+   One panel serves all four joints. The status line is never optional: a learner must always be able to tell whether they
+   are moving the validated rig or a teaching simulation. */
+.film-explore {
+  position: absolute; left: clamp(24px, 5vw, 80px); bottom: 132px; z-index: 4; width: min(360px, 42vw);
+  padding: 16px 18px; border-radius: 16px; background: rgba(10, 13, 18, 0.9); border: 1px solid var(--film-line); backdrop-filter: blur(10px);
+}
+.film-explore__head { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.film-explore__title { margin: 0; font: 650 17px/1.3 var(--film-display); color: var(--film-ink); }
+.film-explore__status { padding: 3px 9px; border-radius: 6px; font: 650 11px/1.5 var(--film-display); letter-spacing: 0.08em; text-transform: uppercase; white-space: nowrap; }
+.film-explore__status--validated { color: #10151c; background: var(--film-warm); }
+.film-explore__status--teaching { color: rgba(242, 240, 234, 0.92); border: 1px solid rgba(242, 240, 234, 0.42); background: rgba(8, 10, 14, 0.55); }
+.film-explore__instruction { margin: 12px 0 0; font-size: 15px; font-weight: 600; color: var(--film-ink); }
+.film-explore__readout { margin: 8px 0 0; min-height: 26px; font: 650 20px/1.3 var(--film-display); font-variant-numeric: tabular-nums; color: var(--film-warm); }
+.film-explore__explanation { margin: 6px 0 0; font-size: 14px; line-height: 1.45; color: var(--film-ink-2); }
+.film-explore__keys { margin: 10px 0 0; }
+.film-explore__actions { display: flex; gap: 10px; margin-top: 14px; }
+@media (max-width: 900px) {
+  .film-explore { left: 12px; right: 12px; width: auto; bottom: var(--film-player-clear, 176px); padding: 12px 14px; }
+  /*
+   * Step 16E. On a narrow screen the player (244 px at 390 x 844) and the exploration panel stacked on top of each other
+   * left almost no stage: the joint the learner was asked to move sat underneath the card. While an exploration is open
+   * the film is paused and the panel carries its own Reset and Return, so the player steps aside and the panel takes its
+   * place at the bottom. That also removes the second "Return to the lesson" the player's toggle used to show.
+   */
+  .film:has([data-testid="film-explore-panel"]) .film-player { display: none; }
+  .film:has([data-testid="film-explore-panel"]) .film-explore { bottom: calc(12px + env(safe-area-inset-bottom, 0px)); }
+  /* The elbow's slider shows the angle itself; on a narrow screen the second, identical angle above it costs the joint
+     34 px of stage. It stays in the accessibility tree: it is the live status a screen reader hears. */
+  .film-explore__readout--dof { position: absolute; width: 1px; height: 1px; min-height: 0; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+}
+/* A portrait tablet gives the panel the full width but stacks it in one column, so it is tall and the joint above it is
+   squeezed. Same content, same reading order: the explanation beside the slider, the key hint beside the buttons. */
+@media (min-width: 600px) and (max-width: 900px) {
+  .film-explore { display: grid; grid-template-columns: minmax(0, 1fr) auto; column-gap: 20px; align-items: start; }
+  .film-explore > * { grid-column: 1 / -1; }
+  .film-explore > .film-explore__explanation, .film-explore > .film-explore__keys { grid-column: 1; }
+  .film-explore > .film-explore__control { grid-column: 2; width: min(320px, 44vw); margin-top: 6px; }
+  .film-explore > .film-explore__actions { grid-column: 2; align-self: center; margin-top: 10px; }
+}
+.film-explore__control { margin-top: 12px; }
+.film-explore__control .dof-slider__readout { font-size: 24px; }
+
+/* ---- recall (Step 14) ----
+   Retrieval practice: the learner is asked what a movement means before the category is named. */
+.film-recall {
+  position: absolute; left: clamp(24px, 5vw, 80px); bottom: 132px; z-index: 4; width: min(420px, 46vw);
+  padding: 16px 18px; border-radius: 16px; background: rgba(10, 13, 18, 0.92); border: 1px solid var(--film-line); backdrop-filter: blur(10px);
+}
+.film-recall__progress { margin: 0; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--film-ink-3); }
+.film-recall__question { margin: 8px 0 0; font: 600 19px/1.3 var(--film-display); color: var(--film-ink); }
+.film-recall__prompt { margin: 6px 0 0; font-size: 14px; color: var(--film-ink-2); }
+.film-recall__options { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+.film-recall__option {
+  min-height: 44px; padding: 0 14px; border-radius: 10px; border: 1px solid var(--film-line);
+  background: rgba(242, 240, 234, 0.06); color: var(--film-ink); font: 600 14px var(--film-display); cursor: pointer;
+}
+.film-recall__option:hover:not(:disabled) { background: rgba(242, 240, 234, 0.14); }
+/* Right and wrong are never colour alone: the mark and the feedback line carry it too. */
+.film-recall__option.is-right { background: var(--film-warm); color: #10151c; border-color: var(--film-warm); }
+.film-recall__option.is-right::after { content: " ✓"; }
+.film-recall__option.is-wrong { opacity: 0.55; border-style: dashed; }
+.film-recall__option.is-wrong::after { content: " ✕"; }
+.film-recall__option:disabled { cursor: default; }
+.film-recall__feedback { margin: 10px 0 0; min-height: 20px; font-size: 14px; line-height: 1.45; color: var(--film-ink-2); }
+.film-recall__feedback.is-correct { color: var(--film-ink); }
+.film-recall__actions { display: flex; gap: 10px; margin-top: 12px; }
+@media (max-width: 900px) {
+  .film-recall { left: 12px; right: 12px; width: auto; bottom: var(--film-player-clear, 176px); padding: 12px 14px; }
+}

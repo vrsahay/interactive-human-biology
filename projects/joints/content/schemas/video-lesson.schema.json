@@ -1,0 +1,1180 @@
+{
+ "$schema": "http://json-schema.org/draft-07/schema#",
+ "$id": "joints-platform/video-lesson.schema.json",
+ "title": "Video lesson (schema 2): chapters of declarative shots",
+ "description": "Describes WHAT the film shows (chapters, shots, camera intent, anatomy presentation, captions, interactive moments). The engine decides HOW. References are validated a second time against the joint and body manifests at load.",
+ "type": "object",
+ "additionalProperties": false,
+ "required": [
+  "schema",
+  "format",
+  "lessonId",
+  "jointId",
+  "bodyAssetId",
+  "localeId",
+  "titleKey",
+  "subtitleKey",
+  "curriculum",
+  "reducedMotion",
+  "chapters"
+ ],
+ "properties": {
+  "schema": {
+   "const": 2
+  },
+  "format": {
+   "const": "video"
+  },
+  "lessonId": {
+   "type": "string",
+   "pattern": "^[a-z0-9-]+$"
+  },
+  "jointId": {
+   "type": "string",
+   "pattern": "^[a-z0-9_]+$"
+  },
+  "bodyAssetId": {
+   "type": "string",
+   "pattern": "^[a-z0-9_]+$"
+  },
+  "localeId": {
+   "type": "string",
+   "pattern": "^[a-z0-9-]+$"
+  },
+  "titleKey": {
+   "$ref": "#/definitions/textKey"
+  },
+  "subtitleKey": {
+   "$ref": "#/definitions/textKey"
+  },
+  "curriculum": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "status",
+    "sourceIds",
+    "figureReference",
+    "noteKey"
+   ],
+   "properties": {
+    "status": {
+     "enum": [
+      "draft",
+      "reviewed",
+      "approved"
+     ]
+    },
+    "sourceIds": {
+     "type": "array",
+     "items": {
+      "type": "string"
+     }
+    },
+    "figureReference": {
+     "type": "string"
+    },
+    "noteKey": {
+     "$ref": "#/definitions/textKey"
+    }
+   }
+  },
+  "reducedMotion": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "camera",
+    "pose",
+    "concepts",
+    "captions"
+   ],
+   "properties": {
+    "camera": {
+     "const": "cut"
+    },
+    "pose": {
+     "const": "keyframes"
+    },
+    "concepts": {
+     "const": "static"
+    },
+    "captions": {
+     "const": "instant"
+    }
+   }
+  },
+  "chapters": {
+   "type": "array",
+   "description": "The nine teaching beats, in order: hook, concept, the four categories, compare, recall challenge, body map.",
+   "minItems": 9,
+   "maxItems": 9,
+   "additionalItems": false,
+   "items": [
+    {
+     "allOf": [
+      {
+       "$ref": "#/definitions/chapter"
+      },
+      {
+       "properties": {
+        "id": {
+         "const": "hook"
+        },
+        "number": {
+         "const": "01"
+        }
+       }
+      }
+     ]
+    },
+    {
+     "allOf": [
+      {
+       "$ref": "#/definitions/chapter"
+      },
+      {
+       "properties": {
+        "id": {
+         "const": "what_is_joint"
+        },
+        "number": {
+         "const": "02"
+        }
+       }
+      }
+     ]
+    },
+    {
+     "allOf": [
+      {
+       "$ref": "#/definitions/chapter"
+      },
+      {
+       "properties": {
+        "id": {
+         "const": "fixed"
+        },
+        "number": {
+         "const": "03"
+        }
+       }
+      }
+     ]
+    },
+    {
+     "allOf": [
+      {
+       "$ref": "#/definitions/chapter"
+      },
+      {
+       "properties": {
+        "id": {
+         "const": "pivot"
+        },
+        "number": {
+         "const": "04"
+        }
+       }
+      }
+     ]
+    },
+    {
+     "allOf": [
+      {
+       "$ref": "#/definitions/chapter"
+      },
+      {
+       "properties": {
+        "id": {
+         "const": "ball_socket"
+        },
+        "number": {
+         "const": "05"
+        }
+       }
+      }
+     ]
+    },
+    {
+     "allOf": [
+      {
+       "$ref": "#/definitions/chapter"
+      },
+      {
+       "properties": {
+        "id": {
+         "const": "hinge"
+        },
+        "number": {
+         "const": "06"
+        }
+       }
+      }
+     ]
+    },
+    {
+     "allOf": [
+      {
+       "$ref": "#/definitions/chapter"
+      },
+      {
+       "properties": {
+        "id": {
+         "const": "compare"
+        },
+        "number": {
+         "const": "07"
+        }
+       }
+      }
+     ]
+    },
+    {
+     "allOf": [
+      {
+       "$ref": "#/definitions/chapter"
+      },
+      {
+       "properties": {
+        "id": {
+         "const": "recall"
+        },
+        "number": {
+         "const": "08"
+        }
+       }
+      }
+     ]
+    },
+    {
+     "allOf": [
+      {
+       "$ref": "#/definitions/chapter"
+      },
+      {
+       "properties": {
+        "id": {
+         "const": "body_map"
+        },
+        "number": {
+         "const": "09"
+        }
+       }
+      }
+     ]
+    }
+   ]
+  },
+  "explores": {
+   "type": "array",
+   "description": "Learner-controlled joint explorations. One per joint category. The engine is anatomy-agnostic: every id, pivot, axis and limit is declared here and checked against the body manifest at build time.",
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "exploreId",
+     "chapterId",
+     "jointType",
+     "status",
+     "site",
+     "highlight",
+     "context",
+     "siteLabels",
+     "titleKey",
+     "instructionKey",
+     "explanationKey",
+     "statusKey",
+     "motion",
+     "camera"
+    ],
+    "properties": {
+     "exploreId": {
+      "type": "string"
+     },
+     "chapterId": {
+      "type": "string"
+     },
+     "jointType": {
+      "enum": [
+       "fixed",
+       "pivot",
+       "ball_and_socket",
+       "hinge"
+      ]
+     },
+     "status": {
+      "enum": [
+       "validated-rig",
+       "teaching-simulation"
+      ]
+     },
+     "site": {
+      "type": "string"
+     },
+     "highlight": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "context": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "siteLabels": {
+      "type": "array",
+      "items": {
+       "type": "object",
+       "additionalProperties": false,
+       "required": [
+        "siteId",
+        "textKey"
+       ],
+       "properties": {
+        "siteId": {
+         "type": "string"
+        },
+        "textKey": {
+         "type": "string"
+        }
+       }
+      }
+     },
+     "titleKey": {
+      "type": "string"
+     },
+     "instructionKey": {
+      "type": "string"
+     },
+     "explanationKey": {
+      "type": "string"
+     },
+     "statusKey": {
+      "type": "string"
+     },
+     "motion": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+       "kind",
+       "groups",
+       "pivot",
+       "primaryAxis",
+       "limitsDeg",
+       "resetDeg",
+       "degPerPixel",
+       "stepDeg"
+      ],
+      "properties": {
+       "kind": {
+        "enum": [
+         "dof",
+         "oneAxis",
+         "twoAxis",
+         "resist"
+        ]
+       },
+       "groups": {
+        "type": "array",
+        "items": {
+         "type": "string"
+        }
+       },
+       "pivot": {
+        "type": "array",
+        "items": {
+         "type": "number"
+        },
+        "minItems": 3,
+        "maxItems": 3
+       },
+       "primaryAxis": {
+        "type": "array",
+        "items": {
+         "type": "number"
+        },
+        "minItems": 3,
+        "maxItems": 3
+       },
+       "secondaryAxis": {
+        "type": "array",
+        "items": {
+         "type": "number"
+        },
+        "minItems": 3,
+        "maxItems": 3
+       },
+       "limitsDeg": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+         "primary"
+        ],
+        "properties": {
+         "primary": {
+          "type": "array",
+          "items": {
+           "type": "number"
+          },
+          "minItems": 2,
+          "maxItems": 2
+         },
+         "secondary": {
+          "type": "array",
+          "items": {
+           "type": "number"
+          },
+          "minItems": 2,
+          "maxItems": 2
+         }
+        }
+       },
+       "resetDeg": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+         "primary"
+        ],
+        "properties": {
+         "primary": {
+          "type": "number"
+         },
+         "secondary": {
+          "type": "number"
+         }
+        }
+       },
+       "degPerPixel": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+         "primary"
+        ],
+        "properties": {
+         "primary": {
+          "type": "number"
+         },
+         "secondary": {
+          "type": "number"
+         }
+        }
+       },
+       "stepDeg": {
+        "type": "number"
+       },
+       "dofId": {
+        "type": "string"
+       },
+       "springBack": {
+        "type": "number"
+       }
+      }
+     },
+     "camera": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+       "view",
+       "scale"
+      ],
+      "properties": {
+       "view": {
+        "type": "string"
+       },
+       "scale": {
+        "type": "number"
+       },
+       "elevation": {
+        "type": "number"
+       }
+      }
+     },
+     "openAtShotId": {
+      "type": "string",
+      "description": "Reaching this shot hands the film over to the exploration."
+     },
+     "task": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "The one thing the learner is asked to do here. Without it an exploration is movement with no purpose.",
+      "required": [
+       "promptKey",
+       "doneKey",
+       "goal"
+      ],
+      "properties": {
+       "promptKey": {
+        "$ref": "#/definitions/textKey"
+       },
+       "doneKey": {
+        "$ref": "#/definitions/textKey"
+       },
+       "goal": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+         "kind"
+        ],
+        "properties": {
+         "kind": {
+          "enum": [
+           "attempt",
+           "reach",
+           "twoWay"
+          ]
+         },
+         "primaryDeg": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "maximum": 180
+         },
+         "secondaryDeg": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "maximum": 180
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "recall": {
+   "type": "object",
+   "description": "Retrieval sequence for its own chapter: the learner is shown a joint and recalls its category, instead of reading a labelled map.",
+   "additionalProperties": false,
+   "required": [
+    "chapterId",
+    "promptKey",
+    "correctKey",
+    "incorrectKey",
+    "completeKey",
+    "options",
+    "steps"
+   ],
+   "properties": {
+    "chapterId": {
+     "type": "string"
+    },
+    "promptKey": {
+     "type": "string"
+    },
+    "correctKey": {
+     "type": "string"
+    },
+    "incorrectKey": {
+     "type": "string"
+    },
+    "completeKey": {
+     "type": "string"
+    },
+    "options": {
+     "type": "array",
+     "minItems": 2,
+     "items": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+       "optionId",
+       "labelKey"
+      ],
+      "properties": {
+       "optionId": {
+        "type": "string"
+       },
+       "labelKey": {
+        "type": "string"
+       }
+      }
+     }
+    },
+    "steps": {
+     "type": "array",
+     "minItems": 1,
+     "items": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+       "stepId",
+       "site",
+       "questionKey",
+       "answer",
+       "highlight",
+       "camera",
+       "revealKey"
+      ],
+      "properties": {
+       "stepId": {
+        "type": "string"
+       },
+       "site": {
+        "type": "string"
+       },
+       "questionKey": {
+        "type": "string"
+       },
+       "revealKey": {
+        "type": "string"
+       },
+       "answer": {
+        "type": "string"
+       },
+       "highlight": {
+        "type": "array",
+        "items": {
+         "type": "string"
+        }
+       },
+       "camera": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+         "view",
+         "scale"
+        ],
+        "properties": {
+         "view": {
+          "type": "string"
+         },
+         "scale": {
+          "type": "number"
+         },
+         "elevation": {
+          "type": "number"
+         }
+        }
+       }
+      }
+     }
+    },
+    "shotId": {
+     "type": "string",
+     "description": "The shot the retrieval panel opens on; reaching it hands the film over to the learner."
+    }
+   }
+  }
+ },
+ "definitions": {
+  "textKey": {
+   "type": "string",
+   "pattern": "^[a-z0-9_.-]+$"
+  },
+  "refs": {
+   "type": "array",
+   "items": {
+    "type": "string",
+    "minLength": 1
+   }
+  },
+  "poseValue": {
+   "oneOf": [
+    {
+     "type": "number"
+    },
+    {
+     "enum": [
+      "sourcePose",
+      "neutral"
+     ]
+    }
+   ]
+  },
+  "chapter": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "id",
+    "number",
+    "titleKey",
+    "shots"
+   ],
+   "properties": {
+    "id": {
+     "enum": [
+      "hook",
+      "what_is_joint",
+      "fixed",
+      "pivot",
+      "ball_socket",
+      "hinge",
+      "compare",
+      "recall",
+      "body_map"
+     ]
+    },
+    "number": {
+     "type": "string",
+     "pattern": "^0[1-9]$"
+    },
+    "titleKey": {
+     "$ref": "#/definitions/textKey"
+    },
+    "shots": {
+     "type": "array",
+     "minItems": 1,
+     "items": {
+      "$ref": "#/definitions/shot"
+     }
+    },
+    "teaching": {
+     "type": "object",
+     "additionalProperties": false,
+     "description": "The teaching shape a category chapter follows: arrive, look, movement, reason, name, explore. Declared as content so a category cannot quietly fall back to being introduced rather than taught.",
+     "required": [
+      "arrive",
+      "look",
+      "movement",
+      "reason",
+      "name",
+      "explore"
+     ],
+     "properties": {
+      "arrive": {
+       "type": "string"
+      },
+      "look": {
+       "type": "string"
+      },
+      "movement": {
+       "type": "string"
+      },
+      "reason": {
+       "type": "string"
+      },
+      "name": {
+       "type": "string"
+      },
+      "explore": {
+       "type": "string"
+      }
+     }
+    }
+   }
+  },
+  "shot": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "id",
+    "durationMs",
+    "a11yKey",
+    "camera",
+    "body",
+    "joint",
+    "labels",
+    "overlays",
+    "caption",
+    "interaction"
+   ],
+   "properties": {
+    "id": {
+     "type": "string",
+     "pattern": "^[a-z0-9_.-]+$"
+    },
+    "durationMs": {
+     "type": "number",
+     "minimum": 1000,
+     "maximum": 60000
+    },
+    "a11yKey": {
+     "$ref": "#/definitions/textKey"
+    },
+    "camera": {
+     "type": "object",
+     "additionalProperties": false,
+     "required": [
+      "preset",
+      "view",
+      "scale",
+      "transitionMs"
+     ],
+     "properties": {
+      "preset": {
+       "enum": [
+        "body",
+        "site",
+        "closeUp",
+        "focus",
+        "movement"
+       ]
+      },
+      "site": {
+       "type": "string"
+      },
+      "structures": {
+       "$ref": "#/definitions/refs"
+      },
+      "view": {
+       "enum": [
+        "front",
+        "frontRight",
+        "right",
+        "backRight",
+        "left",
+        "frontLeft",
+        "oblique",
+        "anterior",
+        "axisPositive",
+        "axisNegative"
+       ]
+      },
+      "scale": {
+       "type": "number",
+       "minimum": 0.3,
+       "maximum": 16
+      },
+      "endScale": {
+       "type": "number",
+       "minimum": 0.3,
+       "maximum": 12
+      },
+      "extentM": {
+       "type": "number",
+       "exclusiveMinimum": 0,
+       "maximum": 2
+      },
+      "transitionMs": {
+       "type": "number",
+       "minimum": 0,
+       "maximum": 8000
+      },
+      "compose": {
+       "enum": [
+        "center",
+        "left",
+        "right"
+       ],
+       "description": "Screen composition: shift the subject left/right of centre (projection offset; framing is unchanged)."
+      },
+      "elevation": {
+       "type": "number",
+       "minimum": -0.8,
+       "maximum": 0.9,
+       "description": "Extra upward component of the view direction (look down onto the subject)."
+      }
+     }
+    },
+    "body": {
+     "type": "object",
+     "additionalProperties": false,
+     "required": [
+      "visible",
+      "shell",
+      "highlight",
+      "dimOthers",
+      "hidden"
+     ],
+     "properties": {
+      "visible": {
+       "type": "boolean"
+      },
+      "shell": {
+       "type": "boolean"
+      },
+      "highlight": {
+       "$ref": "#/definitions/refs"
+      },
+      "dimOthers": {
+       "type": "boolean"
+      },
+      "hidden": {
+       "$ref": "#/definitions/refs"
+      }
+     }
+    },
+    "joint": {
+     "type": "object",
+     "additionalProperties": false,
+     "required": [
+      "visible",
+      "handOver",
+      "detail",
+      "reveal",
+      "highlight",
+      "poseKeys"
+     ],
+     "properties": {
+      "visible": {
+       "type": "boolean"
+      },
+      "handOver": {
+       "type": "boolean"
+      },
+      "detail": {
+       "type": "boolean"
+      },
+      "reveal": {
+       "$ref": "#/definitions/refs"
+      },
+      "highlight": {
+       "$ref": "#/definitions/refs"
+      },
+      "poseKeys": {
+       "type": "array",
+       "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+         "atMs",
+         "pose",
+         "ease"
+        ],
+        "properties": {
+         "atMs": {
+          "type": "number",
+          "minimum": 0
+         },
+         "pose": {
+          "type": "object",
+          "minProperties": 1,
+          "additionalProperties": {
+           "$ref": "#/definitions/poseValue"
+          }
+         },
+         "ease": {
+          "enum": [
+           "easeInOutCubic",
+           "easeOutCubic",
+           "linear",
+           "hold"
+          ]
+         }
+        }
+       }
+      }
+     }
+    },
+    "labels": {
+     "type": "object",
+     "additionalProperties": false,
+     "required": [
+      "anchors",
+      "bands",
+      "focus",
+      "sites"
+     ],
+     "properties": {
+      "anchors": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "maxItems": 5
+      },
+      "bands": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       }
+      },
+      "focus": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       }
+      },
+      "sites": {
+       "type": "array",
+       "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+         "siteId",
+         "textKey"
+        ],
+        "properties": {
+         "siteId": {
+          "type": "string"
+         },
+         "textKey": {
+          "$ref": "#/definitions/textKey"
+         }
+        }
+       }
+      }
+     }
+    },
+    "overlays": {
+     "type": "object",
+     "additionalProperties": false,
+     "required": [
+      "axis",
+      "neutralDirection",
+      "currentDirection",
+      "motionArrow",
+      "angleBadge",
+      "arc",
+      "ticks",
+      "bands",
+      "concepts",
+      "conceptLoopMs"
+     ],
+     "properties": {
+      "axis": {
+       "type": "boolean"
+      },
+      "neutralDirection": {
+       "type": "boolean"
+      },
+      "currentDirection": {
+       "type": "boolean"
+      },
+      "motionArrow": {
+       "type": "boolean"
+      },
+      "angleBadge": {
+       "type": "boolean"
+      },
+      "arc": {
+       "type": "boolean"
+      },
+      "ticks": {
+       "type": "boolean"
+      },
+      "bands": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       }
+      },
+      "concepts": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       }
+      },
+      "conceptLoopMs": {
+       "type": "number",
+       "minimum": 500,
+       "maximum": 20000
+      }
+     }
+    },
+    "caption": {
+     "type": "object",
+     "additionalProperties": false,
+     "required": [
+      "appearAtMs",
+      "style"
+     ],
+     "properties": {
+      "eyebrowKey": {
+       "$ref": "#/definitions/textKey"
+      },
+      "titleKey": {
+       "$ref": "#/definitions/textKey"
+      },
+      "textKey": {
+       "$ref": "#/definitions/textKey"
+      },
+      "noteKey": {
+       "$ref": "#/definitions/textKey"
+      },
+      "appearAtMs": {
+       "type": "number",
+       "minimum": 0
+      },
+      "style": {
+       "enum": [
+        "title",
+        "statement",
+        "lower"
+       ]
+      }
+     }
+    },
+    "interaction": {
+     "type": "object",
+     "additionalProperties": false,
+     "required": [
+      "mode",
+      "resumeAfterIdleMs",
+      "waitForCheck"
+     ],
+     "properties": {
+      "mode": {
+       "enum": [
+        "passive",
+        "guided"
+       ]
+      },
+      "promptKey": {
+       "$ref": "#/definitions/textKey"
+      },
+      "resumeAfterIdleMs": {
+       "type": "number",
+       "minimum": 500,
+       "maximum": 20000
+      },
+      "waitForCheck": {
+       "type": "boolean"
+      },
+      "check": {
+       "type": "object",
+       "additionalProperties": false,
+       "required": [
+        "type",
+        "dof",
+        "target",
+        "tolerance",
+        "holdMs",
+        "promptKey",
+        "correctKey",
+        "incorrectKey"
+       ],
+       "properties": {
+        "type": {
+         "const": "poseTarget"
+        },
+        "dof": {
+         "type": "string"
+        },
+        "target": {
+         "type": "number"
+        },
+        "tolerance": {
+         "type": "number",
+         "exclusiveMinimum": 0,
+         "maximum": 30
+        },
+        "holdMs": {
+         "type": "number",
+         "minimum": 0,
+         "maximum": 5000
+        },
+        "promptKey": {
+         "$ref": "#/definitions/textKey"
+        },
+        "correctKey": {
+         "$ref": "#/definitions/textKey"
+        },
+        "incorrectKey": {
+         "$ref": "#/definitions/textKey"
+        }
+       }
+      }
+     }
+    },
+    "narrationKey": {
+     "$ref": "#/definitions/textKey",
+     "description": "Spoken explanation for this shot: what is being looked at, what is happening and why it matters. An ordinary locale string with a provenance class. When absent the caption is spoken."
+    },
+    "durationFrom": {
+     "enum": [
+      "authored",
+      "speech"
+     ],
+     "description": "\"speech\" lets the narration build write durationMs from the measured clip plus a floor, so a teaching beat never ends mid-sentence and never holds a dead frame."
+    },
+    "minDurationMs": {
+     "type": "number",
+     "minimum": 1000,
+     "maximum": 60000,
+     "description": "Visual floor for a speech-timed shot."
+    }
+   }
+  }
+ }
+}

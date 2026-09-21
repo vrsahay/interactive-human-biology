@@ -1,0 +1,15 @@
+{
+ "method": "qa/perf/diagnose.mjs on the Step-11 code with performance.mark instrumentation only (no behaviour change), fresh browser per run, laptop 1440x900, local server without throttling",
+ "runs": [
+  { "marks": { "stage-start": 782, "renderer-created": 1306, "environment-ready": 4314, "start": 4370, "joint-manifest": 4504, "first-assets-loaded": 6173, "ready": 6923, "film-started": 6968 }, "longTasks": [[472, 146], [778, 3597], [4386, 89], [5834, 105], [6055, 53], [6128, 72], [6201, 682], [6909, 64], [6974, 2396]] },
+  { "marks": { "stage-start": 336, "renderer-created": 1229, "environment-ready": 4051, "start": 4106, "joint-manifest": 4244, "first-assets-loaded": 4649, "ready": 5399, "film-started": 5439 }, "longTasks": [[167, 128], [333, 3779], [4124, 85], [4404, 95], [4501, 59], [4597, 78], [4675, 678], [5385, 61], [5447, 2371]] }
+ ],
+ "findings": [
+  "WebGL renderer creation: 0.5-0.9 s",
+  "Runtime PMREM generation of RoomEnvironment (blocking shader compile + render): 2.8-3.0 s on ANGLE D3D11",
+  "Asset download + parse: 0.4-1.7 s (local)",
+  "Structure binding / material clones before the first shot: ~0.7 s long task",
+  "First film frame: ~2.4 s long task (synchronous shader program compilation for every material/state in view)",
+  "Intro playback frames: 50-76 ms long tasks each (783 draw calls: 535 body meshes + overlays)"
+ ]
+}

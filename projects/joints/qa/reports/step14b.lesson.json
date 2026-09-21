@@ -1,0 +1,387 @@
+{
+ "generatedAt": "2026-09-21T10:29:47.241Z",
+ "structure": {
+  "chapters": [
+   {
+    "id": "hook",
+    "number": "01",
+    "titleKey": "chapter.hook",
+    "shots": [
+     "intro.title",
+     "hook.shoulder",
+     "hook.elbow",
+     "hook.question"
+    ],
+    "title": "Two joints, two movements"
+   },
+   {
+    "id": "what_is_joint",
+    "number": "02",
+    "titleKey": "chapter.what_is_joint",
+    "shots": [
+     "concept.meet",
+     "concept.different",
+     "intro.map"
+    ],
+    "title": "What is a joint?"
+   },
+   {
+    "id": "fixed",
+    "number": "03",
+    "titleKey": "chapter.fixed",
+    "shots": [
+     "fixed.travel",
+     "fixed.bones",
+     "fixed.try",
+     "fixed.why",
+     "fixed.name",
+     "fixed.task"
+    ],
+    "title": "Fixed joint"
+   },
+   {
+    "id": "pivot",
+    "number": "04",
+    "titleKey": "chapter.pivot",
+    "shots": [
+     "pivot.travel",
+     "pivot.bones",
+     "pivot.rotate",
+     "pivot.why",
+     "pivot.name",
+     "pivot.task"
+    ],
+    "title": "Pivot joint"
+   },
+   {
+    "id": "ball_socket",
+    "number": "05",
+    "titleKey": "chapter.ball_socket",
+    "shots": [
+     "ball.travel",
+     "ball.bones",
+     "ball.move",
+     "ball.why",
+     "ball.name",
+     "ball.task"
+    ],
+    "title": "Ball-and-socket joint"
+   },
+   {
+    "id": "hinge",
+    "number": "06",
+    "titleKey": "chapter.hinge",
+    "shots": [
+     "hinge.travel",
+     "hinge.source",
+     "hinge.bones",
+     "hinge.axis",
+     "hinge.flexion",
+     "hinge.extension",
+     "hinge.why",
+     "hinge.name",
+     "hinge.try",
+     "hinge.check",
+     "hinge.support",
+     "hinge.return",
+     "hinge.knee"
+    ],
+    "title": "Hinge joint"
+   },
+   {
+    "id": "compare",
+    "number": "07",
+    "titleKey": "chapter.compare",
+    "shots": [
+     "compare.pullback",
+     "compare.fixed",
+     "compare.pivot",
+     "compare.ball",
+     "compare.hinge",
+     "compare.together"
+    ],
+    "title": "Comparing the four"
+   },
+   {
+    "id": "recall",
+    "number": "08",
+    "titleKey": "chapter.recall",
+    "shots": [
+     "recall.open",
+     "recall.challenge"
+    ],
+    "title": "Recall challenge"
+   },
+   {
+    "id": "body_map",
+    "number": "09",
+    "titleKey": "chapter.body_map",
+    "shots": [
+     "map.intro",
+     "map.fixed",
+     "map.pivot",
+     "map.ball",
+     "map.hinge",
+     "map.all"
+    ],
+    "title": "The body map"
+   }
+  ],
+  "hookLines": [
+   {
+    "shot": "intro.title",
+    "text": "Every time you move, bones move against each other at a joint. Different joints allow very different movements."
+   },
+   {
+    "shot": "hook.shoulder",
+    "text": "Start with the shoulder. Your arm can swing forward, out to the side, and round in a circle."
+   },
+   {
+    "shot": "hook.elbow",
+    "text": "Now the elbow, on the same arm. It does one thing: it bends and it straightens."
+   },
+   {
+    "shot": "hook.question",
+    "text": "Both are joints in the same arm. So why does one move in every direction and the other in only one?"
+   },
+   {
+    "shot": "concept.meet",
+    "text": "A joint is any place where bones meet. Most joints are two bones meeting; here at the elbow, three bones come together."
+   },
+   {
+    "shot": "concept.different",
+    "text": "How the bones meet at a joint decides how that joint can move. Change the shape of the join and you change the movement."
+   },
+   {
+    "shot": "intro.map",
+    "text": "You have joints like these all over your body. We will look at four kinds, and at what each shape allows."
+   }
+  ]
+ },
+ "explores": [
+  {
+   "chapter": "fixed",
+   "explore": "explore.fixed",
+   "status": "teaching-simulation",
+   "movedTo": 0.5
+  },
+  {
+   "chapter": "pivot",
+   "explore": "explore.pivot",
+   "status": "teaching-simulation",
+   "movedTo": 30
+  },
+  {
+   "chapter": "ball_socket",
+   "explore": "explore.ball",
+   "status": "teaching-simulation",
+   "movedTo": 15
+  },
+  {
+   "chapter": "hinge",
+   "explore": "explore.hinge",
+   "status": "validated-rig",
+   "movedTo": 30
+  }
+ ],
+ "compare": [
+  {
+   "shot": "compare.pullback",
+   "concepts": 0,
+   "siteLabels": [],
+   "caption": "Four joints. Four different ways of moving."
+  },
+  {
+   "shot": "compare.fixed",
+   "concepts": 1,
+   "siteLabels": [
+    "fixed.skull"
+   ],
+   "caption": "Fixed"
+  },
+  {
+   "shot": "compare.pivot",
+   "concepts": 1,
+   "siteLabels": [
+    "pivot.upper_neck"
+   ],
+   "caption": "Pivot"
+  },
+  {
+   "shot": "compare.ball",
+   "concepts": 1,
+   "siteLabels": [
+    "ball_socket.shoulder_right"
+   ],
+   "caption": "Ball and socket"
+  },
+  {
+   "shot": "compare.hinge",
+   "concepts": 1,
+   "siteLabels": [
+    "hinge.elbow_right"
+   ],
+   "caption": "Hinge"
+  },
+  {
+   "shot": "compare.together",
+   "concepts": 0,
+   "siteLabels": [
+    "fixed.skull",
+    "pivot.upper_neck",
+    "ball_socket.shoulder_right",
+    "hinge.elbow_right"
+   ],
+   "caption": "The type of joint tells you the pattern of movement."
+  }
+ ],
+ "recall": {
+  "chapterId": "recall",
+  "shotId": "recall.challenge",
+  "steps": 5,
+  "endsIn": "body_map"
+ },
+ "narration": {
+  "shots": 52,
+  "silent": [],
+  "cues": 16,
+  "overruns": []
+ },
+ "camera": [
+  {
+   "chapter": "hook",
+   "shot": "intro.title",
+   "preset": "body",
+   "target": [
+    0,
+    0.871,
+    -0.001
+   ],
+   "position": [
+    0,
+    1.117,
+    4.097
+   ]
+  },
+  {
+   "chapter": "what_is_joint",
+   "shot": "concept.meet",
+   "preset": "site",
+   "target": [
+    -0.212,
+    1.103,
+    -0.044
+   ],
+   "position": [
+    -0.704,
+    1.287,
+    0.534
+   ]
+  },
+  {
+   "chapter": "fixed",
+   "shot": "fixed.travel",
+   "preset": "site",
+   "target": [
+    -0.038,
+    1.67,
+    0.027
+   ],
+   "position": [
+    -0.552,
+    1.743,
+    0.633
+   ]
+  },
+  {
+   "chapter": "pivot",
+   "shot": "pivot.travel",
+   "preset": "site",
+   "target": [
+    0,
+    1.539,
+    -0.006
+   ],
+   "position": [
+    -0.489,
+    1.751,
+    -0.55
+   ]
+  },
+  {
+   "chapter": "ball_socket",
+   "shot": "ball.travel",
+   "preset": "site",
+   "target": [
+    -0.149,
+    1.378,
+    -0.036
+   ],
+   "position": [
+    -0.594,
+    1.441,
+    0.487
+   ]
+  },
+  {
+   "chapter": "hinge",
+   "shot": "hinge.travel",
+   "preset": "site",
+   "target": [
+    -0.212,
+    1.103,
+    -0.044
+   ],
+   "position": [
+    -0.96,
+    1.163,
+    0.09
+   ]
+  },
+  {
+   "chapter": "compare",
+   "shot": "compare.pullback",
+   "preset": "body",
+   "target": [
+    0,
+    0.871,
+    -0.001
+   ],
+   "position": [
+    -2.467,
+    1.22,
+    2.9
+   ]
+  },
+  {
+   "chapter": "recall",
+   "shot": "recall.open",
+   "preset": "body",
+   "target": [
+    0,
+    0.871,
+    -0.001
+   ],
+   "position": [
+    -2.372,
+    1.39,
+    2.788
+   ]
+  },
+  {
+   "chapter": "body_map",
+   "shot": "map.intro",
+   "preset": "body",
+   "target": [
+    0,
+    0.871,
+    -0.001
+   ],
+   "position": [
+    0,
+    1.099,
+    3.797
+   ]
+  }
+ ]
+}

@@ -1,0 +1,2428 @@
+{
+ "step": "15B",
+ "document": "Expert review manifest for the step15b-learner-clarity-complete candidate build. These hashes identify exactly what is being reviewed. Nothing in this file is an expert decision; every decision lives in expert-review-status.json and starts PENDING.",
+ "generatedAt": "2026-09-18T13:54:24.796Z",
+ "generator": "pipeline/qa/build_step15b_package.ts",
+ "candidate": {
+  "candidateBuild": "step15b-learner-clarity-complete",
+  "candidateCommit": "4c2f8f76cdb53d8b1f5194dddaa05b43d305d911",
+  "candidateCommitDate": "2026-09-18T19:19:36+05:30",
+  "candidateCommitSubject": "Step 15B: learner clarity pass",
+  "packageCommit": "4c2f8f76cdb53d8b1f5194dddaa05b43d305d911",
+  "packageCommitDate": "2026-09-18T19:19:36+05:30",
+  "branch": "step15b-learner-clarity",
+  "headIsCandidateTag": true,
+  "workingTreeClean": false,
+  "productUnchangedSinceCandidate": true,
+  "productFilesChangedSinceCandidate": [],
+  "productFilesUncommitted": [],
+  "productPathsChecked": [
+   "src",
+   "content",
+   "public",
+   "index.html",
+   "vite.config.ts",
+   "package.json",
+   "package-lock.json",
+   "blender"
+  ],
+  "priorBaselines": {
+   "step13Frozen": {
+    "tag": "step13-frozen-baseline",
+    "commit": "537ac718c42d6d3e80779928eb600a384f008dfc"
+   },
+   "step14Conditional": {
+    "tag": "step14-conditional",
+    "commit": "25c86a6aebc870dce5a4e0a1c8a323b0be0783e5"
+   }
+  },
+  "toolchain": {
+   "three": "^0.186.0",
+   "preact": "^10.29.8",
+   "preactSignals": "^2.11.2",
+   "vite": "^8.3.0",
+   "typescript": "^7.0.2",
+   "vitest": "^5.0.1",
+   "playwright": "^1.63.0",
+   "node": "v24.19.0",
+   "blenderVersionPin": "5.2.2",
+   "browserUnderTest": "Google Chrome 152.0.7977.83 (installed channel), headless, ANGLE D3D11",
+   "machine": "Lenovo 20V9, Intel Core i5-1135G7, Iris Xe, 16 GB, Windows 11 Pro"
+  }
+ },
+ "supersedes": {
+  "package": "qa/expert/step15/ (Step 15A), which itself superseded qa/expert/ (Step 13)",
+  "reason": "Step 15B changed what a learner reads and sees: the repeated technical disclaimer left the captions for a persistent status and the Sources dialog, the anatomical names left the teaching sentence for the labels, axis is now explained before it is named, the pivot chapter gained a beat that shows the two bones, flexion and extension are reused, and the one silent transition now speaks. Earlier packages describe builds that are no longer the candidate; each is retained unchanged as the record of what it described."
+ },
+ "validatedVsSchematic": {
+  "validatedProceduralRig": [
+   "elbow_r (right elbow, hinge) - single DOF flexion, fitted axis, 0-145 deg approximate teaching range"
+  ],
+  "teachingSimulations": [
+   "fixed (skull suture)",
+   "pivot (head on C1/C2)",
+   "ball_and_socket (right shoulder)"
+  ],
+  "notValidatedProceduralRigs": [
+   "skull",
+   "C1/C2",
+   "shoulder",
+   "hip",
+   "knee"
+  ],
+  "enforcement": "checkExploreConfigs() refuses a group-driven exploration that declares itself a validated rig; the status is on screen for as long as an exploration is open; every schematic indicator carries a note."
+ },
+ "lesson": {
+  "chapters": 9,
+  "shots": 40,
+  "durationMs": 279600,
+  "structure": [
+   {
+    "number": "01",
+    "id": "hook",
+    "title": "Two joints, two movements",
+    "durationMs": 27000,
+    "shots": [
+     {
+      "id": "intro.title",
+      "durationMs": 8000,
+      "camera": {
+       "transitionMs": 0,
+       "preset": "body",
+       "view": "front",
+       "scale": 1.3,
+       "endScale": 1.12,
+       "compose": "right"
+      },
+      "caption": "Types of Joints / How different joints allow different kinds of movement.",
+      "note": null,
+      "schematicIndicators": [],
+      "narration": "Types of Joints. How different joints allow different kinds of movement.",
+      "screenReader": "A full human skeleton inside a faint outline of the body, seen from the front.",
+      "capture": "qa/visual/step15b_review/01_hook__intro.title.png"
+     },
+     {
+      "id": "hook.shoulder",
+      "durationMs": 6500,
+      "camera": {
+       "transitionMs": 2000,
+       "preset": "site",
+       "site": "ball_socket.shoulder_right",
+       "view": "frontRight",
+       "scale": 3.9,
+       "endScale": 3.5,
+       "compose": "left",
+       "elevation": 0.12
+      },
+      "caption": "Your shoulder can swing your arm in almost any direction.",
+      "note": null,
+      "schematicIndicators": [
+       "ball_socket.shoulder_right"
+      ],
+      "narration": "Your shoulder can swing your arm in almost any direction.",
+      "screenReader": "The right shoulder, seen from the front and right. Curved arrows around the top of the upper arm bone show movement in many directions.",
+      "capture": "qa/visual/step15b_review/01_hook__hook.shoulder.png"
+     },
+     {
+      "id": "hook.elbow",
+      "durationMs": 6500,
+      "camera": {
+       "transitionMs": 2000,
+       "preset": "site",
+       "site": "hinge.elbow_right",
+       "view": "right",
+       "scale": 5.4,
+       "endScale": 4.8,
+       "compose": "right",
+       "elevation": 0.1
+      },
+      "caption": "Your elbow mainly bends and straightens.",
+      "note": null,
+      "schematicIndicators": [
+       "hinge.elbow_right"
+      ],
+      "narration": "Your elbow mainly bends and straightens.",
+      "screenReader": "The right elbow, seen from the side. An arc shows the forearm bending in one direction.",
+      "capture": "qa/visual/step15b_review/01_hook__hook.elbow.png"
+     },
+     {
+      "id": "hook.question",
+      "durationMs": 6000,
+      "camera": {
+       "transitionMs": 2000,
+       "preset": "body",
+       "view": "frontRight",
+       "scale": 1.06,
+       "endScale": 1,
+       "elevation": 0.05
+      },
+      "caption": "Both are joints. So why do they move so differently?",
+      "note": null,
+      "schematicIndicators": [
+       "ball_socket.shoulder_right",
+       "hinge.elbow_right"
+      ],
+      "narration": "Both are joints. So why do they move so differently?",
+      "screenReader": "The whole skeleton, with the shoulder and elbow indicators still moving.",
+      "capture": "qa/visual/step15b_review/01_hook__hook.question.png"
+     }
+    ]
+   },
+   {
+    "number": "02",
+    "id": "what_is_joint",
+    "title": "What is a joint?",
+    "durationMs": 21000,
+    "shots": [
+     {
+      "id": "concept.meet",
+      "durationMs": 6500,
+      "camera": {
+       "transitionMs": 2000,
+       "preset": "site",
+       "site": "hinge.elbow_right",
+       "view": "frontRight",
+       "scale": 4.3,
+       "endScale": 3.9,
+       "compose": "right",
+       "elevation": 0.15
+      },
+      "caption": "A joint is a place where two bones meet.",
+      "note": null,
+      "schematicIndicators": [],
+      "narration": "A joint is a place where two bones meet.",
+      "screenReader": "Close view of the right elbow, where the upper arm bone meets the two forearm bones.",
+      "capture": "qa/visual/step15b_review/02_what_is_joint__concept.meet.png"
+     },
+     {
+      "id": "concept.different",
+      "durationMs": 7000,
+      "camera": {
+       "transitionMs": 2000,
+       "preset": "body",
+       "view": "frontRight",
+       "scale": 1.2,
+       "endScale": 1.12,
+       "elevation": 0.05
+      },
+      "caption": "The way the bones meet decides how they can move.",
+      "note": null,
+      "schematicIndicators": [
+       "fixed.skull",
+       "pivot.upper_neck",
+       "ball_socket.shoulder_right"
+      ],
+      "narration": "The way the bones meet decides how they can move.",
+      "screenReader": "The head, the top of the neck and the right shoulder together, each with its own movement indicator.",
+      "capture": "qa/visual/step15b_review/02_what_is_joint__concept.different.png"
+     },
+     {
+      "id": "intro.map",
+      "durationMs": 7500,
+      "camera": {
+       "transitionMs": 2600,
+       "preset": "body",
+       "view": "frontRight",
+       "scale": 1.12,
+       "endScale": 1.06,
+       "compose": "right"
+      },
+      "caption": "You have joints like these all over your body. We will look at four kinds.",
+      "note": null,
+      "schematicIndicators": [],
+      "narration": "You have joints like these all over your body. We will look at four kinds.",
+      "screenReader": "The camera turns slightly. The skull, neck, right shoulder, right hip, right elbow and right knee are softly highlighted.",
+      "capture": "qa/visual/step15b_review/02_what_is_joint__intro.map.png"
+     }
+    ]
+   },
+   {
+    "number": "03",
+    "id": "fixed",
+    "title": "Fixed joint",
+    "durationMs": 14000,
+    "shots": [
+     {
+      "id": "fixed.travel",
+      "durationMs": 6000,
+      "camera": {
+       "transitionMs": 3400,
+       "preset": "site",
+       "site": "fixed.skull",
+       "view": "frontRight",
+       "scale": 4.4,
+       "endScale": 3.9,
+       "compose": "right"
+      },
+      "caption": "Fixed joint",
+      "note": null,
+      "schematicIndicators": [],
+      "narration": "Fixed joint.",
+      "screenReader": "The camera moves up to the skull. The skull bones are highlighted.",
+      "capture": "qa/visual/step15b_review/03_fixed__fixed.travel.png"
+     },
+     {
+      "id": "fixed.detail",
+      "durationMs": 8000,
+      "camera": {
+       "transitionMs": 2000,
+       "preset": "site",
+       "site": "fixed.skull",
+       "view": "right",
+       "scale": 3.1,
+       "endScale": 2.8,
+       "compose": "right",
+       "elevation": 0.35
+      },
+      "caption": "The bones of the skull meet at fixed joints. These bones do not move against each other.",
+      "note": null,
+      "schematicIndicators": [
+       "fixed.skull"
+      ],
+      "narration": "The bones of the skull meet at fixed joints. These bones do not move against each other.",
+      "screenReader": "Side view of the skull. The frontal and right parietal bones are highlighted where they meet; a dashed ring marks a fixed joint.",
+      "capture": "qa/visual/step15b_review/03_fixed__fixed.detail.png"
+     }
+    ]
+   },
+   {
+    "number": "04",
+    "id": "pivot",
+    "title": "Pivot joint",
+    "durationMs": 21000,
+    "shots": [
+     {
+      "id": "pivot.travel",
+      "durationMs": 6000,
+      "camera": {
+       "transitionMs": 3000,
+       "preset": "site",
+       "site": "pivot.upper_neck",
+       "view": "backRight",
+       "scale": 4.2,
+       "endScale": 3.7,
+       "compose": "right",
+       "elevation": 0.2
+      },
+      "caption": "Pivot joint",
+      "note": null,
+      "schematicIndicators": [],
+      "narration": "Pivot joint.",
+      "screenReader": "The camera moves down to the top of the neck. The first two neck vertebrae are highlighted.",
+      "capture": "qa/visual/step15b_review/04_pivot__pivot.travel.png"
+     },
+     {
+      "id": "pivot.bones",
+      "durationMs": 6000,
+      "camera": {
+       "transitionMs": 2200,
+       "preset": "site",
+       "site": "pivot.upper_neck",
+       "view": "backRight",
+       "scale": 2.5,
+       "endScale": 2.1,
+       "compose": "right",
+       "elevation": 0.05
+      },
+      "caption": "At the top of the neck, one small bone sits on top of another.",
+      "note": null,
+      "schematicIndicators": [],
+      "narration": "At the top of the neck, one small bone sits on top of another.",
+      "screenReader": "Close view of the first two neck bones, seen from the front and right. They are highlighted; the skull is dimmed behind them.",
+      "capture": "qa/visual/step15b_review/04_pivot__pivot.bones.png"
+     },
+     {
+      "id": "pivot.rotate",
+      "durationMs": 9000,
+      "camera": {
+       "transitionMs": 1800,
+       "preset": "site",
+       "site": "pivot.upper_neck",
+       "view": "backRight",
+       "scale": 3.4,
+       "endScale": 3.1,
+       "compose": "right",
+       "elevation": 0.25
+      },
+      "caption": "The upper bone turns around the one below it. Your head turns with it.",
+      "note": null,
+      "schematicIndicators": [
+       "pivot.upper_neck"
+      ],
+      "narration": "The upper bone turns around the one below it. Your head turns with it.",
+      "screenReader": "An arrow circles around a vertical line at the top of the neck, showing turning.",
+      "capture": "qa/visual/step15b_review/04_pivot__pivot.rotate.png"
+     }
+    ]
+   },
+   {
+    "number": "05",
+    "id": "ball_socket",
+    "title": "Ball-and-socket joint",
+    "durationMs": 22500,
+    "shots": [
+     {
+      "id": "ball.travel",
+      "durationMs": 6000,
+      "camera": {
+       "transitionMs": 3200,
+       "preset": "site",
+       "site": "ball_socket.shoulder_right",
+       "view": "frontRight",
+       "scale": 3.8,
+       "endScale": 3.3,
+       "compose": "right"
+      },
+      "caption": "Ball-and-socket joint",
+      "note": null,
+      "schematicIndicators": [],
+      "narration": "Ball-and-socket joint.",
+      "screenReader": "The camera moves to the right shoulder. The upper arm bone and shoulder blade are highlighted.",
+      "capture": "qa/visual/step15b_review/05_ball_socket__ball.travel.png"
+     },
+     {
+      "id": "ball.shoulder",
+      "durationMs": 8500,
+      "camera": {
+       "transitionMs": 1600,
+       "preset": "site",
+       "site": "ball_socket.shoulder_right",
+       "view": "frontRight",
+       "scale": 2.9,
+       "endScale": 2.6,
+       "compose": "right",
+       "elevation": 0.1
+      },
+      "caption": "At the shoulder, the rounded top of the upper arm bone sits in a hollow of the shoulder bone, so the arm can move in many directions.",
+      "note": null,
+      "schematicIndicators": [
+       "ball_socket.shoulder_right"
+      ],
+      "narration": "At the shoulder, the rounded top of the upper arm bone sits in a hollow of the shoulder bone, so the arm can move in many directions.",
+      "screenReader": "Two curved arrows around the head of the upper arm bone show movement in many directions.",
+      "capture": "qa/visual/step15b_review/05_ball_socket__ball.shoulder.png"
+     },
+     {
+      "id": "ball.hip",
+      "durationMs": 8000,
+      "camera": {
+       "transitionMs": 3400,
+       "preset": "site",
+       "site": "ball_socket.hip_right",
+       "view": "frontRight",
+       "scale": 3.6,
+       "endScale": 3.2,
+       "compose": "right",
+       "elevation": 0.1
+      },
+      "caption": "The hip is another ball-and-socket joint.",
+      "note": null,
+      "schematicIndicators": [
+       "ball_socket.hip_right"
+      ],
+      "narration": "The hip is another ball-and-socket joint.",
+      "screenReader": "The camera moves down to the right hip, where similar arrows show many directions of movement.",
+      "capture": "qa/visual/step15b_review/05_ball_socket__ball.hip.png"
+     }
+    ]
+   },
+   {
+    "number": "06",
+    "id": "hinge",
+    "title": "Hinge joint",
+    "durationMs": 98100,
+    "shots": [
+     {
+      "id": "hinge.travel",
+      "durationMs": 6000,
+      "camera": {
+       "transitionMs": 3400,
+       "preset": "site",
+       "site": "hinge.elbow_right",
+       "view": "right",
+       "scale": 4.2,
+       "endScale": 3.6,
+       "compose": "right"
+      },
+      "caption": "Hinge joint",
+      "note": null,
+      "schematicIndicators": [],
+      "narration": "Hinge joint.",
+      "screenReader": "The camera moves to the right elbow.",
+      "capture": "qa/visual/step15b_review/06_hinge__hinge.travel.png"
+     },
+     {
+      "id": "hinge.source",
+      "durationMs": 7500,
+      "camera": {
+       "transitionMs": 1400,
+       "preset": "site",
+       "site": "hinge.elbow_right",
+       "view": "right",
+       "scale": 3.3,
+       "endScale": 2.9,
+       "compose": "right"
+      },
+      "caption": "The elbow bends and straightens in one direction, similar to a door hinge.",
+      "note": null,
+      "schematicIndicators": [],
+      "narration": "The elbow bends and straightens in one direction, similar to a door hinge.",
+      "screenReader": "Side view of the right elbow, highlighted.",
+      "capture": "qa/visual/step15b_review/06_hinge__hinge.source.png"
+     },
+     {
+      "id": "hinge.bones",
+      "durationMs": 7000,
+      "camera": {
+       "transitionMs": 1800,
+       "preset": "focus",
+       "view": "axisPositive",
+       "structures": [
+        "humerus_r",
+        "radius_r",
+        "ulna_r"
+       ],
+       "scale": 1.1,
+       "compose": "right"
+      },
+      "caption": "The elbow is where the upper-arm bone meets two bones in the forearm.",
+      "note": null,
+      "schematicIndicators": [],
+      "narration": "The elbow is where the upper-arm bone meets two bones in the forearm.",
+      "screenReader": "Close-up of the elbow. The humerus, radius and ulna are highlighted and labelled.",
+      "capture": "qa/visual/step15b_review/06_hinge__hinge.bones.png"
+     },
+     {
+      "id": "hinge.axis",
+      "durationMs": 7000,
+      "camera": {
+       "transitionMs": 1200,
+       "preset": "closeUp",
+       "view": "anterior",
+       "scale": 1.25,
+       "compose": "right",
+       "elevation": 0.15
+      },
+      "caption": "This blue line shows the direction the elbow bends around. We call that line the axis.",
+      "note": null,
+      "schematicIndicators": [],
+      "narration": "This blue line shows the direction the elbow bends around. We call that line the axis.",
+      "screenReader": "A blue line through the elbow shows the hinge axis. The forearm straightens to 0 degrees.",
+      "capture": "qa/visual/step15b_review/06_hinge__hinge.axis.png"
+     },
+     {
+      "id": "hinge.flexion",
+      "durationMs": 9500,
+      "camera": {
+       "transitionMs": 1500,
+       "preset": "movement",
+       "view": "axisPositive",
+       "scale": 1,
+       "extentM": 0.3,
+       "compose": "center"
+      },
+      "caption": "When the elbow bends, that is called flexion.",
+      "note": null,
+      "schematicIndicators": [],
+      "narration": "When the elbow bends, that is called flexion.",
+      "screenReader": "The forearm bends around the axis from 0 to 45 and then 90 degrees. An orange arc shows the angle.",
+      "capture": "qa/visual/step15b_review/06_hinge__hinge.flexion.png"
+     },
+     {
+      "id": "hinge.extension",
+      "durationMs": 9500,
+      "camera": {
+       "transitionMs": 0,
+       "preset": "movement",
+       "view": "axisPositive",
+       "scale": 1,
+       "extentM": 0.3,
+       "compose": "center"
+      },
+      "caption": "When it straightens again, that is called extension.",
+      "note": "0-145 deg is an approximate teaching range for this model; adult elbow flexion varies between people (see Sources).",
+      "schematicIndicators": [],
+      "narration": "When it straightens again, that is called extension.",
+      "screenReader": "The forearm bends further to 145 degrees and then straightens back to 0 degrees.",
+      "capture": "qa/visual/step15b_review/06_hinge__hinge.extension.png"
+     },
+     {
+      "id": "hinge.try",
+      "durationMs": 14000,
+      "camera": {
+       "transitionMs": 800,
+       "preset": "movement",
+       "view": "axisPositive",
+       "scale": 1,
+       "extentM": 0.3,
+       "compose": "center"
+      },
+      "caption": "Your turn: bend and straighten the elbow.",
+      "note": null,
+      "schematicIndicators": [],
+      "narration": "Your turn: bend and straighten the elbow. Drag the forearm to bend the elbow.",
+      "screenReader": "The elbow can be bent by dragging the forearm or with the slider.",
+      "capture": "qa/visual/step15b_review/06_hinge__hinge.try.png"
+     },
+     {
+      "id": "hinge.check",
+      "durationMs": 14000,
+      "camera": {
+       "transitionMs": 2600,
+       "preset": "movement",
+       "view": "axisPositive",
+       "scale": 1,
+       "extentM": 0.3,
+       "compose": "center"
+      },
+      "caption": "Try it: bend the elbow to about 90°.",
+      "note": null,
+      "schematicIndicators": [],
+      "narration": "Try it: bend the elbow to about 90°.",
+      "screenReader": "Close-up of the elbow with its angle shown, ready to be bent to about 90 degrees.",
+      "capture": "qa/visual/step15b_review/06_hinge__hinge.check.png"
+     },
+     {
+      "id": "hinge.support",
+      "durationMs": 10500,
+      "camera": {
+       "transitionMs": 1800,
+       "preset": "closeUp",
+       "view": "axisPositive",
+       "structures": [
+        "elbow_capsule_r",
+        "radial_collateral_ligament_elbow_r",
+        "ulnar_collateral_ligament_elbow_r",
+        "annular_ligament_radius_r"
+       ],
+       "scale": 1.7,
+       "compose": "right"
+      },
+      "caption": "A joint capsule and ligaments surround the elbow.",
+      "note": "The thin coloured lines mark where the ligaments run. They are a guide, not real tissue.",
+      "schematicIndicators": [],
+      "narration": "A joint capsule and ligaments surround the elbow.",
+      "screenReader": "The joint capsule and ligaments appear around the elbow, with two thin schematic bands.",
+      "capture": "qa/visual/step15b_review/06_hinge__hinge.support.png"
+     },
+     {
+      "id": "hinge.return",
+      "durationMs": 4600,
+      "camera": {
+       "transitionMs": 1500,
+       "preset": "focus",
+       "view": "axisPositive",
+       "structures": [
+        "humerus_r",
+        "radius_r",
+        "ulna_r"
+       ],
+       "scale": 1.1,
+       "compose": "right"
+      },
+      "caption": "The elbow settles back to rest.",
+      "note": null,
+      "schematicIndicators": [],
+      "narration": "The elbow settles back to rest.",
+      "screenReader": "The elbow returns to its resting position.",
+      "capture": "qa/visual/step15b_review/06_hinge__hinge.return.png"
+     },
+     {
+      "id": "hinge.knee",
+      "durationMs": 8500,
+      "camera": {
+       "transitionMs": 3800,
+       "preset": "site",
+       "site": "hinge.knee_right",
+       "view": "right",
+       "scale": 3.6,
+       "endScale": 3.2,
+       "compose": "right"
+      },
+      "caption": "The knee is another hinge joint.",
+      "note": null,
+      "schematicIndicators": [
+       "hinge.knee_right"
+      ],
+      "narration": "The knee is another hinge joint.",
+      "screenReader": "The camera moves down to the right knee, where an arc shows bending in one direction.",
+      "capture": "qa/visual/step15b_review/06_hinge__hinge.knee.png"
+     }
+    ]
+   },
+   {
+    "number": "07",
+    "id": "compare",
+    "title": "Comparing the four",
+    "durationMs": 34000,
+    "shots": [
+     {
+      "id": "compare.pullback",
+      "durationMs": 6000,
+      "camera": {
+       "transitionMs": 4000,
+       "preset": "body",
+       "view": "frontRight",
+       "scale": 1.14,
+       "endScale": 1.07,
+       "compose": "right"
+      },
+      "caption": "Four joints. Four different ways of moving.",
+      "note": null,
+      "schematicIndicators": [],
+      "narration": "Four joints. Four different ways of moving.",
+      "screenReader": "The camera pulls back to the whole body.",
+      "capture": "qa/visual/step15b_review/07_compare__compare.pullback.png"
+     },
+     {
+      "id": "compare.fixed",
+      "durationMs": 5000,
+      "camera": {
+       "transitionMs": 2000,
+       "preset": "site",
+       "site": "fixed.skull",
+       "view": "right",
+       "scale": 3.6,
+       "endScale": 3.3
+      },
+      "caption": "Fixed: almost no movement at all.",
+      "note": null,
+      "schematicIndicators": [
+       "fixed.skull"
+      ],
+      "narration": "Fixed: almost no movement at all.",
+      "screenReader": "The skull, with the fixed-joint indicator, labelled Fixed.",
+      "capture": "qa/visual/step15b_review/07_compare__compare.fixed.png"
+     },
+     {
+      "id": "compare.pivot",
+      "durationMs": 5000,
+      "camera": {
+       "transitionMs": 2000,
+       "preset": "site",
+       "site": "pivot.upper_neck",
+       "view": "frontRight",
+       "scale": 4.2,
+       "endScale": 3.9
+      },
+      "caption": "Pivot: turning around the bone below.",
+      "note": null,
+      "schematicIndicators": [
+       "pivot.upper_neck"
+      ],
+      "narration": "Pivot: turning around the bone below.",
+      "screenReader": "The top of the neck, with the turning indicator, labelled Pivot.",
+      "capture": "qa/visual/step15b_review/07_compare__compare.pivot.png"
+     },
+     {
+      "id": "compare.ball",
+      "durationMs": 5000,
+      "camera": {
+       "transitionMs": 2000,
+       "preset": "site",
+       "site": "ball_socket.shoulder_right",
+       "view": "frontRight",
+       "scale": 3.9,
+       "endScale": 3.6
+      },
+      "caption": "Ball-and-socket: movement in many directions.",
+      "note": null,
+      "schematicIndicators": [
+       "ball_socket.shoulder_right"
+      ],
+      "narration": "Ball-and-socket: movement in many directions.",
+      "screenReader": "The right shoulder, with the many-directions indicator, labelled Ball and socket.",
+      "capture": "qa/visual/step15b_review/07_compare__compare.ball.png"
+     },
+     {
+      "id": "compare.hinge",
+      "durationMs": 5000,
+      "camera": {
+       "transitionMs": 2000,
+       "preset": "site",
+       "site": "hinge.elbow_right",
+       "view": "right",
+       "scale": 5.4,
+       "endScale": 5
+      },
+      "caption": "Hinge: bending and straightening one way.",
+      "note": null,
+      "schematicIndicators": [
+       "hinge.elbow_right"
+      ],
+      "narration": "Hinge: bending and straightening one way.",
+      "screenReader": "The right elbow, with the bending indicator, labelled Hinge.",
+      "capture": "qa/visual/step15b_review/07_compare__compare.hinge.png"
+     },
+     {
+      "id": "compare.together",
+      "durationMs": 8000,
+      "camera": {
+       "transitionMs": 2000,
+       "preset": "body",
+       "view": "frontRight",
+       "scale": 1.12,
+       "endScale": 1.05,
+       "elevation": 0.05
+      },
+      "caption": "The type of joint tells you the pattern of movement.",
+      "note": null,
+      "schematicIndicators": [
+       "fixed.skull",
+       "pivot.upper_neck",
+       "ball_socket.shoulder_right",
+       "hinge.elbow_right"
+      ],
+      "narration": "The type of joint tells you the pattern of movement.",
+      "screenReader": "The whole body with all four movement indicators running at once.",
+      "capture": "qa/visual/step15b_review/07_compare__compare.together.png"
+     }
+    ]
+   },
+   {
+    "number": "08",
+    "id": "recall",
+    "title": "Recall challenge",
+    "durationMs": 11000,
+    "shots": [
+     {
+      "id": "recall.open",
+      "durationMs": 5000,
+      "camera": {
+       "transitionMs": 2000,
+       "preset": "body",
+       "view": "frontRight",
+       "scale": 1.1,
+       "endScale": 1.06,
+       "elevation": 0.05
+      },
+      "caption": "Your turn. Name each joint from the way it moves.",
+      "note": null,
+      "schematicIndicators": [],
+      "narration": "Your turn. Name each joint from the way it moves.",
+      "screenReader": "The whole body, with no labels.",
+      "capture": "qa/visual/step15b_review/08_recall__recall.open.png"
+     },
+     {
+      "id": "recall.challenge",
+      "durationMs": 6000,
+      "camera": {
+       "transitionMs": 2000,
+       "preset": "body",
+       "view": "frontRight",
+       "scale": 1.06,
+       "endScale": 1.04,
+       "elevation": 0.05
+      },
+      "caption": "Choose the joint type for each movement.",
+      "note": null,
+      "schematicIndicators": [],
+      "narration": "Choose the joint type for each movement.",
+      "screenReader": "The whole body. The recall questions begin.",
+      "capture": "qa/visual/step15b_review/08_recall__recall.challenge.png"
+     }
+    ]
+   },
+   {
+    "number": "09",
+    "id": "body_map",
+    "title": "The body map",
+    "durationMs": 31000,
+    "shots": [
+     {
+      "id": "map.intro",
+      "durationMs": 5000,
+      "camera": {
+       "transitionMs": 2000,
+       "preset": "body",
+       "view": "front",
+       "scale": 1.2,
+       "endScale": 1.12
+      },
+      "caption": "Here they are, together, in one body.",
+      "note": null,
+      "schematicIndicators": [],
+      "narration": "Here they are, together, in one body.",
+      "screenReader": "The whole skeleton inside a faint outline of the body.",
+      "capture": "qa/visual/step15b_review/09_body_map__map.intro.png"
+     },
+     {
+      "id": "map.fixed",
+      "durationMs": 4000,
+      "camera": {
+       "transitionMs": 1400,
+       "preset": "body",
+       "view": "frontRight",
+       "scale": 1.14,
+       "endScale": 1.115,
+       "elevation": 0.02
+      },
+      "caption": "Fixed joints hold the skull bones together.",
+      "note": null,
+      "schematicIndicators": [
+       "fixed.skull"
+      ],
+      "narration": "Fixed joints hold the skull bones together.",
+      "screenReader": "The whole body with the skull labelled Fixed.",
+      "capture": "qa/visual/step15b_review/09_body_map__map.fixed.png"
+     },
+     {
+      "id": "map.pivot",
+      "durationMs": 4000,
+      "camera": {
+       "transitionMs": 1400,
+       "preset": "body",
+       "view": "frontRight",
+       "scale": 1.115,
+       "endScale": 1.09,
+       "elevation": 0.035
+      },
+      "caption": "A pivot joint at the top of the neck turns the head.",
+      "note": null,
+      "schematicIndicators": [
+       "pivot.upper_neck"
+      ],
+      "narration": "A pivot joint at the top of the neck turns the head.",
+      "screenReader": "The whole body with the top of the neck labelled Pivot.",
+      "capture": "qa/visual/step15b_review/09_body_map__map.pivot.png"
+     },
+     {
+      "id": "map.ball",
+      "durationMs": 4000,
+      "camera": {
+       "transitionMs": 1400,
+       "preset": "body",
+       "view": "frontRight",
+       "scale": 1.09,
+       "endScale": 1.065,
+       "elevation": 0.05
+      },
+      "caption": "A ball-and-socket joint at the shoulder moves many ways.",
+      "note": null,
+      "schematicIndicators": [
+       "ball_socket.shoulder_right"
+      ],
+      "narration": "A ball-and-socket joint at the shoulder moves many ways.",
+      "screenReader": "The whole body with the right shoulder labelled Ball and socket.",
+      "capture": "qa/visual/step15b_review/09_body_map__map.ball.png"
+     },
+     {
+      "id": "map.hinge",
+      "durationMs": 4000,
+      "camera": {
+       "transitionMs": 1400,
+       "preset": "body",
+       "view": "frontRight",
+       "scale": 1.065,
+       "endScale": 1.04,
+       "elevation": 0.065
+      },
+      "caption": "A hinge joint at the elbow bends and straightens.",
+      "note": null,
+      "schematicIndicators": [
+       "hinge.elbow_right"
+      ],
+      "narration": "A hinge joint at the elbow bends and straightens.",
+      "screenReader": "The whole body with the right elbow labelled Hinge.",
+      "capture": "qa/visual/step15b_review/09_body_map__map.hinge.png"
+     },
+     {
+      "id": "map.all",
+      "durationMs": 10000,
+      "camera": {
+       "transitionMs": 2000,
+       "preset": "body",
+       "view": "front",
+       "scale": 1.08,
+       "endScale": 1.04,
+       "compose": "right"
+      },
+      "caption": "Fixed: no movement · Pivot: turning · Ball and socket: many directions · Hinge: one direction",
+      "note": null,
+      "schematicIndicators": [
+       "fixed.skull",
+       "pivot.upper_neck",
+       "ball_socket.shoulder_right",
+       "ball_socket.hip_right",
+       "hinge.elbow_right",
+       "hinge.knee_right"
+      ],
+      "narration": "Fixed: no movement · Pivot: turning · Ball and socket: many directions · Hinge: one direction.",
+      "screenReader": "All four kinds of movement indicator are shown on the body at once, with every site labelled.",
+      "capture": "qa/visual/step15b_review/09_body_map__map.all.png"
+     }
+    ]
+   }
+  ]
+ },
+ "explores": [
+  {
+   "exploreId": "explore.fixed",
+   "chapterId": "fixed",
+   "jointType": "fixed",
+   "status": "teaching-simulation",
+   "statusShownOnScreen": "Teaching simulation",
+   "site": "fixed.skull",
+   "motionKind": "resist",
+   "groupsMoved": 1,
+   "limitsDeg": {
+    "primary": [
+     -0.5,
+     0.5
+    ]
+   },
+   "title": "Fixed joint · skull",
+   "instruction": "Try to move the skull bones.",
+   "explanation": "These bones barely move. A fixed joint holds bones firmly together.",
+   "narratedInstruction": true,
+   "captures": [
+    "qa/visual/step15b_review/explore_fixed_open.png",
+    "qa/visual/step15b_review/explore_fixed_moved.png"
+   ]
+  },
+  {
+   "exploreId": "explore.pivot",
+   "chapterId": "pivot",
+   "jointType": "pivot",
+   "status": "teaching-simulation",
+   "statusShownOnScreen": "Teaching simulation",
+   "site": "pivot.upper_neck",
+   "motionKind": "oneAxis",
+   "groupsMoved": 3,
+   "limitsDeg": {
+    "primary": [
+     -60,
+     60
+    ]
+   },
+   "title": "Pivot joint · top of the neck",
+   "instruction": "Drag left and right to turn the head.",
+   "explanation": "The head turns around the bone below it. A pivot joint allows rotation.",
+   "narratedInstruction": true,
+   "captures": [
+    "qa/visual/step15b_review/explore_pivot_open.png",
+    "qa/visual/step15b_review/explore_pivot_moved.png"
+   ]
+  },
+  {
+   "exploreId": "explore.ball",
+   "chapterId": "ball_socket",
+   "jointType": "ball_and_socket",
+   "status": "teaching-simulation",
+   "statusShownOnScreen": "Teaching simulation",
+   "site": "ball_socket.shoulder_right",
+   "motionKind": "twoAxis",
+   "groupsMoved": 4,
+   "limitsDeg": {
+    "primary": [
+     -95,
+     15
+    ],
+    "secondary": [
+     -40,
+     85
+    ]
+   },
+   "title": "Ball-and-socket joint · shoulder",
+   "instruction": "Drag in any direction to move the arm.",
+   "explanation": "The arm moves in many directions, not just one. That is a ball-and-socket joint.",
+   "narratedInstruction": true,
+   "captures": [
+    "qa/visual/step15b_review/explore_ball_open.png",
+    "qa/visual/step15b_review/explore_ball_moved.png"
+   ]
+  },
+  {
+   "exploreId": "explore.hinge",
+   "chapterId": "hinge",
+   "jointType": "hinge",
+   "status": "validated-rig",
+   "statusShownOnScreen": "3D joint model",
+   "site": "hinge.elbow_right",
+   "motionKind": "dof",
+   "groupsMoved": 0,
+   "limitsDeg": {
+    "primary": [
+     0,
+     145
+    ]
+   },
+   "title": "Hinge joint · elbow",
+   "instruction": "Drag to bend and straighten the elbow.",
+   "explanation": "Bending is flexion. Straightening is extension. A hinge joint does both, in one direction.",
+   "narratedInstruction": true,
+   "captures": [
+    "qa/visual/step15b_review/explore_hinge_open.png",
+    "qa/visual/step15b_review/explore_hinge_moved.png"
+   ]
+  }
+ ],
+ "recall": {
+  "chapterId": "recall",
+  "opensOnShot": "recall.challenge",
+  "options": [
+   "Fixed",
+   "Pivot",
+   "Ball and socket",
+   "Hinge"
+  ],
+  "steps": [
+   {
+    "stepId": "skull",
+    "site": "fixed.skull",
+    "question": "These skull bones hardly move at all.",
+    "answer": "fixed",
+    "reveal": "Fixed: the bones hold firm, so there is little or no movement.",
+    "questionNamesTheCategory": false,
+    "narrated": true,
+    "captures": [
+     "qa/visual/step15b_review/recall_1_question.png",
+     "qa/visual/step15b_review/recall_1_answered.png"
+    ]
+   },
+   {
+    "stepId": "neck",
+    "site": "pivot.upper_neck",
+    "question": "The head turns around the bone below it.",
+    "answer": "pivot",
+    "reveal": "Pivot: one bone rotates around another.",
+    "questionNamesTheCategory": false,
+    "narrated": true,
+    "captures": [
+     "qa/visual/step15b_review/recall_2_question.png",
+     "qa/visual/step15b_review/recall_2_answered.png"
+    ]
+   },
+   {
+    "stepId": "shoulder",
+    "site": "ball_socket.shoulder_right",
+    "question": "The arm moves in many directions.",
+    "answer": "ball_and_socket",
+    "reveal": "Ball-and-socket: the rounded end sits in a socket, so it moves many ways.",
+    "questionNamesTheCategory": false,
+    "narrated": true,
+    "captures": [
+     "qa/visual/step15b_review/recall_3_question.png",
+     "qa/visual/step15b_review/recall_3_answered.png"
+    ]
+   },
+   {
+    "stepId": "elbow",
+    "site": "hinge.elbow_right",
+    "question": "This joint bends and straightens in one direction.",
+    "answer": "hinge",
+    "reveal": "Hinge: it bends and straightens in one main direction.",
+    "questionNamesTheCategory": false,
+    "narrated": true,
+    "captures": [
+     "qa/visual/step15b_review/recall_4_question.png",
+     "qa/visual/step15b_review/recall_4_answered.png"
+    ]
+   },
+   {
+    "stepId": "knee",
+    "site": "hinge.knee_right",
+    "question": "This joint in the leg bends and straightens one way.",
+    "answer": "hinge",
+    "reveal": "Hinge: the knee bends and straightens, like the elbow.",
+    "questionNamesTheCategory": false,
+    "narrated": true,
+    "captures": [
+     "qa/visual/step15b_review/recall_5_question.png",
+     "qa/visual/step15b_review/recall_5_answered.png"
+    ]
+   }
+  ]
+ },
+ "narrationCoverage": {
+  "voice": {
+   "name": "en-IN-Chirp3-HD-Aoede",
+   "languageCode": "en-IN",
+   "gender": "FEMALE",
+   "accent": "Indian English",
+   "provider": "Google Cloud Text-to-Speech"
+  },
+  "shotClips": 40,
+  "shotsTotal": 40,
+  "silentShots": [],
+  "silentShotsHaveNoCaption": true,
+  "cueClips": 16,
+  "clipsLongerThanTheirShot": [],
+  "everySpokenKeyIsOnScreen": true,
+  "spokenKeysNotOnScreen": [],
+  "captionKeysNotSpoken": []
+ },
+ "strings": {
+  "file": "qa/expert/step15b/strings-inventory.json",
+  "counts": {
+   "A_sourceBacked": 1,
+   "figureReference": 13,
+   "B_draftEnrichment": 61,
+   "C_interfaceOnly": 8,
+   "total": 83
+  }
+ },
+ "integrity": {
+  "note": "Nothing in this list was modified to produce this record. Hashes identify exactly what the expert is reviewing.",
+  "master": {
+   "path": "<owner desktop>/Human_Body_Master.blend",
+   "pinnedInConfig": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0",
+   "bytes": 224401653,
+   "sha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0",
+   "modified": "2026-09-16T10:52:57.809Z"
+  },
+  "masterMatchesPin": true,
+  "blenderWorkingAndCheckpoints": [
+   {
+    "path": "blender/Joints_Working.blend",
+    "bytes": 3539188,
+    "sha256": "9fb76d8c5b799d1bf65dc8e865c400299a3cc52fb8bf7ceab8c903a1671187f9",
+    "modified": "2026-09-17T09:52:22.037Z"
+   },
+   {
+    "path": "blender/Joints_Working.v001.blend",
+    "bytes": 3514520,
+    "sha256": "323ba6c1ae4b58001e20ad1edb6c50ab7e35225c72204ab5e42127872a7b8f75",
+    "modified": "2026-09-17T09:09:34.601Z"
+   },
+   {
+    "path": "blender/Joints_Working.v002.blend",
+    "bytes": 3520906,
+    "sha256": "9518004b2de8a749f0d1308c7fce9edd59399381588516f3b2a77f20bcc94f8f",
+    "modified": "2026-09-17T09:30:17.819Z"
+   },
+   {
+    "path": "blender/Joints_Working.v003.blend",
+    "bytes": 3538356,
+    "sha256": "817123863ec3601589cfdfdc4461742ca8580e015f77c09780acb5729c4b7c1b",
+    "modified": "2026-09-17T09:40:36.390Z"
+   },
+   {
+    "path": "blender/Joints_Working.v004.blend",
+    "bytes": 3539188,
+    "sha256": "9fb76d8c5b799d1bf65dc8e865c400299a3cc52fb8bf7ceab8c903a1671187f9",
+    "modified": "2026-09-17T09:52:22.037Z"
+   }
+  ],
+  "validatedElbowAssets": [
+   {
+    "path": "public/assets/joints/elbow_r/elbow_r.core.glb",
+    "bytes": 306880,
+    "sha256": "61c046262a823e95b141992f8bbaa13e5810c2bc7e7c76088dc3f9c6b1be93c1",
+    "modified": "2026-09-17T10:07:12.642Z"
+   },
+   {
+    "path": "public/assets/joints/elbow_r/elbow_r.detail.glb",
+    "bytes": 93936,
+    "sha256": "c767e24c51c65d17034b11368ecb480618a690d9847505f0f013437d293c38b6",
+    "modified": "2026-09-17T10:07:14.475Z"
+   },
+   {
+    "path": "public/assets/joints/elbow_r/elbow_r.context.glb",
+    "bytes": 628008,
+    "sha256": "a7d7fdc482d7e6bc30f65e524180cb4a613388b3406ce1e82cfc6677b31dfdbc",
+    "modified": "2026-09-17T10:07:16.444Z"
+   },
+   {
+    "path": "public/assets/joints/elbow_r/joint-manifest.json",
+    "bytes": 93064,
+    "sha256": "009d51528bf5a6d84b2ab14499d4a1346f4cc1bcaff0ab1a0f99b1ccfd135e66",
+    "modified": "2026-09-17T10:07:18.619Z"
+   }
+  ],
+  "bodyAssetsV2": [
+   {
+    "path": "public/assets/body/v2/body-delivery.json",
+    "bytes": 391943,
+    "sha256": "e288fd41c6b526f1103939902546af9370dae88c096699507699ef67e799fc22",
+    "modified": "2026-09-17T15:33:21.709Z"
+   },
+   {
+    "path": "public/assets/body/v2/body.closeup.glb",
+    "bytes": 1316784,
+    "sha256": "0b3c153f5d24ef3036a362e0c023ddb51240d0e4265160fd134806668f1abae4",
+    "modified": "2026-09-17T15:33:20.092Z"
+   },
+   {
+    "path": "public/assets/body/v2/body.context.glb",
+    "bytes": 153648,
+    "sha256": "710bc55288dbc32a423ad0ce05dccbd84ac288ff98770226b12489e13b8502a1",
+    "modified": "2026-09-17T15:33:21.037Z"
+   },
+   {
+    "path": "public/assets/body/v2/body.overview.glb",
+    "bytes": 740180,
+    "sha256": "28452b6a22da1c65ba093ea512e3007ba6f724d4999340168387bc2ef00d7ff3",
+    "modified": "2026-09-17T15:33:19.085Z"
+   },
+   {
+    "path": "public/assets/body/v2/body.skin.glb",
+    "bytes": 318684,
+    "sha256": "9e4d7565b333b78638ee2fed682b6deaad622e43201db068abd76db3dd9e1fd0",
+    "modified": "2026-09-17T15:33:21.259Z"
+   },
+   {
+    "path": "public/assets/body/v2/body.skin_lod1.glb",
+    "bytes": 160176,
+    "sha256": "a8ab08fa8f5eca3493c37ca8feab4c3d246f4de0a513c290e7d6611957df90b5",
+    "modified": "2026-09-17T15:33:21.526Z"
+   }
+  ],
+  "bodyAssetsV3_inProduction": [
+   {
+    "path": "public/assets/body/v3/body-delivery.json",
+    "bytes": 391309,
+    "sha256": "271bec0c1b3b70dcca957dd55cddfb938e05a080f25e50169aa922f1318f7819",
+    "modified": "2026-09-17T17:45:45.340Z"
+   },
+   {
+    "path": "public/assets/body/v3/body.closeup.glb",
+    "bytes": 1316784,
+    "sha256": "0b3c153f5d24ef3036a362e0c023ddb51240d0e4265160fd134806668f1abae4",
+    "modified": "2026-09-17T17:45:44.925Z"
+   },
+   {
+    "path": "public/assets/body/v3/body.context.glb",
+    "bytes": 153648,
+    "sha256": "710bc55288dbc32a423ad0ce05dccbd84ac288ff98770226b12489e13b8502a1",
+    "modified": "2026-09-17T17:45:45.162Z"
+   },
+   {
+    "path": "public/assets/body/v3/body.context_lod1.glb",
+    "bytes": 74404,
+    "sha256": "8deea4864e4b910a5956bff986f42b5c9836830efc42fbe76ef9c0ad9a7347e3",
+    "modified": "2026-09-17T17:45:45.194Z"
+   },
+   {
+    "path": "public/assets/body/v3/body.intro.glb",
+    "bytes": 163204,
+    "sha256": "c1e705c6f59e946020a20afb92a3ccae66b90c81bd594149551da8d22a2fc253",
+    "modified": "2026-09-17T17:45:44.705Z"
+   },
+   {
+    "path": "public/assets/body/v3/body.skin.glb",
+    "bytes": 318684,
+    "sha256": "9e4d7565b333b78638ee2fed682b6deaad622e43201db068abd76db3dd9e1fd0",
+    "modified": "2026-09-17T17:45:45.238Z"
+   },
+   {
+    "path": "public/assets/body/v3/body.skin_intro.glb",
+    "bytes": 95540,
+    "sha256": "34f0aee756dc056e9577d640d1efccd37460316ca2b8c6f656efc277b61959ea",
+    "modified": "2026-09-17T17:45:44.758Z"
+   },
+   {
+    "path": "public/assets/body/v3/body.skin_lod1.glb",
+    "bytes": 160176,
+    "sha256": "a8ab08fa8f5eca3493c37ca8feab4c3d246f4de0a513c290e7d6611957df90b5",
+    "modified": "2026-09-17T17:45:45.300Z"
+   }
+  ],
+  "bodyAssetsStep11": [
+   {
+    "path": "public/assets/body/body.skeleton.glb",
+    "bytes": 2015164,
+    "sha256": "702a2d393cd8346ff2d68b8f9893d18334084a8c326023fba654de99c3096d15",
+    "modified": "2026-09-17T14:07:32.317Z"
+   },
+   {
+    "path": "public/assets/body/body.skin.glb",
+    "bytes": 787444,
+    "sha256": "cb52db1f52107c4bdd0730437da209571de00a0305bd65a0c1cf3d70803e91ab",
+    "modified": "2026-09-17T14:07:34.517Z"
+   },
+   {
+    "path": "public/assets/body/body-manifest.json",
+    "bytes": 276921,
+    "sha256": "a252c2672ddd6d71bdc3bb25e6a5cedce953a543923ad3cafd8faf7cc3e92e24",
+    "modified": "2026-09-17T14:07:34.958Z"
+   }
+  ],
+  "sharedAssets": [
+   {
+    "path": "public/assets/shared/body-materials.glb",
+    "bytes": 37404,
+    "sha256": "3a85c2b741a85532d689925db2479107b427467c7c5274895cfe7f70ff44c743",
+    "modified": "2026-09-17T17:45:45.326Z"
+   },
+   {
+    "path": "public/assets/shared/env/environment.json",
+    "bytes": 881,
+    "sha256": "9b910ea782608eee0e45ae1d93c0c43310422cf3614319443bae7c9802663ee3",
+    "modified": "2026-09-17T15:28:23.556Z"
+   },
+   {
+    "path": "public/assets/shared/env/room_env_cubeuv_64.rgbe",
+    "bytes": 344064,
+    "sha256": "16f42df04448703d03203455d023074d9f278d04f0b2b4963f063506d7251510",
+    "modified": "2026-09-17T15:25:30.440Z"
+   }
+  ],
+  "lessonContent": [
+   {
+    "path": "content/lessons/hinge-elbow.json",
+    "bytes": 65822,
+    "sha256": "6252cac344e5f5af23d7a2eed40f6e618a7e7b865f3f819311798782bb5f9211",
+    "modified": "2026-09-18T12:57:07.274Z"
+   },
+   {
+    "path": "content/locales/en/hinge-elbow.json",
+    "bytes": 24602,
+    "sha256": "9e7adf3d1b0e0ad623d2ae5c8b737e4cd503294854ada4a6ec1f19ec152b6b80",
+    "modified": "2026-09-18T12:57:45.799Z"
+   },
+   {
+    "path": "content/schemas/video-lesson.schema.json",
+    "bytes": 19884,
+    "sha256": "0d64c7aa6b57a80c1ab80faead07f720052e5f2aa4caeaf70ce7f34f4866b507",
+    "modified": "2026-09-18T09:21:47.253Z"
+   },
+   {
+    "path": "content/schemas/locale.schema.json",
+    "bytes": 2669,
+    "sha256": "46e7207286f5d88de98b41f6bfef0322791c53295b74594c437353611863f35f",
+    "modified": "2026-09-17T14:16:11.314Z"
+   }
+  ],
+  "narrationAudio": [
+   {
+    "path": "public/assets/audio/narration/ball.hip.mp3",
+    "bytes": 9696,
+    "sha256": "5ffaeb8c509ef7163c60111003884b334707a15ed9378a6862cd412605271442",
+    "modified": "2026-09-18T13:42:45.168Z"
+   },
+   {
+    "path": "public/assets/audio/narration/ball.shoulder.mp3",
+    "bytes": 28704,
+    "sha256": "0639cbb64fbb53b1e0c0510d5427c795c57edb833f9d5da15bdf80092f9d00fd",
+    "modified": "2026-09-18T13:42:43.882Z"
+   },
+   {
+    "path": "public/assets/audio/narration/ball.travel.mp3",
+    "bytes": 8256,
+    "sha256": "a57af3c0a8b2d9ac72d2ddc23099215c35578ac764f8f8d2deb72a5b0767d4c9",
+    "modified": "2026-09-18T13:42:41.149Z"
+   },
+   {
+    "path": "public/assets/audio/narration/compare.ball.mp3",
+    "bytes": 14112,
+    "sha256": "ed9f6a8bd05dd74ac69df5aff6bde5439f2fba5c7e9a6dd73a0d9f2c5fa2f58b",
+    "modified": "2026-09-18T13:43:52.702Z"
+   },
+   {
+    "path": "public/assets/audio/narration/compare.fixed.mp3",
+    "bytes": 10272,
+    "sha256": "9fe41a380c411917bb1e03f3fb032f8a1e0b268f4d3f29ccbe9406a3fcd4e157",
+    "modified": "2026-09-18T13:43:48.380Z"
+   },
+   {
+    "path": "public/assets/audio/narration/compare.hinge.mp3",
+    "bytes": 10752,
+    "sha256": "40ecb3a0fa2ad7f97681b8ebac90479c3d4def16a883309e2aeae957db5a051f",
+    "modified": "2026-09-18T13:43:54.146Z"
+   },
+   {
+    "path": "public/assets/audio/narration/compare.pivot.mp3",
+    "bytes": 9984,
+    "sha256": "9dcbbc0e632948b7e9f253a11f38458911b61fa05b355bfe2893ab415aa5b073",
+    "modified": "2026-09-18T13:43:49.797Z"
+   },
+   {
+    "path": "public/assets/audio/narration/compare.pullback.mp3",
+    "bytes": 13632,
+    "sha256": "027efd3ce033a557ca11e5838258ab04436afe8bc0fbdf37b76574fe0995894a",
+    "modified": "2026-09-18T13:43:46.547Z"
+   },
+   {
+    "path": "public/assets/audio/narration/compare.together.mp3",
+    "bytes": 11136,
+    "sha256": "7c0875acec7029888ca59a98cfc0986657169189c9cc9f30485b6a272ee13988",
+    "modified": "2026-09-18T13:43:55.678Z"
+   },
+   {
+    "path": "public/assets/audio/narration/concept.different.mp3",
+    "bytes": 12576,
+    "sha256": "4faab2cf2ab63e5922b25027b38a699680db19dce6e53ac2f9788e4503b96d75",
+    "modified": "2026-09-18T13:42:08.638Z"
+   },
+   {
+    "path": "public/assets/audio/narration/concept.meet.mp3",
+    "bytes": 11424,
+    "sha256": "98bac99b22d464044c19b873eb22731c0d28ac5f3e45c41374958e9a7c58132b",
+    "modified": "2026-09-18T13:42:07.047Z"
+   },
+   {
+    "path": "public/assets/audio/narration/cue.explore.ball.instruction.mp3",
+    "bytes": 13056,
+    "sha256": "d5066c01aada816a4761254ad6d771292a356b311c513f50c5121fa5e982c22c",
+    "modified": "2026-09-18T13:44:44.328Z"
+   },
+   {
+    "path": "public/assets/audio/narration/cue.explore.fixed.instruction.mp3",
+    "bytes": 8832,
+    "sha256": "26033e8d90331a682d136cd454e1f2be7ae97f6aa92fc4eb692ec72f17ad3d9d",
+    "modified": "2026-09-18T13:44:16.065Z"
+   },
+   {
+    "path": "public/assets/audio/narration/cue.explore.hinge.instruction.mp3",
+    "bytes": 9504,
+    "sha256": "f0cac165f04503358244226cf3128cae147ae5c42f2921d436d90d4c7b9528fe",
+    "modified": "2026-09-18T13:44:45.761Z"
+   },
+   {
+    "path": "public/assets/audio/narration/cue.explore.pivot.instruction.mp3",
+    "bytes": 10272,
+    "sha256": "4d0459f3e9c5efdbb67162324281c54fec755a1a887bcc376c95c7d5f0f0a6db",
+    "modified": "2026-09-18T13:44:17.429Z"
+   },
+   {
+    "path": "public/assets/audio/narration/cue.recall.a.elbow.mp3",
+    "bytes": 20064,
+    "sha256": "9122d9b5f894de75dd60ed0eae17ebf6bd937ecf11ef66870174349b86f77022",
+    "modified": "2026-09-18T13:46:23.707Z"
+   },
+   {
+    "path": "public/assets/audio/narration/cue.recall.a.knee.mp3",
+    "bytes": 21312,
+    "sha256": "d9c1bfdfc5668a6f08c720c84ff7dca926632e68c3e00c9a94cec84e378cd93f",
+    "modified": "2026-09-18T13:46:31.057Z"
+   },
+   {
+    "path": "public/assets/audio/narration/cue.recall.a.neck.mp3",
+    "bytes": 19584,
+    "sha256": "60c67e560ea65986fb244c6035b263a292d46acc0b75738ff6fc974996980dc7",
+    "modified": "2026-09-18T13:45:59.245Z"
+   },
+   {
+    "path": "public/assets/audio/narration/cue.recall.a.shoulder.mp3",
+    "bytes": 26304,
+    "sha256": "be042069238113f5cf29f89b79d4cf480556954e794b94459d4a567d64aad578",
+    "modified": "2026-09-18T13:46:11.025Z"
+   },
+   {
+    "path": "public/assets/audio/narration/cue.recall.a.skull.mp3",
+    "bytes": 24576,
+    "sha256": "c32591ec9a7bfd8219fc971bf4e0061f62fc95051c06cd365f3d5eb273f23a9a",
+    "modified": "2026-09-18T13:45:21.678Z"
+   },
+   {
+    "path": "public/assets/audio/narration/cue.recall.complete.mp3",
+    "bytes": 10176,
+    "sha256": "b6566ef6a0e8ff9e2cfe3cdeea88f0be7a38e645d4988489d99c7c8d268f88e9",
+    "modified": "2026-09-18T13:46:43.374Z"
+   },
+   {
+    "path": "public/assets/audio/narration/cue.recall.incorrect.mp3",
+    "bytes": 12096,
+    "sha256": "03129bf73194907efd82f8b200e4250957213eb7db66521e945445e91cbf2833",
+    "modified": "2026-09-18T13:46:32.591Z"
+   },
+   {
+    "path": "public/assets/audio/narration/cue.recall.q.elbow.mp3",
+    "bytes": 13632,
+    "sha256": "ad06ce6437c88b7cdb3c7ced9d529724740e3ace8ea8cab8297d55bdbe36ed75",
+    "modified": "2026-09-18T13:46:12.608Z"
+   },
+   {
+    "path": "public/assets/audio/narration/cue.recall.q.knee.mp3",
+    "bytes": 12864,
+    "sha256": "ad38613ce843609ad26fbe03745c56078082c5cac9d5234bbece4767755c2d98",
+    "modified": "2026-09-18T13:46:25.366Z"
+   },
+   {
+    "path": "public/assets/audio/narration/cue.recall.q.neck.mp3",
+    "bytes": 9504,
+    "sha256": "4ef1373444c909157fc376f8d45b19b823913e4fde152ffded7b396a7f7e5712",
+    "modified": "2026-09-18T13:45:49.875Z"
+   },
+   {
+    "path": "public/assets/audio/narration/cue.recall.q.shoulder.mp3",
+    "bytes": 9024,
+    "sha256": "0ecd134c14d86c74d8d2d6c6fd32eef6eb72ca4101cd1b332f0625318fb07fc4",
+    "modified": "2026-09-18T13:46:06.042Z"
+   },
+   {
+    "path": "public/assets/audio/narration/cue.recall.q.skull.mp3",
+    "bytes": 10464,
+    "sha256": "6ceee21b78f26530583492cf890fed58ffdb99476371131c9716d20641fb21bc",
+    "modified": "2026-09-18T13:45:08.210Z"
+   },
+   {
+    "path": "public/assets/audio/narration/fixed.detail.mp3",
+    "bytes": 22176,
+    "sha256": "f3d0d4c41ea73dc45075d466cc3f6e543c57b49b88d5b0004f6c7cf5e000d756",
+    "modified": "2026-09-18T13:42:16.950Z"
+   },
+   {
+    "path": "public/assets/audio/narration/fixed.travel.mp3",
+    "bytes": 6912,
+    "sha256": "c2e151da4d08ae387af15fc41773f9ce948ce7372a46f766fb9f516cacc23d1a",
+    "modified": "2026-09-18T13:42:14.666Z"
+   },
+   {
+    "path": "public/assets/audio/narration/hinge.axis.mp3",
+    "bytes": 22272,
+    "sha256": "eb3ba99d9a8e5048adb8ff15515781fec9555266b4e0f5decf2ea379f4240753",
+    "modified": "2026-09-18T13:43:27.999Z"
+   },
+   {
+    "path": "public/assets/audio/narration/hinge.bones.mp3",
+    "bytes": 15456,
+    "sha256": "ac202e8eebcbd0ecfc7d50359e22156fa90e088c93ffcf4209e24ab522685319",
+    "modified": "2026-09-18T13:43:19.414Z"
+   },
+   {
+    "path": "public/assets/audio/narration/hinge.check.mp3",
+    "bytes": 14496,
+    "sha256": "6b936496439e9b5eba166af5129fdfec90ca8760ede9b7beb5853786d0f451cc",
+    "modified": "2026-09-18T13:43:35.480Z"
+   },
+   {
+    "path": "public/assets/audio/narration/hinge.extension.mp3",
+    "bytes": 14112,
+    "sha256": "e29accbf5df816fe042168e3ab3f53abef6f2a75a041fa537fa6ebef753b49cc",
+    "modified": "2026-09-18T13:43:31.314Z"
+   },
+   {
+    "path": "public/assets/audio/narration/hinge.flexion.mp3",
+    "bytes": 14496,
+    "sha256": "89734f69f8ff8e0c974774aa072281721c11f89e3e30aee3384e881dd27be1c7",
+    "modified": "2026-09-18T13:43:29.647Z"
+   },
+   {
+    "path": "public/assets/audio/narration/hinge.knee.mp3",
+    "bytes": 8064,
+    "sha256": "d11d578419d8b94cd2b75f825b9c8f6eef5457395817427d880656c175e1b1be",
+    "modified": "2026-09-18T13:43:39.769Z"
+   },
+   {
+    "path": "public/assets/audio/narration/hinge.return.mp3",
+    "bytes": 8832,
+    "sha256": "efa1894c1f06b608d2ec057a6fd73521a139c5297296b2715af47531f84b4333",
+    "modified": "2026-09-18T13:43:38.535Z"
+   },
+   {
+    "path": "public/assets/audio/narration/hinge.source.mp3",
+    "bytes": 16512,
+    "sha256": "ea7d453470ec6fb913cc73435c5cef068aa54b03903fd1cc5a702ce9b1b6a232",
+    "modified": "2026-09-18T13:43:17.666Z"
+   },
+   {
+    "path": "public/assets/audio/narration/hinge.support.mp3",
+    "bytes": 13056,
+    "sha256": "50a068f95d3c3979ed6efe749be957c7b7e8ce6e325ce7b4b8ae0c7cc5f06b4d",
+    "modified": "2026-09-18T13:43:37.263Z"
+   },
+   {
+    "path": "public/assets/audio/narration/hinge.travel.mp3",
+    "bytes": 5472,
+    "sha256": "15b91a6c57019aa20ed5836ef66c2e29d6d083d03c33e08a30232584302e3c75",
+    "modified": "2026-09-18T13:43:15.743Z"
+   },
+   {
+    "path": "public/assets/audio/narration/hinge.try.mp3",
+    "bytes": 22752,
+    "sha256": "c5214fe453898b03b040d51cc02f86c65ba9636d073b84f491e8e4fee1aa960b",
+    "modified": "2026-09-18T13:43:33.914Z"
+   },
+   {
+    "path": "public/assets/audio/narration/hook.elbow.mp3",
+    "bytes": 10176,
+    "sha256": "7ffb46ec68e30478a54dbe51991013ec7894f1e4c0a1e5b34eeabac4fb364031",
+    "modified": "2026-09-18T13:41:57.855Z"
+   },
+   {
+    "path": "public/assets/audio/narration/hook.question.mp3",
+    "bytes": 13824,
+    "sha256": "dd8a4ed49d4a8769c9ad628047abaa62603214d04292a6c31186c14bf231e2fe",
+    "modified": "2026-09-18T13:42:02.667Z"
+   },
+   {
+    "path": "public/assets/audio/narration/hook.shoulder.mp3",
+    "bytes": 14016,
+    "sha256": "dd078e49e0fd07cdf24d9bffb912651a89686931cdd74f94b3ee24b1574e999f",
+    "modified": "2026-09-18T13:41:56.501Z"
+   },
+   {
+    "path": "public/assets/audio/narration/intro.map.mp3",
+    "bytes": 17952,
+    "sha256": "d85c856577c035d399befc585bfd8b4d132e155907ac3486684e0d1fee397f64",
+    "modified": "2026-09-18T13:42:10.617Z"
+   },
+   {
+    "path": "public/assets/audio/narration/intro.title.mp3",
+    "bytes": 21216,
+    "sha256": "0a6cce1a46f1674d96f4f50b62ff9f4f6c8d25ac8ac425b1933e4ac627747b84",
+    "modified": "2026-09-18T13:41:53.474Z"
+   },
+   {
+    "path": "public/assets/audio/narration/map.all.mp3",
+    "bytes": 27072,
+    "sha256": "7182c88448e605fd453fdf7163092bafcf0bb70b4200b3041a73a1aa24a8e813",
+    "modified": "2026-09-18T13:44:14.779Z"
+   },
+   {
+    "path": "public/assets/audio/narration/map.ball.mp3",
+    "bytes": 11904,
+    "sha256": "4cbfa957ebf4f9d9780afd4e27e6fad04119a73265a8d6584b1e97e7db4987de",
+    "modified": "2026-09-18T13:44:06.577Z"
+   },
+   {
+    "path": "public/assets/audio/narration/map.fixed.mp3",
+    "bytes": 10944,
+    "sha256": "3eb2cb54861ce0cd6b7678fa888ad2c03112e36e27bb99a4525af53e335945a6",
+    "modified": "2026-09-18T13:44:03.496Z"
+   },
+   {
+    "path": "public/assets/audio/narration/map.hinge.mp3",
+    "bytes": 11424,
+    "sha256": "2159de651bb298434302c60651178879be122443ea8242a366c7e78d17ae7718",
+    "modified": "2026-09-18T13:44:11.761Z"
+   },
+   {
+    "path": "public/assets/audio/narration/map.intro.mp3",
+    "bytes": 9024,
+    "sha256": "78e1f182aefee7b3046687fb9d25aae80264aa9ef6c130b8beecde6be8b5f855",
+    "modified": "2026-09-18T13:44:01.984Z"
+   },
+   {
+    "path": "public/assets/audio/narration/map.pivot.mp3",
+    "bytes": 12096,
+    "sha256": "27b9841e158f8315e2dfe0b4e559a98564ada19808854e019401ca8267a4e5a7",
+    "modified": "2026-09-18T13:44:04.996Z"
+   },
+   {
+    "path": "public/assets/audio/narration/narration.json",
+    "bytes": 22263,
+    "sha256": "936328ca41de69a8679064a100acf1f387555e84c99b2b78b45269f475038d39",
+    "modified": "2026-09-18T13:46:43.374Z"
+   },
+   {
+    "path": "public/assets/audio/narration/pivot.bones.mp3",
+    "bytes": 15552,
+    "sha256": "613c11f073ef6bd83acf1a44e003bb5ecda0b2494b6a41f5381dc2afa8be38ed",
+    "modified": "2026-09-18T13:42:20.324Z"
+   },
+   {
+    "path": "public/assets/audio/narration/pivot.rotate.mp3",
+    "bytes": 15744,
+    "sha256": "29c39d4f65ec006398e025788d7eeeb8dceef88a23ec3020732b575c6008c1ff",
+    "modified": "2026-09-18T13:42:36.067Z"
+   },
+   {
+    "path": "public/assets/audio/narration/pivot.travel.mp3",
+    "bytes": 5472,
+    "sha256": "c32ba810d2f75de2f3c6dffadbf1c5aa071a9d5a95a952f5a6f9f59a1daaadbe",
+    "modified": "2026-09-18T13:42:17.933Z"
+   },
+   {
+    "path": "public/assets/audio/narration/recall.challenge.mp3",
+    "bytes": 11136,
+    "sha256": "4ad71118ab03fee2e4c5e0f0d98e55a16abdd4bb197272e08891a73c3e6982aa",
+    "modified": "2026-09-18T13:44:00.629Z"
+   },
+   {
+    "path": "public/assets/audio/narration/recall.open.mp3",
+    "bytes": 15072,
+    "sha256": "aa78e7dcbcbb9480c39518a4add721f50c05be1a83060df457945aed071f4bfe",
+    "modified": "2026-09-18T13:43:57.462Z"
+   }
+  ],
+  "productionWebBuild": [
+   {
+    "path": "dist/index.html",
+    "bytes": 1195,
+    "sha256": "0b916e76b2c0b41882fc623b666076ddf6f03db80e11688c5ac1319294a85b82",
+    "modified": "2026-09-18T13:46:58.975Z"
+   },
+   {
+    "path": "dist/app/filmQa-CIuSHvAO.js",
+    "bytes": 3346,
+    "sha256": "7fca728fbacd70f0ba7517df5e702134df1bbd65c8bb1827556f84dd2988398a",
+    "modified": "2026-09-18T13:46:58.975Z"
+   },
+   {
+    "path": "dist/app/index-BYnFmhoV.css",
+    "bytes": 26860,
+    "sha256": "ea20d071a862c50a785c9951daf9ee705ad6cb4cc840903b8de33d4d2ea48981",
+    "modified": "2026-09-18T13:46:58.975Z"
+   },
+   {
+    "path": "dist/app/index-DBybkON4.js",
+    "bytes": 943486,
+    "sha256": "f24eb2d4f1fca4e984f6a10ac8d6b465c0a76c29df79f242d1097540e80d7ccb",
+    "modified": "2026-09-18T13:46:58.975Z"
+   },
+   {
+    "path": "dist/app/manifestSchema-BjIwwPNx.js",
+    "bytes": 68572,
+    "sha256": "8604b3e1757dfbf1b172230d2802f41ebdf725ad71950e56d2da8d2ac2ab5827",
+    "modified": "2026-09-18T13:46:58.975Z"
+   },
+   {
+    "path": "dist/app/qaApi-CaEms2Oj.js",
+    "bytes": 5151,
+    "sha256": "1a1f1661ea4ae7ef7ac7a30619f1bcb4e7b187762579345e72e34b1075482f37",
+    "modified": "2026-09-18T13:46:58.975Z"
+   },
+   {
+    "path": "dist/app/RoomEnvironment-B0HZc-WZ.js",
+    "bytes": 2096,
+    "sha256": "b523a9c4bd1579f1f400c047396bfb60133e2b9dfd973067141de8e05f3eb46f",
+    "modified": "2026-09-18T13:46:58.975Z"
+   },
+   {
+    "path": "dist/app/Shell-BcShDRmG.js",
+    "bytes": 7556,
+    "sha256": "319d1b44a57fa27316afaece7073c032cd0959ac1a1951ad237eb16f054be04d",
+    "modified": "2026-09-18T13:46:58.975Z"
+   }
+  ],
+  "reviewCaptures": [
+   {
+    "path": "qa/visual/step15b_review/01_hook__hook.elbow.png",
+    "bytes": 480239,
+    "sha256": "291c54feeabf98529fc62ad38b3f17ee30cf03c40bd4a4155a8e10a06f098ab0",
+    "modified": "2026-09-18T13:50:04.286Z"
+   },
+   {
+    "path": "qa/visual/step15b_review/01_hook__hook.question.png",
+    "bytes": 440219,
+    "sha256": "f3bdbf027cb257532581ada3b09d361b14a28a9353b475b7589c52a934bbdf50",
+    "modified": "2026-09-18T13:50:04.808Z"
+   },
+   {
+    "path": "qa/visual/step15b_review/01_hook__hook.shoulder.png",
+    "bytes": 576065,
+    "sha256": "cc769c82b69a8f2dc41242efb7c8fb50dc48c63f8066b24b7776648130e4334e",
+    "modified": "2026-09-18T13:50:03.738Z"
+   },
+   {
+    "path": "qa/visual/step15b_review/01_hook__intro.title.png",
+    "bytes": 475638,
+    "sha256": "179715fbbad846364f24f79f8105e68bee6b69cf486187a44c77cfb151c2f79c",
+    "modified": "2026-09-18T13:50:03.143Z"
+   },
+   {
+    "path": "qa/visual/step15b_review/02_what_is_joint__concept.different.png",
+    "bytes": 415235,
+    "sha256": "cb7e7237ebb48847948fe8869744b0fd0251f058047035f55a1bb44e198983cf",
+    "modified": "2026-09-18T13:50:05.882Z"
+   },
+   {
+    "path": "qa/visual/step15b_review/02_what_is_joint__concept.meet.png",
+    "bytes": 518723,
+    "sha256": "2779edf517adab0786487b69bac60f52f5fbc305ed98f693b52484f09d01a247",
+    "modified": "2026-09-18T13:50:05.365Z"
+   },
+   {
+    "path": "qa/visual/step15b_review/02_what_is_joint__intro.map.png",
+    "bytes": 473591,
+    "sha256": "02f4ee17f37e5e9dd80832cdfe934951f84694b53ff60cbf8633f1e0229027ba",
+    "modified": "2026-09-18T13:50:06.416Z"
+   },
+   {
+    "path": "qa/visual/step15b_review/03_fixed__fixed.detail.png",
+    "bytes": 411183,
+    "sha256": "6e9a80d85b64d904720094d75e74441c5103bbc0cf1ec3fd8d3568f0f5a7e1bd",
+    "modified": "2026-09-18T13:50:07.449Z"
+   },
+   {
+    "path": "qa/visual/step15b_review/03_fixed__fixed.travel.png",
+    "bytes": 356498,
+    "sha256": "a42563f89dc618393b3212533bef47b37421c186d89eda547b7468f2e6fa439b",
+    "modified": "2026-09-18T13:50:06.936Z"
+   },
+   {
+    "path": "qa/visual/step15b_review/04_pivot__pivot.bones.png",
+    "bytes": 450086,
+    "sha256": "a20ba620e8edc3eff199f2e0767a3ce5b7bcba12556104fe623801a4cb433d57",
+    "modified": "2026-09-18T13:50:08.516Z"
+   },
+   {
+    "path": "qa/visual/step15b_review/04_pivot__pivot.rotate.png",
+    "bytes": 491561,
+    "sha256": "41cca0c610e45480ef94b4bae00809ca50d03a36618f537399bf29671cabae3a",
+    "modified": "2026-09-18T13:50:09.058Z"
+   },
+   {
+    "path": "qa/visual/step15b_review/04_pivot__pivot.travel.png",
+    "bytes": 424685,
+    "sha256": "2f1f4545b0bd60791e1abc720bd3f7af7938a35f2fb4b3f1507f7b7a7e311d9d",
+    "modified": "2026-09-18T13:50:07.990Z"
+   },
+   {
+    "path": "qa/visual/step15b_review/05_ball_socket__ball.hip.png",
+    "bytes": 541880,
+    "sha256": "0a45d85c6cddd24afed9a8091b059fb34f2c6ae48a506260a8a9635b0606c4a5",
+    "modified": "2026-09-18T13:50:10.715Z"
+   },
+   {
+    "path": "qa/visual/step15b_review/05_ball_socket__ball.shoulder.png",
+    "bytes": 562827,
+    "sha256": "cfd35a1d12267c8e19da7181011cc6178d86478f44c353cdaccdd06f58ea6e44",
+    "modified": "2026-09-18T13:50:10.138Z"
+   },
+   {
+    "path": "qa/visual/step15b_review/05_ball_socket__ball.travel.png",
+    "bytes": 529456,
+    "sha256": "b20d11e6fbc47b0b876364051008aab9b5cb36c6139834af4120021b63ef7a50",
+    "modified": "2026-09-18T13:50:09.603Z"
+   },
+   {
+    "path": "qa/visual/step15b_review/06_hinge__hinge.axis.png",
+    "bytes": 474413,
+    "sha256": "6093701240560023e590301cec1b5c7e2cafeb8e4a0c174be51abeef1fd34076",
+    "modified": "2026-09-18T13:50:12.888Z"
+   },
+   {
+    "path": "qa/visual/step15b_review/06_hinge__hinge.bones.png",
+    "bytes": 470685,
+    "sha256": "697572a8d1164539ee337bb36389494a2e6b009184268ad623872f2718db2110",
+    "modified": "2026-09-18T13:50:12.358Z"
+   },
+   {
+    "path": "qa/visual/step15b_review/06_hinge__hinge.check.png",
+    "bytes": 451389,
+    "sha256": "fd5938065f3451cd97e251ec00c1873cc762a6bfe923785061a65309b3e05720",
+    "modified": "2026-09-18T13:50:15.023Z"
+   },
+   {
+    "path": "qa/visual/step15b_review/06_hinge__hinge.extension.png",
+    "bytes": 499598,
+    "sha256": "3d81f80fc677bcfc65b8b5470064e3e1a1cf8d040ad6b082f6ce05a2a9b21af3",
+    "modified": "2026-09-18T13:50:13.950Z"
+   },
+   {
+    "path": "qa/visual/step15b_review/06_hinge__hinge.flexion.png",
+    "bytes": 463407,
+    "sha256": "9de7b5bc806427f5b806d2cd63f4975cee65cee0071b8ae88ed74fd689064485",
+    "modified": "2026-09-18T13:50:13.418Z"
+   },
+   {
+    "path": "qa/visual/step15b_review/06_hinge__hinge.knee.png",
+    "bytes": 415278,
+    "sha256": "498aabd267252510fd39ce5d862b02d1fd0d79aff7147423d735e09c84315438",
+    "modified": "2026-09-18T13:50:16.649Z"
+   },
+   {
+    "path": "qa/visual/step15b_review/06_hinge__hinge.return.png",
+    "bytes": 449923,
+    "sha256": "07db007d823de902cd0054c501e6971b5b35ab4801cc9517ad51ef3f10ea495c",
+    "modified": "2026-09-18T13:50:16.117Z"
+   },
+   {
+    "path": "qa/visual/step15b_review/06_hinge__hinge.source.png",
+    "bytes": 534820,
+    "sha256": "44e6fded692279cc77ddaf4cf5b241fd87d43261ea1c6333a79bc6c25b43c1c6",
+    "modified": "2026-09-18T13:50:11.820Z"
+   },
+   {
+    "path": "qa/visual/step15b_review/06_hinge__hinge.support.png",
+    "bytes": 565466,
+    "sha256": "69eb75ef232ae40ae71b525aec9ac8684e47a1a09cda0cf44552622027cadab0",
+    "modified": "2026-09-18T13:50:15.593Z"
+   },
+   {
+    "path": "qa/visual/step15b_review/06_hinge__hinge.travel.png",
+    "bytes": 493541,
+    "sha256": "38149287c8c231fe82517713d5259358c70119cc764bd251cbae90b5280feecd",
+    "modified": "2026-09-18T13:50:11.273Z"
+   },
+   {
+    "path": "qa/visual/step15b_review/06_hinge__hinge.try.png",
+    "bytes": 470296,
+    "sha256": "ec48aedfaaf2a8c294f561913c76f66c02f3bd5b53095cd36287596c5af95ae4",
+    "modified": "2026-09-18T13:50:14.500Z"
+   },
+   {
+    "path": "qa/visual/step15b_review/07_compare__compare.ball.png",
+    "bytes": 570182,
+    "sha256": "faa7a42dd2c2248ea716d96a79592a5a29eef6d323bce23626a76507720b2b8c",
+    "modified": "2026-09-18T13:50:18.768Z"
+   },
+   {
+    "path": "qa/visual/step15b_review/07_compare__compare.fixed.png",
+    "bytes": 363531,
+    "sha256": "d664733c719f57a2d27c0e9bd873938fd64377d578fadde474d236d2323b4dbf",
+    "modified": "2026-09-18T13:50:17.693Z"
+   },
+   {
+    "path": "qa/visual/step15b_review/07_compare__compare.hinge.png",
+    "bytes": 493582,
+    "sha256": "21d2b2ef279ce13a5f3d7dc22e1916ff42ae5eac9ef30b30053a59f40b2553d4",
+    "modified": "2026-09-18T13:50:19.301Z"
+   },
+   {
+    "path": "qa/visual/step15b_review/07_compare__compare.pivot.png",
+    "bytes": 470183,
+    "sha256": "489eef3f44edfbe4900f8b259e70b3ce3f8c48a141189caeff64405a5449aac4",
+    "modified": "2026-09-18T13:50:18.219Z"
+   },
+   {
+    "path": "qa/visual/step15b_review/07_compare__compare.pullback.png",
+    "bytes": 455877,
+    "sha256": "de29a8e99db165768616fedd15bbda5b0598b90853634620be1b8be01a9dd96d",
+    "modified": "2026-09-18T13:50:17.198Z"
+   },
+   {
+    "path": "qa/visual/step15b_review/07_compare__compare.together.png",
+    "bytes": 427648,
+    "sha256": "bfef37a66eab6549152ad33a57c1434dbbf701481d7d772837b99f2f848b7d2f",
+    "modified": "2026-09-18T13:50:19.818Z"
+   },
+   {
+    "path": "qa/visual/step15b_review/08_recall__recall.challenge.png",
+    "bytes": 317368,
+    "sha256": "ad34a00698dfd57bfd2b0858637058dd403d918bdc04dcfbcf2b5711e595fca3",
+    "modified": "2026-09-18T13:50:21.748Z"
+   },
+   {
+    "path": "qa/visual/step15b_review/08_recall__recall.open.png",
+    "bytes": 425573,
+    "sha256": "8bee2da273837d56b1c8e8899e2c3963cea28717fa581a8ec7c425e83ccfbe44",
+    "modified": "2026-09-18T13:50:20.361Z"
+   },
+   {
+    "path": "qa/visual/step15b_review/09_body_map__map.all.png",
+    "bytes": 455733,
+    "sha256": "4b1653ef050a56165ab3249163ccfe121a04b9808706a918285b6aa16fa2e0ee",
+    "modified": "2026-09-18T13:50:24.888Z"
+   },
+   {
+    "path": "qa/visual/step15b_review/09_body_map__map.ball.png",
+    "bytes": 424110,
+    "sha256": "9b3ffd8d44ec65af84ebeb4123ac5df8cf1d01d47feef427807c4488469225f4",
+    "modified": "2026-09-18T13:50:23.848Z"
+   },
+   {
+    "path": "qa/visual/step15b_review/09_body_map__map.fixed.png",
+    "bytes": 410435,
+    "sha256": "1659583169baf0d6b7a1a5c8a114b206ad0d89f1998752402787749f9269a7ee",
+    "modified": "2026-09-18T13:50:22.822Z"
+   },
+   {
+    "path": "qa/visual/step15b_review/09_body_map__map.hinge.png",
+    "bytes": 426646,
+    "sha256": "829aa83b1fd2b771ac102ea5b31f5b2fadab7d924f77846204fe40740bd42762",
+    "modified": "2026-09-18T13:50:24.368Z"
+   },
+   {
+    "path": "qa/visual/step15b_review/09_body_map__map.intro.png",
+    "bytes": 461042,
+    "sha256": "465c3688efd3e88ef7e02fdc21cee5f7b1216d1dc7848c1a40356387467c6606",
+    "modified": "2026-09-18T13:50:22.298Z"
+   },
+   {
+    "path": "qa/visual/step15b_review/09_body_map__map.pivot.png",
+    "bytes": 418063,
+    "sha256": "0d6932ff0ae4fd0f15e2717fe436521c809454f49708c254f6c27c18ffef5ddd",
+    "modified": "2026-09-18T13:50:23.332Z"
+   },
+   {
+    "path": "qa/visual/step15b_review/captures.json",
+    "bytes": 18547,
+    "sha256": "8004e92d815e1ba75ea9d0f70d6f65d19a6386149a600660de6c1dcbaa07fe9b",
+    "modified": "2026-09-18T13:50:51.628Z"
+   },
+   {
+    "path": "qa/visual/step15b_review/elbow_000.png",
+    "bytes": 463270,
+    "sha256": "b63eed6ef921b22df36c3ede57c3aaf96dc29bcef51e5e30b8a54c63323a342a",
+    "modified": "2026-09-18T13:50:25.348Z"
+   },
+   {
+    "path": "qa/visual/step15b_review/elbow_045.png",
+    "bytes": 466585,
+    "sha256": "97a323800afd53921da923f25e0c82c54389d00e7cd293a022771f5bc97387a0",
+    "modified": "2026-09-18T13:50:25.788Z"
+   },
+   {
+    "path": "qa/visual/step15b_review/elbow_090.png",
+    "bytes": 464476,
+    "sha256": "fa25656d4ec0a1bda95fe74d0d04e384de67ef2e3b23a11104f922dfa1b2916d",
+    "modified": "2026-09-18T13:50:26.182Z"
+   },
+   {
+    "path": "qa/visual/step15b_review/elbow_145.png",
+    "bytes": 465173,
+    "sha256": "131a8457d2e7e7bb4fd28585cbab1f4e9096af12ef3e358f82bb10d7bbf21e2c",
+    "modified": "2026-09-18T13:50:26.588Z"
+   },
+   {
+    "path": "qa/visual/step15b_review/explore_ball_moved.png",
+    "bytes": 379411,
+    "sha256": "98c3e7d7f1c1f87f0c02c41a38b52b895d222c08b43477ac9de8a2f6594a332a",
+    "modified": "2026-09-18T13:50:33.338Z"
+   },
+   {
+    "path": "qa/visual/step15b_review/explore_ball_open.png",
+    "bytes": 391049,
+    "sha256": "04e358771e3835f2591284f0884016920e30275ff0ac28f715c89ae1f22a536f",
+    "modified": "2026-09-18T13:50:32.913Z"
+   },
+   {
+    "path": "qa/visual/step15b_review/explore_fixed_moved.png",
+    "bytes": 337134,
+    "sha256": "580aff58428f2699e5f389aed86f01d416307541b4fb3125e14b986a665b3f4d",
+    "modified": "2026-09-18T13:50:28.818Z"
+   },
+   {
+    "path": "qa/visual/step15b_review/explore_fixed_open.png",
+    "bytes": 337161,
+    "sha256": "2925ccc9ae5324813ddf4fd75754517a1de1bb7849de40b0307b56b2ea434d6e",
+    "modified": "2026-09-18T13:50:28.391Z"
+   },
+   {
+    "path": "qa/visual/step15b_review/explore_hinge_moved.png",
+    "bytes": 466938,
+    "sha256": "02d3a75d92aa00585adbcb2f7c1d942feb62a2bffe1d96202e0f61abd607db78",
+    "modified": "2026-09-18T13:50:35.648Z"
+   },
+   {
+    "path": "qa/visual/step15b_review/explore_hinge_open.png",
+    "bytes": 466938,
+    "sha256": "02d3a75d92aa00585adbcb2f7c1d942feb62a2bffe1d96202e0f61abd607db78",
+    "modified": "2026-09-18T13:50:35.198Z"
+   },
+   {
+    "path": "qa/visual/step15b_review/explore_pivot_moved.png",
+    "bytes": 364654,
+    "sha256": "4a984511e695ece4d86df1df1fd9935ad5ba4815eabba5b40218a98ed3f73517",
+    "modified": "2026-09-18T13:50:31.073Z"
+   },
+   {
+    "path": "qa/visual/step15b_review/explore_pivot_open.png",
+    "bytes": 363085,
+    "sha256": "91aec03883b56c6f0838c273a20972340a90d33a4518545e06030eb834e21106",
+    "modified": "2026-09-18T13:50:30.638Z"
+   },
+   {
+    "path": "qa/visual/step15b_review/phone_compare.together.png",
+    "bytes": 179008,
+    "sha256": "68266401dd1f461c4817cba1e9118d43b8c3c127500c89d308fb52000097b449",
+    "modified": "2026-09-18T13:50:49.415Z"
+   },
+   {
+    "path": "qa/visual/step15b_review/phone_concept.meet.png",
+    "bytes": 226595,
+    "sha256": "10b2b948a77cd2743f063f2a94f05cb6c69635091ae887fb7a671fbb8b4c14a1",
+    "modified": "2026-09-18T13:50:47.944Z"
+   },
+   {
+    "path": "qa/visual/step15b_review/phone_fixed.detail.png",
+    "bytes": 188385,
+    "sha256": "719902f3b63529e1bc2cc23739722235b8f372469c8936f07f23e273f352b970",
+    "modified": "2026-09-18T13:50:48.415Z"
+   },
+   {
+    "path": "qa/visual/step15b_review/phone_hinge.try.png",
+    "bytes": 150095,
+    "sha256": "7fe94d1471bdda64c43daf21bd4844ed7f1b144085494b4e899f55b6037a45fa",
+    "modified": "2026-09-18T13:50:48.944Z"
+   },
+   {
+    "path": "qa/visual/step15b_review/phone_hook.shoulder.png",
+    "bytes": 233856,
+    "sha256": "3cad3364d3fbe541e530f208b43b24bc26feef71f35a509b204a710bc6280381",
+    "modified": "2026-09-18T13:50:47.459Z"
+   },
+   {
+    "path": "qa/visual/step15b_review/phone_map.all.png",
+    "bytes": 193699,
+    "sha256": "9150f5c231ae6d386970ff7b604e5a65a3551ebacbf78fe5e9d816a598e983fc",
+    "modified": "2026-09-18T13:50:49.884Z"
+   },
+   {
+    "path": "qa/visual/step15b_review/phone_recall_question.png",
+    "bytes": 119023,
+    "sha256": "24509018937605dc6244e0afd5737b9e3b703d2ddf3cb5bddc19f960609d3344",
+    "modified": "2026-09-18T13:50:51.431Z"
+   },
+   {
+    "path": "qa/visual/step15b_review/recall_1_answered.png",
+    "bytes": 323391,
+    "sha256": "31a5bc20df7e12a7a07bedf713bb52eb8b1e3728af076c8d88a510b9dfe80da7",
+    "modified": "2026-09-18T13:50:38.253Z"
+   },
+   {
+    "path": "qa/visual/step15b_review/recall_1_question.png",
+    "bytes": 317366,
+    "sha256": "f64f33c81fabc77caab3940b3c2cab9b630e70bd098bf6670b9878a68ae90fed",
+    "modified": "2026-09-18T13:50:37.168Z"
+   },
+   {
+    "path": "qa/visual/step15b_review/recall_1_wrong.png",
+    "bytes": 321014,
+    "sha256": "b2e39b6e40054a05a002304b064e050f74dbadba33870ae2ebf4423813da6afd",
+    "modified": "2026-09-18T13:50:37.708Z"
+   },
+   {
+    "path": "qa/visual/step15b_review/recall_2_answered.png",
+    "bytes": 371643,
+    "sha256": "cbb07c41ebfd23e0554b33297e7acfb1e29fa30b19cd3bc7ca4e781b13af6198",
+    "modified": "2026-09-18T13:50:40.263Z"
+   },
+   {
+    "path": "qa/visual/step15b_review/recall_2_question.png",
+    "bytes": 367193,
+    "sha256": "1bd7106b92530d65081a10b05c7b7d16ad2cd4d8dbb97a9d13e9da0bc4a10707",
+    "modified": "2026-09-18T13:50:39.708Z"
+   },
+   {
+    "path": "qa/visual/step15b_review/recall_3_answered.png",
+    "bytes": 427122,
+    "sha256": "4fcdc7811d4ef4ff2e6e869e2909cff612be8b9f3f6cde2d50a63d1c69fe962c",
+    "modified": "2026-09-18T13:50:42.348Z"
+   },
+   {
+    "path": "qa/visual/step15b_review/recall_3_question.png",
+    "bytes": 422487,
+    "sha256": "9717e8e582ec62717bc96e9eb4dfce571ddf98360b43c8d26435db57fc421ee3",
+    "modified": "2026-09-18T13:50:41.776Z"
+   },
+   {
+    "path": "qa/visual/step15b_review/recall_4_answered.png",
+    "bytes": 467862,
+    "sha256": "3cc24f99c3e0e80e60241f65c536baf8007e43f420be0afbf84745ebb7797d7a",
+    "modified": "2026-09-18T13:50:44.423Z"
+   },
+   {
+    "path": "qa/visual/step15b_review/recall_4_question.png",
+    "bytes": 463426,
+    "sha256": "e97b643dc03c20f2d8cd10f4d2ae3666648fec422b1a7bb47d42b9ca381f51e0",
+    "modified": "2026-09-18T13:50:43.848Z"
+   },
+   {
+    "path": "qa/visual/step15b_review/recall_5_answered.png",
+    "bytes": 382130,
+    "sha256": "6fbba26c362b2299ecf8d3c2adb24ff74ba09133c2aa88c923a8ac741a277620",
+    "modified": "2026-09-18T13:50:46.468Z"
+   },
+   {
+    "path": "qa/visual/step15b_review/recall_5_question.png",
+    "bytes": 375408,
+    "sha256": "ad01d6cbf667fd89e9a2200d307fbc5ede9da04020b5f87b0811fa1a021694ac",
+    "modified": "2026-09-18T13:50:45.898Z"
+   }
+  ],
+  "packageFiles": [
+   {
+    "path": "qa/expert/step15/anatomy-review.md",
+    "bytes": 15103,
+    "sha256": "5a4e473b7360c37e126c1c1d516483f1433c65b2d04bf460ffcac31a5449867e",
+    "modified": "2026-09-18T12:21:46.055Z"
+   },
+   {
+    "path": "qa/expert/step15/asset-provenance-review.md",
+    "bytes": 6148,
+    "sha256": "8da32b60662702abe2d7651365b95dc8727a609aa2c48c172b297b86d9e03a5c",
+    "modified": "2026-09-18T12:23:23.123Z"
+   },
+   {
+    "path": "qa/expert/step15/capture_review_set.mjs",
+    "bytes": 7156,
+    "sha256": "9ef30b33d6ddcaac5677f971a6a922c17d9cea4504a8d229c4cbee41af9ec00d",
+    "modified": "2026-09-18T12:12:58.487Z"
+   },
+   {
+    "path": "qa/expert/step15/curriculum-review.md",
+    "bytes": 11768,
+    "sha256": "762289bc8e6dd9b67622a2af6609161356b92761daede1a46ebaea157f309ff4",
+    "modified": "2026-09-18T12:22:47.582Z"
+   },
+   {
+    "path": "qa/expert/step15/expert-review-status.json",
+    "bytes": 1011,
+    "sha256": "74bfe1f3b49c79e77ebaeb8fd33112cd64413feebe2a631b959b8eda285663a2",
+    "modified": "2026-09-18T12:16:09.758Z"
+   },
+   {
+    "path": "qa/expert/step15/performance-review.md",
+    "bytes": 6840,
+    "sha256": "518967b96bf1a0b548e6c10836656bae878557bd77d2a65de79aabdcc32099e5",
+    "modified": "2026-09-18T12:24:37.103Z"
+   },
+   {
+    "path": "qa/expert/step15/reviewer-checklist.md",
+    "bytes": 18424,
+    "sha256": "14014464e6b1e7028ae54a5219220b840591e84c41cd84ad4c43c88aa67e364b",
+    "modified": "2026-09-18T12:26:16.379Z"
+   },
+   {
+    "path": "qa/expert/step15/screen-reader-checklist.md",
+    "bytes": 6417,
+    "sha256": "180208f6aa43c00979b7f8618f7cc18bc59ef30472e87600d98bda93ff37124f",
+    "modified": "2026-09-18T12:23:58.465Z"
+   },
+   {
+    "path": "qa/expert/step15/strings-inventory.json",
+    "bytes": 19705,
+    "sha256": "70698fe45e57943feed810b164e14a2d8a22dad7a2b49650c006fd46d53f1598",
+    "modified": "2026-09-18T12:26:19.564Z"
+   }
+  ],
+  "reviewCapturesNote": "qa/visual/ is git-ignored by repository policy because every capture set is reproducible from its own script. These 69 captures are reproduced by qa/expert/step15b/capture_review_set.mjs (tracked, and hashed in packageFiles) against the built dist of this candidate; the SHA-256 of each one is recorded above, so a reviewer who regenerates them can verify they are looking at the same images. To send the package to an off-machine reviewer, ship qa/visual/step15b_review/ alongside it."
+ },
+ "supportingReports": [
+  {
+   "path": "qa/reports/step14b.lesson.json",
+   "bytes": 6502,
+   "sha256": "494be5b2c41c8abb8fcf29a24bb5ef1ead92e687cb08456f70c456dcf2621a90",
+   "modified": "2026-09-18T13:47:36.099Z"
+  },
+  {
+   "path": "qa/reports/step14.accessibility.json",
+   "bytes": 25269,
+   "sha256": "0da75dfd0471d96c668852155ee8ed019edc678f4fcfbe84e277f58257c4f695",
+   "modified": "2026-09-18T13:39:06.861Z"
+  },
+  {
+   "path": "qa/reports/step14.explore.json",
+   "bytes": 929,
+   "sha256": "7b6ea26f86d37d47168a8ed3e51a0013db3cbdde182815cef466f28c2846f18f",
+   "modified": "2026-09-18T13:39:23.358Z"
+  },
+  {
+   "path": "qa/reports/step14.recall.json",
+   "bytes": 1526,
+   "sha256": "0e87e9f11885dde1320d11dfd1c2d3b2e94d55ee3ef38fa527b8914cbdf93ef0",
+   "modified": "2026-09-18T13:40:41.710Z"
+  },
+  {
+   "path": "qa/reports/step14.responsive.json",
+   "bytes": 2926,
+   "sha256": "00b676ee6009febe0c49bb0622130f6d9c00453dbdbc321467549dc610f0fa1f",
+   "modified": "2026-09-18T13:41:03.743Z"
+  },
+  {
+   "path": "qa/reports/step14.perf.explore.json",
+   "bytes": 102746,
+   "sha256": "a07fce79a5f5a0e299855e4caf23f4be0aba6ce6aa05ed60986e2b9e76263274",
+   "modified": "2026-09-18T09:05:48.765Z"
+  },
+  {
+   "path": "qa/reports/step12.accessibility.json",
+   "bytes": 58037,
+   "sha256": "94e4676cf477efd918d2d611a11995dd4cf83f9896c3194d93769434af332246",
+   "modified": "2026-09-18T13:35:12.443Z"
+  },
+  {
+   "path": "qa/reports/step12.reduced_motion.json",
+   "bytes": 6792,
+   "sha256": "a2ddc5521b4d2cbe9298b0a76a5add08c2c5b664caaa87a687af99f8da0f0608",
+   "modified": "2026-09-18T13:36:02.588Z"
+  },
+  {
+   "path": "qa/reports/step12.visual_regression.json",
+   "bytes": 24651,
+   "sha256": "0c7d90f92c0061dc8c8c093af3352c3803848cac86e061a03e3445c7aba583ba",
+   "modified": "2026-09-18T13:37:30.669Z"
+  },
+  {
+   "path": "qa/reports/step12.playwright.json",
+   "bytes": 24934,
+   "sha256": "ca459951a1275b0eacd476c2d306581dc73cdb15b45185d42b1a1ba1e91a6b09",
+   "modified": "2026-09-18T13:47:41.822Z"
+  },
+  {
+   "path": "qa/reports/step12r.perf.final.json",
+   "bytes": 178519,
+   "sha256": "e7d6028a2dece1d45c047b54cfddc6317fc98bb9348a0630f947b71e5bc7f05e",
+   "modified": "2026-09-17T19:07:12.557Z"
+  },
+  {
+   "path": "qa/reports/step12r.perf.b.step14.2.json",
+   "bytes": 15760,
+   "sha256": "729937661d4f2cddafcc86658a110fcae4ce35734b8943d1b5d8590bede616cc",
+   "modified": "2026-09-18T11:46:24.422Z"
+  },
+  {
+   "path": "qa/reports/step12r.perf.b.step14b.2.json",
+   "bytes": 15250,
+   "sha256": "75c9728f0c25f7792658d396834083e7d7cc75c7993d301945b825bbb85be3af",
+   "modified": "2026-09-18T11:49:26.571Z"
+  },
+  {
+   "path": "qa/reports/elbow_r.gate3.step12.json",
+   "bytes": 2898,
+   "sha256": "2682959b9ffa13ed083ba2de1bd4aedc4f7b9db6c8cbc17a436e61efe8e31758",
+   "modified": "2026-09-18T13:33:45.364Z"
+  },
+  {
+   "path": "qa/reports/elbow_r.step12_reference_poses.json",
+   "bytes": 5014,
+   "sha256": "35660a9f1627f1c4f2b18c9c89881fcb0a54a9cec01c4d1543745f84a3845f0d",
+   "modified": "2026-09-18T13:34:14.886Z"
+  },
+  {
+   "path": "qa/elbow_r.poses.draft.json",
+   "bytes": 9484,
+   "sha256": "761a1f1ee799f10adf742f0c4e369851c8d034345e115f187291702c20b88472",
+   "modified": "2026-09-18T05:11:07.250Z"
+  }
+ ],
+ "supportingDocuments": [
+  {
+   "path": "qa/step14/lesson-flow-final.md",
+   "bytes": 5978,
+   "sha256": "327d3e178893320de8a8dd1b19e752e22df1f99da6803180f80833b2343962e4",
+   "modified": "2026-09-18T09:48:28.703Z"
+  },
+  {
+   "path": "qa/step14/narration-coverage.md",
+   "bytes": 6986,
+   "sha256": "494cfc4d466caf982391c7e2aff42e30096164933745e7bdb22cdcb402107f91",
+   "modified": "2026-09-18T09:49:05.716Z"
+  },
+  {
+   "path": "qa/step14/camera-direction-review.md",
+   "bytes": 5463,
+   "sha256": "d180668cb9a37fb362af27b04a36b0bbb91b1b03fe6c8a82b490073729bbb506",
+   "modified": "2026-09-18T09:50:06.655Z"
+  },
+  {
+   "path": "qa/step14/recall-challenge-review.md",
+   "bytes": 4705,
+   "sha256": "87c16c480249aa95e1fb7118f79cb7f43fd7f0a27edb0bd82fbdd10dc4be7bd1",
+   "modified": "2026-09-18T09:50:36.805Z"
+  },
+  {
+   "path": "qa/step14/explore-matrix.md",
+   "bytes": 4615,
+   "sha256": "156c1668dcf49f7d8ab47e819bb89bc3c6ed149af7b6cfda68a4b35fc2e06dd3",
+   "modified": "2026-09-18T08:08:12.366Z"
+  },
+  {
+   "path": "qa/step14/teaching-methodology-review.md",
+   "bytes": 5628,
+   "sha256": "03eb8ff8c6e1fa46e7e81bd1fca12f8596cab47fef2003e450ca47a062a1470b",
+   "modified": "2026-09-18T08:33:29.117Z"
+  },
+  {
+   "path": "qa/step14/step14b-regression.md",
+   "bytes": 7879,
+   "sha256": "01816035a28f791ada52e80152e05edc88bb183356e85d0b25e1613e45c0aabc",
+   "modified": "2026-09-18T11:50:35.682Z"
+  },
+  {
+   "path": "qa/step14/step14b-status.json",
+   "bytes": 7614,
+   "sha256": "567423c207c0c308fb8d1ee3571d01948bf46091a67c84438d5c41ab3fd841ae",
+   "modified": "2026-09-18T12:01:19.823Z"
+  },
+  {
+   "path": "qa/expert/frozen-build.json",
+   "bytes": 12276,
+   "sha256": "d55a4b81d49ecc0eed1af6f11b19e47dbcc076ca619c026ca4ba9cfa5e4bb5e2",
+   "modified": "2026-09-18T06:29:35.284Z"
+  },
+  {
+   "path": "qa/expert/review-status.json",
+   "bytes": 11509,
+   "sha256": "9797f73a2f29056bc4cb3f57c0f96408b75d4fee0aa26b7675be084a05227f65",
+   "modified": "2026-09-18T07:14:40.530Z"
+  }
+ ],
+ "howToUse": "Open reviewer-checklist.md and work through it with the captures in qa/visual/step15b_review/. Record every decision in expert-review-status.json. A passing automated test is evidence, not approval: no item may be moved off PENDING because a test passed."
+}

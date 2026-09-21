@@ -1,0 +1,1238 @@
+{
+ "generatedAt": "2026-09-21T10:25:54.838Z",
+ "reducedMotion": [
+  {
+   "shot": "intro.title",
+   "cameraMovedDuringPlayback": 0,
+   "concepts": 0,
+   "phases": [],
+   "captionTransition": "0s",
+   "stillInShot": true
+  },
+  {
+   "shot": "hook.shoulder",
+   "cameraMovedDuringPlayback": 0,
+   "concepts": 1,
+   "phases": [
+    0.125
+   ],
+   "captionTransition": "0s",
+   "stillInShot": true
+  },
+  {
+   "shot": "hook.elbow",
+   "cameraMovedDuringPlayback": 0,
+   "concepts": 1,
+   "phases": [
+    0.125
+   ],
+   "captionTransition": "0s",
+   "stillInShot": true
+  },
+  {
+   "shot": "hook.question",
+   "cameraMovedDuringPlayback": 0,
+   "concepts": 2,
+   "phases": [
+    0.125,
+    0.125
+   ],
+   "captionTransition": "0s",
+   "stillInShot": true
+  },
+  {
+   "shot": "concept.meet",
+   "cameraMovedDuringPlayback": 0,
+   "concepts": 0,
+   "phases": [],
+   "captionTransition": "0s",
+   "stillInShot": true
+  },
+  {
+   "shot": "concept.different",
+   "cameraMovedDuringPlayback": 0,
+   "concepts": 3,
+   "phases": [
+    0.125,
+    0.125,
+    0.125
+   ],
+   "captionTransition": "0s",
+   "stillInShot": true
+  },
+  {
+   "shot": "intro.map",
+   "cameraMovedDuringPlayback": 0,
+   "concepts": 0,
+   "phases": [],
+   "captionTransition": "0s",
+   "stillInShot": true
+  },
+  {
+   "shot": "fixed.travel",
+   "cameraMovedDuringPlayback": 0,
+   "concepts": 0,
+   "phases": [],
+   "captionTransition": "0s",
+   "stillInShot": true
+  },
+  {
+   "shot": "fixed.bones",
+   "cameraMovedDuringPlayback": 0,
+   "concepts": 0,
+   "phases": [],
+   "captionTransition": "0s",
+   "stillInShot": true
+  },
+  {
+   "shot": "fixed.try",
+   "cameraMovedDuringPlayback": 0,
+   "concepts": 1,
+   "phases": [
+    0.125
+   ],
+   "captionTransition": "0s",
+   "stillInShot": true
+  },
+  {
+   "shot": "fixed.why",
+   "cameraMovedDuringPlayback": 0,
+   "concepts": 0,
+   "phases": [],
+   "captionTransition": "0s",
+   "stillInShot": true
+  },
+  {
+   "shot": "fixed.name",
+   "cameraMovedDuringPlayback": 0,
+   "concepts": 0,
+   "phases": [],
+   "captionTransition": "0s",
+   "stillInShot": true
+  },
+  {
+   "shot": "fixed.task",
+   "cameraMovedDuringPlayback": 0,
+   "concepts": 0,
+   "phases": [],
+   "captionTransition": "0s",
+   "stillInShot": true
+  },
+  {
+   "shot": "pivot.travel",
+   "cameraMovedDuringPlayback": 0,
+   "concepts": 0,
+   "phases": [],
+   "captionTransition": "0s",
+   "stillInShot": true
+  },
+  {
+   "shot": "pivot.bones",
+   "cameraMovedDuringPlayback": 0,
+   "concepts": 0,
+   "phases": [],
+   "captionTransition": "0s",
+   "stillInShot": true
+  },
+  {
+   "shot": "pivot.rotate",
+   "cameraMovedDuringPlayback": 0,
+   "concepts": 1,
+   "phases": [
+    0.125
+   ],
+   "captionTransition": "0s",
+   "stillInShot": true
+  },
+  {
+   "shot": "pivot.why",
+   "cameraMovedDuringPlayback": 0,
+   "concepts": 1,
+   "phases": [
+    0.125
+   ],
+   "captionTransition": "0s",
+   "stillInShot": true
+  },
+  {
+   "shot": "pivot.name",
+   "cameraMovedDuringPlayback": 0,
+   "concepts": 0,
+   "phases": [],
+   "captionTransition": "0s",
+   "stillInShot": true
+  },
+  {
+   "shot": "pivot.task",
+   "cameraMovedDuringPlayback": 0,
+   "concepts": 0,
+   "phases": [],
+   "captionTransition": "0s",
+   "stillInShot": true
+  },
+  {
+   "shot": "ball.travel",
+   "cameraMovedDuringPlayback": 0,
+   "concepts": 0,
+   "phases": [],
+   "captionTransition": "0s",
+   "stillInShot": true
+  },
+  {
+   "shot": "ball.bones",
+   "cameraMovedDuringPlayback": 0,
+   "concepts": 0,
+   "phases": [],
+   "captionTransition": "0s",
+   "stillInShot": true
+  },
+  {
+   "shot": "ball.move",
+   "cameraMovedDuringPlayback": 0,
+   "concepts": 1,
+   "phases": [
+    0.125
+   ],
+   "captionTransition": "0s",
+   "stillInShot": true
+  },
+  {
+   "shot": "ball.why",
+   "cameraMovedDuringPlayback": 0,
+   "concepts": 0,
+   "phases": [],
+   "captionTransition": "0s",
+   "stillInShot": true
+  },
+  {
+   "shot": "ball.name",
+   "cameraMovedDuringPlayback": 0,
+   "concepts": 0,
+   "phases": [],
+   "captionTransition": "0s",
+   "stillInShot": true
+  },
+  {
+   "shot": "ball.task",
+   "cameraMovedDuringPlayback": 0,
+   "concepts": 0,
+   "phases": [],
+   "captionTransition": "0s",
+   "stillInShot": true
+  },
+  {
+   "shot": "hinge.travel",
+   "cameraMovedDuringPlayback": 0,
+   "concepts": 0,
+   "phases": [],
+   "captionTransition": "0s",
+   "stillInShot": true
+  },
+  {
+   "shot": "hinge.source",
+   "cameraMovedDuringPlayback": 0,
+   "concepts": 0,
+   "phases": [],
+   "captionTransition": "0s",
+   "stillInShot": true
+  },
+  {
+   "shot": "hinge.bones",
+   "cameraMovedDuringPlayback": 0,
+   "concepts": 0,
+   "phases": [],
+   "captionTransition": "0s",
+   "stillInShot": true
+  },
+  {
+   "shot": "hinge.axis",
+   "cameraMovedDuringPlayback": 0,
+   "concepts": 0,
+   "phases": [],
+   "captionTransition": "0s",
+   "stillInShot": true
+  },
+  {
+   "shot": "hinge.flexion",
+   "cameraMovedDuringPlayback": 0,
+   "concepts": 0,
+   "phases": [],
+   "captionTransition": "0s",
+   "stillInShot": true
+  },
+  {
+   "shot": "hinge.extension",
+   "cameraMovedDuringPlayback": 0,
+   "concepts": 0,
+   "phases": [],
+   "captionTransition": "0s",
+   "stillInShot": true
+  },
+  {
+   "shot": "hinge.why",
+   "cameraMovedDuringPlayback": 0,
+   "concepts": 0,
+   "phases": [],
+   "captionTransition": "0s",
+   "stillInShot": true
+  },
+  {
+   "shot": "hinge.name",
+   "cameraMovedDuringPlayback": 0,
+   "concepts": 0,
+   "phases": [],
+   "captionTransition": "0s",
+   "stillInShot": true
+  },
+  {
+   "shot": "hinge.try",
+   "cameraMovedDuringPlayback": 0,
+   "concepts": 0,
+   "phases": [],
+   "captionTransition": "0s",
+   "stillInShot": true
+  },
+  {
+   "shot": "hinge.check",
+   "cameraMovedDuringPlayback": 0,
+   "concepts": 0,
+   "phases": [],
+   "captionTransition": "0s",
+   "stillInShot": true
+  },
+  {
+   "shot": "hinge.support",
+   "cameraMovedDuringPlayback": 0,
+   "concepts": 0,
+   "phases": [],
+   "captionTransition": "0s",
+   "stillInShot": true
+  },
+  {
+   "shot": "hinge.return",
+   "cameraMovedDuringPlayback": 0,
+   "concepts": 0,
+   "phases": [],
+   "captionTransition": "0s",
+   "stillInShot": true
+  },
+  {
+   "shot": "hinge.knee",
+   "cameraMovedDuringPlayback": 0,
+   "concepts": 1,
+   "phases": [
+    0.125
+   ],
+   "captionTransition": "0s",
+   "stillInShot": true
+  },
+  {
+   "shot": "compare.pullback",
+   "cameraMovedDuringPlayback": 0,
+   "concepts": 0,
+   "phases": [],
+   "captionTransition": "0s",
+   "stillInShot": true
+  },
+  {
+   "shot": "compare.fixed",
+   "cameraMovedDuringPlayback": 0,
+   "concepts": 1,
+   "phases": [
+    0.125
+   ],
+   "captionTransition": "0s",
+   "stillInShot": true
+  },
+  {
+   "shot": "compare.pivot",
+   "cameraMovedDuringPlayback": 0,
+   "concepts": 1,
+   "phases": [
+    0.125
+   ],
+   "captionTransition": "0s",
+   "stillInShot": true
+  },
+  {
+   "shot": "compare.ball",
+   "cameraMovedDuringPlayback": 0,
+   "concepts": 1,
+   "phases": [
+    0.125
+   ],
+   "captionTransition": "0s",
+   "stillInShot": true
+  },
+  {
+   "shot": "compare.hinge",
+   "cameraMovedDuringPlayback": 0,
+   "concepts": 1,
+   "phases": [
+    0.125
+   ],
+   "captionTransition": "0s",
+   "stillInShot": true
+  },
+  {
+   "shot": "compare.together",
+   "cameraMovedDuringPlayback": 0,
+   "concepts": 0,
+   "phases": [],
+   "captionTransition": "0s",
+   "stillInShot": true
+  },
+  {
+   "shot": "recall.open",
+   "cameraMovedDuringPlayback": 0,
+   "concepts": 0,
+   "phases": [],
+   "captionTransition": "0s",
+   "stillInShot": true
+  },
+  {
+   "shot": "recall.challenge",
+   "cameraMovedDuringPlayback": 0,
+   "concepts": 0,
+   "phases": [],
+   "captionTransition": "0s",
+   "stillInShot": false
+  },
+  {
+   "shot": "map.intro",
+   "cameraMovedDuringPlayback": 0,
+   "concepts": 0,
+   "phases": [],
+   "captionTransition": "0s",
+   "stillInShot": true
+  },
+  {
+   "shot": "map.fixed",
+   "cameraMovedDuringPlayback": 0,
+   "concepts": 1,
+   "phases": [
+    0.125
+   ],
+   "captionTransition": "0s",
+   "stillInShot": true
+  },
+  {
+   "shot": "map.pivot",
+   "cameraMovedDuringPlayback": 0,
+   "concepts": 1,
+   "phases": [
+    0.125
+   ],
+   "captionTransition": "0s",
+   "stillInShot": true
+  },
+  {
+   "shot": "map.ball",
+   "cameraMovedDuringPlayback": 0,
+   "concepts": 1,
+   "phases": [
+    0.125
+   ],
+   "captionTransition": "0s",
+   "stillInShot": true
+  },
+  {
+   "shot": "map.hinge",
+   "cameraMovedDuringPlayback": 0,
+   "concepts": 1,
+   "phases": [
+    0.125
+   ],
+   "captionTransition": "0s",
+   "stillInShot": true
+  },
+  {
+   "shot": "map.all",
+   "cameraMovedDuringPlayback": 0,
+   "concepts": 0,
+   "phases": [],
+   "captionTransition": "0s",
+   "stillInShot": true
+  }
+ ],
+ "390x844": [
+  {
+   "name": "intro",
+   "shot": "intro.title",
+   "captionOverPlayer": false,
+   "captionOverInteract": false,
+   "interactOverPlayer": false,
+   "labelOverlaps": 0,
+   "labelsOverUi": 0,
+   "offscreen": 0,
+   "chapterOverlaps": 0,
+   "titleClipped": 0,
+   "horizontalScroll": false,
+   "elbowPivotOnScreen": null
+  },
+  {
+   "name": "fixed",
+   "shot": "fixed.name",
+   "captionOverPlayer": false,
+   "captionOverInteract": false,
+   "interactOverPlayer": false,
+   "labelOverlaps": 0,
+   "labelsOverUi": 0,
+   "offscreen": 0,
+   "chapterOverlaps": 0,
+   "titleClipped": 0,
+   "horizontalScroll": false,
+   "elbowPivotOnScreen": null
+  },
+  {
+   "name": "pivot",
+   "shot": "pivot.rotate",
+   "captionOverPlayer": false,
+   "captionOverInteract": false,
+   "interactOverPlayer": false,
+   "labelOverlaps": 0,
+   "labelsOverUi": 0,
+   "offscreen": 0,
+   "chapterOverlaps": 0,
+   "titleClipped": 0,
+   "horizontalScroll": false,
+   "elbowPivotOnScreen": null
+  },
+  {
+   "name": "shoulder",
+   "shot": "ball.move",
+   "captionOverPlayer": false,
+   "captionOverInteract": false,
+   "interactOverPlayer": false,
+   "labelOverlaps": 0,
+   "labelsOverUi": 0,
+   "offscreen": 0,
+   "chapterOverlaps": 0,
+   "titleClipped": 0,
+   "horizontalScroll": false,
+   "elbowPivotOnScreen": null
+  },
+  {
+   "name": "ball_why",
+   "shot": "ball.why",
+   "captionOverPlayer": false,
+   "captionOverInteract": false,
+   "interactOverPlayer": false,
+   "labelOverlaps": 0,
+   "labelsOverUi": 0,
+   "offscreen": 0,
+   "chapterOverlaps": 0,
+   "titleClipped": 0,
+   "horizontalScroll": false,
+   "elbowPivotOnScreen": null
+  },
+  {
+   "name": "elbow",
+   "shot": "hinge.flexion",
+   "captionOverPlayer": false,
+   "captionOverInteract": false,
+   "interactOverPlayer": false,
+   "labelOverlaps": 0,
+   "labelsOverUi": 0,
+   "offscreen": 0,
+   "chapterOverlaps": 0,
+   "titleClipped": 0,
+   "horizontalScroll": false,
+   "elbowPivotOnScreen": true
+  },
+  {
+   "name": "knee",
+   "shot": "hinge.knee",
+   "captionOverPlayer": false,
+   "captionOverInteract": false,
+   "interactOverPlayer": false,
+   "labelOverlaps": 0,
+   "labelsOverUi": 0,
+   "offscreen": 0,
+   "chapterOverlaps": 0,
+   "titleClipped": 0,
+   "horizontalScroll": false,
+   "elbowPivotOnScreen": false
+  },
+  {
+   "name": "recap",
+   "shot": "map.all",
+   "captionOverPlayer": false,
+   "captionOverInteract": false,
+   "interactOverPlayer": false,
+   "labelOverlaps": 0,
+   "labelsOverUi": 0,
+   "offscreen": 0,
+   "chapterOverlaps": 0,
+   "titleClipped": 0,
+   "horizontalScroll": false,
+   "elbowPivotOnScreen": true
+  },
+  {
+   "name": "quiz",
+   "shot": "hinge.check",
+   "captionOverPlayer": false,
+   "captionOverInteract": false,
+   "interactOverPlayer": false,
+   "labelOverlaps": 0,
+   "labelsOverUi": 0,
+   "offscreen": 0,
+   "chapterOverlaps": 0,
+   "titleClipped": 0,
+   "horizontalScroll": false,
+   "elbowPivotOnScreen": true
+  },
+  {
+   "name": "explore",
+   "shot": "hinge.support",
+   "captionOverPlayer": false,
+   "captionOverInteract": false,
+   "interactOverPlayer": false,
+   "labelOverlaps": 0,
+   "labelsOverUi": 0,
+   "offscreen": 0,
+   "chapterOverlaps": 0,
+   "titleClipped": 0,
+   "horizontalScroll": false,
+   "elbowPivotOnScreen": true
+  },
+  {
+   "name": "reduced_motion",
+   "shot": "hinge.axis",
+   "captionOverPlayer": false,
+   "captionOverInteract": false,
+   "interactOverPlayer": false,
+   "labelOverlaps": 0,
+   "labelsOverUi": 0,
+   "offscreen": 0,
+   "chapterOverlaps": 0,
+   "titleClipped": 0,
+   "horizontalScroll": false,
+   "elbowPivotOnScreen": true
+  }
+ ],
+ "412x915": [
+  {
+   "name": "intro",
+   "shot": "intro.title",
+   "captionOverPlayer": false,
+   "captionOverInteract": false,
+   "interactOverPlayer": false,
+   "labelOverlaps": 0,
+   "labelsOverUi": 0,
+   "offscreen": 0,
+   "chapterOverlaps": 0,
+   "titleClipped": 0,
+   "horizontalScroll": false,
+   "elbowPivotOnScreen": null
+  },
+  {
+   "name": "fixed",
+   "shot": "fixed.name",
+   "captionOverPlayer": false,
+   "captionOverInteract": false,
+   "interactOverPlayer": false,
+   "labelOverlaps": 0,
+   "labelsOverUi": 0,
+   "offscreen": 0,
+   "chapterOverlaps": 0,
+   "titleClipped": 0,
+   "horizontalScroll": false,
+   "elbowPivotOnScreen": null
+  },
+  {
+   "name": "pivot",
+   "shot": "pivot.rotate",
+   "captionOverPlayer": false,
+   "captionOverInteract": false,
+   "interactOverPlayer": false,
+   "labelOverlaps": 0,
+   "labelsOverUi": 0,
+   "offscreen": 0,
+   "chapterOverlaps": 0,
+   "titleClipped": 0,
+   "horizontalScroll": false,
+   "elbowPivotOnScreen": null
+  },
+  {
+   "name": "shoulder",
+   "shot": "ball.move",
+   "captionOverPlayer": false,
+   "captionOverInteract": false,
+   "interactOverPlayer": false,
+   "labelOverlaps": 0,
+   "labelsOverUi": 0,
+   "offscreen": 0,
+   "chapterOverlaps": 0,
+   "titleClipped": 0,
+   "horizontalScroll": false,
+   "elbowPivotOnScreen": null
+  },
+  {
+   "name": "ball_why",
+   "shot": "ball.why",
+   "captionOverPlayer": false,
+   "captionOverInteract": false,
+   "interactOverPlayer": false,
+   "labelOverlaps": 0,
+   "labelsOverUi": 0,
+   "offscreen": 0,
+   "chapterOverlaps": 0,
+   "titleClipped": 0,
+   "horizontalScroll": false,
+   "elbowPivotOnScreen": null
+  },
+  {
+   "name": "elbow",
+   "shot": "hinge.flexion",
+   "captionOverPlayer": false,
+   "captionOverInteract": false,
+   "interactOverPlayer": false,
+   "labelOverlaps": 0,
+   "labelsOverUi": 0,
+   "offscreen": 0,
+   "chapterOverlaps": 0,
+   "titleClipped": 0,
+   "horizontalScroll": false,
+   "elbowPivotOnScreen": true
+  },
+  {
+   "name": "knee",
+   "shot": "hinge.knee",
+   "captionOverPlayer": false,
+   "captionOverInteract": false,
+   "interactOverPlayer": false,
+   "labelOverlaps": 0,
+   "labelsOverUi": 0,
+   "offscreen": 0,
+   "chapterOverlaps": 0,
+   "titleClipped": 0,
+   "horizontalScroll": false,
+   "elbowPivotOnScreen": false
+  },
+  {
+   "name": "recap",
+   "shot": "map.all",
+   "captionOverPlayer": false,
+   "captionOverInteract": false,
+   "interactOverPlayer": false,
+   "labelOverlaps": 0,
+   "labelsOverUi": 0,
+   "offscreen": 0,
+   "chapterOverlaps": 0,
+   "titleClipped": 0,
+   "horizontalScroll": false,
+   "elbowPivotOnScreen": true
+  },
+  {
+   "name": "quiz",
+   "shot": "hinge.check",
+   "captionOverPlayer": false,
+   "captionOverInteract": false,
+   "interactOverPlayer": false,
+   "labelOverlaps": 0,
+   "labelsOverUi": 0,
+   "offscreen": 0,
+   "chapterOverlaps": 0,
+   "titleClipped": 0,
+   "horizontalScroll": false,
+   "elbowPivotOnScreen": true
+  },
+  {
+   "name": "explore",
+   "shot": "hinge.support",
+   "captionOverPlayer": false,
+   "captionOverInteract": false,
+   "interactOverPlayer": false,
+   "labelOverlaps": 0,
+   "labelsOverUi": 0,
+   "offscreen": 0,
+   "chapterOverlaps": 0,
+   "titleClipped": 0,
+   "horizontalScroll": false,
+   "elbowPivotOnScreen": true
+  },
+  {
+   "name": "reduced_motion",
+   "shot": "hinge.axis",
+   "captionOverPlayer": false,
+   "captionOverInteract": false,
+   "interactOverPlayer": false,
+   "labelOverlaps": 0,
+   "labelsOverUi": 0,
+   "offscreen": 0,
+   "chapterOverlaps": 0,
+   "titleClipped": 0,
+   "horizontalScroll": false,
+   "elbowPivotOnScreen": true
+  }
+ ],
+ "768x1024": [
+  {
+   "name": "intro",
+   "shot": "intro.title",
+   "captionOverPlayer": false,
+   "captionOverInteract": false,
+   "interactOverPlayer": false,
+   "labelOverlaps": 0,
+   "labelsOverUi": 0,
+   "offscreen": 0,
+   "chapterOverlaps": 0,
+   "titleClipped": 0,
+   "horizontalScroll": false,
+   "elbowPivotOnScreen": null
+  },
+  {
+   "name": "fixed",
+   "shot": "fixed.name",
+   "captionOverPlayer": false,
+   "captionOverInteract": false,
+   "interactOverPlayer": false,
+   "labelOverlaps": 0,
+   "labelsOverUi": 0,
+   "offscreen": 0,
+   "chapterOverlaps": 0,
+   "titleClipped": 0,
+   "horizontalScroll": false,
+   "elbowPivotOnScreen": null
+  },
+  {
+   "name": "pivot",
+   "shot": "pivot.rotate",
+   "captionOverPlayer": false,
+   "captionOverInteract": false,
+   "interactOverPlayer": false,
+   "labelOverlaps": 0,
+   "labelsOverUi": 0,
+   "offscreen": 0,
+   "chapterOverlaps": 0,
+   "titleClipped": 0,
+   "horizontalScroll": false,
+   "elbowPivotOnScreen": null
+  },
+  {
+   "name": "shoulder",
+   "shot": "ball.move",
+   "captionOverPlayer": false,
+   "captionOverInteract": false,
+   "interactOverPlayer": false,
+   "labelOverlaps": 0,
+   "labelsOverUi": 0,
+   "offscreen": 0,
+   "chapterOverlaps": 0,
+   "titleClipped": 0,
+   "horizontalScroll": false,
+   "elbowPivotOnScreen": null
+  },
+  {
+   "name": "ball_why",
+   "shot": "ball.why",
+   "captionOverPlayer": false,
+   "captionOverInteract": false,
+   "interactOverPlayer": false,
+   "labelOverlaps": 0,
+   "labelsOverUi": 0,
+   "offscreen": 0,
+   "chapterOverlaps": 0,
+   "titleClipped": 0,
+   "horizontalScroll": false,
+   "elbowPivotOnScreen": null
+  },
+  {
+   "name": "elbow",
+   "shot": "hinge.flexion",
+   "captionOverPlayer": false,
+   "captionOverInteract": false,
+   "interactOverPlayer": false,
+   "labelOverlaps": 0,
+   "labelsOverUi": 0,
+   "offscreen": 0,
+   "chapterOverlaps": 0,
+   "titleClipped": 0,
+   "horizontalScroll": false,
+   "elbowPivotOnScreen": true
+  },
+  {
+   "name": "knee",
+   "shot": "hinge.knee",
+   "captionOverPlayer": false,
+   "captionOverInteract": false,
+   "interactOverPlayer": false,
+   "labelOverlaps": 0,
+   "labelsOverUi": 0,
+   "offscreen": 0,
+   "chapterOverlaps": 0,
+   "titleClipped": 0,
+   "horizontalScroll": false,
+   "elbowPivotOnScreen": false
+  },
+  {
+   "name": "recap",
+   "shot": "map.all",
+   "captionOverPlayer": false,
+   "captionOverInteract": false,
+   "interactOverPlayer": false,
+   "labelOverlaps": 0,
+   "labelsOverUi": 0,
+   "offscreen": 0,
+   "chapterOverlaps": 0,
+   "titleClipped": 0,
+   "horizontalScroll": false,
+   "elbowPivotOnScreen": true
+  },
+  {
+   "name": "quiz",
+   "shot": "hinge.check",
+   "captionOverPlayer": false,
+   "captionOverInteract": false,
+   "interactOverPlayer": false,
+   "labelOverlaps": 0,
+   "labelsOverUi": 0,
+   "offscreen": 0,
+   "chapterOverlaps": 0,
+   "titleClipped": 0,
+   "horizontalScroll": false,
+   "elbowPivotOnScreen": true
+  },
+  {
+   "name": "explore",
+   "shot": "hinge.support",
+   "captionOverPlayer": false,
+   "captionOverInteract": false,
+   "interactOverPlayer": false,
+   "labelOverlaps": 0,
+   "labelsOverUi": 0,
+   "offscreen": 0,
+   "chapterOverlaps": 0,
+   "titleClipped": 0,
+   "horizontalScroll": false,
+   "elbowPivotOnScreen": true
+  },
+  {
+   "name": "reduced_motion",
+   "shot": "hinge.axis",
+   "captionOverPlayer": false,
+   "captionOverInteract": false,
+   "interactOverPlayer": false,
+   "labelOverlaps": 0,
+   "labelsOverUi": 0,
+   "offscreen": 0,
+   "chapterOverlaps": 0,
+   "titleClipped": 0,
+   "horizontalScroll": false,
+   "elbowPivotOnScreen": true
+  }
+ ],
+ "1280x800": [
+  {
+   "name": "intro",
+   "shot": "intro.title",
+   "captionOverPlayer": false,
+   "captionOverInteract": false,
+   "interactOverPlayer": false,
+   "labelOverlaps": 0,
+   "labelsOverUi": 0,
+   "offscreen": 0,
+   "chapterOverlaps": 0,
+   "titleClipped": 0,
+   "horizontalScroll": false,
+   "elbowPivotOnScreen": null
+  },
+  {
+   "name": "fixed",
+   "shot": "fixed.name",
+   "captionOverPlayer": false,
+   "captionOverInteract": false,
+   "interactOverPlayer": false,
+   "labelOverlaps": 0,
+   "labelsOverUi": 0,
+   "offscreen": 0,
+   "chapterOverlaps": 0,
+   "titleClipped": 0,
+   "horizontalScroll": false,
+   "elbowPivotOnScreen": null
+  },
+  {
+   "name": "pivot",
+   "shot": "pivot.rotate",
+   "captionOverPlayer": false,
+   "captionOverInteract": false,
+   "interactOverPlayer": false,
+   "labelOverlaps": 0,
+   "labelsOverUi": 0,
+   "offscreen": 0,
+   "chapterOverlaps": 0,
+   "titleClipped": 0,
+   "horizontalScroll": false,
+   "elbowPivotOnScreen": null
+  },
+  {
+   "name": "shoulder",
+   "shot": "ball.move",
+   "captionOverPlayer": false,
+   "captionOverInteract": false,
+   "interactOverPlayer": false,
+   "labelOverlaps": 0,
+   "labelsOverUi": 0,
+   "offscreen": 0,
+   "chapterOverlaps": 0,
+   "titleClipped": 0,
+   "horizontalScroll": false,
+   "elbowPivotOnScreen": null
+  },
+  {
+   "name": "ball_why",
+   "shot": "ball.why",
+   "captionOverPlayer": false,
+   "captionOverInteract": false,
+   "interactOverPlayer": false,
+   "labelOverlaps": 0,
+   "labelsOverUi": 0,
+   "offscreen": 0,
+   "chapterOverlaps": 0,
+   "titleClipped": 0,
+   "horizontalScroll": false,
+   "elbowPivotOnScreen": null
+  },
+  {
+   "name": "elbow",
+   "shot": "hinge.flexion",
+   "captionOverPlayer": false,
+   "captionOverInteract": false,
+   "interactOverPlayer": false,
+   "labelOverlaps": 0,
+   "labelsOverUi": 0,
+   "offscreen": 0,
+   "chapterOverlaps": 0,
+   "titleClipped": 0,
+   "horizontalScroll": false,
+   "elbowPivotOnScreen": true
+  },
+  {
+   "name": "knee",
+   "shot": "hinge.knee",
+   "captionOverPlayer": false,
+   "captionOverInteract": false,
+   "interactOverPlayer": false,
+   "labelOverlaps": 0,
+   "labelsOverUi": 0,
+   "offscreen": 0,
+   "chapterOverlaps": 0,
+   "titleClipped": 0,
+   "horizontalScroll": false,
+   "elbowPivotOnScreen": false
+  },
+  {
+   "name": "recap",
+   "shot": "map.all",
+   "captionOverPlayer": false,
+   "captionOverInteract": false,
+   "interactOverPlayer": false,
+   "labelOverlaps": 0,
+   "labelsOverUi": 0,
+   "offscreen": 0,
+   "chapterOverlaps": 0,
+   "titleClipped": 0,
+   "horizontalScroll": false,
+   "elbowPivotOnScreen": true
+  },
+  {
+   "name": "quiz",
+   "shot": "hinge.check",
+   "captionOverPlayer": false,
+   "captionOverInteract": false,
+   "interactOverPlayer": false,
+   "labelOverlaps": 0,
+   "labelsOverUi": 0,
+   "offscreen": 0,
+   "chapterOverlaps": 0,
+   "titleClipped": 0,
+   "horizontalScroll": false,
+   "elbowPivotOnScreen": true
+  },
+  {
+   "name": "explore",
+   "shot": "hinge.support",
+   "captionOverPlayer": false,
+   "captionOverInteract": false,
+   "interactOverPlayer": false,
+   "labelOverlaps": 0,
+   "labelsOverUi": 0,
+   "offscreen": 0,
+   "chapterOverlaps": 0,
+   "titleClipped": 0,
+   "horizontalScroll": false,
+   "elbowPivotOnScreen": true
+  },
+  {
+   "name": "reduced_motion",
+   "shot": "hinge.axis",
+   "captionOverPlayer": false,
+   "captionOverInteract": false,
+   "interactOverPlayer": false,
+   "labelOverlaps": 0,
+   "labelsOverUi": 0,
+   "offscreen": 0,
+   "chapterOverlaps": 0,
+   "titleClipped": 0,
+   "horizontalScroll": false,
+   "elbowPivotOnScreen": true
+  }
+ ],
+ "1440x900": [
+  {
+   "name": "intro",
+   "shot": "intro.title",
+   "captionOverPlayer": false,
+   "captionOverInteract": false,
+   "interactOverPlayer": false,
+   "labelOverlaps": 0,
+   "labelsOverUi": 0,
+   "offscreen": 0,
+   "chapterOverlaps": 0,
+   "titleClipped": 0,
+   "horizontalScroll": false,
+   "elbowPivotOnScreen": null
+  },
+  {
+   "name": "fixed",
+   "shot": "fixed.name",
+   "captionOverPlayer": false,
+   "captionOverInteract": false,
+   "interactOverPlayer": false,
+   "labelOverlaps": 0,
+   "labelsOverUi": 0,
+   "offscreen": 0,
+   "chapterOverlaps": 0,
+   "titleClipped": 0,
+   "horizontalScroll": false,
+   "elbowPivotOnScreen": null
+  },
+  {
+   "name": "pivot",
+   "shot": "pivot.rotate",
+   "captionOverPlayer": false,
+   "captionOverInteract": false,
+   "interactOverPlayer": false,
+   "labelOverlaps": 0,
+   "labelsOverUi": 0,
+   "offscreen": 0,
+   "chapterOverlaps": 0,
+   "titleClipped": 0,
+   "horizontalScroll": false,
+   "elbowPivotOnScreen": null
+  },
+  {
+   "name": "shoulder",
+   "shot": "ball.move",
+   "captionOverPlayer": false,
+   "captionOverInteract": false,
+   "interactOverPlayer": false,
+   "labelOverlaps": 0,
+   "labelsOverUi": 0,
+   "offscreen": 0,
+   "chapterOverlaps": 0,
+   "titleClipped": 0,
+   "horizontalScroll": false,
+   "elbowPivotOnScreen": null
+  },
+  {
+   "name": "ball_why",
+   "shot": "ball.why",
+   "captionOverPlayer": false,
+   "captionOverInteract": false,
+   "interactOverPlayer": false,
+   "labelOverlaps": 0,
+   "labelsOverUi": 0,
+   "offscreen": 0,
+   "chapterOverlaps": 0,
+   "titleClipped": 0,
+   "horizontalScroll": false,
+   "elbowPivotOnScreen": null
+  },
+  {
+   "name": "elbow",
+   "shot": "hinge.flexion",
+   "captionOverPlayer": false,
+   "captionOverInteract": false,
+   "interactOverPlayer": false,
+   "labelOverlaps": 0,
+   "labelsOverUi": 0,
+   "offscreen": 0,
+   "chapterOverlaps": 0,
+   "titleClipped": 0,
+   "horizontalScroll": false,
+   "elbowPivotOnScreen": true
+  },
+  {
+   "name": "knee",
+   "shot": "hinge.knee",
+   "captionOverPlayer": false,
+   "captionOverInteract": false,
+   "interactOverPlayer": false,
+   "labelOverlaps": 0,
+   "labelsOverUi": 0,
+   "offscreen": 0,
+   "chapterOverlaps": 0,
+   "titleClipped": 0,
+   "horizontalScroll": false,
+   "elbowPivotOnScreen": false
+  },
+  {
+   "name": "recap",
+   "shot": "map.all",
+   "captionOverPlayer": false,
+   "captionOverInteract": false,
+   "interactOverPlayer": false,
+   "labelOverlaps": 0,
+   "labelsOverUi": 0,
+   "offscreen": 0,
+   "chapterOverlaps": 0,
+   "titleClipped": 0,
+   "horizontalScroll": false,
+   "elbowPivotOnScreen": true
+  },
+  {
+   "name": "quiz",
+   "shot": "hinge.check",
+   "captionOverPlayer": false,
+   "captionOverInteract": false,
+   "interactOverPlayer": false,
+   "labelOverlaps": 0,
+   "labelsOverUi": 0,
+   "offscreen": 0,
+   "chapterOverlaps": 0,
+   "titleClipped": 0,
+   "horizontalScroll": false,
+   "elbowPivotOnScreen": true
+  },
+  {
+   "name": "explore",
+   "shot": "hinge.support",
+   "captionOverPlayer": false,
+   "captionOverInteract": false,
+   "interactOverPlayer": false,
+   "labelOverlaps": 0,
+   "labelsOverUi": 0,
+   "offscreen": 0,
+   "chapterOverlaps": 0,
+   "titleClipped": 0,
+   "horizontalScroll": false,
+   "elbowPivotOnScreen": true
+  },
+  {
+   "name": "reduced_motion",
+   "shot": "hinge.axis",
+   "captionOverPlayer": false,
+   "captionOverInteract": false,
+   "interactOverPlayer": false,
+   "labelOverlaps": 0,
+   "labelsOverUi": 0,
+   "offscreen": 0,
+   "chapterOverlaps": 0,
+   "titleClipped": 0,
+   "horizontalScroll": false,
+   "elbowPivotOnScreen": true
+  }
+ ]
+}

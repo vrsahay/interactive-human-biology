@@ -1,0 +1,271 @@
+{
+ "label": "diag4x2",
+ "generatedAt": "2026-09-17T18:12:14.321Z",
+ "methodology": "see header of tests/perf/perf-lab-r.spec.ts",
+ "machine": "Lenovo 20V9, Intel Core i5-1135G7, Iris Xe, 16 GB, Windows 11 Pro, Chrome 152 headless",
+ "coldLoads": {},
+ "interactions": {
+  "mobile-4x-fast4g": {
+   "profile": {
+    "id": "mobile-4x-fast4g",
+    "classification": "EMULATED — NOT CERTIFICATION (CPU 4x, laptop GPU)",
+    "viewport": {
+     "width": 412,
+     "height": 915
+    },
+    "dpr": 2.625,
+    "cpu": 4,
+    "net": {
+     "id": "fast-4g-devtools",
+     "downBps": 1012500,
+     "upBps": 168750,
+     "latencyMs": 165,
+     "note": "Chrome DevTools Fast 4G preset"
+    },
+    "mobile": true,
+    "signals": {
+     "deviceMemory": 4,
+     "hardwareConcurrency": 8
+    }
+   },
+   "elbowReadyAfterIntentMs": 1444,
+   "drag": {
+    "frames": 490,
+    "durationS": 10,
+    "fps": 49,
+    "frameIntervalMs": {
+     "n": 489,
+     "p50": 16.6,
+     "p95": 42.9,
+     "min": 7.8,
+     "max": 77.5
+    },
+    "droppedFrames": 151,
+    "inputs": 493,
+    "inputLatencyRawMs": {
+     "n": 492,
+     "p50": 16.9,
+     "p95": 42,
+     "min": 6.2,
+     "max": 69
+    },
+    "inputLatencyEffectiveMs": {
+     "n": 492,
+     "p50": 16.9,
+     "p95": 42,
+     "min": 6.2,
+     "max": 69
+    },
+    "inputsWithoutFrame": 1,
+    "longFrames": {
+     "count": 8,
+     "first": [
+      [
+       0,
+       78
+      ],
+      [
+       78,
+       71
+      ],
+      [
+       479,
+       71
+      ],
+      [
+       1365,
+       68
+      ],
+      [
+       4764,
+       59
+      ],
+      [
+       4860,
+       63
+      ],
+      [
+       5815,
+       52
+      ],
+      [
+       8093,
+       66
+      ]
+     ],
+     "note": "[ms since the first frame of the window, interval ms] for intervals > 50 ms"
+    }
+   },
+   "dragPose": {
+    "method": "closed-loop target 25..120 deg",
+    "axis": "x",
+    "angleMin": 0,
+    "angleMax": 108.25,
+    "unchangedStepFraction": 0
+   },
+   "dragHeapBytes": 18929267,
+   "orbit": {
+    "frames": 354,
+    "durationS": 10,
+    "fps": 35.3,
+    "frameIntervalMs": {
+     "n": 353,
+     "p50": 26.9,
+     "p95": 48.3,
+     "min": 10.5,
+     "max": 90.1
+    },
+    "droppedFrames": 257,
+    "inputs": 354,
+    "inputLatencyRawMs": {
+     "n": 354,
+     "p50": 12.2,
+     "p95": 43.8,
+     "min": 3.6,
+     "max": 63.1
+    },
+    "inputLatencyEffectiveMs": {
+     "n": 354,
+     "p50": 12.2,
+     "p95": 43.8,
+     "min": 3.6,
+     "max": 63.1
+    },
+    "inputsWithoutFrame": 0,
+    "longFrames": {
+     "count": 15,
+     "first": [
+      [
+       165,
+       90
+      ],
+      [
+       256,
+       81
+      ],
+      [
+       366,
+       55
+      ],
+      [
+       2268,
+       62
+      ],
+      [
+       2381,
+       68
+      ],
+      [
+       2611,
+       55
+      ],
+      [
+       3665,
+       67
+      ],
+      [
+       3805,
+       55
+      ],
+      [
+       4469,
+       56
+      ],
+      [
+       4567,
+       52
+      ],
+      [
+       5446,
+       53
+      ],
+      [
+       6800,
+       51
+      ],
+      [
+       7856,
+       53
+      ],
+      [
+       8871,
+       62
+      ],
+      [
+       9618,
+       64
+      ]
+     ],
+     "note": "[ms since the first frame of the window, interval ms] for intervals > 50 ms"
+    }
+   },
+   "recapPlayback": {
+    "frames": 414,
+    "durationS": 8,
+    "fps": 51.6,
+    "frameIntervalMs": {
+     "n": 413,
+     "p50": 18.3,
+     "p95": 36.3,
+     "min": 4.6,
+     "max": 68.1
+    },
+    "droppedFrames": 92,
+    "inputs": 0,
+    "inputLatencyRawMs": {
+     "n": 0,
+     "p50": null,
+     "p95": null,
+     "min": null,
+     "max": null
+    },
+    "inputLatencyEffectiveMs": {
+     "n": 0,
+     "p50": null,
+     "p95": null,
+     "min": null,
+     "max": null
+    },
+    "inputsWithoutFrame": 0,
+    "longFrames": {
+     "count": 3,
+     "first": [
+      [
+       729,
+       68
+      ],
+      [
+       3972,
+       58
+      ],
+      [
+       7498,
+       53
+      ]
+     ],
+     "note": "[ms since the first frame of the window, interval ms] for intervals > 50 ms"
+    }
+   },
+   "recapRenderer": {
+    "fps": 51,
+    "frameIntervalMeanMs": 19.0875,
+    "frameIntervalP95Ms": 41,
+    "frameCpuMeanMs": 9.9875,
+    "frameCpuP95Ms": 27.700000017881393,
+    "drawCalls": 63,
+    "triangles": 174656,
+    "geometries": 91,
+    "textures": 6,
+    "textureMemoryBytes": 4194303,
+    "pixelRatio": 1.5,
+    "framesRendered": 1292,
+    "firstFrameMs": 2824.9000000059605,
+    "firstModelFrameMs": 2824.9000000059605,
+    "renderer": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x00009A49) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+   },
+   "consoleErrors": [
+    "pageerror: Failed to execute 'setPointerCapture' on 'Element': No active pointer with the given id is found."
+   ]
+  }
+ }
+}

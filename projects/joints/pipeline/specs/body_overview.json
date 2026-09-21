@@ -1,0 +1,236 @@
+{
+  "schema": 1,
+  "assetId": "body_overview",
+  "description": "Full-body orientation asset for the video lesson: skeleton (+ selected cartilage and teeth) and a skin shell, derived read-only from the source atlas GLB. Per-structure meshes are kept (no joins). Geometry is simplified for web delivery; this asset is for orientation shots only - validated joint assets (e.g. elbow_r) replace it in close-up teaching.",
+  "source": {
+    "file": "C:/Users/Admin/OneDrive - Calance/Desktop/Types of Joints/Human_Body_Complete.glb",
+    "sha256": "e335e3149e80da2d8f2bbab554af8f88584e8db3163ccb7a33395b7860355522",
+    "scene": "01 Complete anatomy"
+  },
+  "outputs": {
+    "skeleton": {
+      "url": "body.skeleton.glb",
+      "budgetGzipKB": 2000
+    },
+    "skin": {
+      "url": "body.skin.glb",
+      "budgetGzipKB": 600
+    }
+  },
+  "selection": [
+    {
+      "tissue": "bone",
+      "output": "skeleton",
+      "material": "PBR | bone",
+      "exclude": [
+        "^Hypoglossal nerve",
+        "^Cochlea",
+        "^Vestibule",
+        "^Incus",
+        "^Malleus",
+        "^Stapes"
+      ],
+      "simplify": {
+        "ratio": 0.4,
+        "error": 0.004
+      }
+    },
+    {
+      "tissue": "cartilage",
+      "output": "skeleton",
+      "material": "PBR | cartilage",
+      "includeNames": [
+        "^Costal cartilage",
+        "^Intervertebral disc",
+        "meniscus",
+        "^Interpubic disc",
+        "^Pubic symphysis",
+        "labrum"
+      ],
+      "simplify": {
+        "ratio": 0.3,
+        "error": 0.006
+      }
+    },
+    {
+      "tissue": "teeth",
+      "output": "skeleton",
+      "material": "PBR | teeth",
+      "simplify": {
+        "ratio": 0.4,
+        "error": 0.004
+      }
+    },
+    {
+      "tissue": "skin",
+      "output": "skin",
+      "material": "PBR | skin",
+      "simplify": {
+        "ratio": 0.35,
+        "error": 0.004
+      }
+    }
+  ],
+  "regions": {
+    "skull": [
+      "^Frontal bone$",
+      "^Parietal bone",
+      "^Occipital bone$",
+      "^Temporal bone",
+      "^Sphenoid bone$",
+      "^Ethmoid bone$",
+      "^Zygomatic bone",
+      "^Maxilla",
+      "^Nasal bone",
+      "^Lacrimal bone",
+      "^Palatine bone",
+      "^Vomer$",
+      "^Inferior nasal concha",
+      "^Sinus of",
+      "^Mandible$",
+      "tooth|incisor|canine|molar|premolar"
+    ],
+    "upper_neck": [
+      "^Atlas \\(C1\\)$",
+      "^Axis \\(C2\\)$"
+    ],
+    "spine": [
+      "^Vertebra ",
+      "^Sacrum$",
+      "^Coccyx$",
+      "^Intervertebral disc"
+    ],
+    "thorax": [
+      "rib \\|",
+      "^Costal cartilage",
+      "sternum",
+      "^Xiphoid process$",
+      "^Hyoid bone$"
+    ],
+    "shoulder_right": [
+      "^Scapula \\| Right$",
+      "^Clavicle \\| Right$",
+      "^Humerus \\| Right$",
+      "^Glenoid labrum \\| Right$"
+    ],
+    "shoulder_left": [
+      "^Scapula \\| Left$",
+      "^Clavicle \\| Left$",
+      "^Humerus \\| Left$",
+      "^Glenoid labrum \\| Left$"
+    ],
+    "pelvis": [
+      "^Hip bone",
+      "^Interpubic disc$",
+      "^Pubic symphysis$",
+      "^Acetabular labrum"
+    ],
+    "hip_right": [
+      "^Hip bone \\| Right$",
+      "^Femur \\| Right$",
+      "^Acetabular labrum \\| Right$"
+    ],
+    "knee_right": [
+      "^Femur \\| Right$",
+      "^Tibia \\| Right$",
+      "^Fibula \\| Right$",
+      "^Patella \\| Right$",
+      "meniscus \\| Right$"
+    ],
+    "elbow_right": [
+      "^Humerus \\| Right$",
+      "^Radius \\| Right$",
+      "^Ulna \\| Right$"
+    ]
+  },
+  "frame": {
+    "rightSideMarker": "\\| Right$",
+    "leftSideMarker": "\\| Left$",
+    "anteriorStructure": "^Body of sternum$",
+    "posteriorStructure": "^Vertebra T6$"
+  },
+  "jointSites": [
+    {
+      "siteId": "fixed.skull",
+      "jointType": "fixed",
+      "structures": [
+        "Frontal bone",
+        "Parietal bone | Right"
+      ],
+      "method": "contact",
+      "contactMm": 3,
+      "indicator": "fixed"
+    },
+    {
+      "siteId": "pivot.upper_neck",
+      "jointType": "pivot",
+      "structures": [
+        "Atlas (C1)",
+        "Axis (C2)"
+      ],
+      "method": "contact",
+      "contactMm": 3,
+      "indicator": "rotation",
+      "indicatorAxis": "up"
+    },
+    {
+      "siteId": "ball_socket.shoulder_right",
+      "jointType": "ball_and_socket",
+      "structures": [
+        "Humerus | Right",
+        "Scapula | Right"
+      ],
+      "method": "contact_sphere",
+      "contactMm": 6,
+      "sphereOf": "Humerus | Right",
+      "sphereSampleMm": 28,
+      "indicator": "multiAxis"
+    },
+    {
+      "siteId": "ball_socket.hip_right",
+      "jointType": "ball_and_socket",
+      "structures": [
+        "Femur | Right",
+        "Hip bone | Right"
+      ],
+      "method": "contact_sphere",
+      "contactMm": 6,
+      "sphereOf": "Femur | Right",
+      "sphereSampleMm": 32,
+      "indicator": "multiAxis"
+    },
+    {
+      "siteId": "hinge.elbow_right",
+      "jointType": "hinge",
+      "structures": [
+        "Humerus | Right",
+        "Ulna | Right"
+      ],
+      "method": "contact",
+      "contactMm": 3,
+      "indicator": "hingeArc",
+      "indicatorAxis": "lateral",
+      "jointAsset": "elbow_r"
+    },
+    {
+      "siteId": "hinge.knee_right",
+      "jointType": "hinge",
+      "structures": [
+        "Femur | Right",
+        "Tibia | Right"
+      ],
+      "method": "contact",
+      "contactMm": 6,
+      "indicator": "hingeArc",
+      "indicatorAxis": "lateral"
+    }
+  ],
+  "simplifyOverrides": [
+    {
+      "match": "rib ||^Costal cartilage|^Vertebra [TL]|^Intervertebral disc [TL]|^Sacrum$|sternum",
+      "ratio": 0.22,
+      "error": 0.01,
+      "reason": "not filmed in close-up by any chapter"
+    }
+  ]
+}

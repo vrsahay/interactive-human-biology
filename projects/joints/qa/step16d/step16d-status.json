@@ -1,0 +1,162 @@
+{
+ "step": "16D",
+ "document": "Final learner-facing polish: remove review/development noise, eliminate narration repetition, simplify the teaching UI, preserve all provenance evidence.",
+ "branch": "step16d-learner-polish",
+ "status": "STEP 16D CONDITIONAL",
+ "statusReason": "All required cleanup, unit, e2e, accessibility, audio-ownership, Explore-isolation, frame-drop and asset-integrity checks pass. Two of the six required visual checks in section 27 fail at 390x844 and 412x844: 'no panel covering the structure' and 'target anatomy remains dominant'. The cause is a pre-existing framing rule (the shot is fitted to the viewport's width), not a change made in this step. Fixing it means re-validating every framing against the frozen close-up spheres, which is camera architecture rather than learner-facing polish.",
+ "publicRelease": "NOT CLAIMED. This build is not public-release ready.",
+ "generatedAt": "2026-09-21T00:00:00.000Z",
+
+ "narration": {
+  "spokenLinesBefore": 52,
+  "spokenLinesAfter": 52,
+  "spokenWordsBefore": 885,
+  "spokenWordsAfter": 877,
+  "cueWordsBefore": 297,
+  "cueWordsAfter": 245,
+  "exactDuplicates": 0,
+  "nearDuplicatePairsBefore": { "unintended": 2, "intended": 2 },
+  "nearDuplicatePairsAfter": { "unintended": 0, "intended": 2 },
+  "repetitionsRemoved": 3,
+  "repetitionsIntentionallyRetained": 2,
+  "taskCuesRepeatingTheirInstructionBefore": 4,
+  "taskCuesRepeatingTheirInstructionAfter": 0,
+  "headlineEqualsSpokenBefore": 10,
+  "headlineEqualsSpokenAfter": 5,
+  "headlineEqualsSpokenExemptions": ["hinge.check", "recall.challenge", "hinge.return", "map.intro", "hinge.axis"],
+  "lessonDurationBefore": "6:25",
+  "lessonDurationAfter": "6:23",
+  "clipsResynthesised": 76,
+  "clipsOverrunningTheirShot": 0,
+  "silentShots": 0,
+  "orphanedClips": 0,
+  "speakingRate": 1.0
+ },
+
+ "learnerUi": {
+  "draftBadgesBefore": 28,
+  "draftBadgesAfter": 0,
+  "shotsTotal": 52,
+  "srOnlyDisclaimerBefore": 28,
+  "srOnlyDisclaimerAfter": 0,
+  "sourcesOnTeachingSurfaceBefore": 52,
+  "sourcesOnTeachingSurfaceAfter": 0,
+  "sourcesNowReachableFrom": "Settings > For teachers > Sources & draft status",
+  "persistentControlsBefore": 17,
+  "persistentControlsAfter": 16,
+  "siteLabelsHiddenBehindPanelBefore": 6,
+  "siteLabelsHiddenBehindPanelAfter": 0,
+  "labelCheckCoverage": "7 widths x 4 explorations = 28 checks",
+  "teachingStatusRetained": true,
+  "provenanceMetadataRetained": true,
+  "openObservation": "While an exploration is open, two controls carry the label 'Return to the lesson' (the panel's action and the player-bar toggle). Left unchanged: a design decision, not a defect."
+ },
+
+ "content": {
+  "localeStringsBefore": 287,
+  "localeStringsAfter": 292,
+  "added": 9,
+  "changed": 5,
+  "retired": 4,
+  "reclassified": 0,
+  "provenanceAfter": { "source-excerpt": 1, "figure-reference": 29, "draft-enrichment": 126, "ui": 136 },
+  "newClaimNeedingReview": "narr.ball.move now states that the shoulder is the freest joint in the body. Standard, but new in this lesson and unsourced here."
+ },
+
+ "tests": {
+  "typecheck": "clean",
+  "unit": { "files": 10, "passed": 98, "failed": 0 },
+  "e2e": { "suites": 20, "passed": 111, "failed": 0, "flaky": 0, "durationMinutes": 11.8 },
+  "consoleErrors": 0,
+  "newSuite": "tests/e2e/step16d-polish.spec.ts (9 tests, the thirteen proofs section 29 requires)",
+  "note": "An earlier e2e run was discarded because the working tree and dist were swapped mid-run while measuring the baseline payload. These numbers come from a single clean run."
+ },
+
+ "accessibility": {
+  "axeViolations": 0,
+  "axeSurfaces": "intro, dialogs, interactive elbow, quiz, explore - desktop and mobile; every explore panel and both recall states at both widths",
+  "keyboardOnlyLesson": "pass",
+  "dialogFocusReturnsToOpener": "pass",
+  "measuredContrastFailures": 0,
+  "subtitleContrastBefore": "2.65:1",
+  "subtitleContrastAfter": "13.08:1",
+  "nvda": "NOT TESTED",
+  "voiceover": "NOT TESTED",
+  "talkback": "NOT TESTED",
+  "screenReaderCertification": "NOT CLAIMED"
+ },
+
+ "audio": {
+  "maxSimultaneousOwners": 1,
+  "ownerSamples": "2800+ at 50 Hz through a playthrough including an exploration handover",
+  "overlaps": 0,
+  "staleClipsAfterNavigation": 0,
+  "navigationCasesChecked": 10,
+  "frameDropRatesChecked": [15, 10, 5, 4],
+  "lessonVsWallClock": "0.85-1.15x",
+  "narrationVsLesson": "0.8-1.2x"
+ },
+
+ "explore": {
+  "groupsMeasured": 35,
+  "unexpectedGroupsMoved": 0,
+  "cameraMovementFromExploreInput": 0,
+  "orbitLockedWhilePanelOpen": true,
+  "tolerance": 1e-4,
+  "validatedElbow": { "dof": "flexion", "range": "0-145", "referencePoses": [0, 45, 90, 145], "displacedGroups": [], "status": "validated-rig", "modified": false }
+ },
+
+ "performance": {
+  "initialJsCssBeforeKb": 1069,
+  "initialJsCssAfterKb": 1071,
+  "narrationBeforeKb": 1493,
+  "narrationAfterKb": 1435,
+  "distTotal": "17M",
+  "assetsUnchanged": true,
+  "newGlbs": 0,
+  "renderPathChanges": "one label-layout pre-pass, O(visible labels), runs only while a panel is open",
+  "crossSessionFrameRateComparison": "NOT OFFERED - this machine's CPU benchmark drifts ~4x between sessions",
+  "deviceCertification": "NOT CLAIMED"
+ },
+
+ "integrity": {
+  "frozenFiles": "29/29 byte-identical",
+  "masterBlendMatchesPin": true,
+  "masterSha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0",
+  "assetDirGitDiff": "empty",
+  "blenderOpened": false
+ },
+
+ "visual": {
+  "captures": 60,
+  "widths": ["1280x800", "390x844", "412x844"],
+  "noDraftBadges": "pass at all widths",
+  "noIntrusiveSources": "pass at all widths",
+  "noClipping": "pass at all widths",
+  "captionsReadable": "pass at all widths",
+  "noPanelCoveringStructure": { "1280x800": "pass", "412x844": "FAIL 3 of 4", "390x844": "FAIL 4 of 4" },
+  "targetAnatomyDominant": { "1280x800": "pass", "412x844": "FAIL", "390x844": "FAIL" },
+  "targetHeightFractionByWidth": { "1440": 0.571, "1280": 0.571, "1024": 0.571, "768": 0.317, "412": 0.212, "390": 0.202, "320": 0.175 },
+  "cameraDistanceByWidth": { "1440": 0.435, "1280": 0.435, "1024": 0.435, "768": 0.570, "412": 0.865, "390": 0.913, "320": 1.052 }
+ },
+
+ "expertReview": {
+  "overall": "PENDING",
+  "taxonomy": "PENDING",
+  "anatomyApproval": "PENDING",
+  "curriculumApproval": "PENDING",
+  "landmarkApproval": "PENDING",
+  "elbowRange0to145": "PENDING",
+  "licence": "PENDING",
+  "hipClassification": "PENDING - not taught, not asked, untouched",
+  "draftEnrichmentStringsAwaitingReview": 126,
+  "changedInThisStep": "none - no decision, approval or classification was altered",
+  "packageRegenerationRequired": true
+ },
+
+ "nextStep": [
+  "Narrow-viewport framing: fit the shot to the smaller of the two viewport extents, or give the camera a view offset when a panel is open, then re-validate every framing against the frozen close-up spheres.",
+  "Resolve the two controls labelled 'Return to the lesson' while an exploration is open.",
+  "Regenerate the expert review package against this candidate."
+ ]
+}

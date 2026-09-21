@@ -1,0 +1,41 @@
+node_modules/
+blender/checkpoints/
+*.blend1
+__pycache__/
+qa/export/
+dist/
+test-results/
+playwright-report/
+
+# Regenerable capture sets (161 MB): every PNG here is reproduced by its own spec
+# (film-visual, reference-poses, step12-motion-visual, visual_compare). The non-regenerable
+# Step-11 build snapshot qa/perf/baseline-dist IS tracked.
+qa/visual/
+
+# ---- Step 17B: repository hygiene --------------------------------------------------------------
+# Local credentials. The narration build reads its key from the TTS_KEY environment variable only;
+# it is never written to a file. These patterns make sure a local one can never be committed.
+.env
+.env.*
+!.env.example
+*.pem
+*.p12
+*-service-account*.json
+*credentials*.json
+
+# Test and tool output (the committed evidence lives in qa/reports/, which is not affected)
+blob-report/
+coverage/
+.cache/
+.vite/
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+.idea/
+.vscode/

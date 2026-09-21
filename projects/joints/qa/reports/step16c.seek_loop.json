@@ -1,0 +1,99 @@
+{
+ "assignments": [
+  {
+   "t": 915,
+   "src": "intro.title.mp3",
+   "to": 0,
+   "from": 0,
+   "readyState": 1
+  },
+  {
+   "t": 1340,
+   "src": "intro.title.mp3",
+   "to": 0.36,
+   "from": 0,
+   "readyState": 4
+  }
+ ],
+ "events": [
+  {
+   "t": 629,
+   "e": "SET_SRC",
+   "src": "intro.title.mp3",
+   "ct": 0
+  },
+  {
+   "t": 645,
+   "e": "waiting",
+   "src": "intro.title.mp3",
+   "ct": 0
+  },
+  {
+   "t": 915,
+   "e": "loadedmetadata",
+   "src": "intro.title.mp3",
+   "ct": 0
+  },
+  {
+   "t": 915,
+   "e": "seeking",
+   "src": "intro.title.mp3",
+   "ct": 0
+  },
+  {
+   "t": 1163,
+   "e": "seeked",
+   "src": "intro.title.mp3",
+   "ct": 0
+  },
+  {
+   "t": 1163,
+   "e": "canplay",
+   "src": "intro.title.mp3",
+   "ct": 0
+  },
+  {
+   "t": 1163,
+   "e": "playing",
+   "src": "intro.title.mp3",
+   "ct": 0
+  },
+  {
+   "t": 1342,
+   "e": "seeking",
+   "src": "intro.title.mp3",
+   "ct": 0.36
+  },
+  {
+   "t": 1342,
+   "e": "waiting",
+   "src": "intro.title.mp3",
+   "ct": 0.36
+  },
+  {
+   "t": 1342,
+   "e": "seeked",
+   "src": "intro.title.mp3",
+   "ct": 0.36
+  },
+  {
+   "t": 1342,
+   "e": "canplay",
+   "src": "intro.title.mp3",
+   "ct": 0.36
+  },
+  {
+   "t": 1342,
+   "e": "playing",
+   "src": "intro.title.mp3",
+   "ct": 0.36
+  },
+  {
+   "t": 7313,
+   "e": "ended",
+   "src": "intro.title.mp3",
+   "ct": 6.22
+  }
+ ],
+ "listeners": 4
+}

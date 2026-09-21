@@ -1,0 +1,68 @@
+[
+ {
+  "t": 998,
+  "e": "PLAY",
+  "shot": "fixed.task",
+  "local": 0,
+  "src": "fixed.task.mp3",
+  "ct": 0,
+  "ended": false
+ },
+ {
+  "t": 6579,
+  "e": "PAUSE",
+  "shot": "fixed.task",
+  "local": 5578,
+  "src": "fixed.task.mp3",
+  "ct": 4.94
+ },
+ {
+  "t": 6582,
+  "e": "PAUSE",
+  "shot": "fixed.task",
+  "local": 5578,
+  "src": "fixed.task.mp3",
+  "ct": 4.94
+ },
+ {
+  "t": 6583,
+  "e": "PAUSE",
+  "shot": "fixed.task",
+  "local": 5578,
+  "src": "fixed.task.mp3",
+  "ct": 4.94
+ },
+ {
+  "t": 6583,
+  "e": "PAUSE",
+  "shot": "fixed.task",
+  "local": 5578,
+  "src": "",
+  "ct": 0
+ },
+ {
+  "t": 6583,
+  "e": "SET_SRC",
+  "shot": "fixed.task",
+  "local": 5578,
+  "src": "cue.explore.fixed.task.mp3"
+ },
+ {
+  "t": 6583,
+  "e": "SET_TIME",
+  "shot": "fixed.task",
+  "local": 5578,
+  "src": "cue.explore.fixed.task.mp3",
+  "from": 0,
+  "to": 0
+ },
+ {
+  "t": 6583,
+  "e": "PLAY",
+  "shot": "fixed.task",
+  "local": 5578,
+  "src": "cue.explore.fixed.task.mp3",
+  "ct": 0,
+  "ended": false
+ }
+]

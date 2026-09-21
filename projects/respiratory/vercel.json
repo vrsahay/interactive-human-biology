@@ -1,0 +1,7 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "installCommand": "",
+  "buildCommand": "node scripts/build-config.js && mkdir -p _site && cp respiratory_system.html respiratory_system.glb config.js _site/ && cp respiratory_system.html _site/index.html",
+  "outputDirectory": "_site"
+}

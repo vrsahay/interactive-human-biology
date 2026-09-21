@@ -1,0 +1,48 @@
+{
+ "generatedAt": "2026-09-20T17:00:49.468Z",
+ "explores": [
+  {
+   "exploreId": "explore.fixed",
+   "status": "teaching-simulation",
+   "declaredTargets": [
+    "skeleton.016.bone.closeup.skull.fixed.skull"
+   ],
+   "groupsMeasured": 35,
+   "moved": 1,
+   "unexpected": []
+  },
+  {
+   "exploreId": "explore.pivot",
+   "status": "teaching-simulation",
+   "declaredTargets": [
+    "skeleton.015.bone.closeup.skull",
+    "skeleton.016.bone.closeup.skull.fixed.skull",
+    "skeleton.033.teeth.closeup.skull"
+   ],
+   "groupsMeasured": 35,
+   "moved": 3,
+   "unexpected": []
+  },
+  {
+   "exploreId": "explore.ball",
+   "status": "teaching-simulation",
+   "declaredTargets": [
+    "skeleton.005.bone.closeup.elbow_right.shoulder_right.ball_socket.shoulder_right.hinge.elbow_right.elbow_r_core",
+    "skeleton.004.bone.closeup.elbow_right.elbow_r_core",
+    "skeleton.006.bone.closeup.elbow_right.hinge.elbow_right.elbow_r_core",
+    "skeleton.003.bone.closeup.elbow_r_core"
+   ],
+   "groupsMeasured": 35,
+   "moved": 4,
+   "unexpected": []
+  },
+  {
+   "exploreId": "explore.hinge",
+   "status": "validated-rig",
+   "declaredTargets": [],
+   "groupsMeasured": 35,
+   "moved": 0,
+   "unexpected": []
+  }
+ ]
+}

@@ -1,0 +1,26 @@
+{
+  "schema": 1,
+  "master": {
+    "path": "C:/Users/Admin/OneDrive - Calance/Desktop/Types of Joints/Human_Body_Master.blend",
+    "sha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0",
+    "bytes": 224401653,
+    "sourceScene": "01 Complete anatomy",
+    "savedWithBlender": [5, 0, 119]
+  },
+  "blender": {
+    "executable": "C:/Program Files/Blender Foundation/Blender 5.2/blender.exe",
+    "versionPin": "5.2.2"
+  },
+  "working": {
+    "path": "blender/Joints_Working.blend",
+    "scene": "JOINTS_WORK",
+    "rootCollection": "JOINTS"
+  },
+  "mcp": {
+    "server": "blender",
+    "implementation": "Blender Lab blender_mcp v1.0.3 (local patch: stdin=DEVNULL in blmcp/tools_helpers/blender_cli.py)",
+    "liveBridge": "localhost:9876"
+  },
+  "joints": ["elbow_r"],
+  "reports": "qa/reports"
+}

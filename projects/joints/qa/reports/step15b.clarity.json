@@ -1,0 +1,85 @@
+{
+ "generatedAt": "2026-09-21T10:29:52.785Z",
+ "disclaimer": {
+  "captionsCarryingIt": 0,
+  "statusText": "Teaching view: the moving marks show the kind of movement.",
+  "checked": 18
+ },
+ "terminology": {
+  "captionsWithLatinNames": 0,
+  "labelsOnHingeBones": [
+   "anchor:elbow_r.anchor.humerus",
+   "anchor:elbow_r.anchor.radius",
+   "anchor:elbow_r.anchor.ulna"
+  ]
+ },
+ "axis": {
+  "introducedIn": "hinge.axis",
+  "text": "This blue line shows the direction the elbow bends around. We call that line the axis. This blue line shows the direction the elbow bends around. We call that line the axis."
+ },
+ "pivot": [
+  {
+   "shot": "pivot.bones",
+   "highlighted": [
+    "body.atlas_c1",
+    "body.axis_c2"
+   ],
+   "concepts": []
+  },
+  {
+   "shot": "pivot.rotate",
+   "highlighted": [
+    "body.atlas_c1",
+    "body.axis_c2"
+   ],
+   "concepts": [
+    "pivot.upper_neck"
+   ]
+  }
+ ],
+ "flexionExtension": {
+  "taughtIn": [
+   "hinge.flexion",
+   "hinge.extension"
+  ],
+  "reusedIn": "explore.hinge",
+  "explanation": "Bending is flexion. Straightening is extension. A hinge joint does both, in one direction."
+ },
+ "timing": {
+  "silentShots": [],
+  "hingeReturnMs": 4600,
+  "hingeReturnSays": "The elbow settles back to rest. The elbow settles back to rest."
+ },
+ "metadata": {
+  "validatedExplores": [
+   "explore.hinge"
+  ],
+  "sourcesDialogKeepsTechnicalWording": true
+ },
+ "claims": [
+  {
+   "explore": "explore.fixed",
+   "declared": "teaching-simulation",
+   "shown": "Teaching simulation",
+   "plainNote": 1
+  },
+  {
+   "explore": "explore.pivot",
+   "declared": "teaching-simulation",
+   "shown": "Teaching simulation",
+   "plainNote": 1
+  },
+  {
+   "explore": "explore.ball",
+   "declared": "teaching-simulation",
+   "shown": "Teaching simulation",
+   "plainNote": 1
+  },
+  {
+   "explore": "explore.hinge",
+   "declared": "validated-rig",
+   "shown": "3D joint model",
+   "plainNote": 0
+  }
+ ]
+}

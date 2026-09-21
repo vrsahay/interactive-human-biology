@@ -1,0 +1,770 @@
+{
+ "label": "b.step14b.2",
+ "generatedAt": "2026-09-18T11:46:28.010Z",
+ "methodology": "see header of tests/perf/perf-lab-r.spec.ts",
+ "machine": "Lenovo 20V9, Intel Core i5-1135G7, Iris Xe, 16 GB, Windows 11 Pro, Chrome 152 headless",
+ "coldLoads": {
+  "igpu-broadband": {
+   "profile": {
+    "id": "igpu-broadband",
+    "classification": "REAL HARDWARE (integrated-GPU laptop, headless Chrome); network emulated",
+    "viewport": {
+     "width": 1280,
+     "height": 800
+    },
+    "dpr": 1,
+    "cpu": 1,
+    "net": {
+     "id": "broadband-50mbps",
+     "downBps": 6250000,
+     "upBps": 1250000,
+     "latencyMs": 20,
+     "note": "50 Mbps down / 10 Mbps up / 20 ms"
+    },
+    "mobile": false
+   },
+   "runs": [
+    {
+     "run": 1,
+     "attempt": 1,
+     "startedAt": "2026-09-18T11:46:29.031Z",
+     "benchMs": 97,
+     "waitedMs": 102,
+     "firstMeaningful3DMs": 639,
+     "introCompleteMs": 1503,
+     "shellRenderedMs": 214,
+     "bytesBeforeFirst3D": 560551,
+     "requestsBeforeFirst3D": [
+      "/app/index-B4oizIoV.js",
+      "/app/index-2J3QWwHl.css",
+      "/assets/body/v3/body-delivery.json",
+      "/assets/joints/elbow_r/joint-manifest.json",
+      "/assets/shared/env/environment.json",
+      "/assets/shared/env/room_env_cubeuv_64.rgbe",
+      "/assets/body/v3/body.intro.glb",
+      "/assets/body/v3/body.skin_intro.glb",
+      "/app/filmQa-BpSvJcTJ.js",
+      "/app/qaApi-Cuy1qnDr.js",
+      "/assets/audio/narration/narration.json"
+     ],
+     "elbowRequested": false,
+     "quality": "high",
+     "firstFrame": {
+      "drawCalls": 3,
+      "triangles": 35289,
+      "pixelRatio": 1
+     },
+     "marks": [
+      [
+       "joints:html-head",
+       58
+      ],
+      [
+       "joints:main-eval",
+       207
+      ],
+      [
+       "joints:shell-rendered",
+       214
+      ],
+      [
+       "joints:app-construct",
+       257
+      ],
+      [
+       "joints:stage-start",
+       258
+      ],
+      [
+       "joints:renderer-created",
+       271
+      ],
+      [
+       "joints:start",
+       285
+      ],
+      [
+       "joints:body-manifest",
+       332
+      ],
+      [
+       "joints:joint-manifest",
+       337
+      ],
+      [
+       "joints:env-fetched",
+       344
+      ],
+      [
+       "joints:environment-ready",
+       351
+      ],
+      [
+       "joints:fetched:body.intro",
+       351
+      ],
+      [
+       "joints:parsed:body.intro",
+       359
+      ],
+      [
+       "joints:fetched:body.skin_intro",
+       359
+      ],
+      [
+       "joints:parsed:body.skin_intro",
+       361
+      ],
+      [
+       "joints:body-bound",
+       361
+      ],
+      [
+       "joints:first-assets-loaded",
+       369
+      ],
+      [
+       "joints:ready",
+       369
+      ],
+      [
+       "joints:app-started",
+       369
+      ],
+      [
+       "joints:validate-start",
+       369
+      ],
+      [
+       "joints:scene-create-start",
+       380
+      ],
+      [
+       "joints:scene-created",
+       384
+      ],
+      [
+       "joints:shaders-ready",
+       601
+      ],
+      [
+       "joints:film-started",
+       601
+      ],
+      [
+       "joints:first-render-start",
+       614
+      ],
+      [
+       "joints:first-draw-submitted",
+       638
+      ],
+      [
+       "joints:fetched:body.materials",
+       654
+      ],
+      [
+       "joints:parsed:body.materials",
+       680
+      ],
+      [
+       "joints:fetched:body.context",
+       1163
+      ],
+      [
+       "joints:parsed:body.context",
+       1168
+      ],
+      [
+       "joints:fetched:body.closeup",
+       1308
+      ],
+      [
+       "joints:parsed:body.closeup",
+       1320
+      ],
+      [
+       "joints:fetched:body.skin",
+       1325
+      ],
+      [
+       "joints:parsed:body.skin",
+       1327
+      ],
+      [
+       "joints:stage-ready:groups",
+       1503
+      ]
+     ],
+     "resources": [
+      {
+       "name": "/app/index-B4oizIoV.js",
+       "start": 47,
+       "end": 184,
+       "transfer": 219190
+      },
+      {
+       "name": "/app/index-2J3QWwHl.css",
+       "start": 47,
+       "end": 151,
+       "transfer": 6257
+      },
+      {
+       "name": "/assets/body/v3/body-delivery.json",
+       "start": 56,
+       "end": 194,
+       "transfer": 32424
+      },
+      {
+       "name": "/assets/joints/elbow_r/joint-manifest.json",
+       "start": 56,
+       "end": 214,
+       "transfer": 12672
+      },
+      {
+       "name": "/assets/shared/env/environment.json",
+       "start": 56,
+       "end": 233,
+       "transfer": 1181
+      },
+      {
+       "name": "/assets/shared/env/room_env_cubeuv_64.rgbe",
+       "start": 57,
+       "end": 249,
+       "transfer": 60159
+      },
+      {
+       "name": "/assets/body/v3/body.intro.glb",
+       "start": 57,
+       "end": 298,
+       "transfer": 139723
+      },
+      {
+       "name": "/assets/body/v3/body.skin_intro.glb",
+       "start": 57,
+       "end": 327,
+       "transfer": 79462
+      },
+      {
+       "name": "/app/filmQa-BpSvJcTJ.js",
+       "start": 284,
+       "end": 307,
+       "transfer": 1609
+      },
+      {
+       "name": "/app/qaApi-Cuy1qnDr.js",
+       "start": 284,
+       "end": 314,
+       "transfer": 2432
+      },
+      {
+       "name": "/assets/audio/narration/narration.json",
+       "start": 377,
+       "end": 418,
+       "transfer": 5442
+      },
+      {
+       "name": "/assets/audio/narration/intro.title.mp3",
+       "start": 605,
+       "end": 640,
+       "transfer": 20172
+      },
+      {
+       "name": "/assets/shared/body-materials.glb",
+       "start": 612,
+       "end": 652,
+       "transfer": 33589
+      },
+      {
+       "name": "/assets/body/v3/body.closeup.glb",
+       "start": 613,
+       "end": 1299,
+       "transfer": 1078049
+      },
+      {
+       "name": "/assets/body/v3/body.context.glb",
+       "start": 613,
+       "end": 1159,
+       "transfer": 123904
+      },
+      {
+       "name": "/assets/body/v3/body.skin.glb",
+       "start": 613,
+       "end": 1322,
+       "transfer": 246112
+      }
+     ],
+     "consoleErrors": []
+    },
+    {
+     "run": 2,
+     "attempt": 1,
+     "startedAt": "2026-09-18T11:47:22.146Z",
+     "benchMs": 332,
+     "waitedMs": 48664,
+     "firstMeaningful3DMs": 657,
+     "introCompleteMs": 1176,
+     "shellRenderedMs": 209,
+     "bytesBeforeFirst3D": 560551,
+     "requestsBeforeFirst3D": [
+      "/app/index-B4oizIoV.js",
+      "/app/index-2J3QWwHl.css",
+      "/assets/body/v3/body-delivery.json",
+      "/assets/joints/elbow_r/joint-manifest.json",
+      "/assets/shared/env/environment.json",
+      "/assets/shared/env/room_env_cubeuv_64.rgbe",
+      "/assets/body/v3/body.intro.glb",
+      "/assets/body/v3/body.skin_intro.glb",
+      "/app/filmQa-BpSvJcTJ.js",
+      "/app/qaApi-Cuy1qnDr.js",
+      "/assets/audio/narration/narration.json"
+     ],
+     "elbowRequested": false,
+     "quality": "high",
+     "firstFrame": {
+      "drawCalls": 3,
+      "triangles": 35289,
+      "pixelRatio": 1
+     },
+     "marks": [
+      [
+       "joints:html-head",
+       78
+      ],
+      [
+       "joints:main-eval",
+       203
+      ],
+      [
+       "joints:shell-rendered",
+       209
+      ],
+      [
+       "joints:app-construct",
+       252
+      ],
+      [
+       "joints:stage-start",
+       253
+      ],
+      [
+       "joints:renderer-created",
+       328
+      ],
+      [
+       "joints:start",
+       341
+      ],
+      [
+       "joints:body-manifest",
+       383
+      ],
+      [
+       "joints:joint-manifest",
+       387
+      ],
+      [
+       "joints:env-fetched",
+       391
+      ],
+      [
+       "joints:environment-ready",
+       397
+      ],
+      [
+       "joints:fetched:body.intro",
+       397
+      ],
+      [
+       "joints:parsed:body.intro",
+       404
+      ],
+      [
+       "joints:fetched:body.skin_intro",
+       404
+      ],
+      [
+       "joints:parsed:body.skin_intro",
+       405
+      ],
+      [
+       "joints:body-bound",
+       406
+      ],
+      [
+       "joints:first-assets-loaded",
+       415
+      ],
+      [
+       "joints:ready",
+       415
+      ],
+      [
+       "joints:app-started",
+       415
+      ],
+      [
+       "joints:validate-start",
+       415
+      ],
+      [
+       "joints:scene-create-start",
+       428
+      ],
+      [
+       "joints:scene-created",
+       432
+      ],
+      [
+       "joints:shaders-ready",
+       620
+      ],
+      [
+       "joints:film-started",
+       621
+      ],
+      [
+       "joints:first-render-start",
+       631
+      ],
+      [
+       "joints:first-draw-submitted",
+       656
+      ],
+      [
+       "joints:fetched:body.materials",
+       684
+      ],
+      [
+       "joints:parsed:body.materials",
+       722
+      ],
+      [
+       "joints:fetched:body.context",
+       731
+      ],
+      [
+       "joints:parsed:body.context",
+       734
+      ],
+      [
+       "joints:fetched:body.skin",
+       780
+      ],
+      [
+       "joints:parsed:body.skin",
+       783
+      ],
+      [
+       "joints:fetched:body.closeup",
+       953
+      ],
+      [
+       "joints:parsed:body.closeup",
+       968
+      ],
+      [
+       "joints:stage-ready:groups",
+       1176
+      ]
+     ],
+     "resources": [
+      {
+       "name": "/app/index-B4oizIoV.js",
+       "start": 60,
+       "end": 184,
+       "transfer": 219190
+      },
+      {
+       "name": "/app/index-2J3QWwHl.css",
+       "start": 61,
+       "end": 89,
+       "transfer": 6257
+      },
+      {
+       "name": "/assets/body/v3/body-delivery.json",
+       "start": 75,
+       "end": 117,
+       "transfer": 32424
+      },
+      {
+       "name": "/assets/joints/elbow_r/joint-manifest.json",
+       "start": 75,
+       "end": 112,
+       "transfer": 12672
+      },
+      {
+       "name": "/assets/shared/env/environment.json",
+       "start": 76,
+       "end": 108,
+       "transfer": 1181
+      },
+      {
+       "name": "/assets/shared/env/room_env_cubeuv_64.rgbe",
+       "start": 76,
+       "end": 142,
+       "transfer": 60159
+      },
+      {
+       "name": "/assets/body/v3/body.intro.glb",
+       "start": 76,
+       "end": 183,
+       "transfer": 139723
+      },
+      {
+       "name": "/assets/body/v3/body.skin_intro.glb",
+       "start": 77,
+       "end": 174,
+       "transfer": 79462
+      },
+      {
+       "name": "/app/filmQa-BpSvJcTJ.js",
+       "start": 339,
+       "end": 382,
+       "transfer": 1609
+      },
+      {
+       "name": "/app/qaApi-Cuy1qnDr.js",
+       "start": 340,
+       "end": 382,
+       "transfer": 2432
+      },
+      {
+       "name": "/assets/audio/narration/narration.json",
+       "start": 425,
+       "end": 457,
+       "transfer": 5442
+      },
+      {
+       "name": "/assets/audio/narration/intro.title.mp3",
+       "start": 625,
+       "end": 664,
+       "transfer": 20172
+      },
+      {
+       "name": "/assets/shared/body-materials.glb",
+       "start": 628,
+       "end": 682,
+       "transfer": 33589
+      },
+      {
+       "name": "/assets/body/v3/body.closeup.glb",
+       "start": 629,
+       "end": 946,
+       "transfer": 1078049
+      },
+      {
+       "name": "/assets/body/v3/body.context.glb",
+       "start": 629,
+       "end": 729,
+       "transfer": 123904
+      },
+      {
+       "name": "/assets/body/v3/body.skin.glb",
+       "start": 630,
+       "end": 774,
+       "transfer": 246112
+      }
+     ],
+     "consoleErrors": []
+    }
+   ],
+   "summary": {
+    "runs": 2,
+    "retries": 0,
+    "failed": [],
+    "firstMeaningful3DMs": {
+     "n": 2,
+     "p50": 639,
+     "p95": 657,
+     "min": 639,
+     "max": 657
+    },
+    "introCompleteMs": {
+     "n": 2,
+     "p50": 1176,
+     "p95": 1503,
+     "min": 1176,
+     "max": 1503
+    },
+    "bytesBeforeFirst3D": {
+     "n": 2,
+     "p50": 560551,
+     "p95": 560551,
+     "min": 560551,
+     "max": 560551
+    },
+    "benchMs": {
+     "n": 2,
+     "p50": 97,
+     "p95": 332,
+     "min": 97,
+     "max": 332
+    },
+    "quality": "high",
+    "firstFrame": {
+     "drawCalls": 3,
+     "triangles": 35289,
+     "pixelRatio": 1
+    },
+    "consoleErrors": 0
+   }
+  }
+ },
+ "interactions": {
+  "igpu-broadband": {
+   "profile": {
+    "id": "igpu-broadband",
+    "classification": "REAL HARDWARE (integrated-GPU laptop, headless Chrome); network emulated",
+    "viewport": {
+     "width": 1280,
+     "height": 800
+    },
+    "dpr": 1,
+    "cpu": 1,
+    "net": {
+     "id": "broadband-50mbps",
+     "downBps": 6250000,
+     "upBps": 1250000,
+     "latencyMs": 20,
+     "note": "50 Mbps down / 10 Mbps up / 20 ms"
+    },
+    "mobile": false
+   },
+   "elbowReadyAfterIntentMs": 599,
+   "drag": {
+    "frames": 1802,
+    "durationS": 30,
+    "fps": 60,
+    "frameIntervalMs": {
+     "n": 1801,
+     "p50": 16.7,
+     "p95": 17.3,
+     "min": 8,
+     "max": 33
+    },
+    "droppedFrames": 1,
+    "inputs": 1804,
+    "inputLatencyRawMs": {
+     "n": 1804,
+     "p50": 16.6,
+     "p95": 17.7,
+     "min": 7.5,
+     "max": 33.4
+    },
+    "inputLatencyEffectiveMs": {
+     "n": 1804,
+     "p50": 16.6,
+     "p95": 17.7,
+     "min": 7.5,
+     "max": 33.4
+    },
+    "inputsWithoutFrame": 0,
+    "longFrames": {
+     "count": 0,
+     "first": [],
+     "note": "[ms since the first frame of the window, interval ms] for intervals > 50 ms"
+    }
+   },
+   "dragPose": {
+    "method": "closed-loop target 25..120 deg",
+    "axis": "x",
+    "angleMin": 18.65,
+    "angleMax": 95.84,
+    "unchangedStepFraction": 0
+   },
+   "dragHeapBytes": 21252172,
+   "orbit": {
+    "frames": 1532,
+    "durationS": 30,
+    "fps": 51,
+    "frameIntervalMs": {
+     "n": 1531,
+     "p50": 16.8,
+     "p95": 33.4,
+     "min": 12.8,
+     "max": 83.3
+    },
+    "droppedFrames": 269,
+    "inputs": 1490,
+    "inputLatencyRawMs": {
+     "n": 1490,
+     "p50": 5.7,
+     "p95": 20.3,
+     "min": 2.9,
+     "max": 71.5
+    },
+    "inputLatencyEffectiveMs": {
+     "n": 1490,
+     "p50": 5.7,
+     "p95": 20.3,
+     "min": 2.9,
+     "max": 71.5
+    },
+    "inputsWithoutFrame": 0,
+    "longFrames": {
+     "count": 1,
+     "first": [
+      [
+       16712,
+       83
+      ]
+     ],
+     "note": "[ms since the first frame of the window, interval ms] for intervals > 50 ms"
+    }
+   },
+   "recapPlayback": {
+    "frames": 481,
+    "durationS": 8,
+    "fps": 60,
+    "frameIntervalMs": {
+     "n": 480,
+     "p50": 16.7,
+     "p95": 17.5,
+     "min": 4.5,
+     "max": 26.1
+    },
+    "droppedFrames": 1,
+    "inputs": 0,
+    "inputLatencyRawMs": {
+     "n": 0,
+     "p50": null,
+     "p95": null,
+     "min": null,
+     "max": null
+    },
+    "inputLatencyEffectiveMs": {
+     "n": 0,
+     "p50": null,
+     "p95": null,
+     "min": null,
+     "max": null
+    },
+    "inputsWithoutFrame": 0,
+    "longFrames": {
+     "count": 0,
+     "first": [],
+     "note": "[ms since the first frame of the window, interval ms] for intervals > 50 ms"
+    }
+   },
+   "recapRenderer": {
+    "fps": 59,
+    "frameIntervalMeanMs": 16.665833333383002,
+    "frameIntervalP95Ms": 17.5,
+    "frameCpuMeanMs": 1.6312500004967054,
+    "frameCpuP95Ms": 2.399999976158142,
+    "drawCalls": 11,
+    "triangles": 112148,
+    "geometries": 75,
+    "textures": 6,
+    "textureMemoryBytes": 4194303,
+    "pixelRatio": 1,
+    "framesRendered": 3833,
+    "firstFrameMs": 655.6999999880791,
+    "firstModelFrameMs": 655.6999999880791,
+    "renderer": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x00009A49) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+   },
+   "consoleErrors": []
+  }
+ }
+}

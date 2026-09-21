@@ -1,0 +1,1283 @@
+{
+ "forcedStyleLayout": [],
+ "longFrames": {
+  "medianMs": 3.8,
+  "count": 1,
+  "of": 55,
+  "childTotalsMs": {
+   "FireAnimationFrame": 95,
+   "EventDispatch": 0,
+   "UpdateLayoutTree": 0,
+   "Layout": 0,
+   "Paint": 0,
+   "PrePaint": 0,
+   "MinorGC": 0,
+   "MajorGC": 0,
+   "V8.GC_SCAVENGER": 0,
+   "FunctionCall": 94.5
+  },
+  "topFunctions": [
+   [
+    "C (nm/three/build/three.module.js:7022)",
+    10
+   ],
+   [
+    "le (nm/three/build/three.module.js:11918)",
+    9
+   ],
+   [
+    "ju (nm/three/build/three.module.js:6064)",
+    5
+   ],
+   [
+    "fetch",
+    5
+   ],
+   [
+    "render (nm/three/build/three.module.js:17674)",
+    5
+   ],
+   [
+    "n (nm/three/build/three.module.js:66)",
+    4
+   ],
+   [
+    "renderFrame (src/engine/core/App.ts:993)",
+    3
+   ],
+   [
+    "renderBufferDirect (nm/three/build/three.module.js:17233)",
+    3
+   ],
+   [
+    "xt (nm/three/build/three.module.js:18407)",
+    3
+   ],
+   [
+    "Au (nm/three/build/three.module.js:6009)",
+    2
+   ],
+   [
+    "n (nm/three/build/three.module.js:4077)",
+    2
+   ],
+   [
+    "(program)",
+    2
+   ],
+   [
+    "Ce (nm/three/build/three.module.js:10659)",
+    2
+   ],
+   [
+    "s (nm/three/build/three.module.js:1623)",
+    2
+   ],
+   [
+    "Tu (nm/three/build/three.module.js:5930)",
+    2
+   ],
+   [
+    "te (nm/three/build/three.module.js:11571)",
+    2
+   ],
+   [
+    "Vl (nm/three/build/three.module.js:5159)",
+    1
+   ],
+   [
+    "render (src/engine/rendering/Stage.ts:142)",
+    1
+   ],
+   [
+    "Se (nm/three/build/three.module.js:13485)",
+    1
+   ],
+   [
+    "frame (src/engine/core/RenderLoop.ts:73)",
+    1
+   ],
+   [
+    "prepareShot (src/engine/video/AppVideoRuntime.ts:267)",
+    1
+   ],
+   [
+    "ensureStage (src/engine/body/BodyLayer.ts:312)",
+    1
+   ],
+   [
+    "m (nm/three/build/three.module.js:1357)",
+    1
+   ],
+   [
+    "Ll (nm/three/build/three.module.js:5078)",
+    1
+   ],
+   [
+    "setFromProjectionMatrix (nm/three/build/three.core.js:25874)",
+    1
+   ]
+  ]
+ },
+ "breakdown": {
+  "1_html_shell": {
+   "responseEndMs": 179,
+   "headParsedMs": 260
+  },
+  "2_main_js_download": [
+   {
+    "file": "index-BZMZmscT.js",
+    "start": 242,
+    "end": 977,
+    "transfer": 210012
+   }
+  ],
+  "3_js_parse_compile_ms": 9.1,
+  "4_module_evaluation": {
+   "evaluateMs": 129.4,
+   "modulesEvaluatedAtMs": 1044,
+   "shellRenderedAtMs": 1068,
+   "appConstructAtMs": 1258
+  },
+  "5_joint_manifest_fetch": [
+   {
+    "file": "joint-manifest.json",
+    "start": 256,
+    "end": 480,
+    "transfer": 12672
+   }
+  ],
+  "6_body_manifest_fetch": {
+   "request": [
+    {
+     "file": "body-delivery.json",
+     "start": 256,
+     "end": 542,
+     "transfer": 32424
+    }
+   ],
+   "parsedAtMs": 1531
+  },
+  "7_body_asset_fetch": [
+   {
+    "file": "body.intro.glb",
+    "start": 258,
+    "end": 959,
+    "transfer": 139723
+   },
+   {
+    "file": "body.skin_intro.glb",
+    "start": 259,
+    "end": 861,
+    "transfer": 79462
+   },
+   {
+    "file": "body-materials.glb",
+    "start": 2138,
+    "end": 2344,
+    "transfer": 33589
+   },
+   {
+    "file": "body.context.glb",
+    "start": 2141,
+    "end": 2759,
+    "transfer": 123904
+   },
+   {
+    "file": "body.skin_lod1.glb",
+    "start": 2143,
+    "end": 2793,
+    "transfer": 128497
+   }
+  ],
+  "8_texture_fetch_decode": {
+   "environment": [
+    {
+     "file": "room_env_cubeuv_64.rgbe",
+     "start": 258,
+     "end": 609,
+     "transfer": 60159
+    }
+   ],
+   "environmentDecodeMs": 28,
+   "materialLibraryParseMs": 142,
+   "imageDecodeMs": 0
+  },
+  "9_renderer_creation_ms": 58,
+  "10_shader_compilation_ms": 359,
+  "11_scene_creation": {
+   "glbParseMs": {
+    "body.intro": 37,
+    "body.skin_intro": 5,
+    "body.materials": 142,
+    "body.context": 15,
+    "body.skin_lod1": 10
+   },
+   "bindAfterLastFetchMs": -1165,
+   "validateMs": 47,
+   "applyFirstShotMs": 17
+  },
+  "12_first_draw_ms": 76,
+  "13_first_meaningful_visual_ms": 2133,
+  "marks": {
+   "joints:html-head": 260,
+   "joints:main-eval": 1044,
+   "joints:shell-rendered": 1068,
+   "joints:app-construct": 1258,
+   "joints:stage-start": 1261,
+   "joints:renderer-created": 1319,
+   "joints:start": 1359,
+   "joints:body-manifest": 1531,
+   "joints:joint-manifest": 1548,
+   "joints:env-fetched": 1572,
+   "joints:environment-ready": 1600,
+   "joints:fetched:body.intro": 1600,
+   "joints:parsed:body.intro": 1637,
+   "joints:fetched:body.skin_intro": 1638,
+   "joints:parsed:body.skin_intro": 1643,
+   "joints:body-bound": 1647,
+   "joints:first-assets-loaded": 1692,
+   "joints:ready": 1693,
+   "joints:app-started": 1697,
+   "joints:validate-start": 1697,
+   "lab:film-installed": 1743,
+   "joints:scene-create-start": 1744,
+   "joints:scene-created": 1761,
+   "joints:shaders-ready": 2120,
+   "joints:film-started": 2120,
+   "lab:first-3d": 2133,
+   "joints:first-render-start": 2147,
+   "joints:first-draw-submitted": 2223,
+   "joints:fetched:body.materials": 2359,
+   "joints:parsed:body.materials": 2501,
+   "joints:fetched:body.context": 2773,
+   "joints:parsed:body.context": 2788,
+   "joints:fetched:body.skin_lod1": 2812,
+   "joints:parsed:body.skin_lod1": 2822
+  }
+ },
+ "scenario": "startup",
+ "profile": "mobile4x",
+ "dist": "dist",
+ "query": "",
+ "generatedAt": "2026-09-17T18:33:26.698Z",
+ "markers": {
+  "marks": [
+   [
+    "joints:html-head",
+    260
+   ],
+   [
+    "joints:main-eval",
+    1044
+   ],
+   [
+    "joints:shell-rendered",
+    1068
+   ],
+   [
+    "joints:app-construct",
+    1258
+   ],
+   [
+    "joints:stage-start",
+    1261
+   ],
+   [
+    "joints:renderer-created",
+    1319
+   ],
+   [
+    "joints:start",
+    1359
+   ],
+   [
+    "joints:body-manifest",
+    1531
+   ],
+   [
+    "joints:joint-manifest",
+    1548
+   ],
+   [
+    "joints:env-fetched",
+    1572
+   ],
+   [
+    "joints:environment-ready",
+    1600
+   ],
+   [
+    "joints:fetched:body.intro",
+    1600
+   ],
+   [
+    "joints:parsed:body.intro",
+    1637
+   ],
+   [
+    "joints:fetched:body.skin_intro",
+    1638
+   ],
+   [
+    "joints:parsed:body.skin_intro",
+    1643
+   ],
+   [
+    "joints:body-bound",
+    1647
+   ],
+   [
+    "joints:first-assets-loaded",
+    1692
+   ],
+   [
+    "joints:ready",
+    1693
+   ],
+   [
+    "joints:app-started",
+    1697
+   ],
+   [
+    "joints:validate-start",
+    1697
+   ],
+   [
+    "lab:film-installed",
+    1743
+   ],
+   [
+    "joints:scene-create-start",
+    1744
+   ],
+   [
+    "joints:scene-created",
+    1761
+   ],
+   [
+    "joints:shaders-ready",
+    2120
+   ],
+   [
+    "joints:film-started",
+    2120
+   ],
+   [
+    "lab:first-3d",
+    2133
+   ],
+   [
+    "joints:first-render-start",
+    2147
+   ],
+   [
+    "joints:first-draw-submitted",
+    2223
+   ],
+   [
+    "joints:fetched:body.materials",
+    2359
+   ],
+   [
+    "joints:parsed:body.materials",
+    2501
+   ],
+   [
+    "joints:fetched:body.context",
+    2773
+   ],
+   [
+    "joints:parsed:body.context",
+    2788
+   ],
+   [
+    "joints:fetched:body.skin_lod1",
+    2812
+   ],
+   [
+    "joints:parsed:body.skin_lod1",
+    2822
+   ]
+  ],
+  "res": [
+   [
+    "/app/index-BZMZmscT.js",
+    242,
+    977,
+    210012
+   ],
+   [
+    "/app/index-BJyXXUYC.css",
+    243,
+    426,
+    5719
+   ],
+   [
+    "/assets/body/v3/body-delivery.json",
+    256,
+    542,
+    32424
+   ],
+   [
+    "/assets/joints/elbow_r/joint-manifest.json",
+    256,
+    480,
+    12672
+   ],
+   [
+    "/assets/shared/env/environment.json",
+    257,
+    446,
+    1181
+   ],
+   [
+    "/assets/shared/env/room_env_cubeuv_64.rgbe",
+    258,
+    609,
+    60159
+   ],
+   [
+    "/assets/body/v3/body.intro.glb",
+    258,
+    959,
+    139723
+   ],
+   [
+    "/assets/body/v3/body.skin_intro.glb",
+    259,
+    861,
+    79462
+   ],
+   [
+    "/app/filmQa-BOAdxBZM.js",
+    1353,
+    1537,
+    1181
+   ],
+   [
+    "/app/qaApi-VECgcOhJ.js",
+    1355,
+    1537,
+    2356
+   ],
+   [
+    "/assets/shared/body-materials.glb",
+    2138,
+    2344,
+    33589
+   ],
+   [
+    "/assets/body/v3/body.context.glb",
+    2141,
+    2759,
+    123904
+   ],
+   [
+    "/assets/body/v3/body.skin_lod1.glb",
+    2143,
+    2793,
+    128497
+   ]
+  ],
+  "nav": {
+   "name": "http://localhost:4191/?qa=1",
+   "entryType": "navigation",
+   "startTime": 0,
+   "duration": 1071.2000000178814,
+   "navigationId": 3464,
+   "initiatorType": "navigation",
+   "deliveryType": "",
+   "nextHopProtocol": "http/1.1",
+   "renderBlockingStatus": "non-blocking",
+   "contentType": "text/html",
+   "contentEncoding": "br",
+   "workerStart": 0,
+   "workerRouterEvaluationStart": 0,
+   "workerCacheLookupStart": 0,
+   "workerMatchedSourceType": "",
+   "workerFinalSourceType": "",
+   "redirectStart": 0,
+   "redirectEnd": 0,
+   "fetchStart": 0.7000000178813934,
+   "domainLookupStart": 0.7000000178813934,
+   "domainLookupEnd": 0.7000000178813934,
+   "connectStart": 0.7000000178813934,
+   "secureConnectionStart": 0,
+   "connectEnd": 0.7000000178813934,
+   "requestStart": 1.800000011920929,
+   "responseStart": 12.800000011920929,
+   "firstInterimResponseStart": 0,
+   "finalResponseHeadersStart": 12.800000011920929,
+   "responseEnd": 179.40000000596046,
+   "transferSize": 865,
+   "encodedBodySize": 565,
+   "decodedBodySize": 1195,
+   "responseStatus": 200,
+   "serverTiming": [],
+   "unloadEventStart": 0,
+   "unloadEventEnd": 0,
+   "domInteractive": 263.90000000596046,
+   "domContentLoadedEventStart": 1068.4000000059605,
+   "domContentLoadedEventEnd": 1068.9000000059605,
+   "domComplete": 1071.0999999940395,
+   "loadEventStart": 1071.2000000178814,
+   "loadEventEnd": 1071.2000000178814,
+   "type": "navigate",
+   "redirectCount": 0,
+   "activationStart": 0,
+   "criticalCHRestart": 0,
+   "notRestoredReasons": null,
+   "confidence": {
+    "randomizedTriggerRate": 0.4994798,
+    "value": "low"
+   }
+  }
+ },
+ "mainThread": {
+  "totalTaskMs": 3878.4,
+  "topTasks": [
+   {
+    "atMs": 1876.3,
+    "durMs": 241.3
+   },
+   {
+    "atMs": 1876.3,
+    "durMs": 241.2
+   },
+   {
+    "atMs": 1002.5,
+    "durMs": 192.7
+   },
+   {
+    "atMs": 1002.5,
+    "durMs": 192.5
+   },
+   {
+    "atMs": 1738.9,
+    "durMs": 136.6
+   },
+   {
+    "atMs": 1256.1,
+    "durMs": 131.6
+   },
+   {
+    "atMs": 1256.1,
+    "durMs": 131.2
+   },
+   {
+    "atMs": 1398.1,
+    "durMs": 109.2
+   },
+   {
+    "atMs": 1398.1,
+    "durMs": 109
+   },
+   {
+    "atMs": 2131.8,
+    "durMs": 104.6
+   },
+   {
+    "atMs": 2131.8,
+    "durMs": 102.5
+   },
+   {
+    "atMs": 1637.9,
+    "durMs": 93.6
+   },
+   {
+    "atMs": 186.7,
+    "durMs": 57.9
+   },
+   {
+    "atMs": 186.7,
+    "durMs": 57.2
+   },
+   {
+    "atMs": 1205.9,
+    "durMs": 48
+   }
+  ],
+  "byEvent": [
+   [
+    "AsyncTask Run",
+    566.2
+   ],
+   [
+    "v8.callFunction",
+    485.4
+   ],
+   [
+    "LocalFrameView::UpdateStyleAndLayout",
+    481.7
+   ],
+   [
+    "RunMicrotasks",
+    455
+   ],
+   [
+    "FunctionCall",
+    441.1
+   ],
+   [
+    "BlinkScheduler_PerformMicrotaskCheckpoint",
+    432.6
+   ],
+   [
+    "WebFrameWidgetImpl::BeginMainFrame",
+    363.6
+   ],
+   [
+    "Blink.Animate.UpdateTime",
+    361.4
+   ],
+   [
+    "LocalFrameView::layout",
+    360.8
+   ],
+   [
+    "Layout",
+    360.7
+   ],
+   [
+    "LocalFrameView::performLayout",
+    359.4
+   ],
+   [
+    "PageAnimator::serviceScriptedAnimations",
+    358.6
+   ],
+   [
+    "FrameRequestCallbackCollection::ExecuteFrameCallbacks",
+    348.8
+   ],
+   [
+    "FireAnimationFrame",
+    348.4
+   ],
+   [
+    "WebFrameWidgetImpl::UpdateLifecycle",
+    341.8
+   ],
+   [
+    "LocalFrameView::RunStyleAndLayoutLifecyclePhases",
+    294.4
+   ],
+   [
+    "Blink.Layout.UpdateTime",
+    280.3
+   ],
+   [
+    "Receive mojo message",
+    259.4
+   ],
+   [
+    "SimpleWatcher::OnHandleReady",
+    229
+   ],
+   [
+    "Document::FinishedParsing",
+    193.5
+   ],
+   [
+    "HTMLDocumentParser::NotifyScriptLoaded",
+    192.5
+   ],
+   [
+    "Document::UpdateStyleAndLayout",
+    190
+   ],
+   [
+    "InlineNode::ShapeTextIncludingFirstLine",
+    155.4
+   ],
+   [
+    "TimerBase::run",
+    146.5
+   ],
+   [
+    "TimerFire",
+    145.6
+   ],
+   [
+    "Blink.ForcedStyleAndLayout.UpdateTime",
+    125.9
+   ],
+   [
+    "UpdateLayoutTree",
+    118.2
+   ],
+   [
+    "Blink.Style.UpdateTime",
+    118
+   ],
+   [
+    "Document::updateStyle",
+    112.7
+   ],
+   [
+    "Document::recalcStyle",
+    106.6
+   ],
+   [
+    "PendingScript::ExecuteScriptBlock",
+    74.8
+   ],
+   [
+    "SVGImage::DataChanged",
+    73.7
+   ],
+   [
+    "IsolatedSVGDocumentHost::IsolatedSVGDocumentHost",
+    73.6
+   ],
+   [
+    "V8.StackGuard",
+    70.4
+   ],
+   [
+    "V8.HandleInterrupts",
+    67.4
+   ],
+   [
+    "IsolatedSVGDocumentHost::IsolatedSVGDocumentHost::load",
+    67
+   ],
+   [
+    "HTMLParserScriptRunner::executeScriptsWaitingForParsing",
+    66.1
+   ],
+   [
+    "HTMLParserScriptRunner ExecuteScript",
+    65.9
+   ],
+   [
+    "XMLDocumentParser::end",
+    65.6
+   ],
+   [
+    "v8.evaluateModule",
+    65.5
+   ]
+  ],
+  "gc": {
+   "minorMs": 29,
+   "majorMs": 0,
+   "count": 10
+  }
+ },
+ "cpuProfile": {
+  "sampledMs": 2875,
+  "bySource": [
+   [
+    "(program)",
+    1134
+   ],
+   [
+    "(idle)",
+    776
+   ],
+   [
+    "three.js",
+    518
+   ],
+   [
+    "(native)",
+    83
+   ],
+   [
+    "nm/preact",
+    67
+   ],
+   [
+    "src/engine/video",
+    53
+   ],
+   [
+    "src/engine/core",
+    37
+   ],
+   [
+    "src/ui/video",
+    36
+   ],
+   [
+    "src/engine/rendering",
+    36
+   ],
+   [
+    "src/engine/assets",
+    30
+   ],
+   [
+    "index-BZMZmscT.js",
+    24
+   ],
+   [
+    "(garbage collector)",
+    20
+   ],
+   [
+    "src/engine/body",
+    20
+   ],
+   [
+    "src/engine/overlays",
+    15
+   ],
+   [
+    "nm/@preact",
+    9
+   ],
+   [
+    "e5dcf6aa",
+    5
+   ],
+   [
+    "?qa=1",
+    4
+   ],
+   [
+    "src/engine/camera",
+    4
+   ],
+   [
+    "src/engine/quality",
+    3
+   ],
+   [
+    "src/engine/perf",
+    1
+   ],
+   [
+    "src/ui/store.ts",
+    1
+   ]
+  ],
+  "topFunctions": [
+   [
+    "(program)",
+    1134
+   ],
+   [
+    "(idle)",
+    776
+   ],
+   [
+    "(anonymous)",
+    41
+   ],
+   [
+    "Mu (nm/three/build/three.module.js:6158)",
+    20
+   ],
+   [
+    "(garbage collector)",
+    20
+   ],
+   [
+    "fetch",
+    20
+   ],
+   [
+    "setSize (nm/three/build/three.module.js:16708)",
+    19
+   ],
+   [
+    "xe (nm/three/build/three.module.js:16409)",
+    16
+   ],
+   [
+    "_t (nm/three/build/three.module.js:18224)",
+    14
+   ],
+   [
+    "eg (src/engine/rendering/bakedEnvironment.ts:25)",
+    14
+   ],
+   [
+    "renderFrame (src/engine/core/App.ts:993)",
+    12
+   ],
+   [
+    "F_ (src/ui/video/FilmShell.tsx:127)",
+    12
+   ],
+   [
+    "h (nm/three/build/three.module.js:7357)",
+    11
+   ],
+   [
+    "N (nm/preact/dist/preact.module.js:1)",
+    11
+   ],
+   [
+    "requestAnimationFrame",
+    11
+   ],
+   [
+    "C (nm/three/build/three.module.js:7022)",
+    10
+   ],
+   [
+    "Ni (nm/three/build/three.core.js:16859)",
+    10
+   ],
+   [
+    "q (nm/preact/dist/preact.module.js:1)",
+    9
+   ],
+   [
+    "F (nm/preact/dist/preact.module.js:1)",
+    9
+   ],
+   [
+    "load (src/engine/body/BodyLayer.ts:186)",
+    9
+   ],
+   [
+    "render (nm/three/build/three.module.js:17674)",
+    9
+   ],
+   [
+    "n (nm/three/build/three.module.js:4077)",
+    9
+   ],
+   [
+    "le (nm/three/build/three.module.js:11918)",
+    9
+   ],
+   [
+    "ce (nm/preact/dist/preact.module.js:1)",
+    8
+   ],
+   [
+    "renderBufferDirect (nm/three/build/three.module.js:17233)",
+    8
+   ],
+   [
+    "Ju (nm/three/build/three.module.js:6373)",
+    8
+   ],
+   [
+    "fetchVerified (src/engine/assets/AssetLoader.ts:80)",
+    8
+   ],
+   [
+    "pd (nm/three/build/three.module.js:6573)",
+    8
+   ],
+   [
+    "createUniqueName (nm/three/examples/jsm/loaders/GLTFLoader.js:3757)",
+    7
+   ],
+   [
+    "Mm (src/engine/assets/AssetLoader.ts:23)",
+    7
+   ],
+   [
+    "xt (nm/three/build/three.module.js:18407)",
+    7
+   ],
+   [
+    "gg (src/engine/video/validateVideoLesson.ts:51)",
+    7
+   ],
+   [
+    "appendChild",
+    7
+   ],
+   [
+    "Qh (src/engine/rendering/Stage.ts:37)",
+    7
+   ],
+   [
+    "(anonymous) (src/ui/video/FilmShell.tsx:155)",
+    6
+   ],
+   [
+    "g (nm/three/build/three.module.js:7703)",
+    6
+   ],
+   [
+    "evaluate",
+    6
+   ],
+   [
+    "start (src/engine/core/App.ts:198)",
+    6
+   ],
+   [
+    "lt (nm/three/build/three.module.js:17897)",
+    6
+   ],
+   [
+    "gt (nm/three/build/three.module.js:18192)",
+    6
+   ],
+   [
+    "yg (src/engine/video/validateVideoLesson.ts:128)",
+    6
+   ],
+   [
+    "Vl (nm/three/build/three.module.js:5159)",
+    5
+   ],
+   [
+    "updateShotTime (src/engine/video/AppVideoRuntime.ts:212)",
+    5
+   ],
+   [
+    "updateMatrixWorld (nm/three/build/three.core.js:13067)",
+    5
+   ],
+   [
+    "T (nm/preact/dist/preact.module.js:1)",
+    5
+   ]
+  ],
+  "inclusive": [
+   [
+    "frame (src/engine/core/RenderLoop.ts:73)",
+    269
+   ],
+   [
+    "renderFrame (src/engine/core/App.ts:993)",
+    213
+   ],
+   [
+    "render (src/engine/rendering/Stage.ts:142)",
+    199
+   ],
+   [
+    "render (nm/three/build/three.module.js:17674)",
+    188
+   ],
+   [
+    "ut (nm/three/build/three.module.js:18015)",
+    138
+   ],
+   [
+    "ht (nm/three/build/three.module.js:18165)",
+    133
+   ],
+   [
+    "gt (nm/three/build/three.module.js:18192)",
+    132
+   ],
+   [
+    "j (nm/preact/hooks/dist/hooks.module.js:1)",
+    126
+   ],
+   [
+    "renderBufferDirect (nm/three/build/three.module.js:17233)",
+    125
+   ],
+   [
+    "De (nm/preact/hooks/dist/hooks.module.js:1)",
+    124
+   ],
+   [
+    "xt (nm/three/build/three.module.js:18407)",
+    94
+   ],
+   [
+    "_t (nm/three/build/three.module.js:18224)",
+    92
+   ],
+   [
+    "q (nm/preact/dist/preact.module.js:1)",
+    91
+   ],
+   [
+    "compileAsync (nm/three/build/three.module.js:17552)",
+    86
+   ],
+   [
+    "cg (src/engine/core/App.ts:158)",
+    85
+   ],
+   [
+    "precompileVisible (src/engine/core/App.ts:367)",
+    81
+   ],
+   [
+    "compile (nm/three/build/three.module.js:17433)",
+    80
+   ],
+   [
+    "E (nm/preact/dist/preact.module.js:1)",
+    78
+   ],
+   [
+    "k (nm/preact/dist/preact.module.js:1)",
+    78
+   ],
+   [
+    "traverse (nm/three/build/three.core.js:12972)",
+    76
+   ],
+   [
+    "rt (nm/three/build/three.module.js:17395)",
+    74
+   ],
+   [
+    "Qh (src/engine/rendering/Stage.ts:37)",
+    71
+   ],
+   [
+    "A (nm/preact/dist/preact.module.js:1)",
+    62
+   ],
+   [
+    "tick (src/engine/video/VideoTimeline.ts:266)",
+    53
+   ],
+   [
+    "F (nm/preact/dist/preact.module.js:1)",
+    50
+   ],
+   [
+    "b (nm/three/build/three.module.js:7929)",
+    48
+   ],
+   [
+    "$d (nm/three/build/three.module.js:16107)",
+    48
+   ],
+   [
+    "pd (nm/three/build/three.module.js:6573)",
+    47
+   ],
+   [
+    "loadBody (src/engine/core/App.ts:448)",
+    43
+   ],
+   [
+    "getDependency (nm/three/examples/jsm/loaders/GLTFLoader.js:2926)",
+    38
+   ],
+   [
+    "getDependencies (nm/three/examples/jsm/loaders/GLTFLoader.js:3035)",
+    38
+   ],
+   [
+    "ce (nm/preact/dist/preact.module.js:1)",
+    38
+   ],
+   [
+    "loadScene (nm/three/examples/jsm/loaders/GLTFLoader.js:4493)",
+    37
+   ],
+   [
+    "advanceTo (src/engine/video/VideoTimeline.ts:284)",
+    35
+   ],
+   [
+    "_invokeOne (nm/three/examples/jsm/loaders/GLTFLoader.js:2882)",
+    35
+   ],
+   [
+    "loadNode (nm/three/examples/jsm/loaders/GLTFLoader.js:4257)",
+    35
+   ],
+   [
+    "_loadNodeShallow (nm/three/examples/jsm/loaders/GLTFLoader.js:4339)",
+    35
+   ],
+   [
+    "rg (src/engine/rendering/bakedEnvironment.ts:68)",
+    34
+   ],
+   [
+    "ensure (src/engine/overlays/ConceptOverlay.ts:256)",
+    34
+   ],
+   [
+    "evaluate (src/engine/video/VideoTimeline.ts:334)",
+    34
+   ],
+   [
+    "vp (src/engine/overlays/ConceptOverlay.ts:106)",
+    34
+   ],
+   [
+    "updateShotTime (src/engine/video/AppVideoRuntime.ts:212)",
+    31
+   ],
+   [
+    "upload (nm/three/build/three.module.js:6123)",
+    28
+   ],
+   [
+    "start (src/engine/core/App.ts:198)",
+    28
+   ],
+   [
+    "F_ (src/ui/video/FilmShell.tsx:127)",
+    27
+   ],
+   [
+    "eg (src/engine/rendering/bakedEnvironment.ts:25)",
+    25
+   ],
+   [
+    "createNodeMesh (nm/three/examples/jsm/loaders/GLTFLoader.js:4215)",
+    25
+   ],
+   [
+    "Ve (nm/three/build/three.module.js:16479)",
+    24
+   ],
+   [
+    "loadMesh (nm/three/examples/jsm/loaders/GLTFLoader.js:3865)",
+    24
+   ],
+   [
+    "fetchVerified (src/engine/assets/AssetLoader.ts:80)",
+    23
+   ],
+   [
+    "resize (src/engine/rendering/Stage.ts:125)",
+    23
+   ],
+   [
+    "bg (src/engine/video/validateVideoLesson.ts:223)",
+    21
+   ],
+   [
+    "vg (src/engine/video/validateVideoLesson.ts:83)",
+    21
+   ],
+   [
+    "getUniforms (nm/three/build/three.module.js:7121)",
+    20
+   ],
+   [
+    "Mu (nm/three/build/three.module.js:6158)",
+    20
+   ],
+   [
+    "load (src/engine/body/BodyLayer.ts:186)",
+    20
+   ],
+   [
+    "fetch",
+    20
+   ],
+   [
+    "place (src/engine/camera/CameraDirector.ts:251)",
+    20
+   ],
+   [
+    "C (nm/three/build/three.module.js:7022)",
+    19
+   ],
+   [
+    "setSize (nm/three/build/three.module.js:16708)",
+    19
+   ]
+  ]
+ },
+ "frames": null
+}

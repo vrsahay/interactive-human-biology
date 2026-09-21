@@ -1,0 +1,2523 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Human Respiratory System — 3D Lesson</title>
+<!--
+  Human Respiratory System — real-time 3D lesson (Three.js + Web Speech API)
+  Place next to ./respiratory_system.glb.
+
+  Browsers block loading a local GLB when this file is opened directly (file://).
+  Either serve the folder:     node scripts/serve.js   (or: python3 -m http.server 8000)
+  and open                     http://localhost:8000/respiratory_system.html
+  or just open the file and choose / drop the GLB when prompted.
+
+  The narration API key is read from ./config.js (generated from .env — see README.md).
+  Add ?debug=true to the URL for the anatomy inspector.
+-->
+<script src="config.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#070d17; --ink:#eef3f8; --ink-2:#a9b6c6; --muted:#6f7d8f;
+  --accent:#ff8a7a; --accent-2:#ffc940; --line:rgba(255,255,255,.14);
+  --glass:rgba(10,18,30,.55); --glass-2:rgba(10,18,30,.82);
+  --o2:#ffc940; --co2:#9d7bff; --air:#cfe9ff;
+  --sans:"Manrope",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;background:var(--bg);color:var(--ink);font-family:var(--sans);overflow:hidden;-webkit-font-smoothing:antialiased}
+button{font:inherit;color:inherit}
+#stage{position:fixed;inset:0}
+#stage canvas{display:block;width:100%!important;height:100%!important;touch-action:none}
+.hidden{display:none!important}
+
+/* ---------- chapter card ---------- */
+.chapter{position:fixed;top:clamp(16px,3vw,34px);left:clamp(16px,3vw,38px);max-width:min(460px,calc(100vw - 32px));pointer-events:none;z-index:5}
+.chapter-meta{display:flex;gap:10px;align-items:center;font:500 11px/1 var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--ink-2)}
+.chapter-meta .dot{width:4px;height:4px;border-radius:50%;background:var(--accent)}
+.chapter h1{margin:12px 0 10px;font-weight:800;font-size:clamp(28px,3.6vw,46px);line-height:1.02;letter-spacing:-.02em;text-wrap:balance;text-shadow:0 2px 24px rgba(0,0,0,.45)}
+.chapter-bar{height:2px;background:rgba(255,255,255,.14);border-radius:2px;overflow:hidden;width:min(320px,70vw)}
+.chapter-bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--accent),#ffb199)}
+.chapter p{margin:14px 0 0;font-size:clamp(14px,1.25vw,16.5px);line-height:1.5;color:#dbe4ee;max-width:38ch;text-shadow:0 1px 14px rgba(0,0,0,.6)}
+.chapter.swap h1,.chapter.swap p{animation:rise .8s cubic-bezier(.2,.7,.2,1) both}
+.chapter.swap p{animation-delay:.12s}
+@keyframes rise{from{opacity:0;transform:translateY(10px);filter:blur(6px)}to{opacity:1;transform:none;filter:none}}
+
+/* ---------- anatomy labels: a name tag with an arrow to the part being narrated ---------- */
+.labels{position:absolute;inset:0;pointer-events:none;z-index:4;overflow:hidden}
+.labels svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible;filter:drop-shadow(0 1px 2px rgba(0,0,0,.85))}
+.labels line{stroke:#ffc2b8;stroke-width:1.6;stroke-linecap:round}
+.labels circle.tip{fill:#fff;stroke:#ff8a7a;stroke-width:2}
+.labels circle.halo{fill:none;stroke:rgba(255,138,122,.55);stroke-width:1.5}
+.tag{position:absolute;left:0;top:0;padding:6px 12px 7px;border-radius:9px;background:rgba(10,18,30,.84);border:1px solid rgba(255,138,122,.6);box-shadow:0 8px 26px rgba(0,0,0,.4);white-space:nowrap;will-change:transform,opacity}
+.tag b{display:block;font:700 15px/1.15 var(--sans);letter-spacing:.005em;color:#fff}
+.tag small{display:block;margin-top:2px;font:500 10.5px/1.25 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:#ffb3a7}
+@media (max-width:640px){.tag{padding:4px 9px 5px}.tag b{font-size:13px}.tag small{font-size:9.5px}}
+
+/* ---------- gas legend ---------- */
+.legend{position:fixed;top:clamp(16px,3vw,34px);right:clamp(16px,3vw,38px);z-index:5;display:flex;flex-direction:column;gap:8px;padding:12px 14px;border-radius:12px;background:var(--glass);backdrop-filter:blur(10px);border:1px solid var(--line);font-size:13px;opacity:0;transform:translateY(-6px);transition:opacity .6s,transform .6s;pointer-events:none}
+.legend.on{opacity:1;transform:none}
+.legend span{display:flex;align-items:center;gap:10px}
+.legend b{width:10px;height:10px;border-radius:50%;box-shadow:0 0 12px currentColor}
+
+/* ---------- subtitle ---------- */
+.subtitle{position:fixed;left:50%;bottom:118px;transform:translateX(-50%);width:min(860px,calc(100vw - 32px));text-align:center;z-index:5;pointer-events:none;font-size:clamp(16px,1.6vw,21px);line-height:1.45;font-weight:500;text-wrap:balance;text-shadow:0 2px 16px rgba(0,0,0,.85),0 0 2px rgba(0,0,0,.9);transition:opacity .35s,bottom .45s}
+body.idle .subtitle{bottom:48px}
+.subtitle.fade{opacity:0}
+
+/* ---------- video controls ---------- */
+.controls{position:fixed;left:0;right:0;bottom:0;z-index:6;padding:42px clamp(16px,3vw,34px) 16px;background:linear-gradient(to top,rgba(4,8,14,.88),rgba(4,8,14,0));transition:opacity .45s,transform .45s}
+body.idle .controls{opacity:0;transform:translateY(12px);pointer-events:none}
+body.idle{cursor:none}
+.track-wrap{position:relative;padding:10px 0;cursor:pointer;touch-action:none}
+.track{position:relative;height:4px;border-radius:4px;background:rgba(255,255,255,.18);transition:height .15s}
+.track-wrap:hover .track,.track-wrap.drag .track{height:6px}
+.track-fill{position:absolute;inset:0 auto 0 0;width:0;border-radius:inherit;background:linear-gradient(90deg,var(--accent),#ffb199)}
+.track-ticks i{position:absolute;top:50%;width:2px;height:10px;margin:-5px 0 0 -1px;background:rgba(255,255,255,.4);border-radius:1px}
+.track-knob{position:absolute;top:50%;left:0;width:14px;height:14px;margin:-7px 0 0 -7px;border-radius:50%;background:#fff;box-shadow:0 0 0 4px rgba(255,138,122,.35);transform:scale(0);transition:transform .15s}
+.track-wrap:hover .track-knob,.track-wrap.drag .track-knob{transform:scale(1)}
+.track-tip{position:absolute;bottom:28px;transform:translateX(-50%);white-space:nowrap;padding:6px 10px;border-radius:8px;background:var(--glass-2);border:1px solid var(--line);font:600 12px/1.2 var(--sans);pointer-events:none}
+.track-tip em{font:400 11px var(--mono);color:var(--ink-2);font-style:normal;margin-left:8px}
+.controls-row{display:flex;align-items:center;gap:4px;margin-top:6px}
+.btn{display:grid;place-items:center;width:40px;height:40px;border:0;border-radius:10px;background:transparent;cursor:pointer;transition:background .15s}
+.btn:hover{background:rgba(255,255,255,.1)}
+.btn:focus-visible,.cta:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.btn svg{width:22px;height:22px;fill:currentColor}
+.btn.play svg{width:26px;height:26px}
+.time{font:500 13px var(--mono);color:var(--ink-2);margin-left:8px;font-variant-numeric:tabular-nums;white-space:nowrap}
+.spacer{flex:1}
+.mode{font:500 11px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--ink-2);padding:6px 10px;border:1px solid var(--line);border-radius:999px;margin-right:6px;white-space:nowrap}
+.mode.interactive{color:var(--accent-2);border-color:rgba(255,201,64,.4)}
+
+/* ---------- overlay cards ---------- */
+.overlay{position:fixed;inset:0;z-index:10;display:grid;place-items:center;padding:24px;background:radial-gradient(ellipse at center,rgba(7,13,23,.3),rgba(7,13,23,.9))}
+.card{width:min(540px,100%);padding:clamp(24px,4vw,40px);border-radius:18px;background:var(--glass-2);border:1px solid var(--line);backdrop-filter:blur(14px)}
+.card .eyebrow{font:500 11px var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--accent)}
+.card h2{margin:10px 0 12px;font-size:clamp(28px,4vw,40px);line-height:1.05;letter-spacing:-.02em;font-weight:800;text-wrap:balance}
+.card p{margin:0 0 22px;color:#cfd8e3;line-height:1.55}
+.cta-row{display:flex;gap:10px;flex-wrap:wrap}
+.cta{display:inline-flex;align-items:center;gap:10px;padding:13px 22px;border:0;border-radius:999px;background:var(--accent);color:#1a0d0b;font-weight:700;font-size:15px;cursor:pointer;box-shadow:0 10px 30px rgba(255,138,122,.3)}
+.cta.ghost{background:rgba(255,255,255,.08);color:var(--ink);box-shadow:none;border:1px solid var(--line)}
+.cta:hover{filter:brightness(1.07)}
+.cta svg{width:18px;height:18px;fill:currentColor}
+.note{margin-top:16px;font-size:12.5px;line-height:1.5;color:var(--muted)}
+.meter{height:3px;border-radius:3px;background:rgba(255,255,255,.12);overflow:hidden;margin:4px 0 8px}
+.meter i{display:block;height:100%;width:0;background:var(--accent);transition:width .2s}
+.drop{margin-top:18px;padding:18px;border:1.5px dashed rgba(255,255,255,.25);border-radius:12px;text-align:center;color:var(--ink-2);font-size:14px;line-height:1.5}
+.drop.over{border-color:var(--accent);color:#fff}
+.drop label{color:var(--accent);cursor:pointer;text-decoration:underline}
+code{font:12.5px var(--mono);background:rgba(255,255,255,.08);padding:2px 6px;border-radius:4px}
+
+/* ---------- explore mode: model on the left, parts list on the right ---------- */
+.explore{position:fixed;top:0;right:0;bottom:0;width:min(380px,100vw);z-index:9;display:flex;flex-direction:column;background:rgba(8,13,22,.95);border-left:1px solid var(--line);backdrop-filter:blur(14px)}
+.explore header{padding:18px 18px 14px;border-bottom:1px solid var(--line)}
+.explore .eyebrow{font:500 11px var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--accent)}
+.explore h3{margin:8px 0 6px;font-size:22px;line-height:1.15;font-weight:800;letter-spacing:-.01em;text-wrap:balance}
+.explore .desc{margin:0;min-height:3em;font-size:13.5px;line-height:1.5;color:#cfd8e3}
+.ex-actions{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap}
+.ex-actions button{padding:7px 12px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.06);font-size:12.5px;font-weight:600;cursor:pointer}
+.ex-actions button:hover{background:rgba(255,255,255,.12)}
+.ex-actions button.primary{background:var(--accent);border-color:var(--accent);color:#1a0d0b}
+.explore input{width:100%;margin-top:12px;padding:9px 11px;border-radius:9px;border:1px solid var(--line);background:rgba(255,255,255,.05);color:#fff;font:13.5px var(--sans)}
+.explore input:focus-visible,.ex-item:focus-visible,.ex-actions button:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+.ex-list{flex:1;overflow:auto;padding:6px 0 18px}
+.ex-group{padding:14px 18px 6px;font:500 10.5px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.ex-item{display:flex;align-items:center;gap:10px;width:100%;padding:8px 18px;border:0;background:transparent;text-align:left;font-size:14px;font-weight:600;cursor:pointer;border-left:2px solid transparent}
+.ex-item.child{padding-left:40px;font-weight:500;font-size:13px;color:#cfd8e3}
+.ex-item:hover{background:rgba(255,255,255,.05)}
+.ex-item.sel{background:rgba(255,138,122,.14);border-left-color:var(--accent);color:#fff}
+.ex-item i{flex:none;width:10px;height:10px;border-radius:3px;box-shadow:inset 0 0 0 1px rgba(0,0,0,.25)}
+.ex-empty{padding:18px;color:var(--muted);font-size:13px}
+.pill{display:inline-flex;align-items:center;gap:7px;height:32px;padding:0 13px;margin-right:8px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.06);font-size:13px;font-weight:600;cursor:pointer;white-space:nowrap}
+.pill:hover{background:rgba(255,255,255,.12)}
+.pill svg{width:16px;height:16px;fill:currentColor}
+body.explore-mode #stage{right:380px}
+body.explore-mode .chapter,body.explore-mode .subtitle,body.explore-mode .legend,body.explore-mode .controls{display:none!important}
+@media (max-width:900px){
+  .explore{top:auto;height:48vh;width:100%;border-left:0;border-top:1px solid var(--line)}
+  body.explore-mode #stage{right:0;bottom:48vh}
+  .explore .desc{min-height:0}
+}
+
+/* ---------- debug inspector ---------- */
+.debug{position:fixed;top:0;right:0;bottom:0;width:min(370px,100vw);z-index:8;display:flex;flex-direction:column;background:rgba(8,13,22,.94);border-left:1px solid var(--line);backdrop-filter:blur(12px);font-size:13px}
+.debug header{padding:14px 16px;border-bottom:1px solid var(--line)}
+.debug h3{margin:0;font-size:14px}
+.debug .stats{margin-top:6px;font:11px/1.5 var(--mono);color:var(--ink-2)}
+.debug input{width:100%;margin-top:10px;padding:8px 10px;border-radius:8px;border:1px solid var(--line);background:rgba(255,255,255,.05);color:#fff;font:13px var(--sans)}
+.debug .list{flex:1;overflow:auto;padding:6px 0}
+.debug .grp{padding:10px 16px 4px;font:10.5px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.debug .item{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:5px 16px;cursor:pointer;font:12px var(--mono)}
+.debug .item:hover{background:rgba(255,255,255,.06)}
+.debug .item.sel{background:rgba(255,138,122,.2);color:#fff}
+.debug .chip{font-size:10px;padding:1px 7px;border-radius:999px;background:rgba(255,255,255,.08);color:var(--ink-2);white-space:nowrap}
+.debug .chip.none{background:rgba(255,80,80,.18);color:#ff9a9a}
+.debug .info{border-top:1px solid var(--line);padding:12px 16px;font:11.5px/1.65 var(--mono);color:#cfd8e3;max-height:44vh;overflow:auto}
+.debug .info b{color:#fff;font-weight:500}
+.debug .row{display:flex;gap:6px;margin-top:10px;flex-wrap:wrap}
+.debug .row button{padding:6px 10px;border-radius:8px;border:1px solid var(--line);background:rgba(255,255,255,.06);cursor:pointer;font-size:12px}
+body.debug-mode #stage{right:370px}
+body.debug-mode .legend{right:394px}
+body.debug-mode .controls{right:370px}
+@media (max-width:900px){
+  .debug{top:auto;height:46vh;width:100%;border-left:0;border-top:1px solid var(--line)}
+  body.debug-mode #stage{right:0;bottom:46vh}
+  body.debug-mode .controls{right:0;bottom:46vh}
+  .mode{display:none}
+  .chapter p{display:none}
+  .subtitle{bottom:108px}
+}
+@media (prefers-reduced-motion:reduce){.chapter.swap h1,.chapter.swap p{animation:none}}
+</style>
+</head>
+<body>
+<div id="stage"><div id="labels" class="labels" aria-hidden="true"></div></div>
+
+<div id="chapter" class="chapter hidden">
+  <div class="chapter-meta"><span>Respiratory System</span><span class="dot"></span><span id="chapterCount">01 / 13</span></div>
+  <h1 id="chapterTitle"></h1>
+  <div class="chapter-bar"><i id="chapterFill"></i></div>
+  <p id="chapterText"></p>
+</div>
+
+<div id="legend" class="legend" aria-hidden="true">
+  <span><b style="background:var(--o2);color:var(--o2)"></b>O₂ · oxygen → blood</span>
+  <span><b style="background:var(--co2);color:var(--co2)"></b>CO₂ · carbon dioxide → alveoli</span>
+  <span><b style="background:var(--air);color:var(--air)"></b>Air</span>
+</div>
+
+<div id="subtitle" class="subtitle fade" aria-live="polite"></div>
+
+<div id="controls" class="controls hidden">
+  <div class="track-wrap" id="trackWrap">
+    <div class="track" id="track">
+      <div class="track-fill" id="trackFill"></div>
+      <div class="track-ticks" id="trackTicks"></div>
+      <div class="track-knob" id="trackKnob"></div>
+    </div>
+    <div class="track-tip hidden" id="trackTip"></div>
+  </div>
+  <div class="controls-row">
+    <button class="btn play" id="btnPlay" aria-label="Play">
+      <svg id="icoPlay" viewBox="0 0 24 24"><path d="M8 5.14v13.72a1 1 0 0 0 1.52.85l11-6.86a1 1 0 0 0 0-1.7l-11-6.86A1 1 0 0 0 8 5.14z"/></svg>
+      <svg id="icoPause" class="hidden" viewBox="0 0 24 24"><path d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z"/></svg>
+    </button>
+    <button class="btn" id="btnReplaySection" aria-label="Replay this scene" title="Replay this scene (R)">
+      <svg viewBox="0 0 24 24"><path d="M6 6h2v12H6zm3.5 6 8.5 6V6z"/></svg>
+    </button>
+    <button class="btn" id="btnRestart" aria-label="Restart lesson" title="Restart">
+      <svg viewBox="0 0 24 24"><path d="M12 5V2L7 6l5 4V7a5 5 0 1 1-5 5H5a7 7 0 1 0 7-7z"/></svg>
+    </button>
+    <span class="time" id="timeLabel">00:00 / 00:00</span>
+    <span class="spacer"></span>
+    <button class="pill" id="btnExploreMode" title="Explore the model (E)"><svg viewBox="0 0 24 24"><path d="M12 2 3 7v10l9 5 9-5V7zm0 2.3 6.4 3.6L12 11.5 5.6 7.9zM5 9.6l6 3.4v6.7l-6-3.4zm8 10.1V13l6-3.4v6.7z"/></svg>Explore</button>
+    <span class="mode" id="modeLabel">Cinematic</span>
+    <button class="btn" id="btnMute" aria-label="Mute narration" title="Mute (M)">
+      <svg id="icoVol" viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3A4.5 4.5 0 0 0 14 8v8a4.47 4.47 0 0 0 2.5-4zM14 3.23v2.06a7 7 0 0 1 0 13.42v2.06a9 9 0 0 0 0-17.54z"/></svg>
+      <svg id="icoMute" class="hidden" viewBox="0 0 24 24"><path d="M16.5 12A4.5 4.5 0 0 0 14 8v2.18l2.45 2.45a4.5 4.5 0 0 0 .05-.63zM19 12a6.94 6.94 0 0 1-.54 2.7l1.51 1.51A8.9 8.9 0 0 0 21 12a9 9 0 0 0-7-8.77v2.06A7 7 0 0 1 19 12zM4.27 3 3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25A6.9 6.9 0 0 1 14 18.7v2.06a8.9 8.9 0 0 0 3.69-1.81L19.73 21 21 19.73l-9-9zM12 4 9.91 6.09 12 8.18z"/></svg>
+    </button>
+    <button class="btn" id="btnFullscreen" aria-label="Fullscreen" title="Fullscreen (F)">
+      <svg viewBox="0 0 24 24"><path d="M7 14H5v5h5v-2H7zm-2-4h2V7h3V5H5zm12 7h-3v2h5v-5h-2zM14 5v2h3v3h2V5z"/></svg>
+    </button>
+  </div>
+</div>
+
+<div id="overlay" class="overlay">
+  <div class="card" id="loadCard">
+    <div class="eyebrow">3D lesson · Class 10 Biology</div>
+    <h2>Human Respiratory System</h2>
+    <p id="loadText">Loading the anatomical model…</p>
+    <div class="meter"><i id="loadMeter"></i></div>
+    <div class="note" id="loadNote"></div>
+    <div id="fileDrop" class="drop hidden">
+      Drop <code>respiratory_system.glb</code> here, or <label for="fileInput">choose the file</label>.
+      <input id="fileInput" type="file" accept=".glb,.gltf" hidden>
+    </div>
+  </div>
+  <div class="card hidden" id="startCard">
+    <div class="eyebrow" id="startEyebrow">3D lesson</div>
+    <h2>The Journey of a Breath</h2>
+    <p>Follow one breath of air from the nostrils to the alveoli, and watch oxygen pass into the blood.</p>
+    <div class="cta-row">
+      <button class="cta" id="btnStart"><svg viewBox="0 0 24 24"><path d="M8 5.14v13.72a1 1 0 0 0 1.52.85l11-6.86a1 1 0 0 0 0-1.7l-11-6.86A1 1 0 0 0 8 5.14z"/></svg>Start lesson</button>
+      <button class="cta ghost" id="btnStartExplore">Explore the model</button>
+    </div>
+    <div class="note" id="startNote">Turn your sound on for narration.<br>Space play/pause · ← → seek · M mute · R replay scene · F fullscreen</div>
+  </div>
+  <div class="card hidden" id="endCard">
+    <div class="eyebrow">Lesson complete</div>
+    <h2>Lesson Complete</h2>
+    <p>You followed the journey of air through the human respiratory system.</p>
+    <div class="cta-row">
+      <button class="cta" id="btnReplay"><svg viewBox="0 0 24 24"><path d="M12 5V2L7 6l5 4V7a5 5 0 1 1-5 5H5a7 7 0 1 0 7-7z"/></svg>Replay</button>
+      <button class="cta ghost" id="btnExplore">Explore the model</button>
+    </div>
+  </div>
+</div>
+
+<aside id="explorePanel" class="explore hidden" aria-label="Explore the model">
+  <header>
+    <div class="eyebrow">Explore the model</div>
+    <h3 id="exTitle">All parts</h3>
+    <p class="desc" id="exDesc">Pick a part from the list, or click it in the model. Drag to rotate, scroll to zoom.</p>
+    <div class="ex-actions">
+      <button id="exShowAll">Show all</button>
+      <button class="primary" id="exBack">Back to lesson</button>
+    </div>
+    <input id="exFilter" type="search" placeholder="Search parts…" autocomplete="off" aria-label="Search parts">
+  </header>
+  <nav class="ex-list" id="exList"></nav>
+</aside>
+
+<div id="debugPanel" class="debug hidden"></div>
+
+<script type="importmap">
+{ "imports": {
+  "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+  "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+} }
+</script>
+<script type="module">
+import * as THREE from "three";
+import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
+import { OrbitControls } from "three/addons/controls/OrbitControls.js";
+import { RoomEnvironment } from "three/addons/environments/RoomEnvironment.js";
+import { EffectComposer } from "three/addons/postprocessing/EffectComposer.js";
+import { RenderPass } from "three/addons/postprocessing/RenderPass.js";
+import { UnrealBloomPass } from "three/addons/postprocessing/UnrealBloomPass.js";
+import { ShaderPass } from "three/addons/postprocessing/ShaderPass.js";
+import { OutputPass } from "three/addons/postprocessing/OutputPass.js";
+
+// ===============================
+// CONFIGURATION
+// ===============================
+const GLB_PATH = "./respiratory_system.glb";
+const DEBUG = new URLSearchParams(location.search).get("debug") === "true";
+
+// Narration: Google Cloud Text-to-Speech. If the request fails (bad key, quota, offline),
+// the lesson falls back to the browser's built-in voice automatically.
+// The key is not stored in this file: it comes from ./config.js, generated from .env (locally)
+// or the GOOGLE_TTS_API_KEY repository secret (GitHub Actions) by scripts/build-config.js.
+// NOTE: an API key in a web page is visible to anyone who opens it — restrict it in Google
+// Cloud Console to the Text-to-Speech API and to your site's HTTP referrers.
+const TTS = {
+  provider: "google",                        // "google" | "browser"
+  apiKey: window.TTS_CONFIG?.apiKey || "",   // no key → browser voice
+  endpoint: "https://texttospeech.googleapis.com/v1/text:synthesize",
+  languageCode: "en-IN",
+  voiceName: "en-IN-Chirp3-HD-Aoede",        // English (India) · Premium · Female
+  speakingRate: 1.0,                         // Chirp 3 HD voices largely ignore this
+  cache: true,                               // keep synthesized clips in IndexedDB: no repeat API calls, stable timing
+};
+
+const CONFIG = {
+  speechRate: 0.95,
+  speechPitch: 1.0,
+  voicePreference: ["en-IN", "en-GB", "en-US", "en"],
+  charsPerSecond: 14.5,        // speaking-speed estimate at rate 1.0; refined while narrating
+  speechLeadMs: 500,           // camera starts moving before the voice
+  sectionTailMs: 1500,         // visuals linger after the voice ends
+  transitionMs: 2400,          // default camera / look blend between scenes
+  maxSpeechHoldMs: 6000,       // longest the clock waits for a slow voice at a scene end
+  ribLiftRadians: 0.05,
+  lungFallbackScale: 0.05,     // used only if a lung mesh has no "Expanded" morph target
+  diaphragmFallbackDrop: 0.05, // used only if the diaphragm has no "Flat" morph target
+  bloom: { strength: 0.32, radius: 0.45, threshold: 0.92 },
+  background: 0x070d17,
+  pixelRatioCap: 2,
+};
+
+// One colour per anatomical category, fixed for the whole lesson.
+const COLORS = {
+  airway: 0xd9776f,
+  cartilage: 0xebe3cf,
+  larynxMuscle: 0xb5504c,
+  lungs: 0xeaa2a6,
+  alveoli: 0xeda4a0,
+  alveolusLining: 0xd99a98,    // inner surface of the cut-open hero acinus
+  alveolusCut: 0x9c3a48,       // cut edge of its wall
+  diaphragm: 0x9e3b3a,
+  bone: 0xd8cdb4,
+  bloodDeoxy: 0x5b6fe0,
+  bloodOxy: 0xe23f3d,
+  air: 0xcfe9ff,
+  oxygen: 0xffc940,
+  carbonDioxide: 0x9d7bff,
+};
+
+// Map GLB object names → logical anatomy. Strings match exactly, RegExps match patterns.
+// The first matching category wins. Open ?debug=true to see every name in the file.
+const ANATOMY_MAPPING = {
+  nose:          ["Nostril_L", "Nostril_R", "Nasal_Cartilages"],
+  nasalCavity:   ["Nasal_Cavity"],
+  conchae:       [/^Nasal_Concha/],
+  pharynx:       ["Pharynx"],
+  larynx:        ["Epiglottis", "Thyroid_Cartilage", "Cricoid_Cartilage", /^Arytenoid_Cartilage/, /^Corniculate_Cartilage/],
+  larynxMuscles: ["Vocalis", "Arytenoid_Muscle", /^Thyroarytenoid/, /^Cricothyroid/, /Cricoarytenoid/, /Aryepiglottic/, /Thyroepiglottic/],
+  trachea:       [/^Cartilage_Ring_/, "Tracheal_Mucosa", "Trachealis", "Tracheal_Cartilage"],
+  bronchi:       ["Bronchial_Tree"],
+  lungs:         [/^Lung_/],
+  // one pulmonary acinus (terminal bronchiole → respiratory bronchioles → alveolar ducts → alveolar sacs)
+  // at every end of the airway tree — static Blender geometry, no runtime animation
+  alveoli:       [/^Acinus_\d+$/],
+  heroAcinus:    [/^Hero_Acinus/],          // the cut-open acinus used for the close-ups
+  bloodVessels:  ["Capillary_Network", /Capillar/],
+  diaphragm:     ["Diaphragm"],
+  ribs:          [/^Rib_/, /^Costal_Cartilage/],
+  skeleton:      [/^Vertebra_/, "Manubrium", "Sternum_Body", "Xiphoid"],
+};
+
+const CATEGORY_COLOR = {
+  nose: "airway", nasalCavity: "airway", conchae: "bone", pharynx: "airway",
+  larynx: "cartilage", larynxMuscles: "larynxMuscle", trachea: "airway",
+  bronchi: "airway", lungs: "lungs", alveoli: "alveoli",
+  heroAcinus: "alveoli", bloodVessels: "bloodDeoxy", diaphragm: "diaphragm",
+  ribs: "bone", skeleton: "bone",
+};
+const CARTILAGE_PATTERN = /Cartilage|Epiglottis/;           // cartilage keeps its own tone in any category
+const DOUBLE_SIDED_PATTERN = /Nasal_Cavity|Pharynx|Nostril|Hero_Acinus/;
+const BASE_OPACITY = { lungs: 0.34, ribs: 0.26, skeleton: 0.2 }; // everything else 1
+// Multi-material meshes keep their authored surfaces apart (GLB material name → COLORS key)
+const MATERIAL_TONE = { M_Alveolus_Inner: "alveolusLining", M_Alveolar_Cut: "alveolusCut" };
+
+// Special lung / breathing names (morph targets authored in Blender)
+const MORPH = { lungs: "Expanded", diaphragm: "Flat", alveoli: "Expanded" };   // alveoli: acini, hero acinus + its capillaries
+
+// ===============================
+// UTILITIES
+// ===============================
+const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
+const lerp = (a, b, t) => a + (b - a) * t;
+const smooth = t => { t = clamp(t); return t * t * (3 - 2 * t); };
+const easeInOut = t => { t = clamp(t); return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2; };
+const ramp = (x, a, b) => (b <= a ? (x >= a ? 1 : 0) : smooth((x - a) / (b - a)));
+const pulse = (x, center, width) => Math.exp(-Math.pow((x - center) / width, 2));
+const $ = id => document.getElementById(id);
+function rng(seed) {                      // deterministic PRNG → particles look identical after a seek
+  let a = seed >>> 0;
+  return () => { a |= 0; a = (a + 0x6D2B79F5) | 0; let t = Math.imul(a ^ (a >>> 15), 1 | a);
+    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t; return ((t ^ (t >>> 14)) >>> 0) / 4294967296; };
+}
+const fmtTime = ms => { const s = Math.max(0, Math.round(ms / 1000)); return `${String(Math.floor(s / 60)).padStart(2, "0")}:${String(s % 60).padStart(2, "0")}`; };
+const breathCycle = (ms, period) => 0.5 - 0.5 * Math.cos((ms / period) * Math.PI * 2);   // 0 exhaled → 1 inhaled
+const breathFlow  = (ms, period) => Math.sin((ms / period) * Math.PI * 2);               // + inhaling, − exhaling
+
+// ===============================
+// GLB LOADING
+// ===============================
+class ModelLoader {
+  constructor(onProgress) { this.loader = new GLTFLoader(); this.onProgress = onProgress; }
+  loadFromPath(path) {
+    return new Promise((resolve, reject) => this.loader.load(path, resolve,
+      e => this.onProgress(e.total ? e.loaded / e.total : null, e.loaded), reject));
+  }
+  async loadFromFile(file) {
+    this.onProgress(null, file.size);
+    const buffer = await file.arrayBuffer();
+    return new Promise((resolve, reject) => this.loader.parse(buffer, "", resolve, reject));
+  }
+  // file:// pages cannot fetch a sibling GLB — let the viewer pick or drop it instead
+  askForFile(reason) {
+    $("loadText").textContent = "Your browser blocked loading the model file directly.";
+    $("loadNote").innerHTML = `Choose the GLB below, or serve this folder with <code>python3 -m http.server 8000</code> and open <code>http://localhost:8000/respiratory_system.html</code>.<br><span style="opacity:.7">${reason}</span>`;
+    const drop = $("fileDrop"); drop.classList.remove("hidden");
+    return new Promise((resolve, reject) => {
+      const take = file => { if (!file) return; $("loadText").textContent = `Reading ${file.name}…`; drop.classList.add("hidden");
+        this.loadFromFile(file).then(resolve, reject); };
+      $("fileInput").addEventListener("change", e => take(e.target.files[0]));
+      addEventListener("dragover", e => { e.preventDefault(); drop.classList.add("over"); });
+      addEventListener("dragleave", () => drop.classList.remove("over"));
+      addEventListener("drop", e => { e.preventDefault(); drop.classList.remove("over"); take(e.dataTransfer.files[0]); });
+    });
+  }
+}
+
+// ===============================
+// ANATOMY REGISTRY
+// ===============================
+class AnatomyRegistry {
+  constructor(root) {
+    this.root = root;
+    this.meshes = [];
+    this.byName = new Map();
+    this.categories = Object.fromEntries(Object.keys(ANATOMY_MAPPING).map(k => [k, []]));
+    this.categoryOf = new Map();
+    this.unmapped = [];
+    this._memo = new Map();
+    root.updateMatrixWorld(true);
+    root.traverse(o => { if (o.isMesh) { this.meshes.push(o); this.byName.set(o.name, o); } });
+    this.meshes.forEach((m, i) => { m.userData.index = i; });
+    for (const mesh of this.meshes) {
+      const cat = Object.entries(ANATOMY_MAPPING).find(([, pats]) =>
+        pats.some(p => (p instanceof RegExp ? p.test(mesh.name) : p === mesh.name)))?.[0];
+      if (cat) { this.categories[cat].push(mesh); this.categoryOf.set(mesh, cat); }
+      else this.unmapped.push(mesh);
+    }
+  }
+  // keys: category names, exact mesh names or RegExps (any mix)
+  get(keys) {
+    const list = [].concat(keys || []);
+    const memoKey = list.map(String).join("|");
+    if (this._memo.has(memoKey)) return this._memo.get(memoKey);
+    const out = new Set();
+    for (const k of list) {
+      if (k instanceof RegExp) this.meshes.forEach(m => k.test(m.name) && out.add(m));
+      else if (this.categories[k]) this.categories[k].forEach(m => out.add(m));
+      else if (this.byName.has(k)) out.add(this.byName.get(k));
+    }
+    const arr = [...out]; this._memo.set(memoKey, arr); return arr;
+  }
+  has(keys) { return this.get(keys).length > 0; }
+  box(keys) { const b = new THREE.Box3(); this.get(keys).forEach(m => b.expandByObject(m)); return b; }
+  center(keys) { return this.box(keys).getCenter(new THREE.Vector3()); }
+  sampleVertices(keys, maxPerMesh = 3000) {
+    const pts = [];
+    for (const mesh of this.get(keys)) {
+      const pos = mesh.geometry.attributes.position; const step = Math.max(1, Math.ceil(pos.count / maxPerMesh));
+      for (let i = 0; i < pos.count; i += step) pts.push(new THREE.Vector3().fromBufferAttribute(pos, i).applyMatrix4(mesh.matrixWorld));
+    }
+    return pts;
+  }
+  // The first thing we do after loading: print what the file actually contains.
+  report() {
+    console.groupCollapsed(`%cGLB anatomy discovery — ${this.meshes.length} meshes`, "color:#ff8a7a;font-weight:bold");
+    console.table(this.meshes.map(m => ({ name: m.name, parent: m.parent?.name, category: this.categoryOf.get(m) || "— unmapped —",
+      vertices: m.geometry.attributes.position.count, morphs: Object.keys(m.morphTargetDictionary || {}).join(", ") })));
+    for (const [k, v] of Object.entries(this.categories)) if (!v.length) console.warn(`ANATOMY_MAPPING.${k} matched no meshes`);
+    if (this.unmapped.length) console.warn("Unmapped meshes:", this.unmapped.map(m => m.name));
+    console.groupEnd();
+  }
+}
+
+// ===============================
+// RENDERER · SCENE · LIGHTING · POST
+// ===============================
+const VignetteGradeShader = {
+  uniforms: { tDiffuse: { value: null }, uVignette: { value: 0.5 }, uSaturation: { value: 1.05 }, uLift: { value: 0.006 } },
+  vertexShader: `varying vec2 vUv; void main(){ vUv = uv; gl_Position = projectionMatrix * modelViewMatrix * vec4(position,1.0); }`,
+  fragmentShader: `
+    uniform sampler2D tDiffuse; uniform float uVignette, uSaturation, uLift; varying vec2 vUv;
+    void main(){
+      vec4 c = texture2D(tDiffuse, vUv);
+      float d = length((vUv - 0.5) * vec2(1.15, 1.0));
+      c.rgb *= mix(1.0, 1.0 - uVignette, smoothstep(0.35, 0.85, d));
+      float l = dot(c.rgb, vec3(0.2126, 0.7152, 0.0722));
+      c.rgb = mix(vec3(l), c.rgb, uSaturation) + uLift;
+      gl_FragColor = c;
+    }`,
+};
+
+class Stage {
+  constructor(container) {
+    const r = this.renderer = new THREE.WebGLRenderer({ antialias: true, powerPreference: "high-performance" });
+    r.setPixelRatio(Math.min(devicePixelRatio, CONFIG.pixelRatioCap));
+    this.container = container;
+    r.setSize(container.clientWidth || innerWidth, container.clientHeight || innerHeight);
+    r.outputColorSpace = THREE.SRGBColorSpace;
+    r.toneMapping = THREE.ACESFilmicToneMapping;
+    r.toneMappingExposure = 1.0;
+    container.appendChild(r.domElement);
+
+    this.scene = new THREE.Scene();
+    this.scene.background = new THREE.Color(CONFIG.background);
+    const pmrem = new THREE.PMREMGenerator(r);
+    this.scene.environment = pmrem.fromScene(new RoomEnvironment(), 0.04).texture;
+    pmrem.dispose();
+
+    this.camera = new THREE.PerspectiveCamera(36, (container.clientWidth || innerWidth) / (container.clientHeight || innerHeight), 0.01, 1000);
+    this.scene.add(this.camera);
+
+    // Hemisphere ambience + a key / fill / rim rig that travels with the camera,
+    // so the anatomy is lit identically in every scene of the film.
+    this.scene.add(new THREE.HemisphereLight(0xe6efff, 0x2b1b1b, 0.65));
+    const ahead = new THREE.Object3D(); ahead.position.set(0, 0, -10); this.camera.add(ahead);
+    const origin = new THREE.Object3D(); this.camera.add(origin);
+    const key = new THREE.DirectionalLight(0xfff1e6, 1.9); key.position.set(4, 5, 2); key.target = ahead; this.camera.add(key);
+    const fill = new THREE.DirectionalLight(0xcfe0ff, 0.85); fill.position.set(-6, -1, 1); fill.target = ahead; this.camera.add(fill);
+    const rim = new THREE.DirectionalLight(0xffe2d6, 1.5); rim.position.set(1, 6, -30); rim.target = origin; this.camera.add(rim);
+
+    this.composer = new EffectComposer(r);
+    this.composer.addPass(new RenderPass(this.scene, this.camera));
+    this.bloom = new UnrealBloomPass(new THREE.Vector2(innerWidth, innerHeight),
+      CONFIG.bloom.strength, CONFIG.bloom.radius, CONFIG.bloom.threshold);
+    this.composer.addPass(this.bloom);
+    this.grade = new ShaderPass(VignetteGradeShader);
+    this.composer.addPass(this.grade);
+    this.composer.addPass(new OutputPass());
+
+    this.onResize = [];
+    addEventListener("resize", () => this.resize());
+  }
+  resize() {
+    const w = this.container.clientWidth || innerWidth, h = this.container.clientHeight || innerHeight;
+    this.camera.aspect = w / h; this.camera.updateProjectionMatrix();
+    this.renderer.setSize(w, h); this.composer.setSize(w, h);
+    this.onResize.forEach(fn => fn());
+  }
+  // pixels per world unit at depth 1 — lets particle sprites keep a true world size
+  get pointScale() { return this.renderer.domElement.height / (2 * Math.tan(THREE.MathUtils.degToRad(this.camera.fov) / 2)); }
+  render() { if (this.renderer.domElement.width > 0 && this.renderer.domElement.height > 0) this.composer.render(); }
+}
+
+// ===============================
+// CAMERA CONTROLLER
+// ===============================
+// A camera pose is { target, dir, dist }: look-at point, unit vector from target to camera, distance.
+// Poses blend with eased centre motion, spherical direction and LOG-space distance, so a zoom from
+// the whole chest down to a 3 mm alveolus reads as one continuous dolly rather than a snap.
+function slerpDir(a, b, t) {
+  const ang = Math.acos(clamp(a.dot(b), -1, 1));
+  if (ang < 1e-4) return a.clone().lerp(b, t).normalize();
+  const s = Math.sin(ang);
+  if (s < 1e-3) return a.clone().lerp(b, t).add(new THREE.Vector3(0, 1e-3, 0)).normalize();
+  return a.clone().multiplyScalar(Math.sin((1 - t) * ang) / s).add(b.clone().multiplyScalar(Math.sin(t * ang) / s)).normalize();
+}
+
+class CameraController {
+  constructor(stage, registry) {
+    this.stage = stage; this.camera = stage.camera; this.registry = registry;
+    this.up = new THREE.Vector3(0, 1, 0);
+    const sphere = new THREE.Box3().setFromObject(registry.root).getBoundingSphere(new THREE.Sphere());
+    this.modelCenter = sphere.center; this.modelRadius = sphere.radius;
+    // Which way the face points, derived from the anatomy itself (nose in front of pharynx).
+    this.anterior = new THREE.Vector3(0, 0, 1);
+    const back = registry.has("pharynx") ? "pharynx" : registry.has("skeleton") ? "skeleton" : null;
+    if (registry.has("nose") && back) {
+      const d = registry.center("nose").sub(registry.center(back)); d.y = 0;
+      if (d.lengthSq() > 1e-10) this.anterior.copy(d.normalize());
+    }
+    this.regions = new Map();
+    this.tween = null;
+  }
+  // inverse of direction(): the az / el that looks along a world direction (target → camera)
+  azElOf(dir) {
+    const d = dir.clone().normalize(), el = THREE.MathUtils.radToDeg(Math.asin(clamp(d.y, -1, 1)));
+    const h = d.clone().setY(0).normalize(), a = this.anterior;
+    const az = THREE.MathUtils.radToDeg(Math.atan2(a.clone().cross(h).y, a.dot(h)));
+    return [az, el];
+  }
+  direction(azDeg, elDeg) {
+    const d = this.anterior.clone().applyAxisAngle(this.up, THREE.MathUtils.degToRad(azDeg));
+    const right = new THREE.Vector3().crossVectors(this.up, d).normalize();
+    return d.applyAxisAngle(right, -THREE.MathUtils.degToRad(elDeg)).normalize();
+  }
+  // Bounding sphere of whatever a shot looks at (cached — computed from the rest pose).
+  region(spec) {
+    const key = JSON.stringify([[].concat(spec.target || []).map(String), spec.radiusScale, spec.centerOn && spec.centerOn.toArray(), spec.centerBlend, spec.sphere && [spec.sphere.center.toArray(), spec.sphere.radius]]);
+    if (this.regions.has(key)) return this.regions.get(key);
+    let sphere;
+    const box = spec.target ? this.registry.box(spec.target) : new THREE.Box3();
+    if (spec.sphere) sphere = spec.sphere.clone();
+    else if (box.isEmpty()) sphere = new THREE.Sphere(this.modelCenter.clone(), this.modelRadius);
+    else sphere = box.getBoundingSphere(new THREE.Sphere());
+    if (spec.radiusScale) sphere.radius *= spec.radiusScale;
+    if (spec.centerOn) sphere.center.lerp(spec.centerOn, spec.centerBlend ?? 1);
+    this.regions.set(key, sphere);
+    return sphere;
+  }
+  // Frame a sphere so it fits the narrower of the two view angles, with padding.
+  distanceFor(radius, padding) {
+    const vf = THREE.MathUtils.degToRad(this.camera.fov);
+    const hf = 2 * Math.atan(Math.tan(vf / 2) * this.camera.aspect);
+    return (radius * padding) / Math.sin(Math.min(vf, hf) / 2);
+  }
+  pose(spec, localMs = 0, progress = 0) {
+    const s = this.region(spec);
+    const padding = lerp(spec.padding ?? 1.2, spec.paddingEnd ?? spec.padding ?? 1.2, easeInOut(progress));
+    const az = (spec.az ?? 20) + (spec.orbit ?? 0) * (progress - 0.5) + 1.2 * Math.sin(localMs / 4100);
+    const el = (spec.el ?? 8) + 0.8 * Math.sin(localMs / 5300);
+    return { target: s.center.clone(), dir: this.direction(az, el), dist: this.distanceFor(s.radius, padding) };
+  }
+  blend(a, b, t) {
+    return {
+      target: a.target.clone().lerp(b.target, t),
+      dir: slerpDir(a.dir, b.dir, t),
+      dist: Math.exp(lerp(Math.log(a.dist), Math.log(b.dist), t)),
+    };
+  }
+  apply(p) {
+    this.camera.position.copy(p.target).addScaledVector(p.dir, p.dist);
+    this.camera.lookAt(p.target);
+    this.fitClipping(p.dist);
+  }
+  fitClipping(dist) {
+    this.camera.near = Math.max(dist / 80, this.modelRadius * 1e-6);
+    this.camera.far = Math.max(dist * 80, dist + this.modelRadius * 4);
+    this.camera.updateProjectionMatrix();
+  }
+  poseFromCamera(target) {
+    const off = this.camera.position.clone().sub(target);
+    return { target: target.clone(), dir: off.clone().normalize(), dist: Math.max(off.length(), 1e-6) };
+  }
+  // Free-camera helper (used by the inspector): animateCameraTo("trachea", { duration, padding })
+  animateCameraTo(keys, { duration = 2000, padding = 1.5, az = 25, el = 10, dir = null, from = null } = {}) {
+    if (dir) [az, el] = this.azElOf(dir);
+    const to = this.pose({ target: keys, padding, az, el });
+    this.tween = { from: from || this.poseFromCamera(to.target), to, start: performance.now(), duration };
+    return to;
+  }
+  updateTween(now) {
+    if (!this.tween) return false;
+    const t = clamp((now - this.tween.start) / this.tween.duration);
+    this.apply(this.blend(this.tween.from, this.tween.to, easeInOut(t)));
+    if (t >= 1) { const done = this.tween; this.tween = null; return done; }
+    return true;
+  }
+}
+
+// ===============================
+// MATERIAL / COLOR SYSTEM
+// ===============================
+// Every mesh gets its own cloned material coloured by category. A "look" is a per-mesh
+// Float32Array of [opacity, emphasis, desaturation]; scenes blend looks, then apply() writes them.
+class MaterialSystem {
+  constructor(registry) {
+    this.registry = registry;
+    this.entries = registry.meshes.map(mesh => {
+      const cat = registry.categoryOf.get(mesh) || null;
+      const src = Array.isArray(mesh.material) ? mesh.material[0] : mesh.material;
+      mesh.userData.sourceMaterial = src;
+      const mat = src && src.isMeshStandardMaterial ? src.clone() : new THREE.MeshStandardMaterial();
+      const colorKey = MATERIAL_TONE[src?.name] || (CARTILAGE_PATTERN.test(mesh.name) ? "cartilage" : (CATEGORY_COLOR[cat] || "airway"));
+      mat.color.setHex(COLORS[colorKey]);
+      mat.map = null; mat.vertexColors = false; mat.metalness = 0;
+      mat.roughness = colorKey === "bone" || colorKey === "cartilage" ? 0.62 : 0.46;
+      if (mat.isMeshPhysicalMaterial) { mat.clearcoat = colorKey === "bone" ? 0.05 : 0.3; mat.clearcoatRoughness = 0.5; }
+      mat.envMapIntensity = 0.45;
+      mat.side = DOUBLE_SIDED_PATTERN.test(mesh.name) ? THREE.DoubleSide : THREE.FrontSide;
+      mat.emissive = new THREE.Color(0x000000);
+      mat.transparent = false; mat.opacity = 1; mat.depthWrite = true;
+      mesh.material = mat;
+      return { mesh, mat, cat, colorKey, base: new THREE.Color(COLORS[colorKey]), transparent: false };
+    });
+    this.count = this.entries.length;
+    this._blood = new THREE.Color(); this._oxy = new THREE.Color(COLORS.bloodOxy); this._deoxy = new THREE.Color(COLORS.bloodDeoxy);
+    this._grey = new THREE.Color();
+    this.override = null;            // inspector isolation { mesh, isolate }
+  }
+  baseOpacity(e) { return BASE_OPACITY[e.cat] ?? 1; }
+
+  // look = { all?, focus:[keys], glass:{key:opacity}, context:{key:opacity}, rest }
+  buildLook(look) {
+    const R = this.registry, out = new Float32Array(this.count * 3);
+    const focus = new Set(look.all ? [] : R.get(look.focus || []));
+    const toMap = obj => { const m = new Map(); for (const [k, v] of Object.entries(obj || {})) R.get(k).forEach(x => m.set(x, v)); return m; };
+    const glass = toMap(look.glass), context = toMap(look.context);
+    const rest = look.rest ?? 0.05;
+    this.entries.forEach((e, i) => {
+      let o, em = 0, ds = 0;
+      if (look.all) o = context.has(e.mesh) ? context.get(e.mesh) : this.baseOpacity(e);
+      else if (focus.has(e.mesh)) { o = glass.has(e.mesh) ? glass.get(e.mesh) : 1; em = 1; }
+      else if (context.has(e.mesh)) { o = context.get(e.mesh); ds = 0.35; }
+      else { o = rest; ds = 0.85; }
+      out[i * 3] = o; out[i * 3 + 1] = em; out[i * 3 + 2] = ds;
+    });
+    return out;
+  }
+  static blendLooks(a, b, t, out) {
+    for (let i = 0; i < out.length; i++) out[i] = a[i] + (b[i] - a[i]) * t;
+    return out;
+  }
+  apply(look, accents, oxygenation, timeMs) {
+    const glow = 0.86 + 0.14 * Math.sin(timeMs / 420);
+    for (let i = 0; i < this.count; i++) {
+      const e = this.entries[i], m = e.mat;
+      let o = look[i * 3], em = look[i * 3 + 1], ds = look[i * 3 + 2];
+      const acc = accents ? accents.get(e.mesh) || 0 : 0;
+      if (acc > 0) { em += acc * 1.6; o = Math.max(o, Math.min(1, acc)); ds *= 1 - acc; }   // accents glow beyond normal focus
+      if (this.override) {
+        if (this.override.mesh === e.mesh) { o = 1; em = 1; ds = 0; }
+        else if (this.override.isolate) { o = Math.min(o, 0.06); ds = 0.9; }
+      }
+      const visible = o > 0.012;
+      e.mesh.visible = visible;
+      if (!visible) continue;
+      const base = e.cat === "bloodVessels" ? this._blood.copy(this._deoxy).lerp(this._oxy, oxygenation) : e.base;
+      m.color.copy(base);
+      if (ds > 0.001) {
+        const l = m.color.r * 0.2126 + m.color.g * 0.7152 + m.color.b * 0.0722;
+        m.color.lerp(this._grey.setRGB(l, l, l), ds * 0.65).multiplyScalar(1 - ds * 0.3);
+      }
+      const lum = base.r * 0.2126 + base.g * 0.7152 + base.b * 0.0722;
+      m.emissive.copy(base).multiplyScalar((Math.min(em, 1) * 0.09 + Math.max(0, em - 1) * 0.08) * glow * clamp(1.2 - lum, 0.25, 1));
+      const transparent = o < 0.995;
+      if (transparent !== e.transparent) {
+        m.transparent = transparent; m.depthWrite = !transparent; m.needsUpdate = true; e.transparent = transparent;
+      }
+      m.opacity = transparent ? o : 1;
+    }
+  }
+}
+
+// ===============================
+// BREATHING ANIMATION
+// ===============================
+// b = 0 fully exhaled … 1 fully inhaled. Uses the GLB's morph targets when present
+// (lungs "Expanded", diaphragm "Flat"), else falls back to scale / position. Rest
+// transforms are stored once and never overwritten.
+class BreathingRig {
+  constructor(registry) {
+    this.lungs = registry.get("lungs").map(mesh => ({ mesh, rest: mesh.scale.clone(), morph: mesh.morphTargetDictionary?.[MORPH.lungs] }));
+    this.diaphragm = registry.get("diaphragm").map(mesh => ({ mesh, rest: mesh.position.clone(), morph: mesh.morphTargetDictionary?.[MORPH.diaphragm] }));
+    this.ribs = registry.get(/^Rib_/).map(mesh => this.prepareRib(mesh));
+    // alveoli inflate on inhale and deflate on exhale — the shape is a Blender-authored morph target
+    this.alveoli = registry.get(["alveoli", "heroAcinus", "bloodVessels"])
+      .map(mesh => ({ mesh, morph: mesh.morphTargetDictionary?.[MORPH.alveoli] }))
+      .filter(a => a.morph !== undefined);
+    this.value = -1;
+  }
+  // Rib origins sit at the costovertebral joint with local X along the rotation axis.
+  // Test which rotation sign lifts the sternal end, so the rig works whatever the export handedness.
+  prepareRib(mesh) {
+    const rest = mesh.quaternion.clone(), axis = new THREE.Vector3(1, 0, 0);
+    const pos = mesh.geometry.attributes.position, v = new THREE.Vector3(), far = new THREE.Vector3();
+    let best = -1;
+    for (let i = 0; i < pos.count; i += 5) { v.fromBufferAttribute(pos, i); const d = v.lengthSq(); if (d > best) { best = d; far.copy(v); } }
+    const heightWith = angle => {
+      mesh.quaternion.copy(rest).multiply(new THREE.Quaternion().setFromAxisAngle(axis, angle));
+      mesh.updateMatrixWorld(true);
+      return far.clone().applyMatrix4(mesh.matrixWorld).y;
+    };
+    const sign = heightWith(0.05) >= heightWith(0) ? 1 : -1;
+    mesh.quaternion.copy(rest); mesh.updateMatrixWorld(true);
+    return { mesh, rest, sign, axis, q: new THREE.Quaternion() };
+  }
+  apply(b) {
+    if (Math.abs(b - this.value) < 1e-4) return;
+    this.value = b;
+    for (const l of this.lungs) {
+      if (l.morph !== undefined) l.mesh.morphTargetInfluences[l.morph] = b;
+      else l.mesh.scale.copy(l.rest).multiplyScalar(1 + CONFIG.lungFallbackScale * b);
+    }
+    for (const d of this.diaphragm) {
+      if (d.morph !== undefined) d.mesh.morphTargetInfluences[d.morph] = b;
+      else d.mesh.position.copy(d.rest).setY(d.rest.y - CONFIG.diaphragmFallbackDrop * b);
+    }
+    for (const a of this.alveoli) a.mesh.morphTargetInfluences[a.morph] = b;
+    for (const r of this.ribs) {
+      r.q.setFromAxisAngle(r.axis, r.sign * CONFIG.ribLiftRadians * b);
+      r.mesh.quaternion.copy(r.rest).multiply(r.q);
+    }
+  }
+}
+
+// ===============================
+// ALVEOLI ANIMATION
+// ===============================
+// Deliberately none. Every pulmonary acinus — terminal bronchiole, respiratory bronchioles, alveolar
+// ducts lined with alveoli, alveolar sacs — is static high-poly geometry built in Blender and attached
+// to an end of the airway tree; the cut-open hero acinus carries its capillary network. What the
+// lesson reads here is the airway data exported alongside it (glTF extras on "Respiratory_System"):
+// the centreline of the real bronchial tree and the duct paths inside every acinus, so the air
+// particles travel through the anatomy instead of wandering.
+class AirwayData {
+  constructor(root) {
+    this.ok = false;
+    let holder = null;
+    root.updateMatrixWorld(true);
+    root.traverse(o => { if (!holder && typeof o.userData?.airway_tree === "string") holder = o; });
+    if (!holder) { console.warn("GLB has no airway_tree extras — the airflow cannot follow the bronchial tree"); return; }
+    const d = this.data = JSON.parse(holder.userData.airway_tree);
+    this.holder = holder;
+    const holderScale = new THREE.Vector3().setFromMatrixScale(holder.matrixWorld).x;
+    this.nodes = d.nodes.map(([x, y, z, r, parent]) => ({ pos: this.toWorld(holder, [x, y, z]), r: r * holderScale, parent }));
+    this.kids = this.nodes.map(() => []);
+    this.nodes.forEach((n, i) => { if (n.parent >= 0) this.kids[n.parent].push(i); });
+    this.leaves = d.leaves;
+    this.rootIndex = this.nodes.findIndex(n => n.parent < 0);
+    let c = this.rootIndex;
+    while (this.kids[c].length === 1) c = this.kids[c][0];
+    this.carinaIndex = c;                                            // first division of the trachea
+    const byName = new Map();
+    root.traverse(o => { const n = o.userData?.name || o.name; if (n && !byName.has(n)) byName.set(n, o); });
+    this.acini = d.acini.map(a => ({ ...a, obj: byName.get(a.object) })).filter(a => a.obj);
+    this.hero = d.hero ? { ...d.hero, obj: byName.get(d.hero.object) } : null;
+    if (this.hero && !this.hero.obj) this.hero = null;
+    if (d.check && byName.get(d.check.object)) {
+      const expected = this.toWorld(holder, d.check.origin_root_local);
+      this.checkError = expected.distanceTo(byName.get(d.check.object).getWorldPosition(new THREE.Vector3()));
+    }
+    this.ok = true;
+    console.info(`Airway tree: ${this.nodes.length} centreline nodes, ${this.leaves.length} ends, ${this.acini.length} acini` +
+      (this.checkError !== undefined ? ` · coordinate check error ${this.checkError.toExponential(2)}` : ""));
+  }
+  // Blender Z-up local coordinates → glTF Y-up local → world
+  toWorld(obj, [x, y, z]) { return new THREE.Vector3(x, z, -y).applyMatrix4(obj.matrixWorld); }
+  pathToRoot(i) { const out = []; while (i >= 0) { out.push(i); i = this.nodes[i].parent; } return out.reverse(); }
+  // centreline from `from` (an ancestor) down to node i, as world points + radii
+  branch(from, i) {
+    const ids = this.pathToRoot(i), k = ids.indexOf(from);
+    const sel = ids.slice(Math.max(0, k));
+    return { points: sel.map(j => this.nodes[j].pos.clone()), radii: sel.map(j => this.nodes[j].r) };
+  }
+  unitScale(obj) { return new THREE.Vector3().setFromMatrixScale(obj.matrixWorld).x; }   // world per acinus unit (0.1 mm)
+  acinusPaths(a) {
+    const src = a.variant === "hero" ? this.data.hero.paths : this.data.acinus_paths[a.variant];
+    return (src || []).map(path => path.map(p => this.toWorld(a.obj, p)));
+  }
+}
+
+// ===============================
+// AIRFLOW SYSTEM
+// ===============================
+// Particles travel along CatmullRomCurve3 paths derived from the GLB's own geometry.
+// Every particle position is a pure function of lesson time, so seeking reproduces
+// exactly the same frame. No objects are created or destroyed per frame.
+const PARTICLE_VERT = `
+  attribute float aSize; attribute float aAlpha;
+  uniform float uScale; varying float vAlpha;
+  void main(){
+    vec4 mv = modelViewMatrix * vec4(position, 1.0);
+    gl_PointSize = clamp(aSize * uScale / max(-mv.z, 1e-6), 1.5, 90.0);
+    gl_Position = projectionMatrix * mv;
+    vAlpha = aAlpha;
+  }`;
+const PARTICLE_FRAG = `
+  uniform vec3 uColor; varying float vAlpha;
+  void main(){
+    float d = length(gl_PointCoord - 0.5);
+    if (d > 0.5) discard;
+    float soft = smoothstep(0.5, 0.0, d), core = smoothstep(0.18, 0.0, d);
+    gl_FragColor = vec4(uColor * (0.8 + core * 1.1), soft * vAlpha);
+  }`;
+
+const avg = pts => pts.reduce((a, p) => a.add(p), new THREE.Vector3()).divideScalar(Math.max(1, pts.length));
+const boxCenter = obj => new THREE.Box3().setFromObject(obj).getCenter(new THREE.Vector3());
+
+class ParticleStream {
+  // paths: [{ points:[Vector3], radius, radii?:[per point], keep?:[per point 0..1], weight }]
+  // keep thins particles where many paths share one tube (the trunk of a branching tree).
+  // reach: "path" → fraction of each path; "distance" → fraction of the longest path, so one air
+  // front advances through every branch at the same depth.
+  constructor(name, paths, { count, color, size, traverse = 3, seed = 1, samples = 160, reach = "path" }) {
+    this.name = name; this.reachMode = reach;
+    const rand = rng(seed);
+    this.paths = paths.filter(p => p.points && p.points.length >= 2).map(p => {
+      const curve = new THREE.CatmullRomCurve3(p.points, false, "centripetal", 0.5);
+      const N = samples, pts = curve.getSpacedPoints(N - 1);
+      const perPoint = values => {                                   // resample a per-control-point value along the curve
+        if (!values || values.length !== p.points.length) return null;
+        const cum = [0];
+        for (let i = 1; i < p.points.length; i++) cum.push(cum[i - 1] + p.points[i].distanceTo(p.points[i - 1]));
+        const total = cum[cum.length - 1] || 1, out = new Float32Array(N);
+        for (let i = 0, j = 0; i < N; i++) {
+          const s = (i / (N - 1)) * total;
+          while (j < cum.length - 2 && cum[j + 1] < s) j++;
+          out[i] = lerp(values[j], values[j + 1], clamp((s - cum[j]) / ((cum[j + 1] - cum[j]) || 1)));
+        }
+        return out;
+      };
+      const rad = perPoint(p.radii), keep = perPoint(p.keep);
+      const flat = new Float32Array(N * 3), nrm = new Float32Array(N * 3), bin = new Float32Array(N * 3);
+      const t = new THREE.Vector3(), ref = new THREE.Vector3(), n = new THREE.Vector3(), b = new THREE.Vector3();
+      for (let i = 0; i < N; i++) {
+        flat[i * 3] = pts[i].x; flat[i * 3 + 1] = pts[i].y; flat[i * 3 + 2] = pts[i].z;
+        t.subVectors(pts[Math.min(i + 1, N - 1)], pts[Math.max(i - 1, 0)]).normalize();
+        ref.set(0, 1, 0); if (Math.abs(t.dot(ref)) > 0.9) ref.set(1, 0, 0);
+        n.crossVectors(t, ref).normalize(); b.crossVectors(t, n).normalize();
+        nrm[i * 3] = n.x; nrm[i * 3 + 1] = n.y; nrm[i * 3 + 2] = n.z;
+        bin[i * 3] = b.x; bin[i * 3 + 1] = b.y; bin[i * 3 + 2] = b.z;
+      }
+      return { curve, N, flat, nrm, bin, rad, keep, length: Math.max(curve.getLength(), 1e-6), radius: p.radius ?? 0, weight: p.weight ?? 1 };
+    });
+    this.valid = this.paths.length > 0;
+    if (!this.valid) return;
+    this.maxLength = Math.max(...this.paths.map(p => p.length));
+
+    this.count = count;
+    this.speed = this.paths.reduce((s, p) => s + p.length, 0) / this.paths.length / traverse;
+    const totalW = this.paths.reduce((s, p) => s + p.weight, 0);
+    this.pPath = new Uint16Array(count); this.pPhase = new Float32Array(count); this.pSpeed = new Float32Array(count);
+    this.pJit = new Float32Array(count); this.pJph = new Float32Array(count); this.pJfq = new Float32Array(count); this.pAlpha = new Float32Array(count);
+    this.pKeep = new Float32Array(count);
+    const sizes = new Float32Array(count);
+    for (let i = 0; i < count; i++) {
+      let r = rand() * totalW, k = 0;
+      while (k < this.paths.length - 1 && (r -= this.paths[k].weight) > 0) k++;
+      this.pPath[i] = k;
+      this.pPhase[i] = rand();
+      this.pSpeed[i] = 0.72 + rand() * 0.56;          // speed variation
+      this.pJit[i] = 0.25 + rand() * 0.75;            // how far from the centreline
+      this.pJph[i] = rand() * Math.PI * 2;
+      this.pJfq[i] = 0.8 + rand() * 2.2;              // turbulence frequency
+      this.pAlpha[i] = 0.55 + rand() * 0.45;
+      this.pKeep[i] = rand();
+      sizes[i] = size * (0.5 + rand() * 1.0);
+    }
+    const geo = this.geo = new THREE.BufferGeometry();
+    geo.setAttribute("position", new THREE.BufferAttribute(new Float32Array(count * 3), 3).setUsage(THREE.DynamicDrawUsage));
+    geo.setAttribute("aAlpha", new THREE.BufferAttribute(new Float32Array(count), 1).setUsage(THREE.DynamicDrawUsage));
+    geo.setAttribute("aSize", new THREE.BufferAttribute(sizes, 1));
+    const mat = new THREE.ShaderMaterial({
+      uniforms: { uColor: { value: new THREE.Color(color) }, uScale: { value: 1 } },
+      vertexShader: PARTICLE_VERT, fragmentShader: PARTICLE_FRAG,
+      transparent: true, depthWrite: false, blending: THREE.AdditiveBlending,
+    });
+    this.points = new THREE.Points(geo, mat);
+    this.points.name = `Airflow_${name}`;
+    this.points.frustumCulled = false; this.points.renderOrder = 20; this.points.visible = false;
+  }
+  // intensity: 0 off · +1 forward (inhale) · −1 reverse (exhale). reach: how far the air front has travelled.
+  update(timeSec, intensity, reach, pointScale) {
+    const a = Math.abs(intensity);
+    if (a < 0.003) { this.points.visible = false; return; }
+    this.points.visible = true;
+    this.points.material.uniforms.uScale.value = pointScale;
+    const reverse = intensity < 0;
+    const pos = this.geo.attributes.position.array, alp = this.geo.attributes.aAlpha.array;
+    for (let i = 0; i < this.count; i++) {
+      const P = this.paths[this.pPath[i]];
+      let u = (this.pPhase[i] + (timeSec * this.pSpeed[i] * this.speed) / P.length) % 1;
+      if (reverse) u = 1 - u;
+      const f = u * (P.N - 1), i0 = Math.min(P.N - 2, f | 0), k = f - i0, j0 = i0 * 3, j1 = j0 + 3;
+      const r = (P.rad ? P.rad[i0] + (P.rad[i0 + 1] - P.rad[i0]) * k : P.radius) * this.pJit[i];
+      const ox = Math.sin(timeSec * this.pJfq[i] + this.pJph[i]) * r;
+      const oy = Math.cos(timeSec * this.pJfq[i] * 1.31 + this.pJph[i] * 1.7) * r;
+      for (let c = 0; c < 3; c++) {
+        pos[i * 3 + c] = P.flat[j0 + c] + (P.flat[j1 + c] - P.flat[j0 + c]) * k + P.nrm[j0 + c] * ox + P.bin[j0 + c] * oy;
+      }
+      const ends = smooth(u / 0.06) * smooth((1 - u) / 0.1);
+      const front = reverse ? 1 : this.reachMode === "distance"
+        ? 1 - smooth((u * P.length - reach * this.maxLength) / (0.04 * this.maxLength))
+        : 1 - smooth((u - reach) / 0.05);
+      const thin = P.keep ? smooth((P.keep[i0] - this.pKeep[i]) / 0.06 + 0.5) : 1;
+      alp[i] = a * ends * front * thin * this.pAlpha[i];
+    }
+    this.geo.attributes.position.needsUpdate = true;
+    this.geo.attributes.aAlpha.needsUpdate = true;
+  }
+  fractionNear(point, pathIndex = 0) {
+    const P = this.paths[pathIndex]; let best = Infinity, bi = 0;
+    for (let i = 0; i < P.N; i++) {
+      const dx = P.flat[i * 3] - point.x, dy = P.flat[i * 3 + 1] - point.y, dz = P.flat[i * 3 + 2] - point.z;
+      const d = dx * dx + dy * dy + dz * dz; if (d < best) { best = d; bi = i; }
+    }
+    return bi / (P.N - 1);
+  }
+}
+
+class AirflowSystem {
+  constructor(stage, registry, airway, anterior, modelRadius) {
+    this.stage = stage; this.R = registry; this.airway = airway; this.anterior = anterior.clone(); this.modelRadius = modelRadius;
+    this.streams = {}; this.marks = {}; this.landmarks = {};
+    this.group = new THREE.Group(); this.group.name = "Airflow"; stage.scene.add(this.group);
+    try { this.build(); } catch (err) { console.warn("Airflow build failed — check ANATOMY_MAPPING:", err); }
+  }
+  add(name, paths, opts) {
+    const s = new ParticleStream(name, paths, opts);
+    if (s.valid) { this.streams[name] = s; this.group.add(s.points); }
+    else console.warn(`Airflow stream "${name}" has no usable path — check ANATOMY_MAPPING`);
+    return s;
+  }
+  // Centroids of vertex slices along an axis = the centreline of a tube-shaped part.
+  centerline(points, axis, bins) {
+    if (points.length < 12) return [];
+    const proj = points.map(p => p.dot(axis));
+    const lo = Math.min(...proj), hi = Math.max(...proj), span = (hi - lo) || 1;
+    const sums = Array.from({ length: bins }, () => ({ p: new THREE.Vector3(), n: 0 }));
+    points.forEach((p, i) => { const b = sums[Math.min(bins - 1, Math.floor(((proj[i] - lo) / span) * bins))]; b.p.add(p); b.n++; });
+    return sums.filter(b => b.n >= 3).map(b => b.p.divideScalar(b.n));
+  }
+  dedupe(points, gap = this.modelRadius * 0.004) {
+    const out = [];
+    for (const p of points) if (!out.length || out[out.length - 1].distanceTo(p) > gap) out.push(p);
+    return out;
+  }
+  build() {
+    const R = this.R, up = new THREE.Vector3(0, 1, 0), A = this.anterior;
+    const has = k => R.has(k), C = k => R.center(k), S = k => R.box(k).getSize(new THREE.Vector3());
+
+    const W = this.airway?.ok ? this.airway : null;
+
+    // ---- carina: first division of the exported airway centreline ----
+    let carina = null;
+    if (W) carina = W.nodes[W.carinaIndex].pos.clone();
+    else if (has("trachea")) { const tb = R.box("trachea"); carina = tb.getCenter(new THREE.Vector3()).setY(tb.min.y); }
+    this.landmarks.carina = carina;
+
+    // ---- upper airway: outside air → nostrils → nasal cavity → pharynx → larynx → trachea → carina ----
+    const upper = [];
+    const noseKey = has(/^Nostril/) ? /^Nostril/ : "nose";
+    if (has(noseKey)) {
+      const nc = C(noseKey), span = S(noseKey).length();
+      upper.push(nc.clone().addScaledVector(A, span * 1.4).addScaledVector(up, -span * 0.6));
+      upper.push(nc);
+    }
+    if (has("nasalCavity")) upper.push(...this.centerline(R.sampleVertices("nasalCavity", 4000), A, 6).reverse());
+    this.landmarks.nasal = upper[upper.length - 1]?.clone();
+    if (has("pharynx")) upper.push(...this.centerline(R.sampleVertices("pharynx", 4000), up, 7).reverse());
+    this.landmarks.pharynx = upper[upper.length - 1]?.clone();
+    if (has("larynx")) {
+      const inletParts = R.get([/^Arytenoid_Cartilage/, "Epiglottis"]);
+      upper.push(inletParts.length ? avg(inletParts.map(boxCenter)) : C("larynx"));
+      if (has("Cricoid_Cartilage")) upper.push(C("Cricoid_Cartilage"));
+    }
+    this.landmarks.larynx = upper[upper.length - 1]?.clone();
+    const topY = has("Cricoid_Cartilage") ? R.box("Cricoid_Cartilage").min.y : (has("trachea") ? R.box("trachea").max.y : Infinity);
+    if (W) {
+      // the trachea's own centreline, from below the cricoid to the carina
+      upper.push(...W.branch(W.rootIndex, W.carinaIndex).points.filter(p => p.y < topY));
+    } else if (has("trachea") && carina) {
+      const pts = R.sampleVertices("trachea", 2500).filter(p => p.y < topY && p.y > carina.y + (topY - carina.y) * 0.04);
+      upper.push(...this.centerline(pts, up, 8).reverse(), carina.clone());
+    }
+
+    const cric = has("Cricoid_Cartilage") ? S("Cricoid_Cartilage") : null;
+    const rUp = cric ? Math.min(cric.x, cric.z) * 0.28 : this.modelRadius * 0.012;
+    const upperPath = this.dedupe(upper);
+    const up1 = this.add("upper", [{ points: upperPath, radius: rUp * 0.7 }], { count: 190, color: COLORS.air, size: rUp * 0.34, traverse: 4.4, seed: 11 });
+    this.add("upperCO2", [{ points: upperPath, radius: rUp * 0.6 }], { count: 70, color: COLORS.carbonDioxide, size: rUp * 0.38, traverse: 4.8, seed: 12 });
+    if (up1.valid) {
+      this.tracheaCurve = up1.paths[0].curve;
+      for (const k of ["nasal", "pharynx", "larynx"]) if (this.landmarks[k]) this.marks[k] = up1.fractionNear(this.landmarks[k]);
+    }
+    if (!W) { console.warn("No airway tree in the GLB — bronchial airflow disabled"); return; }
+
+    // ---- bronchi → every branch end: one path per real airway end, carina to tip, inside the tube ----
+    const lungs = { L: R.get(/^Lung_L/), R: R.get(/^Lung_R/) };
+    const lungC = { L: lungs.L.length ? avg(lungs.L.map(boxCenter)) : null, R: lungs.R.length ? avg(lungs.R.map(boxCenter)) : null };
+    const sideOf = p => (!lungC.L || !lungC.R) ? "L" : (p.distanceTo(lungC.L) < p.distanceTo(lungC.R) ? "L" : "R");
+    const acinusAt = new Map(W.acini.map(a => [a.leaf, a]));
+    const under = new Float32Array(W.nodes.length);                     // airway ends served by each node
+    const order = W.nodes.map((n, i) => i).sort((a, b) => W.pathToRoot(b).length - W.pathToRoot(a).length);
+    for (const i of order) { if (!W.kids[i].length) under[i] = 1; if (W.nodes[i].parent >= 0) under[W.nodes[i].parent] += under[i]; }
+    const bySide = { L: [], R: [] };
+    for (const leaf of W.leaves) {
+      const br = W.branch(W.carinaIndex, leaf);
+      if (br.points.length < 3) continue;
+      br.keep = W.pathToRoot(leaf).slice(-br.points.length).map(j => Math.min(1, 2.5 / under[j]));
+      // continue a short way into the acinus stem, so the air visibly enters it
+      const ac = acinusAt.get(leaf);
+      if (ac) {
+        const paths = W.acinusPaths(ac);
+        if (paths.length) { br.points.push(paths[0][1].clone()); br.radii.push(br.radii[br.radii.length - 1] * 0.5); br.keep.push(1); }
+      }
+      bySide[sideOf(W.nodes[leaf].pos)].push({ points: br.points, radii: br.radii.map(r => r * 0.55), keep: br.keep, weight: 1 });
+    }
+    this.branchCount = bySide.L.length + bySide.R.length;
+
+    // ---- label anchors on the real airway (point on the centreline + local tube radius) ----
+    const node = i => ({ point: W.nodes[i].pos.clone(), r: W.nodes[i].r });
+    const trunk = W.pathToRoot(W.carinaIndex).filter(i => W.nodes[i].pos.y < topY);
+    this.anchors = { trachea: node(trunk[Math.floor(trunk.length * 0.45)] ?? W.carinaIndex), leaves: [] };
+    for (const k of W.kids[W.carinaIndex]) {
+      const chain = [k]; let j = k;
+      while (W.kids[j].length === 1) { j = W.kids[j][0]; chain.push(j); }
+      this.anchors[`bronchus${sideOf(W.nodes[j].pos)}`] = node(chain[Math.floor(chain.length * 0.5)]);
+    }
+    for (const leaf of W.leaves) {
+      const ac = acinusAt.get(leaf);
+      const acinus = ac ? new THREE.Box3().setFromObject(ac.obj).getCenter(new THREE.Vector3()) : null;
+      this.anchors.leaves.push({ ...node(leaf), side: sideOf(W.nodes[leaf].pos), acinus, hero: ac?.variant === "hero" });
+    }
+    for (const side of ["L", "R"]) {
+      const st = this.add(`bronchus${side}`, bySide[side], { count: Math.min(4000, 36 * bySide[side].length),
+        color: COLORS.air, size: rUp * 0.3, traverse: 3.6, seed: side === "L" ? 21 : 22, samples: 140, reach: "distance" });
+      if (st.valid) this[side === "L" ? "leftBronchusCurve" : "rightBronchusCurve"] = st.paths[0].curve;
+    }
+
+    // ---- bronchioles → alveolar sacs, inside every acinus (its own duct paths) ----
+    const acinar = [];
+    for (const a of W.acini) {
+      const s = W.unitScale(a.obj), paths = W.acinusPaths(a);
+      paths.forEach((pts, k) => { if (k % 3 === (a.leaf % 3)) acinar.push({ points: pts, radius: 1.0 * s }); });
+    }
+    const unit = W.acini.length ? W.unitScale(W.acini[0].obj) : rUp * 0.01;
+    this.add("bronchioles", acinar, { count: Math.min(2400, acinar.length * 4), color: COLORS.air, size: unit * 4.2, traverse: 2.4, seed: 41, samples: 28 });
+
+    // ---- the hero acinus: air through its cut-open ducts, then gas exchange at its alveoli ----
+    const H = W.hero;
+    if (H) {
+      H.obj.updateWorldMatrix(true, true);
+      const hs = W.unitScale(H.obj);
+      this.heroUnit = hs;
+      // cut plane (acinus-local): ducts in front of it were removed, so air may only run where walls remain
+      const nLocal = H.cut_normal;
+      const side = p => p[0] * nLocal[0] + p[1] * nLocal[1] + p[2] * nLocal[2] - H.cut_offset;
+      const heroPaths = H.paths.map(path => path.map(p => W.toWorld(H.obj, p)));
+      const openRuns = [];
+      H.paths.forEach(path => {
+        const local = new THREE.CatmullRomCurve3(path.map(p => new THREE.Vector3(...p))).getSpacedPoints(48);
+        let run = [];
+        for (const v of local) {
+          if (side([v.x, v.y, v.z]) < 0.6) run.push(W.toWorld(H.obj, [v.x, v.y, v.z]));
+          else { if (run.length > 4) openRuns.push(run); run = []; }
+        }
+        if (run.length > 4) openRuns.push(run);
+      });
+      this.add("alveolar", openRuns.map(points => ({ points, radius: 0.7 * hs })),
+        { count: 220, color: COLORS.air, size: hs * 1.1, traverse: 2.2, seed: 51, samples: 48 });
+      const planeN = new THREE.Vector3(nLocal[0], nLocal[2], -nLocal[1]).transformDirection(H.obj.matrixWorld);
+      this.heroCutDir = planeN.clone();
+      const ductPts = heroPaths.flatMap(path => new THREE.CatmullRomCurve3(path).getSpacedPoints(24));
+      const alv = H.alveoli.map(([x, y, z, r]) => ({ c: W.toWorld(H.obj, [x, y, z]), r: r * hs, d: x * nLocal[0] + y * nLocal[1] + z * nLocal[2] - H.cut_offset }))
+        .filter(a => a.d > -2.6 && a.d < 0.2);
+      this.alveolusRadius = (alv[0]?.r) || 1.25 * hs;
+      // close-up centre: the densest cluster of open alveoli (not the empty middle of the acinus)
+      let best = null;
+      for (const x of alv) {
+        const near = alv.filter(y => y.c.distanceTo(x.c) < x.r * 5);
+        if (!best || near.length > best.length) best = near;
+      }
+      this.heroFocus = best ? avg(best.map(a => a.c.clone())) : W.nodes[H.leaf].pos.clone();
+      this.heroAlveolusCentres = H.alveoli.map(([x, y, z]) => W.toWorld(H.obj, [x, y, z]));
+      this.anchors.heroStem = { point: W.toWorld(H.obj, [0, 0, 5]), r: 2.6 * hs };           // terminal bronchiole
+      this.anchors.heroAlveoli = { point: this.heroFocus.clone(), r: 0 };
+      const sacs = H.paths.map(path => path[path.length - 1]).filter(p => Math.abs(side(p)) < 2.5);
+      if (sacs.length) this.anchors.heroSac = { point: W.toWorld(H.obj, sacs[0]), r: 0 };
+      if (has("bloodVessels") && alv.length) {
+        const cap = R.sampleVertices("bloodVessels", 6000);
+        const o2 = [], co2 = [], aR = this.alveolusRadius;
+        for (const a of alv) {
+          const duct = ductPts.reduce((b, p) => (p.distanceToSquared(a.c) < b.distanceToSquared(a.c) ? p : b), ductPts[0]);
+          const out = a.c.clone().sub(duct).normalize();
+          const pool = cap.filter(p => { const v = p.clone().sub(a.c); return v.dot(out) > aR * 0.2 && v.length() < aR * 2.4; });
+          if (pool.length < 2) continue;
+          pool.sort((p, q) => p.distanceToSquared(a.c) - q.distanceToSquared(a.c));
+          const c1 = pool[0], c2 = pool.find(p => p.distanceTo(c1) > aR * 0.7) || pool[pool.length - 1];
+          const inside = a.c.clone().addScaledVector(out, -aR * 0.35);
+          const beyond = c => c.clone().addScaledVector(c.clone().sub(a.c).normalize(), aR * 0.6);
+          o2.push({ points: [inside, a.c.clone().lerp(c1, 0.55), c1, beyond(c1)], radius: aR * 0.1 });
+          co2.push({ points: [beyond(c2), c2, a.c.clone().lerp(c2, 0.55), inside], radius: aR * 0.1 });
+        }
+        this.add("oxygen", o2, { count: Math.min(260, o2.length * 5), color: COLORS.oxygen, size: aR * 0.26, traverse: 2.2, seed: 61, samples: 40 });
+        this.add("carbonDioxide", co2, { count: Math.min(260, co2.length * 5), color: COLORS.carbonDioxide, size: aR * 0.26, traverse: 2.5, seed: 71, samples: 40 });
+      }
+    }
+    console.info("Airflow streams:", Object.keys(this.streams).join(", "), "| marks:", this.marks);
+  }
+  mark(name) { return this.marks[name] ?? 1; }
+  // flows: { streamName: intensity | { i, reach } }
+  update(timeSec, flows) {
+    const scale = this.stage.pointScale;
+    for (const [name, s] of Object.entries(this.streams)) {
+      const f = flows[name];
+      const i = typeof f === "number" ? f : (f ? f.i : 0);
+      const reach = f && typeof f === "object" ? (f.reach ?? 1) : 1;
+      s.update(timeSec, i || 0, reach, scale);
+    }
+  }
+}
+
+// ===============================
+// GOOGLE CLOUD TTS NARRATOR
+// ===============================
+// Every scene's narration is synthesized once at load and decoded to an AudioBuffer, so the
+// timeline uses each clip's TRUE duration. During playback the lesson clock is the master and the
+// audio is slaved to it: it starts at the right offset, re-syncs if it drifts, and seeking or
+// pausing simply stops and restarts the buffer at the new position.
+const AudioCache = {
+  _db: null,
+  open() {
+    return (this._db ||= new Promise((resolve, reject) => {
+      const req = indexedDB.open("respiratory-lesson-tts", 1);
+      req.onupgradeneeded = () => req.result.createObjectStore("clips");
+      req.onsuccess = () => resolve(req.result);
+      req.onerror = () => reject(req.error);
+    }));
+  },
+  async get(key) {
+    try {
+      const db = await this.open();
+      return await new Promise(res => { const q = db.transaction("clips").objectStore("clips").get(key); q.onsuccess = () => res(q.result || null); q.onerror = () => res(null); });
+    } catch { return null; }
+  },
+  async put(key, value) {
+    try { const db = await this.open(); db.transaction("clips", "readwrite").objectStore("clips").put(value, key); } catch { /* cache is optional */ }
+  },
+};
+
+class CloudNarrator {
+  constructor() {
+    this.kind = "cloud"; this.supported = true; this.muted = false;
+    this.ctx = new (window.AudioContext || window.webkitAudioContext)();
+    this.gain = this.ctx.createGain(); this.gain.connect(this.ctx.destination);
+    this.buffers = new Map();
+    this.source = null; this.sourceFor = null; this.startedAt = 0; this.startOffset = 0;
+  }
+  async synthesize(text) {
+    const res = await fetch(TTS.endpoint, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", "X-Goog-Api-Key": TTS.apiKey },
+      body: JSON.stringify({
+        input: { text },
+        voice: { languageCode: TTS.languageCode, name: TTS.voiceName },
+        audioConfig: { audioEncoding: "MP3", speakingRate: TTS.speakingRate },
+      }),
+    });
+    if (!res.ok) {
+      const err = await res.json().catch(() => ({}));
+      throw new Error(`Google TTS ${res.status}: ${err.error?.message || res.statusText}`);
+    }
+    const { audioContent } = await res.json();
+    const bin = atob(audioContent), bytes = new Uint8Array(bin.length);
+    for (let i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+    return bytes.buffer;
+  }
+  // Fetch (or load from cache) and decode every scene's narration, 4 at a time.
+  async prepare(sections, onProgress) {
+    let done = 0, next = 0;
+    const worker = async () => {
+      while (next < sections.length) {
+        const sec = sections[next++];
+        const key = `${TTS.voiceName}|${TTS.speakingRate}|${sec.narration}`;
+        let mp3 = TTS.cache ? await AudioCache.get(key) : null;
+        if (!mp3) { mp3 = await this.synthesize(sec.narration); if (TTS.cache) AudioCache.put(key, mp3.slice(0)); }
+        this.buffers.set(sec.id, await this.ctx.decodeAudioData(mp3.slice(0)));
+        onProgress?.(++done, sections.length);
+      }
+    };
+    await Promise.all(Array.from({ length: Math.min(4, sections.length) }, worker));
+  }
+  durationMs(sec) {
+    const b = this.buffers.get(sec.id);
+    return b ? b.duration * 1000 : (sec.narration.length / (CONFIG.charsPerSecond * CONFIG.speechRate)) * 1000;
+  }
+  unlock() { if (this.ctx.state !== "running") this.ctx.resume(); }
+  // seconds into this scene's clip, or null when that clip isn't sounding
+  position(sec) {
+    if (!this.source || this.sourceFor !== sec.id || this.ctx.state !== "running") return null;
+    return Math.min(this.startOffset + (this.ctx.currentTime - this.startedAt), this.source.buffer.duration);
+  }
+  // called every frame while playing
+  sync(sec, localMs) {
+    if (this.ctx.state !== "running") { this.ctx.resume(); return; }
+    const buf = this.buffers.get(sec.id), offset = (localMs - sec.lead) / 1000;
+    if (!buf || offset < -0.02 || offset >= buf.duration - 0.04) { if (this.sourceFor !== sec.id || offset < 0) this.stop(); return; }
+    if (!this.source || this.sourceFor !== sec.id) { this.play(sec.id, Math.max(0, offset)); return; }
+    const heard = this.startOffset + (this.ctx.currentTime - this.startedAt);
+    if (Math.abs(heard - offset) > 0.3) this.play(sec.id, Math.max(0, offset));
+  }
+  play(id, offset) {
+    this.stop();
+    const src = this.ctx.createBufferSource();
+    src.buffer = this.buffers.get(id); src.connect(this.gain); src.start(0, offset);
+    src.onended = () => { if (this.source === src) { this.source = null; } };
+    this.source = src; this.sourceFor = id; this.startedAt = this.ctx.currentTime; this.startOffset = offset;
+  }
+  stop() {
+    if (!this.source) return;
+    const src = this.source; this.source = null;
+    try { src.stop(); } catch { /* already stopped */ }
+    src.disconnect();
+  }
+  setMuted(m) { this.muted = m; this.gain.gain.value = m ? 0 : 1; }
+}
+
+// ===============================
+// SPEECH ENGINE (browser fallback)
+// ===============================
+// Narration is split into sentences (Chrome cuts long utterances off) and can start from any
+// character, which is how pause, resume and seek re-synchronise the voice. Progress comes from
+// onboundary where the voice reports it, and from elapsed time × measured speaking speed otherwise.
+class SpeechEngine {
+  constructor() {
+    this.supported = "speechSynthesis" in window && "SpeechSynthesisUtterance" in window;
+    this.muted = false; this.voice = null; this.token = 0;
+    this.active = false; this.text = ""; this.progressChar = 0;
+    this.boundarySeen = false; this.chunk = null; this.chunkStartWall = 0;
+    this.cps = CONFIG.charsPerSecond * CONFIG.speechRate;
+    if (this.supported) {
+      this.pickVoice();
+      speechSynthesis.addEventListener?.("voiceschanged", () => this.pickVoice());
+    }
+  }
+  pickVoice() {
+    const voices = speechSynthesis.getVoices();
+    if (!voices.length) return;
+    const score = v => (/(Google|Natural|Neural|Premium|Enhanced)/i.test(v.name) ? 2 : 0) + (v.localService ? 0 : 1);
+    for (const lang of CONFIG.voicePreference) {
+      const match = voices.filter(v => v.lang.replace("_", "-").toLowerCase().startsWith(lang.toLowerCase()));
+      if (match.length) { this.voice = match.sort((a, b) => score(b) - score(a))[0]; break; }
+    }
+    this.voice = this.voice || voices[0];
+  }
+  estimateMs(text) { return (text.length / (CONFIG.charsPerSecond * CONFIG.speechRate)) * 1000; }
+  get kind() { return "browser"; }
+  durationMs(sec) { return this.estimateMs(sec.narration); }
+  setMuted(m) { this.muted = m; }
+  unlock() { if (this.supported) { const u = new SpeechSynthesisUtterance(" "); u.volume = 0; speechSynthesis.speak(u); } }
+
+  speak(text, fromChar = 0, onDone = null) {
+    this.stop();
+    if (!this.supported || this.muted) return false;
+    let start = clamp(Math.floor(fromChar), 0, text.length);
+    while (start > 0 && start < text.length && !/\s/.test(text[start - 1])) start--;   // back to a word start
+    if (start >= text.length - 3) return false;
+    const token = ++this.token;
+    this.text = text; this.progressChar = start; this.boundarySeen = false; this.active = true;
+    const chunks = [], re = /[^.!?]+[.!?]*\s*/g, rest = text.slice(start);
+    let m; while ((m = re.exec(rest))) if (m[0].trim()) chunks.push({ text: m[0], offset: start + m.index });
+    let i = 0;
+    const next = () => {
+      if (token !== this.token) return;
+      if (i >= chunks.length) { this.active = false; this.progressChar = text.length; this.chunk = null; onDone && onDone(); return; }
+      const ch = chunks[i++];
+      const u = new SpeechSynthesisUtterance(ch.text.trim());
+      if (this.voice) { u.voice = this.voice; u.lang = this.voice.lang; } else u.lang = "en-IN";
+      u.rate = CONFIG.speechRate; u.pitch = CONFIG.speechPitch; u.volume = 1;
+      u.onstart = () => {
+        if (token !== this.token) return;
+        this.chunk = ch; this.chunkStartWall = performance.now();
+        this.progressChar = Math.max(this.progressChar, ch.offset);
+      };
+      u.onboundary = e => {
+        if (token !== this.token || (e.name && e.name !== "word")) return;
+        this.boundarySeen = true;
+        this.progressChar = Math.max(this.progressChar, ch.offset + e.charIndex);
+      };
+      const finish = () => {
+        if (token !== this.token) return;
+        const el = performance.now() - this.chunkStartWall;
+        if (this.chunk === ch && el > 500) this.cps = this.cps * 0.7 + (ch.text.length / (el / 1000)) * 0.3;
+        this.progressChar = ch.offset + ch.text.length;
+        next();
+      };
+      u.onend = finish;
+      u.onerror = e => { if (e.error !== "interrupted" && e.error !== "canceled") finish(); };
+      speechSynthesis.speak(u);
+    };
+    setTimeout(next, 70);          // cancel() followed immediately by speak() can swallow the utterance in Chrome
+    return true;
+  }
+  // characters of the current narration spoken so far
+  progress() {
+    if (!this.active || this.boundarySeen || !this.chunk) return this.progressChar;
+    const est = this.chunk.offset + ((performance.now() - this.chunkStartWall) / 1000) * this.cps;
+    return Math.max(this.progressChar, Math.min(est, this.chunk.offset + this.chunk.text.length));
+  }
+  stop() {
+    this.token++; this.active = false; this.chunk = null;
+    if (this.supported) speechSynthesis.cancel();
+  }
+}
+
+// ===============================
+// ANATOMY LABELS
+// ===============================
+// While a part is narrated, a name tag appears beside it with an arrow to the part itself.
+// Scenes declare labels as { text, sub, at, amount }; `at` is a list of targets, one arrow each:
+//   • mesh keys (category / name / RegExp) → a surface point facing the scene's camera
+//   • a function (deps, viewDir) → { point, r } landmark (r > 0: arrow meets the tube wall)
+// Anchors are resolved once per scene from that scene's camera direction, so they never jitter;
+// every frame they are projected to the screen and the tags are laid out around them.
+class LabelSystem {
+  constructor(stage, deps) {
+    this.stage = stage; this.deps = deps;
+    this.root = $("labels");
+    this.svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    this.svg.innerHTML = `<defs><marker id="lblArrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,1 L10,5 L0,9 z" fill="#ffc2b8"/></marker></defs>`;
+    this.root.appendChild(this.svg);
+    this.pool = new Map(); this.anchorCache = new Map();
+    this._v = new THREE.Vector3();
+  }
+  item(text, sub) {
+    const key = `${text}|${sub || ""}`;
+    let it = this.pool.get(key);
+    if (!it) {
+      const el = document.createElement("div"); el.className = "tag";
+      el.innerHTML = `<b></b>${sub ? "<small></small>" : ""}`;
+      el.querySelector("b").textContent = text; if (sub) el.querySelector("small").textContent = sub;
+      this.root.appendChild(el);
+      it = { el, arrows: [], w: 0, h: 0 };
+      this.pool.set(key, it);
+    }
+    if (!it.w) { it.w = it.el.offsetWidth; it.h = it.el.offsetHeight; }
+    return it;
+  }
+  arrow(it, k) {
+    while (it.arrows.length <= k) {
+      const g = document.createElementNS("http://www.w3.org/2000/svg", "g");
+      g.innerHTML = `<line marker-end="url(#lblArrow)"/><circle class="halo" r="7"/><circle class="tip" r="3.2"/>`;
+      this.svg.appendChild(g); it.arrows.push(g);
+    }
+    return it.arrows[k];
+  }
+  // one 3D anchor per target, cached per scene
+  anchors(sec, label) {
+    const key = `${sec.id}|${label.text}`;
+    if (this.anchorCache.has(key)) return this.anchorCache.get(key);
+    const { registry, camera } = this.deps;
+    const pose = camera.pose(sec.shot, sec.dur * 0.5, 0.5), dir = pose.dir;
+    const out = [];
+    for (const target of label.at) {
+      if (typeof target === "function") {
+        const a = target(this.deps, dir, pose); if (!a) continue;
+        const pt = a.isVector3 ? a.clone() : a.point.clone().addScaledVector(dir, (a.r || 0) * 0.85);
+        out.push(pt); continue;
+      }
+      const pts = registry.sampleVertices(target, 900); if (!pts.length) continue;
+      const box = registry.box(target), c = box.getCenter(new THREE.Vector3());
+      const R = Math.max(box.getBoundingSphere(new THREE.Sphere()).radius, 1e-6);
+      let best = null, bs = -Infinity;
+      for (const p of pts) {                       // front surface, close to the middle of the part
+        const v = this._v.subVectors(p, c), along = v.dot(dir);
+        const perp = Math.sqrt(Math.max(0, v.lengthSq() - along * along));
+        const sc = along / R - 1.3 * perp / R;
+        if (sc > bs) { bs = sc; best = p; }
+      }
+      out.push(best.clone());
+    }
+    // Which side of the part the tag sits on is decided ONCE per scene, from the scene's own camera —
+    // otherwise a part near the screen centre makes its tag jump from side to side as the camera drifts.
+    if (out.length) {
+      const right = new THREE.Vector3(0, 1, 0).cross(dir).normalize();
+      const off = avg(out.map(p => p.clone())).sub(pose.target).dot(right);
+      out.side = Math.abs(off) > pose.dist * 0.04 ? Math.sign(off) : null;
+    }
+    this.anchorCache.set(key, out);
+    return out;
+  }
+  // resolve every scene's anchors up front (some need ray casts), so playback never stalls
+  prewarm(timeline) {
+    for (const sec of timeline.sections) {
+      if (!sec.labels) continue;
+      for (const l of sec.labels(sec.endCtx)) if (l.at?.length) this.anchors(sec, l);
+    }
+  }
+  update(st, camera) {
+    camera.updateMatrixWorld();                         // project with this frame's camera, not the last one
+    const W = this.stage.container.clientWidth, H = this.stage.container.clientHeight;
+    const labels = (st.labels || []).filter(l => l.amount > 0.01 && l.at?.length);
+    const used = new Set();
+    // keep tags clear of the chapter card, the legend, the subtitles and the controls
+    const host = this.stage.container.getBoundingClientRect();
+    const avoid = [];
+    for (const id of ["chapter", "legend"]) {
+      const el = $(id); if (el.classList.contains("hidden") || (id === "legend" && !el.classList.contains("on"))) continue;
+      const r = el.getBoundingClientRect(); if (r.width) avoid.push({ x0: r.left - host.left - 10, y0: r.top - host.top - 10, x1: r.right - host.left + 10, y1: r.bottom - host.top + 10 });
+    }
+    const bottom = H - Math.min(230, H * 0.3), top = 12;
+    const boxes = [];
+    labels.forEach((label, index) => {
+      const it = this.item(label.text, label.sub); used.add(it);
+      const anchors = this.anchors(st.sec, label), scr = [];
+      for (const p of anchors) {
+        const v = this._v.copy(p).project(camera);
+        if (v.z > 1 || v.z < -1) continue;
+        scr.push({ x: (v.x + 1) * 0.5 * W, y: (1 - v.y) * 0.5 * H });
+      }
+      if (!scr.length) return;
+      const ax = scr.reduce((s, q) => s + q.x, 0) / scr.length, ay = scr.reduce((s, q) => s + q.y, 0) / scr.length;
+      // tag sits outward, sideways; the side is fixed for the whole scene (see anchors())
+      const dy = ay - H * 0.46;
+      const sx = label.side === "left" ? -1 : label.side === "right" ? 1 : (anchors.side ?? (index % 2 ? -1 : 1));
+      const len = clamp(Math.min(W, H) * 0.16, 60, 170);
+      let x = ax + sx * len + (sx > 0 ? 0 : -it.w), y = ay + clamp(dy / (H * 0.5), -1, 1) * len * 0.45 - it.h / 2;
+      boxes.push({ it, label, scr, x, y, w: it.w, h: it.h, sx, order: index });
+    });
+    const fit = b => {
+      b.x = clamp(b.x, 12, W - b.w - 12); b.y = clamp(b.y, top, Math.max(top, bottom - b.h));
+      for (const r of avoid) if (b.x < r.x1 && b.x + b.w > r.x0 && b.y < r.y1 && b.y + b.h > r.y0) {
+        if (r.y1 + b.h < bottom) b.y = r.y1; else b.x = r.x1;
+      }
+    };
+    boxes.forEach(fit);
+    // separate overlapping tags: later labels (in narration order) move clear of earlier ones —
+    // a fixed order, so two tags never trade places from one frame to the next
+    boxes.sort((a, b) => a.order - b.order);
+    for (let i = 1; i < boxes.length; i++) {
+      const b = boxes[i];
+      for (let pass = 0; pass < 3; pass++) {
+        const hit = boxes.slice(0, i).find(a => b.x < a.x + a.w + 8 && b.x + b.w + 8 > a.x && b.y < a.y + a.h + 8 && b.y + b.h + 8 > a.y);
+        if (!hit) break;
+        b.y = b.y + b.h / 2 >= hit.y + hit.h / 2 ? hit.y + hit.h + 8 : hit.y - b.h - 8;
+        fit(b);
+      }
+    }
+    for (const b of boxes) {
+      const { it, label } = b, o = clamp(label.amount);
+      it.el.style.opacity = o;
+      it.el.style.transform = `translate(${b.x + (1 - o) * 10 * b.sx}px, ${b.y}px)`;
+      const cx = b.x + b.w / 2, cy = b.y + b.h / 2;
+      b.scr.forEach((q, k) => {
+        const g = this.arrow(it, k); g.style.display = ""; g.style.opacity = o;
+        const vx = q.x - cx, vy = q.y - cy, t = Math.min(Math.abs((b.w / 2 + 3) / (vx || 1e-6)), Math.abs((b.h / 2 + 3) / (vy || 1e-6)));
+        const x1 = cx + vx * Math.min(t, 1), y1 = cy + vy * Math.min(t, 1);
+        const L = Math.hypot(q.x - x1, q.y - y1), shorten = Math.min(L, 6);
+        const [line, halo, tip] = g.children;
+        const x2 = q.x - ((q.x - x1) / (L || 1)) * shorten, y2 = q.y - ((q.y - y1) / (L || 1)) * shorten;
+        line.setAttribute("x1", x1); line.setAttribute("y1", y1); line.setAttribute("x2", x2); line.setAttribute("y2", y2);
+        line.style.display = t < 1 ? "" : "none";
+        halo.setAttribute("cx", q.x); halo.setAttribute("cy", q.y); tip.setAttribute("cx", q.x); tip.setAttribute("cy", q.y);
+      });
+      for (let k = b.scr.length; k < it.arrows.length; k++) it.arrows[k].style.display = "none";
+    }
+    for (const it of this.pool.values()) if (!boxes.some(b => b.it === it)) {
+      it.el.style.opacity = 0; it.arrows.forEach(g => { g.style.display = "none"; });
+    }
+  }
+}
+
+// ===============================
+// LESSON TIMELINE
+// ===============================
+// Each scene declares what the camera frames, how the anatomy looks, and — as pure functions of
+// scene-local time — the airflow, breathing and accents. x.cue("word") returns the moment
+// that word is spoken, so visuals are keyed to the narration rather than to hard-coded seconds.
+const FULL_BODY = ["nose", "nasalCavity", "pharynx", "larynx", "trachea", "bronchi", "lungs", "diaphragm", "ribs"];
+const HERO = ["heroAcinus", "bloodVessels"];
+// Close-up on the open alveoli where the gas-exchange particles run.
+function heroCloseSphere({ airflow }) {
+  if (!airflow.heroFocus) return null;
+  return new THREE.Sphere(airflow.heroFocus.clone(), (airflow.alveolusRadius || airflow.modelRadius * 0.002) * 7);
+}
+const after = (x, a, b) => ramp(x.local, a, b);
+// A label appears as its word is spoken and stays until the scene ends (or for `hold` ms).
+const label = (x, text, at, cue, { sub, hold, delay = 0, side } = {}) => {
+  const t0 = (typeof cue === "number" ? cue : x.cue(cue)) + delay;
+  const end = hold ? t0 + hold : x.dur - 350;
+  return { text, sub, at, side, amount: after(x, t0 - 150, t0 + 450) * (1 - after(x, end - 450, end)) };
+};
+// landmark targets computed from the exported airway tree
+const mark = name => ({ airflow }) => airflow.anchors?.[name] || null;
+const leafToward = (side, useAcinus = false) => ({ airflow }, dir) => {
+  const L = (airflow.anchors?.leaves || []).filter(l => l.side === side && !l.hero && (!useAcinus || l.acinus));
+  if (!L.length) return null;
+  const c = avg(L.map(l => l.point.clone()));
+  const pick = L.reduce((b, l) => (l.point.clone().sub(c).dot(dir) > b.point.clone().sub(c).dot(dir) ? l : b), L[0]);
+  return useAcinus ? { point: pick.acinus, r: 0 } : { point: pick.point, r: 0 };
+};
+// a rib's side of the chest (its lateral curve), not its sternal end near the midline
+const ribSide = (name) => ({ registry }, dir) => {
+  const pts = registry.sampleVertices(name, 600); if (!pts.length) return null;
+  const chest = registry.center("ribs"), box = registry.box("ribs"), R = box.getBoundingSphere(new THREE.Sphere()).radius;
+  const lateral = new THREE.Vector3().crossVectors(new THREE.Vector3(0, 1, 0), dir).normalize();
+  const sign = Math.sign(registry.center(name).sub(chest).dot(lateral)) || 1;
+  const pick = pts.reduce((b, p) => {
+    const v = p.clone().sub(chest), sc = sign * v.dot(lateral) / R * 0.6 + v.dot(dir) / R;
+    return sc > b.sc ? { p, sc } : b;
+  }, { p: pts[0], sc: -Infinity });
+  return { point: pick.p, r: 0 };
+};
+// A capillary the camera can actually SEE near the open alveoli: candidates closest to the view
+// line through the alveoli are ray-cast from the scene camera; the first one not hidden behind
+// alveolar wall wins.
+const capillaryNearFocus = ({ airflow, registry }, dir, pose) => {
+  if (!airflow.heroFocus || !pose) return null;
+  const caps = registry.get("bloodVessels"); if (!caps.length) return null;
+  const aR = airflow.alveolusRadius || 0.01, focus = airflow.heroFocus, centres = airflow.heroAlveolusCentres || [];
+  const eye = pose.target.clone().addScaledVector(dir, pose.dist);
+  const toFocus = focus.clone().sub(eye), focusDist = toFocus.length(); toFocus.normalize();
+  // capillaries lie on the OUTSIDE of the alveoli: keep only points whose alveolar surface faces the camera
+  const facing = p => {
+    if (!centres.length) return 1;
+    const c = centres.reduce((b, q) => (q.distanceToSquared(p) < b.distanceToSquared(p) ? q : b), centres[0]);
+    return p.clone().sub(c).normalize().dot(eye.clone().sub(p).normalize());
+  };
+  // prefer capillaries lying flat-on to the camera (clearly visible) over ones seen edge-on, then nearness
+  const cands = registry.sampleVertices("bloodVessels", 8000)
+    .map(p => { const v = p.clone().sub(eye), along = v.dot(toFocus); return { p, along, perp: v.addScaledVector(toFocus, -along).length() }; })
+    .filter(c => c.along > 0 && c.perp < aR * 16)
+    .map(c => ({ ...c, face: facing(c.p) }))
+    .filter(c => c.face > 0.55)
+    .sort((a, b) => (a.perp / aR - 8 * a.face) - (b.perp / aR - 8 * b.face));
+  const blockers = registry.get(["heroAcinus", "bloodVessels"]), ray = new THREE.Raycaster();
+  for (const c of cands.slice(0, 60)) {
+    const to = c.p.clone().sub(eye), d = to.length();
+    ray.set(eye, to.normalize()); ray.far = d + aR;
+    const hit = ray.intersectObjects(blockers, false)[0];
+    if (hit && caps.includes(hit.object) && hit.distance > d - aR * 0.6) return { point: hit.point.clone(), r: 0 };
+  }
+  console.warn("No visible capillary found for the label — using the nearest one");
+  return cands.length ? { point: cands[0].p, r: 0 } : null;
+};
+// Trachea proper runs from the cricoid's lower border to the carina — frame exactly that.
+function tracheaSphere({ registry, airflow }) {
+  const carina = airflow.landmarks.carina; if (!carina || !registry.has("Cricoid_Cartilage")) return null;
+  const cb = registry.box("Cricoid_Cartilage"), top = cb.getCenter(new THREE.Vector3()).setY(cb.min.y);
+  return new THREE.Sphere(top.clone().lerp(carina, 0.5), top.distanceTo(carina) * 0.68);
+}
+// The split: centred on the carina, wide enough to show both main bronchi entering the lungs.
+function bronchiSphere({ registry, airflow }) {
+  const carina = airflow.landmarks.carina; if (!carina || !registry.has("lungs")) return null;
+  const reach = registry.center(/^Lung_L/).distanceTo(carina);
+  return new THREE.Sphere(carina.clone().addScaledVector(new THREE.Vector3(0, -1, 0), reach * 0.15), reach * 1.0);
+}
+
+const LESSON = [
+  {
+    id: "intro", title: "Human Respiratory System",
+    caption: "Follow one breath of air from the nostrils to the alveoli.",
+    narration: "Every cell in your body needs oxygen to release energy from food, and every cell produces carbon dioxide as waste. Let us follow a single breath of air on its journey through the human respiratory system.",
+    shot: { target: FULL_BODY, az: 24, el: 6, padding: 1.14, paddingEnd: 1.02, orbit: 36 },
+    look: { all: true },
+    breath: x => breathCycle(x.local, 5200) * 0.8,
+    flows: x => ({ upper: breathFlow(x.local, 5200) * 0.4 * after(x, 2500, 4500) }),
+    labels: x => [
+      label(x, "Nose", [["Nostril_L", "Nostril_R", "Nasal_Cartilages"]], "follow a single breath"),
+      label(x, "Trachea", [mark("trachea")], "follow a single breath", { delay: 500 }),
+      label(x, "Lungs", [/^Lung_L/, /^Lung_R/], "follow a single breath", { delay: 1000 }),
+    ],
+    leadMs: 1200, minMs: 12000,
+  },
+  {
+    id: "nose", title: "Nostrils",
+    caption: "Air enters through the nostrils, where fine hairs and mucus trap dust.",
+    narration: "Air enters the body through the nostrils. The passage inside is lined with fine hairs and mucus, which trap dust and germs from the air we breathe.",
+    shot: { target: ["nose", "nasalCavity"], az: 38, el: 12, padding: 2.1, paddingEnd: 1.8 },
+    look: { focus: ["nose", "nasalCavity"], glass: { nasalCavity: 0.5 }, context: { conchae: 0.55, pharynx: 0.22, larynx: 0.12, larynxMuscles: 0.08, trachea: 0.1, lungs: 0.03 }, rest: 0.03 },
+    flows: x => ({ upper: { i: after(x, 300, 1500), reach: lerp(0.03, x.mark("nasal") * 0.7, after(x, 800, x.dur)) } }),
+    accent: x => [[/^Nostril/, 0.7 * pulse(x.local, x.cue("nostrils"), 900)], ["Nasal_Cartilages", 0.5 * pulse(x.local, x.cue("nostrils"), 900)]],
+    labels: x => [label(x, "Nostrils", [["Nostril_L"], ["Nostril_R"]], "nostrils")],
+    breath: () => 0.3,
+  },
+  {
+    id: "nasalCavity", title: "Nasal Cavity",
+    caption: "Curved conchae make the air swirl, warming and moistening it.",
+    narration: "Inside the nasal cavity, curved shelves of bone called conchae make the air swirl around. This warms and moistens the air before it travels deeper into the body.",
+    shot: { target: ["nasalCavity", "conchae"], az: 88, el: 8, padding: 1.7, paddingEnd: 1.45 },
+    look: { focus: ["conchae", "nasalCavity"], glass: { nasalCavity: 0.38 }, context: { nose: 0.5, pharynx: 0.3, larynx: 0.1 }, rest: 0.03 },
+    flows: x => ({ upper: { i: 1, reach: lerp(x.mark("nasal") * 0.7, x.mark("nasal"), after(x, 0, x.cue("warms"))) } }),
+    labels: x => [
+      label(x, "Nasal cavity", ["nasalCavity"], "nasal cavity"),
+      label(x, "Conchae", [["Nasal_Concha_Inferior_L"], ["Nasal_Concha_Inferior_R"]], "conchae", { sub: "curved shelves of bone" }),
+    ],
+    accent: x => [["conchae", 0.9 * after(x, x.cue("conchae") - 300, x.cue("conchae") + 500) * (1 - 0.6 * after(x, x.cue("warms"), x.cue("warms") + 1500))]],
+    breath: () => 0.3,
+  },
+  {
+    id: "pharynx", title: "Pharynx",
+    caption: "The throat — a passage shared by air and food.",
+    narration: "From the nasal cavity, air moves into the pharynx, which is the throat. This passage is shared by the air we breathe and the food we swallow.",
+    shot: { target: ["pharynx"], az: 72, el: 4, padding: 1.45, paddingEnd: 1.3 },
+    look: { focus: ["pharynx"], glass: { pharynx: 0.5 }, context: { nasalCavity: 0.3, conchae: 0.25, larynx: 0.35, larynxMuscles: 0.2, nose: 0.2 }, rest: 0.03 },
+    flows: x => ({ upper: { i: 1, reach: lerp(x.mark("nasal"), x.mark("pharynx"), after(x, 600, x.cue("shared"))) } }),
+    labels: x => [label(x, "Pharynx", ["pharynx"], "pharynx", { sub: "throat" })],
+    breath: () => 0.3,
+  },
+  {
+    id: "larynx", title: "Larynx",
+    caption: "The voice box. The epiglottis closes over it when we swallow.",
+    narration: "Next, air enters the larynx, also called the voice box. A flap called the epiglottis closes over it when we swallow, so that food does not enter the airway.",
+    shot: { target: ["larynx", "larynxMuscles"], az: 32, el: 10, padding: 1.75, paddingEnd: 1.55 },
+    look: { focus: ["larynx", "larynxMuscles"], context: { pharynx: 0.25, trachea: 0.35 }, rest: 0.03 },
+    flows: x => ({ upper: { i: 1, reach: lerp(x.mark("pharynx"), x.mark("larynx"), after(x, 400, x.cue("voice box"))) } }),
+    labels: x => [
+      label(x, "Larynx", [["Thyroid_Cartilage"]], "larynx", { sub: "voice box" }),
+      label(x, "Epiglottis", [["Epiglottis"]], "epiglottis"),
+    ],
+    accent: x => [["Epiglottis", after(x, x.cue("epiglottis") - 200, x.cue("epiglottis") + 600) * (0.75 + 0.25 * Math.sin(x.local / 260))]],
+    breath: () => 0.3,
+  },
+  {
+    id: "trachea", title: "Trachea",
+    caption: "The windpipe. Rings of cartilage keep it from collapsing.",
+    narration: "The air now travels down the trachea, or windpipe. Rings of cartilage in its wall hold the passage open, so that it does not collapse when we breathe in.",
+    shot: { target: ["trachea"], sphere: tracheaSphere, az: 20, el: 5, padding: 1.25, paddingEnd: 1.12 },
+    look: { focus: ["trachea"], glass: { Tracheal_Mucosa: 0.45, Trachealis: 0.6 }, context: { larynx: 0.3, larynxMuscles: 0.18, bronchi: 0.3, lungs: 0.04 }, rest: 0.02 },
+    flows: x => ({ upper: { i: 1, reach: lerp(x.mark("larynx"), 1, after(x, 300, x.cue("rings"))) } }),
+    labels: x => [
+      label(x, "Trachea", [mark("trachea")], "trachea", { sub: "windpipe" }),
+      label(x, "Rings of cartilage", [["Cartilage_Ring_05"], ["Cartilage_Ring_11"]], "rings"),
+    ],
+    accent: x => {
+      const t0 = x.cue("rings"), out = [];
+      for (let k = 1; k <= 18; k++) out.push([`Cartilage_Ring_${String(k).padStart(2, "0")}`, 0.9 * pulse(x.local, t0 + k * 150, 380)]);
+      return out;
+    },
+    breath: () => 0.35,
+  },
+  {
+    id: "bronchi", title: "Bronchi",
+    caption: "The trachea divides into a left and a right bronchus.",
+    narration: "At its lower end, the trachea divides into two bronchi. One bronchus carries air into the left lung, and the other carries air into the right lung.",
+    shot: { target: ["bronchi"], sphere: bronchiSphere, az: 8, el: 14, padding: 1.3, paddingEnd: 1.15 },
+    look: { focus: ["bronchi"], glass: { bronchi: 0.8 }, context: { trachea: 0.45, lungs: 0.07 }, rest: 0.02 },
+    flows: x => {
+      const split = after(x, x.cue("divides") - 200, x.cue("divides") + 700);
+      return {
+        upper: 1,
+        bronchusL: { i: split, reach: 0.3 * after(x, x.cue("divides"), x.cue("left lung") + 900) },
+        bronchusR: { i: split, reach: 0.3 * after(x, x.cue("divides") + 150, x.cue("right lung") + 900) },
+      };
+    },
+    accent: x => [[/^Lung_L/, 0.3 * pulse(x.local, x.cue("left lung"), 900)], [/^Lung_R/, 0.3 * pulse(x.local, x.cue("right lung"), 900)]],
+    labels: x => [
+      label(x, "Left bronchus", [mark("bronchusL")], "left lung"),
+      label(x, "Right bronchus", [mark("bronchusR")], "right lung"),
+    ],
+    breath: () => 0.4,
+  },
+  {
+    id: "bronchioles", title: "Bronchioles",
+    caption: "Inside the lungs, the bronchi branch into ever-smaller bronchioles.",
+    narration: "Inside the lungs, each bronchus divides again and again into smaller and smaller tubes. The finest of these branches are called bronchioles.",
+    shot: { target: ["lungs"], az: 30, el: 12, padding: 1.08, paddingEnd: 0.82 },
+    look: { focus: ["bronchi", "alveoli"], context: { lungs: 0.16, trachea: 0.4, diaphragm: 0.08 }, rest: 0.02 },
+    flows: x => {
+      const deeper = lerp(0.3, 1, after(x, x.cue("again") - 600, x.cue("finest") + 1800));
+      return {
+        upper: 0.7,
+        bronchusL: { i: 1, reach: deeper }, bronchusR: { i: 1, reach: deeper },
+        bronchioles: { i: after(x, x.cue("finest") + 600, x.cue("finest") + 2200), reach: 1 },
+      };
+    },
+    labels: x => [
+      label(x, "Bronchi", [mark("bronchusL"), mark("bronchusR")], "each bronchus"),
+      label(x, "Bronchioles", [leafToward("L"), leafToward("R")], "called bronchioles"),
+    ],
+    breath: () => 0.45,
+  },
+  {
+    id: "lungs", title: "Breathing In",
+    caption: "Ribs lift, the diaphragm flattens, and air is drawn into the lungs.",
+    narration: "When we breathe in, we lift our ribs and flatten the diaphragm. The chest cavity becomes larger, and air is sucked into the lungs, filling them.",
+    shot: { target: ["lungs", "diaphragm", "ribs"], az: 28, el: 8, padding: 1.05, paddingEnd: 1.0 },
+    look: { focus: ["lungs", "diaphragm", "ribs"], glass: { lungs: 0.62, ribs: 0.45 }, context: { bronchi: 0.5, trachea: 0.55, skeleton: 0.3, larynx: 0.3 }, rest: 0.05 },
+    breath: x => lerp(0.05, 1, easeInOut((x.local - x.cue("lift")) / (x.cue("filling") + 900 - x.cue("lift")))),
+    flows: x => {
+      const k = 0.3 + 0.7 * pulse(x.local, (x.cue("lift") + x.cue("filling")) / 2, (x.cue("filling") - x.cue("lift")) * 0.6);
+      return { upper: k, bronchusL: k, bronchusR: k, bronchioles: k };
+    },
+    accent: x => [["ribs", 0.8 * pulse(x.local, x.cue("ribs"), 700)], ["diaphragm", 0.9 * pulse(x.local, x.cue("diaphragm"), 800)]],
+    minMs: 12000,
+    labels: x => [
+      label(x, "Ribs", [ribSide("Rib_06_L"), ribSide("Rib_06_R")], "ribs"),
+      label(x, "Diaphragm", ["diaphragm"], "diaphragm"),
+      label(x, "Lungs", [/^Lung_L/, /^Lung_R/], "into the lungs"),
+    ],
+  },
+  {
+    id: "alveoli", title: "Alveoli",
+    caption: "Millions of tiny air sacs, each wrapped in blood capillaries.",
+    narration: "The bronchioles finally end in tiny balloon-like sacs called alveoli. The walls of the alveoli contain an extensive network of blood vessels. If they were spread out, the alveoli would cover about eighty square metres.",
+    shot: { target: HERO, alignTo: "heroCut", azOffset: -10, elOffset: 8, az: -38, el: 16, padding: 0.95, paddingEnd: 0.7, orbit: 20 },
+    transitionMs: 4800,
+    look: { focus: ["heroAcinus"], context: { bloodVessels: 0.9, alveoli: 0.05, lungs: 0.02, bronchi: 0.03 }, rest: 0 },
+    // air rushes in while the alveoli inflate and back out while they deflate
+    flows: x => ({ alveolar: { i: breathFlow(x.local, 4200) * after(x, 1200, 2600), reach: 1 }, bronchioles: 0.3 * (1 - after(x, 0, 2000)) }),
+    accent: x => [["bloodVessels", 0.7 * pulse(x.local, x.cue("blood vessels"), 1100)]],
+    labels: x => [
+      label(x, "Bronchiole", [mark("heroStem")], "bronchioles"),
+      label(x, "Alveoli", [mark("heroAlveoli"), mark("heroSac")], "called alveoli", { sub: "air sacs" }),
+      label(x, "Blood capillaries", [capillaryNearFocus], "blood vessels"),
+    ],
+    breath: x => breathCycle(x.local, 4200),
+    minMs: 15000,
+  },
+  {
+    id: "gasExchange", title: "Gas Exchange",
+    caption: "Oxygen passes into the blood; carbon dioxide passes out into the alveoli.",
+    narration: "This is where gas exchange takes place. Oxygen from the air in the alveoli passes into the blood, while carbon dioxide from the blood passes into the alveoli, to be breathed out. The pigment haemoglobin in red blood cells then carries this oxygen to every cell of the body.",
+    shot: { target: HERO, sphere: heroCloseSphere, alignTo: "heroCut", azOffset: 14, elOffset: 12, az: 20, el: 26, padding: 1.15, paddingEnd: 1.0, orbit: 30 },
+    transitionMs: 2600,
+    look: { focus: ["heroAcinus", "bloodVessels"], context: { alveoli: 0.04, lungs: 0.02 }, rest: 0 },
+    flows: x => ({
+      alveolar: 0.3 * breathFlow(x.local, 4200),
+      oxygen: after(x, x.cue("oxygen from") - 300, x.cue("oxygen from") + 900),
+      carbonDioxide: after(x, x.cue("carbon dioxide from") - 300, x.cue("carbon dioxide from") + 900),
+    }),
+    blood: x => after(x, x.cue("oxygen from") + 400, x.cue("haemoglobin") + 1500),
+    legend: x => after(x, x.cue("oxygen from") - 600, x.cue("oxygen from")),
+    labels: x => [
+      label(x, "Alveolus", [mark("heroAlveoli")], "in the alveoli"),
+      label(x, "Blood capillary", [capillaryNearFocus], "into the blood"),
+    ],
+    breath: x => breathCycle(x.local, 4200),
+    minMs: 17000,
+  },
+  {
+    id: "exhalation", title: "Breathing Out",
+    caption: "The ribs fall, the diaphragm rises, and air carrying carbon dioxide is pushed out.",
+    narration: "When we breathe out, the ribs move down and the diaphragm relaxes, moving upwards. The chest cavity becomes smaller, and air carrying carbon dioxide is pushed out of the lungs. The lungs always keep some air inside, so that gas exchange never stops.",
+    shot: { target: ["lungs", "diaphragm", "ribs", "trachea"], az: 30, el: 8, padding: 1.04, paddingEnd: 1.0, orbit: 14 },
+    transitionMs: 4600,
+    look: { focus: ["lungs", "diaphragm", "ribs"], glass: { lungs: 0.6, ribs: 0.45 }, context: { bronchi: 0.5, trachea: 0.6, larynx: 0.35, pharynx: 0.3, nasalCavity: 0.3, nose: 0.35, skeleton: 0.3 }, rest: 0.05 },
+    breath: x => lerp(1, 0.14, easeInOut((x.local - x.cue("breathe out")) / (x.cue("pushed out") + 1200 - x.cue("breathe out")))),
+    flows: x => {
+      const w = after(x, x.cue("breathe out"), x.cue("breathe out") + 900) * (1 - 0.7 * after(x, x.cue("always"), x.cue("always") + 2000));
+      return { upper: -w, upperCO2: -w * 0.9, bronchusL: -w, bronchusR: -w, bronchioles: -w * 0.8 };
+    },
+    accent: x => [["ribs", 0.7 * pulse(x.local, x.cue("ribs"), 700)], ["diaphragm", 0.9 * pulse(x.local, x.cue("diaphragm"), 800)]],
+    minMs: 15000,
+    labels: x => [
+      label(x, "Ribs", [ribSide("Rib_06_L"), ribSide("Rib_06_R")], "ribs"),
+      label(x, "Diaphragm", ["diaphragm"], "diaphragm"),
+      label(x, "Lungs", [/^Lung_L/, /^Lung_R/], "out of the lungs"),
+    ],
+  },
+  {
+    id: "summary", title: "The Journey of a Breath",
+    caption: "Nostrils → pharynx → larynx → trachea → bronchi → bronchioles → alveoli.",
+    narration: "Let us review the journey. Air enters through the nostrils, passes through the pharynx and larynx, and travels down the trachea. It divides into the bronchi and bronchioles, and reaches the alveoli, where oxygen enters the blood and carbon dioxide leaves it. With every breath, this journey begins again.",
+    shot: { target: FULL_BODY, az: 22, el: 7, padding: 1.1, paddingEnd: 1.04, orbit: 50 },
+    transitionMs: 3000,
+    look: { all: true },
+    breath: x => 0.1 + 0.85 * breathCycle(x.local, 5600),
+    flows: x => { const f = breathFlow(x.local, 5600); return { upper: f, bronchusL: f, bronchusR: f, bronchioles: f * 0.8, upperCO2: Math.min(0, f) * 0.7 }; },
+    accent: x => [
+      ["nose", 0.8 * pulse(x.local, x.cue("nostrils"), 700)],
+      ["pharynx", 0.8 * pulse(x.local, x.cue("pharynx"), 700)],
+      [["larynx", "larynxMuscles"], 0.8 * pulse(x.local, x.cue("larynx"), 700)],
+      ["trachea", 0.8 * pulse(x.local, x.cue("trachea"), 700)],
+      ["bronchi", 0.7 * pulse(x.local, x.cue("bronchi and"), 800)],
+      [["alveoli", "bloodVessels"], 0.9 * pulse(x.local, x.cue("alveoli,"), 900)],
+    ],
+    labels: x => [
+      label(x, "Nostrils", [["Nostril_L", "Nostril_R"]], "nostrils", { hold: 2600 }),
+      label(x, "Pharynx", ["pharynx"], "pharynx", { hold: 2000 }),
+      label(x, "Larynx", [["Thyroid_Cartilage"]], "larynx", { hold: 2200 }),
+      label(x, "Trachea", [mark("trachea")], "trachea", { hold: 2600 }),
+      label(x, "Bronchi", [mark("bronchusL"), mark("bronchusR")], "bronchi and", { hold: 2200 }),
+      label(x, "Bronchioles", [leafToward("L"), leafToward("R")], "bronchioles,", { hold: 2200 }),
+      label(x, "Alveoli", [leafToward("L", true), leafToward("R", true)], "alveoli,", { hold: 3200 }),
+    ],
+    minMs: 18000,
+  },
+];
+
+function splitSentences(text) {
+  const out = [], re = /[^.!?]+[.!?]*\s*/g; let m;
+  while ((m = re.exec(text))) if (m[0].trim()) out.push({ text: m[0].trim(), start: m.index, end: m.index + m[0].length });
+  return out;
+}
+const normFlow = f => (typeof f === "number" ? { i: f, reach: 1 } : f ? { i: f.i ?? 0, reach: f.reach ?? 1 } : { i: 0, reach: 1 });
+
+class LessonTimeline {
+  constructor(sections, deps) {
+    this.deps = deps;                                   // { registry, materials, camera, airflow, speech }
+    let t = 0;
+    this.sections = sections.map((s, index) => {
+      const speechMs = deps.speech.durationMs(s);
+      const lead = s.leadMs ?? CONFIG.speechLeadMs;
+      const dur = Math.max(s.minMs ?? 0, lead + speechMs + (s.tailMs ?? CONFIG.sectionTailMs));
+      const shot = { ...s.shot };
+      if (typeof shot.centerOn === "string") shot.centerOn = deps.airflow.landmarks[shot.centerOn] || undefined;
+      if (typeof shot.sphere === "function") shot.sphere = shot.sphere(deps) || undefined;
+      if (shot.alignTo === "heroCut" && deps.airflow.heroCutDir) {       // look straight into the cut-open acinus
+        const [az, el] = deps.camera.azElOf(deps.airflow.heroCutDir);
+        shot.az = az + (shot.azOffset ?? 0); shot.el = el + (shot.elOffset ?? 0);
+      }
+      const sec = { ...s, shot, index, start: t, dur, end: t + dur, lead, speechMs,
+        transitionMs: s.transitionMs ?? CONFIG.transitionMs, look: deps.materials.buildLook(s.look),
+        sentences: splitSentences(s.narration), cueCache: new Map() };
+      t += dur;
+      return sec;
+    });
+    this.total = t;
+    this.lookBuf = new Float32Array(deps.materials.count * 3);
+    this.accents = new Map();
+    for (const sec of this.sections) {
+      sec.endCtx = this.ctx(sec, sec.dur);
+      sec.endFlows = sec.flows ? sec.flows(sec.endCtx) : {};
+      sec.endBreath = sec.breath ? sec.breath(sec.endCtx) : 0;
+      sec.endBlood = sec.blood ? sec.blood(sec.endCtx) : 0;
+    }
+  }
+  ctx(sec, local) {
+    return {
+      local, dur: sec.dur, p: clamp(local / sec.dur), lead: sec.lead, speechMs: sec.speechMs,
+      narr: clamp((local - sec.lead) / sec.speechMs),
+      cue: (word, offset = 0) => {
+        let c = sec.cueCache.get(word);
+        if (c === undefined) {
+          const i = sec.narration.toLowerCase().indexOf(word.toLowerCase());
+          if (i < 0) console.warn(`cue "${word}" not found in scene ${sec.id}`);
+          c = sec.lead + (Math.max(0, i) / sec.narration.length) * sec.speechMs;
+          sec.cueCache.set(word, c);
+        }
+        return c + offset;
+      },
+      mark: name => this.deps.airflow.mark(name),
+    };
+  }
+  sectionAt(T) {
+    const s = this.sections;
+    for (let i = s.length - 1; i >= 0; i--) if (T >= s[i].start) return s[i];
+    return s[0];
+  }
+  evaluate(T) {
+    T = clamp(T, 0, this.total);
+    const sec = this.sectionAt(T), prev = this.sections[sec.index - 1];
+    const local = Math.min(T - sec.start, sec.dur), x = this.ctx(sec, local);
+    const { camera, registry } = this.deps;
+
+    // camera: previous scene's closing shot → this scene's shot
+    let pose = camera.pose(sec.shot, local, x.p);
+    if (prev && local < sec.transitionMs) pose = camera.blend(camera.pose(prev.shot, prev.dur, 1), pose, easeInOut(local / sec.transitionMs));
+
+    // anatomy look
+    const tl = prev ? smooth(local / Math.min(sec.transitionMs, 2200)) : 1;
+    const look = tl < 1 ? MaterialSystem.blendLooks(prev.look, sec.look, tl, this.lookBuf) : sec.look;
+    this.accents.clear();
+    if (sec.accent) for (const [keys, amount] of sec.accent(x)) {
+      if (amount < 0.01) continue;
+      for (const m of registry.get(keys)) this.accents.set(m, Math.max(this.accents.get(m) || 0, amount));
+    }
+
+    // airflow (short cross-fade so streams never pop)
+    const tf = prev ? smooth(local / 1400) : 1;
+    const cur = sec.flows ? sec.flows(x) : {};
+    let flows = cur;
+    if (tf < 1) {
+      flows = {};
+      for (const k of new Set([...Object.keys(prev.endFlows), ...Object.keys(cur)])) {
+        const a = normFlow(prev.endFlows[k]), b = normFlow(cur[k]);
+        flows[k] = { i: lerp(a.i, b.i, tf), reach: lerp(a.reach, b.reach, tf) };
+      }
+    }
+
+    // breathing and blood oxygenation (the alveoli themselves are static GLB geometry)
+    const tb = prev ? smooth(local / 1800) : 1;
+    const breath = lerp(prev ? prev.endBreath : 0, sec.breath ? sec.breath(x) : 0, tb);
+    const blood = lerp(prev ? prev.endBlood : 0, sec.blood ? sec.blood(x) : 0, tb);
+
+    // subtitle: the sentence being spoken
+    let subtitle = "";
+    if (local > sec.lead - 150 && local < sec.lead + sec.speechMs + 900) {
+      const ch = x.narr * sec.narration.length;
+      subtitle = (sec.sentences.find(s => ch < s.end) || sec.sentences[sec.sentences.length - 1]).text;
+    }
+    const labels = sec.labels ? sec.labels(x) : [];
+    return { T, sec, local, x, pose, look, flows, breath, blood, subtitle, labels, legend: sec.legend ? sec.legend(x) : 0 };
+  }
+}
+
+// ===============================
+// LESSON PLAYER (clock · sync · seek)
+// ===============================
+// The lesson clock T drives everything. While a voice is speaking, the clock is gently slowed or sped
+// up to match the words actually spoken (onboundary, or elapsed-time fallback), and it holds at a
+// scene's end until the sentence finishes. Seeking just moves T — evaluate(T) rebuilds the whole state.
+class LessonPlayer {
+  constructor(timeline, speech) {
+    this.tl = timeline; this.speech = speech;
+    this.T = 0; this.playing = false; this.ended = false;
+    this.holdMs = 0; this.speechFor = -1; this.speakAt = 0; this.last = performance.now();
+    this.listeners = {};
+  }
+  on(evt, fn) { (this.listeners[evt] ||= []).push(fn); }
+  emit(evt) { (this.listeners[evt] || []).forEach(fn => fn()); }
+  play() {
+    if (this.ended || this.T >= this.tl.total) { this.T = 0; this.ended = false; this.emit("seek"); }
+    this.playing = true; this.speechFor = -1; this.last = performance.now(); this.emit("state");
+  }
+  pause() { if (!this.playing) return; this.playing = false; this.speech.stop(); this.speechFor = -1; this.emit("state"); }
+  toggle() { this.playing ? this.pause() : this.play(); }
+  seek(ms) {
+    this.T = clamp(ms, 0, this.tl.total); this.ended = false; this.holdMs = 0;
+    this.speech.stop(); this.speechFor = -1; this.emit("seek");
+  }
+  restart() { this.seek(0); this.play(); }
+  replaySection() { this.seek(this.tl.sectionAt(this.T).start); if (!this.playing) this.play(); }
+  setMuted(m) { this.speech.setMuted(m); if (this.speech.kind === "browser") this.speech.stop(); this.speechFor = -1; this.emit("state"); }
+  tick(now) {
+    const dt = Math.min(now - this.last, 100); this.last = now;
+    if (!this.playing) return;
+    if (this.speech.kind === "cloud") {
+      // While a clip is audible the AUDIO clock is the master, so dropped frames can never pull
+      // picture and voice apart; during lead-ins and tails the frame clock takes over.
+      const cur = this.tl.sectionAt(this.T), heard = this.speech.position(cur);
+      this.T = heard != null ? Math.min(cur.start + cur.lead + heard * 1000, cur.end) : Math.min(this.T + dt, this.tl.total);
+      const sec = this.tl.sectionAt(this.T);
+      this.speech.sync(sec, this.T - sec.start);
+      if (this.T >= this.tl.total) {
+        this.playing = false; this.ended = true; this.speech.stop(); this.emit("end"); this.emit("state");
+      }
+      return;
+    }
+    const sec = this.tl.sectionAt(this.T), local = this.T - sec.start, len = sec.narration.length;
+    const voice = this.speech.supported && !this.speech.muted;
+
+    if (voice && this.speechFor !== sec.index && local >= sec.lead - 30) {
+      this.speech.speak(sec.narration, clamp((local - sec.lead) / sec.speechMs) * len);
+      this.speechFor = sec.index; this.speakAt = now;
+    }
+    const mine = voice && this.speechFor === sec.index && this.speech.active;
+    if (mine && !this.speech.chunk && now - this.speakAt > 3000) {
+      console.warn("Speech synthesis did not start — continuing on the estimated timeline.");
+      this.speech.stop();
+    }
+    let scale = 1;
+    if (mine && this.speech.chunk && local >= sec.lead) {
+      const d = clamp((local - sec.lead) / sec.speechMs) - this.speech.progress() / len;
+      scale = d > 0.05 ? (d > 0.15 ? 0.35 : 0.65) : d < -0.05 ? (d < -0.15 ? 1.8 : 1.3) : 1;
+    }
+    let next = this.T + dt * scale;
+    if (next >= sec.end) {
+      if (voice && this.speechFor === sec.index && this.speech.active) {
+        this.holdMs += dt;
+        if (this.holdMs < CONFIG.maxSpeechHoldMs) next = sec.end - 0.5;
+        else { this.speech.stop(); this.holdMs = 0; }
+      } else this.holdMs = 0;
+    }
+    this.T = next;
+    if (this.T >= this.tl.total) {
+      this.T = this.tl.total; this.playing = false; this.ended = true;
+      this.speech.stop(); this.emit("end"); this.emit("state");
+    }
+  }
+}
+
+// ===============================
+// VIDEO CONTROLS
+// ===============================
+class VideoControls {
+  constructor(player, timeline) {
+    this.player = player; this.tl = timeline; this.lastIndex = -1; this.lastSubtitle = "";
+    this.scrubbing = false;
+    $("trackTicks").innerHTML = timeline.sections.slice(1)
+      .map(s => `<i style="left:${((s.start / timeline.total) * 100).toFixed(3)}%"></i>`).join("");
+    $("btnPlay").onclick = () => player.toggle();
+    $("btnRestart").onclick = () => player.restart();
+    $("btnReplaySection").onclick = () => player.replaySection();
+    $("btnMute").onclick = () => player.setMuted(!player.speech.muted);
+    $("btnFullscreen").onclick = () => (document.fullscreenElement ? document.exitFullscreen() : document.documentElement.requestFullscreen?.());
+
+    const wrap = $("trackWrap"), tip = $("trackTip"), track = $("track");
+    const frac = e => { const r = track.getBoundingClientRect(); return clamp((e.clientX - r.left) / r.width); };
+    wrap.addEventListener("pointerdown", e => {
+      wrap.setPointerCapture(e.pointerId); this.scrubbing = true; this.wasPlaying = player.playing;
+      player.pause(); wrap.classList.add("drag"); player.seek(frac(e) * timeline.total);
+    });
+    wrap.addEventListener("pointermove", e => {
+      const f = frac(e), t = f * timeline.total, s = timeline.sectionAt(t);
+      tip.classList.remove("hidden"); tip.style.left = `${f * 100}%`;
+      tip.innerHTML = `${String(s.index + 1).padStart(2, "0")} · ${s.title}<em>${fmtTime(t)}</em>`;
+      if (this.scrubbing) player.seek(t);
+    });
+    const release = () => {
+      if (!this.scrubbing) return;
+      this.scrubbing = false; wrap.classList.remove("drag"); tip.classList.add("hidden");
+      if (this.wasPlaying) player.play();
+    };
+    wrap.addEventListener("pointerup", release);
+    wrap.addEventListener("pointercancel", release);
+    wrap.addEventListener("pointerleave", () => { if (!this.scrubbing) tip.classList.add("hidden"); });
+
+    addEventListener("keydown", e => {
+      if (e.target.closest?.("input, textarea") || !$("overlay").classList.contains("hidden")) return;
+      if (document.body.classList.contains("explore-mode")) return;            // explore mode has its own keys
+      if (e.key === "e" || e.key === "E") { $("btnExploreMode").click(); return; }
+      if (e.key === " " || e.key === "k") { e.preventDefault(); player.toggle(); }
+      else if (e.key === "ArrowRight") player.seek(player.T + 5000);
+      else if (e.key === "ArrowLeft") player.seek(player.T - 5000);
+      else if (e.key === "m" || e.key === "M") player.setMuted(!player.speech.muted);
+      else if (e.key === "r" || e.key === "R") player.replaySection();
+      else if (e.key === "f" || e.key === "F") $("btnFullscreen").click();
+    });
+
+    // auto-hide controls while the film plays, like a video player
+    let idleTimer = 0;
+    const wake = () => {
+      document.body.classList.remove("idle"); clearTimeout(idleTimer);
+      idleTimer = setTimeout(() => { if (player.playing && !this.scrubbing) document.body.classList.add("idle"); }, 2800);
+    };
+    ["pointermove", "pointerdown", "keydown", "touchstart"].forEach(ev => addEventListener(ev, wake, { passive: true }));
+    player.on("state", wake);
+  }
+  update(st) {
+    const p = this.player, pct = `${(st.T / this.tl.total) * 100}%`;
+    $("trackFill").style.width = pct; $("trackKnob").style.left = pct;
+    $("timeLabel").textContent = `${fmtTime(st.T)} / ${fmtTime(this.tl.total)}`;
+    if (st.sec.index !== this.lastIndex) {
+      this.lastIndex = st.sec.index;
+      $("chapterTitle").textContent = st.sec.title;
+      $("chapterText").textContent = st.sec.caption;
+      $("chapterCount").textContent = `${String(st.sec.index + 1).padStart(2, "0")} / ${String(this.tl.sections.length).padStart(2, "0")}`;
+      const card = $("chapter"); card.classList.remove("swap"); void card.offsetWidth; card.classList.add("swap");
+    }
+    $("chapterFill").style.width = `${clamp(st.local / st.sec.dur) * 100}%`;
+    const sub = $("subtitle"), text = p.ended ? "" : st.subtitle;
+    if (text && text !== this.lastSubtitle) { sub.textContent = text; sub.classList.remove("fade"); }
+    else if (!text && this.lastSubtitle) sub.classList.add("fade");
+    this.lastSubtitle = text;
+    $("legend").classList.toggle("on", st.legend > 0.5);
+    $("icoPlay").classList.toggle("hidden", p.playing); $("icoPause").classList.toggle("hidden", !p.playing);
+    $("btnPlay").setAttribute("aria-label", p.playing ? "Pause" : "Play");
+    $("icoVol").classList.toggle("hidden", p.speech.muted); $("icoMute").classList.toggle("hidden", !p.speech.muted);
+    const mode = $("modeLabel");
+    mode.textContent = p.playing ? "Cinematic" : "Interactive · drag to explore";
+    mode.classList.toggle("interactive", !p.playing);
+  }
+}
+
+// ===============================
+// EXPLORE MODE
+// ===============================
+// Model on the left, a list of parts on the right. Choosing a part (in the list or by clicking it in
+// the model) highlights it, fades everything else, flies the camera to it and labels it with an arrow.
+// Names map to the GLB through the same keys as ANATOMY_MAPPING.
+const EXPLORE_PARTS = [
+  { group: "Nose & throat" },
+  { id: "nostrils", name: "Nostrils", keys: [/^Nostril_/], desc: "The openings of the nose. Fine hairs and mucus inside trap dust and germs." },
+  { id: "noseCart", name: "Nasal cartilages", keys: ["Nasal_Cartilages"], desc: "Flexible cartilage that gives the outer nose its shape." },
+  { id: "nasalCavity", name: "Nasal cavity", keys: ["nasalCavity"], desc: "The air space behind the nose. It warms, moistens and filters the air we breathe in." },
+  { id: "conchae", name: "Nasal conchae", keys: ["conchae"], desc: "Curved shelves of bone in the nasal cavity that make the air swirl over the moist lining." },
+  { id: "pharynx", name: "Pharynx (throat)", keys: ["pharynx"], desc: "The passage behind the nose and mouth, shared by the air we breathe and the food we swallow." },
+  { group: "Larynx (voice box)" },
+  { id: "larynx", name: "Larynx", keys: ["larynx", "larynxMuscles"], desc: "A box of cartilage and muscle at the top of the trachea. It holds the vocal cords." },
+  { id: "epiglottis", parent: "larynx", name: "Epiglottis", keys: ["Epiglottis"], desc: "A flap that closes over the larynx when we swallow, so food does not enter the airway." },
+  { id: "thyroid", parent: "larynx", name: "Thyroid cartilage", keys: ["Thyroid_Cartilage"], desc: "The largest cartilage of the larynx — its front forms the Adam's apple." },
+  { id: "cricoid", parent: "larynx", name: "Cricoid cartilage", keys: ["Cricoid_Cartilage"], desc: "A complete ring of cartilage at the base of the larynx, just above the trachea." },
+  { id: "arytenoid", parent: "larynx", name: "Arytenoid cartilages", keys: [/^Arytenoid_Cartilage/, /^Corniculate_Cartilage/], desc: "Small cartilages that pivot to open and close the vocal cords." },
+  { id: "vocal", parent: "larynx", name: "Vocal cord muscles", keys: ["Vocalis", /^Thyroarytenoid/], desc: "Muscle inside the vocal cords. Air passing between the cords makes them vibrate to produce sound." },
+  { id: "larynxMuscles", parent: "larynx", name: "Other laryngeal muscles", keys: ["Arytenoid_Muscle", /^Cricothyroid/, /Cricoarytenoid/, /Aryepiglottic/, /Thyroepiglottic/], desc: "Muscles that open, close and tighten the vocal cords." },
+  { group: "Windpipe & bronchi" },
+  { id: "trachea", name: "Trachea (windpipe)", keys: ["trachea"], desc: "The tube from the larynx into the chest. Rings of cartilage keep it from collapsing." },
+  { id: "rings", parent: "trachea", name: "Cartilage rings", keys: [/^Cartilage_Ring_/], desc: "C-shaped rings of cartilage that hold the trachea open." },
+  { id: "trachealis", parent: "trachea", name: "Trachealis muscle", keys: ["Trachealis"], desc: "Smooth muscle that closes the open back of each C-shaped ring." },
+  { id: "mucosa", parent: "trachea", name: "Airway lining", keys: ["Tracheal_Mucosa"], desc: "The moist lining of the trachea and main bronchi, which traps dust and germs." },
+  { id: "bronchi", name: "Bronchi & bronchioles", keys: ["bronchi"], desc: "The trachea divides into two bronchi, which branch again and again inside the lungs into fine bronchioles." },
+  { group: "Lungs" },
+  { id: "lungs", name: "Lungs", keys: ["lungs"], desc: "Two spongy organs in the chest where air meets blood. The right lung has three lobes, the left has two." },
+  { id: "rSup", parent: "lungs", name: "Right upper lobe", keys: ["Lung_R_Superior"], desc: "The top lobe of the right lung." },
+  { id: "rMid", parent: "lungs", name: "Right middle lobe", keys: ["Lung_R_Middle"], desc: "The middle lobe — only the right lung has one." },
+  { id: "rInf", parent: "lungs", name: "Right lower lobe", keys: ["Lung_R_Inferior"], desc: "The bottom lobe of the right lung, resting on the diaphragm." },
+  { id: "lSup", parent: "lungs", name: "Left upper lobe", keys: ["Lung_L_Superior"], desc: "The top lobe of the left lung. The left lung is smaller, leaving room for the heart." },
+  { id: "lInf", parent: "lungs", name: "Left lower lobe", keys: ["Lung_L_Inferior"], desc: "The bottom lobe of the left lung." },
+  { group: "Alveoli & blood" },
+  { id: "alveoli", name: "Alveoli (air sacs)", keys: ["alveoli", "heroAcinus"], desc: "Clusters of tiny air sacs at the end of every bronchiole. Gas exchange happens across their thin walls. (Shown enlarged.)" },
+  { id: "hero", parent: "alveoli", name: "Alveoli — cut open", keys: ["heroAcinus"], hero: true, rest: 0.015, context: { bloodVessels: 0.9, alveoli: 0.02, lungs: 0.01 }, desc: "One cluster sliced open: alveolar ducts with the cup-shaped alveoli opening off them." },
+  { id: "capillaries", parent: "alveoli", name: "Blood capillaries", keys: ["bloodVessels"], hero: true, rest: 0.015, context: { heroAcinus: 0.45, alveoli: 0.02, lungs: 0.01 }, desc: "A mesh of thin blood vessels over the alveoli. Oxygen passes into this blood; carbon dioxide passes out." },
+  { group: "Breathing muscles & chest" },
+  { id: "diaphragm", name: "Diaphragm", keys: ["diaphragm"], desc: "A dome of muscle under the lungs. It contracts and flattens when we breathe in, and relaxes upward when we breathe out." },
+  { id: "ribs", name: "Ribs", keys: [/^Rib_/], desc: "Twelve pairs of ribs protect the lungs. They move up and out when we breathe in." },
+  { id: "costal", parent: "ribs", name: "Costal cartilages", keys: [/^Costal_Cartilage/], desc: "Cartilage joining the ribs to the breastbone, letting the chest expand." },
+  { id: "sternum", name: "Sternum (breastbone)", keys: ["Manubrium", "Sternum_Body", "Xiphoid"], desc: "The flat bone at the front of the chest that the ribs attach to." },
+  { id: "vertebrae", name: "Thoracic vertebrae", keys: [/^Vertebra_/], desc: "The twelve backbones of the chest; each pair of ribs joins one of them." },
+];
+
+class ExploreMode {
+  constructor({ stage, registry, materials, camCtl, airflow, labels, player, controls, onExit }) {
+    Object.assign(this, { stage, registry, materials, camCtl, airflow, labels, player, controls, onExit });
+    this.active = false; this.selected = null; this.selectedAt = 0;
+    this.parts = EXPLORE_PARTS.filter(p => p.id).map(p => ({ ...p, meshes: registry.get(p.keys) })).filter(p => p.meshes.length);
+    // a mesh clicked in the model selects the most specific part that contains it
+    this.partOf = new Map();
+    for (const p of [...this.parts].sort((a, b) => b.meshes.length - a.meshes.length)) p.meshes.forEach(m => this.partOf.set(m, p));
+    this.allKeys = Object.keys(ANATOMY_MAPPING);
+    this.look = new Float32Array(materials.count * 3);
+    this.target = materials.buildLook({ all: true });
+    this.look.set(this.target);
+    this.accents = new Map();
+    this.renderList("");
+    $("exFilter").addEventListener("input", e => this.renderList(e.target.value));
+    $("exShowAll").onclick = () => this.select(null);
+    $("exBack").onclick = () => this.exit();
+    addEventListener("keydown", e => {
+      if (!this.active) return;
+      if (e.key === "Escape") { if (this.selected) this.select(null); else this.exit(); }
+    });
+    const canvas = stage.renderer.domElement, ray = new THREE.Raycaster(), ndc = new THREE.Vector2();
+    let down = null;
+    canvas.addEventListener("pointerdown", e => { down = [e.clientX, e.clientY]; });
+    canvas.addEventListener("pointerup", e => {
+      if (!this.active || !down || Math.hypot(e.clientX - down[0], e.clientY - down[1]) > 5) return;
+      const r = canvas.getBoundingClientRect();
+      ndc.set(((e.clientX - r.left) / r.width) * 2 - 1, -((e.clientY - r.top) / r.height) * 2 + 1);
+      ray.setFromCamera(ndc, stage.camera);
+      const hits = ray.intersectObjects(registry.meshes.filter(m => m.visible), false);
+      // click through see-through glass (lungs, faded parts) to the solid part behind it
+      const hit = hits.find(h => (h.object.material.opacity ?? 1) >= 0.5 && !h.object.material.transparent) || hits.find(h => (h.object.material.opacity ?? 1) >= 0.3) || hits[0];
+      const part = hit && this.partOf.get(hit.object);
+      this.select(part && part !== this.selected ? part : null, { scroll: true });
+    });
+  }
+  swatch(p) {
+    const m = p.meshes[0], cat = this.registry.categoryOf.get(m);
+    const key = CARTILAGE_PATTERN.test(m.name) ? "cartilage" : (CATEGORY_COLOR[cat] || "airway");
+    return `#${new THREE.Color(COLORS[key]).getHexString()}`;
+  }
+  renderList(filter) {
+    const f = filter.trim().toLowerCase(), esc = t => String(t).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+    const byId = new Map(this.parts.map(p => [p.id, p]));
+    let html = "", group = null, pendingGroup = null, shown = 0;
+    for (const entry of EXPLORE_PARTS) {
+      if (entry.group) { pendingGroup = entry.group; continue; }
+      const p = byId.get(entry.id); if (!p) continue;
+      if (f && !(p.name.toLowerCase().includes(f) || p.desc.toLowerCase().includes(f))) continue;
+      if (pendingGroup !== group) { html += `<div class="ex-group">${esc(pendingGroup)}</div>`; group = pendingGroup; }
+      html += `<button class="ex-item${p.parent ? " child" : ""}${p === this.selected ? " sel" : ""}" data-id="${p.id}" aria-pressed="${p === this.selected}"><i style="background:${this.swatch(p)}"></i>${esc(p.name)}</button>`;
+      shown++;
+    }
+    $("exList").innerHTML = shown ? html : `<div class="ex-empty">No part matches “${esc(filter)}”.</div>`;
+    $("exList").querySelectorAll(".ex-item").forEach(el => {
+      el.onclick = () => { const p = byId.get(el.dataset.id); this.select(p === this.selected ? null : p); };
+    });
+  }
+  enter() {
+    if (this.active) return;
+    this.active = true; this.player.pause();
+    document.body.classList.add("explore-mode"); $("explorePanel").classList.remove("hidden");
+    ["overlay", "startCard", "endCard"].forEach(id => $(id).classList.add("hidden"));
+    this.stage.resize();
+    this.select(null);
+  }
+  exit() {
+    if (!this.active) return;
+    this.active = false; this.selected = null; this.camCtl.tween = null;
+    document.body.classList.remove("explore-mode"); $("explorePanel").classList.add("hidden");
+    this.stage.resize();
+    this.onExit?.();
+  }
+  currentDir() { return this.stage.camera.position.clone().sub(this.controls.target).normalize(); }
+  select(part, { scroll = false } = {}) {
+    this.selected = part; this.selectedAt = performance.now();
+    $("exTitle").textContent = part ? part.name : "All parts";
+    $("exDesc").textContent = part ? part.desc : "Pick a part from the list, or click it in the model. Drag to rotate, scroll to zoom.";
+    this.renderList($("exFilter").value);
+    if (scroll && part) $("exList").querySelector(`[data-id="${part.id}"]`)?.scrollIntoView({ block: "nearest", behavior: "smooth" });
+    // big see-through organs would veil the chosen part, so they fade further than the rest
+    this.target = part ? this.materials.buildLook({ focus: part.keys, context: { lungs: 0.035, alveoli: 0.03, ...(part.context || {}) }, rest: part.rest ?? 0.07 })
+                       : this.materials.buildLook({ all: true });
+    const heroDir = part?.hero && this.airflow.heroCutDir ? this.airflow.heroCutDir.clone().add(new THREE.Vector3(0, 0.25, 0)).normalize() : null;
+    const keys = part ? part.keys : this.allKeys;
+    // small parts get more room around them than big ones, so both read at a comfortable size
+    const size = this.registry.box(keys).getBoundingSphere(new THREE.Sphere()).radius / this.camCtl.modelRadius;
+    this.shot = { target: keys, padding: part ? (part.hero ? 0.95 : lerp(2.4, 1.25, clamp((size - 0.03) / 0.3))) : 1.05 };
+    // a clear front three-quarter view for every part; the cut-open alveoli are viewed into their cut
+    const dir = heroDir || this.camCtl.direction(24, 9);
+    [this.shot.az, this.shot.el] = this.camCtl.azElOf(dir);
+    this.camCtl.animateCameraTo(keys, { duration: 1300, padding: this.shot.padding, dir, from: this.camCtl.poseFromCamera(this.controls.target) });
+  }
+  update(now, dtMs) {
+    const k = 1 - Math.exp(-dtMs / 140);
+    for (let i = 0; i < this.look.length; i++) this.look[i] += (this.target[i] - this.look[i]) * k;
+    this.accents.clear();
+    if (this.selected) {
+      const a = 0.45 * Math.exp(-(now - this.selectedAt) / 600);
+      if (a > 0.01) this.selected.meshes.forEach(m => this.accents.set(m, a));
+    }
+    this.materials.apply(this.look, this.accents, 0.55, now);
+  }
+  // the selected part's name tag + arrow, drawn by the lesson's label system
+  labelState() {
+    const p = this.selected;
+    if (!p) return { labels: [] };
+    const fade = ramp(performance.now() - this.selectedAt, 900, 1300);
+    return { sec: { id: `explore-${p.id}`, shot: this.shot, dur: 1 }, labels: [{ text: p.name, at: [p.keys], amount: fade }] };
+  }
+}
+
+// ===============================
+// DEBUG MODE
+// ===============================
+class DebugInspector {
+  constructor({ stage, registry, materials, camCtl, airway, player }) {
+    Object.assign(this, { stage, registry, materials, camCtl, airway, player });
+    this.selected = null; this.isolate = false;
+    document.body.classList.add("debug-mode");
+    const panel = $("debugPanel"); panel.classList.remove("hidden");
+    const mapped = registry.meshes.length - registry.unmapped.length;
+    panel.innerHTML = `<header><h3>Anatomy inspector</h3>
+      <div class="stats">${registry.meshes.length} meshes · ${mapped} mapped · ${registry.unmapped.length} unmapped<br>Pause, then click a mesh in the scene — or pick one below.</div>
+      <input id="dbgSearch" placeholder="Filter by name or category…" autocomplete="off"></header>
+      <div class="list" id="dbgList"></div><div class="info" id="dbgInfo">Nothing selected.</div>`;
+    $("dbgSearch").addEventListener("input", e => this.renderList(e.target.value));
+    this.renderList("");
+    const canvas = stage.renderer.domElement, ray = new THREE.Raycaster(), ndc = new THREE.Vector2();
+    let down = null;
+    canvas.addEventListener("pointerdown", e => { down = [e.clientX, e.clientY]; });
+    canvas.addEventListener("pointerup", e => {
+      if (!down || player.playing || Math.hypot(e.clientX - down[0], e.clientY - down[1]) > 5) return;
+      const r = canvas.getBoundingClientRect();
+      ndc.set(((e.clientX - r.left) / r.width) * 2 - 1, -((e.clientY - r.top) / r.height) * 2 + 1);
+      ray.setFromCamera(ndc, stage.camera);
+      const hit = ray.intersectObjects(registry.meshes.filter(m => m.visible), false)[0];
+      this.select(hit ? hit.object : null);
+    });
+  }
+  renderList(filter) {
+    const f = filter.trim().toLowerCase(), groups = new Map();
+    const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+    for (const m of this.registry.meshes) {
+      const cat = this.registry.categoryOf.get(m) || "";
+      if (f && !m.name.toLowerCase().includes(f) && !cat.toLowerCase().includes(f)) continue;
+      const g = m.parent?.name || "(root)";
+      if (!groups.has(g)) groups.set(g, []);
+      groups.get(g).push(m);
+    }
+    $("dbgList").innerHTML = [...groups].map(([g, ms]) => `<div class="grp">${esc(g)} · ${ms.length}</div>` + ms.map(m => {
+      const cat = this.registry.categoryOf.get(m);
+      return `<div class="item${m === this.selected ? " sel" : ""}" data-i="${m.userData.index}"><span>${esc(m.name)}</span><span class="chip${cat ? "" : " none"}">${cat || "unmapped"}</span></div>`;
+    }).join("")).join("");
+    $("dbgList").querySelectorAll(".item").forEach(el => { el.onclick = () => this.select(this.registry.meshes[+el.dataset.i]); });
+  }
+  select(mesh) {
+    this.selected = mesh;
+    this.materials.override = mesh ? { mesh, isolate: this.isolate } : null;
+    this.renderList($("dbgSearch").value);
+    const info = $("dbgInfo");
+    if (!mesh) { info.textContent = "Nothing selected."; return; }
+    const v = p => `(${p.x.toFixed(4)}, ${p.y.toFixed(4)}, ${p.z.toFixed(4)})`;
+    const box = new THREE.Box3().setFromObject(mesh), size = box.getSize(new THREE.Vector3());
+    info.innerHTML = `<b>${mesh.name}</b><br>parent: ${mesh.parent?.name || "—"}<br>category: ${this.registry.categoryOf.get(mesh) || "<span style='color:#ff9a9a'>unmapped</span>"}
+      <br>world position: ${v(mesh.getWorldPosition(new THREE.Vector3()))}<br>bbox min: ${v(box.min)}<br>bbox max: ${v(box.max)}<br>bbox size: ${v(size)}
+      <br>vertices: ${mesh.geometry.attributes.position.count.toLocaleString()}<br>morph targets: ${Object.keys(mesh.morphTargetDictionary || {}).join(", ") || "—"}
+      <div class="row"><button id="dbgFocus">Focus camera</button><button id="dbgIso">${this.isolate ? "Show all" : "Isolate"}</button><button id="dbgClear">Clear</button><button id="dbgCopy">Copy mapping JSON</button></div>
+      <div class="row"><button id="dbgTree">${this.treeLines?.visible ? "Hide" : "Show"} airway centreline</button></div>`;
+    $("dbgFocus").onclick = () => { this.player.pause(); this.camCtl.animateCameraTo(mesh.name, { duration: 1400, padding: 2.2 }); };
+    $("dbgIso").onclick = () => { this.isolate = !this.isolate; this.select(mesh); };
+    $("dbgClear").onclick = () => this.select(null);
+    $("dbgCopy").onclick = () => navigator.clipboard?.writeText(this.mappingJSON()).then(() => { $("dbgCopy").textContent = "Copied"; });
+    $("dbgTree").onclick = () => { this.toggleTree(); this.select(mesh); };
+  }
+  // the exported centreline the airflow follows, drawn over the model
+  toggleTree() {
+    if (!this.airway?.ok) return;
+    if (!this.treeLines) {
+      const W = this.airway, pos = [];
+      W.nodes.forEach(n => { if (n.parent >= 0) pos.push(...W.nodes[n.parent].pos.toArray(), ...n.pos.toArray()); });
+      const g = new THREE.BufferGeometry(); g.setAttribute("position", new THREE.Float32BufferAttribute(pos, 3));
+      this.treeLines = new THREE.LineSegments(g, new THREE.LineBasicMaterial({ color: 0x7fe3ff, depthTest: false, transparent: true, opacity: 0.9 }));
+      this.treeLines.renderOrder = 30; this.treeLines.visible = false; this.stage.scene.add(this.treeLines);
+    }
+    this.treeLines.visible = !this.treeLines.visible;
+  }
+  mappingJSON() {
+    const out = {};
+    for (const [k, list] of Object.entries(this.registry.categories)) out[k] = list.map(m => m.name);
+    out.unmapped = this.registry.unmapped.map(m => m.name);
+    return JSON.stringify(out, null, 2);
+  }
+}
+
+// ===============================
+// BOOT
+// ===============================
+async function boot() {
+  const stage = new Stage($("stage"));
+  stage.render();
+  const loader = new ModelLoader((frac, bytes) => {
+    if (frac != null) { $("loadMeter").style.width = `${Math.round(frac * 100)}%`; $("loadText").textContent = `Loading the anatomical model… ${Math.round(frac * 100)}%`; }
+    else if (bytes) $("loadText").textContent = `Loading the anatomical model… ${(bytes / 1048576).toFixed(1)} MB`;
+  });
+  let gltf;
+  try { gltf = await loader.loadFromPath(GLB_PATH); }
+  catch (err) {
+    console.warn("GLB could not be fetched:", err);
+    gltf = await loader.askForFile(location.protocol === "file:" ? "This page was opened from file://, which cannot read neighbouring files." : String(err?.message || err));
+  }
+  $("loadMeter").style.width = "100%"; $("loadText").textContent = "Preparing the scene…";
+  await new Promise(r => setTimeout(r, 30));
+
+  const root = gltf.scene; stage.scene.add(root);
+  const registry = new AnatomyRegistry(root);
+  registry.report();                                             // discover the mesh names first
+  const materials = new MaterialSystem(registry);
+  const breathing = new BreathingRig(registry);
+  const airway = new AirwayData(root);
+  const camCtl = new CameraController(stage, registry);
+  const airflow = new AirflowSystem(stage, registry, airway, camCtl.anterior, camCtl.modelRadius);
+  let speech = new SpeechEngine(), ttsNote = "";
+  if (TTS.provider === "google" && TTS.apiKey) {
+    try {
+      const cloud = new CloudNarrator();
+      $("loadMeter").style.width = "0%";
+      $("loadText").textContent = "Preparing narration…";
+      await cloud.prepare(LESSON, (done, total) => {
+        $("loadMeter").style.width = `${Math.round((done / total) * 100)}%`;
+        $("loadText").textContent = `Preparing narration… ${done} / ${total}`;
+      });
+      speech = cloud;
+    } catch (err) {
+      console.warn("Google Cloud TTS unavailable — using the browser voice instead:", err);
+      ttsNote = `Google voice unavailable (${err.message}) — using the browser voice.`;
+    }
+  }
+  const timeline = new LessonTimeline(LESSON, { registry, materials, camera: camCtl, airflow, speech });
+  const player = new LessonPlayer(timeline, speech);
+  const ui = new VideoControls(player, timeline);
+  const labels = new LabelSystem(stage, { registry, airflow, camera: camCtl });
+  labels.prewarm(timeline);
+  let explore = null;                                                // created once the controls exist
+
+  const controls = new OrbitControls(stage.camera, stage.renderer.domElement);
+  Object.assign(controls, { enableDamping: true, dampingFactor: 0.08, screenSpacePanning: true, enabled: false,
+    minDistance: camCtl.modelRadius * 1e-4, maxDistance: camCtl.modelRadius * 8 });
+
+  // camera authority: the timeline while playing, the viewer while paused
+  let snap = true, userMoved = false, resume = null;
+  controls.addEventListener("start", () => { userMoved = true; });
+  player.on("seek", () => { snap = true; userMoved = false; resume = null; });
+  player.on("state", () => {
+    if (player.playing && userMoved) { resume = { from: camCtl.poseFromCamera(controls.target), start: performance.now() }; userMoved = false; }
+  });
+  const show = (id, on = true) => $(id).classList.toggle("hidden", !on);
+  player.on("end", () => { if (!explore?.active) { show("overlay"); show("startCard", false); show("endCard"); } });
+  explore = new ExploreMode({ stage, registry, materials, camCtl, airflow, labels, player, controls,
+    onExit: () => { snap = true; userMoved = false; resume = null; if (player.T > 0 || !$("controls").classList.contains("hidden")) { show("controls"); show("chapter"); } else show("overlay"), show("startCard"); } });
+  $("btnExploreMode").onclick = () => explore.enter();
+  $("btnStartExplore").onclick = () => explore.enter();
+
+  window.lesson = { THREE, stage, registry, materials, breathing, airway, camera: camCtl, airflow, labels, explore, speech, timeline, player, controls };
+
+  let lastNow = performance.now();
+  function frame(now) {
+    requestAnimationFrame(frame);
+    const dt = Math.min(100, now - lastNow); lastNow = now;
+    if (explore.active) {                       // explore mode: free camera, chosen part highlighted
+      breathing.apply(0.35);
+      explore.update(now, dt);
+      airflow.update(now / 1000, {});
+      const tw = camCtl.updateTween(now);
+      if (tw) controls.target.copy(tw === true ? camCtl.tween.to.target : tw.to.target);
+      else { controls.enabled = true; controls.update(); camCtl.fitClipping(stage.camera.position.distanceTo(controls.target)); }
+      labels.update(explore.labelState(), stage.camera);
+      stage.render();
+      return;
+    }
+    player.tick(now);
+    const st = timeline.evaluate(player.T);
+    breathing.apply(st.breath);
+    materials.apply(st.look, timeline.accents, st.blood, st.T);
+    airflow.update(st.T / 1000, st.flows);
+
+    const tween = camCtl.updateTween(now);
+    if (tween) {
+      controls.target.copy(tween === true ? camCtl.tween.to.target : tween.to.target);
+      snap = false;                       // a pending snap must not overwrite the focused camera afterwards
+    } else if (player.playing || ui.scrubbing || snap) {
+      let pose = st.pose;
+      if (resume) {
+        const k = (now - resume.start) / 1200;
+        if (k < 1) pose = camCtl.blend(resume.from, pose, easeInOut(k)); else resume = null;
+      }
+      camCtl.apply(pose); controls.target.copy(pose.target); snap = false;
+    } else {
+      controls.update();
+      camCtl.fitClipping(stage.camera.position.distanceTo(controls.target));
+    }
+    controls.enabled = !player.playing;
+    ui.update(st);
+    labels.update(player.ended ? { ...st, labels: [] } : st, stage.camera);
+    stage.render();
+  }
+  requestAnimationFrame(frame);
+
+  show("loadCard", false);
+  $("startEyebrow").textContent = `3D lesson · ${timeline.sections.length} scenes · about ${Math.round(timeline.total / 60000)} min`;
+  const keys = "<br>Space play/pause · ← → seek · M mute · R replay scene · F fullscreen";
+  if (speech.kind === "cloud") $("startNote").innerHTML = `Narrated by Google Cloud TTS · ${TTS.voiceName} — turn your sound on.${keys}`;
+  else if (!speech.supported) $("startNote").innerHTML = `This browser has no speech synthesis — the lesson will play with subtitles only.${keys}`;
+  if (ttsNote) $("startNote").innerHTML = `${ttsNote}${keys}`;
+  const begin = () => {
+    speech.unlock();                    // browsers only allow audio to start inside a user gesture
+    show("overlay", false); show("controls"); show("chapter"); player.play();
+  };
+  $("btnStart").onclick = begin;
+  $("btnReplay").onclick = () => { show("overlay", false); show("endCard", false); player.restart(); };
+  $("btnExplore").onclick = () => { show("endCard", false); explore.enter(); };
+
+  if (DEBUG) {
+    show("overlay", false); show("controls"); show("chapter");
+    new DebugInspector({ stage, registry, materials, camCtl, airway, player });
+    stage.resize(); snap = true;
+  } else show("startCard");
+}
+
+boot().catch(err => {
+  console.error(err);
+  $("loadText").textContent = "Something went wrong while starting the lesson.";
+  $("loadNote").textContent = String(err?.message || err);
+});
+</script>
+</body>
+</html>

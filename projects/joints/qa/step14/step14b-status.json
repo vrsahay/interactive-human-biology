@@ -1,0 +1,149 @@
+{
+ "step": "14B",
+ "title": "Complete the teaching redesign: lesson architecture, narration, camera direction",
+ "status": "PASS",
+ "statusReason": "The three gaps that made Step 14 CONDITIONAL are closed: the lesson is the nine-chapter teaching arc the brief describes, every new instructional line is narrated, and chapter-level camera direction is authored and tested. Step 14 as a whole can now be called COMPLETE. This says nothing about public release, which remains blocked on expert review, real devices and the Step-12 performance misses.",
+ "generatedAt": "2026-09-18T12:05:00.000Z",
+ "branch": "step14b-teaching-completion",
+ "baseline": {
+  "step14Tag": "step14-conditional",
+  "step14Commit": "25c86a6",
+  "step13Tag": "step13-frozen-baseline",
+  "step13Commit": "537ac71",
+  "step12Status": "FAIL - unchanged by this step",
+  "step13Status": "FROZEN, expert review PENDING - unchanged by this step",
+  "publicReleaseReady": false
+ },
+ "lesson": {
+  "chapters": 9,
+  "shots": 39,
+  "durationMs": 275000,
+  "arc": ["hook", "concept", "example", "movement", "explore", "recall", "summary"],
+  "structure": [
+   { "number": "01", "id": "hook", "shots": ["intro.title", "hook.shoulder", "hook.elbow", "hook.question"] },
+   { "number": "02", "id": "what_is_joint", "shots": ["concept.meet", "concept.different", "intro.map"] },
+   { "number": "03", "id": "fixed", "shots": ["fixed.travel", "fixed.detail"] },
+   { "number": "04", "id": "pivot", "shots": ["pivot.travel", "pivot.rotate"] },
+   { "number": "05", "id": "ball_socket", "shots": ["ball.travel", "ball.shoulder", "ball.hip"] },
+   { "number": "06", "id": "hinge", "shots": ["hinge.travel", "hinge.source", "hinge.bones", "hinge.axis", "hinge.flexion", "hinge.extension", "hinge.try", "hinge.check", "hinge.support", "hinge.return", "hinge.knee"] },
+   { "number": "07", "id": "compare", "shots": ["compare.pullback", "compare.fixed", "compare.pivot", "compare.ball", "compare.hinge", "compare.together"] },
+   { "number": "08", "id": "recall", "shots": ["recall.open", "recall.challenge"] },
+   { "number": "09", "id": "body_map", "shots": ["map.intro", "map.fixed", "map.pivot", "map.ball", "map.hinge", "map.all"] }
+  ],
+  "movedNotRenamed": {
+   "recap.check": "hinge.check - the guided check is about the elbow, so it lives in the elbow chapter and no longer ends the lesson",
+   "recap.pullback": "compare.pullback - opens the comparison with nothing named yet",
+   "recap.compare": "map.all - closes the final body map"
+  },
+  "newShots": 17,
+  "newRigs": 0,
+  "newAssets": 0
+ },
+ "narration": {
+  "voice": "en-IN Chirp3-HD-Aoede (Google Cloud Text-to-Speech), MP3 24 kHz mono",
+  "keyHandling": "supplied through the environment at build time; never written to a file, a manifest or the web build (unit-tested)",
+  "shotClips": 38,
+  "shotsTotal": 39,
+  "silentShots": ["hinge.return"],
+  "silentShotReason": "a wordless transition with no caption and no instructional text; a test asserts it is the only one",
+  "cueClips": 16,
+  "cues": ["4 explore instructions", "5 recall questions", "5 recall reveals", "recall.incorrect", "recall.complete"],
+  "totalBytes": 749568,
+  "overflows": 0,
+  "contentRule": "assembled only from locale strings already on screen; no narration sentence was authored"
+ },
+ "camera": {
+  "chaptersWithAuthoredDirection": 9,
+  "consecutiveChaptersShareAnOpeningFraming": false,
+  "distinctSubjects": 5,
+  "exploreMoveMs": 1100,
+  "recallMoveMs": 900,
+  "siteFramingsInsideCloseupSpheres": true,
+  "frozenDeliveryManifestModified": false,
+  "note": "Chapters 03-06 keep Step 13's camera direction; re-cutting validated shots would risk the one validated thing in the product for no teaching gain."
+ },
+ "explore": {
+  "chaptersWithExplore": ["fixed", "pivot", "ball_socket", "hinge"],
+  "validatedRig": ["explore.hinge"],
+  "teachingSimulations": ["explore.fixed", "explore.pivot", "explore.ball"],
+  "engineChanged": false,
+  "statusAlwaysOnScreen": true
+ },
+ "recall": {
+  "ownChapter": true,
+  "chapterId": "recall",
+  "opensOnShot": "recall.challenge",
+  "handsOverAutomatically": true,
+  "questions": 5,
+  "steps": ["skull", "neck", "shoulder", "elbow", "knee"],
+  "categoryNeverInTheQuestion": true,
+  "wrongAnswerAllowsRetry": true,
+  "correctnessNotColourAlone": true,
+  "narrated": true,
+  "endsIntoChapter": "body_map",
+  "hipUsedAsAQuestion": false,
+  "hipReason": "ball-and-socket classification is PENDING EXPERT CONFIRMATION; a question would assert it"
+ },
+ "tests": {
+  "typecheck": "clean",
+  "unit": { "passed": 97, "failed": 0 },
+  "e2e": { "passed": 75, "failed": 0 },
+  "newSpec": { "file": "tests/e2e/step14b-lesson.spec.ts", "tests": 6, "covers": "the 13 required checks" },
+  "consoleErrors": 0
+ },
+ "defectsFoundAndFixed": [
+  "the retrieval panel could not open from its own chapter (grouped body not guaranteed); both learner-paced detours now await it",
+  "nine chapter markers overlapped at every desktop width, and fell below 44 px on a phone",
+  "a correct guided check snapped into the next shot before the confirmation could be read",
+  "End on the timeline could not reach the end of the lesson, so completion was unreachable by keyboard",
+  "the camera crawled to each recall question",
+  "on a narrow layout the panel covered the joint being asked about"
+ ],
+ "accessibility": {
+  "axeStates": 12,
+  "axeViolations": 0,
+  "measuredContrastRuns": 98,
+  "contrastBelowThreshold": 0,
+  "keyboardJourney": "all nine chapters, the guided check, and the end of the lesson - announced",
+  "reducedMotion": "all 39 shots cut on entry, hold framing, freeze indicators, no caption transition",
+  "viewports": [1280, 1440, 768, 412, 390, 375],
+  "screenReaderTested": false,
+  "screenReaderNote": "no real NVDA or VoiceOver test has been run; unchanged from Step 12"
+ },
+ "performance": {
+  "method": "A/B against the rebuilt Step-14 build, alternating on the reference profile",
+  "profile": "igpu-broadband - 1280x800, DPR 1, no CPU throttle, 50 Mbps emulated, real GPU",
+  "verdict": "no measurable difference; every gap tracks the CPU benchmark rather than the build",
+  "bytesBeforeFirst3D": { "step14": "543-564 KB", "step14b": "547 KB" },
+  "newGeometryOrTextures": 0,
+  "audioBytes": 749568,
+  "step12EmulatedMisses": "unchanged and still open: phone x4 emulated first 3D 2742 ms vs 2500 ms, interaction p95 45.1 ms vs 22 ms",
+  "mobileCertification": false
+ },
+ "provenance": {
+  "localeStrings": 194,
+  "byProvenance": { "figure-reference": 21, "ui": 112, "source-excerpt": 1, "draft-enrichment": 60 },
+  "newTeachingLines": 21,
+  "newTeachingLinesProvenance": "draft-enrichment, DRAFT badge on screen",
+  "newCurriculumClaims": 0,
+  "rewrittenStrings": ["intro.where", "recall.complete"],
+  "hipBallAndSocket": "PENDING EXPERT CONFIRMATION - unchanged",
+  "newCategories": 0,
+  "frozenFiles": { "listed": 29, "byteIdentical": 29 },
+  "step13ReviewPackageRegenerated": false
+ },
+ "openItems": [
+  "Step 12 remains FAIL: no real Android device, no real iPad, no real NVDA/VoiceOver test, two emulated x4 misses",
+  "Step 13 expert review remains PENDING: no curriculum, anatomy or accessibility expert has signed anything off",
+  "the hip's ball-and-socket classification remains PENDING EXPERT CONFIRMATION",
+  "every new teaching line is DRAFT and needs subject-expert review before release",
+  "the lesson is one lesson in one locale; nothing here makes it a platform"
+ ],
+ "doesNotClaim": [
+  "public release readiness",
+  "expert approval",
+  "device certification",
+  "screen-reader certification",
+  "that any teaching simulation is a validated biomechanical rig"
+ ]
+}

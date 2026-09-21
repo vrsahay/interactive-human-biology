@@ -1,0 +1,115 @@
+{
+ "step": 14,
+ "title": "Redesign the teaching methodology + universal Explore experience",
+ "status": "CONDITIONAL",
+ "statusReason": "The universal Explore system, the teaching motion for all four categories and the retrieval recap are built, tested and honest about what is a validated rig. The 9-chapter restructure asked for in the brief is not implemented, the new content has no narration, and chapter-level camera direction was not re-authored.",
+ "generatedAt": "2026-09-18T09:20:00.000Z",
+ "branch": "step14-teaching-redesign",
+ "baseline": {
+  "tag": "step13-frozen-baseline",
+  "commit": "537ac71",
+  "step12Status": "FAIL - unchanged by this step",
+  "step13Status": "FROZEN, expert review PENDING - unchanged by this step",
+  "publicReleaseReady": false,
+  "note": "Step 14 passing does not make the product release-ready and does not modify the Step-13 release baseline."
+ },
+ "teachingMethodology": {
+  "loop": ["body location", "zoom", "show movement", "explain", "connect to joint type", "explore", "recall"],
+  "implemented": ["body location", "zoom", "show movement", "explain", "connect to joint type", "explore", "recall"],
+  "chapterStructure": {
+   "target": 9,
+   "actual": 6,
+   "chapters": ["intro", "fixed", "pivot", "ball_socket", "hinge", "recap"],
+   "missing": ["01 hook", "02 what is a joint", "07 compare as its own chapter", "08 recall as its own chapter", "09 final body map as its own chapter"],
+   "note": "The retrieval sequence lives inside the existing recap chapter."
+  }
+ },
+ "exploreSystem": {
+  "contentDriven": true,
+  "engineKnowsAnatomy": false,
+  "addingAJointIsAContentChange": true,
+  "configs": [
+   { "id": "explore.fixed", "chapterId": "fixed", "motion": "resist", "status": "teaching-simulation", "groupsMoved": 1 },
+   { "id": "explore.pivot", "chapterId": "pivot", "motion": "oneAxis", "status": "teaching-simulation", "groupsMoved": 3 },
+   { "id": "explore.ball", "chapterId": "ball_socket", "motion": "twoAxis", "status": "teaching-simulation", "groupsMoved": 4 },
+   { "id": "explore.hinge", "chapterId": "hinge", "motion": "dof", "status": "validated-rig", "groupsMoved": 0 }
+  ],
+  "honesty": {
+   "statusAlwaysOnScreen": true,
+   "buildRefusesGroupDrivenValidatedRig": true,
+   "schematicNotesFromStep13": "unchanged",
+   "newAssets": 0,
+   "newRigs": 0
+  }
+ },
+ "recall": {
+  "chapterId": "recap",
+  "steps": ["skull", "neck", "shoulder", "elbow"],
+  "movementFirst": true,
+  "categoryNeverInTheQuestion": true,
+  "wrongAnswerAllowsRetry": true,
+  "correctnessNotColourAlone": true,
+  "bodyMapAfterRecall": true
+ },
+ "tests": {
+  "typecheck": "clean",
+  "unit": { "passed": 97, "failed": 0 },
+  "e2e": { "passed": 69, "failed": 0 },
+  "newSpecs": [
+   { "file": "tests/e2e/step14-explore.spec.ts", "tests": 7 },
+   { "file": "tests/e2e/step14-recall.spec.ts", "tests": 4 },
+   { "file": "tests/e2e/step14-responsive.spec.ts", "tests": 3 },
+   { "file": "tests/e2e/step14-a11y.spec.ts", "tests": 3 }
+  ],
+  "consoleErrors": 0
+ },
+ "accessibility": {
+  "axe": { "states": 12, "violations": 0, "incompletePerState": "1 (color-contrast over the WebGL canvas, which axe cannot judge)" },
+  "measuredContrast": { "textRuns": 98, "belowThreshold": 0, "lowest": { "ratio": 5.52, "required": 4.5, "element": "recall option" } },
+  "keyboardOnly": "arrows move, Shift coarse, R resets, Escape returns; recall answered with ordinary buttons",
+  "targets": "all new controls >= 44 px at 390 and 412 px",
+  "report": "qa/reports/step14.accessibility.json"
+ },
+ "performance": {
+  "method": "A/B: the Step-13 frozen build and the Step-14 build run alternately on the reference profile, because this machine benchmarks ~50% slower today than it did during Step 12R",
+  "profile": "igpu-broadband - 1280x800, DPR 1, no CPU throttle, 50 Mbps emulated, real GPU",
+  "comparablePass": {
+   "cpuBenchMs": { "step13": 104, "step14": 117 },
+   "firstMeaningful3DMs": { "step13": 852, "step14": 931 },
+   "introCompleteMs": { "step13": 1522, "step14": 1537 },
+   "elbowReadyAfterIntentMs": { "step13": 717, "step14": 711 },
+   "elbowDrag": { "step13": "59.9 fps, p95 17.9 ms", "step14": "60.0 fps, p95 17.9 ms" },
+   "orbit": { "step13": "56.9 fps", "step14": "57.0 fps" },
+   "recapPlayback": { "step13": "30 fps, 240 dropped", "step14": "30 fps, 240 dropped", "note": "identical in both builds and in all four runs; not introduced by this step" }
+  },
+  "newInteraction": {
+   "fixed": { "fps": 60, "inputLatencyP95Ms": 17.2 },
+   "pivot": { "fps": 60, "inputLatencyP95Ms": 17.3 },
+   "ball": { "fps": 60, "inputLatencyP95Ms": 17.3 },
+   "hinge": { "fps": 59.2, "inputLatencyP95Ms": 21.0 },
+   "targetMs": 22,
+   "report": "qa/reports/step14.perf.explore.json"
+  },
+  "step12EmulatedMisses": "unchanged and still open: phone x4 emulated first 3D 2742 ms vs 2500 ms, interaction p95 45.1 ms vs 22 ms"
+ },
+ "provenance": {
+  "newStrings": "all draft-enrichment, badged DRAFT, except reused figure-reference category names",
+  "newCurriculumClaims": 0,
+  "hipBallAndSocket": "PENDING EXPERT CONFIRMATION - unchanged from Step 13",
+  "frozenFiles": { "listed": 29, "byteIdentical": 29 },
+  "frozenDistHashes": "8 dist/ entries in frozen-build.json predate the post-freeze narration work that is part of the Step-13 commit; already superseded before this step began"
+ },
+ "openItems": [
+  "9-chapter restructure (hook, what is a joint, compare, recall and final body map as their own chapters) is NOT implemented",
+  "no narration for the Explore and recall content",
+  "chapter-level camera direction not re-authored",
+  "Step 12 remains FAIL: no real Android device, no real iPad, no real NVDA/VoiceOver test, two emulated x4 misses",
+  "Step 13 expert review remains PENDING: no curriculum, anatomy or accessibility expert has signed anything off"
+ ],
+ "doesNotClaim": [
+  "public release readiness",
+  "expert approval",
+  "device certification",
+  "that any teaching simulation is a validated biomechanical rig"
+ ]
+}

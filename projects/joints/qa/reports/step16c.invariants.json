@@ -1,0 +1,265 @@
+{
+ "generatedAt": "2026-09-21T10:31:58.108Z",
+ "exploreIsolation": [
+  {
+   "exploreId": "explore.fixed",
+   "status": "teaching-simulation",
+   "groupsMeasured": 35,
+   "declared": [
+    "skeleton.016.bone.closeup.skull.fixed.skull"
+   ],
+   "moved": [],
+   "unexpected": [],
+   "cameraMoved": 0,
+   "targetMoved": 0
+  },
+  {
+   "exploreId": "explore.pivot",
+   "status": "teaching-simulation",
+   "groupsMeasured": 35,
+   "declared": [
+    "skeleton.015.bone.closeup.skull",
+    "skeleton.016.bone.closeup.skull.fixed.skull",
+    "skeleton.033.teeth.closeup.skull"
+   ],
+   "moved": [
+    "skeleton.015.bone.closeup.skull",
+    "skeleton.016.bone.closeup.skull.fixed.skull",
+    "skeleton.033.teeth.closeup.skull"
+   ],
+   "unexpected": [],
+   "cameraMoved": 0,
+   "targetMoved": 0
+  },
+  {
+   "exploreId": "explore.ball",
+   "status": "teaching-simulation",
+   "groupsMeasured": 35,
+   "declared": [
+    "skeleton.005.bone.closeup.elbow_right.shoulder_right.ball_socket.shoulder_right.hinge.elbow_right.elbow_r_core",
+    "skeleton.004.bone.closeup.elbow_right.elbow_r_core",
+    "skeleton.006.bone.closeup.elbow_right.hinge.elbow_right.elbow_r_core",
+    "skeleton.003.bone.closeup.elbow_r_core"
+   ],
+   "moved": [
+    "skeleton.003.bone.closeup.elbow_r_core",
+    "skeleton.004.bone.closeup.elbow_right.elbow_r_core",
+    "skeleton.005.bone.closeup.elbow_right.shoulder_right.ball_socket.shoulder_right.hinge.elbow_right.elbow_r_core",
+    "skeleton.006.bone.closeup.elbow_right.hinge.elbow_right.elbow_r_core"
+   ],
+   "unexpected": [],
+   "cameraMoved": 0,
+   "targetMoved": 0
+  },
+  {
+   "exploreId": "explore.hinge",
+   "status": "validated-rig",
+   "groupsMeasured": 35,
+   "declared": [],
+   "moved": [],
+   "unexpected": [],
+   "cameraMoved": 0,
+   "targetMoved": 0
+  }
+ ],
+ "targetMoves": [
+  {
+   "exploreId": "explore.fixed",
+   "targetsMoved": [
+    "skeleton.016.bone.closeup.skull.fixed.skull"
+   ],
+   "contextGroupsHeldStill": 34
+  },
+  {
+   "exploreId": "explore.pivot",
+   "targetsMoved": [
+    "skeleton.015.bone.closeup.skull",
+    "skeleton.016.bone.closeup.skull.fixed.skull",
+    "skeleton.033.teeth.closeup.skull"
+   ],
+   "contextGroupsHeldStill": 32
+  },
+  {
+   "exploreId": "explore.ball",
+   "targetsMoved": [
+    "skeleton.003.bone.closeup.elbow_r_core",
+    "skeleton.004.bone.closeup.elbow_right.elbow_r_core",
+    "skeleton.005.bone.closeup.elbow_right.shoulder_right.ball_socket.shoulder_right.hinge.elbow_right.elbow_r_core",
+    "skeleton.006.bone.closeup.elbow_right.hinge.elbow_right.elbow_r_core"
+   ],
+   "contextGroupsHeldStill": 31
+  }
+ ],
+ "shoulderContext": {
+  "body.scapula_right": 0,
+  "body.humerus_left": 0,
+  "body.frontal_bone": 0,
+  "body.mandible": 0,
+  "body.hip_bone_right": 0,
+  "body.femur_right": 0,
+  "body.atlas_c1": 0
+ },
+ "audioOwnership": {
+  "samples": 2842,
+  "maxSimultaneousOwners": 1,
+  "overlapSamples": 0
+ },
+ "exploreAudio": {
+  "inside": {
+   "owner": "cue",
+   "paused": true
+  },
+  "outside": {
+   "owner": "none",
+   "cuePlaying": false
+  }
+ },
+ "seekAgreement": [
+  {
+   "case": "inside the same shot",
+   "seekMs": 58100,
+   "shot": "fixed.bones",
+   "captionShot": "fixed.bones",
+   "clip": "fixed.bones.mp3",
+   "owners": 0,
+   "ended": false
+  },
+  {
+   "case": "into another shot",
+   "seekMs": 110400,
+   "shot": "pivot.rotate",
+   "captionShot": "pivot.rotate",
+   "clip": "pivot.rotate.mp3",
+   "owners": 0,
+   "ended": false
+  },
+  {
+   "case": "across chapters",
+   "seekMs": 204800,
+   "shot": "hinge.axis",
+   "captionShot": "hinge.axis",
+   "clip": "hinge.axis.mp3",
+   "owners": 0,
+   "ended": false
+  },
+  {
+   "case": "exactly on a chapter boundary",
+   "seekMs": 299000,
+   "shot": "compare.pullback",
+   "captionShot": "compare.pullback",
+   "clip": "compare.pullback.mp3",
+   "owners": 0,
+   "ended": false
+  },
+  {
+   "case": "one millisecond before a boundary",
+   "seekMs": 298999,
+   "shot": "hinge.knee",
+   "captionShot": "hinge.knee",
+   "clip": "hinge.knee.mp3",
+   "owners": 0,
+   "ended": false
+  },
+  {
+   "case": "the end of the lesson",
+   "seekMs": 381300,
+   "shot": "map.all",
+   "captionShot": null,
+   "clip": "map.all.mp3",
+   "owners": 0,
+   "ended": true
+  }
+ ],
+ "chapterNavigation": [
+  {
+   "jump": "2 -> 4",
+   "chapterIndex": 4,
+   "shot": "ball.travel",
+   "clip": "ball.travel.mp3",
+   "owners": 0
+  },
+  {
+   "jump": "4 -> 3",
+   "chapterIndex": 3,
+   "shot": "pivot.travel",
+   "clip": "pivot.travel.mp3",
+   "owners": 0
+  },
+  {
+   "jump": "5 -> 0",
+   "chapterIndex": 0,
+   "shot": "intro.title",
+   "clip": "intro.title.mp3",
+   "owners": 0
+  },
+  {
+   "jump": "0 -> 8",
+   "chapterIndex": 8,
+   "shot": "map.intro",
+   "clip": "map.intro.mp3",
+   "owners": 0
+  }
+ ],
+ "frameDrop": [
+  {
+   "fps": 15,
+   "lessonMs": 5034,
+   "wallMs": 5084,
+   "clipAdvancedS": 5.08,
+   "lessonRatio": 0.99,
+   "narrationVsLesson": 1.009
+  },
+  {
+   "fps": 10,
+   "lessonMs": 5101,
+   "wallMs": 5114,
+   "clipAdvancedS": 5.11,
+   "lessonRatio": 0.997,
+   "narrationVsLesson": 1.003
+  },
+  {
+   "fps": 5,
+   "lessonMs": 5217,
+   "wallMs": 5206,
+   "clipAdvancedS": 5.21,
+   "lessonRatio": 1.002,
+   "narrationVsLesson": 0.999
+  },
+  {
+   "fps": 4,
+   "lessonMs": 5200,
+   "wallMs": 5283,
+   "clipAdvancedS": 5.27,
+   "lessonRatio": 0.984,
+   "narrationVsLesson": 1.014
+  }
+ ],
+ "elbow": {
+  "dof": {
+   "id": "flexion",
+   "min": 0,
+   "max": 145,
+   "neutral": 0,
+   "axis": "+X",
+   "rangeStatus": "approximate, pending cited reference"
+  },
+  "poses": [
+   0,
+   45,
+   90,
+   145
+  ],
+  "exploreState": {
+   "exploreId": "explore.hinge",
+   "status": "validated-rig",
+   "teaching": false,
+   "dofId": "flexion",
+   "readout": {
+    "primary": 145,
+    "secondary": null,
+    "atLimit": false
+   },
+   "displacedGroups": []
+  }
+ }
+}

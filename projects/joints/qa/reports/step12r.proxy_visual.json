@@ -1,0 +1,93 @@
+{
+ "generatedAt": "2026-09-17T19:08:25.338Z",
+ "note": "canvas only, 1280x800 @1x, quality=high",
+ "states": {
+  "proxy": {
+   "groups": 2,
+   "stages": [
+    {
+     "stageId": "intro",
+     "status": "applied"
+    },
+    {
+     "stageId": "groups",
+     "status": "loading"
+    }
+   ],
+   "perf": {
+    "fps": 2,
+    "frameIntervalMeanMs": 37,
+    "frameIntervalP95Ms": 37,
+    "frameCpuMeanMs": 7.5999999940395355,
+    "frameCpuP95Ms": 14.599999994039536,
+    "drawCalls": 3,
+    "triangles": 35289,
+    "geometries": 2,
+    "textures": 2,
+    "textureMemoryBytes": 0,
+    "pixelRatio": 1,
+    "framesRendered": 2,
+    "firstFrameMs": 598.5,
+    "firstModelFrameMs": 598.5,
+    "renderer": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x00009A49) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+   }
+  },
+  "grouped": {
+   "groups": 35,
+   "stages": [
+    {
+     "stageId": "intro",
+     "status": "applied"
+    },
+    {
+     "stageId": "groups",
+     "status": "applied"
+    }
+   ],
+   "perf": {
+    "fps": 4,
+    "frameIntervalMeanMs": 34.04999999701977,
+    "frameIntervalP95Ms": 37,
+    "frameCpuMeanMs": 5.879999989271164,
+    "frameCpuP95Ms": 14.599999994039536,
+    "drawCalls": 36,
+    "triangles": 235754,
+    "geometries": 35,
+    "textures": 6,
+    "textureMemoryBytes": 0,
+    "pixelRatio": 1,
+    "framesRendered": 5,
+    "firstFrameMs": 598.5,
+    "firstModelFrameMs": 598.5,
+    "renderer": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x00009A49) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+   }
+  },
+  "groupedAtIntroTitle": {
+   "tier": "high",
+   "groups": 35,
+   "stages": [
+    {
+     "stageId": "intro",
+     "status": "applied"
+    },
+    {
+     "stageId": "groups",
+     "status": "applied"
+    }
+   ]
+  }
+ },
+ "metrics": {
+  "intro.title proxy vs grouped (body region only, x>=640)": {
+   "psnrDb": 30.02,
+   "maxAbsDiff": 167,
+   "pixelsOver16Pct": 4.04
+  },
+  "intro.title proxy vs grouped (whole frame, includes the DOM title overlay)": {
+   "psnrDb": 31.92,
+   "maxAbsDiff": 215,
+   "pixelsOver16Pct": 3.255
+  }
+ },
+ "consoleErrors": []
+}

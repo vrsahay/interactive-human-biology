@@ -1,0 +1,866 @@
+{
+ "joint": "elbow_r",
+ "generated_at": "2026-09-17T14:57:09",
+ "environment": {
+  "blender_version": "5.2.2 LTS",
+  "blender_version_ok": true,
+  "master_sha256_ok": true,
+  "open_file": "C:\\Users\\Admin\\dev\\joints-platform\\blender\\Joints_Working.blend"
+ },
+ "method": "Determine the right-elbow neutral (true extension) offset from the fitted axis and the anatomy (READ-ONLY).\n\nRun with Joints_Working.blend (Step-5 state) open. Writes qa/reports/elbow_r.neutral_offset.json.\n\nFlexion angle of a pose = signed angle, about the fitted flexion axis a (positive = flexion), between the projections onto the\nplane perpendicular to a of:\n  - humerus long axis (distal-pointing) and\n  - forearm long axis (distal-pointing).\nAxis definitions evaluated:\n  isb        humerus: glenohumeral centre (sphere fit of humeral head) -> epicondyle midpoint;\n             forearm: epicondyle midpoint -> ulnar styloid (ISB recommendation, Wu et al. 2005)       <- PRIMARY\n  shaft_ulna humerus diaphysis PCA (25-75 %) vs ulna diaphysis PCA (25-75 %)   (the earlier 25.97 deg estimate)\n  shaft_rad  humerus diaphysis PCA vs radius diaphysis PCA\n  styloids   epicondyle midpoint -> midpoint of radial and ulnar styloid tips (forearm), humerus as isb\nSource pose flexion under the primary definition = neutral offset (controller 0 = true extension = source rotated by -offset).\nAlso sweeps the forearm about the axis relative to the source pose to locate bony contact (extension and flexion stops).",
+ "pivot": [
+  -0.22139,
+  0.03484,
+  1.10336
+ ],
+ "flexion_axis": [
+  -0.97411,
+  0.10983,
+  0.19758
+ ],
+ "landmarks": {
+  "glenohumeral_centre": [
+   -0.16812,
+   0.02641,
+   1.38279
+  ],
+  "gh_radius_mm": 22.48,
+  "gh_rms_mm": 1.487,
+  "lateral_epicondyle": [
+   -0.24883,
+   0.0433,
+   1.1128
+  ],
+  "medial_epicondyle": [
+   -0.1835,
+   0.03555,
+   1.10699
+  ],
+  "epicondyle_midpoint": [
+   -0.21617,
+   0.03943,
+   1.1099
+  ],
+  "ulnar_styloid": [
+   -0.24476,
+   -0.01184,
+   0.85606
+  ],
+  "radial_styloid": [
+   -0.28555,
+   -0.01744,
+   0.8565
+  ]
+ },
+ "source_flexion_estimates_deg": {
+  "isb": 13.62510376997268,
+  "shaft_ulna": 25.971898827173252,
+  "shaft_radius": 16.934380742107457,
+  "styloids_midpoint": 14.532868132996644
+ },
+ "previous_unsigned_shaft_estimate_deg": 25.97,
+ "neutral_offset_deg": 13.62510376997268,
+ "neutral_offset_definition": "isb",
+ "extension_contact": {
+  "phi_first_over_0_5mm": -21,
+  "phi_first_over_2mm": -31,
+  "phi_at_true_extension": -13.62510376997268,
+  "overlap_at_true_extension": {
+   "ulna": {
+    "max_overlap_mm": 0.209,
+    "min_distance_mm": 0.043
+   },
+   "radius": {
+    "max_overlap_mm": 0.0,
+    "min_distance_mm": 3.949
+   }
+  }
+ },
+ "sweep_relative_to_source": {
+  "-45": {
+   "ulna": {
+    "max_overlap_mm": 4.15,
+    "min_distance_mm": 0.026,
+    "deepest_contact_humerus": {
+     "lateral_mm": -9.9,
+     "along_forearm_mm": -14.2,
+     "anterior_mm": -2.3
+    }
+   },
+   "radius": {
+    "max_overlap_mm": 0.0,
+    "min_distance_mm": 1.632
+   }
+  },
+  "-44": {
+   "ulna": {
+    "max_overlap_mm": 3.914,
+    "min_distance_mm": 0.0,
+    "deepest_contact_humerus": {
+     "lateral_mm": -10.0,
+     "along_forearm_mm": -14.2,
+     "anterior_mm": -2.3
+    }
+   },
+   "radius": {
+    "max_overlap_mm": 0.0,
+    "min_distance_mm": 1.644
+   }
+  },
+  "-43": {
+   "ulna": {
+    "max_overlap_mm": 4.072,
+    "min_distance_mm": 0.105,
+    "deepest_contact_humerus": {
+     "lateral_mm": -7.9,
+     "along_forearm_mm": -11.6,
+     "anterior_mm": 4.4
+    }
+   },
+   "radius": {
+    "max_overlap_mm": 0.0,
+    "min_distance_mm": 1.654
+   }
+  },
+  "-42": {
+   "ulna": {
+    "max_overlap_mm": 3.953,
+    "min_distance_mm": 0.116,
+    "deepest_contact_humerus": {
+     "lateral_mm": -8.5,
+     "along_forearm_mm": -14.2,
+     "anterior_mm": -1.8
+    }
+   },
+   "radius": {
+    "max_overlap_mm": 0.0,
+    "min_distance_mm": 1.678
+   }
+  },
+  "-41": {
+   "ulna": {
+    "max_overlap_mm": 3.718,
+    "min_distance_mm": 0.02,
+    "deepest_contact_humerus": {
+     "lateral_mm": -8.6,
+     "along_forearm_mm": -14.3,
+     "anterior_mm": -1.8
+    }
+   },
+   "radius": {
+    "max_overlap_mm": 0.0,
+    "min_distance_mm": 1.699
+   }
+  },
+  "-40": {
+   "ulna": {
+    "max_overlap_mm": 3.706,
+    "min_distance_mm": 0.03,
+    "deepest_contact_humerus": {
+     "lateral_mm": -7.3,
+     "along_forearm_mm": -11.9,
+     "anterior_mm": 4.0
+    }
+   },
+   "radius": {
+    "max_overlap_mm": 0.0,
+    "min_distance_mm": 1.717
+   }
+  },
+  "-39": {
+   "ulna": {
+    "max_overlap_mm": 3.542,
+    "min_distance_mm": 0.002,
+    "deepest_contact_humerus": {
+     "lateral_mm": -8.5,
+     "along_forearm_mm": -13.6,
+     "anterior_mm": -1.8
+    }
+   },
+   "radius": {
+    "max_overlap_mm": 0.0,
+    "min_distance_mm": 1.742
+   }
+  },
+  "-38": {
+   "ulna": {
+    "max_overlap_mm": 3.317,
+    "min_distance_mm": 0.035,
+    "deepest_contact_humerus": {
+     "lateral_mm": -8.6,
+     "along_forearm_mm": -13.6,
+     "anterior_mm": -1.8
+    }
+   },
+   "radius": {
+    "max_overlap_mm": 0.0,
+    "min_distance_mm": 1.776
+   }
+  },
+  "-37": {
+   "ulna": {
+    "max_overlap_mm": 3.091,
+    "min_distance_mm": 0.045,
+    "deepest_contact_humerus": {
+     "lateral_mm": -8.7,
+     "along_forearm_mm": -13.6,
+     "anterior_mm": -1.8
+    }
+   },
+   "radius": {
+    "max_overlap_mm": 0.0,
+    "min_distance_mm": 1.83
+   }
+  },
+  "-36": {
+   "ulna": {
+    "max_overlap_mm": 2.865,
+    "min_distance_mm": 0.038,
+    "deepest_contact_humerus": {
+     "lateral_mm": -8.8,
+     "along_forearm_mm": -13.7,
+     "anterior_mm": -1.8
+    }
+   },
+   "radius": {
+    "max_overlap_mm": 0.0,
+    "min_distance_mm": 1.892
+   }
+  },
+  "-35": {
+   "ulna": {
+    "max_overlap_mm": 2.639,
+    "min_distance_mm": 0.061,
+    "deepest_contact_humerus": {
+     "lateral_mm": -8.8,
+     "along_forearm_mm": -13.7,
+     "anterior_mm": -1.9
+    }
+   },
+   "radius": {
+    "max_overlap_mm": 0.0,
+    "min_distance_mm": 1.949
+   }
+  },
+  "-34": {
+   "ulna": {
+    "max_overlap_mm": 2.473,
+    "min_distance_mm": 0.253,
+    "deepest_contact_humerus": {
+     "lateral_mm": -6.5,
+     "along_forearm_mm": -11.7,
+     "anterior_mm": 3.1
+    }
+   },
+   "radius": {
+    "max_overlap_mm": 0.0,
+    "min_distance_mm": 2.009
+   }
+  },
+  "-33": {
+   "ulna": {
+    "max_overlap_mm": 2.457,
+    "min_distance_mm": 0.004,
+    "deepest_contact_humerus": {
+     "lateral_mm": -7.2,
+     "along_forearm_mm": -12.6,
+     "anterior_mm": -1.2
+    }
+   },
+   "radius": {
+    "max_overlap_mm": 0.0,
+    "min_distance_mm": 2.073
+   }
+  },
+  "-32": {
+   "ulna": {
+    "max_overlap_mm": 2.248,
+    "min_distance_mm": 0.002,
+    "deepest_contact_humerus": {
+     "lateral_mm": -7.2,
+     "along_forearm_mm": -12.6,
+     "anterior_mm": -1.3
+    }
+   },
+   "radius": {
+    "max_overlap_mm": 0.0,
+    "min_distance_mm": 2.141
+   }
+  },
+  "-31": {
+   "ulna": {
+    "max_overlap_mm": 2.04,
+    "min_distance_mm": 0.242,
+    "deepest_contact_humerus": {
+     "lateral_mm": -7.3,
+     "along_forearm_mm": -12.6,
+     "anterior_mm": -1.3
+    }
+   },
+   "radius": {
+    "max_overlap_mm": 0.0,
+    "min_distance_mm": 2.213
+   }
+  },
+  "-30": {
+   "ulna": {
+    "max_overlap_mm": 1.83,
+    "min_distance_mm": 0.487,
+    "deepest_contact_humerus": {
+     "lateral_mm": -7.4,
+     "along_forearm_mm": -12.7,
+     "anterior_mm": -1.3
+    }
+   },
+   "radius": {
+    "max_overlap_mm": 0.0,
+    "min_distance_mm": 2.287
+   }
+  },
+  "-29": {
+   "ulna": {
+    "max_overlap_mm": 1.621,
+    "min_distance_mm": 0.317,
+    "deepest_contact_humerus": {
+     "lateral_mm": -7.4,
+     "along_forearm_mm": -12.7,
+     "anterior_mm": -1.3
+    }
+   },
+   "radius": {
+    "max_overlap_mm": 0.0,
+    "min_distance_mm": 2.363
+   }
+  },
+  "-28": {
+   "ulna": {
+    "max_overlap_mm": 1.411,
+    "min_distance_mm": 0.092,
+    "deepest_contact_humerus": {
+     "lateral_mm": -7.5,
+     "along_forearm_mm": -12.7,
+     "anterior_mm": -1.4
+    }
+   },
+   "radius": {
+    "max_overlap_mm": 0.0,
+    "min_distance_mm": 2.44
+   }
+  },
+  "-27": {
+   "ulna": {
+    "max_overlap_mm": 1.222,
+    "min_distance_mm": 0.1,
+    "deepest_contact_humerus": {
+     "lateral_mm": -4.5,
+     "along_forearm_mm": -10.4,
+     "anterior_mm": -1.6
+    }
+   },
+   "radius": {
+    "max_overlap_mm": 0.0,
+    "min_distance_mm": 2.519
+   }
+  },
+  "-26": {
+   "ulna": {
+    "max_overlap_mm": 1.056,
+    "min_distance_mm": 0.053,
+    "deepest_contact_humerus": {
+     "lateral_mm": -4.5,
+     "along_forearm_mm": -10.4,
+     "anterior_mm": -1.6
+    }
+   },
+   "radius": {
+    "max_overlap_mm": 0.0,
+    "min_distance_mm": 2.608
+   }
+  },
+  "-25": {
+   "ulna": {
+    "max_overlap_mm": 0.892,
+    "min_distance_mm": 0.026,
+    "deepest_contact_humerus": {
+     "lateral_mm": -4.4,
+     "along_forearm_mm": -10.4,
+     "anterior_mm": -1.6
+    }
+   },
+   "radius": {
+    "max_overlap_mm": 0.0,
+    "min_distance_mm": 2.714
+   }
+  },
+  "-24": {
+   "ulna": {
+    "max_overlap_mm": 0.746,
+    "min_distance_mm": 0.046,
+    "deepest_contact_humerus": {
+     "lateral_mm": -1.2,
+     "along_forearm_mm": -10.5,
+     "anterior_mm": -2.0
+    }
+   },
+   "radius": {
+    "max_overlap_mm": 0.0,
+    "min_distance_mm": 2.834
+   }
+  },
+  "-23": {
+   "ulna": {
+    "max_overlap_mm": 0.663,
+    "min_distance_mm": 0.045,
+    "deepest_contact_humerus": {
+     "lateral_mm": -1.7,
+     "along_forearm_mm": -9.4,
+     "anterior_mm": -2.8
+    }
+   },
+   "radius": {
+    "max_overlap_mm": 0.0,
+    "min_distance_mm": 2.954
+   }
+  },
+  "-22": {
+   "ulna": {
+    "max_overlap_mm": 0.583,
+    "min_distance_mm": 0.025,
+    "deepest_contact_humerus": {
+     "lateral_mm": -1.7,
+     "along_forearm_mm": -9.3,
+     "anterior_mm": -2.9
+    }
+   },
+   "radius": {
+    "max_overlap_mm": 0.0,
+    "min_distance_mm": 3.07
+   }
+  },
+  "-21": {
+   "ulna": {
+    "max_overlap_mm": 0.506,
+    "min_distance_mm": 0.057,
+    "deepest_contact_humerus": {
+     "lateral_mm": -1.7,
+     "along_forearm_mm": -9.2,
+     "anterior_mm": -3.0
+    }
+   },
+   "radius": {
+    "max_overlap_mm": 0.0,
+    "min_distance_mm": 3.182
+   }
+  },
+  "-20": {
+   "ulna": {
+    "max_overlap_mm": 0.449,
+    "min_distance_mm": 0.084
+   },
+   "radius": {
+    "max_overlap_mm": 0.0,
+    "min_distance_mm": 3.291
+   }
+  },
+  "-19": {
+   "ulna": {
+    "max_overlap_mm": 0.404,
+    "min_distance_mm": 0.054
+   },
+   "radius": {
+    "max_overlap_mm": 0.0,
+    "min_distance_mm": 3.395
+   }
+  },
+  "-18": {
+   "ulna": {
+    "max_overlap_mm": 0.362,
+    "min_distance_mm": 0.034
+   },
+   "radius": {
+    "max_overlap_mm": 0.0,
+    "min_distance_mm": 3.496
+   }
+  },
+  "-17": {
+   "ulna": {
+    "max_overlap_mm": 0.323,
+    "min_distance_mm": 0.063
+   },
+   "radius": {
+    "max_overlap_mm": 0.0,
+    "min_distance_mm": 3.601
+   }
+  },
+  "-16": {
+   "ulna": {
+    "max_overlap_mm": 0.286,
+    "min_distance_mm": 0.012
+   },
+   "radius": {
+    "max_overlap_mm": 0.0,
+    "min_distance_mm": 3.708
+   }
+  },
+  "-15": {
+   "ulna": {
+    "max_overlap_mm": 0.252,
+    "min_distance_mm": 0.005
+   },
+   "radius": {
+    "max_overlap_mm": 0.0,
+    "min_distance_mm": 3.812
+   }
+  },
+  "-14": {
+   "ulna": {
+    "max_overlap_mm": 0.22,
+    "min_distance_mm": 0.03
+   },
+   "radius": {
+    "max_overlap_mm": 0.0,
+    "min_distance_mm": 3.913
+   }
+  },
+  "-13": {
+   "ulna": {
+    "max_overlap_mm": 0.192,
+    "min_distance_mm": 0.029
+   },
+   "radius": {
+    "max_overlap_mm": 0.0,
+    "min_distance_mm": 4.01
+   }
+  },
+  "-12": {
+   "ulna": {
+    "max_overlap_mm": 0.166,
+    "min_distance_mm": 0.002
+   },
+   "radius": {
+    "max_overlap_mm": 0.0,
+    "min_distance_mm": 4.115
+   }
+  },
+  "-11": {
+   "ulna": {
+    "max_overlap_mm": 0.142,
+    "min_distance_mm": 0.031
+   },
+   "radius": {
+    "max_overlap_mm": 0.0,
+    "min_distance_mm": 4.229
+   }
+  },
+  "-10": {
+   "ulna": {
+    "max_overlap_mm": 0.122,
+    "min_distance_mm": 0.057
+   },
+   "radius": {
+    "max_overlap_mm": 0.0,
+    "min_distance_mm": 4.283
+   }
+  },
+  "-9": {
+   "ulna": {
+    "max_overlap_mm": 0.104,
+    "min_distance_mm": 0.08
+   },
+   "radius": {
+    "max_overlap_mm": 0.0,
+    "min_distance_mm": 4.324
+   }
+  },
+  "-8": {
+   "ulna": {
+    "max_overlap_mm": 0.089,
+    "min_distance_mm": 0.089
+   },
+   "radius": {
+    "max_overlap_mm": 0.0,
+    "min_distance_mm": 4.364
+   }
+  },
+  "-7": {
+   "ulna": {
+    "max_overlap_mm": 0.081,
+    "min_distance_mm": 0.081
+   },
+   "radius": {
+    "max_overlap_mm": 0.0,
+    "min_distance_mm": 4.402
+   }
+  },
+  "-6": {
+   "ulna": {
+    "max_overlap_mm": 0.088,
+    "min_distance_mm": 0.088
+   },
+   "radius": {
+    "max_overlap_mm": 0.0,
+    "min_distance_mm": 4.435
+   }
+  },
+  "-5": {
+   "ulna": {
+    "max_overlap_mm": 0.097,
+    "min_distance_mm": 0.097
+   },
+   "radius": {
+    "max_overlap_mm": 0.0,
+    "min_distance_mm": 4.464
+   }
+  },
+  "-4": {
+   "ulna": {
+    "max_overlap_mm": 0.109,
+    "min_distance_mm": 0.109
+   },
+   "radius": {
+    "max_overlap_mm": 0.0,
+    "min_distance_mm": 4.493
+   }
+  },
+  "-3": {
+   "ulna": {
+    "max_overlap_mm": 0.124,
+    "min_distance_mm": 0.124
+   },
+   "radius": {
+    "max_overlap_mm": 0.0,
+    "min_distance_mm": 4.525
+   }
+  },
+  "-2": {
+   "ulna": {
+    "max_overlap_mm": 0.075,
+    "min_distance_mm": 0.075
+   },
+   "radius": {
+    "max_overlap_mm": 0.0,
+    "min_distance_mm": 4.553
+   }
+  },
+  "-1": {
+   "ulna": {
+    "max_overlap_mm": 0.02,
+    "min_distance_mm": 0.02
+   },
+   "radius": {
+    "max_overlap_mm": 0.0,
+    "min_distance_mm": 4.577
+   }
+  },
+  "0": {
+   "ulna": {
+    "max_overlap_mm": 0.0,
+    "min_distance_mm": 0.032
+   },
+   "radius": {
+    "max_overlap_mm": 0.0,
+    "min_distance_mm": 4.597
+   }
+  },
+  "1": {
+   "ulna": {
+    "max_overlap_mm": 0.0,
+    "min_distance_mm": 0.082
+   },
+   "radius": {
+    "max_overlap_mm": 0.0,
+    "min_distance_mm": 4.613
+   }
+  },
+  "2": {
+   "ulna": {
+    "max_overlap_mm": 0.0,
+    "min_distance_mm": 0.129
+   },
+   "radius": {
+    "max_overlap_mm": 0.0,
+    "min_distance_mm": 4.625
+   }
+  },
+  "3": {
+   "ulna": {
+    "max_overlap_mm": 0.0,
+    "min_distance_mm": 0.173
+   },
+   "radius": {
+    "max_overlap_mm": 0.0,
+    "min_distance_mm": 4.633
+   }
+  },
+  "4": {
+   "ulna": {
+    "max_overlap_mm": 0.0,
+    "min_distance_mm": 0.215
+   },
+   "radius": {
+    "max_overlap_mm": 0.0,
+    "min_distance_mm": 4.637
+   }
+  },
+  "5": {
+   "ulna": {
+    "max_overlap_mm": 0.0,
+    "min_distance_mm": 0.254
+   },
+   "radius": {
+    "max_overlap_mm": 0.0,
+    "min_distance_mm": 4.639
+   }
+  },
+  "6": {
+   "ulna": {
+    "max_overlap_mm": 0.0,
+    "min_distance_mm": 0.29
+   },
+   "radius": {
+    "max_overlap_mm": 0.0,
+    "min_distance_mm": 4.638
+   }
+  },
+  "7": {
+   "ulna": {
+    "max_overlap_mm": 0.0,
+    "min_distance_mm": 0.323
+   },
+   "radius": {
+    "max_overlap_mm": 0.0,
+    "min_distance_mm": 4.635
+   }
+  },
+  "8": {
+   "ulna": {
+    "max_overlap_mm": 0.0,
+    "min_distance_mm": 0.354
+   },
+   "radius": {
+    "max_overlap_mm": 0.0,
+    "min_distance_mm": 4.629
+   }
+  },
+  "9": {
+   "ulna": {
+    "max_overlap_mm": 0.0,
+    "min_distance_mm": 0.382
+   },
+   "radius": {
+    "max_overlap_mm": 0.0,
+    "min_distance_mm": 4.625
+   }
+  },
+  "10": {
+   "ulna": {
+    "max_overlap_mm": 0.0,
+    "min_distance_mm": 0.407
+   },
+   "radius": {
+    "max_overlap_mm": 0.0,
+    "min_distance_mm": 4.63
+   }
+  },
+  "11": {
+   "ulna": {
+    "max_overlap_mm": 0.0,
+    "min_distance_mm": 0.429
+   },
+   "radius": {
+    "max_overlap_mm": 0.0,
+    "min_distance_mm": 4.64
+   }
+  },
+  "12": {
+   "ulna": {
+    "max_overlap_mm": 0.0,
+    "min_distance_mm": 0.428
+   },
+   "radius": {
+    "max_overlap_mm": 0.0,
+    "min_distance_mm": 4.655
+   }
+  },
+  "13": {
+   "ulna": {
+    "max_overlap_mm": 0.0,
+    "min_distance_mm": 0.421
+   },
+   "radius": {
+    "max_overlap_mm": 0.0,
+    "min_distance_mm": 4.673
+   }
+  },
+  "14": {
+   "ulna": {
+    "max_overlap_mm": 0.0,
+    "min_distance_mm": 0.412
+   },
+   "radius": {
+    "max_overlap_mm": 0.0,
+    "min_distance_mm": 4.693
+   }
+  },
+  "15": {
+   "ulna": {
+    "max_overlap_mm": 0.0,
+    "min_distance_mm": 0.399
+   },
+   "radius": {
+    "max_overlap_mm": 0.0,
+    "min_distance_mm": 4.709
+   }
+  },
+  "16": {
+   "ulna": {
+    "max_overlap_mm": 0.0,
+    "min_distance_mm": 0.385
+   },
+   "radius": {
+    "max_overlap_mm": 0.0,
+    "min_distance_mm": 4.72
+   }
+  },
+  "17": {
+   "ulna": {
+    "max_overlap_mm": 0.0,
+    "min_distance_mm": 0.367
+   },
+   "radius": {
+    "max_overlap_mm": 0.0,
+    "min_distance_mm": 4.728
+   }
+  },
+  "18": {
+   "ulna": {
+    "max_overlap_mm": 0.0,
+    "min_distance_mm": 0.348
+   },
+   "radius": {
+    "max_overlap_mm": 0.0,
+    "min_distance_mm": 4.732
+   }
+  },
+  "19": {
+   "ulna": {
+    "max_overlap_mm": 0.0,
+    "min_distance_mm": 0.325
+   },
+   "radius": {
+    "max_overlap_mm": 0.0,
+    "min_distance_mm": 4.731
+   }
+  },
+  "20": {
+   "ulna": {
+    "max_overlap_mm": 0.0,
+    "min_distance_mm": 0.3
+   },
+   "radius": {
+    "max_overlap_mm": 0.0,
+    "min_distance_mm": 4.727
+   }
+  }
+ }
+}

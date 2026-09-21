@@ -1,0 +1,93 @@
+{
+ "kind": "gate3",
+ "jointId": "elbow_r",
+ "generatedAt": "2026-09-21T09:04:58.474Z",
+ "runtimePoseConsistency": {
+  "reference": "qa/reports/elbow_r.blender_pose_reference.json",
+  "referenceWorkingFileSha256": "9fb76d8c5b799d1bf65dc8e865c400299a3cc52fb8bf7ceab8c903a1671187f9",
+  "manifestSha256": "009d51528bf5a6d84b2ab14499d4a1346f4cc1bcaff0ab1a0f99b1ccfd135e66",
+  "note": "Three.js runtime (production GLBs, all tiers, attachTo applied) vs Blender rig driven through the controller. Not formal landmark validation.",
+  "passed": true,
+  "poses": [
+   {
+    "flexionDeg": 0,
+    "anchorsCompared": 17,
+    "structuresCompared": 49,
+    "anchorMaxMm": 0.0001625333678180171,
+    "bboxMaxMm": 0.012937385524929157,
+    "matrixTranslationMaxMm": 0.00033088388837117705,
+    "matrixLinearMax": 3.201761522020341e-7,
+    "worstAnchor": "elbow_r.anchor.coronoid_process",
+    "worstStructure": "brachioradialis_r",
+    "missing": [],
+    "passed": true
+   },
+   {
+    "flexionDeg": 45,
+    "anchorsCompared": 17,
+    "structuresCompared": 49,
+    "anchorMaxMm": 0.0002021717586683225,
+    "bboxMaxMm": 0.012937385524929157,
+    "matrixTranslationMaxMm": 0.0004122040955655175,
+    "matrixLinearMax": 4.701893303593607e-7,
+    "worstAnchor": "elbow_r.anchor.coronoid_process",
+    "worstStructure": "brachioradialis_r",
+    "missing": [],
+    "passed": true
+   },
+   {
+    "flexionDeg": 90,
+    "anchorsCompared": 17,
+    "structuresCompared": 49,
+    "anchorMaxMm": 0.0001585108924525235,
+    "bboxMaxMm": 0.012937385524929157,
+    "matrixTranslationMaxMm": 0.00020232745592274886,
+    "matrixLinearMax": 2.0078464424422293e-7,
+    "worstAnchor": "elbow_r.anchor.rcl_dist",
+    "worstStructure": "brachioradialis_r",
+    "missing": [],
+    "passed": true
+   },
+   {
+    "flexionDeg": 145,
+    "anchorsCompared": 17,
+    "structuresCompared": 49,
+    "anchorMaxMm": 0.00021564135400041728,
+    "bboxMaxMm": 0.012937385524929157,
+    "matrixTranslationMaxMm": 0.00023905649545083172,
+    "matrixLinearMax": 2.649727136594393e-7,
+    "worstAnchor": "elbow_r.anchor.coronoid_process",
+    "worstStructure": "brachioradialis_r",
+    "missing": [],
+    "passed": true
+   }
+  ]
+ },
+ "formalLandmarkValidation": {
+  "status": "NOT AVAILABLE",
+  "reason": "approved landmark definitions missing",
+  "draft": {
+   "present": true,
+   "file": "qa/elbow_r.poses.draft.json",
+   "landmarkCount": 8,
+   "landmarkIds": [
+    "olecranon_tip",
+    "coronoid_tip",
+    "ulnar_styloid",
+    "radial_styloid",
+    "radial_head_centre",
+    "medial_epicondyle",
+    "lateral_epicondyle",
+    "third_metacarpal_head"
+   ],
+   "proposedToleranceRangeMm": [
+    2,
+    4
+   ],
+   "formalGate3": "PENDING EXPERT LANDMARK APPROVAL",
+   "note": "Draft definitions only. No subject-matter reviewer has approved these landmarks or tolerances."
+  },
+  "formalGate3": "PENDING EXPERT LANDMARK APPROVAL"
+ },
+ "consoleErrors": []
+}

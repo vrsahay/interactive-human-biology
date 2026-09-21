@@ -1,0 +1,189 @@
+{
+ "generatedAt": "2026-09-20T16:15:52.684Z",
+ "viewport": {
+  "width": 1280,
+  "height": 800
+ },
+ "poses": [
+  {
+   "flexionDeg": 0,
+   "applied": 0,
+   "poseUpdatesForOneSetDof": 0,
+   "readout": "0°",
+   "humerusStationaryMaxAbs": 0,
+   "radiusMovedMm": 0,
+   "radiusBBoxVsBlenderMm": 0.0081,
+   "ulnaBBoxVsBlenderMm": 0.0067,
+   "handBBoxVsBlenderMaxMm": 0.0029,
+   "registryStructures": 30,
+   "anchorsResolved": 13,
+   "anchorsVsBlenderMaxMm": 0.0002,
+   "hingeAxisVsManifestDeg": 0.00119,
+   "overlayAngle": 0,
+   "overlayDirectionVsBlenderForearmOverlay": 8.143e-8,
+   "bands": [
+    {
+     "bandId": "elbow_r.band.radial_collateral_ligament",
+     "endpointsMatchAnchorsMm": 0,
+     "meshFollowsEndpointsMm": 3.469446951953614e-15,
+     "schematic": true
+    },
+    {
+     "bandId": "elbow_r.band.ulnar_collateral_ligament",
+     "endpointsMatchAnchorsMm": 0,
+     "meshFollowsEndpointsMm": 3.469446951953614e-15,
+     "schematic": true
+    }
+   ],
+   "labelsShown": 5,
+   "labelAnchorDriftPx": 0,
+   "labelOverlaps": 0
+  },
+  {
+   "flexionDeg": 45,
+   "applied": 45,
+   "poseUpdatesForOneSetDof": 1,
+   "readout": "45°",
+   "humerusStationaryMaxAbs": 0,
+   "radiusMovedMm": 73.8,
+   "radiusBBoxVsBlenderMm": 0.0076,
+   "ulnaBBoxVsBlenderMm": 0.0084,
+   "handBBoxVsBlenderMaxMm": 0.0026,
+   "registryStructures": 30,
+   "anchorsResolved": 13,
+   "anchorsVsBlenderMaxMm": 0.0002,
+   "hingeAxisVsManifestDeg": 0.00119,
+   "overlayAngle": 45,
+   "overlayDirectionVsBlenderForearmOverlay": 8.944e-8,
+   "bands": [
+    {
+     "bandId": "elbow_r.band.radial_collateral_ligament",
+     "endpointsMatchAnchorsMm": 0,
+     "meshFollowsEndpointsMm": 0,
+     "schematic": true
+    },
+    {
+     "bandId": "elbow_r.band.ulnar_collateral_ligament",
+     "endpointsMatchAnchorsMm": 0,
+     "meshFollowsEndpointsMm": 0,
+     "schematic": true
+    }
+   ],
+   "labelsShown": 5,
+   "labelAnchorDriftPx": 0,
+   "labelOverlaps": 0
+  },
+  {
+   "flexionDeg": 90,
+   "applied": 90,
+   "poseUpdatesForOneSetDof": 1,
+   "readout": "90°",
+   "humerusStationaryMaxAbs": 0,
+   "radiusMovedMm": 241.175,
+   "radiusBBoxVsBlenderMm": 0.0086,
+   "ulnaBBoxVsBlenderMm": 0.0076,
+   "handBBoxVsBlenderMaxMm": 0.0031,
+   "registryStructures": 30,
+   "anchorsResolved": 13,
+   "anchorsVsBlenderMaxMm": 0.0002,
+   "hingeAxisVsManifestDeg": 0.00119,
+   "overlayAngle": 90,
+   "overlayDirectionVsBlenderForearmOverlay": 4.31e-8,
+   "bands": [
+    {
+     "bandId": "elbow_r.band.radial_collateral_ligament",
+     "endpointsMatchAnchorsMm": 0,
+     "meshFollowsEndpointsMm": 3.469446951953614e-15,
+     "schematic": true
+    },
+    {
+     "bandId": "elbow_r.band.ulnar_collateral_ligament",
+     "endpointsMatchAnchorsMm": 0,
+     "meshFollowsEndpointsMm": 3.469446951953614e-15,
+     "schematic": true
+    }
+   ],
+   "labelsShown": 5,
+   "labelAnchorDriftPx": 0,
+   "labelOverlaps": 0
+  },
+  {
+   "flexionDeg": 145,
+   "applied": 145,
+   "poseUpdatesForOneSetDof": 1,
+   "readout": "145°",
+   "humerusStationaryMaxAbs": 0,
+   "radiusMovedMm": 267.258,
+   "radiusBBoxVsBlenderMm": 0.0107,
+   "ulnaBBoxVsBlenderMm": 0.0084,
+   "handBBoxVsBlenderMaxMm": 0.0035,
+   "registryStructures": 30,
+   "anchorsResolved": 13,
+   "anchorsVsBlenderMaxMm": 0.0002,
+   "hingeAxisVsManifestDeg": 0.00119,
+   "overlayAngle": 145,
+   "overlayDirectionVsBlenderForearmOverlay": 5.384e-8,
+   "bands": [
+    {
+     "bandId": "elbow_r.band.radial_collateral_ligament",
+     "endpointsMatchAnchorsMm": 0,
+     "meshFollowsEndpointsMm": 0,
+     "schematic": true
+    },
+    {
+     "bandId": "elbow_r.band.ulnar_collateral_ligament",
+     "endpointsMatchAnchorsMm": 0,
+     "meshFollowsEndpointsMm": 0,
+     "schematic": true
+    }
+   ],
+   "labelsShown": 5,
+   "labelAnchorDriftPx": 0,
+   "labelOverlaps": 0
+  }
+ ],
+ "contextVisibility": {
+  "0": {
+   "visible": 49,
+   "nonTrackingVisible": 15,
+   "coreVisible": 30,
+   "attachedSoftVisible": 4,
+   "noteShown": false
+  },
+  "45": {
+   "visible": 34,
+   "nonTrackingVisible": 0,
+   "coreVisible": 30,
+   "attachedSoftVisible": 4,
+   "noteShown": true
+  },
+  "90": {
+   "visible": 34,
+   "nonTrackingVisible": 0,
+   "coreVisible": 30,
+   "attachedSoftVisible": 4,
+   "noteShown": true
+  },
+  "145": {
+   "visible": 34,
+   "nonTrackingVisible": 0,
+   "coreVisible": 30,
+   "attachedSoftVisible": 4,
+   "noteShown": true
+  }
+ },
+ "screenshots": [
+  "qa/visual/step16b/reference_poses/elbow_r_overview_000.png",
+  "qa/visual/step16b/reference_poses/elbow_r_overview_045.png",
+  "qa/visual/step16b/reference_poses/elbow_r_overview_090.png",
+  "qa/visual/step16b/reference_poses/elbow_r_overview_145.png",
+  "qa/visual/step16b/reference_poses/elbow_r_closeup_000.png",
+  "qa/visual/step16b/reference_poses/elbow_r_closeup_045.png",
+  "qa/visual/step16b/reference_poses/elbow_r_closeup_090.png",
+  "qa/visual/step16b/reference_poses/elbow_r_closeup_145.png",
+  "qa/visual/step16b/reference_poses/elbow_r_context_000.png",
+  "qa/visual/step16b/reference_poses/elbow_r_context_090.png"
+ ],
+ "consoleErrors": [],
+ "consoleWarnings": 0
+}

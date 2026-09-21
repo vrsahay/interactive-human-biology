@@ -1,0 +1,14 @@
+
+ RUN  v5.0.1 C:/Users/Admin/dev/joints-platform
+
+
+ Test Files  9 passed (9)
+      Tests  88 passed (88)
+   Start at  22:51:22
+   Duration  2.90s (tests 29%, transform 27%, import 23%, environment 20%, worker 1%)
+
+  Transform  transforming modules took 2.37s · 27% of tracked time, re-done on every run
+             persist transforms across runs with fsModuleCache: true
+             learn more: https://vitest.dev/guide/improving-performance#caching-between-reruns
+
+EXIT 0

@@ -1,0 +1,38 @@
+{
+ "generatedAt": "2026-09-21T07:40:31.249Z",
+ "method": "static server, no compression; bytes are encoded body sizes; first 3D = the app's joints:first-draw-submitted mark; default route (landing card)",
+ "baseline f3c2ed2": {
+  "jsKB": 1041,
+  "cssKB": 29,
+  "jsCssKB": 1071,
+  "narration": {
+   "clips": 76,
+   "totalKB": 1435
+  },
+  "bytesBeforeFirst3DKB": 581,
+  "filesBeforeFirst3D": 12,
+  "audioBeforeFirst3DKB": 36,
+  "audioFetchedOnLandingKB": 36,
+  "audioFilesOnLanding": [
+   "narration.json",
+   "intro.title.mp3"
+  ]
+ },
+ "candidate": {
+  "jsKB": 1045,
+  "cssKB": 30,
+  "jsCssKB": 1075,
+  "narration": {
+   "clips": 76,
+   "totalKB": 1432
+  },
+  "bytesBeforeFirst3DKB": 555,
+  "filesBeforeFirst3D": 11,
+  "audioBeforeFirst3DKB": 8,
+  "audioFetchedOnLandingKB": 36,
+  "audioFilesOnLanding": [
+   "narration.json",
+   "intro.title.mp3"
+  ]
+ }
+}

@@ -1,0 +1,175 @@
+{
+  "schema": 1,
+  "assetId": "body_overview",
+  "deliveryVersion": 3,
+  "description": "Delivery representation of the Step-11 body orientation asset for the video lesson. Geometry is taken from the reviewed, promoted Step-11 body files (LOD0 = that geometry, re-grouped). Structures are grouped into render groups (one mesh per group) whose membership follows every presentation boundary the runtime needs (regions, joint sites, joint-asset handover, material), so highlight / dim / hide / handover still act on exact anatomical sets while draw calls drop. LOD1 exists only for structures that no close-up shot frames. Tiers select files before any body download.",
+  "input": {
+    "manifest": "public/assets/body/body-manifest.json",
+    "files": {
+      "skeleton": "public/assets/body/body.skeleton.glb",
+      "skin": "public/assets/body/body.skin.glb"
+    }
+  },
+  "handoverJointManifests": [
+    {
+      "jointAssetId": "elbow_r",
+      "manifest": "public/assets/joints/elbow_r/joint-manifest.json",
+      "tiers": [
+        "core",
+        "detail"
+      ]
+    }
+  ],
+  "closeupSites": [
+    {
+      "siteId": "fixed.skull",
+      "radiusM": 0.36
+    },
+    {
+      "siteId": "pivot.upper_neck",
+      "radiusM": 0.34
+    },
+    {
+      "siteId": "ball_socket.shoulder_right",
+      "radiusM": 0.32
+    },
+    {
+      "siteId": "ball_socket.hip_right",
+      "radiusM": 0.3
+    },
+    {
+      "siteId": "hinge.elbow_right",
+      "radiusM": 0.45
+    },
+    {
+      "siteId": "hinge.knee_right",
+      "radiusM": 0.3
+    }
+  ],
+  "closeupRule": "A structure is close-up (LOD0 in every tier) when its bounding box intersects a sphere of radiusM around a close-up site anchor. radiusM must be >= 1.6 x the widest site framing radius (SITE_SCALE_M x scale) of any lesson shot at that site; the elbow sphere also covers the joint-asset shots (checked by unit tests).",
+  "lod1": {
+    "targetRatio": 0.25,
+    "maxErrorM": 0.003,
+    "lockContactMm": 2,
+    "attributeWeights": [
+      0.5,
+      0.5,
+      0.5,
+      0.1,
+      0.1
+    ],
+    "use": "First-frame full-body overview for every structure (replaced by LOD0 in the close-up stage), and the permanent representation of context structures in the LOW tier only. Never shown for close-up structures inside a close-up shot."
+  },
+  "skinLod1": {
+    "targetRatio": 0.4,
+    "maxErrorM": 0.004,
+    "use": "Translucent 9%-opacity skin silhouette. First stage in every tier; HIGH upgrades to LOD0 with the close-up stage."
+  },
+  "grouping": {
+    "spatialBands": [
+      {
+        "id": "head",
+        "minY": 1.45
+      },
+      {
+        "id": "trunk",
+        "minY": 0.95
+      },
+      {
+        "id": "pelvis",
+        "minY": 0.7
+      },
+      {
+        "id": "legs",
+        "minY": -10
+      }
+    ],
+    "sideSplitM": 0.08
+  },
+  "quantization": {
+    "quantizePosition": 14,
+    "quantizeNormal": 10,
+    "quantizeTexcoord": 12,
+    "quantizationVolume": "mesh"
+  },
+  "sharedTexturesDir": "public/assets/shared/textures",
+  "tiers": {
+    "high": {
+      "stages": [
+        {
+          "stageId": "intro",
+          "files": [
+            "intro",
+            "skin_intro"
+          ]
+        },
+        {
+          "stageId": "groups",
+          "files": [
+            "closeup",
+            "context",
+            "skin"
+          ]
+        }
+      ]
+    },
+    "medium": {
+      "stages": [
+        {
+          "stageId": "intro",
+          "files": [
+            "intro",
+            "skin_intro"
+          ]
+        },
+        {
+          "stageId": "groups",
+          "files": [
+            "closeup",
+            "context",
+            "skin_lod1"
+          ]
+        }
+      ]
+    },
+    "low": {
+      "stages": [
+        {
+          "stageId": "intro",
+          "files": [
+            "intro",
+            "skin_intro"
+          ]
+        },
+        {
+          "stageId": "groups",
+          "files": [
+            "closeup",
+            "context_lod1",
+            "skin_lod1"
+          ]
+        }
+      ]
+    }
+  },
+  "budgetsGzipKB": {
+    "intro": 220,
+    "skin_intro": 90,
+    "closeup": 1150,
+    "context": 150,
+    "context_lod1": 110,
+    "skin": 280,
+    "skin_lod1": 150,
+    "note": "Step 12R: first stage = delivery-only proxy (intro + skin_intro); grouped LOD0 follows before the first presentation that needs it"
+  },
+  "intro": {
+    "targetRatio": 0.1,
+    "maxErrorM": 0.006,
+    "use": "Delivery-only first-frame proxy: whole skeleton as one vertex-coloured mesh (no textures, no texture coordinates). Shown only on plain full-body framing until the grouped LOD0 representation is applied at the next shot boundary or cut."
+  },
+  "skinIntro": {
+    "targetRatio": 0.2,
+    "maxErrorM": 0.008,
+    "use": "Delivery-only first-frame skin silhouette (translucent shell)."
+  }
+}

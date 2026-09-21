@@ -1,0 +1,96 @@
+{
+ "generatedAt": "2026-09-21T07:23:56.094Z",
+ "environment": "Playwright headless Google Chrome on the development machine; production build (vite preview). NOT a mid-range phone.",
+ "targets": {
+  "firstMeaningful3DViewMs": 2500,
+  "p95FrameTimeMs": 22,
+  "dragFpsMin": 45,
+  "note": "Final product targets on a mid-range 2022+ phone over fast 4G; not certified by this run."
+ },
+ "local": {
+  "load": {
+   "firstModelFrameMs": 323,
+   "domContentLoadedMs": 88,
+   "resources": [
+    {
+     "name": "joint-manifest.json",
+     "ms": 5,
+     "transferBytes": 13974
+    },
+    {
+     "name": "elbow_r.core.glb",
+     "ms": 4,
+     "transferBytes": 307180
+    }
+   ]
+  },
+  "drag": {
+   "frames": 180,
+   "durationMs": 2974,
+   "minFlexion": 0,
+   "maxFlexion": 24.427372155378563,
+   "perf": {
+    "fps": 60,
+    "frameIntervalMeanMs": 17.04135338301049,
+    "frameIntervalP95Ms": 17,
+    "frameCpuMeanMs": 1.3940740673630325,
+    "frameCpuP95Ms": 2.600000023841858,
+    "drawCalls": 23,
+    "triangles": 9644,
+    "geometries": 40,
+    "textures": 4,
+    "textureMemoryBytes": 2796202,
+    "pixelRatio": 1,
+    "framesRendered": 140,
+    "firstFrameMs": 179.80000001192093,
+    "firstModelFrameMs": 323,
+    "renderer": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x00009A49) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+   }
+  },
+  "idle": {
+   "framesRenderedDuring1500msIdle": 1
+  }
+ },
+ "emulatedConstrained": {
+  "profile": "CPU 4x throttle, 9 Mbps / 60 ms RTT network, 412x915 @1x",
+  "load": {
+   "firstModelFrameMs": 2143.800000011921,
+   "domContentLoadedMs": 569,
+   "resources": [
+    {
+     "name": "joint-manifest.json",
+     "ms": 78,
+     "transferBytes": 13974
+    },
+    {
+     "name": "elbow_r.core.glb",
+     "ms": 373,
+     "transferBytes": 307180
+    }
+   ]
+  },
+  "drag": {
+   "frames": 180,
+   "durationMs": 3207.7999999523163,
+   "minFlexion": 0,
+   "maxFlexion": 47.940616158443106,
+   "perf": {
+    "fps": 55,
+    "frameIntervalMeanMs": 19.09051094873108,
+    "frameIntervalP95Ms": 31.399999976158142,
+    "frameCpuMeanMs": 8.55000000025915,
+    "frameCpuP95Ms": 17,
+    "drawCalls": 23,
+    "triangles": 9644,
+    "geometries": 40,
+    "textures": 4,
+    "textureMemoryBytes": 2796202,
+    "pixelRatio": 1,
+    "framesRendered": 144,
+    "firstFrameMs": 994.6999999880791,
+    "firstModelFrameMs": 2143.800000011921,
+    "renderer": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x00009A49) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+   }
+  }
+ }
+}

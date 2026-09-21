@@ -1,0 +1,69 @@
+{
+ "profile": {
+  "id": "mobile-emulated-fast4g",
+  "classification": "EMULATED — NOT CERTIFICATION (CPU 4x throttle, laptop GPU)",
+  "viewport": {
+   "width": 412,
+   "height": 915
+  },
+  "dpr": 2.625,
+  "cpu": 4,
+  "net": {
+   "id": "fast-4g-devtools",
+   "downBps": 1012500,
+   "upBps": 168750,
+   "latencyMs": 165,
+   "note": "Chrome DevTools Fast 4G preset"
+  },
+  "mobile": true,
+  "signals": {
+   "deviceMemory": 4,
+   "hardwareConcurrency": 8
+  }
+ },
+ "first3dAtMs": 3897.800000011921,
+ "durationWallMs": 186131,
+ "ended": 183500,
+ "bufferingSamples": 0,
+ "bufferingMs": 0,
+ "bufferingShots": [],
+ "readiness": [
+  {
+   "asset": "/assets/body/v2/body.closeup.glb",
+   "neededBy": "fixed.travel",
+   "loadedAtMs": 4814,
+   "shotStartedAtMs": 19554,
+   "marginMs": 14740
+  },
+  {
+   "asset": "/assets/joints/elbow_r/elbow_r.core.glb",
+   "neededBy": "hinge.bones",
+   "loadedAtMs": 55093,
+   "shotStartedAtMs": 86194,
+   "marginMs": 31101
+  },
+  {
+   "asset": "/assets/joints/elbow_r/elbow_r.detail.glb",
+   "neededBy": "hinge.bones",
+   "loadedAtMs": 103497,
+   "shotStartedAtMs": 86194,
+   "marginMs": -17303
+  }
+ ],
+ "frameIntervalMs": {
+  "n": 4887,
+  "p50": 33.9,
+  "p95": 65.4,
+  "min": 5.4,
+  "max": 235.4
+ },
+ "frameCpuMs": {
+  "n": 4892,
+  "p50": 11.7,
+  "p95": 26.3,
+  "min": 0.3,
+  "max": 325.8
+ },
+ "droppedFrames": 6231,
+ "consoleErrors": []
+}

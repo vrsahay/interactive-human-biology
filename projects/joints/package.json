@@ -1,0 +1,45 @@
+{
+  "name": "joints-platform",
+  "private": true,
+  "type": "module",
+  "description": "Joints learning platform: Blender asset pipeline, web assets and runtime",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc -p tsconfig.json && tsc -p tests/tsconfig.json",
+    "test": "vitest run",
+    "test:e2e": "playwright test",
+    "manifest:validator": "node pipeline/tools/build_manifest_validator.mjs",
+    "spec:validate": "node pipeline/tools/validate_spec.mjs pipeline/specs/elbow_r.json",
+    "master:guard": "node pipeline/tools/master_guard.mjs",
+    "assets:optimize": "node pipeline/optimize.ts",
+    "assets:validate": "node pipeline/validate_glb.ts"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.13.0",
+    "@gltf-transform/core": "^4.5.0",
+    "@gltf-transform/extensions": "^4.5.0",
+    "@gltf-transform/functions": "^4.5.0",
+    "@playwright/test": "^1.63.0",
+    "@testing-library/preact": "^3.2.4",
+    "@types/node": "^22.20.3",
+    "@types/three": "^0.186.0",
+    "ajv": "^8.20.0",
+    "gltf-validator": "^2.0.0-dev.3.10",
+    "jsdom": "^30.1.0",
+    "meshoptimizer": "^1.2.0",
+    "sharp": "^0.35.4",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.0",
+    "vitest": "^5.0.1"
+  },
+  "dependencies": {
+    "@preact/signals": "^2.11.2",
+    "preact": "^10.29.8",
+    "three": "^0.186.0"
+  }
+}

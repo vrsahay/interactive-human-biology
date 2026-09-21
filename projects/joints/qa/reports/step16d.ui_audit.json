@@ -1,0 +1,703 @@
+{
+ "generatedAt": "2026-09-20T20:10:44.219Z",
+ "shots": [
+  {
+   "shot": "intro.title",
+   "draftBadges": 0,
+   "sourceBadges": 0,
+   "badgeText": [],
+   "srOnlyBlocks": 1,
+   "srOnlyChars": 108,
+   "srOnlyMentionsDraft": 0,
+   "teachmark": false,
+   "sourcesButton": false
+  },
+  {
+   "shot": "hook.shoulder",
+   "draftBadges": 0,
+   "sourceBadges": 0,
+   "badgeText": [],
+   "srOnlyBlocks": 1,
+   "srOnlyChars": 165,
+   "srOnlyMentionsDraft": 0,
+   "teachmark": true,
+   "sourcesButton": false
+  },
+  {
+   "shot": "hook.elbow",
+   "draftBadges": 0,
+   "sourceBadges": 0,
+   "badgeText": [],
+   "srOnlyBlocks": 1,
+   "srOnlyChars": 117,
+   "srOnlyMentionsDraft": 0,
+   "teachmark": true,
+   "sourcesButton": false
+  },
+  {
+   "shot": "hook.question",
+   "draftBadges": 0,
+   "sourceBadges": 0,
+   "badgeText": [],
+   "srOnlyBlocks": 1,
+   "srOnlyChars": 102,
+   "srOnlyMentionsDraft": 0,
+   "teachmark": true,
+   "sourcesButton": false
+  },
+  {
+   "shot": "concept.meet",
+   "draftBadges": 0,
+   "sourceBadges": 0,
+   "badgeText": [],
+   "srOnlyBlocks": 1,
+   "srOnlyChars": 105,
+   "srOnlyMentionsDraft": 0,
+   "teachmark": false,
+   "sourcesButton": false
+  },
+  {
+   "shot": "concept.different",
+   "draftBadges": 0,
+   "sourceBadges": 0,
+   "badgeText": [],
+   "srOnlyBlocks": 1,
+   "srOnlyChars": 121,
+   "srOnlyMentionsDraft": 0,
+   "teachmark": true,
+   "sourcesButton": false
+  },
+  {
+   "shot": "intro.map",
+   "draftBadges": 0,
+   "sourceBadges": 0,
+   "badgeText": [],
+   "srOnlyBlocks": 1,
+   "srOnlyChars": 142,
+   "srOnlyMentionsDraft": 0,
+   "teachmark": false,
+   "sourcesButton": false
+  },
+  {
+   "shot": "fixed.travel",
+   "draftBadges": 0,
+   "sourceBadges": 0,
+   "badgeText": [],
+   "srOnlyBlocks": 1,
+   "srOnlyChars": 82,
+   "srOnlyMentionsDraft": 0,
+   "teachmark": false,
+   "sourcesButton": false
+  },
+  {
+   "shot": "fixed.bones",
+   "draftBadges": 0,
+   "sourceBadges": 0,
+   "badgeText": [],
+   "srOnlyBlocks": 1,
+   "srOnlyChars": 91,
+   "srOnlyMentionsDraft": 0,
+   "teachmark": false,
+   "sourcesButton": false
+  },
+  {
+   "shot": "fixed.try",
+   "draftBadges": 0,
+   "sourceBadges": 0,
+   "badgeText": [],
+   "srOnlyBlocks": 1,
+   "srOnlyChars": 112,
+   "srOnlyMentionsDraft": 0,
+   "teachmark": true,
+   "sourcesButton": false
+  },
+  {
+   "shot": "fixed.why",
+   "draftBadges": 0,
+   "sourceBadges": 0,
+   "badgeText": [],
+   "srOnlyBlocks": 1,
+   "srOnlyChars": 79,
+   "srOnlyMentionsDraft": 0,
+   "teachmark": false,
+   "sourcesButton": false
+  },
+  {
+   "shot": "fixed.name",
+   "draftBadges": 0,
+   "sourceBadges": 0,
+   "badgeText": [],
+   "srOnlyBlocks": 1,
+   "srOnlyChars": 72,
+   "srOnlyMentionsDraft": 0,
+   "teachmark": false,
+   "sourcesButton": false
+  },
+  {
+   "shot": "fixed.task",
+   "draftBadges": 0,
+   "sourceBadges": 0,
+   "badgeText": [],
+   "srOnlyBlocks": 1,
+   "srOnlyChars": 74,
+   "srOnlyMentionsDraft": 0,
+   "teachmark": false,
+   "sourcesButton": false
+  },
+  {
+   "shot": "pivot.travel",
+   "draftBadges": 0,
+   "sourceBadges": 0,
+   "badgeText": [],
+   "srOnlyBlocks": 1,
+   "srOnlyChars": 107,
+   "srOnlyMentionsDraft": 0,
+   "teachmark": false,
+   "sourcesButton": false
+  },
+  {
+   "shot": "pivot.bones",
+   "draftBadges": 0,
+   "sourceBadges": 0,
+   "badgeText": [],
+   "srOnlyBlocks": 1,
+   "srOnlyChars": 141,
+   "srOnlyMentionsDraft": 0,
+   "teachmark": false,
+   "sourcesButton": false
+  },
+  {
+   "shot": "pivot.rotate",
+   "draftBadges": 0,
+   "sourceBadges": 0,
+   "badgeText": [],
+   "srOnlyBlocks": 1,
+   "srOnlyChars": 96,
+   "srOnlyMentionsDraft": 0,
+   "teachmark": true,
+   "sourcesButton": false
+  },
+  {
+   "shot": "pivot.why",
+   "draftBadges": 0,
+   "sourceBadges": 0,
+   "badgeText": [],
+   "srOnlyBlocks": 1,
+   "srOnlyChars": 113,
+   "srOnlyMentionsDraft": 0,
+   "teachmark": true,
+   "sourcesButton": false
+  },
+  {
+   "shot": "pivot.name",
+   "draftBadges": 0,
+   "sourceBadges": 0,
+   "badgeText": [],
+   "srOnlyBlocks": 1,
+   "srOnlyChars": 72,
+   "srOnlyMentionsDraft": 0,
+   "teachmark": false,
+   "sourcesButton": false
+  },
+  {
+   "shot": "pivot.task",
+   "draftBadges": 0,
+   "sourceBadges": 0,
+   "badgeText": [],
+   "srOnlyBlocks": 1,
+   "srOnlyChars": 90,
+   "srOnlyMentionsDraft": 0,
+   "teachmark": false,
+   "sourcesButton": false
+  },
+  {
+   "shot": "ball.travel",
+   "draftBadges": 0,
+   "sourceBadges": 0,
+   "badgeText": [],
+   "srOnlyBlocks": 1,
+   "srOnlyChars": 120,
+   "srOnlyMentionsDraft": 0,
+   "teachmark": false,
+   "sourcesButton": false
+  },
+  {
+   "shot": "ball.bones",
+   "draftBadges": 0,
+   "sourceBadges": 0,
+   "badgeText": [],
+   "srOnlyBlocks": 1,
+   "srOnlyChars": 127,
+   "srOnlyMentionsDraft": 0,
+   "teachmark": false,
+   "sourcesButton": false
+  },
+  {
+   "shot": "ball.move",
+   "draftBadges": 0,
+   "sourceBadges": 0,
+   "badgeText": [],
+   "srOnlyBlocks": 1,
+   "srOnlyChars": 120,
+   "srOnlyMentionsDraft": 0,
+   "teachmark": true,
+   "sourcesButton": false
+  },
+  {
+   "shot": "ball.why",
+   "draftBadges": 0,
+   "sourceBadges": 0,
+   "badgeText": [],
+   "srOnlyBlocks": 1,
+   "srOnlyChars": 104,
+   "srOnlyMentionsDraft": 0,
+   "teachmark": false,
+   "sourcesButton": false
+  },
+  {
+   "shot": "ball.name",
+   "draftBadges": 0,
+   "sourceBadges": 0,
+   "badgeText": [],
+   "srOnlyBlocks": 1,
+   "srOnlyChars": 85,
+   "srOnlyMentionsDraft": 0,
+   "teachmark": false,
+   "sourcesButton": false
+  },
+  {
+   "shot": "ball.task",
+   "draftBadges": 0,
+   "sourceBadges": 0,
+   "badgeText": [],
+   "srOnlyBlocks": 1,
+   "srOnlyChars": 93,
+   "srOnlyMentionsDraft": 0,
+   "teachmark": false,
+   "sourcesButton": false
+  },
+  {
+   "shot": "hinge.travel",
+   "draftBadges": 0,
+   "sourceBadges": 0,
+   "badgeText": [],
+   "srOnlyBlocks": 1,
+   "srOnlyChars": 52,
+   "srOnlyMentionsDraft": 0,
+   "teachmark": false,
+   "sourcesButton": false
+  },
+  {
+   "shot": "hinge.source",
+   "draftBadges": 0,
+   "sourceBadges": 0,
+   "badgeText": [],
+   "srOnlyBlocks": 1,
+   "srOnlyChars": 58,
+   "srOnlyMentionsDraft": 0,
+   "teachmark": false,
+   "sourcesButton": false
+  },
+  {
+   "shot": "hinge.bones",
+   "draftBadges": 0,
+   "sourceBadges": 0,
+   "badgeText": [],
+   "srOnlyBlocks": 1,
+   "srOnlyChars": 97,
+   "srOnlyMentionsDraft": 0,
+   "teachmark": false,
+   "sourcesButton": false
+  },
+  {
+   "shot": "hinge.axis",
+   "draftBadges": 0,
+   "sourceBadges": 0,
+   "badgeText": [],
+   "srOnlyBlocks": 1,
+   "srOnlyChars": 105,
+   "srOnlyMentionsDraft": 0,
+   "teachmark": false,
+   "sourcesButton": false
+  },
+  {
+   "shot": "hinge.flexion",
+   "draftBadges": 0,
+   "sourceBadges": 0,
+   "badgeText": [],
+   "srOnlyBlocks": 1,
+   "srOnlyChars": 114,
+   "srOnlyMentionsDraft": 0,
+   "teachmark": false,
+   "sourcesButton": false
+  },
+  {
+   "shot": "hinge.extension",
+   "draftBadges": 0,
+   "sourceBadges": 0,
+   "badgeText": [],
+   "srOnlyBlocks": 1,
+   "srOnlyChars": 96,
+   "srOnlyMentionsDraft": 0,
+   "teachmark": false,
+   "sourcesButton": false
+  },
+  {
+   "shot": "hinge.why",
+   "draftBadges": 0,
+   "sourceBadges": 0,
+   "badgeText": [],
+   "srOnlyBlocks": 1,
+   "srOnlyChars": 131,
+   "srOnlyMentionsDraft": 0,
+   "teachmark": false,
+   "sourcesButton": false
+  },
+  {
+   "shot": "hinge.name",
+   "draftBadges": 0,
+   "sourceBadges": 0,
+   "badgeText": [],
+   "srOnlyBlocks": 1,
+   "srOnlyChars": 71,
+   "srOnlyMentionsDraft": 0,
+   "teachmark": false,
+   "sourcesButton": false
+  },
+  {
+   "shot": "hinge.try",
+   "draftBadges": 0,
+   "sourceBadges": 0,
+   "badgeText": [],
+   "srOnlyBlocks": 1,
+   "srOnlyChars": 81,
+   "srOnlyMentionsDraft": 0,
+   "teachmark": false,
+   "sourcesButton": false
+  },
+  {
+   "shot": "hinge.check",
+   "draftBadges": 0,
+   "sourceBadges": 0,
+   "badgeText": [],
+   "srOnlyBlocks": 1,
+   "srOnlyChars": 97,
+   "srOnlyMentionsDraft": 0,
+   "teachmark": false,
+   "sourcesButton": false
+  },
+  {
+   "shot": "hinge.support",
+   "draftBadges": 0,
+   "sourceBadges": 0,
+   "badgeText": [],
+   "srOnlyBlocks": 1,
+   "srOnlyChars": 103,
+   "srOnlyMentionsDraft": 0,
+   "teachmark": false,
+   "sourcesButton": false
+  },
+  {
+   "shot": "hinge.return",
+   "draftBadges": 0,
+   "sourceBadges": 0,
+   "badgeText": [],
+   "srOnlyBlocks": 1,
+   "srOnlyChars": 58,
+   "srOnlyMentionsDraft": 0,
+   "teachmark": false,
+   "sourcesButton": false
+  },
+  {
+   "shot": "hinge.knee",
+   "draftBadges": 0,
+   "sourceBadges": 0,
+   "badgeText": [],
+   "srOnlyBlocks": 1,
+   "srOnlyChars": 101,
+   "srOnlyMentionsDraft": 0,
+   "teachmark": true,
+   "sourcesButton": false
+  },
+  {
+   "shot": "compare.pullback",
+   "draftBadges": 0,
+   "sourceBadges": 0,
+   "badgeText": [],
+   "srOnlyBlocks": 1,
+   "srOnlyChars": 63,
+   "srOnlyMentionsDraft": 0,
+   "teachmark": false,
+   "sourcesButton": false
+  },
+  {
+   "shot": "compare.fixed",
+   "draftBadges": 0,
+   "sourceBadges": 0,
+   "badgeText": [],
+   "srOnlyBlocks": 1,
+   "srOnlyChars": 81,
+   "srOnlyMentionsDraft": 0,
+   "teachmark": true,
+   "sourcesButton": false
+  },
+  {
+   "shot": "compare.pivot",
+   "draftBadges": 0,
+   "sourceBadges": 0,
+   "badgeText": [],
+   "srOnlyBlocks": 1,
+   "srOnlyChars": 87,
+   "srOnlyMentionsDraft": 0,
+   "teachmark": true,
+   "sourcesButton": false
+  },
+  {
+   "shot": "compare.ball",
+   "draftBadges": 0,
+   "sourceBadges": 0,
+   "badgeText": [],
+   "srOnlyBlocks": 1,
+   "srOnlyChars": 104,
+   "srOnlyMentionsDraft": 0,
+   "teachmark": true,
+   "sourcesButton": false
+  },
+  {
+   "shot": "compare.hinge",
+   "draftBadges": 0,
+   "sourceBadges": 0,
+   "badgeText": [],
+   "srOnlyBlocks": 1,
+   "srOnlyChars": 83,
+   "srOnlyMentionsDraft": 0,
+   "teachmark": true,
+   "sourcesButton": false
+  },
+  {
+   "shot": "compare.together",
+   "draftBadges": 0,
+   "sourceBadges": 0,
+   "badgeText": [],
+   "srOnlyBlocks": 1,
+   "srOnlyChars": 88,
+   "srOnlyMentionsDraft": 0,
+   "teachmark": false,
+   "sourcesButton": false
+  },
+  {
+   "shot": "recall.open",
+   "draftBadges": 0,
+   "sourceBadges": 0,
+   "badgeText": [],
+   "srOnlyBlocks": 1,
+   "srOnlyChars": 52,
+   "srOnlyMentionsDraft": 0,
+   "teachmark": false,
+   "sourcesButton": false
+  },
+  {
+   "shot": "recall.challenge",
+   "draftBadges": 0,
+   "sourceBadges": 0,
+   "badgeText": [],
+   "srOnlyBlocks": 1,
+   "srOnlyChars": 37,
+   "srOnlyMentionsDraft": 0,
+   "teachmark": false,
+   "sourcesButton": false
+  },
+  {
+   "shot": "map.intro",
+   "draftBadges": 0,
+   "sourceBadges": 0,
+   "badgeText": [],
+   "srOnlyBlocks": 1,
+   "srOnlyChars": 71,
+   "srOnlyMentionsDraft": 0,
+   "teachmark": false,
+   "sourcesButton": false
+  },
+  {
+   "shot": "map.fixed",
+   "draftBadges": 0,
+   "sourceBadges": 0,
+   "badgeText": [],
+   "srOnlyBlocks": 1,
+   "srOnlyChars": 62,
+   "srOnlyMentionsDraft": 0,
+   "teachmark": true,
+   "sourcesButton": false
+  },
+  {
+   "shot": "map.pivot",
+   "draftBadges": 0,
+   "sourceBadges": 0,
+   "badgeText": [],
+   "srOnlyBlocks": 1,
+   "srOnlyChars": 72,
+   "srOnlyMentionsDraft": 0,
+   "teachmark": true,
+   "sourcesButton": false
+  },
+  {
+   "shot": "map.ball",
+   "draftBadges": 0,
+   "sourceBadges": 0,
+   "badgeText": [],
+   "srOnlyBlocks": 1,
+   "srOnlyChars": 81,
+   "srOnlyMentionsDraft": 0,
+   "teachmark": true,
+   "sourcesButton": false
+  },
+  {
+   "shot": "map.hinge",
+   "draftBadges": 0,
+   "sourceBadges": 0,
+   "badgeText": [],
+   "srOnlyBlocks": 1,
+   "srOnlyChars": 68,
+   "srOnlyMentionsDraft": 0,
+   "teachmark": true,
+   "sourcesButton": false
+  },
+  {
+   "shot": "map.all",
+   "draftBadges": 0,
+   "sourceBadges": 0,
+   "badgeText": [],
+   "srOnlyBlocks": 1,
+   "srOnlyChars": 110,
+   "srOnlyMentionsDraft": 0,
+   "teachmark": false,
+   "sourcesButton": false
+  }
+ ],
+ "persistent": {
+  "count": 16,
+  "items": [
+   "Narration is ready - tap to start ",
+   "Settings",
+   "Play",
+   "Replay",
+   "Lesson timeline",
+   "01 Two joints, two movements",
+   "02 What is a joint?",
+   "03 Fixed joint",
+   "04 Pivot joint",
+   "05 Ball-and-socket joint",
+   "06 Hinge joint",
+   "07 Comparing the four",
+   "08 Recall challenge",
+   "09 The body map",
+   "Explore this joint",
+   "Full screen"
+  ]
+ },
+ "explore": [
+  {
+   "exploreId": "explore.fixed",
+   "panelText": "Fixed joint · skull | TEACHING SIMULATION |  | This shows the movement pattern. The bones are real; the movement is a demonstration. |  | YOUR TASK Try to move the two skull bones apart. |  | Try to move the skull bones. |  | These bones barely move. A fixed joint holds bones firmly together. |  | Use the arrow keys to move, R to reset, Escape to return. |  | Reset | Return to the lesson",
+   "panelChars": 362,
+   "draftBadges": 0,
+   "labelsOverlappingPanel": [
+    {
+     "text": "Fixed joint · skullPivotBall and socketH",
+     "left": 0,
+     "right": 1280
+    },
+    {
+     "text": "Your task",
+     "left": 83,
+     "right": 166
+    }
+   ],
+   "panelRect": {
+    "left": 64,
+    "right": 424,
+    "top": 281,
+    "bottom": 668
+   }
+  },
+  {
+   "exploreId": "explore.pivot",
+   "panelText": "Pivot joint · top of the neck | TEACHING SIMULATION |  | This shows the movement pattern. The bones are real; the movement is a demonstration. |  | YOUR TASK Turn the head as if you were looking over one shoulder. |  | Drag left and right to turn the head. |  | 0° |  | The head turns around the bone below it. A pivot joint allows rotation. |  | Use the arrow keys to move, R to reset, Escape to return. |  | Reset | Re",
+   "panelChars": 406,
+   "draftBadges": 0,
+   "labelsOverlappingPanel": [
+    {
+     "text": "Fixed joint · skullPivot joint · top of ",
+     "left": 0,
+     "right": 1280
+    },
+    {
+     "text": "Your task",
+     "left": 83,
+     "right": 166
+    }
+   ],
+   "panelRect": {
+    "left": 64,
+    "right": 424,
+    "top": 249,
+    "bottom": 668
+   }
+  },
+  {
+   "exploreId": "explore.ball",
+   "panelText": "Ball-and-socket joint · shoulder | TEACHING SIMULATION |  | This shows the movement pattern. The bones are real; the movement is a demonstration. |  | YOUR TASK Move the arm in two different directions. |  | Drag in any direction to move the arm. |  | 0° · 0° |  | The arm moves in many directions, not just one. That is a ball-and-socket joint. |  | Use the arrow keys to move, R to reset, Escape to return. |  | Reset ",
+   "panelChars": 410,
+   "draftBadges": 0,
+   "labelsOverlappingPanel": [
+    {
+     "text": "Fixed joint · skullPivot joint · top of ",
+     "left": 0,
+     "right": 1280
+    },
+    {
+     "text": "Your task",
+     "left": 83,
+     "right": 166
+    }
+   ],
+   "panelRect": {
+    "left": 64,
+    "right": 424,
+    "top": 249,
+    "bottom": 668
+   }
+  },
+  {
+   "exploreId": "explore.hinge",
+   "panelText": "Hinge joint · elbow | 3D JOINT MODEL |  | YOUR TASK Bend the elbow until it is about half-way — around 90 degrees. |  | Drag to bend and straighten the elbow. |  | 0° |  | Bending is flexion. Straightening is extension. A hinge joint does both, in one direction. |  | Elbow flexion | 0° | 0° · Extended | Flexed · 145° (approx.) |  | Use the arrow keys to move, R to reset, Escape to return. |  | Reset | Return to the l",
+   "panelChars": 387,
+   "draftBadges": 0,
+   "labelsOverlappingPanel": [
+    {
+     "text": "Fixed joint · skullPivot joint · top of ",
+     "left": 0,
+     "right": 1280
+    },
+    {
+     "text": "Your task",
+     "left": 83,
+     "right": 166
+    },
+    {
+     "text": "Elbow flexion",
+     "left": 83,
+     "right": 174
+    }
+   ],
+   "panelRect": {
+    "left": 64,
+    "right": 424,
+    "top": 232,
+    "bottom": 668
+   }
+  }
+ ],
+ "srOnly": null,
+ "clipping": []
+}

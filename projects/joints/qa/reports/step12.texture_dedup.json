@@ -1,0 +1,165 @@
+{
+ "step11": {
+  "downloadBytes": 98386,
+  "duplicateDownloadBytes": 62810,
+  "gpuTextures": 10,
+  "gpuBytes": 20272466,
+  "note": "every glTF texture uploaded separately + PMREM RoomEnvironment render target (768x1024 half float)"
+ },
+ "step12": {
+  "downloadBytes": 78400,
+  "duplicateDownloadBytes": 42824,
+  "gpuTextures": 6,
+  "gpuBytes": 9076734,
+  "note": "body textures shipped once in public/assets/shared/body-materials.glb; runtime de-duplication by image content hash; baked 64 environment (336x256 half float)"
+ },
+ "hypotheticalElbowExternalised": {
+  "downloadBytes": 35576,
+  "savesDownloadBytes": 42824,
+  "savesGpuBytes": 0,
+  "repeatVisitSavings": 0,
+  "cost": "re-export and re-validate the validated elbow GLBs (Gate 2 + Gate 3 pose consistency) and add external-image integrity checks",
+  "decision": "not done: saves 41.8 KB once per first visit (HTTP-cached afterwards), no GPU memory (already de-duplicated at runtime); would require modifying validated elbow production assets"
+ },
+ "lists": {
+  "step11": [
+   {
+    "file": "elbow_r.core.glb",
+    "name": "Tissue normal | organ",
+    "bytes": 19986,
+    "sha": "2c6f2e1c767e",
+    "gpu": 1398101
+   },
+   {
+    "file": "elbow_r.core.glb",
+    "name": "Tissue color | bone",
+    "bytes": 2852,
+    "sha": "87769ee29460",
+    "gpu": 1398101
+   },
+   {
+    "file": "elbow_r.detail.glb",
+    "name": "Tissue normal | organ",
+    "bytes": 19986,
+    "sha": "2c6f2e1c767e",
+    "gpu": 1398101
+   },
+   {
+    "file": "elbow_r.detail.glb",
+    "name": "Tissue color | tendon",
+    "bytes": 3146,
+    "sha": "8161ce4d8538",
+    "gpu": 1398101
+   },
+   {
+    "file": "body.skeleton.glb",
+    "name": "Tissue normal | organ",
+    "bytes": 19986,
+    "sha": "2c6f2e1c767e",
+    "gpu": 1398101
+   },
+   {
+    "file": "body.skeleton.glb",
+    "name": "Tissue color | cartilage",
+    "bytes": 3078,
+    "sha": "e45e64b19853",
+    "gpu": 1398101
+   },
+   {
+    "file": "body.skeleton.glb",
+    "name": "Tissue color | bone",
+    "bytes": 2852,
+    "sha": "87769ee29460",
+    "gpu": 1398101
+   },
+   {
+    "file": "body.skeleton.glb",
+    "name": "Tissue color | teeth",
+    "bytes": 3540,
+    "sha": "c34b71ccbdb8",
+    "gpu": 1398101
+   },
+   {
+    "file": "body.skin.glb",
+    "name": "Tissue normal | organ",
+    "bytes": 19986,
+    "sha": "2c6f2e1c767e",
+    "gpu": 1398101
+   },
+   {
+    "file": "body.skin.glb",
+    "name": "Tissue color | skin",
+    "bytes": 2974,
+    "sha": "9c88518f7950",
+    "gpu": 1398101
+   }
+  ],
+  "library": [
+   {
+    "file": "body-materials.glb",
+    "name": "Tissue color | bone",
+    "bytes": 2852,
+    "sha": "87769ee29460",
+    "gpu": 1398101
+   },
+   {
+    "file": "body-materials.glb",
+    "name": "Tissue normal | organ",
+    "bytes": 19986,
+    "sha": "2c6f2e1c767e",
+    "gpu": 1398101
+   },
+   {
+    "file": "body-materials.glb",
+    "name": "Tissue color | cartilage",
+    "bytes": 3078,
+    "sha": "e45e64b19853",
+    "gpu": 1398101
+   },
+   {
+    "file": "body-materials.glb",
+    "name": "Tissue color | teeth",
+    "bytes": 3540,
+    "sha": "c34b71ccbdb8",
+    "gpu": 1398101
+   },
+   {
+    "file": "body-materials.glb",
+    "name": "Tissue color | skin",
+    "bytes": 2974,
+    "sha": "9c88518f7950",
+    "gpu": 1398101
+   }
+  ],
+  "elbow": [
+   {
+    "file": "elbow_r.core.glb",
+    "name": "Tissue normal | organ",
+    "bytes": 19986,
+    "sha": "2c6f2e1c767e",
+    "gpu": 1398101
+   },
+   {
+    "file": "elbow_r.core.glb",
+    "name": "Tissue color | bone",
+    "bytes": 2852,
+    "sha": "87769ee29460",
+    "gpu": 1398101
+   },
+   {
+    "file": "elbow_r.detail.glb",
+    "name": "Tissue normal | organ",
+    "bytes": 19986,
+    "sha": "2c6f2e1c767e",
+    "gpu": 1398101
+   },
+   {
+    "file": "elbow_r.detail.glb",
+    "name": "Tissue color | tendon",
+    "bytes": 3146,
+    "sha": "8161ce4d8538",
+    "gpu": 1398101
+   }
+  ]
+ }
+}

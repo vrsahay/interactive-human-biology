@@ -1,0 +1,31 @@
+[WebServer] [plugin builtin:vite-reporter] 
+[WebServer] (!) Some chunks are larger than 500 kB after minification. Consider:
+[WebServer] - Using dynamic import() to code-split the application
+[WebServer] - Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
+[WebServer] - Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+
+Running 20 tests using 1 worker
+
+  ok  1 tests\e2e\film-visual.spec.ts:30:1 › film visual QA: deterministic frames for every chapter and the elbow poses (41.2s)
+  ok  2 tests\e2e\film.spec.ts:17:3 › video-first lesson (default route) › opens on the full-body intro with the title card, no joint asset, badges and chapter markers (3.0s)
+  ok  3 tests\e2e\film.spec.ts:33:3 › video-first lesson (default route) › play / pause, and the camera travels across a shot boundary into the skull (5.0s)
+  ok  4 tests\e2e\film.spec.ts:59:3 › video-first lesson (default route) › chapter markers seek and reconstruct each section: fixed, pivot, ball-and-socket, hinge (4.1s)
+  ok  5 tests\e2e\film.spec.ts:104:3 › video-first lesson (default route) › elbow hero: plays from 45° to 90°, extension reaches the approximate 145° and returns to 0° (7.4s)
+  ok  6 tests\e2e\film.spec.ts:125:3 › video-first lesson (default route) › recap returns to the full body with all four joint types marked (3.6s)
+  ok  7 tests\e2e\film.spec.ts:149:3 › video-first lesson (default route) › timeline keyboard seeking, replay and reset (3.8s)
+  ok  8 tests\e2e\film.spec.ts:174:3 › video-first lesson (default route) › hinge chapter: dragging the forearm pauses the film, bends the elbow, and the film resumes (11.9s)
+  ok  9 tests\e2e\film.spec.ts:222:3 › video-first lesson (default route) › interactive check: bending to about 90° with the keyboard completes the lesson (3.8s)
+  ok 10 tests\e2e\film.spec.ts:241:3 › video-first lesson (default route) › reduced motion: shot boundaries cut, poses hold keyframes, captions do not animate (4.0s)
+  ok 11 tests\e2e\film.spec.ts:263:3 › video-first lesson (default route) › mobile viewport: no horizontal scroll, controls reachable, subject centred (3.0s)
+  ok 12 tests\e2e\gate3-pose-consistency.spec.ts:15:1 › gate 3: runtime pose consistency vs Blender + landmark status (3.3s)
+  ok 13 tests\e2e\performance.spec.ts:59:1 › development performance measurements (not a device certification) (26.7s)
+  ok 14 tests\e2e\reference-poses.spec.ts:16:1 › reference poses 0/45/90/145: runtime checks + deterministic snapshots (9.2s)
+  ok 15 tests\e2e\smoke.spec.ts:5:3 › elbow vertical slice smoke › application loads and the elbow appears (2.1s)
+  ok 16 tests\e2e\smoke.spec.ts:35:3 › elbow vertical slice smoke › slider (keyboard + pointer) changes pose, 90° is reached, reset returns to 0° (3.5s)
+  ok 17 tests\e2e\smoke.spec.ts:81:3 › elbow vertical slice smoke › dragging the forearm bends the elbow (and does not orbit) (4.1s)
+  ok 18 tests\e2e\smoke.spec.ts:124:3 › elbow vertical slice smoke › dragging a stationary structure orbits the camera (distinct mode) and never changes the pose (3.5s)
+  ok 19 tests\e2e\smoke.spec.ts:144:3 › elbow vertical slice smoke › structures can be selected by click (structureId, pose preserved) (8.7s)
+  ok 20 tests\e2e\smoke.spec.ts:169:3 › elbow vertical slice smoke › camera presets and reduced-motion cut transitions (2.2s)
+
+  20 passed (2.8m)
+EXIT 0

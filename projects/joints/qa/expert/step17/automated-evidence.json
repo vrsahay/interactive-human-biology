@@ -1,0 +1,27 @@
+{
+ "document": "Automated evidence recorded on the exact candidate build for this package. Evidence, not approval: no item in expert-review-status.json may be moved off PENDING because of anything here.",
+ "candidate": "step16g-narration-repetition-fixed",
+ "commit": "11560e3c3678954cb10c3c27dda3567aaf53f591",
+ "runOn": "2026-09-21, branch step17-expert-package at the candidate commit, working tree clean for every product path",
+ "environment": "Node v24.19.0; Google Chrome 152 (installed channel), headless, ANGLE D3D11; Lenovo 20V9, i5-1135G7, Iris Xe, Windows 11 Pro",
+ "typecheck": "clean",
+ "unit": { "files": 11, "passed": 104, "failed": 0 },
+ "e2e": { "suites": 22, "passed": 118, "failed": 0, "flaky": 0, "durationMinutes": 16.0 },
+ "consoleErrors": 0,
+ "webBuild": "rebuilt by the test run; byte-identical to the build the review captures were taken from (109 files, source maps excluded)",
+ "narrationPlayback_step16g": {
+  "method": "qa/step16g/audit_replays.mjs: full real-time playthrough from the Start button, every audio currentTime assignment recorded",
+  "midSentenceReplays": { "before": 3, "after": 0 },
+  "clipsStartingBeforeLeadIn": { "before": "35 of 35 observed", "after": "0 of 52" },
+  "wordsSkipped": { "before": 0, "after": 0 },
+  "largestVoicePictureGapWhileSpeaking": "0.43 s on the first clip after Start, closed at 1.15x; every other shot <= 0.08 s",
+  "reports": ["qa/reports/step16g.replays.before.json", "qa/reports/step16g.replays.after.json"]
+ },
+ "narrationOwnership": "at most one audible narration element at any time; the film clip is silent while an exploration's task cue speaks (review captures handover_fixed / handover_pivot / handover_ball record owner=cue, owners=1)",
+ "exploreVisibility": "target 0 % covered by the task card at 9 widths x 4 explorations and in 4 states at 390, 412, 1280, 1440; lowest prominence parity 0.81 (emulated viewports)",
+ "exploreIsolation": "a drag starting on the target moves only the declared groups; 0 camera movement",
+ "textHierarchy": "topic heading top-left under the chapter line; 0 problems in 117 checks at 9 widths",
+ "accessibilityAutomated": "axe 0 violations; measured contrast 0 below threshold; keyboard-only completion; dialogs; reduced motion; 44 px targets; reflow 320 px",
+ "validatedElbow": "reference poses 0/45/90/145 exact; gate3 pose consistency passes; assets byte-identical",
+ "notTested": ["NVDA", "VoiceOver", "TalkBack", "real Android device", "real iPad", "real iPhone", "human listening to the whole lesson"]
+}

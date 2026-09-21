@@ -1,0 +1,312 @@
+{
+ "step": "13-final",
+ "document": "Frozen build record. The product is frozen for expert sign-off; these hashes identify exactly what was reviewed.",
+ "frozenAt": "2026-09-18T06:29:35.214Z",
+ "application": {
+  "name": "Types of Joints - video-first lesson",
+  "packageVersion": "unversioned (private package)",
+  "lesson": "hinge-elbow: 6 chapters, 22 shots, ~3 min",
+  "route": "film is the default route; ?mode=sandbox keeps the Step-10 shell"
+ },
+ "toolchain": {
+  "three": "^0.186.0",
+  "preact": "^10.29.8",
+  "vite": "^8.3.0",
+  "typescript": "^7.0.2",
+  "vitest": "^5.0.1",
+  "playwright": "^1.63.0",
+  "blenderVersionPin": "5.2.2",
+  "browserUnderTest": "Google Chrome 152.0.7977.83 (installed channel), headless, ANGLE D3D11",
+  "node": "v24.19.0"
+ },
+ "integrity": {
+  "note": "Nothing in this list was modified to produce this record. The master is read-only and has never changed.",
+  "masterMustRemain": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0",
+  "master": {
+   "path": "<owner desktop>/Human_Body_Master.blend",
+   "pinnedInConfig": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0",
+   "bytes": 224401653,
+   "sha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0",
+   "modified": "2026-09-16T10:52:57.809Z"
+  },
+  "masterMatchesPin": true,
+  "blenderWorkingAndCheckpoints": [
+   {
+    "path": "blender/Joints_Working.blend",
+    "bytes": 3539188,
+    "sha256": "9fb76d8c5b799d1bf65dc8e865c400299a3cc52fb8bf7ceab8c903a1671187f9",
+    "modified": "2026-09-17T09:52:22.037Z"
+   },
+   {
+    "path": "blender/Joints_Working.v001.blend",
+    "bytes": 3514520,
+    "sha256": "323ba6c1ae4b58001e20ad1edb6c50ab7e35225c72204ab5e42127872a7b8f75",
+    "modified": "2026-09-17T09:09:34.601Z"
+   },
+   {
+    "path": "blender/Joints_Working.v002.blend",
+    "bytes": 3520906,
+    "sha256": "9518004b2de8a749f0d1308c7fce9edd59399381588516f3b2a77f20bcc94f8f",
+    "modified": "2026-09-17T09:30:17.819Z"
+   },
+   {
+    "path": "blender/Joints_Working.v003.blend",
+    "bytes": 3538356,
+    "sha256": "817123863ec3601589cfdfdc4461742ca8580e015f77c09780acb5729c4b7c1b",
+    "modified": "2026-09-17T09:40:36.390Z"
+   },
+   {
+    "path": "blender/Joints_Working.v004.blend",
+    "bytes": 3539188,
+    "sha256": "9fb76d8c5b799d1bf65dc8e865c400299a3cc52fb8bf7ceab8c903a1671187f9",
+    "modified": "2026-09-17T09:52:22.037Z"
+   }
+  ],
+  "validatedElbowAssets": [
+   {
+    "path": "public/assets/joints/elbow_r/elbow_r.core.glb",
+    "bytes": 306880,
+    "sha256": "61c046262a823e95b141992f8bbaa13e5810c2bc7e7c76088dc3f9c6b1be93c1",
+    "modified": "2026-09-17T10:07:12.642Z"
+   },
+   {
+    "path": "public/assets/joints/elbow_r/elbow_r.detail.glb",
+    "bytes": 93936,
+    "sha256": "c767e24c51c65d17034b11368ecb480618a690d9847505f0f013437d293c38b6",
+    "modified": "2026-09-17T10:07:14.475Z"
+   },
+   {
+    "path": "public/assets/joints/elbow_r/elbow_r.context.glb",
+    "bytes": 628008,
+    "sha256": "a7d7fdc482d7e6bc30f65e524180cb4a613388b3406ce1e82cfc6677b31dfdbc",
+    "modified": "2026-09-17T10:07:16.444Z"
+   },
+   {
+    "path": "public/assets/joints/elbow_r/joint-manifest.json",
+    "bytes": 93064,
+    "sha256": "009d51528bf5a6d84b2ab14499d4a1346f4cc1bcaff0ab1a0f99b1ccfd135e66",
+    "modified": "2026-09-17T10:07:18.619Z"
+   }
+  ],
+  "bodyAssetsV2": [
+   {
+    "path": "public/assets/body/v2/body-delivery.json",
+    "bytes": 391943,
+    "sha256": "e288fd41c6b526f1103939902546af9370dae88c096699507699ef67e799fc22",
+    "modified": "2026-09-17T15:33:21.709Z"
+   },
+   {
+    "path": "public/assets/body/v2/body.closeup.glb",
+    "bytes": 1316784,
+    "sha256": "0b3c153f5d24ef3036a362e0c023ddb51240d0e4265160fd134806668f1abae4",
+    "modified": "2026-09-17T15:33:20.092Z"
+   },
+   {
+    "path": "public/assets/body/v2/body.context.glb",
+    "bytes": 153648,
+    "sha256": "710bc55288dbc32a423ad0ce05dccbd84ac288ff98770226b12489e13b8502a1",
+    "modified": "2026-09-17T15:33:21.037Z"
+   },
+   {
+    "path": "public/assets/body/v2/body.overview.glb",
+    "bytes": 740180,
+    "sha256": "28452b6a22da1c65ba093ea512e3007ba6f724d4999340168387bc2ef00d7ff3",
+    "modified": "2026-09-17T15:33:19.085Z"
+   },
+   {
+    "path": "public/assets/body/v2/body.skin.glb",
+    "bytes": 318684,
+    "sha256": "9e4d7565b333b78638ee2fed682b6deaad622e43201db068abd76db3dd9e1fd0",
+    "modified": "2026-09-17T15:33:21.259Z"
+   },
+   {
+    "path": "public/assets/body/v2/body.skin_lod1.glb",
+    "bytes": 160176,
+    "sha256": "a8ab08fa8f5eca3493c37ca8feab4c3d246f4de0a513c290e7d6611957df90b5",
+    "modified": "2026-09-17T15:33:21.526Z"
+   }
+  ],
+  "bodyAssetsV3_inProduction": [
+   {
+    "path": "public/assets/body/v3/body-delivery.json",
+    "bytes": 391309,
+    "sha256": "271bec0c1b3b70dcca957dd55cddfb938e05a080f25e50169aa922f1318f7819",
+    "modified": "2026-09-17T17:45:45.340Z"
+   },
+   {
+    "path": "public/assets/body/v3/body.closeup.glb",
+    "bytes": 1316784,
+    "sha256": "0b3c153f5d24ef3036a362e0c023ddb51240d0e4265160fd134806668f1abae4",
+    "modified": "2026-09-17T17:45:44.925Z"
+   },
+   {
+    "path": "public/assets/body/v3/body.context.glb",
+    "bytes": 153648,
+    "sha256": "710bc55288dbc32a423ad0ce05dccbd84ac288ff98770226b12489e13b8502a1",
+    "modified": "2026-09-17T17:45:45.162Z"
+   },
+   {
+    "path": "public/assets/body/v3/body.context_lod1.glb",
+    "bytes": 74404,
+    "sha256": "8deea4864e4b910a5956bff986f42b5c9836830efc42fbe76ef9c0ad9a7347e3",
+    "modified": "2026-09-17T17:45:45.194Z"
+   },
+   {
+    "path": "public/assets/body/v3/body.intro.glb",
+    "bytes": 163204,
+    "sha256": "c1e705c6f59e946020a20afb92a3ccae66b90c81bd594149551da8d22a2fc253",
+    "modified": "2026-09-17T17:45:44.705Z"
+   },
+   {
+    "path": "public/assets/body/v3/body.skin.glb",
+    "bytes": 318684,
+    "sha256": "9e4d7565b333b78638ee2fed682b6deaad622e43201db068abd76db3dd9e1fd0",
+    "modified": "2026-09-17T17:45:45.238Z"
+   },
+   {
+    "path": "public/assets/body/v3/body.skin_intro.glb",
+    "bytes": 95540,
+    "sha256": "34f0aee756dc056e9577d640d1efccd37460316ca2b8c6f656efc277b61959ea",
+    "modified": "2026-09-17T17:45:44.758Z"
+   },
+   {
+    "path": "public/assets/body/v3/body.skin_lod1.glb",
+    "bytes": 160176,
+    "sha256": "a8ab08fa8f5eca3493c37ca8feab4c3d246f4de0a513c290e7d6611957df90b5",
+    "modified": "2026-09-17T17:45:45.300Z"
+   }
+  ],
+  "bodyAssetsStep11": [
+   {
+    "path": "public/assets/body/body.skeleton.glb",
+    "bytes": 2015164,
+    "sha256": "702a2d393cd8346ff2d68b8f9893d18334084a8c326023fba654de99c3096d15",
+    "modified": "2026-09-17T14:07:32.317Z"
+   },
+   {
+    "path": "public/assets/body/body.skin.glb",
+    "bytes": 787444,
+    "sha256": "cb52db1f52107c4bdd0730437da209571de00a0305bd65a0c1cf3d70803e91ab",
+    "modified": "2026-09-17T14:07:34.517Z"
+   },
+   {
+    "path": "public/assets/body/body-manifest.json",
+    "bytes": 276921,
+    "sha256": "a252c2672ddd6d71bdc3bb25e6a5cedce953a543923ad3cafd8faf7cc3e92e24",
+    "modified": "2026-09-17T14:07:34.958Z"
+   }
+  ],
+  "sharedAssets": [
+   {
+    "path": "public/assets/shared/body-materials.glb",
+    "bytes": 37404,
+    "sha256": "3a85c2b741a85532d689925db2479107b427467c7c5274895cfe7f70ff44c743",
+    "modified": "2026-09-17T17:45:45.326Z"
+   },
+   {
+    "path": "public/assets/shared/env/environment.json",
+    "bytes": 881,
+    "sha256": "9b910ea782608eee0e45ae1d93c0c43310422cf3614319443bae7c9802663ee3",
+    "modified": "2026-09-17T15:28:23.556Z"
+   },
+   {
+    "path": "public/assets/shared/env/room_env_cubeuv_64.rgbe",
+    "bytes": 344064,
+    "sha256": "16f42df04448703d03203455d023074d9f278d04f0b2b4963f063506d7251510",
+    "modified": "2026-09-17T15:25:30.440Z"
+   }
+  ],
+  "productionWebBuild": [
+   {
+    "path": "dist/index.html",
+    "bytes": 1195,
+    "sha256": "19134c718304212a5743d3979f54af432dec869d736344b42d6785d88a727d34",
+    "modified": "2026-09-18T06:23:36.751Z"
+   },
+   {
+    "path": "dist/app/filmQa-DVwn8soT.js",
+    "bytes": 2071,
+    "sha256": "27e64a7de9275275ab73b5aff9168bdb895f234e597dfe9613afacf1522936b2",
+    "modified": "2026-09-18T06:23:36.735Z"
+   },
+   {
+    "path": "dist/app/index-B-_6Kgo4.js",
+    "bytes": 892783,
+    "sha256": "c48cd83d11b8bc82b8344df54ea42d3e45852d97936d4c1ca05653a9e24963de",
+    "modified": "2026-09-18T06:23:36.708Z"
+   },
+   {
+    "path": "dist/app/index-BDJ-ElVz.css",
+    "bytes": 23179,
+    "sha256": "9e40af615c073c441aff0046ae00e621b930d7435e2941e8b6ca7c48b4e213b2",
+    "modified": "2026-09-18T06:23:36.749Z"
+   },
+   {
+    "path": "dist/app/manifestSchema-EuDJF_vB.js",
+    "bytes": 68572,
+    "sha256": "53dda5d078ca91f5a685c80a0efdbe24def8777a1dc297b912930066989cbdaf",
+    "modified": "2026-09-18T06:23:36.737Z"
+   },
+   {
+    "path": "dist/app/qaApi-C3rGlw9E.js",
+    "bytes": 4771,
+    "sha256": "ff9563e01d8293695063d0a3c810ca797404a4d1be32b8613143f05ddd69d266",
+    "modified": "2026-09-18T06:23:36.738Z"
+   },
+   {
+    "path": "dist/app/RoomEnvironment-C8M04cmU.js",
+    "bytes": 2096,
+    "sha256": "eb14cc19fd3e3be2030616cf6690fd0db044ba7d2cd0f859fdd4dc4057f52648",
+    "modified": "2026-09-18T06:23:36.708Z"
+   },
+   {
+    "path": "dist/app/Shell-TybVcmgn.js",
+    "bytes": 7556,
+    "sha256": "43c39438a724925c0df6acc8a080362e5f5a685ca8d03ff7e4831b3d9eaf371c",
+    "modified": "2026-09-18T06:23:36.708Z"
+   }
+  ]
+ },
+ "tests": {
+  "unit": {
+   "framework": "vitest",
+   "tests": 90,
+   "files": 9,
+   "result": "pass"
+  },
+  "e2e": {
+   "framework": "playwright (installed Chrome)",
+   "tests": 48,
+   "files": 10,
+   "result": "pass"
+  },
+  "typecheck": "tsc app + tests: clean",
+  "gate2": "19 checks, 0 failures (qa/reports/elbow_r.gate2.step13.json)",
+  "gate3RuntimeConsistency": "passed at 0/45/90/145 deg; worst anchor deviation 0.0002 mm (qa/reports/elbow_r.gate3.step12.json)",
+  "gate3FormalLandmarks": "PENDING EXPERT LANDMARK APPROVAL",
+  "bodyDeliveryValidation": "61 checks, 0 failures",
+  "crossLayer": "12 of 12 checks match (qa/expert/step13_cross_layer.json)",
+  "consoleErrors": 0
+ },
+ "knownLimitations": [
+  "Step 12 is recorded as FAIL and stays FAIL. Its five unresolved items are unchanged.",
+  "Emulated phone at CPU x4: first meaningful 3D 2742 ms p50 against a 2500 ms target - MISSED. Emulation, not certification.",
+  "Emulated phone at CPU x4: drag frame interval 45.1 ms p95 against a 22 ms target - MISSED. Emulation, not certification.",
+  "REAL ANDROID CERTIFICATION: NOT AVAILABLE. No mid-range Android phone was ever available.",
+  "REAL IPAD CERTIFICATION: NOT AVAILABLE. No iPad was ever available.",
+  "NVDA: NOT TESTED. VoiceOver: NOT TESTED. No screen-reader certification is claimed.",
+  "Source anatomy licence: UNKNOWN - RELEASE BLOCKER (qa/expert/asset-provenance-review.md).",
+  "Expert anatomical review: PENDING. Expert curriculum review: PENDING.",
+  "'Hip as ball-and-socket' is NOT confirmed by any NCERT source reachable online; corroborated only by a non-NCERT source. PENDING EXPERT CONFIRMATION.",
+  "The canonical NCERT Class 6 chapter 'Body Movements' is no longer published on ncert.nic.in (404), and the repository still contains no NCERT reference files.",
+  "Formal Gate 3 landmark validation: PENDING EXPERT LANDMARK APPROVAL. The draft package stays qa/elbow_r.poses.draft.json and is deliberately NOT renamed.",
+  "The validated elbow manifest still records rangeStatus 'approximate, pending cited reference' although an external reference now exists; changing it would mean re-promoting a frozen SHA-pinned asset, so it was left alone.",
+  "Only the elbow has a validated rig. The skull, C1/C2, shoulder, hip and knee are schematic teaching representations with no rig.",
+  "Six labelled elbow structures exist in the validated asset but are never shown to the learner (head of radius, olecranon, coronoid process, capitulum, trochlea, annular ligament).",
+  "On a 390 px screen the caption panel occupies roughly the lower third in text-heavy shots, and the label layout drops the ulnar band label in the support shot.",
+  "recap.pullback shows six schematic markers with no caption, so it carries no schematic note; recap.compare, which follows immediately, does.",
+  "The 3D label overlay is aria-hidden, so anatomy label names are never announced to a screen reader."
+ ],
+ "publicRelease": "NOT READY",
+ "milestone1": "READY FOR HUMAN EXPERT SIGN-OFF"
+}

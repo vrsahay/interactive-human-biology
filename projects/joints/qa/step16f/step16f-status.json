@@ -1,0 +1,81 @@
+{
+ "step": "16F",
+ "document": "Teaching text hierarchy: the current topic moves to the top left under the chapter line, medium sized, with no card. Typography and layout only.",
+ "branch": "step16f-text-hierarchy",
+ "baseCommit": "7eae594",
+ "status": "STEP 16F COMPLETE",
+ "publicRelease": "NOT CLAIMED. This build is not public-release ready.",
+
+ "hierarchy": {
+  "topLeft": "chapter line (unchanged), then the current topic, then the teaching-view status when shown",
+  "centre": "the anatomy",
+  "bottom": "the spoken sentence (unchanged)",
+  "sameGrammarInEveryChapter": true
+ },
+
+ "headingSizePx": {
+  "headlineBefore": { "320-768": 30, "1024": 36.9, "1280": 46.1, "1440": 51.8 },
+  "headlineAfter": { "320-768": 22, "1024": 24.6, "1280": 30.7, "1440": 34 },
+  "sentenceAfter": { "320-768": 17, "1024": 18, "1280": 22, "1440": 24 }
+ },
+ "headingPositionY": {
+  "before": { "320": "336-530", "390": "409-530", "1280": "511-604", "1440": "590-704" },
+  "after": { "320": "58-145", "390": "58-123", "1280": "74-159", "1440": "74-166" }
+ },
+ "card": {
+  "before": "desktop: rounded feathered shade at 0.86; phone: opaque box rgba(8,10,14,0.8)",
+  "after": "none. Desktop: edge-less radial shade behind the text. Phone: the top bar's vertical fade continued behind the heading, required for measured contrast, stacked under the top bar"
+ },
+
+ "responsive": {
+  "widths": ["320x844", "360x800", "390x844", "412x844", "430x932", "768x1024", "1024x768", "1280x800", "1440x900"],
+  "checks": 117,
+  "problems": 0,
+  "rules": ["below the chapter line", "left-aligned with the top bar", "not over the subtitle, player or any painted label", "not over the shot's joint site", "inside the viewport", "no horizontal scroll"],
+  "labelOverlapsBefore": 4,
+  "labelOverlapsAfter": 0
+ },
+
+ "tests": {
+  "typecheck": "clean",
+  "unit": { "passed": 99, "failed": 0 },
+  "e2e": { "suites": 22, "passed": 118, "failed": 0, "flaky": 0, "durationMinutes": 16.0 },
+  "newTests": ["tests/e2e/step16f-hierarchy.spec.ts (2)", "tests/unit/foundation.test.ts: label floor under a reserved rectangle (1)"],
+  "earlierRun": "115/116: step12-a11y contrast on a phone (2.37-4.48:1) once the opaque box was removed - fixed with the top-bar fade; the fade then covered the chapter line on a phone - fixed by stacking order, now asserted"
+ },
+
+ "defectsFoundAndFixed": [
+  "phone contrast over the heading after the opaque box was removed (2.37-4.48:1)",
+  "the heading's phone shade painted over the top bar (same z-index, later in the DOM)",
+  "label de-overlap could push a label back under a reserved rectangle (latent since Step 16D)",
+  "LabelSystem.invalidate() never requested a render on a paused film (latent)"
+ ],
+
+ "unchanged": {
+  "contentAndNarration": "git diff empty vs 7eae594",
+  "lessonDurationS": 381.3,
+  "captionKeysStringsProvenance": true,
+  "camera": true,
+  "animation": true,
+  "explore": true,
+  "panels": true,
+  "mobileExploreLayout": true,
+  "validatedElbow": true,
+  "frozenAssets": "29/29 byte-identical",
+  "masterBlendMatchesPin": true,
+  "newAssets": 0
+ },
+
+ "performance": { "appJsCssKB": [1075, 1076] },
+
+ "accessibility": {
+  "axeViolations": 0,
+  "measuredContrastFailures": 0,
+  "keyboard": "pass",
+  "reducedMotion": "pass",
+  "nvda": "NOT TESTED",
+  "voiceover": "NOT TESTED"
+ },
+
+ "expertReview": "PENDING - unchanged. The Step-16E package in qa/expert/step16e/ describes the previous candidate; this layout change would need a regenerated package before review."
+}

@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <script type="importmap">
+      { "imports": { "three": "/node_modules/three/build/three.module.js", "three/addons/": "/node_modules/three/examples/jsm/" } }
+    </script>
+  </head>
+  <body>
+    <script type="module">
+      // Bakes the runtime PMREM of three's RoomEnvironment (exactly as Stage generated it: sigma 0.04) into float data.
+      import * as THREE from "three";
+      import { RoomEnvironment } from "three/addons/environments/RoomEnvironment.js";
+      const renderer = new THREE.WebGLRenderer();
+      const pmrem = new THREE.PMREMGenerator(renderer);
+      const gl = renderer.getContext();
+      const out = { revision: THREE.REVISION, sizes: {} };
+      for (const size of JSON.parse(new URLSearchParams(location.search).get("sizes") ?? "[256,128,64]")) {
+        const rt = pmrem.fromScene(new RoomEnvironment(), 0.04, 0.1, 100, { size });
+        const w = rt.width;
+        const h = rt.height;
+        const buf = new Float32Array(w * h * 4);
+        renderer.setRenderTarget(rt);
+        gl.readPixels(0, 0, w, h, gl.RGBA, gl.FLOAT, buf);
+        renderer.setRenderTarget(null);
+        const bytes = new Uint8Array(buf.buffer);
+        let s = "";
+        for (let i = 0; i < bytes.length; i += 0x8000) s += String.fromCharCode(...bytes.subarray(i, i + 0x8000));
+        out.sizes[size] = { width: w, height: h, texture: { type: rt.texture.type, format: rt.texture.format, mapping: rt.texture.mapping, colorSpace: rt.texture.colorSpace }, float32Base64: btoa(s) };
+        rt.dispose();
+      }
+      window.__bake = out;
+    </script>
+  </body>
+</html>

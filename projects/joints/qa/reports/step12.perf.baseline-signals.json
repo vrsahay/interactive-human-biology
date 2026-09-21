@@ -1,0 +1,4269 @@
+{
+ "label": "baseline-signals",
+ "dist": "qa/perf/baseline-dist",
+ "generatedAt": "2026-09-17T16:55:46.080Z",
+ "method": "Cold loads in fresh browser contexts with the HTTP cache disabled; brotli/gzip static server (pipeline/tools/serve_static.mjs); CDP network + CPU throttling. first meaningful 3D = end of the first rendered frame after the film's first shot is applied. Frame times from rAF-rendered frames; input-to-render = event timestamp -> end of the first rendered frame after the event (display presentation adds up to one vsync).",
+ "profiles": {
+  "tablet-emulated-fast4g": {
+   "profile": {
+    "id": "tablet-emulated-fast4g",
+    "classification": "EMULATED — NOT CERTIFICATION (CPU 2x throttle, laptop GPU)",
+    "viewport": {
+     "width": 768,
+     "height": 1024
+    },
+    "dpr": 2,
+    "cpu": 2,
+    "net": {
+     "id": "fast-4g-devtools",
+     "downBps": 1012500,
+     "upBps": 168750,
+     "latencyMs": 165,
+     "note": "Chrome DevTools Fast 4G preset"
+    },
+    "mobile": true,
+    "signals": {
+     "deviceMemory": null,
+     "hardwareConcurrency": 8
+    }
+   },
+   "summary": {
+    "firstMeaningful3DMs": {
+     "n": 5,
+     "p50": 12342,
+     "p95": 13386,
+     "min": 12307,
+     "max": 13386
+    },
+    "shellVisibleMs": {
+     "n": 5,
+     "p50": 892,
+     "p95": 1033,
+     "min": 874,
+     "max": 1033
+    },
+    "fcpMs": {
+     "n": 5,
+     "p50": 1252,
+     "p95": 1380,
+     "min": 1228,
+     "max": 1380
+    },
+    "bytesBeforeFirst3D": {
+     "n": 5,
+     "p50": 2199349,
+     "p95": 2199349,
+     "min": 2199349,
+     "max": 2199349
+    },
+    "bytesTotal": {
+     "n": 5,
+     "p50": 2200283,
+     "p95": 2200283,
+     "min": 2200283,
+     "max": 2200283
+    },
+    "jsHeapUsedBytes": {
+     "n": 5,
+     "p50": 24092571,
+     "p95": 31293491,
+     "min": 21938364,
+     "max": 31293491
+    },
+    "repeatVisit": {
+     "firstMeaningful3DMs": 3822,
+     "bytesTotal": 2100
+    },
+    "renderer": {
+     "drawCalls": 783,
+     "triangles": 235754,
+     "geometries": 542,
+     "textures": 6,
+     "textureMemoryBytes": 5592404,
+     "pixelRatio": 2,
+     "gpu": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x00009A49) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+    },
+    "quality": null
+   },
+   "loads": [
+    {
+     "navigation": {
+      "responseEnd": 192,
+      "domContentLoaded": 1034,
+      "transfer": 934
+     },
+     "fcpMs": 1380,
+     "shellVisibleMs": 1033,
+     "filmReadyMs": 9628,
+     "firstMeaningful3DMs": 13386,
+     "bytesBeforeFirst3D": 2199349,
+     "bytesTotal": 2200283,
+     "resources": [
+      {
+       "name": "/app/index-BuFzrH_m.js",
+       "start": 295,
+       "end": 855,
+       "transfer": 216846,
+       "encoded": 216546,
+       "decoded": 1031454
+      },
+      {
+       "name": "/app/index-5JW1531B.css",
+       "start": 299,
+       "end": 665,
+       "transfer": 5039,
+       "encoded": 4739,
+       "decoded": 19435
+      },
+      {
+       "name": "/assets/joints/elbow_r/joint-manifest.json",
+       "start": 5022,
+       "end": 5222,
+       "transfer": 12672,
+       "encoded": 12372,
+       "decoded": 93064
+      },
+      {
+       "name": "/assets/body/body-manifest.json",
+       "start": 5383,
+       "end": 5609,
+       "transfer": 26972,
+       "encoded": 26672,
+       "decoded": 276921
+      },
+      {
+       "name": "/assets/joints/elbow_r/elbow_r.core.glb",
+       "start": 5389,
+       "end": 5791,
+       "transfer": 188925,
+       "encoded": 188625,
+       "decoded": 306880
+      },
+      {
+       "name": "/assets/body/body.skeleton.glb",
+       "start": 5645,
+       "end": 8523,
+       "transfer": 1332696,
+       "encoded": 1332396,
+       "decoded": 2015164
+      },
+      {
+       "name": "/assets/body/body.skin.glb",
+       "start": 5648,
+       "end": 7726,
+       "transfer": 345924,
+       "encoded": 345624,
+       "decoded": 787444
+      },
+      {
+       "name": "/assets/joints/elbow_r/elbow_r.detail.glb",
+       "start": 9094,
+       "end": 9346,
+       "transfer": 70275,
+       "encoded": 69975,
+       "decoded": 93936
+      }
+     ],
+     "longTasksBeforeFirst3D": [
+      [
+       894,
+       438
+      ],
+      [
+       1453,
+       3580
+      ],
+      [
+       5054,
+       210
+      ],
+      [
+       5326,
+       64
+      ],
+      [
+       5805,
+       135
+      ],
+      [
+       7754,
+       184
+      ],
+      [
+       8530,
+       59
+      ],
+      [
+       8591,
+       239
+      ],
+      [
+       8874,
+       223
+      ],
+      [
+       9097,
+       294
+      ],
+      [
+       9460,
+       249
+      ],
+      [
+       9710,
+       3693
+      ]
+     ],
+     "jsHeapUsedBytes": 21938364,
+     "quality": null,
+     "bodyFilesDoneMs": 8523,
+     "elbowRequestedAtLoad": true,
+     "renderer": {
+      "drawCalls": 783,
+      "triangles": 235754,
+      "geometries": 542,
+      "textures": 6,
+      "textureMemoryBytes": 5592404,
+      "pixelRatio": 2,
+      "gpu": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x00009A49) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+     },
+     "device": {
+      "hardwareConcurrency": 8,
+      "deviceMemory": null,
+      "dpr": 2,
+      "width": 768,
+      "height": 1024,
+      "connection": "4g"
+     },
+     "consoleErrors": []
+    },
+    {
+     "navigation": {
+      "responseEnd": 196,
+      "domContentLoaded": 875,
+      "transfer": 934
+     },
+     "fcpMs": 1252,
+     "shellVisibleMs": 874,
+     "filmReadyMs": 8494,
+     "firstMeaningful3DMs": 12342,
+     "bytesBeforeFirst3D": 2199349,
+     "bytesTotal": 2200283,
+     "resources": [
+      {
+       "name": "/app/index-BuFzrH_m.js",
+       "start": 287,
+       "end": 715,
+       "transfer": 216846,
+       "encoded": 216546,
+       "decoded": 1031454
+      },
+      {
+       "name": "/app/index-5JW1531B.css",
+       "start": 291,
+       "end": 483,
+       "transfer": 5039,
+       "encoded": 4739,
+       "decoded": 19435
+      },
+      {
+       "name": "/assets/joints/elbow_r/joint-manifest.json",
+       "start": 4827,
+       "end": 5027,
+       "transfer": 12672,
+       "encoded": 12372,
+       "decoded": 93064
+      },
+      {
+       "name": "/assets/body/body-manifest.json",
+       "start": 5184,
+       "end": 5429,
+       "transfer": 26972,
+       "encoded": 26672,
+       "decoded": 276921
+      },
+      {
+       "name": "/assets/joints/elbow_r/elbow_r.core.glb",
+       "start": 5190,
+       "end": 5613,
+       "transfer": 188925,
+       "encoded": 188625,
+       "decoded": 306880
+      },
+      {
+       "name": "/assets/body/body.skeleton.glb",
+       "start": 5467,
+       "end": 7411,
+       "transfer": 1332696,
+       "encoded": 1332396,
+       "decoded": 2015164
+      },
+      {
+       "name": "/assets/body/body.skin.glb",
+       "start": 5471,
+       "end": 6363,
+       "transfer": 345924,
+       "encoded": 345624,
+       "decoded": 787444
+      },
+      {
+       "name": "/assets/joints/elbow_r/elbow_r.detail.glb",
+       "start": 8011,
+       "end": 8276,
+       "transfer": 70275,
+       "encoded": 69975,
+       "decoded": 93936
+      }
+     ],
+     "longTasksBeforeFirst3D": [
+      [
+       756,
+       392
+      ],
+      [
+       1259,
+       3588
+      ],
+      [
+       4866,
+       207
+      ],
+      [
+       5126,
+       68
+      ],
+      [
+       5634,
+       160
+      ],
+      [
+       6389,
+       182
+      ],
+      [
+       7417,
+       59
+      ],
+      [
+       7476,
+       267
+      ],
+      [
+       7781,
+       231
+      ],
+      [
+       8015,
+       297
+      ],
+      [
+       8369,
+       195
+      ],
+      [
+       8564,
+       3795
+      ]
+     ],
+     "jsHeapUsedBytes": 31293491,
+     "quality": null,
+     "bodyFilesDoneMs": 7411,
+     "elbowRequestedAtLoad": true,
+     "renderer": {
+      "drawCalls": 783,
+      "triangles": 235754,
+      "geometries": 542,
+      "textures": 6,
+      "textureMemoryBytes": 5592404,
+      "pixelRatio": 2,
+      "gpu": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x00009A49) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+     },
+     "device": {
+      "hardwareConcurrency": 8,
+      "deviceMemory": null,
+      "dpr": 2,
+      "width": 768,
+      "height": 1024,
+      "connection": "4g"
+     },
+     "consoleErrors": []
+    },
+    {
+     "navigation": {
+      "responseEnd": 195,
+      "domContentLoaded": 889,
+      "transfer": 934
+     },
+     "fcpMs": 1236,
+     "shellVisibleMs": 887,
+     "filmReadyMs": 8527,
+     "firstMeaningful3DMs": 12307,
+     "bytesBeforeFirst3D": 2199349,
+     "bytesTotal": 2200283,
+     "resources": [
+      {
+       "name": "/app/index-BuFzrH_m.js",
+       "start": 285,
+       "end": 714,
+       "transfer": 216846,
+       "encoded": 216546,
+       "decoded": 1031454
+      },
+      {
+       "name": "/app/index-5JW1531B.css",
+       "start": 294,
+       "end": 491,
+       "transfer": 5039,
+       "encoded": 4739,
+       "decoded": 19435
+      },
+      {
+       "name": "/assets/joints/elbow_r/joint-manifest.json",
+       "start": 4867,
+       "end": 5067,
+       "transfer": 12672,
+       "encoded": 12372,
+       "decoded": 93064
+      },
+      {
+       "name": "/assets/body/body-manifest.json",
+       "start": 5232,
+       "end": 5467,
+       "transfer": 26972,
+       "encoded": 26672,
+       "decoded": 276921
+      },
+      {
+       "name": "/assets/joints/elbow_r/elbow_r.core.glb",
+       "start": 5240,
+       "end": 5647,
+       "transfer": 188925,
+       "encoded": 188625,
+       "decoded": 306880
+      },
+      {
+       "name": "/assets/body/body.skeleton.glb",
+       "start": 5506,
+       "end": 7445,
+       "transfer": 1332696,
+       "encoded": 1332396,
+       "decoded": 2015164
+      },
+      {
+       "name": "/assets/body/body.skin.glb",
+       "start": 5508,
+       "end": 6394,
+       "transfer": 345924,
+       "encoded": 345624,
+       "decoded": 787444
+      },
+      {
+       "name": "/assets/joints/elbow_r/elbow_r.detail.glb",
+       "start": 8013,
+       "end": 8266,
+       "transfer": 70275,
+       "encoded": 69975,
+       "decoded": 93936
+      }
+     ],
+     "longTasksBeforeFirst3D": [
+      [
+       750,
+       393
+      ],
+      [
+       1276,
+       3600
+      ],
+      [
+       4936,
+       211
+      ],
+      [
+       5176,
+       66
+      ],
+      [
+       5658,
+       138
+      ],
+      [
+       6423,
+       174
+      ],
+      [
+       7452,
+       55
+      ],
+      [
+       7509,
+       237
+      ],
+      [
+       7792,
+       222
+      ],
+      [
+       8015,
+       297
+      ],
+      [
+       8377,
+       235
+      ],
+      [
+       8613,
+       3713
+      ]
+     ],
+     "jsHeapUsedBytes": 22100528,
+     "quality": null,
+     "bodyFilesDoneMs": 7445,
+     "elbowRequestedAtLoad": true,
+     "renderer": {
+      "drawCalls": 783,
+      "triangles": 235754,
+      "geometries": 542,
+      "textures": 6,
+      "textureMemoryBytes": 5592404,
+      "pixelRatio": 2,
+      "gpu": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x00009A49) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+     },
+     "device": {
+      "hardwareConcurrency": 8,
+      "deviceMemory": null,
+      "dpr": 2,
+      "width": 768,
+      "height": 1024,
+      "connection": "4g"
+     },
+     "consoleErrors": []
+    },
+    {
+     "navigation": {
+      "responseEnd": 193,
+      "domContentLoaded": 893,
+      "transfer": 934
+     },
+     "fcpMs": 1228,
+     "shellVisibleMs": 892,
+     "filmReadyMs": 8463,
+     "firstMeaningful3DMs": 12330,
+     "bytesBeforeFirst3D": 2199349,
+     "bytesTotal": 2200283,
+     "resources": [
+      {
+       "name": "/app/index-BuFzrH_m.js",
+       "start": 289,
+       "end": 728,
+       "transfer": 216846,
+       "encoded": 216546,
+       "decoded": 1031454
+      },
+      {
+       "name": "/app/index-5JW1531B.css",
+       "start": 297,
+       "end": 494,
+       "transfer": 5039,
+       "encoded": 4739,
+       "decoded": 19435
+      },
+      {
+       "name": "/assets/joints/elbow_r/joint-manifest.json",
+       "start": 4787,
+       "end": 4976,
+       "transfer": 12672,
+       "encoded": 12372,
+       "decoded": 93064
+      },
+      {
+       "name": "/assets/body/body-manifest.json",
+       "start": 5145,
+       "end": 5374,
+       "transfer": 26972,
+       "encoded": 26672,
+       "decoded": 276921
+      },
+      {
+       "name": "/assets/joints/elbow_r/elbow_r.core.glb",
+       "start": 5151,
+       "end": 5555,
+       "transfer": 188925,
+       "encoded": 188625,
+       "decoded": 306880
+      },
+      {
+       "name": "/assets/body/body.skeleton.glb",
+       "start": 5405,
+       "end": 7338,
+       "transfer": 1332696,
+       "encoded": 1332396,
+       "decoded": 2015164
+      },
+      {
+       "name": "/assets/body/body.skin.glb",
+       "start": 5407,
+       "end": 6293,
+       "transfer": 345924,
+       "encoded": 345624,
+       "decoded": 787444
+      },
+      {
+       "name": "/assets/joints/elbow_r/elbow_r.detail.glb",
+       "start": 7962,
+       "end": 8215,
+       "transfer": 70275,
+       "encoded": 69975,
+       "decoded": 93936
+      }
+     ],
+     "longTasksBeforeFirst3D": [
+      [
+       771,
+       394
+      ],
+      [
+       1308,
+       3507
+      ],
+      [
+       4840,
+       209
+      ],
+      [
+       5090,
+       63
+      ],
+      [
+       5567,
+       130
+      ],
+      [
+       6322,
+       177
+      ],
+      [
+       6537,
+       52
+      ],
+      [
+       7346,
+       57
+      ],
+      [
+       7405,
+       282
+      ],
+      [
+       7729,
+       234
+      ],
+      [
+       7965,
+       309
+      ],
+      [
+       8334,
+       197
+      ],
+      [
+       8532,
+       3816
+      ]
+     ],
+     "jsHeapUsedBytes": 30282543,
+     "quality": null,
+     "bodyFilesDoneMs": 7338,
+     "elbowRequestedAtLoad": true,
+     "renderer": {
+      "drawCalls": 783,
+      "triangles": 235754,
+      "geometries": 542,
+      "textures": 6,
+      "textureMemoryBytes": 5592404,
+      "pixelRatio": 2,
+      "gpu": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x00009A49) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+     },
+     "device": {
+      "hardwareConcurrency": 8,
+      "deviceMemory": null,
+      "dpr": 2,
+      "width": 768,
+      "height": 1024,
+      "connection": "4g"
+     },
+     "consoleErrors": []
+    },
+    {
+     "navigation": {
+      "responseEnd": 199,
+      "domContentLoaded": 895,
+      "transfer": 934
+     },
+     "fcpMs": 1304,
+     "shellVisibleMs": 894,
+     "filmReadyMs": 8937,
+     "firstMeaningful3DMs": 12756,
+     "bytesBeforeFirst3D": 2199349,
+     "bytesTotal": 2200283,
+     "resources": [
+      {
+       "name": "/app/index-BuFzrH_m.js",
+       "start": 298,
+       "end": 735,
+       "transfer": 216846,
+       "encoded": 216546,
+       "decoded": 1031454
+      },
+      {
+       "name": "/app/index-5JW1531B.css",
+       "start": 303,
+       "end": 502,
+       "transfer": 5039,
+       "encoded": 4739,
+       "decoded": 19435
+      },
+      {
+       "name": "/assets/joints/elbow_r/joint-manifest.json",
+       "start": 5277,
+       "end": 5468,
+       "transfer": 12672,
+       "encoded": 12372,
+       "decoded": 93064
+      },
+      {
+       "name": "/assets/body/body-manifest.json",
+       "start": 5659,
+       "end": 5873,
+       "transfer": 26972,
+       "encoded": 26672,
+       "decoded": 276921
+      },
+      {
+       "name": "/assets/joints/elbow_r/elbow_r.core.glb",
+       "start": 5666,
+       "end": 6066,
+       "transfer": 188925,
+       "encoded": 188625,
+       "decoded": 306880
+      },
+      {
+       "name": "/assets/body/body.skeleton.glb",
+       "start": 5911,
+       "end": 7850,
+       "transfer": 1332696,
+       "encoded": 1332396,
+       "decoded": 2015164
+      },
+      {
+       "name": "/assets/body/body.skin.glb",
+       "start": 5913,
+       "end": 6792,
+       "transfer": 345924,
+       "encoded": 345624,
+       "decoded": 787444
+      },
+      {
+       "name": "/assets/joints/elbow_r/elbow_r.detail.glb",
+       "start": 8449,
+       "end": 8698,
+       "transfer": 70275,
+       "encoded": 69975,
+       "decoded": 93936
+      }
+     ],
+     "longTasksBeforeFirst3D": [
+      [
+       773,
+       411
+      ],
+      [
+       1316,
+       3988
+      ],
+      [
+       5354,
+       215
+      ],
+      [
+       5594,
+       75
+      ],
+      [
+       6082,
+       162
+      ],
+      [
+       6821,
+       203
+      ],
+      [
+       7065,
+       54
+      ],
+      [
+       7854,
+       60
+      ],
+      [
+       7916,
+       244
+      ],
+      [
+       8207,
+       245
+      ],
+      [
+       8452,
+       295
+      ],
+      [
+       8809,
+       204
+      ],
+      [
+       9014,
+       3758
+      ]
+     ],
+     "jsHeapUsedBytes": 24092571,
+     "quality": null,
+     "bodyFilesDoneMs": 7850,
+     "elbowRequestedAtLoad": true,
+     "renderer": {
+      "drawCalls": 783,
+      "triangles": 235754,
+      "geometries": 542,
+      "textures": 6,
+      "textureMemoryBytes": 5592404,
+      "pixelRatio": 2,
+      "gpu": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x00009A49) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+     },
+     "device": {
+      "hardwareConcurrency": 8,
+      "deviceMemory": null,
+      "dpr": 2,
+      "width": 768,
+      "height": 1024,
+      "connection": "4g"
+     },
+     "consoleErrors": []
+    }
+   ],
+   "repeatVisit": {
+    "navigation": {
+     "responseEnd": 188,
+     "domContentLoaded": 417,
+     "transfer": 300
+    },
+    "fcpMs": 464,
+    "shellVisibleMs": 415,
+    "filmReadyMs": 2784,
+    "firstMeaningful3DMs": 3822,
+    "bytesBeforeFirst3D": 1800,
+    "bytesTotal": 2100,
+    "resources": [
+     {
+      "name": "/app/index-BuFzrH_m.js",
+      "start": 326,
+      "end": 326,
+      "transfer": 0,
+      "encoded": 216546,
+      "decoded": 1031454
+     },
+     {
+      "name": "/app/index-5JW1531B.css",
+      "start": 328,
+      "end": 328,
+      "transfer": 0,
+      "encoded": 4739,
+      "decoded": 19435
+     },
+     {
+      "name": "/assets/joints/elbow_r/joint-manifest.json",
+      "start": 967,
+      "end": 1151,
+      "transfer": 300,
+      "encoded": 12372,
+      "decoded": 93064
+     },
+     {
+      "name": "/assets/body/body-manifest.json",
+      "start": 1172,
+      "end": 1377,
+      "transfer": 300,
+      "encoded": 26672,
+      "decoded": 276921
+     },
+     {
+      "name": "/assets/joints/elbow_r/elbow_r.core.glb",
+      "start": 1174,
+      "end": 1378,
+      "transfer": 300,
+      "encoded": 188625,
+      "decoded": 306880
+     },
+     {
+      "name": "/assets/body/body.skeleton.glb",
+      "start": 1492,
+      "end": 1746,
+      "transfer": 300,
+      "encoded": 1332396,
+      "decoded": 2015164
+     },
+     {
+      "name": "/assets/body/body.skin.glb",
+      "start": 1494,
+      "end": 1717,
+      "transfer": 300,
+      "encoded": 345624,
+      "decoded": 787444
+     },
+     {
+      "name": "/assets/joints/elbow_r/elbow_r.detail.glb",
+      "start": 2491,
+      "end": 2680,
+      "transfer": 300,
+      "encoded": 69975,
+      "decoded": 93936
+     }
+    ],
+    "longTasksBeforeFirst3D": [
+     [
+      354,
+      67
+     ],
+     [
+      440,
+      140
+     ],
+     [
+      587,
+      384
+     ],
+     [
+      1414,
+      71
+     ],
+     [
+      1854,
+      241
+     ],
+     [
+      2108,
+      130
+     ],
+     [
+      2358,
+      134
+     ],
+     [
+      2493,
+      71
+     ],
+     [
+      2735,
+      99
+     ],
+     [
+      2835,
+      999
+     ]
+    ],
+    "jsHeapUsedBytes": 36033886,
+    "quality": null,
+    "bodyFilesDoneMs": 1746,
+    "elbowRequestedAtLoad": true,
+    "renderer": {
+     "drawCalls": 783,
+     "triangles": 235754,
+     "geometries": 542,
+     "textures": 6,
+     "textureMemoryBytes": 5592404,
+     "pixelRatio": 2,
+     "gpu": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x00009A49) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+    },
+    "device": {
+     "hardwareConcurrency": 8,
+     "deviceMemory": null,
+     "dpr": 2,
+     "width": 768,
+     "height": 1024,
+     "connection": "4g"
+    }
+   },
+   "interactions": {
+    "playTravel": {
+     "frames": 272,
+     "spanMs": 5035,
+     "fps": 53.8,
+     "frameIntervalMs": {
+      "n": 271,
+      "p50": 17.8,
+      "p95": 24.5,
+      "min": 13.1,
+      "max": 32.5
+     },
+     "frameCpuMs": {
+      "n": 272,
+      "p50": 8.3,
+      "p95": 11,
+      "min": 5.1,
+      "max": 15
+     },
+     "droppedFrames": 11,
+     "inputs": 0,
+     "inputToRenderMs": {
+      "n": 0,
+      "p50": null,
+      "p95": null,
+      "min": null,
+      "max": null
+     },
+     "inputsWithoutRender": 0
+    },
+    "playTravelRenderer": {
+     "fps": 56,
+     "frameIntervalMeanMs": 18.201250000049672,
+     "frameIntervalP95Ms": 23.099999994039536,
+     "frameCpuMeanMs": 12.428333333631356,
+     "frameCpuP95Ms": 14.900000005960464,
+     "drawCalls": 99,
+     "triangles": 84187,
+     "geometries": 542,
+     "textures": 6,
+     "textureMemoryBytes": 5592404,
+     "pixelRatio": 2,
+     "framesRendered": 303,
+     "firstFrameMs": 1076.199999988079,
+     "firstModelFrameMs": 2556.9000000059605,
+     "renderer": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x00009A49) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+    },
+    "playElbow": {
+     "frames": 154,
+     "spanMs": 4832,
+     "fps": 31.7,
+     "frameIntervalMs": {
+      "n": 153,
+      "p50": 30.5,
+      "p95": 43.3,
+      "min": 22.3,
+      "max": 60.3
+     },
+     "frameCpuMs": {
+      "n": 154,
+      "p50": 15.1,
+      "p95": 21.6,
+      "min": 7.2,
+      "max": 46.5
+     },
+     "droppedFrames": 151,
+     "inputs": 0,
+     "inputToRenderMs": {
+      "n": 0,
+      "p50": null,
+      "p95": null,
+      "min": null,
+      "max": null
+     },
+     "inputsWithoutRender": 0
+    },
+    "playElbowRenderer": {
+     "fps": 36,
+     "frameIntervalMeanMs": 26.36458333345751,
+     "frameIntervalP95Ms": 40.80000001192093,
+     "frameCpuMeanMs": 22.568333334475756,
+     "frameCpuP95Ms": 26.5,
+     "drawCalls": 183,
+     "triangles": 136721,
+     "geometries": 574,
+     "textures": 8,
+     "textureMemoryBytes": 5592404,
+     "pixelRatio": 2,
+     "framesRendered": 458,
+     "firstFrameMs": 1076.199999988079,
+     "firstModelFrameMs": 2556.9000000059605,
+     "renderer": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x00009A49) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+    },
+    "playRecap": {
+     "frames": 27,
+     "spanMs": 5145,
+     "fps": 5.1,
+     "frameIntervalMs": {
+      "n": 26,
+      "p50": 194,
+      "p95": 228.3,
+      "min": 178.9,
+      "max": 235.1
+     },
+     "frameCpuMs": {
+      "n": 27,
+      "p50": 169.4,
+      "p95": 200.3,
+      "min": 153.1,
+      "max": 212.7
+     },
+     "droppedFrames": 283,
+     "inputs": 0,
+     "inputToRenderMs": {
+      "n": 0,
+      "p50": null,
+      "p95": null,
+      "min": null,
+      "max": null
+     },
+     "inputsWithoutRender": 0
+    },
+    "playRecapRenderer": {
+     "fps": 6,
+     "frameIntervalMeanMs": 26.36458333345751,
+     "frameIntervalP95Ms": 40.80000001192093,
+     "frameCpuMeanMs": 43.228333334748946,
+     "frameCpuP95Ms": 181.7999999821186,
+     "drawCalls": 812,
+     "triangles": 241996,
+     "geometries": 592,
+     "textures": 8,
+     "textureMemoryBytes": 5592404,
+     "pixelRatio": 2,
+     "framesRendered": 486,
+     "firstFrameMs": 1076.199999988079,
+     "firstModelFrameMs": 2556.9000000059605,
+     "renderer": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x00009A49) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+    },
+    "shots": {
+     "intro.title": {
+      "drawCalls": 783,
+      "triangles": 235754,
+      "geometries": 592,
+      "textures": 8,
+      "textureMemoryBytes": 5592404
+     },
+     "fixed.detail": {
+      "drawCalls": 102,
+      "triangles": 87467,
+      "geometries": 592,
+      "textures": 8,
+      "textureMemoryBytes": 5592404
+     },
+     "pivot.rotate": {
+      "drawCalls": 145,
+      "triangles": 126353,
+      "geometries": 592,
+      "textures": 8,
+      "textureMemoryBytes": 5592404
+     },
+     "ball.shoulder": {
+      "drawCalls": 105,
+      "triangles": 108112,
+      "geometries": 592,
+      "textures": 8,
+      "textureMemoryBytes": 5592404
+     },
+     "ball.hip": {
+      "drawCalls": 73,
+      "triangles": 39375,
+      "geometries": 592,
+      "textures": 8,
+      "textureMemoryBytes": 5592404
+     },
+     "hinge.flexion": {
+      "drawCalls": 170,
+      "triangles": 132769,
+      "geometries": 592,
+      "textures": 8,
+      "textureMemoryBytes": 5592404
+     },
+     "hinge.support": {
+      "drawCalls": 95,
+      "triangles": 69471,
+      "geometries": 598,
+      "textures": 10,
+      "textureMemoryBytes": 5592404
+     },
+     "hinge.knee": {
+      "drawCalls": 24,
+      "triangles": 5430,
+      "geometries": 598,
+      "textures": 10,
+      "textureMemoryBytes": 5592404
+     },
+     "recap.compare": {
+      "drawCalls": 316,
+      "triangles": 174656,
+      "geometries": 598,
+      "textures": 10,
+      "textureMemoryBytes": 5592404
+     }
+    },
+    "dragInput": {
+     "frames": 38,
+     "spanMs": 2598,
+     "fps": 14.2,
+     "frameIntervalMs": {
+      "n": 36,
+      "p50": 53.8,
+      "p95": 68,
+      "min": 44.6,
+      "max": 90.7
+     },
+     "frameCpuMs": {
+      "n": 38,
+      "p50": 17.3,
+      "p95": 26,
+      "min": 13,
+      "max": 44
+     },
+     "droppedFrames": 84,
+     "inputs": 61,
+     "inputToRenderMs": {
+      "n": 48,
+      "p50": 33.5,
+      "p95": 198.4,
+      "min": 26.1,
+      "max": 256.1
+     },
+     "inputsWithoutRender": 13
+    },
+    "dragDisplayRate": {
+     "frames": 117,
+     "spanMs": 5350,
+     "fps": 21.7,
+     "frameIntervalMs": {
+      "n": 114,
+      "p50": 37.4,
+      "p95": 42.3,
+      "min": 30.5,
+      "max": 47.1
+     },
+     "frameCpuMs": {
+      "n": 117,
+      "p50": 14.7,
+      "p95": 17,
+      "min": 8.3,
+      "max": 20.7
+     },
+     "droppedFrames": 123,
+     "inputs": 180,
+     "inputToRenderMs": {
+      "n": 144,
+      "p50": 38.3,
+      "p95": 203.5,
+      "min": 29.1,
+      "max": 255.8
+     },
+     "inputsWithoutRender": 36
+    },
+    "sliderKeyboard": {
+     "frames": 40,
+     "spanMs": 2120,
+     "fps": 18.4,
+     "frameIntervalMs": {
+      "n": 39,
+      "p50": 53.4,
+      "p95": 61.8,
+      "min": 47.3,
+      "max": 64.3
+     },
+     "frameCpuMs": {
+      "n": 40,
+      "p50": 22.3,
+      "p95": 27.5,
+      "min": 19.5,
+      "max": 31.9
+     },
+     "droppedFrames": 84,
+     "inputs": 40,
+     "inputToRenderMs": {
+      "n": 40,
+      "p50": 43.5,
+      "p95": 80.8,
+      "min": 37.6,
+      "max": 89.1
+     },
+     "inputsWithoutRender": 0
+    },
+    "scrub": {
+     "frames": 42,
+     "spanMs": 3688,
+     "fps": 11.1,
+     "frameIntervalMs": {
+      "n": 39,
+      "p50": 80.1,
+      "p95": 107.3,
+      "min": 49.8,
+      "max": 108.9
+     },
+     "frameCpuMs": {
+      "n": 42,
+      "p50": 17.9,
+      "p95": 59.7,
+      "min": 3.2,
+      "max": 196.3
+     },
+     "droppedFrames": 153,
+     "inputs": 42,
+     "inputToRenderMs": {
+      "n": 42,
+      "p50": 54.5,
+      "p95": 95.3,
+      "min": 20.7,
+      "max": 240.4
+     },
+     "inputsWithoutRender": 0
+    },
+    "chapterJump": {
+     "frames": 6,
+     "spanMs": 2695,
+     "fps": 1.9,
+     "frameIntervalMs": {
+      "n": 0,
+      "p50": null,
+      "p95": null,
+      "min": null,
+      "max": null
+     },
+     "frameCpuMs": {
+      "n": 6,
+      "p50": 12.4,
+      "p95": 197.1,
+      "min": 1.4,
+      "max": 197.1
+     },
+     "droppedFrames": 0,
+     "inputs": 6,
+     "inputToRenderMs": {
+      "n": 6,
+      "p50": 51.3,
+      "p95": 242,
+      "min": 10,
+      "max": 242
+     },
+     "inputsWithoutRender": 0
+    },
+    "exploreOrbit": {
+     "frames": 163,
+     "spanMs": 4928,
+     "fps": 32.9,
+     "frameIntervalMs": {
+      "n": 162,
+      "p50": 30.5,
+      "p95": 35.3,
+      "min": 23.8,
+      "max": 39.7
+     },
+     "frameCpuMs": {
+      "n": 163,
+      "p50": 14.9,
+      "p95": 17.1,
+      "min": 10.9,
+      "max": 37.6
+     },
+     "droppedFrames": 157,
+     "inputs": 51,
+     "inputToRenderMs": {
+      "n": 51,
+      "p50": 49.4,
+      "p95": 54.8,
+      "min": 28.2,
+      "max": 66.4
+     },
+     "inputsWithoutRender": 0
+    },
+    "selection": {
+     "frames": 6,
+     "spanMs": 3489,
+     "fps": 1.4,
+     "frameIntervalMs": {
+      "n": 2,
+      "p50": 28.1,
+      "p95": 40,
+      "min": 28.1,
+      "max": 40
+     },
+     "frameCpuMs": {
+      "n": 6,
+      "p50": 34,
+      "p95": 39.3,
+      "min": 12.9,
+      "max": 39.3
+     },
+     "droppedFrames": 2,
+     "inputs": 4,
+     "inputToRenderMs": {
+      "n": 4,
+      "p50": 74,
+      "p95": 96.8,
+      "min": 55,
+      "max": 96.8
+     },
+     "inputsWithoutRender": 0
+    },
+    "selectionResult": "radius_r",
+    "heapAfterInteractionsBytes": 26161930
+   }
+  },
+  "mobile-emulated-fast4g": {
+   "profile": {
+    "id": "mobile-emulated-fast4g",
+    "classification": "EMULATED — NOT CERTIFICATION (CPU 4x throttle, laptop GPU)",
+    "viewport": {
+     "width": 412,
+     "height": 915
+    },
+    "dpr": 2.625,
+    "cpu": 4,
+    "net": {
+     "id": "fast-4g-devtools",
+     "downBps": 1012500,
+     "upBps": 168750,
+     "latencyMs": 165,
+     "note": "Chrome DevTools Fast 4G preset"
+    },
+    "mobile": true,
+    "signals": {
+     "deviceMemory": 4,
+     "hardwareConcurrency": 8
+    }
+   },
+   "summary": {
+    "firstMeaningful3DMs": {
+     "n": 5,
+     "p50": 17490,
+     "p95": 18022,
+     "min": 17237,
+     "max": 18022
+    },
+    "shellVisibleMs": {
+     "n": 5,
+     "p50": 1167,
+     "p95": 1215,
+     "min": 1132,
+     "max": 1215
+    },
+    "fcpMs": {
+     "n": 5,
+     "p50": 1840,
+     "p95": 1872,
+     "min": 1776,
+     "max": 1872
+    },
+    "bytesBeforeFirst3D": {
+     "n": 5,
+     "p50": 2199349,
+     "p95": 2199349,
+     "min": 2199349,
+     "max": 2199349
+    },
+    "bytesTotal": {
+     "n": 5,
+     "p50": 2200283,
+     "p95": 2200283,
+     "min": 2200283,
+     "max": 2200283
+    },
+    "jsHeapUsedBytes": {
+     "n": 5,
+     "p50": 23995779,
+     "p95": 28863030,
+     "min": 20184968,
+     "max": 28863030
+    },
+    "repeatVisit": {
+     "firstMeaningful3DMs": 7463,
+     "bytesTotal": 2100
+    },
+    "renderer": {
+     "drawCalls": 783,
+     "triangles": 235754,
+     "geometries": 542,
+     "textures": 6,
+     "textureMemoryBytes": 5592404,
+     "pixelRatio": 2,
+     "gpu": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x00009A49) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+    },
+    "quality": null
+   },
+   "loads": [
+    {
+     "navigation": {
+      "responseEnd": 202,
+      "domContentLoaded": 1215,
+      "transfer": 934
+     },
+     "fcpMs": 1872,
+     "shellVisibleMs": 1215,
+     "filmReadyMs": 12151,
+     "firstMeaningful3DMs": 18022,
+     "bytesBeforeFirst3D": 2199349,
+     "bytesTotal": 2200283,
+     "resources": [
+      {
+       "name": "/app/index-BuFzrH_m.js",
+       "start": 439,
+       "end": 869,
+       "transfer": 216846,
+       "encoded": 216546,
+       "decoded": 1031454
+      },
+      {
+       "name": "/app/index-5JW1531B.css",
+       "start": 442,
+       "end": 627,
+       "transfer": 5039,
+       "encoded": 4739,
+       "decoded": 19435
+      },
+      {
+       "name": "/assets/joints/elbow_r/joint-manifest.json",
+       "start": 6568,
+       "end": 6771,
+       "transfer": 12672,
+       "encoded": 12372,
+       "decoded": 93064
+      },
+      {
+       "name": "/assets/body/body-manifest.json",
+       "start": 7418,
+       "end": 7642,
+       "transfer": 26972,
+       "encoded": 26672,
+       "decoded": 276921
+      },
+      {
+       "name": "/assets/joints/elbow_r/elbow_r.core.glb",
+       "start": 7436,
+       "end": 7830,
+       "transfer": 188925,
+       "encoded": 188625,
+       "decoded": 306880
+      },
+      {
+       "name": "/assets/body/body.skeleton.glb",
+       "start": 7734,
+       "end": 9683,
+       "transfer": 1332696,
+       "encoded": 1332396,
+       "decoded": 2015164
+      },
+      {
+       "name": "/assets/body/body.skin.glb",
+       "start": 7741,
+       "end": 8621,
+       "transfer": 345924,
+       "encoded": 345624,
+       "decoded": 787444
+      },
+      {
+       "name": "/assets/joints/elbow_r/elbow_r.detail.glb",
+       "start": 11140,
+       "end": 11394,
+       "transfer": 70275,
+       "encoded": 69975,
+       "decoded": 93936
+      }
+     ],
+     "longTasksBeforeFirst3D": [
+      [
+       916,
+       901
+      ],
+      [
+       2116,
+       4473
+      ],
+      [
+       6654,
+       504
+      ],
+      [
+       7266,
+       178
+      ],
+      [
+       7858,
+       373
+      ],
+      [
+       8410,
+       131
+      ],
+      [
+       8685,
+       460
+      ],
+      [
+       9289,
+       117
+      ],
+      [
+       9688,
+       109
+      ],
+      [
+       9802,
+       594
+      ],
+      [
+       10483,
+       658
+      ],
+      [
+       11142,
+       503
+      ],
+      [
+       11676,
+       58
+      ],
+      [
+       11789,
+       572
+      ],
+      [
+       12362,
+       5708
+      ]
+     ],
+     "jsHeapUsedBytes": 20184968,
+     "quality": null,
+     "bodyFilesDoneMs": 9683,
+     "elbowRequestedAtLoad": true,
+     "renderer": {
+      "drawCalls": 783,
+      "triangles": 235754,
+      "geometries": 542,
+      "textures": 6,
+      "textureMemoryBytes": 5592404,
+      "pixelRatio": 2,
+      "gpu": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x00009A49) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+     },
+     "device": {
+      "hardwareConcurrency": 8,
+      "deviceMemory": 4,
+      "dpr": 2.625,
+      "width": 412,
+      "height": 915,
+      "connection": "4g"
+     },
+     "consoleErrors": []
+    },
+    {
+     "navigation": {
+      "responseEnd": 189,
+      "domContentLoaded": 1170,
+      "transfer": 934
+     },
+     "fcpMs": 1840,
+     "shellVisibleMs": 1167,
+     "filmReadyMs": 11774,
+     "firstMeaningful3DMs": 17490,
+     "bytesBeforeFirst3D": 2199349,
+     "bytesTotal": 2200283,
+     "resources": [
+      {
+       "name": "/app/index-BuFzrH_m.js",
+       "start": 404,
+       "end": 831,
+       "transfer": 216846,
+       "encoded": 216546,
+       "decoded": 1031454
+      },
+      {
+       "name": "/app/index-5JW1531B.css",
+       "start": 410,
+       "end": 598,
+       "transfer": 5039,
+       "encoded": 4739,
+       "decoded": 19435
+      },
+      {
+       "name": "/assets/joints/elbow_r/joint-manifest.json",
+       "start": 6274,
+       "end": 6474,
+       "transfer": 12672,
+       "encoded": 12372,
+       "decoded": 93064
+      },
+      {
+       "name": "/assets/body/body-manifest.json",
+       "start": 7063,
+       "end": 7284,
+       "transfer": 26972,
+       "encoded": 26672,
+       "decoded": 276921
+      },
+      {
+       "name": "/assets/joints/elbow_r/elbow_r.core.glb",
+       "start": 7080,
+       "end": 7467,
+       "transfer": 188925,
+       "encoded": 188625,
+       "decoded": 306880
+      },
+      {
+       "name": "/assets/body/body.skeleton.glb",
+       "start": 7373,
+       "end": 9317,
+       "transfer": 1332696,
+       "encoded": 1332396,
+       "decoded": 2015164
+      },
+      {
+       "name": "/assets/body/body.skin.glb",
+       "start": 7381,
+       "end": 8262,
+       "transfer": 345924,
+       "encoded": 345624,
+       "decoded": 787444
+      },
+      {
+       "name": "/assets/joints/elbow_r/elbow_r.detail.glb",
+       "start": 10752,
+       "end": 11001,
+       "transfer": 70275,
+       "encoded": 69975,
+       "decoded": 93936
+      }
+     ],
+     "longTasksBeforeFirst3D": [
+      [
+       883,
+       904
+      ],
+      [
+       2102,
+       4193
+      ],
+      [
+       6354,
+       469
+      ],
+      [
+       6935,
+       152
+      ],
+      [
+       7495,
+       302
+      ],
+      [
+       8023,
+       106
+      ],
+      [
+       8325,
+       540
+      ],
+      [
+       9046,
+       135
+      ],
+      [
+       9324,
+       100
+      ],
+      [
+       9429,
+       594
+      ],
+      [
+       10113,
+       644
+      ],
+      [
+       10758,
+       525
+      ],
+      [
+       11318,
+       70
+      ],
+      [
+       11436,
+       538
+      ],
+      [
+       11975,
+       5557
+      ]
+     ],
+     "jsHeapUsedBytes": 23812295,
+     "quality": null,
+     "bodyFilesDoneMs": 9317,
+     "elbowRequestedAtLoad": true,
+     "renderer": {
+      "drawCalls": 783,
+      "triangles": 235754,
+      "geometries": 542,
+      "textures": 6,
+      "textureMemoryBytes": 5592404,
+      "pixelRatio": 2,
+      "gpu": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x00009A49) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+     },
+     "device": {
+      "hardwareConcurrency": 8,
+      "deviceMemory": 4,
+      "dpr": 2.625,
+      "width": 412,
+      "height": 915,
+      "connection": "4g"
+     },
+     "consoleErrors": []
+    },
+    {
+     "navigation": {
+      "responseEnd": 195,
+      "domContentLoaded": 1202,
+      "transfer": 934
+     },
+     "fcpMs": 1868,
+     "shellVisibleMs": 1197,
+     "filmReadyMs": 11995,
+     "firstMeaningful3DMs": 17598,
+     "bytesBeforeFirst3D": 2199349,
+     "bytesTotal": 2200283,
+     "resources": [
+      {
+       "name": "/app/index-BuFzrH_m.js",
+       "start": 406,
+       "end": 837,
+       "transfer": 216846,
+       "encoded": 216546,
+       "decoded": 1031454
+      },
+      {
+       "name": "/app/index-5JW1531B.css",
+       "start": 417,
+       "end": 612,
+       "transfer": 5039,
+       "encoded": 4739,
+       "decoded": 19435
+      },
+      {
+       "name": "/assets/joints/elbow_r/joint-manifest.json",
+       "start": 6283,
+       "end": 6476,
+       "transfer": 12672,
+       "encoded": 12372,
+       "decoded": 93064
+      },
+      {
+       "name": "/assets/body/body-manifest.json",
+       "start": 7123,
+       "end": 7345,
+       "transfer": 26972,
+       "encoded": 26672,
+       "decoded": 276921
+      },
+      {
+       "name": "/assets/joints/elbow_r/elbow_r.core.glb",
+       "start": 7138,
+       "end": 7532,
+       "transfer": 188925,
+       "encoded": 188625,
+       "decoded": 306880
+      },
+      {
+       "name": "/assets/body/body.skeleton.glb",
+       "start": 7434,
+       "end": 9381,
+       "transfer": 1332696,
+       "encoded": 1332396,
+       "decoded": 2015164
+      },
+      {
+       "name": "/assets/body/body.skin.glb",
+       "start": 7440,
+       "end": 8333,
+       "transfer": 345924,
+       "encoded": 345624,
+       "decoded": 787444
+      },
+      {
+       "name": "/assets/joints/elbow_r/elbow_r.detail.glb",
+       "start": 10941,
+       "end": 11201,
+       "transfer": 70275,
+       "encoded": 69975,
+       "decoded": 93936
+      }
+     ],
+     "longTasksBeforeFirst3D": [
+      [
+       886,
+       934
+      ],
+      [
+       2129,
+       4173
+      ],
+      [
+       6378,
+       501
+      ],
+      [
+       6981,
+       165
+      ],
+      [
+       7562,
+       342
+      ],
+      [
+       8123,
+       131
+      ],
+      [
+       8394,
+       482
+      ],
+      [
+       9013,
+       144
+      ],
+      [
+       9389,
+       116
+      ],
+      [
+       9510,
+       661
+      ],
+      [
+       10274,
+       673
+      ],
+      [
+       10947,
+       559
+      ],
+      [
+       11541,
+       58
+      ],
+      [
+       11648,
+       554
+      ],
+      [
+       12202,
+       5439
+      ]
+     ],
+     "jsHeapUsedBytes": 26032554,
+     "quality": null,
+     "bodyFilesDoneMs": 9381,
+     "elbowRequestedAtLoad": true,
+     "renderer": {
+      "drawCalls": 783,
+      "triangles": 235754,
+      "geometries": 542,
+      "textures": 6,
+      "textureMemoryBytes": 5592404,
+      "pixelRatio": 2,
+      "gpu": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x00009A49) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+     },
+     "device": {
+      "hardwareConcurrency": 8,
+      "deviceMemory": 4,
+      "dpr": 2.625,
+      "width": 412,
+      "height": 915,
+      "connection": "4g"
+     },
+     "consoleErrors": []
+    },
+    {
+     "navigation": {
+      "responseEnd": 191,
+      "domContentLoaded": 1135,
+      "transfer": 934
+     },
+     "fcpMs": 1792,
+     "shellVisibleMs": 1132,
+     "filmReadyMs": 11707,
+     "firstMeaningful3DMs": 17380,
+     "bytesBeforeFirst3D": 2199349,
+     "bytesTotal": 2200283,
+     "resources": [
+      {
+       "name": "/app/index-BuFzrH_m.js",
+       "start": 409,
+       "end": 837,
+       "transfer": 216846,
+       "encoded": 216546,
+       "decoded": 1031454
+      },
+      {
+       "name": "/app/index-5JW1531B.css",
+       "start": 413,
+       "end": 603,
+       "transfer": 5039,
+       "encoded": 4739,
+       "decoded": 19435
+      },
+      {
+       "name": "/assets/joints/elbow_r/joint-manifest.json",
+       "start": 6075,
+       "end": 6278,
+       "transfer": 12672,
+       "encoded": 12372,
+       "decoded": 93064
+      },
+      {
+       "name": "/assets/body/body-manifest.json",
+       "start": 6943,
+       "end": 7165,
+       "transfer": 26972,
+       "encoded": 26672,
+       "decoded": 276921
+      },
+      {
+       "name": "/assets/joints/elbow_r/elbow_r.core.glb",
+       "start": 6953,
+       "end": 7354,
+       "transfer": 188925,
+       "encoded": 188625,
+       "decoded": 306880
+      },
+      {
+       "name": "/assets/body/body.skeleton.glb",
+       "start": 7260,
+       "end": 9194,
+       "transfer": 1332696,
+       "encoded": 1332396,
+       "decoded": 2015164
+      },
+      {
+       "name": "/assets/body/body.skin.glb",
+       "start": 7263,
+       "end": 8149,
+       "transfer": 345924,
+       "encoded": 345624,
+       "decoded": 787444
+      },
+      {
+       "name": "/assets/joints/elbow_r/elbow_r.detail.glb",
+       "start": 10713,
+       "end": 10981,
+       "transfer": 70275,
+       "encoded": 69975,
+       "decoded": 93936
+      }
+     ],
+     "longTasksBeforeFirst3D": [
+      [
+       883,
+       855
+      ],
+      [
+       2031,
+       4068
+      ],
+      [
+       6162,
+       512
+      ],
+      [
+       6783,
+       174
+      ],
+      [
+       7383,
+       295
+      ],
+      [
+       7844,
+       123
+      ],
+      [
+       8204,
+       457
+      ],
+      [
+       8809,
+       145
+      ],
+      [
+       9200,
+       115
+      ],
+      [
+       9320,
+       628
+      ],
+      [
+       10057,
+       660
+      ],
+      [
+       10717,
+       498
+      ],
+      [
+       11250,
+       64
+      ],
+      [
+       11357,
+       552
+      ],
+      [
+       11909,
+       5521
+      ]
+     ],
+     "jsHeapUsedBytes": 28863030,
+     "quality": null,
+     "bodyFilesDoneMs": 9194,
+     "elbowRequestedAtLoad": true,
+     "renderer": {
+      "drawCalls": 783,
+      "triangles": 235754,
+      "geometries": 542,
+      "textures": 6,
+      "textureMemoryBytes": 5592404,
+      "pixelRatio": 2,
+      "gpu": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x00009A49) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+     },
+     "device": {
+      "hardwareConcurrency": 8,
+      "deviceMemory": 4,
+      "dpr": 2.625,
+      "width": 412,
+      "height": 915,
+      "connection": "4g"
+     },
+     "consoleErrors": []
+    },
+    {
+     "navigation": {
+      "responseEnd": 191,
+      "domContentLoaded": 1148,
+      "transfer": 934
+     },
+     "fcpMs": 1776,
+     "shellVisibleMs": 1145,
+     "filmReadyMs": 11705,
+     "firstMeaningful3DMs": 17237,
+     "bytesBeforeFirst3D": 2199349,
+     "bytesTotal": 2200283,
+     "resources": [
+      {
+       "name": "/app/index-BuFzrH_m.js",
+       "start": 361,
+       "end": 795,
+       "transfer": 216846,
+       "encoded": 216546,
+       "decoded": 1031454
+      },
+      {
+       "name": "/app/index-5JW1531B.css",
+       "start": 369,
+       "end": 561,
+       "transfer": 5039,
+       "encoded": 4739,
+       "decoded": 19435
+      },
+      {
+       "name": "/assets/joints/elbow_r/joint-manifest.json",
+       "start": 6122,
+       "end": 6316,
+       "transfer": 12672,
+       "encoded": 12372,
+       "decoded": 93064
+      },
+      {
+       "name": "/assets/body/body-manifest.json",
+       "start": 6961,
+       "end": 7181,
+       "transfer": 26972,
+       "encoded": 26672,
+       "decoded": 276921
+      },
+      {
+       "name": "/assets/joints/elbow_r/elbow_r.core.glb",
+       "start": 6977,
+       "end": 7368,
+       "transfer": 188925,
+       "encoded": 188625,
+       "decoded": 306880
+      },
+      {
+       "name": "/assets/body/body.skeleton.glb",
+       "start": 7285,
+       "end": 9204,
+       "transfer": 1332696,
+       "encoded": 1332396,
+       "decoded": 2015164
+      },
+      {
+       "name": "/assets/body/body.skin.glb",
+       "start": 7290,
+       "end": 8157,
+       "transfer": 345924,
+       "encoded": 345624,
+       "decoded": 787444
+      },
+      {
+       "name": "/assets/joints/elbow_r/elbow_r.detail.glb",
+       "start": 10649,
+       "end": 10903,
+       "transfer": 70275,
+       "encoded": 69975,
+       "decoded": 93936
+      }
+     ],
+     "longTasksBeforeFirst3D": [
+      [
+       838,
+       896
+      ],
+      [
+       2018,
+       4132
+      ],
+      [
+       6214,
+       487
+      ],
+      [
+       6808,
+       173
+      ],
+      [
+       7396,
+       335
+      ],
+      [
+       7925,
+       133
+      ],
+      [
+       8216,
+       450
+      ],
+      [
+       8803,
+       126
+      ],
+      [
+       9212,
+       102
+      ],
+      [
+       9319,
+       685
+      ],
+      [
+       10089,
+       563
+      ],
+      [
+       10652,
+       542
+      ],
+      [
+       11219,
+       56
+      ],
+      [
+       11323,
+       616
+      ],
+      [
+       11939,
+       5349
+      ]
+     ],
+     "jsHeapUsedBytes": 23995779,
+     "quality": null,
+     "bodyFilesDoneMs": 9204,
+     "elbowRequestedAtLoad": true,
+     "renderer": {
+      "drawCalls": 783,
+      "triangles": 235754,
+      "geometries": 542,
+      "textures": 6,
+      "textureMemoryBytes": 5592404,
+      "pixelRatio": 2,
+      "gpu": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x00009A49) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+     },
+     "device": {
+      "hardwareConcurrency": 8,
+      "deviceMemory": 4,
+      "dpr": 2.625,
+      "width": 412,
+      "height": 915,
+      "connection": "4g"
+     },
+     "consoleErrors": []
+    }
+   ],
+   "repeatVisit": {
+    "navigation": {
+     "responseEnd": 188,
+     "domContentLoaded": 1080,
+     "transfer": 300
+    },
+    "fcpMs": 1140,
+    "shellVisibleMs": 1077,
+    "filmReadyMs": 5705,
+    "firstMeaningful3DMs": 7463,
+    "bytesBeforeFirst3D": 1800,
+    "bytesTotal": 2100,
+    "resources": [
+     {
+      "name": "/app/index-BuFzrH_m.js",
+      "start": 818,
+      "end": 818,
+      "transfer": 0,
+      "encoded": 216546,
+      "decoded": 1031454
+     },
+     {
+      "name": "/app/index-5JW1531B.css",
+      "start": 821,
+      "end": 821,
+      "transfer": 0,
+      "encoded": 4739,
+      "decoded": 19435
+     },
+     {
+      "name": "/assets/joints/elbow_r/joint-manifest.json",
+      "start": 2192,
+      "end": 2377,
+      "transfer": 300,
+      "encoded": 12372,
+      "decoded": 93064
+     },
+     {
+      "name": "/assets/body/body-manifest.json",
+      "start": 2576,
+      "end": 2779,
+      "transfer": 300,
+      "encoded": 26672,
+      "decoded": 276921
+     },
+     {
+      "name": "/assets/joints/elbow_r/elbow_r.core.glb",
+      "start": 2583,
+      "end": 2780,
+      "transfer": 300,
+      "encoded": 188625,
+      "decoded": 306880
+     },
+     {
+      "name": "/assets/body/body.skeleton.glb",
+      "start": 3067,
+      "end": 3314,
+      "transfer": 300,
+      "encoded": 1332396,
+      "decoded": 2015164
+     },
+     {
+      "name": "/assets/body/body.skin.glb",
+      "start": 3075,
+      "end": 3283,
+      "transfer": 300,
+      "encoded": 345624,
+      "decoded": 787444
+     },
+     {
+      "name": "/assets/joints/elbow_r/elbow_r.detail.glb",
+      "start": 5192,
+      "end": 5380,
+      "transfer": 300,
+      "encoded": 69975,
+      "decoded": 93936
+     }
+    ],
+    "longTasksBeforeFirst3D": [
+     [
+      913,
+      183
+     ],
+     [
+      1133,
+      316
+     ],
+     [
+      1460,
+      744
+     ],
+     [
+      2867,
+      181
+     ],
+     [
+      3316,
+      64
+     ],
+     [
+      3395,
+      115
+     ],
+     [
+      3514,
+      60
+     ],
+     [
+      3579,
+      565
+     ],
+     [
+      4151,
+      359
+     ],
+     [
+      4637,
+      94
+     ],
+     [
+      4731,
+      465
+     ],
+     [
+      5198,
+      172
+     ],
+     [
+      5404,
+      55
+     ],
+     [
+      5506,
+      290
+     ],
+     [
+      5797,
+      1685
+     ]
+    ],
+    "jsHeapUsedBytes": 33888146,
+    "quality": null,
+    "bodyFilesDoneMs": 3314,
+    "elbowRequestedAtLoad": true,
+    "renderer": {
+     "drawCalls": 783,
+     "triangles": 235754,
+     "geometries": 542,
+     "textures": 6,
+     "textureMemoryBytes": 5592404,
+     "pixelRatio": 2,
+     "gpu": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x00009A49) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+    },
+    "device": {
+     "hardwareConcurrency": 8,
+     "deviceMemory": 4,
+     "dpr": 2.625,
+     "width": 412,
+     "height": 915,
+     "connection": "4g"
+    }
+   },
+   "interactions": {
+    "playTravel": {
+     "frames": 83,
+     "spanMs": 5041,
+     "fps": 16.3,
+     "frameIntervalMs": {
+      "n": 82,
+      "p50": 60.2,
+      "p95": 83.2,
+      "min": 43.1,
+      "max": 96.1
+     },
+     "frameCpuMs": {
+      "n": 83,
+      "p50": 27.1,
+      "p95": 33.4,
+      "min": 13.5,
+      "max": 57.2
+     },
+     "droppedFrames": 222,
+     "inputs": 0,
+     "inputToRenderMs": {
+      "n": 0,
+      "p50": null,
+      "p95": null,
+      "min": null,
+      "max": null
+     },
+     "inputsWithoutRender": 0
+    },
+    "playTravelRenderer": {
+     "fps": 17,
+     "frameIntervalMeanMs": 61.40121951226781,
+     "frameIntervalP95Ms": 83.09999999403954,
+     "frameCpuMeanMs": 124.36732673231919,
+     "frameCpuP95Ms": 505.90000000596046,
+     "drawCalls": 137,
+     "triangles": 125427,
+     "geometries": 542,
+     "textures": 6,
+     "textureMemoryBytes": 5592404,
+     "pixelRatio": 2,
+     "framesRendered": 101,
+     "firstFrameMs": 2457.0999999940395,
+     "firstModelFrameMs": 5351.9000000059605,
+     "renderer": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x00009A49) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+    },
+    "playElbow": {
+     "frames": 48,
+     "spanMs": 4871,
+     "fps": 9.6,
+     "frameIntervalMs": {
+      "n": 47,
+      "p50": 103.5,
+      "p95": 125.2,
+      "min": 68.9,
+      "max": 147.1
+     },
+     "frameCpuMs": {
+      "n": 48,
+      "p50": 49.5,
+      "p95": 93.2,
+      "min": 32.5,
+      "max": 130.5
+     },
+     "droppedFrames": 246,
+     "inputs": 0,
+     "inputToRenderMs": {
+      "n": 0,
+      "p50": null,
+      "p95": null,
+      "min": null,
+      "max": null
+     },
+     "inputsWithoutRender": 0
+    },
+    "playElbowRenderer": {
+     "fps": 10,
+     "frameIntervalMeanMs": 66.22673267332634,
+     "frameIntervalP95Ms": 95.30000001192093,
+     "frameCpuMeanMs": 117.09733333388964,
+     "frameCpuP95Ms": 483.09999999403954,
+     "drawCalls": 241,
+     "triangles": 171746,
+     "geometries": 574,
+     "textures": 8,
+     "textureMemoryBytes": 5592404,
+     "pixelRatio": 2,
+     "framesRendered": 150,
+     "firstFrameMs": 2457.0999999940395,
+     "firstModelFrameMs": 5351.9000000059605,
+     "renderer": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x00009A49) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+    },
+    "playRecap": {
+     "frames": 10,
+     "spanMs": 5142,
+     "fps": 1.8,
+     "frameIntervalMs": {
+      "n": 0,
+      "p50": null,
+      "p95": null,
+      "min": null,
+      "max": null
+     },
+     "frameCpuMs": {
+      "n": 10,
+      "p50": 506.4,
+      "p95": 560.5,
+      "min": 465.7,
+      "max": 560.5
+     },
+     "droppedFrames": 0,
+     "inputs": 0,
+     "inputToRenderMs": {
+      "n": 0,
+      "p50": null,
+      "p95": null,
+      "min": null,
+      "max": null
+     },
+     "inputsWithoutRender": 0
+    },
+    "playRecapRenderer": {
+     "fps": 2,
+     "frameIntervalMeanMs": 66.22673267332634,
+     "frameIntervalP95Ms": 95.30000001192093,
+     "frameCpuMeanMs": 143.30124223695037,
+     "frameCpuP95Ms": 536.0999999940395,
+     "drawCalls": 812,
+     "triangles": 241996,
+     "geometries": 592,
+     "textures": 8,
+     "textureMemoryBytes": 5592404,
+     "pixelRatio": 2,
+     "framesRendered": 161,
+     "firstFrameMs": 2457.0999999940395,
+     "firstModelFrameMs": 5351.9000000059605,
+     "renderer": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x00009A49) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+    },
+    "shots": {
+     "intro.title": {
+      "drawCalls": 783,
+      "triangles": 235754,
+      "geometries": 592,
+      "textures": 8,
+      "textureMemoryBytes": 5592404
+     },
+     "fixed.detail": {
+      "drawCalls": 140,
+      "triangles": 125021,
+      "geometries": 592,
+      "textures": 8,
+      "textureMemoryBytes": 5592404
+     },
+     "pivot.rotate": {
+      "drawCalls": 195,
+      "triangles": 148820,
+      "geometries": 592,
+      "textures": 8,
+      "textureMemoryBytes": 5592404
+     },
+     "ball.shoulder": {
+      "drawCalls": 118,
+      "triangles": 118433,
+      "geometries": 592,
+      "textures": 8,
+      "textureMemoryBytes": 5592404
+     },
+     "ball.hip": {
+      "drawCalls": 114,
+      "triangles": 89935,
+      "geometries": 592,
+      "textures": 8,
+      "textureMemoryBytes": 5592404
+     },
+     "hinge.flexion": {
+      "drawCalls": 227,
+      "triangles": 167234,
+      "geometries": 592,
+      "textures": 8,
+      "textureMemoryBytes": 5592404
+     },
+     "hinge.support": {
+      "drawCalls": 109,
+      "triangles": 91993,
+      "geometries": 598,
+      "textures": 10,
+      "textureMemoryBytes": 5592404
+     },
+     "hinge.knee": {
+      "drawCalls": 102,
+      "triangles": 22966,
+      "geometries": 598,
+      "textures": 10,
+      "textureMemoryBytes": 5592404
+     },
+     "recap.compare": {
+      "drawCalls": 316,
+      "triangles": 174656,
+      "geometries": 598,
+      "textures": 10,
+      "textureMemoryBytes": 5592404
+     }
+    },
+    "dragInput": {
+     "frames": 3,
+     "spanMs": 2381,
+     "fps": 0.8,
+     "frameIntervalMs": {
+      "n": 1,
+      "p50": 231.5,
+      "p95": 231.5,
+      "min": 231.5,
+      "max": 231.5
+     },
+     "frameCpuMs": {
+      "n": 3,
+      "p50": 96.6,
+      "p95": 109.4,
+      "min": 74.4,
+      "max": 109.4
+     },
+     "droppedFrames": 13,
+     "inputs": 61,
+     "inputToRenderMs": {
+      "n": 8,
+      "p50": 184.5,
+      "p95": 315.3,
+      "min": 149.8,
+      "max": 315.3
+     },
+     "inputsWithoutRender": 53
+    },
+    "dragDisplayRate": {
+     "frames": 86,
+     "spanMs": 12503,
+     "fps": 6.8,
+     "frameIntervalMs": {
+      "n": 83,
+      "p50": 114.6,
+      "p95": 136.2,
+      "min": 92.4,
+      "max": 166.4
+     },
+     "frameCpuMs": {
+      "n": 86,
+      "p50": 50.3,
+      "p95": 65.9,
+      "min": 37.8,
+      "max": 77.3
+     },
+     "droppedFrames": 496,
+     "inputs": 180,
+     "inputToRenderMs": {
+      "n": 97,
+      "p50": 114.5,
+      "p95": 237.6,
+      "min": 90.8,
+      "max": 304.9
+     },
+     "inputsWithoutRender": 83
+    },
+    "sliderKeyboard": {
+     "frames": 37,
+     "spanMs": 5466,
+     "fps": 6.6,
+     "frameIntervalMs": {
+      "n": 36,
+      "p50": 149.9,
+      "p95": 185.6,
+      "min": 126,
+      "max": 204
+     },
+     "frameCpuMs": {
+      "n": 37,
+      "p50": 76.8,
+      "p95": 106.2,
+      "min": 56.4,
+      "max": 123
+     },
+     "droppedFrames": 292,
+     "inputs": 40,
+     "inputToRenderMs": {
+      "n": 40,
+      "p50": 229.3,
+      "p95": 266.4,
+      "min": 112.6,
+      "max": 313.5
+     },
+     "inputsWithoutRender": 0
+    },
+    "scrub": {
+     "frames": 42,
+     "spanMs": 8812,
+     "fps": 4.7,
+     "frameIntervalMs": {
+      "n": 34,
+      "p50": 169.2,
+      "p95": 236.2,
+      "min": 104.7,
+      "max": 247.8
+     },
+     "frameCpuMs": {
+      "n": 42,
+      "p50": 51.5,
+      "p95": 202.3,
+      "min": 20.5,
+      "max": 511.1
+     },
+     "droppedFrames": 334,
+     "inputs": 42,
+     "inputToRenderMs": {
+      "n": 42,
+      "p50": 145.8,
+      "p95": 263.6,
+      "min": 60.2,
+      "max": 613.6
+     },
+     "inputsWithoutRender": 0
+    },
+    "chapterJump": {
+     "frames": 6,
+     "spanMs": 3735,
+     "fps": 1.3,
+     "frameIntervalMs": {
+      "n": 0,
+      "p50": null,
+      "p95": null,
+      "min": null,
+      "max": null
+     },
+     "frameCpuMs": {
+      "n": 6,
+      "p50": 36.2,
+      "p95": 567.5,
+      "min": 28,
+      "max": 567.5
+     },
+     "droppedFrames": 0,
+     "inputs": 6,
+     "inputToRenderMs": {
+      "n": 6,
+      "p50": 137.2,
+      "p95": 677.3,
+      "min": 116.2,
+      "max": 677.3
+     },
+     "inputsWithoutRender": 0
+    },
+    "exploreOrbit": {
+     "frames": 60,
+     "spanMs": 9124,
+     "fps": 6.5,
+     "frameIntervalMs": {
+      "n": 59,
+      "p50": 162.5,
+      "p95": 182.8,
+      "min": 73.2,
+      "max": 193.8
+     },
+     "frameCpuMs": {
+      "n": 60,
+      "p50": 100,
+      "p95": 115.8,
+      "min": 41.3,
+      "max": 124.3
+     },
+     "droppedFrames": 491,
+     "inputs": 51,
+     "inputToRenderMs": {
+      "n": 51,
+      "p50": 129.7,
+      "p95": 151.4,
+      "min": 106.9,
+      "max": 157.2
+     },
+     "inputsWithoutRender": 0
+    },
+    "selection": {
+     "frames": 6,
+     "spanMs": 17084,
+     "fps": 0.3,
+     "frameIntervalMs": {
+      "n": 2,
+      "p50": 99.8,
+      "p95": 100,
+      "min": 99.8,
+      "max": 100
+     },
+     "frameCpuMs": {
+      "n": 6,
+      "p50": 69.4,
+      "p95": 114.5,
+      "min": 43.6,
+      "max": 114.5
+     },
+     "droppedFrames": 10,
+     "inputs": 4,
+     "inputToRenderMs": {
+      "n": 4,
+      "p50": 215.2,
+      "p95": 246.1,
+      "min": 214.7,
+      "max": 246.1
+     },
+     "inputsWithoutRender": 0
+    },
+    "selectionResult": "radius_r",
+    "heapAfterInteractionsBytes": 32137539
+   }
+  },
+  "mobile-emulated-fast4g-cpu2x": {
+   "profile": {
+    "id": "mobile-emulated-fast4g-cpu2x",
+    "classification": "EMULATED — NOT CERTIFICATION (CPU 2x throttle, laptop GPU; uncalibrated mid-tier approximation)",
+    "viewport": {
+     "width": 412,
+     "height": 915
+    },
+    "dpr": 2.625,
+    "cpu": 2,
+    "net": {
+     "id": "fast-4g-devtools",
+     "downBps": 1012500,
+     "upBps": 168750,
+     "latencyMs": 165,
+     "note": "Chrome DevTools Fast 4G preset"
+    },
+    "mobile": true,
+    "signals": {
+     "deviceMemory": 4,
+     "hardwareConcurrency": 8
+    }
+   },
+   "summary": {
+    "firstMeaningful3DMs": {
+     "n": 5,
+     "p50": 12347,
+     "p95": 12408,
+     "min": 12268,
+     "max": 12408
+    },
+    "shellVisibleMs": {
+     "n": 5,
+     "p50": 886,
+     "p95": 898,
+     "min": 881,
+     "max": 898
+    },
+    "fcpMs": {
+     "n": 5,
+     "p50": 1276,
+     "p95": 1288,
+     "min": 1216,
+     "max": 1288
+    },
+    "bytesBeforeFirst3D": {
+     "n": 5,
+     "p50": 2199349,
+     "p95": 2199349,
+     "min": 2199349,
+     "max": 2199349
+    },
+    "bytesTotal": {
+     "n": 5,
+     "p50": 2200283,
+     "p95": 2200283,
+     "min": 2200283,
+     "max": 2200283
+    },
+    "jsHeapUsedBytes": {
+     "n": 5,
+     "p50": 23194346,
+     "p95": 26286890,
+     "min": 21015706,
+     "max": 26286890
+    },
+    "repeatVisit": {
+     "firstMeaningful3DMs": 3696,
+     "bytesTotal": 2100
+    },
+    "renderer": {
+     "drawCalls": 783,
+     "triangles": 235754,
+     "geometries": 542,
+     "textures": 6,
+     "textureMemoryBytes": 5592404,
+     "pixelRatio": 2,
+     "gpu": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x00009A49) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+    },
+    "quality": null
+   },
+   "loads": [
+    {
+     "navigation": {
+      "responseEnd": 202,
+      "domContentLoaded": 897,
+      "transfer": 934
+     },
+     "fcpMs": 1276,
+     "shellVisibleMs": 896,
+     "filmReadyMs": 8525,
+     "firstMeaningful3DMs": 12347,
+     "bytesBeforeFirst3D": 2199349,
+     "bytesTotal": 2200283,
+     "resources": [
+      {
+       "name": "/app/index-BuFzrH_m.js",
+       "start": 294,
+       "end": 723,
+       "transfer": 216846,
+       "encoded": 216546,
+       "decoded": 1031454
+      },
+      {
+       "name": "/app/index-5JW1531B.css",
+       "start": 297,
+       "end": 489,
+       "transfer": 5039,
+       "encoded": 4739,
+       "decoded": 19435
+      },
+      {
+       "name": "/assets/joints/elbow_r/joint-manifest.json",
+       "start": 4867,
+       "end": 5055,
+       "transfer": 12672,
+       "encoded": 12372,
+       "decoded": 93064
+      },
+      {
+       "name": "/assets/body/body-manifest.json",
+       "start": 5198,
+       "end": 5423,
+       "transfer": 26972,
+       "encoded": 26672,
+       "decoded": 276921
+      },
+      {
+       "name": "/assets/joints/elbow_r/elbow_r.core.glb",
+       "start": 5204,
+       "end": 5606,
+       "transfer": 188925,
+       "encoded": 188625,
+       "decoded": 306880
+      },
+      {
+       "name": "/assets/body/body.skeleton.glb",
+       "start": 5456,
+       "end": 7403,
+       "transfer": 1332696,
+       "encoded": 1332396,
+       "decoded": 2015164
+      },
+      {
+       "name": "/assets/body/body.skin.glb",
+       "start": 5460,
+       "end": 6357,
+       "transfer": 345924,
+       "encoded": 345624,
+       "decoded": 787444
+      },
+      {
+       "name": "/assets/joints/elbow_r/elbow_r.detail.glb",
+       "start": 8048,
+       "end": 8299,
+       "transfer": 70275,
+       "encoded": 69975,
+       "decoded": 93936
+      }
+     ],
+     "longTasksBeforeFirst3D": [
+      [
+       760,
+       402
+      ],
+      [
+       1287,
+       3589
+      ],
+      [
+       4896,
+       201
+      ],
+      [
+       5144,
+       64
+      ],
+      [
+       5618,
+       128
+      ],
+      [
+       6381,
+       181
+      ],
+      [
+       7410,
+       58
+      ],
+      [
+       7469,
+       279
+      ],
+      [
+       7787,
+       263
+      ],
+      [
+       8051,
+       278
+      ],
+      [
+       8393,
+       207
+      ],
+      [
+       8601,
+       3765
+      ]
+     ],
+     "jsHeapUsedBytes": 21568738,
+     "quality": null,
+     "bodyFilesDoneMs": 7403,
+     "elbowRequestedAtLoad": true,
+     "renderer": {
+      "drawCalls": 783,
+      "triangles": 235754,
+      "geometries": 542,
+      "textures": 6,
+      "textureMemoryBytes": 5592404,
+      "pixelRatio": 2,
+      "gpu": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x00009A49) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+     },
+     "device": {
+      "hardwareConcurrency": 8,
+      "deviceMemory": 4,
+      "dpr": 2.625,
+      "width": 412,
+      "height": 915,
+      "connection": "4g"
+     },
+     "consoleErrors": []
+    },
+    {
+     "navigation": {
+      "responseEnd": 201,
+      "domContentLoaded": 888,
+      "transfer": 934
+     },
+     "fcpMs": 1288,
+     "shellVisibleMs": 886,
+     "filmReadyMs": 8592,
+     "firstMeaningful3DMs": 12408,
+     "bytesBeforeFirst3D": 2199349,
+     "bytesTotal": 2200283,
+     "resources": [
+      {
+       "name": "/app/index-BuFzrH_m.js",
+       "start": 291,
+       "end": 717,
+       "transfer": 216846,
+       "encoded": 216546,
+       "decoded": 1031454
+      },
+      {
+       "name": "/app/index-5JW1531B.css",
+       "start": 295,
+       "end": 491,
+       "transfer": 5039,
+       "encoded": 4739,
+       "decoded": 19435
+      },
+      {
+       "name": "/assets/joints/elbow_r/joint-manifest.json",
+       "start": 4917,
+       "end": 5110,
+       "transfer": 12672,
+       "encoded": 12372,
+       "decoded": 93064
+      },
+      {
+       "name": "/assets/body/body-manifest.json",
+       "start": 5264,
+       "end": 5493,
+       "transfer": 26972,
+       "encoded": 26672,
+       "decoded": 276921
+      },
+      {
+       "name": "/assets/joints/elbow_r/elbow_r.core.glb",
+       "start": 5268,
+       "end": 5665,
+       "transfer": 188925,
+       "encoded": 188625,
+       "decoded": 306880
+      },
+      {
+       "name": "/assets/body/body.skeleton.glb",
+       "start": 5528,
+       "end": 7468,
+       "transfer": 1332696,
+       "encoded": 1332396,
+       "decoded": 2015164
+      },
+      {
+       "name": "/assets/body/body.skin.glb",
+       "start": 5530,
+       "end": 6408,
+       "transfer": 345924,
+       "encoded": 345624,
+       "decoded": 787444
+      },
+      {
+       "name": "/assets/joints/elbow_r/elbow_r.detail.glb",
+       "start": 8069,
+       "end": 8323,
+       "transfer": 70275,
+       "encoded": 69975,
+       "decoded": 93936
+      }
+     ],
+     "longTasksBeforeFirst3D": [
+      [
+       754,
+       381
+      ],
+      [
+       1259,
+       3668
+      ],
+      [
+       4950,
+       217
+      ],
+      [
+       5213,
+       58
+      ],
+      [
+       5679,
+       134
+      ],
+      [
+       6431,
+       182
+      ],
+      [
+       7474,
+       55
+      ],
+      [
+       7531,
+       266
+      ],
+      [
+       7836,
+       235
+      ],
+      [
+       8072,
+       295
+      ],
+      [
+       8437,
+       229
+      ],
+      [
+       8667,
+       3760
+      ]
+     ],
+     "jsHeapUsedBytes": 21015706,
+     "quality": null,
+     "bodyFilesDoneMs": 7468,
+     "elbowRequestedAtLoad": true,
+     "renderer": {
+      "drawCalls": 783,
+      "triangles": 235754,
+      "geometries": 542,
+      "textures": 6,
+      "textureMemoryBytes": 5592404,
+      "pixelRatio": 2,
+      "gpu": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x00009A49) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+     },
+     "device": {
+      "hardwareConcurrency": 8,
+      "deviceMemory": 4,
+      "dpr": 2.625,
+      "width": 412,
+      "height": 915,
+      "connection": "4g"
+     },
+     "consoleErrors": []
+    },
+    {
+     "navigation": {
+      "responseEnd": 205,
+      "domContentLoaded": 886,
+      "transfer": 934
+     },
+     "fcpMs": 1276,
+     "shellVisibleMs": 885,
+     "filmReadyMs": 8517,
+     "firstMeaningful3DMs": 12357,
+     "bytesBeforeFirst3D": 2199349,
+     "bytesTotal": 2200283,
+     "resources": [
+      {
+       "name": "/app/index-BuFzrH_m.js",
+       "start": 284,
+       "end": 720,
+       "transfer": 216846,
+       "encoded": 216546,
+       "decoded": 1031454
+      },
+      {
+       "name": "/app/index-5JW1531B.css",
+       "start": 288,
+       "end": 493,
+       "transfer": 5039,
+       "encoded": 4739,
+       "decoded": 19435
+      },
+      {
+       "name": "/assets/joints/elbow_r/joint-manifest.json",
+       "start": 4883,
+       "end": 5073,
+       "transfer": 12672,
+       "encoded": 12372,
+       "decoded": 93064
+      },
+      {
+       "name": "/assets/body/body-manifest.json",
+       "start": 5234,
+       "end": 5464,
+       "transfer": 26972,
+       "encoded": 26672,
+       "decoded": 276921
+      },
+      {
+       "name": "/assets/joints/elbow_r/elbow_r.core.glb",
+       "start": 5239,
+       "end": 5641,
+       "transfer": 188925,
+       "encoded": 188625,
+       "decoded": 306880
+      },
+      {
+       "name": "/assets/body/body.skeleton.glb",
+       "start": 5495,
+       "end": 7438,
+       "transfer": 1332696,
+       "encoded": 1332396,
+       "decoded": 2015164
+      },
+      {
+       "name": "/assets/body/body.skin.glb",
+       "start": 5497,
+       "end": 6388,
+       "transfer": 345924,
+       "encoded": 345624,
+       "decoded": 787444
+      },
+      {
+       "name": "/assets/joints/elbow_r/elbow_r.detail.glb",
+       "start": 8040,
+       "end": 8299,
+       "transfer": 70275,
+       "encoded": 69975,
+       "decoded": 93936
+      }
+     ],
+     "longTasksBeforeFirst3D": [
+      [
+       758,
+       410
+      ],
+      [
+       1296,
+       3598
+      ],
+      [
+       4939,
+       212
+      ],
+      [
+       5178,
+       65
+      ],
+      [
+       5655,
+       139
+      ],
+      [
+       6420,
+       186
+      ],
+      [
+       7443,
+       53
+      ],
+      [
+       7499,
+       257
+      ],
+      [
+       7798,
+       245
+      ],
+      [
+       8044,
+       288
+      ],
+      [
+       8396,
+       202
+      ],
+      [
+       8598,
+       3777
+      ]
+     ],
+     "jsHeapUsedBytes": 23542054,
+     "quality": null,
+     "bodyFilesDoneMs": 7438,
+     "elbowRequestedAtLoad": true,
+     "renderer": {
+      "drawCalls": 783,
+      "triangles": 235754,
+      "geometries": 542,
+      "textures": 6,
+      "textureMemoryBytes": 5592404,
+      "pixelRatio": 2,
+      "gpu": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x00009A49) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+     },
+     "device": {
+      "hardwareConcurrency": 8,
+      "deviceMemory": 4,
+      "dpr": 2.625,
+      "width": 412,
+      "height": 915,
+      "connection": "4g"
+     },
+     "consoleErrors": []
+    },
+    {
+     "navigation": {
+      "responseEnd": 196,
+      "domContentLoaded": 883,
+      "transfer": 934
+     },
+     "fcpMs": 1216,
+     "shellVisibleMs": 881,
+     "filmReadyMs": 8491,
+     "firstMeaningful3DMs": 12279,
+     "bytesBeforeFirst3D": 2199349,
+     "bytesTotal": 2200283,
+     "resources": [
+      {
+       "name": "/app/index-BuFzrH_m.js",
+       "start": 279,
+       "end": 709,
+       "transfer": 216846,
+       "encoded": 216546,
+       "decoded": 1031454
+      },
+      {
+       "name": "/app/index-5JW1531B.css",
+       "start": 283,
+       "end": 483,
+       "transfer": 5039,
+       "encoded": 4739,
+       "decoded": 19435
+      },
+      {
+       "name": "/assets/joints/elbow_r/joint-manifest.json",
+       "start": 4805,
+       "end": 4999,
+       "transfer": 12672,
+       "encoded": 12372,
+       "decoded": 93064
+      },
+      {
+       "name": "/assets/body/body-manifest.json",
+       "start": 5141,
+       "end": 5364,
+       "transfer": 26972,
+       "encoded": 26672,
+       "decoded": 276921
+      },
+      {
+       "name": "/assets/joints/elbow_r/elbow_r.core.glb",
+       "start": 5147,
+       "end": 5540,
+       "transfer": 188925,
+       "encoded": 188625,
+       "decoded": 306880
+      },
+      {
+       "name": "/assets/body/body.skeleton.glb",
+       "start": 5398,
+       "end": 7330,
+       "transfer": 1332696,
+       "encoded": 1332396,
+       "decoded": 2015164
+      },
+      {
+       "name": "/assets/body/body.skin.glb",
+       "start": 5400,
+       "end": 6291,
+       "transfer": 345924,
+       "encoded": 345624,
+       "decoded": 787444
+      },
+      {
+       "name": "/assets/joints/elbow_r/elbow_r.detail.glb",
+       "start": 7992,
+       "end": 8241,
+       "transfer": 70275,
+       "encoded": 69975,
+       "decoded": 93936
+      }
+     ],
+     "longTasksBeforeFirst3D": [
+      [
+       746,
+       420
+      ],
+      [
+       1293,
+       3521
+      ],
+      [
+       4860,
+       201
+      ],
+      [
+       5088,
+       64
+      ],
+      [
+       5555,
+       130
+      ],
+      [
+       6321,
+       214
+      ],
+      [
+       7336,
+       58
+      ],
+      [
+       7397,
+       267
+      ],
+      [
+       7706,
+       288
+      ],
+      [
+       7997,
+       296
+      ],
+      [
+       8362,
+       208
+      ],
+      [
+       8570,
+       3730
+      ]
+     ],
+     "jsHeapUsedBytes": 23194346,
+     "quality": null,
+     "bodyFilesDoneMs": 7330,
+     "elbowRequestedAtLoad": true,
+     "renderer": {
+      "drawCalls": 783,
+      "triangles": 235754,
+      "geometries": 542,
+      "textures": 6,
+      "textureMemoryBytes": 5592404,
+      "pixelRatio": 2,
+      "gpu": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x00009A49) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+     },
+     "device": {
+      "hardwareConcurrency": 8,
+      "deviceMemory": 4,
+      "dpr": 2.625,
+      "width": 412,
+      "height": 915,
+      "connection": "4g"
+     },
+     "consoleErrors": []
+    },
+    {
+     "navigation": {
+      "responseEnd": 191,
+      "domContentLoaded": 899,
+      "transfer": 934
+     },
+     "fcpMs": 1220,
+     "shellVisibleMs": 898,
+     "filmReadyMs": 8460,
+     "firstMeaningful3DMs": 12268,
+     "bytesBeforeFirst3D": 2199349,
+     "bytesTotal": 2200283,
+     "resources": [
+      {
+       "name": "/app/index-BuFzrH_m.js",
+       "start": 281,
+       "end": 712,
+       "transfer": 216846,
+       "encoded": 216546,
+       "decoded": 1031454
+      },
+      {
+       "name": "/app/index-5JW1531B.css",
+       "start": 284,
+       "end": 478,
+       "transfer": 5039,
+       "encoded": 4739,
+       "decoded": 19435
+      },
+      {
+       "name": "/assets/joints/elbow_r/joint-manifest.json",
+       "start": 4817,
+       "end": 5011,
+       "transfer": 12672,
+       "encoded": 12372,
+       "decoded": 93064
+      },
+      {
+       "name": "/assets/body/body-manifest.json",
+       "start": 5164,
+       "end": 5390,
+       "transfer": 26972,
+       "encoded": 26672,
+       "decoded": 276921
+      },
+      {
+       "name": "/assets/joints/elbow_r/elbow_r.core.glb",
+       "start": 5169,
+       "end": 5567,
+       "transfer": 188925,
+       "encoded": 188625,
+       "decoded": 306880
+      },
+      {
+       "name": "/assets/body/body.skeleton.glb",
+       "start": 5423,
+       "end": 7349,
+       "transfer": 1332696,
+       "encoded": 1332396,
+       "decoded": 2015164
+      },
+      {
+       "name": "/assets/body/body.skin.glb",
+       "start": 5425,
+       "end": 6303,
+       "transfer": 345924,
+       "encoded": 345624,
+       "decoded": 787444
+      },
+      {
+       "name": "/assets/joints/elbow_r/elbow_r.detail.glb",
+       "start": 7963,
+       "end": 8216,
+       "transfer": 70275,
+       "encoded": 69975,
+       "decoded": 93936
+      }
+     ],
+     "longTasksBeforeFirst3D": [
+      [
+       752,
+       398
+      ],
+      [
+       1280,
+       3546
+      ],
+      [
+       4854,
+       212
+      ],
+      [
+       5108,
+       64
+      ],
+      [
+       5581,
+       133
+      ],
+      [
+       6331,
+       193
+      ],
+      [
+       7357,
+       56
+      ],
+      [
+       7415,
+       275
+      ],
+      [
+       7730,
+       234
+      ],
+      [
+       7965,
+       304
+      ],
+      [
+       8327,
+       222
+      ],
+      [
+       8550,
+       3740
+      ]
+     ],
+     "jsHeapUsedBytes": 26286890,
+     "quality": null,
+     "bodyFilesDoneMs": 7349,
+     "elbowRequestedAtLoad": true,
+     "renderer": {
+      "drawCalls": 783,
+      "triangles": 235754,
+      "geometries": 542,
+      "textures": 6,
+      "textureMemoryBytes": 5592404,
+      "pixelRatio": 2,
+      "gpu": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x00009A49) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+     },
+     "device": {
+      "hardwareConcurrency": 8,
+      "deviceMemory": 4,
+      "dpr": 2.625,
+      "width": 412,
+      "height": 915,
+      "connection": "4g"
+     },
+     "consoleErrors": []
+    }
+   ],
+   "repeatVisit": {
+    "navigation": {
+     "responseEnd": 186,
+     "domContentLoaded": 468,
+     "transfer": 300
+    },
+    "fcpMs": 508,
+    "shellVisibleMs": 467,
+    "filmReadyMs": 2710,
+    "firstMeaningful3DMs": 3696,
+    "bytesBeforeFirst3D": 1800,
+    "bytesTotal": 2100,
+    "resources": [
+     {
+      "name": "/app/index-BuFzrH_m.js",
+      "start": 375,
+      "end": 375,
+      "transfer": 0,
+      "encoded": 216546,
+      "decoded": 1031454
+     },
+     {
+      "name": "/app/index-5JW1531B.css",
+      "start": 376,
+      "end": 376,
+      "transfer": 0,
+      "encoded": 4739,
+      "decoded": 19435
+     },
+     {
+      "name": "/assets/joints/elbow_r/joint-manifest.json",
+      "start": 991,
+      "end": 1183,
+      "transfer": 300,
+      "encoded": 12372,
+      "decoded": 93064
+     },
+     {
+      "name": "/assets/body/body-manifest.json",
+      "start": 1203,
+      "end": 1390,
+      "transfer": 300,
+      "encoded": 26672,
+      "decoded": 276921
+     },
+     {
+      "name": "/assets/joints/elbow_r/elbow_r.core.glb",
+      "start": 1208,
+      "end": 1395,
+      "transfer": 300,
+      "encoded": 188625,
+      "decoded": 306880
+     },
+     {
+      "name": "/assets/body/body.skeleton.glb",
+      "start": 1447,
+      "end": 1688,
+      "transfer": 300,
+      "encoded": 1332396,
+      "decoded": 2015164
+     },
+     {
+      "name": "/assets/body/body.skin.glb",
+      "start": 1449,
+      "end": 1659,
+      "transfer": 300,
+      "encoded": 345624,
+      "decoded": 787444
+     },
+     {
+      "name": "/assets/joints/elbow_r/elbow_r.detail.glb",
+      "start": 2406,
+      "end": 2603,
+      "transfer": 300,
+      "encoded": 69975,
+      "decoded": 93936
+     }
+    ],
+    "longTasksBeforeFirst3D": [
+     [
+      410,
+      62
+     ],
+     [
+      487,
+      118
+     ],
+     [
+      609,
+      387
+     ],
+     [
+      1450,
+      83
+     ],
+     [
+      1803,
+      210
+     ],
+     [
+      2016,
+      156
+     ],
+     [
+      2263,
+      144
+     ],
+     [
+      2408,
+      68
+     ],
+     [
+      2659,
+      91
+     ],
+     [
+      2750,
+      954
+     ]
+    ],
+    "jsHeapUsedBytes": 36423136,
+    "quality": null,
+    "bodyFilesDoneMs": 1688,
+    "elbowRequestedAtLoad": true,
+    "renderer": {
+     "drawCalls": 783,
+     "triangles": 235754,
+     "geometries": 542,
+     "textures": 6,
+     "textureMemoryBytes": 5592404,
+     "pixelRatio": 2,
+     "gpu": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x00009A49) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+    },
+    "device": {
+     "hardwareConcurrency": 8,
+     "deviceMemory": 4,
+     "dpr": 2.625,
+     "width": 412,
+     "height": 915,
+     "connection": "4g"
+    }
+   },
+   "interactions": {
+    "playTravel": {
+     "frames": 151,
+     "spanMs": 4992,
+     "fps": 30,
+     "frameIntervalMs": {
+      "n": 150,
+      "p50": 33.3,
+      "p95": 36.2,
+      "min": 28.4,
+      "max": 39.7
+     },
+     "frameCpuMs": {
+      "n": 151,
+      "p50": 11.4,
+      "p95": 13.7,
+      "min": 3.2,
+      "max": 17.3
+     },
+     "droppedFrames": 150,
+     "inputs": 0,
+     "inputToRenderMs": {
+      "n": 0,
+      "p50": null,
+      "p95": null,
+      "min": null,
+      "max": null
+     },
+     "inputsWithoutRender": 0
+    },
+    "playTravelRenderer": {
+     "fps": 29,
+     "frameIntervalMeanMs": 33.28466666658719,
+     "frameIntervalP95Ms": 35.30000001192093,
+     "frameCpuMeanMs": 47.26043955899857,
+     "frameCpuP95Ms": 183.19999998807907,
+     "drawCalls": 137,
+     "triangles": 125427,
+     "geometries": 542,
+     "textures": 6,
+     "textureMemoryBytes": 5592404,
+     "pixelRatio": 2,
+     "framesRendered": 182,
+     "firstFrameMs": 1101.9000000059605,
+     "firstModelFrameMs": 2469.5999999940395,
+     "renderer": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x00009A49) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+    },
+    "playElbow": {
+     "frames": 132,
+     "spanMs": 4807,
+     "fps": 27.3,
+     "frameIntervalMs": {
+      "n": 131,
+      "p50": 36.4,
+      "p95": 44.3,
+      "min": 27.9,
+      "max": 52.6
+     },
+     "frameCpuMs": {
+      "n": 132,
+      "p50": 19,
+      "p95": 22.5,
+      "min": 14.5,
+      "max": 60.6
+     },
+     "droppedFrames": 151,
+     "inputs": 0,
+     "inputToRenderMs": {
+      "n": 0,
+      "p50": null,
+      "p95": null,
+      "min": null,
+      "max": null
+     },
+     "inputsWithoutRender": 0
+    },
+    "playElbowRenderer": {
+     "fps": 28,
+     "frameIntervalMeanMs": 35.38083333335817,
+     "frameIntervalP95Ms": 42.599999994039536,
+     "frameCpuMeanMs": 26.422500000769894,
+     "frameCpuP95Ms": 29.900000005960464,
+     "drawCalls": 241,
+     "triangles": 171746,
+     "geometries": 574,
+     "textures": 8,
+     "textureMemoryBytes": 5592404,
+     "pixelRatio": 2,
+     "framesRendered": 315,
+     "firstFrameMs": 1101.9000000059605,
+     "firstModelFrameMs": 2469.5999999940395,
+     "renderer": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x00009A49) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+    },
+    "playRecap": {
+     "frames": 25,
+     "spanMs": 5135,
+     "fps": 4.7,
+     "frameIntervalMs": {
+      "n": 23,
+      "p50": 209.9,
+      "p95": 231.4,
+      "min": 188.5,
+      "max": 238.6
+     },
+     "frameCpuMs": {
+      "n": 25,
+      "p50": 185.8,
+      "p95": 217.8,
+      "min": 163.2,
+      "max": 234
+     },
+     "droppedFrames": 268,
+     "inputs": 0,
+     "inputToRenderMs": {
+      "n": 0,
+      "p50": null,
+      "p95": null,
+      "min": null,
+      "max": null
+     },
+     "inputsWithoutRender": 0
+    },
+    "playRecapRenderer": {
+     "fps": 5,
+     "frameIntervalMeanMs": 35.38083333335817,
+     "frameIntervalP95Ms": 42.599999994039536,
+     "frameCpuMeanMs": 46.742916667213045,
+     "frameCpuP95Ms": 197.39999997615814,
+     "drawCalls": 812,
+     "triangles": 241996,
+     "geometries": 592,
+     "textures": 8,
+     "textureMemoryBytes": 5592404,
+     "pixelRatio": 2,
+     "framesRendered": 341,
+     "firstFrameMs": 1101.9000000059605,
+     "firstModelFrameMs": 2469.5999999940395,
+     "renderer": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x00009A49) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+    },
+    "shots": {
+     "intro.title": {
+      "drawCalls": 783,
+      "triangles": 235754,
+      "geometries": 592,
+      "textures": 8,
+      "textureMemoryBytes": 5592404
+     },
+     "fixed.detail": {
+      "drawCalls": 140,
+      "triangles": 125021,
+      "geometries": 592,
+      "textures": 8,
+      "textureMemoryBytes": 5592404
+     },
+     "pivot.rotate": {
+      "drawCalls": 195,
+      "triangles": 148820,
+      "geometries": 592,
+      "textures": 8,
+      "textureMemoryBytes": 5592404
+     },
+     "ball.shoulder": {
+      "drawCalls": 118,
+      "triangles": 118433,
+      "geometries": 592,
+      "textures": 8,
+      "textureMemoryBytes": 5592404
+     },
+     "ball.hip": {
+      "drawCalls": 114,
+      "triangles": 89935,
+      "geometries": 592,
+      "textures": 8,
+      "textureMemoryBytes": 5592404
+     },
+     "hinge.flexion": {
+      "drawCalls": 227,
+      "triangles": 167234,
+      "geometries": 592,
+      "textures": 8,
+      "textureMemoryBytes": 5592404
+     },
+     "hinge.support": {
+      "drawCalls": 109,
+      "triangles": 91993,
+      "geometries": 598,
+      "textures": 10,
+      "textureMemoryBytes": 5592404
+     },
+     "hinge.knee": {
+      "drawCalls": 102,
+      "triangles": 22966,
+      "geometries": 598,
+      "textures": 10,
+      "textureMemoryBytes": 5592404
+     },
+     "recap.compare": {
+      "drawCalls": 316,
+      "triangles": 174656,
+      "geometries": 598,
+      "textures": 10,
+      "textureMemoryBytes": 5592404
+     }
+    },
+    "dragInput": {
+     "frames": 3,
+     "spanMs": 2141,
+     "fps": 0.9,
+     "frameIntervalMs": {
+      "n": 1,
+      "p50": 96.7,
+      "p95": 96.7,
+      "min": 96.7,
+      "max": 96.7
+     },
+     "frameCpuMs": {
+      "n": 3,
+      "p50": 34.1,
+      "p95": 38.1,
+      "min": 30.2,
+      "max": 38.1
+     },
+     "droppedFrames": 5,
+     "inputs": 61,
+     "inputToRenderMs": {
+      "n": 9,
+      "p50": 156.4,
+      "p95": 289.2,
+      "min": 63.1,
+      "max": 289.2
+     },
+     "inputsWithoutRender": 52
+    },
+    "dragDisplayRate": {
+     "frames": 86,
+     "spanMs": 6598,
+     "fps": 12.9,
+     "frameIntervalMs": {
+      "n": 83,
+      "p50": 45.9,
+      "p95": 52.2,
+      "min": 38.4,
+      "max": 61.7
+     },
+     "frameCpuMs": {
+      "n": 86,
+      "p50": 20.1,
+      "p95": 23.8,
+      "min": 15.4,
+      "max": 30.7
+     },
+     "droppedFrames": 160,
+     "inputs": 180,
+     "inputToRenderMs": {
+      "n": 98,
+      "p50": 46.6,
+      "p95": 203.8,
+      "min": 38.1,
+      "max": 272.5
+     },
+     "inputsWithoutRender": 82
+    },
+    "sliderKeyboard": {
+     "frames": 34,
+     "spanMs": 2196,
+     "fps": 15,
+     "frameIntervalMs": {
+      "n": 33,
+      "p50": 66.8,
+      "p95": 78.5,
+      "min": 56.8,
+      "max": 78.5
+     },
+     "frameCpuMs": {
+      "n": 34,
+      "p50": 30.6,
+      "p95": 34,
+      "min": 24.2,
+      "max": 34.2
+     },
+     "droppedFrames": 98,
+     "inputs": 40,
+     "inputToRenderMs": {
+      "n": 40,
+      "p50": 52.5,
+      "p95": 105.8,
+      "min": 46.2,
+      "max": 113.8
+     },
+     "inputsWithoutRender": 0
+    },
+    "scrub": {
+     "frames": 42,
+     "spanMs": 4121,
+     "fps": 9.9,
+     "frameIntervalMs": {
+      "n": 39,
+      "p50": 94.5,
+      "p95": 139.5,
+      "min": 61,
+      "max": 162.3
+     },
+     "frameCpuMs": {
+      "n": 42,
+      "p50": 23.2,
+      "p95": 82.3,
+      "min": 4.3,
+      "max": 198.5
+     },
+     "droppedFrames": 178,
+     "inputs": 42,
+     "inputToRenderMs": {
+      "n": 42,
+      "p50": 66.2,
+      "p95": 137.8,
+      "min": 32.4,
+      "max": 252.2
+     },
+     "inputsWithoutRender": 0
+    },
+    "chapterJump": {
+     "frames": 7,
+     "spanMs": 2890,
+     "fps": 2.1,
+     "frameIntervalMs": {
+      "n": 1,
+      "p50": 90.2,
+      "p95": 90.2,
+      "min": 90.2,
+      "max": 90.2
+     },
+     "frameCpuMs": {
+      "n": 7,
+      "p50": 21.7,
+      "p95": 210.1,
+      "min": 10.8,
+      "max": 210.1
+     },
+     "droppedFrames": 4,
+     "inputs": 6,
+     "inputToRenderMs": {
+      "n": 6,
+      "p50": 60.5,
+      "p95": 258.1,
+      "min": 53.1,
+      "max": 258.1
+     },
+     "inputsWithoutRender": 0
+    },
+    "exploreOrbit": {
+     "frames": 167,
+     "spanMs": 5972,
+     "fps": 27.8,
+     "frameIntervalMs": {
+      "n": 166,
+      "p50": 35.7,
+      "p95": 40.5,
+      "min": 29.9,
+      "max": 43.5
+     },
+     "frameCpuMs": {
+      "n": 167,
+      "p50": 19,
+      "p95": 22.2,
+      "min": 15,
+      "max": 46.3
+     },
+     "droppedFrames": 169,
+     "inputs": 51,
+     "inputToRenderMs": {
+      "n": 51,
+      "p50": 60.4,
+      "p95": 67.2,
+      "min": 34.3,
+      "max": 85
+     },
+     "inputsWithoutRender": 0
+    },
+    "selection": {
+     "frames": 6,
+     "spanMs": 7871,
+     "fps": 0.6,
+     "frameIntervalMs": {
+      "n": 2,
+      "p50": 34.7,
+      "p95": 35,
+      "min": 34.7,
+      "max": 35
+     },
+     "frameCpuMs": {
+      "n": 6,
+      "p50": 41.1,
+      "p95": 49.4,
+      "min": 18.4,
+      "max": 49.4
+     },
+     "droppedFrames": 2,
+     "inputs": 4,
+     "inputToRenderMs": {
+      "n": 4,
+      "p50": 82.3,
+      "p95": 115.6,
+      "min": 75.1,
+      "max": 115.6
+     },
+     "inputsWithoutRender": 0
+    },
+    "selectionResult": "radius_r",
+    "heapAfterInteractionsBytes": 35115988
+   }
+  }
+ }
+}

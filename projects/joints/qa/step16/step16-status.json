@@ -1,0 +1,133 @@
+{
+  "step": "16A",
+  "title": "Reference benchmark audit - our Joints lesson against the respiratory reference",
+  "status": "COMPLETE",
+  "statusReason": "Both experiences were run end to end as a learner, measured, and compared category by category. Every deliverable in the brief exists. No product file was modified.",
+  "generatedAt": "2026-09-20T00:00:00.000Z",
+  "branch": "step16a-reference-audit",
+  "productModified": false,
+  "newBuildCreated": false,
+  "expertPackageModified": false,
+  "declaresReferenceBetterOverall": false,
+  "ours": {
+    "commit": "b8ca17e",
+    "candidateTag": "step15b-learner-clarity-complete",
+    "url": "http://localhost:4195/",
+    "command": "node pipeline/tools/serve_static.mjs dist 4195",
+    "distIndexSha256": "0b916e76b2c0b41882fc623b666076ddf6f03db80e11688c5ac1319294a85b82",
+    "durationS": 279.6,
+    "chapters": 9,
+    "shots": 40,
+    "entry": "no landing screen - the film autoplays on load"
+  },
+  "reference": {
+    "url": "https://respiratory-system-lesson.vercel.app/",
+    "title": "The Journey of a Breath",
+    "durationS": 168.4,
+    "scenes": 13,
+    "entry": "loading card, then a landing card with Start lesson / Explore the model",
+    "voice": "en-IN-Chirp3-HD-Aoede (Google Cloud TTS) - the same voice our build uses",
+    "modelBytes": "12.6 MB GLB",
+    "shipping": "one HTML document, one ~130 KB inline script"
+  },
+  "measured": {
+    "meanBeatLengthS": { "reference": 13.0, "ours": 7.0 },
+    "spokenWords": { "reference": 427, "ours": 356 },
+    "spokenWordsPerSecond": { "reference": 2.54, "ours": 1.27 },
+    "spokenWordsPerBeat": { "reference": 32.8, "ours": 8.9 },
+    "spokenSentences": { "reference": 31, "ours": 42 },
+    "beatChangesPerMinute": { "reference": 4.6, "ours": 8.6 },
+    "sentencesGivingAReason": { "reference": "5 of 13 scenes", "ours": "2 of 36 captioned shots" },
+    "onScreenTextLayers": { "reference": 2, "ours": 1 },
+    "persistentUiElementsDuringTeaching": { "reference": 5, "ours": 15 },
+    "controlsVisibleDuringTeaching": { "reference": 0, "ours": 13 },
+    "glossedTechnicalTerms": { "reference": 5, "ours": 0 },
+    "chapterTimeSplitOurs": {
+      "01_hook": 27.0, "02_what_is_joint": 21.0, "03_fixed": 14.0, "04_pivot": 21.0,
+      "05_ball_socket": 22.5, "06_hinge": 98.1, "07_compare": 34.0, "08_recall": 11.0,
+      "09_body_map": 31.0
+    }
+  },
+  "keyFindings": [
+    "The reference says twice as much per second and changes the picture half as often.",
+    "Its scene length is derived from its narration length (speechMs + minMs); ours authors durationMs and fits narration to it.",
+    "It writes two separate texts per scene - a short fixed caption and a longer spoken script shown as a subtitle; our caption IS the script.",
+    "It glosses exactly the five hard words, inside the label, at the moment the structure appears (Pharynx / THROAT).",
+    "It gives a reason in 5 of 13 scenes; we give one in 2 of 36 captions.",
+    "It has one spine (a journey); our four categories are interchangeable and nothing carries the learner between them.",
+    "Our hinge chapter is 35% of the lesson and is the only category that answers why it is that kind of joint; fixed gets 14 s.",
+    "It hides its controls while teaching (class=\"controls hidden\"); we show 15 persistent elements for all 280 s.",
+    "It has no assessment, no manipulation and no guided task; we have all three, and they are our strongest teaching.",
+    "Under the same throttled rendering, the reference stayed in real time and our film ran at 0.125x - our clock is frame-driven with a 100 ms dt clamp (src/engine/core/RenderLoop.ts:81)."
+  ],
+  "risksToVerifyNext": [
+    "Autoplay: our film starts with no user gesture. Autoplay was permitted in this browser pane (verified new Audio().play() resolves with navigator.userActivation.hasBeenActive === false), so narration was heard here. NOT verified on a stock Chrome/Safari profile, where the default policy would block it and the learner would watch 4:40 in silence.",
+    "The film clock desynchronises from narration audio below ~10 fps. Step 12's emulated phone misses are still open and no real Android device has been measured."
+  ],
+  "ourObservedStrengths": [
+    "validated manipulable elbow (single DOF, 0-145, fitted axis, drag or slider, arrow keys)",
+    "guided task with a pass condition (bend to 90 degrees, Check my pose)",
+    "five-question retrieval challenge phrased by movement, not by name",
+    "movement-based classification as the teaching goal",
+    "universal explore architecture across four joints with film handoff and resume",
+    "schematic honesty system (TEACHING SIMULATION / 3D JOINT MODEL / DRAFT / Sources dialog)",
+    "elbow anatomical detail including the fitted axis, capsule and ligaments",
+    "accessibility foundation: role=img stage with per-shot description, aria-live, landmarks, 0 axe violations over 24 states, 341 measured contrast runs, reduced motion across 40 shots, reflow to 320 px",
+    "keyboard interaction with the subject itself",
+    "responsive behaviour verified at 1280/1440/768/412/390/320"
+  ],
+  "topTen": [
+    { "rank": 1, "category": "CRITICAL TEACHING GAP", "item": "the three non-hinge categories are labelled, not taught", "affectsValidatedElbow": false, "effort": "large" },
+    { "rank": 2, "category": "CRITICAL TEACHING GAP", "item": "narration states facts and almost never gives reasons", "affectsValidatedElbow": false, "effort": "large, gated on expert review" },
+    { "rank": 3, "category": "HIGH-VALUE IMPROVEMENT", "item": "verify narration actually plays on a stock browser; add a start gesture if not", "affectsValidatedElbow": false, "effort": "small" },
+    { "rank": 4, "category": "HIGH-VALUE IMPROVEMENT", "item": "film clock is frame-driven and desynchronises below ~10 fps", "affectsValidatedElbow": "engine timing is shared - elbow pose animation and Gate-3 pose consistency must be re-run; geometry, rig, axis, range and manifest untouched", "effort": "medium, real regression risk" },
+    { "rank": 5, "category": "HIGH-VALUE IMPROVEMENT", "item": "compare.together and concept.meet undermine their own captions", "affectsValidatedElbow": false, "effort": "small to medium" },
+    { "rank": 6, "category": "HIGH-VALUE IMPROVEMENT", "item": "hide non-essential controls during teaching", "affectsValidatedElbow": false, "effort": "medium, with a11y re-testing" },
+    { "rank": 7, "category": "HIGH-VALUE IMPROVEMENT", "item": "gloss technical labels where they appear", "affectsValidatedElbow": false, "effort": "small to medium" },
+    { "rank": 8, "category": "MEDIUM IMPROVEMENT", "item": "participation in the three non-hinge categories", "affectsValidatedElbow": false, "effort": "medium, no new rigs" },
+    { "rank": 9, "category": "MEDIUM IMPROVEMENT", "item": "a completion state, and spaced recall through the chapters", "affectsValidatedElbow": false, "effort": "medium" },
+    { "rank": 10, "category": "OPTIONAL POLISH", "item": "constant slow push-in; say the draft disclaimer once to assistive tech", "affectsValidatedElbow": false, "effort": "small each" }
+  ],
+  "deliverables": [
+    "qa/step16/reference-audit.md",
+    "qa/step16/learner-flow-comparison.md",
+    "qa/step16/teaching-comparison.md",
+    "qa/step16/visual-comparison.md",
+    "qa/step16/interaction-comparison.md",
+    "qa/step16/narration-comparison.md",
+    "qa/step16/camera-comparison.md",
+    "qa/step16/information-density-comparison.md",
+    "qa/step16/explore-comparison.md",
+    "qa/step16/strengths-and-gaps.md",
+    "qa/step16/step16-status.json"
+  ],
+  "unchanged": {
+    "sourceCode": true,
+    "lessonContent": true,
+    "localeStrings": true,
+    "productionAssets": true,
+    "blenderFiles": true,
+    "validatedElbowRig": true,
+    "glbs": true,
+    "manifests": true,
+    "step13FrozenBaseline": true,
+    "step15bBuild": true,
+    "expertReviewPackages": true,
+    "gitDiffOutsideQaStep16": "empty"
+  },
+  "openItems": [
+    "Step 12 remains FAIL: no real Android device, no real iPad, no real NVDA/VoiceOver test, two emulated x4 misses",
+    "expert review remains PENDING on every item: anatomy, curriculum, landmarks, the 0-145 range, human accessibility, asset licence",
+    "asset licence is still a RELEASE BLOCKER",
+    "formal Gate 3 still PENDING EXPERT LANDMARK APPROVAL; qa/elbow_r.poses.draft.json is still a draft",
+    "the hip's ball-and-socket classification is still PENDING EXPERT CONFIRMATION",
+    "every new explanatory claim proposed in this audit is a curriculum claim and must be expert-reviewed before it is written"
+  ],
+  "doesNotClaim": [
+    "public release readiness",
+    "expert approval",
+    "that the reference is better overall",
+    "that any recommendation here is approved for implementation",
+    "device or screen-reader certification"
+  ]
+}

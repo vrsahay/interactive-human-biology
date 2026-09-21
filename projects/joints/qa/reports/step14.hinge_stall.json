@@ -1,0 +1,26 @@
+{
+ "result": {
+  "gaps": [],
+  "resources": [],
+  "marks": [],
+  "measures": [],
+  "perf": {
+   "fps": 60,
+   "frameIntervalMeanMs": 16.665416666616995,
+   "frameIntervalP95Ms": 17.100000023841858,
+   "frameCpuMeanMs": 1.4737499964733918,
+   "frameCpuP95Ms": 2,
+   "drawCalls": 56,
+   "triangles": 155580,
+   "geometries": 73,
+   "textures": 6,
+   "textureMemoryBytes": 2796202,
+   "pixelRatio": 1,
+   "framesRendered": 650,
+   "firstFrameMs": 681.3000000119209,
+   "firstModelFrameMs": 681.3000000119209,
+   "renderer": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x00009A49) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+  }
+ },
+ "consoleErrors": []
+}

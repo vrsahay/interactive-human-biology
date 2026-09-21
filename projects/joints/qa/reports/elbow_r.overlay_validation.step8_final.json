@@ -1,0 +1,919 @@
+{
+ "joint": "elbow_r",
+ "label": "step8_final",
+ "validated_at": "2026-09-17T15:24:37",
+ "environment": {
+  "blender_version": "5.2.2 LTS",
+  "blender_version_ok": true,
+  "master_sha256_ok": true,
+  "open_file": "C:\\Users\\Admin\\dev\\joints-platform\\blender\\Joints_Working.blend"
+ },
+ "file": "C:\\Users\\Admin\\dev\\joints-platform\\blender\\Joints_Working.blend",
+ "file_sha256": "9fb76d8c5b799d1bf65dc8e865c400299a3cc52fb8bf7ceab8c903a1671187f9",
+ "inventory": {
+  "objects": 77,
+  "expected_objects": 77,
+  "unexpected": [],
+  "missing": [],
+  "overlay": 20,
+  "collections": 11,
+  "meshes": 52,
+  "materials": 4,
+  "images": 6
+ },
+ "mesh_hashes_passed": 49,
+ "qa_tags_ok": true,
+ "overlay_tags_ok": true,
+ "pivot_matrix_error": 7.450580596923828e-08,
+ "anchors": {
+  "humerus": {
+   "anchorId": "elbow_r.anchor.humerus",
+   "parent": "elbow_r__bone__humerus",
+   "vertexIndex": 607,
+   "deterministic": true,
+   "parent_ok": true,
+   "id_ok": true,
+   "motion_behavior": "stationary",
+   "behavior_ok": true,
+   "local_matrix_ok": true,
+   "diagnostics": {
+    "band_vertices": 18,
+    "length_mm": 319.85
+   }
+  },
+  "radius": {
+   "anchorId": "elbow_r.anchor.radius",
+   "parent": "elbow_r__bone__radius",
+   "vertexIndex": 194,
+   "deterministic": true,
+   "parent_ok": true,
+   "id_ok": true,
+   "motion_behavior": "moves_with_forearm",
+   "behavior_ok": true,
+   "local_matrix_ok": true,
+   "diagnostics": {
+    "band_vertices": 7,
+    "length_mm": 245.91
+   }
+  },
+  "ulna": {
+   "anchorId": "elbow_r.anchor.ulna",
+   "parent": "elbow_r__bone__ulna",
+   "vertexIndex": 110,
+   "deterministic": true,
+   "parent_ok": true,
+   "id_ok": true,
+   "motion_behavior": "moves_with_forearm",
+   "behavior_ok": true,
+   "local_matrix_ok": true,
+   "diagnostics": {
+    "band_vertices": 3,
+    "length_mm": 264.07
+   }
+  },
+  "elbow_joint": {
+   "anchorId": "elbow_r.anchor.elbow_joint",
+   "parent": "elbow_r__pivot",
+   "vertexIndex": -1,
+   "deterministic": true,
+   "parent_ok": true,
+   "id_ok": true,
+   "motion_behavior": "stationary_joint_center",
+   "behavior_ok": true,
+   "local_matrix_ok": true,
+   "diagnostics": {
+    "note": "fitted pivot origin (pivot local frame)"
+   }
+  },
+  "capitulum": {
+   "anchorId": "elbow_r.anchor.capitulum",
+   "parent": "elbow_r__bone__humerus",
+   "vertexIndex": 110,
+   "deterministic": true,
+   "parent_ok": true,
+   "id_ok": true,
+   "motion_behavior": "stationary",
+   "behavior_ok": true,
+   "local_matrix_ok": true,
+   "diagnostics": {
+    "region_vertices": 65,
+    "min_gap_mm": 4.674,
+    "lateral_of_pivot_mm": 12.93
+   }
+  },
+  "trochlea": {
+   "anchorId": "elbow_r.anchor.trochlea",
+   "parent": "elbow_r__bone__humerus",
+   "vertexIndex": 439,
+   "deterministic": true,
+   "parent_ok": true,
+   "id_ok": true,
+   "motion_behavior": "stationary",
+   "behavior_ok": true,
+   "local_matrix_ok": true,
+   "diagnostics": {
+    "region_vertices": 72,
+    "min_gap_mm": 0.53,
+    "lateral_of_pivot_mm": -8.23
+   }
+  },
+  "radial_head": {
+   "anchorId": "elbow_r.anchor.radial_head",
+   "parent": "elbow_r__bone__radius",
+   "vertexIndex": 255,
+   "deterministic": true,
+   "parent_ok": true,
+   "id_ok": true,
+   "motion_behavior": "moves_with_forearm",
+   "behavior_ok": true,
+   "local_matrix_ok": true,
+   "diagnostics": {
+    "region_vertices": 89,
+    "depth_from_proximal_mm": 4.13
+   }
+  },
+  "olecranon": {
+   "anchorId": "elbow_r.anchor.olecranon",
+   "parent": "elbow_r__bone__ulna",
+   "vertexIndex": 92,
+   "deterministic": true,
+   "parent_ok": true,
+   "id_ok": true,
+   "motion_behavior": "moves_with_forearm",
+   "behavior_ok": true,
+   "local_matrix_ok": true,
+   "diagnostics": {
+    "depth_from_proximal_mm": 0.0,
+    "anterior_of_proximal_centroid_mm": -2.32
+   }
+  },
+  "coronoid_process": {
+   "anchorId": "elbow_r.anchor.coronoid_process",
+   "parent": "elbow_r__bone__ulna",
+   "vertexIndex": 343,
+   "deterministic": true,
+   "parent_ok": true,
+   "id_ok": true,
+   "motion_behavior": "moves_with_forearm",
+   "behavior_ok": true,
+   "local_matrix_ok": true,
+   "diagnostics": {
+    "depth_from_proximal_mm": 25.66,
+    "anterior_of_proximal_centroid_mm": 18.38
+   }
+  },
+  "elbow_capsule": {
+   "anchorId": "elbow_r.anchor.elbow_capsule",
+   "parent": "elbow_r__soft__elbow_capsule",
+   "vertexIndex": 56,
+   "deterministic": true,
+   "parent_ok": true,
+   "id_ok": true,
+   "motion_behavior": "cross_joint_stationary",
+   "behavior_ok": true,
+   "local_matrix_ok": true,
+   "diagnostics": {
+    "vertices": 864,
+    "lateral_of_pivot_mm": -2.82
+   }
+  },
+  "radial_collateral_ligament": {
+   "anchorId": "elbow_r.anchor.radial_collateral_ligament",
+   "parent": "elbow_r__soft__radial_collateral_ligament_elbow",
+   "vertexIndex": 6,
+   "deterministic": true,
+   "parent_ok": true,
+   "id_ok": true,
+   "motion_behavior": "cross_joint_stationary",
+   "behavior_ok": true,
+   "local_matrix_ok": true,
+   "diagnostics": {
+    "vertices": 50,
+    "lateral_of_pivot_mm": 26.75
+   }
+  },
+  "ulnar_collateral_ligament": {
+   "anchorId": "elbow_r.anchor.ulnar_collateral_ligament",
+   "parent": "elbow_r__soft__ulnar_collateral_ligament_elbow",
+   "vertexIndex": 14,
+   "deterministic": true,
+   "parent_ok": true,
+   "id_ok": true,
+   "motion_behavior": "cross_joint_stationary",
+   "behavior_ok": true,
+   "local_matrix_ok": true,
+   "diagnostics": {
+    "vertices": 78,
+    "lateral_of_pivot_mm": -23.76
+   }
+  },
+  "annular_ligament": {
+   "anchorId": "elbow_r.anchor.annular_ligament",
+   "parent": "elbow_r__soft__annular_ligament_radius",
+   "vertexIndex": 57,
+   "deterministic": true,
+   "parent_ok": true,
+   "id_ok": true,
+   "motion_behavior": "moves_with_forearm",
+   "behavior_ok": true,
+   "local_matrix_ok": true,
+   "diagnostics": {
+    "vertices": 190,
+    "lateral_of_pivot_mm": 23.93
+   }
+  }
+ },
+ "pose_stability_max_errors": {
+  "on_vertex_mm": 0.0001201947465904182,
+  "stationary_mm": 0.0,
+  "moving_vs_rotation_mm": 0.00036348316243994794,
+  "axis_overlay": 0.0,
+  "forearm_overlay": 2.980232238769531e-07,
+  "jump_excess_mm": 0.0
+ },
+ "poses": {
+  "0": {
+   "anchor_world_mm": {
+    "humerus": [
+     -213.75,
+     31.39,
+     1247.39
+    ],
+    "radius": [
+     -253.23,
+     37.03,
+     1008.99
+    ],
+    "ulna": [
+     -224.19,
+     45.3,
+     1020.21
+    ],
+    "elbow_joint": [
+     -221.39,
+     34.84,
+     1103.36
+    ],
+    "capitulum": [
+     -236.13,
+     35.44,
+     1095.76
+    ],
+    "trochlea": [
+     -213.32,
+     41.96,
+     1097.56
+    ],
+    "radial_head": [
+     -248.93,
+     35.13,
+     1089.25
+    ],
+    "olecranon": [
+     -212.63,
+     45.01,
+     1113.91
+    ],
+    "coronoid_process": [
+     -218.2,
+     25.5,
+     1088.76
+    ],
+    "elbow_capsule": [
+     -219.92,
+     19.32,
+     1104.96
+    ],
+    "radial_collateral_ligament": [
+     -249.84,
+     34.38,
+     1098.76
+    ],
+    "ulnar_collateral_ligament": [
+     -201.29,
+     23.82,
+     1088.33
+    ],
+    "annular_ligament": [
+     -249.38,
+     37.25,
+     1085.14
+    ]
+   },
+   "moved_from_0_mm": {
+    "humerus": 0.0,
+    "radius": 0.0,
+    "ulna": 0.0,
+    "elbow_joint": 0.0,
+    "capitulum": 0.0,
+    "trochlea": 0.0,
+    "radial_head": 0.0,
+    "olecranon": 0.0,
+    "coronoid_process": 0.0,
+    "elbow_capsule": 0.0,
+    "radial_collateral_ligament": 0.0,
+    "ulnar_collateral_ligament": 0.0,
+    "annular_ligament": 0.0
+   },
+   "forearm_vs_neutral_deg": 0.0,
+   "motion_dir_perp_axis": 3e-09,
+   "motion_dir_perp_forearm": 2e-09
+  },
+  "45": {
+   "anchor_world_mm": {
+    "humerus": [
+     -213.75,
+     31.39,
+     1247.39
+    ],
+    "radius": [
+     -255.14,
+     -32.66,
+     1038.32
+    ],
+    "ulna": [
+     -227.71,
+     -15.83,
+     1036.85
+    ],
+    "elbow_joint": [
+     -221.39,
+     34.84,
+     1103.36
+    ],
+    "capitulum": [
+     -236.13,
+     35.44,
+     1095.76
+    ],
+    "trochlea": [
+     -213.32,
+     41.96,
+     1097.56
+    ],
+    "radial_head": [
+     -248.87,
+     22.25,
+     1096.72
+    ],
+    "olecranon": [
+     -214.27,
+     50.35,
+     1102.82
+    ],
+    "coronoid_process": [
+     -216.96,
+     18.4,
+     1098.81
+    ],
+    "elbow_capsule": [
+     -219.92,
+     19.32,
+     1104.96
+    ],
+    "radial_collateral_ligament": [
+     -249.84,
+     34.38,
+     1098.76
+    ],
+    "ulnar_collateral_ligament": [
+     -201.29,
+     23.82,
+     1088.33
+    ],
+    "annular_ligament": [
+     -249.76,
+     20.85,
+     1092.38
+    ]
+   },
+   "moved_from_0_mm": {
+    "humerus": 0.0,
+    "radius": 75.63,
+    "ulna": 63.45,
+    "elbow_joint": 0.0,
+    "capitulum": 0.0,
+    "trochlea": 0.0,
+    "radial_head": 14.88,
+    "olecranon": 12.41,
+    "coronoid_process": 12.37,
+    "elbow_capsule": 0.0,
+    "radial_collateral_ligament": 0.0,
+    "ulnar_collateral_ligament": 0.0,
+    "annular_ligament": 17.93
+   },
+   "forearm_vs_neutral_deg": 45.0,
+   "motion_dir_perp_axis": 1.5e-08,
+   "motion_dir_perp_forearm": 8e-09
+  },
+  "90": {
+   "anchor_world_mm": {
+    "humerus": [
+     -213.75,
+     31.39,
+     1247.39
+    ],
+    "radius": [
+     -244.47,
+     -61.99,
+     1107.21
+    ],
+    "ulna": [
+     -220.36,
+     -48.09,
+     1091.0
+    ],
+    "elbow_joint": [
+     -221.39,
+     34.84,
+     1103.36
+    ],
+    "capitulum": [
+     -236.13,
+     35.44,
+     1095.76
+    ],
+    "trochlea": [
+     -213.32,
+     41.96,
+     1097.56
+    ],
+    "radial_head": [
+     -246.44,
+     18.3,
+     1110.86
+    ],
+    "olecranon": [
+     -217.04,
+     46.26,
+     1091.43
+    ],
+    "coronoid_process": [
+     -214.31,
+     20.48,
+     1110.72
+    ],
+    "elbow_capsule": [
+     -219.92,
+     19.32,
+     1104.96
+    ],
+    "radial_collateral_ligament": [
+     -249.84,
+     34.38,
+     1098.76
+    ],
+    "ulnar_collateral_ligament": [
+     -201.29,
+     23.82,
+     1088.33
+    ],
+    "annular_ligament": [
+     -247.18,
+     14.19,
+     1108.81
+    ]
+   },
+   "moved_from_0_mm": {
+    "humerus": 0.0,
+    "radius": 139.75,
+    "ulna": 117.25,
+    "elbow_joint": 0.0,
+    "capitulum": 0.0,
+    "trochlea": 0.0,
+    "radial_head": 27.5,
+    "olecranon": 22.94,
+    "coronoid_process": 22.86,
+    "elbow_capsule": 0.0,
+    "radial_collateral_ligament": 0.0,
+    "ulnar_collateral_ligament": 0.0,
+    "annular_ligament": 33.12
+   },
+   "forearm_vs_neutral_deg": 90.0,
+   "motion_dir_perp_axis": 5e-09,
+   "motion_dir_perp_forearm": 6e-09
+  },
+  "145": {
+   "anchor_world_mm": {
+    "humerus": [
+     -213.75,
+     31.39,
+     1247.39
+    ],
+    "radius": [
+     -223.85,
+     -20.77,
+     1185.98
+    ],
+    "ulna": [
+     -203.28,
+     -23.01,
+     1161.29
+    ],
+    "elbow_joint": [
+     -221.39,
+     34.84,
+     1103.36
+    ],
+    "capitulum": [
+     -236.13,
+     35.44,
+     1095.76
+    ],
+    "trochlea": [
+     -213.32,
+     41.96,
+     1097.56
+    ],
+    "radial_head": [
+     -242.41,
+     28.41,
+     1125.14
+    ],
+    "olecranon": [
+     -219.6,
+     32.33,
+     1086.57
+    ],
+    "coronoid_process": [
+     -211.43,
+     33.29,
+     1117.81
+    ],
+    "elbow_capsule": [
+     -219.92,
+     19.32,
+     1104.96
+    ],
+    "radial_collateral_ligament": [
+     -249.84,
+     34.38,
+     1098.76
+    ],
+    "ulnar_collateral_ligament": [
+     -201.29,
+     23.82,
+     1088.33
+    ],
+    "annular_ligament": [
+     -242.29,
+     24.29,
+     1127.3
+    ]
+   },
+   "moved_from_0_mm": {
+    "humerus": 0.0,
+    "radius": 188.49,
+    "ulna": 158.14,
+    "elbow_joint": 0.0,
+    "capitulum": 0.0,
+    "trochlea": 0.0,
+    "radial_head": 37.09,
+    "olecranon": 30.94,
+    "coronoid_process": 30.83,
+    "elbow_capsule": 0.0,
+    "radial_collateral_ligament": 0.0,
+    "ulnar_collateral_ligament": 0.0,
+    "annular_ligament": 44.67
+   },
+   "forearm_vs_neutral_deg": 145.0,
+   "motion_dir_perp_axis": 7e-09,
+   "motion_dir_perp_forearm": 5.4e-08
+  }
+ },
+ "registry_groups": {
+  "fixed_bone": 1,
+  "forearm_bones": 2,
+  "hand": 27,
+  "forearm_soft": 4,
+  "cross_joint_soft": 3,
+  "context": 12
+ },
+ "classification": {
+  "context_stationary": 12,
+  "cross_joint_stationary": 3,
+  "moves_with_forearm": 33,
+  "stationary": 1
+ },
+ "classification_detail": {
+  "context_stationary": [
+   "anconeus_r",
+   "biceps_brachii_long_head_r",
+   "biceps_brachii_short_head_r",
+   "brachialis_r",
+   "brachioradialis_r",
+   "clavicle_r",
+   "scapula_r",
+   "supinator_r",
+   "triceps_brachii_lateral_head_r",
+   "triceps_brachii_long_head_r",
+   "triceps_brachii_medial_head_r",
+   "triceps_subtendinous_bursa_r"
+  ],
+  "cross_joint_stationary": [
+   "elbow_capsule_r",
+   "radial_collateral_ligament_elbow_r",
+   "ulnar_collateral_ligament_elbow_r"
+  ],
+  "moves_with_forearm": [
+   "annular_ligament_radius_r",
+   "capitate_r",
+   "distal_phalanx_hand_1_r",
+   "distal_phalanx_hand_2_r",
+   "distal_phalanx_hand_3_r",
+   "distal_phalanx_hand_4_r",
+   "distal_phalanx_hand_5_r",
+   "hamate_r",
+   "interosseous_membrane_forearm_r",
+   "lunate_r",
+   "metacarpal_1_r",
+   "metacarpal_2_r",
+   "metacarpal_3_r",
+   "metacarpal_4_r",
+   "metacarpal_5_r",
+   "middle_phalanx_hand_2_r",
+   "middle_phalanx_hand_3_r",
+   "middle_phalanx_hand_4_r",
+   "middle_phalanx_hand_5_r",
+   "oblique_cord_r",
+   "pisiform_r",
+   "proximal_phalanx_hand_1_r",
+   "proximal_phalanx_hand_2_r",
+   "proximal_phalanx_hand_3_r",
+   "proximal_phalanx_hand_4_r",
+   "proximal_phalanx_hand_5_r",
+   "quadrate_ligament_r",
+   "radius_r",
+   "scaphoid_r",
+   "trapezium_r",
+   "trapezoid_r",
+   "triquetrum_r",
+   "ulna_r"
+  ],
+  "stationary": [
+   "humerus_r"
+  ]
+ },
+ "anchor_empties": 17,
+ "band_anchors": {
+  "rcl_prox": {
+   "anchorId": "elbow_r.anchor.rcl_prox",
+   "parent": "elbow_r__seg_prox",
+   "attachedBone": "humerus_r",
+   "deterministic": true,
+   "parent_ok": true,
+   "parent_inverse_ok": true,
+   "basis_ok": true,
+   "tags_ok": true,
+   "schematic_ok": true,
+   "ids_ok": true,
+   "fields_ok": true,
+   "diagnostics": {
+    "contact_region_vertices": 13,
+    "closest_contact_mm": 0.162,
+    "contact_centroid": [
+     -0.246664,
+     0.037678,
+     1.109871
+    ],
+    "snap_distance_mm": 0.086,
+    "lateral_of_pivot_mm": 26.14,
+    "above_pivot_mm": 1.36,
+    "anterior_of_pivot_mm": -0.06,
+    "ligament_singular_values_mm": [
+     63.2,
+     28.2,
+     4.8
+    ],
+    "pca_end_rule_comparison_mm": 1.37
+   }
+  },
+  "rcl_dist": {
+   "anchorId": "elbow_r.anchor.rcl_dist",
+   "parent": "elbow_r__ctrl",
+   "attachedBone": "radius_r",
+   "deterministic": true,
+   "parent_ok": true,
+   "parent_inverse_ok": true,
+   "basis_ok": true,
+   "tags_ok": true,
+   "schematic_ok": true,
+   "ids_ok": true,
+   "fields_ok": true,
+   "diagnostics": {
+    "contact_region_vertices": 8,
+    "closest_contact_mm": 0.089,
+    "contact_centroid": [
+     -0.249846,
+     0.03115,
+     1.087412
+    ],
+    "snap_distance_mm": 0.266,
+    "lateral_of_pivot_mm": 23.9,
+    "above_pivot_mm": -20.93,
+    "anterior_of_pivot_mm": 7.39,
+    "ligament_singular_values_mm": [
+     63.2,
+     28.2,
+     4.8
+    ],
+    "pca_end_rule_comparison_mm": 1.48
+   }
+  },
+  "ucl_prox": {
+   "anchorId": "elbow_r.anchor.ucl_prox",
+   "parent": "elbow_r__seg_prox",
+   "attachedBone": "humerus_r",
+   "deterministic": true,
+   "parent_ok": true,
+   "parent_inverse_ok": true,
+   "basis_ok": true,
+   "tags_ok": true,
+   "schematic_ok": true,
+   "ids_ok": true,
+   "fields_ok": true,
+   "diagnostics": {
+    "contact_region_vertices": 3,
+    "closest_contact_mm": 0.201,
+    "contact_centroid": [
+     -0.189883,
+     0.031854,
+     1.099985
+    ],
+    "snap_distance_mm": 0.774,
+    "lateral_of_pivot_mm": -31.47,
+    "above_pivot_mm": 3.2,
+    "anterior_of_pivot_mm": -1.33,
+    "ligament_singular_values_mm": [
+     119.2,
+     46.5,
+     30.7
+    ],
+    "pca_end_rule_comparison_mm": 4.08
+   }
+  },
+  "ucl_dist": {
+   "anchorId": "elbow_r.anchor.ucl_dist",
+   "parent": "elbow_r__ctrl",
+   "attachedBone": "ulna_r",
+   "deterministic": true,
+   "parent_ok": true,
+   "parent_inverse_ok": true,
+   "basis_ok": true,
+   "tags_ok": true,
+   "schematic_ok": true,
+   "ids_ok": true,
+   "fields_ok": true,
+   "diagnostics": {
+    "contact_region_vertices": 6,
+    "closest_contact_mm": 0.467,
+    "contact_centroid": [
+     -0.208913,
+     0.027732,
+     1.080745
+    ],
+    "snap_distance_mm": 0.705,
+    "lateral_of_pivot_mm": -17.94,
+    "above_pivot_mm": -19.67,
+    "anterior_of_pivot_mm": 6.57,
+    "ligament_singular_values_mm": [
+     119.2,
+     46.5,
+     30.7
+    ],
+    "pca_end_rule_comparison_mm": 19.09
+   }
+  }
+ },
+ "band_stability_max_errors": {
+  "proximal_moved_mm": 0.0,
+  "distal_vs_rotation_mm": 0.0002602375924076584,
+  "off_bone_surface_mm": 0.000172824968558416,
+  "ligament_mesh_moved": 0.0,
+  "jump_excess_mm": 0.0
+ },
+ "band_lengths_mm": {
+  "0": {
+   "elbow_r.band.radial_collateral_ligament": 23.66,
+   "elbow_r.band.ulnar_collateral_ligament": 27.599
+  },
+  "5": {
+   "elbow_r.band.radial_collateral_ligament": 23.649,
+   "elbow_r.band.ulnar_collateral_ligament": 27.659
+  },
+  "10": {
+   "elbow_r.band.radial_collateral_ligament": 23.627,
+   "elbow_r.band.ulnar_collateral_ligament": 27.7
+  },
+  "15": {
+   "elbow_r.band.radial_collateral_ligament": 23.597,
+   "elbow_r.band.ulnar_collateral_ligament": 27.72
+  },
+  "20": {
+   "elbow_r.band.radial_collateral_ligament": 23.557,
+   "elbow_r.band.ulnar_collateral_ligament": 27.721
+  },
+  "25": {
+   "elbow_r.band.radial_collateral_ligament": 23.508,
+   "elbow_r.band.ulnar_collateral_ligament": 27.703
+  },
+  "30": {
+   "elbow_r.band.radial_collateral_ligament": 23.45,
+   "elbow_r.band.ulnar_collateral_ligament": 27.664
+  },
+  "35": {
+   "elbow_r.band.radial_collateral_ligament": 23.384,
+   "elbow_r.band.ulnar_collateral_ligament": 27.607
+  },
+  "40": {
+   "elbow_r.band.radial_collateral_ligament": 23.31,
+   "elbow_r.band.ulnar_collateral_ligament": 27.53
+  },
+  "45": {
+   "elbow_r.band.radial_collateral_ligament": 23.228,
+   "elbow_r.band.ulnar_collateral_ligament": 27.434
+  },
+  "50": {
+   "elbow_r.band.radial_collateral_ligament": 23.139,
+   "elbow_r.band.ulnar_collateral_ligament": 27.321
+  },
+  "55": {
+   "elbow_r.band.radial_collateral_ligament": 23.045,
+   "elbow_r.band.ulnar_collateral_ligament": 27.189
+  },
+  "60": {
+   "elbow_r.band.radial_collateral_ligament": 22.944,
+   "elbow_r.band.ulnar_collateral_ligament": 27.042
+  },
+  "65": {
+   "elbow_r.band.radial_collateral_ligament": 22.839,
+   "elbow_r.band.ulnar_collateral_ligament": 26.878
+  },
+  "70": {
+   "elbow_r.band.radial_collateral_ligament": 22.729,
+   "elbow_r.band.ulnar_collateral_ligament": 26.699
+  },
+  "75": {
+   "elbow_r.band.radial_collateral_ligament": 22.616,
+   "elbow_r.band.ulnar_collateral_ligament": 26.507
+  },
+  "80": {
+   "elbow_r.band.radial_collateral_ligament": 22.5,
+   "elbow_r.band.ulnar_collateral_ligament": 26.302
+  },
+  "85": {
+   "elbow_r.band.radial_collateral_ligament": 22.383,
+   "elbow_r.band.ulnar_collateral_ligament": 26.085
+  },
+  "90": {
+   "elbow_r.band.radial_collateral_ligament": 22.264,
+   "elbow_r.band.ulnar_collateral_ligament": 25.859
+  },
+  "95": {
+   "elbow_r.band.radial_collateral_ligament": 22.146,
+   "elbow_r.band.ulnar_collateral_ligament": 25.624
+  },
+  "100": {
+   "elbow_r.band.radial_collateral_ligament": 22.028,
+   "elbow_r.band.ulnar_collateral_ligament": 25.382
+  },
+  "105": {
+   "elbow_r.band.radial_collateral_ligament": 21.913,
+   "elbow_r.band.ulnar_collateral_ligament": 25.134
+  },
+  "110": {
+   "elbow_r.band.radial_collateral_ligament": 21.8,
+   "elbow_r.band.ulnar_collateral_ligament": 24.884
+  },
+  "115": {
+   "elbow_r.band.radial_collateral_ligament": 21.69,
+   "elbow_r.band.ulnar_collateral_ligament": 24.631
+  },
+  "120": {
+   "elbow_r.band.radial_collateral_ligament": 21.585,
+   "elbow_r.band.ulnar_collateral_ligament": 24.379
+  },
+  "125": {
+   "elbow_r.band.radial_collateral_ligament": 21.486,
+   "elbow_r.band.ulnar_collateral_ligament": 24.129
+  },
+  "130": {
+   "elbow_r.band.radial_collateral_ligament": 21.393,
+   "elbow_r.band.ulnar_collateral_ligament": 23.883
+  },
+  "135": {
+   "elbow_r.band.radial_collateral_ligament": 21.306,
+   "elbow_r.band.ulnar_collateral_ligament": 23.643
+  },
+  "140": {
+   "elbow_r.band.radial_collateral_ligament": 21.228,
+   "elbow_r.band.ulnar_collateral_ligament": 23.412
+  },
+  "145": {
+   "elbow_r.band.radial_collateral_ligament": 21.158,
+   "elbow_r.band.ulnar_collateral_ligament": 23.191
+  }
+ },
+ "failures": [],
+ "passed": true
+}

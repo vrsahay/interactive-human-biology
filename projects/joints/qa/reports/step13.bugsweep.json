@@ -1,0 +1,125 @@
+{
+ "generatedAt": "2026-09-21T10:26:29.692Z",
+ "deferredAttachLeak": {
+  "ball.move": {
+   "jointAttached": true,
+   "axisOverlayVisible": false,
+   "visibleJointStructures": 0
+  },
+  "ball.why": {
+   "jointAttached": true,
+   "axisOverlayVisible": false,
+   "visibleJointStructures": 0
+  },
+  "pivot.rotate": {
+   "jointAttached": true,
+   "axisOverlayVisible": false,
+   "visibleJointStructures": 0
+  },
+  "fixed.name": {
+   "jointAttached": true,
+   "axisOverlayVisible": false,
+   "visibleJointStructures": 0
+  },
+  "hinge.knee": {
+   "jointAttached": true,
+   "axisOverlayVisible": false,
+   "visibleJointStructures": 0
+  }
+ },
+ "seekConsistency": {
+  "rows": [
+   {
+    "shot": "hinge.flexion",
+    "chapter": "hinge",
+    "flexion": 0,
+    "caption": null
+   },
+   {
+    "shot": "intro.title",
+    "chapter": "hook",
+    "flexion": 0,
+    "caption": null
+   },
+   {
+    "shot": "map.all",
+    "chapter": "body_map",
+    "flexion": 0,
+    "caption": null
+   },
+   {
+    "shot": "hinge.extension",
+    "chapter": "hinge",
+    "flexion": 91.01851851851852,
+    "caption": null
+   },
+   {
+    "shot": "fixed.name",
+    "chapter": "fixed",
+    "flexion": 91.01851851851852,
+    "caption": null
+   },
+   {
+    "shot": "hinge.try",
+    "chapter": "hinge",
+    "flexion": 0,
+    "caption": null
+   }
+  ],
+  "staleControllerValueWhileJointHidden": {
+   "shot": "fixed.name",
+   "flexionDeg": 91.01851851851852,
+   "visibleToLearner": false,
+   "hidden": {
+    "jointStructures": 0,
+    "axisOverlay": false,
+    "angleBadge": false,
+    "slider": false
+   }
+  }
+ },
+ "exploreReturn": {
+  "shot": "hinge.flexion",
+  "selectionCleared": true,
+  "cameraDriftM": 0
+ },
+ "check": {
+  "at90": "correct",
+  "at20": "incorrect"
+ },
+ "handover": {
+  "count": 30,
+  "presentations": {
+   "body.capitate_bone_right": "handedOver",
+   "body.distal_phalanx_of_fifth_finger_of_hand_right": "handedOver",
+   "body.distal_phalanx_of_first_finger_of_hand_right": "handedOver",
+   "body.distal_phalanx_of_fourth_finger_of_hand_right": "handedOver",
+   "body.distal_phalanx_of_second_finger_of_hand_right": "handedOver",
+   "body.distal_phalanx_of_third_finger_of_hand_right": "handedOver",
+   "body.fifth_metacarpal_bone_right": "handedOver",
+   "body.first_metacarpal_bone_right": "handedOver",
+   "body.fourth_metacarpal_bone_right": "handedOver",
+   "body.hamate_bone_right": "handedOver",
+   "body.humerus_right": "handedOver",
+   "body.lunate_bone_right": "handedOver",
+   "body.middle_phalanx_of_fifth_finger_of_hand_right": "handedOver",
+   "body.middle_phalanx_of_fourth_finger_of_hand_right": "handedOver",
+   "body.middle_phalanx_of_second_finger_of_hand_right": "handedOver",
+   "body.middle_phalanx_of_third_finger_of_hand_right": "handedOver",
+   "body.pisiform_bone_right": "handedOver",
+   "body.proximal_phalanx_of_fifth_finger_of_hand_right": "handedOver",
+   "body.proximal_phalanx_of_first_finger_of_hand_right": "handedOver",
+   "body.proximal_phalanx_of_fourth_finger_of_hand_right": "handedOver",
+   "body.proximal_phalanx_of_second_finger_of_hand_right": "handedOver",
+   "body.proximal_phalanx_of_third_finger_of_hand_right": "handedOver",
+   "body.radius_right": "handedOver",
+   "body.scaphoid_bone_right": "handedOver",
+   "body.second_metacarpal_bone_right": "handedOver",
+   "body.third_metacarpal_bone_right": "handedOver",
+   "body.trapezium_bone_right": "handedOver",
+   "body.trapezoid_bone_right": "handedOver",
+   "body.triquetrum_bone_right": "handedOver",
+   "body.ulna_right": "handedOver"
+  }
+ }
+}

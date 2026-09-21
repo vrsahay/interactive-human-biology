@@ -1,0 +1,42 @@
+{
+ "generatedAt": "2026-09-21T10:27:48.273Z",
+ "fixed": {
+  "explore": "explore.fixed",
+  "status": "teaching-simulation",
+  "instruction": "Try to move the skull bones.",
+  "movedTo": 0
+ },
+ "pivot": {
+  "explore": "explore.pivot",
+  "status": "teaching-simulation",
+  "instruction": "Drag left and right to turn the head.",
+  "movedTo": 42.00000000000001
+ },
+ "ball": {
+  "explore": "explore.ball",
+  "status": "teaching-simulation",
+  "instruction": "Drag in any direction to move the arm.",
+  "movedTo": 15
+ },
+ "hinge": {
+  "explore": "explore.hinge",
+  "status": "validated-rig",
+  "instruction": "Drag to bend and straighten the elbow.",
+  "movedTo": 70
+ },
+ "noDuplicates": {
+  "interactPanels": 0,
+  "sliders": 1,
+  "captions": 0
+ },
+ "keyboard": {
+  "steppedTo": 10,
+  "resetByKey": true,
+  "exitedByEscape": true
+ },
+ "lessonUntouched": {
+  "shot": "ball.move",
+  "chapter": "ball_socket",
+  "clockDriftMs": 0
+ }
+}

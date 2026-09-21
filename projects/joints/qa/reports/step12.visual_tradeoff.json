@@ -1,0 +1,314 @@
+{
+ "generatedAt": "2026-09-17T15:51:24.838Z",
+ "reference": "Step-11 build (qa/perf/baseline-dist), same seek positions, canvas only, 1280x800 @1x",
+ "note": "Differences combine: baked environment (size 64), render-group re-quantization, LOD1 context (low tier), material library, and anti-aliasing noise.",
+ "variants": {
+  "step11": {
+   "errors": [],
+   "tier": null,
+   "perf": {
+    "fps": 3,
+    "frameIntervalMeanMs": 28.072727268392388,
+    "frameIntervalP95Ms": 51.80000001192093,
+    "frameCpuMeanMs": 47.48095237853981,
+    "frameCpuP95Ms": 264.5,
+    "drawCalls": 316,
+    "triangles": 174656,
+    "geometries": 598,
+    "textures": 10,
+    "textureMemoryBytes": 5592404,
+    "pixelRatio": 1,
+    "framesRendered": 42,
+    "firstFrameMs": 1406.3999999761581,
+    "firstModelFrameMs": 2391.899999976158,
+    "renderer": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x00009A49) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+   }
+  },
+  "high": {
+   "errors": [],
+   "tier": "high",
+   "perf": {
+    "fps": 3,
+    "frameIntervalMeanMs": 23.58571428699153,
+    "frameIntervalP95Ms": 89.7999999821186,
+    "frameCpuMeanMs": 6.683333330211186,
+    "frameCpuP95Ms": 19.599999994039536,
+    "drawCalls": 63,
+    "triangles": 174656,
+    "geometries": 97,
+    "textures": 7,
+    "textureMemoryBytes": 8388606,
+    "pixelRatio": 1,
+    "framesRendered": 42,
+    "firstFrameMs": 950.2999999821186,
+    "firstModelFrameMs": 950.2999999821186,
+    "renderer": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x00009A49) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+   }
+  },
+  "medium": {
+   "errors": [],
+   "tier": "medium",
+   "perf": {
+    "fps": 3,
+    "frameIntervalMeanMs": 26.835714289120265,
+    "frameIntervalP95Ms": 73,
+    "frameCpuMeanMs": 6.865853659263471,
+    "frameCpuP95Ms": 16,
+    "drawCalls": 63,
+    "triangles": 174656,
+    "geometries": 97,
+    "textures": 7,
+    "textureMemoryBytes": 8388606,
+    "pixelRatio": 1,
+    "framesRendered": 41,
+    "firstFrameMs": 540.9000000059605,
+    "firstModelFrameMs": 540.9000000059605,
+    "renderer": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x00009A49) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+   }
+  },
+  "low": {
+   "errors": [],
+   "tier": "low",
+   "perf": {
+    "fps": 3,
+    "frameIntervalMeanMs": 23.72666666706403,
+    "frameIntervalP95Ms": 58.5,
+    "frameCpuMeanMs": 6.335714288410687,
+    "frameCpuP95Ms": 16.80000001192093,
+    "drawCalls": 63,
+    "triangles": 165326,
+    "geometries": 97,
+    "textures": 7,
+    "textureMemoryBytes": 8388606,
+    "pixelRatio": 1,
+    "framesRendered": 42,
+    "firstFrameMs": 475.5,
+    "firstModelFrameMs": 475.5,
+    "renderer": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x00009A49) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+   }
+  }
+ },
+ "metrics": {
+  "intro.title": {
+   "high": {
+    "psnrDb": 56.12,
+    "maxAbsDiff": 36,
+    "pixelsOver16Pct": 0.007
+   },
+   "medium": {
+    "psnrDb": 46.38,
+    "maxAbsDiff": 55,
+    "pixelsOver16Pct": 0.125
+   },
+   "low": {
+    "psnrDb": 46.01,
+    "maxAbsDiff": 84,
+    "pixelsOver16Pct": 0.16
+   }
+  },
+  "intro.map": {
+   "high": {
+    "psnrDb": 36.01,
+    "maxAbsDiff": 102,
+    "pixelsOver16Pct": 0.468
+   },
+   "medium": {
+    "psnrDb": 35.68,
+    "maxAbsDiff": 103,
+    "pixelsOver16Pct": 0.568
+   },
+   "low": {
+    "psnrDb": 41.73,
+    "maxAbsDiff": 95,
+    "pixelsOver16Pct": 0.567
+   }
+  },
+  "fixed.detail": {
+   "high": {
+    "psnrDb": 53.56,
+    "maxAbsDiff": 52,
+    "pixelsOver16Pct": 0.024
+   },
+   "medium": {
+    "psnrDb": 54.33,
+    "maxAbsDiff": 52,
+    "pixelsOver16Pct": 0.019
+   },
+   "low": {
+    "psnrDb": 55.03,
+    "maxAbsDiff": 52,
+    "pixelsOver16Pct": 0.012
+   }
+  },
+  "pivot.rotate": {
+   "high": {
+    "psnrDb": 57.15,
+    "maxAbsDiff": 55,
+    "pixelsOver16Pct": 0.006
+   },
+   "medium": {
+    "psnrDb": 57.15,
+    "maxAbsDiff": 55,
+    "pixelsOver16Pct": 0.006
+   },
+   "low": {
+    "psnrDb": 57.14,
+    "maxAbsDiff": 55,
+    "pixelsOver16Pct": 0.006
+   }
+  },
+  "ball.shoulder": {
+   "high": {
+    "psnrDb": 53.77,
+    "maxAbsDiff": 45,
+    "pixelsOver16Pct": 0.011
+   },
+   "medium": {
+    "psnrDb": 53.77,
+    "maxAbsDiff": 45,
+    "pixelsOver16Pct": 0.011
+   },
+   "low": {
+    "psnrDb": 53.77,
+    "maxAbsDiff": 45,
+    "pixelsOver16Pct": 0.011
+   }
+  },
+  "ball.hip": {
+   "high": {
+    "psnrDb": 53.13,
+    "maxAbsDiff": 112,
+    "pixelsOver16Pct": 0.006
+   },
+   "medium": {
+    "psnrDb": 53.13,
+    "maxAbsDiff": 112,
+    "pixelsOver16Pct": 0.006
+   },
+   "low": {
+    "psnrDb": 53.13,
+    "maxAbsDiff": 112,
+    "pixelsOver16Pct": 0.006
+   }
+  },
+  "hinge.source": {
+   "high": {
+    "psnrDb": 56.15,
+    "maxAbsDiff": 21,
+    "pixelsOver16Pct": 0.006
+   },
+   "medium": {
+    "psnrDb": 56.16,
+    "maxAbsDiff": 21,
+    "pixelsOver16Pct": 0.006
+   },
+   "low": {
+    "psnrDb": 55.81,
+    "maxAbsDiff": 27,
+    "pixelsOver16Pct": 0.007
+   }
+  },
+  "hinge.bones": {
+   "high": {
+    "psnrDb": 60.06,
+    "maxAbsDiff": 37,
+    "pixelsOver16Pct": 0.003
+   },
+   "medium": {
+    "psnrDb": 60.06,
+    "maxAbsDiff": 37,
+    "pixelsOver16Pct": 0.003
+   },
+   "low": {
+    "psnrDb": 60.06,
+    "maxAbsDiff": 37,
+    "pixelsOver16Pct": 0.003
+   }
+  },
+  "hinge.flexion": {
+   "high": {
+    "psnrDb": 59.32,
+    "maxAbsDiff": 36,
+    "pixelsOver16Pct": 0.004
+   },
+   "medium": {
+    "psnrDb": 59.32,
+    "maxAbsDiff": 36,
+    "pixelsOver16Pct": 0.004
+   },
+   "low": {
+    "psnrDb": 59.27,
+    "maxAbsDiff": 36,
+    "pixelsOver16Pct": 0.004
+   }
+  },
+  "hinge.support": {
+   "high": {
+    "psnrDb": 53.63,
+    "maxAbsDiff": 33,
+    "pixelsOver16Pct": 0.01
+   },
+   "medium": {
+    "psnrDb": 53.63,
+    "maxAbsDiff": 33,
+    "pixelsOver16Pct": 0.01
+   },
+   "low": {
+    "psnrDb": 53.48,
+    "maxAbsDiff": 65,
+    "pixelsOver16Pct": 0.011
+   }
+  },
+  "hinge.knee": {
+   "high": {
+    "psnrDb": 56.96,
+    "maxAbsDiff": 53,
+    "pixelsOver16Pct": 0.005
+   },
+   "medium": {
+    "psnrDb": 56.96,
+    "maxAbsDiff": 53,
+    "pixelsOver16Pct": 0.005
+   },
+   "low": {
+    "psnrDb": 56.96,
+    "maxAbsDiff": 53,
+    "pixelsOver16Pct": 0.005
+   }
+  },
+  "recap.pullback": {
+   "high": {
+    "psnrDb": 41.19,
+    "maxAbsDiff": 71,
+    "pixelsOver16Pct": 0.28
+   },
+   "medium": {
+    "psnrDb": 39.15,
+    "maxAbsDiff": 87,
+    "pixelsOver16Pct": 0.372
+   },
+   "low": {
+    "psnrDb": 46.36,
+    "maxAbsDiff": 97,
+    "pixelsOver16Pct": 0.131
+   }
+  },
+  "recap.compare": {
+   "high": {
+    "psnrDb": 59.66,
+    "maxAbsDiff": 50,
+    "pixelsOver16Pct": 0.002
+   },
+   "medium": {
+    "psnrDb": 59.74,
+    "maxAbsDiff": 50,
+    "pixelsOver16Pct": 0.002
+   },
+   "low": {
+    "psnrDb": 43.33,
+    "maxAbsDiff": 54,
+    "pixelsOver16Pct": 0.233
+   }
+  }
+ }
+}

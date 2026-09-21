@@ -1,0 +1,1339 @@
+{
+ "generatedAt": "2026-09-21T10:27:31.482Z",
+ "tags": [
+  "wcag2a",
+  "wcag2aa",
+  "wcag21a",
+  "wcag21aa",
+  "wcag22aa",
+  "best-practice"
+ ],
+ "results": {
+  "desktop:explore-fixed": {
+   "violations": [],
+   "incomplete": [
+    {
+     "id": "color-contrast",
+     "nodes": 24
+    }
+   ],
+   "passes": 36
+  },
+  "desktop:explore-pivot": {
+   "violations": [],
+   "incomplete": [
+    {
+     "id": "color-contrast",
+     "nodes": 25
+    }
+   ],
+   "passes": 36
+  },
+  "desktop:explore-ball": {
+   "violations": [],
+   "incomplete": [
+    {
+     "id": "color-contrast",
+     "nodes": 25
+    }
+   ],
+   "passes": 36
+  },
+  "desktop:explore-hinge": {
+   "violations": [],
+   "incomplete": [
+    {
+     "id": "color-contrast",
+     "nodes": 30
+    }
+   ],
+   "passes": 37
+  },
+  "desktop:recall-question": {
+   "violations": [],
+   "incomplete": [
+    {
+     "id": "color-contrast",
+     "nodes": 24
+    }
+   ],
+   "passes": 33
+  },
+  "desktop:recall-answered": {
+   "violations": [],
+   "incomplete": [
+    {
+     "id": "color-contrast",
+     "nodes": 20
+    }
+   ],
+   "passes": 34
+  },
+  "mobile:explore-fixed": {
+   "violations": [],
+   "incomplete": [
+    {
+     "id": "color-contrast",
+     "nodes": 12
+    }
+   ],
+   "passes": 32
+  },
+  "mobile:explore-pivot": {
+   "violations": [],
+   "incomplete": [
+    {
+     "id": "color-contrast",
+     "nodes": 13
+    }
+   ],
+   "passes": 32
+  },
+  "mobile:explore-ball": {
+   "violations": [],
+   "incomplete": [
+    {
+     "id": "color-contrast",
+     "nodes": 13
+    }
+   ],
+   "passes": 32
+  },
+  "mobile:explore-hinge": {
+   "violations": [],
+   "incomplete": [
+    {
+     "id": "color-contrast",
+     "nodes": 17
+    }
+   ],
+   "passes": 34
+  },
+  "mobile:recall-question": {
+   "violations": [],
+   "incomplete": [
+    {
+     "id": "color-contrast",
+     "nodes": 22
+    }
+   ],
+   "passes": 33
+  },
+  "mobile:recall-answered": {
+   "violations": [],
+   "incomplete": [
+    {
+     "id": "color-contrast",
+     "nodes": 19
+    }
+   ],
+   "passes": 34
+  },
+  "contrast": {
+   "method": "same as Step 12: glyphs hidden, frame captured, 95th-percentile background luminance under each text box, text colour alpha-composited; WCAG 1.4.3",
+   "rows": [
+    {
+     "state": "explore-fixed",
+     "vp": "1280x800",
+     "selector": "film-explore__title",
+     "text": "Fixed joint · skull",
+     "px": 17,
+     "large": false,
+     "ratio": 16.86,
+     "required": 4.5
+    },
+    {
+     "state": "explore-fixed",
+     "vp": "1280x800",
+     "selector": "film-explore__status",
+     "text": "Teaching simulation",
+     "px": 11,
+     "large": false,
+     "ratio": 14.58,
+     "required": 4.5
+    },
+    {
+     "state": "explore-fixed",
+     "vp": "1280x800",
+     "selector": "film-explore__teaching",
+     "text": "This shows the movement pattern. T",
+     "px": 13,
+     "large": false,
+     "ratio": 9.41,
+     "required": 4.5
+    },
+    {
+     "state": "explore-fixed",
+     "vp": "1280x800",
+     "selector": "film-explore__task",
+     "text": "Your task Try to move the two skul",
+     "px": 15,
+     "large": false,
+     "ratio": 16.84,
+     "required": 4.5
+    },
+    {
+     "state": "explore-fixed",
+     "vp": "1280x800",
+     "selector": "film-explore__task-label",
+     "text": "Your task",
+     "px": 11,
+     "large": false,
+     "ratio": 9.42,
+     "required": 4.5
+    },
+    {
+     "state": "explore-fixed",
+     "vp": "1280x800",
+     "selector": "film-explore__instruction",
+     "text": "Try to move the skull bones.",
+     "px": 15,
+     "large": false,
+     "ratio": 16.86,
+     "required": 4.5
+    },
+    {
+     "state": "explore-fixed",
+     "vp": "1280x800",
+     "selector": "film-explore__explanation",
+     "text": "These bones barely move. A fixed j",
+     "px": 14,
+     "large": false,
+     "ratio": 9.42,
+     "required": 4.5
+    },
+    {
+     "state": "explore-fixed",
+     "vp": "1280x800",
+     "selector": "film-explore__keys",
+     "text": "Use the arrow keys to move, R to r",
+     "px": 13,
+     "large": false,
+     "ratio": 6.86,
+     "required": 4.5
+    },
+    {
+     "state": "explore-fixed",
+     "vp": "1280x800",
+     "selector": "film-btn",
+     "text": "Reset",
+     "px": 14,
+     "large": false,
+     "ratio": 15.15,
+     "required": 4.5
+    },
+    {
+     "state": "explore-fixed",
+     "vp": "1280x800",
+     "selector": "film-btn",
+     "text": "Return to the lesson",
+     "px": 14,
+     "large": false,
+     "ratio": 16.08,
+     "required": 4.5
+    },
+    {
+     "state": "explore-pivot",
+     "vp": "1280x800",
+     "selector": "film-explore__title",
+     "text": "Pivot joint · top of the neck",
+     "px": 17,
+     "large": false,
+     "ratio": 16.84,
+     "required": 4.5
+    },
+    {
+     "state": "explore-pivot",
+     "vp": "1280x800",
+     "selector": "film-explore__status",
+     "text": "Teaching simulation",
+     "px": 11,
+     "large": false,
+     "ratio": 14.58,
+     "required": 4.5
+    },
+    {
+     "state": "explore-pivot",
+     "vp": "1280x800",
+     "selector": "film-explore__teaching",
+     "text": "This shows the movement pattern. T",
+     "px": 13,
+     "large": false,
+     "ratio": 9.41,
+     "required": 4.5
+    },
+    {
+     "state": "explore-pivot",
+     "vp": "1280x800",
+     "selector": "film-explore__task",
+     "text": "Your task Turn the head as if you ",
+     "px": 15,
+     "large": false,
+     "ratio": 16.84,
+     "required": 4.5
+    },
+    {
+     "state": "explore-pivot",
+     "vp": "1280x800",
+     "selector": "film-explore__task-label",
+     "text": "Your task",
+     "px": 11,
+     "large": false,
+     "ratio": 9.42,
+     "required": 4.5
+    },
+    {
+     "state": "explore-pivot",
+     "vp": "1280x800",
+     "selector": "film-explore__instruction",
+     "text": "Drag left and right to turn the he",
+     "px": 15,
+     "large": false,
+     "ratio": 16.84,
+     "required": 4.5
+    },
+    {
+     "state": "explore-pivot",
+     "vp": "1280x800",
+     "selector": "film-explore__readout",
+     "text": "0°",
+     "px": 20,
+     "large": false,
+     "ratio": 9.26,
+     "required": 4.5
+    },
+    {
+     "state": "explore-pivot",
+     "vp": "1280x800",
+     "selector": "film-explore__explanation",
+     "text": "The head turns around the bone bel",
+     "px": 14,
+     "large": false,
+     "ratio": 9.42,
+     "required": 4.5
+    },
+    {
+     "state": "explore-pivot",
+     "vp": "1280x800",
+     "selector": "film-explore__keys",
+     "text": "Use the arrow keys to move, R to r",
+     "px": 13,
+     "large": false,
+     "ratio": 6.86,
+     "required": 4.5
+    },
+    {
+     "state": "explore-pivot",
+     "vp": "1280x800",
+     "selector": "film-btn",
+     "text": "Reset",
+     "px": 14,
+     "large": false,
+     "ratio": 15.15,
+     "required": 4.5
+    },
+    {
+     "state": "explore-pivot",
+     "vp": "1280x800",
+     "selector": "film-btn",
+     "text": "Return to the lesson",
+     "px": 14,
+     "large": false,
+     "ratio": 16.08,
+     "required": 4.5
+    },
+    {
+     "state": "explore-ball",
+     "vp": "1280x800",
+     "selector": "film-explore__title",
+     "text": "Ball-and-socket joint · shoulder",
+     "px": 17,
+     "large": false,
+     "ratio": 16.84,
+     "required": 4.5
+    },
+    {
+     "state": "explore-ball",
+     "vp": "1280x800",
+     "selector": "film-explore__status",
+     "text": "Teaching simulation",
+     "px": 11,
+     "large": false,
+     "ratio": 14.58,
+     "required": 4.5
+    },
+    {
+     "state": "explore-ball",
+     "vp": "1280x800",
+     "selector": "film-explore__teaching",
+     "text": "This shows the movement pattern. T",
+     "px": 13,
+     "large": false,
+     "ratio": 9.41,
+     "required": 4.5
+    },
+    {
+     "state": "explore-ball",
+     "vp": "1280x800",
+     "selector": "film-explore__task",
+     "text": "Your task Move the arm in two diff",
+     "px": 15,
+     "large": false,
+     "ratio": 16.84,
+     "required": 4.5
+    },
+    {
+     "state": "explore-ball",
+     "vp": "1280x800",
+     "selector": "film-explore__task-label",
+     "text": "Your task",
+     "px": 11,
+     "large": false,
+     "ratio": 9.42,
+     "required": 4.5
+    },
+    {
+     "state": "explore-ball",
+     "vp": "1280x800",
+     "selector": "film-explore__instruction",
+     "text": "Drag in any direction to move the ",
+     "px": 15,
+     "large": false,
+     "ratio": 16.84,
+     "required": 4.5
+    },
+    {
+     "state": "explore-ball",
+     "vp": "1280x800",
+     "selector": "film-explore__readout",
+     "text": "0° · 0°",
+     "px": 20,
+     "large": false,
+     "ratio": 9.26,
+     "required": 4.5
+    },
+    {
+     "state": "explore-ball",
+     "vp": "1280x800",
+     "selector": "film-explore__explanation",
+     "text": "The arm moves in many directions, ",
+     "px": 14,
+     "large": false,
+     "ratio": 9.42,
+     "required": 4.5
+    },
+    {
+     "state": "explore-ball",
+     "vp": "1280x800",
+     "selector": "film-explore__keys",
+     "text": "Use the arrow keys to move, R to r",
+     "px": 13,
+     "large": false,
+     "ratio": 6.86,
+     "required": 4.5
+    },
+    {
+     "state": "explore-ball",
+     "vp": "1280x800",
+     "selector": "film-btn",
+     "text": "Reset",
+     "px": 14,
+     "large": false,
+     "ratio": 15.15,
+     "required": 4.5
+    },
+    {
+     "state": "explore-ball",
+     "vp": "1280x800",
+     "selector": "film-btn",
+     "text": "Return to the lesson",
+     "px": 14,
+     "large": false,
+     "ratio": 16.08,
+     "required": 4.5
+    },
+    {
+     "state": "explore-hinge",
+     "vp": "1280x800",
+     "selector": "film-explore__title",
+     "text": "Hinge joint · elbow",
+     "px": 17,
+     "large": false,
+     "ratio": 16.86,
+     "required": 4.5
+    },
+    {
+     "state": "explore-hinge",
+     "vp": "1280x800",
+     "selector": "film-explore__status",
+     "text": "3D joint model",
+     "px": 11,
+     "large": false,
+     "ratio": 8.78,
+     "required": 4.5
+    },
+    {
+     "state": "explore-hinge",
+     "vp": "1280x800",
+     "selector": "film-explore__task",
+     "text": "Your task Bend the elbow until it ",
+     "px": 15,
+     "large": false,
+     "ratio": 16.84,
+     "required": 4.5
+    },
+    {
+     "state": "explore-hinge",
+     "vp": "1280x800",
+     "selector": "film-explore__task-label",
+     "text": "Your task",
+     "px": 11,
+     "large": false,
+     "ratio": 9.42,
+     "required": 4.5
+    },
+    {
+     "state": "explore-hinge",
+     "vp": "1280x800",
+     "selector": "film-explore__instruction",
+     "text": "Drag to bend and straighten the el",
+     "px": 15,
+     "large": false,
+     "ratio": 16.84,
+     "required": 4.5
+    },
+    {
+     "state": "explore-hinge",
+     "vp": "1280x800",
+     "selector": "film-explore__readout",
+     "text": "3°",
+     "px": 20,
+     "large": false,
+     "ratio": 9.22,
+     "required": 4.5
+    },
+    {
+     "state": "explore-hinge",
+     "vp": "1280x800",
+     "selector": "film-explore__explanation",
+     "text": "Bending is flexion. Straightening ",
+     "px": 14,
+     "large": false,
+     "ratio": 9.41,
+     "required": 4.5
+    },
+    {
+     "state": "explore-hinge",
+     "vp": "1280x800",
+     "selector": "film-explore__keys",
+     "text": "Use the arrow keys to move, R to r",
+     "px": 13,
+     "large": false,
+     "ratio": 6.86,
+     "required": 4.5
+    },
+    {
+     "state": "explore-hinge",
+     "vp": "1280x800",
+     "selector": "film-btn",
+     "text": "Reset",
+     "px": 14,
+     "large": false,
+     "ratio": 15.15,
+     "required": 4.5
+    },
+    {
+     "state": "explore-hinge",
+     "vp": "1280x800",
+     "selector": "film-btn",
+     "text": "Return to the lesson",
+     "px": 14,
+     "large": false,
+     "ratio": 16.08,
+     "required": 4.5
+    },
+    {
+     "state": "recall-question",
+     "vp": "1280x800",
+     "selector": "film-recall__progress",
+     "text": "Question 1 / 5",
+     "px": 12,
+     "large": false,
+     "ratio": 6.87,
+     "required": 4.5
+    },
+    {
+     "state": "recall-question",
+     "vp": "1280x800",
+     "selector": "film-recall__question",
+     "text": "These skull bones hardly move at a",
+     "px": 19,
+     "large": false,
+     "ratio": 16.95,
+     "required": 4.5
+    },
+    {
+     "state": "recall-question",
+     "vp": "1280x800",
+     "selector": "film-recall__prompt",
+     "text": "Which type of joint is this?",
+     "px": 14,
+     "large": false,
+     "ratio": 9.44,
+     "required": 4.5
+    },
+    {
+     "state": "recall-question",
+     "vp": "1280x800",
+     "selector": "film-recall__option",
+     "text": "Fixed",
+     "px": 14,
+     "large": false,
+     "ratio": 15.18,
+     "required": 4.5
+    },
+    {
+     "state": "recall-question",
+     "vp": "1280x800",
+     "selector": "film-recall__option",
+     "text": "Pivot",
+     "px": 14,
+     "large": false,
+     "ratio": 15.13,
+     "required": 4.5
+    },
+    {
+     "state": "recall-question",
+     "vp": "1280x800",
+     "selector": "film-recall__option",
+     "text": "Ball and socket",
+     "px": 14,
+     "large": false,
+     "ratio": 15.13,
+     "required": 4.5
+    },
+    {
+     "state": "recall-question",
+     "vp": "1280x800",
+     "selector": "film-recall__option",
+     "text": "Hinge",
+     "px": 14,
+     "large": false,
+     "ratio": 15.13,
+     "required": 4.5
+    },
+    {
+     "state": "recall-question",
+     "vp": "1280x800",
+     "selector": "film-btn",
+     "text": "Return to the lesson",
+     "px": 14,
+     "large": false,
+     "ratio": 15.18,
+     "required": 4.5
+    },
+    {
+     "state": "recall-answered",
+     "vp": "1280x800",
+     "selector": "film-recall__progress",
+     "text": "Question 1 / 5",
+     "px": 12,
+     "large": false,
+     "ratio": 6.87,
+     "required": 4.5
+    },
+    {
+     "state": "recall-answered",
+     "vp": "1280x800",
+     "selector": "film-recall__question",
+     "text": "These skull bones hardly move at a",
+     "px": 19,
+     "large": false,
+     "ratio": 16.86,
+     "required": 4.5
+    },
+    {
+     "state": "recall-answered",
+     "vp": "1280x800",
+     "selector": "film-recall__prompt",
+     "text": "Which type of joint is this?",
+     "px": 14,
+     "large": false,
+     "ratio": 9.44,
+     "required": 4.5
+    },
+    {
+     "state": "recall-answered",
+     "vp": "1280x800",
+     "selector": "film-recall__option",
+     "text": "Fixed",
+     "px": 14,
+     "large": false,
+     "ratio": 8.78,
+     "required": 4.5
+    },
+    {
+     "state": "recall-answered",
+     "vp": "1280x800",
+     "selector": "film-recall__option",
+     "text": "Pivot",
+     "px": 14,
+     "large": false,
+     "ratio": 15.13,
+     "required": 4.5
+    },
+    {
+     "state": "recall-answered",
+     "vp": "1280x800",
+     "selector": "film-recall__option",
+     "text": "Ball and socket",
+     "px": 14,
+     "large": false,
+     "ratio": 15.13,
+     "required": 4.5
+    },
+    {
+     "state": "recall-answered",
+     "vp": "1280x800",
+     "selector": "film-recall__option",
+     "text": "Hinge",
+     "px": 14,
+     "large": false,
+     "ratio": 5.52,
+     "required": 4.5
+    },
+    {
+     "state": "recall-answered",
+     "vp": "1280x800",
+     "selector": "film-recall__feedback",
+     "text": "Yes. That is right. Fixed: the bon",
+     "px": 14,
+     "large": false,
+     "ratio": 16.95,
+     "required": 4.5
+    },
+    {
+     "state": "recall-answered",
+     "vp": "1280x800",
+     "selector": "film-btn",
+     "text": "Next",
+     "px": 14,
+     "large": false,
+     "ratio": 16.08,
+     "required": 4.5
+    },
+    {
+     "state": "recall-answered",
+     "vp": "1280x800",
+     "selector": "film-btn",
+     "text": "Return to the lesson",
+     "px": 14,
+     "large": false,
+     "ratio": 15.18,
+     "required": 4.5
+    },
+    {
+     "state": "explore-fixed",
+     "vp": "390x844",
+     "selector": "film-explore__title",
+     "text": "Fixed joint · skull",
+     "px": 17,
+     "large": false,
+     "ratio": 16.59,
+     "required": 4.5
+    },
+    {
+     "state": "explore-fixed",
+     "vp": "390x844",
+     "selector": "film-explore__status",
+     "text": "Teaching simulation",
+     "px": 11,
+     "large": false,
+     "ratio": 14.43,
+     "required": 4.5
+    },
+    {
+     "state": "explore-fixed",
+     "vp": "390x844",
+     "selector": "film-explore__teaching",
+     "text": "This shows the movement pattern. T",
+     "px": 13,
+     "large": false,
+     "ratio": 9.24,
+     "required": 4.5
+    },
+    {
+     "state": "explore-fixed",
+     "vp": "390x844",
+     "selector": "film-explore__task",
+     "text": "Your task Try to move the two skul",
+     "px": 15,
+     "large": false,
+     "ratio": 16.46,
+     "required": 4.5
+    },
+    {
+     "state": "explore-fixed",
+     "vp": "390x844",
+     "selector": "film-explore__task-label",
+     "text": "Your task",
+     "px": 11,
+     "large": false,
+     "ratio": 9.36,
+     "required": 4.5
+    },
+    {
+     "state": "explore-fixed",
+     "vp": "390x844",
+     "selector": "film-explore__instruction",
+     "text": "Try to move the skull bones.",
+     "px": 15,
+     "large": false,
+     "ratio": 16.59,
+     "required": 4.5
+    },
+    {
+     "state": "explore-fixed",
+     "vp": "390x844",
+     "selector": "film-explore__explanation",
+     "text": "These bones barely move. A fixed j",
+     "px": 14,
+     "large": false,
+     "ratio": 9.28,
+     "required": 4.5
+    },
+    {
+     "state": "explore-fixed",
+     "vp": "390x844",
+     "selector": "film-explore__keys",
+     "text": "Use the arrow keys to move, R to r",
+     "px": 13,
+     "large": false,
+     "ratio": 6.82,
+     "required": 4.5
+    },
+    {
+     "state": "explore-fixed",
+     "vp": "390x844",
+     "selector": "film-btn",
+     "text": "Reset",
+     "px": 14,
+     "large": false,
+     "ratio": 14.69,
+     "required": 4.5
+    },
+    {
+     "state": "explore-fixed",
+     "vp": "390x844",
+     "selector": "film-btn",
+     "text": "Return to the lesson",
+     "px": 14,
+     "large": false,
+     "ratio": 18.32,
+     "required": 4.5
+    },
+    {
+     "state": "explore-pivot",
+     "vp": "390x844",
+     "selector": "film-explore__title",
+     "text": "Pivot joint · top of the neck",
+     "px": 17,
+     "large": false,
+     "ratio": 16.62,
+     "required": 4.5
+    },
+    {
+     "state": "explore-pivot",
+     "vp": "390x844",
+     "selector": "film-explore__status",
+     "text": "Teaching simulation",
+     "px": 11,
+     "large": false,
+     "ratio": 14.51,
+     "required": 4.5
+    },
+    {
+     "state": "explore-pivot",
+     "vp": "390x844",
+     "selector": "film-explore__teaching",
+     "text": "This shows the movement pattern. T",
+     "px": 13,
+     "large": false,
+     "ratio": 9.37,
+     "required": 4.5
+    },
+    {
+     "state": "explore-pivot",
+     "vp": "390x844",
+     "selector": "film-explore__task",
+     "text": "Your task Turn the head as if you ",
+     "px": 15,
+     "large": false,
+     "ratio": 16.62,
+     "required": 4.5
+    },
+    {
+     "state": "explore-pivot",
+     "vp": "390x844",
+     "selector": "film-explore__task-label",
+     "text": "Your task",
+     "px": 11,
+     "large": false,
+     "ratio": 9.42,
+     "required": 4.5
+    },
+    {
+     "state": "explore-pivot",
+     "vp": "390x844",
+     "selector": "film-explore__instruction",
+     "text": "Drag left and right to turn the he",
+     "px": 15,
+     "large": false,
+     "ratio": 16.74,
+     "required": 4.5
+    },
+    {
+     "state": "explore-pivot",
+     "vp": "390x844",
+     "selector": "film-explore__readout",
+     "text": "0°",
+     "px": 20,
+     "large": false,
+     "ratio": 9.26,
+     "required": 4.5
+    },
+    {
+     "state": "explore-pivot",
+     "vp": "390x844",
+     "selector": "film-explore__explanation",
+     "text": "The head turns around the bone bel",
+     "px": 14,
+     "large": false,
+     "ratio": 9.37,
+     "required": 4.5
+    },
+    {
+     "state": "explore-pivot",
+     "vp": "390x844",
+     "selector": "film-explore__keys",
+     "text": "Use the arrow keys to move, R to r",
+     "px": 13,
+     "large": false,
+     "ratio": 6.86,
+     "required": 4.5
+    },
+    {
+     "state": "explore-pivot",
+     "vp": "390x844",
+     "selector": "film-btn",
+     "text": "Reset",
+     "px": 14,
+     "large": false,
+     "ratio": 15.19,
+     "required": 4.5
+    },
+    {
+     "state": "explore-pivot",
+     "vp": "390x844",
+     "selector": "film-btn",
+     "text": "Return to the lesson",
+     "px": 14,
+     "large": false,
+     "ratio": 18.32,
+     "required": 4.5
+    },
+    {
+     "state": "explore-ball",
+     "vp": "390x844",
+     "selector": "film-explore__title",
+     "text": "Ball-and-socket joint · shoulder",
+     "px": 17,
+     "large": false,
+     "ratio": 16.73,
+     "required": 4.5
+    },
+    {
+     "state": "explore-ball",
+     "vp": "390x844",
+     "selector": "film-explore__status",
+     "text": "Teaching simulation",
+     "px": 11,
+     "large": false,
+     "ratio": 14.58,
+     "required": 4.5
+    },
+    {
+     "state": "explore-ball",
+     "vp": "390x844",
+     "selector": "film-explore__teaching",
+     "text": "This shows the movement pattern. T",
+     "px": 13,
+     "large": false,
+     "ratio": 9.37,
+     "required": 4.5
+    },
+    {
+     "state": "explore-ball",
+     "vp": "390x844",
+     "selector": "film-explore__task",
+     "text": "Your task Move the arm in two diff",
+     "px": 15,
+     "large": false,
+     "ratio": 16.73,
+     "required": 4.5
+    },
+    {
+     "state": "explore-ball",
+     "vp": "390x844",
+     "selector": "film-explore__task-label",
+     "text": "Your task",
+     "px": 11,
+     "large": false,
+     "ratio": 9.42,
+     "required": 4.5
+    },
+    {
+     "state": "explore-ball",
+     "vp": "390x844",
+     "selector": "film-explore__instruction",
+     "text": "Drag in any direction to move the ",
+     "px": 15,
+     "large": false,
+     "ratio": 16.73,
+     "required": 4.5
+    },
+    {
+     "state": "explore-ball",
+     "vp": "390x844",
+     "selector": "film-explore__readout",
+     "text": "0° · 0°",
+     "px": 20,
+     "large": false,
+     "ratio": 9.26,
+     "required": 4.5
+    },
+    {
+     "state": "explore-ball",
+     "vp": "390x844",
+     "selector": "film-explore__explanation",
+     "text": "The arm moves in many directions, ",
+     "px": 14,
+     "large": false,
+     "ratio": 9.42,
+     "required": 4.5
+    },
+    {
+     "state": "explore-ball",
+     "vp": "390x844",
+     "selector": "film-explore__keys",
+     "text": "Use the arrow keys to move, R to r",
+     "px": 13,
+     "large": false,
+     "ratio": 6.87,
+     "required": 4.5
+    },
+    {
+     "state": "explore-ball",
+     "vp": "390x844",
+     "selector": "film-btn",
+     "text": "Reset",
+     "px": 14,
+     "large": false,
+     "ratio": 15.19,
+     "required": 4.5
+    },
+    {
+     "state": "explore-ball",
+     "vp": "390x844",
+     "selector": "film-btn",
+     "text": "Return to the lesson",
+     "px": 14,
+     "large": false,
+     "ratio": 18.32,
+     "required": 4.5
+    },
+    {
+     "state": "explore-hinge",
+     "vp": "390x844",
+     "selector": "film-explore__title",
+     "text": "Hinge joint · elbow",
+     "px": 17,
+     "large": false,
+     "ratio": 16.84,
+     "required": 4.5
+    },
+    {
+     "state": "explore-hinge",
+     "vp": "390x844",
+     "selector": "film-explore__status",
+     "text": "3D joint model",
+     "px": 11,
+     "large": false,
+     "ratio": 8.78,
+     "required": 4.5
+    },
+    {
+     "state": "explore-hinge",
+     "vp": "390x844",
+     "selector": "film-explore__task",
+     "text": "Your task Bend the elbow until it ",
+     "px": 15,
+     "large": false,
+     "ratio": 16.47,
+     "required": 4.5
+    },
+    {
+     "state": "explore-hinge",
+     "vp": "390x844",
+     "selector": "film-explore__task-label",
+     "text": "Your task",
+     "px": 11,
+     "large": false,
+     "ratio": 9.42,
+     "required": 4.5
+    },
+    {
+     "state": "explore-hinge",
+     "vp": "390x844",
+     "selector": "film-explore__instruction",
+     "text": "Drag to bend and straighten the el",
+     "px": 15,
+     "large": false,
+     "ratio": 16.59,
+     "required": 4.5
+    },
+    {
+     "state": "explore-hinge",
+     "vp": "390x844",
+     "selector": "film-explore__readout",
+     "text": "3°",
+     "px": 20,
+     "large": false,
+     "ratio": 9.26,
+     "required": 4.5
+    },
+    {
+     "state": "explore-hinge",
+     "vp": "390x844",
+     "selector": "film-explore__explanation",
+     "text": "Bending is flexion. Straightening ",
+     "px": 14,
+     "large": false,
+     "ratio": 9.32,
+     "required": 4.5
+    },
+    {
+     "state": "explore-hinge",
+     "vp": "390x844",
+     "selector": "film-explore__keys",
+     "text": "Use the arrow keys to move, R to r",
+     "px": 13,
+     "large": false,
+     "ratio": 6.84,
+     "required": 4.5
+    },
+    {
+     "state": "explore-hinge",
+     "vp": "390x844",
+     "selector": "film-btn",
+     "text": "Reset",
+     "px": 14,
+     "large": false,
+     "ratio": 15.19,
+     "required": 4.5
+    },
+    {
+     "state": "explore-hinge",
+     "vp": "390x844",
+     "selector": "film-btn",
+     "text": "Return to the lesson",
+     "px": 14,
+     "large": false,
+     "ratio": 18.32,
+     "required": 4.5
+    },
+    {
+     "state": "recall-question",
+     "vp": "390x844",
+     "selector": "film-recall__progress",
+     "text": "Question 1 / 5",
+     "px": 12,
+     "large": false,
+     "ratio": 6.86,
+     "required": 4.5
+    },
+    {
+     "state": "recall-question",
+     "vp": "390x844",
+     "selector": "film-recall__question",
+     "text": "These skull bones hardly move at a",
+     "px": 19,
+     "large": false,
+     "ratio": 16.71,
+     "required": 4.5
+    },
+    {
+     "state": "recall-question",
+     "vp": "390x844",
+     "selector": "film-recall__prompt",
+     "text": "Which type of joint is this?",
+     "px": 14,
+     "large": false,
+     "ratio": 9.36,
+     "required": 4.5
+    },
+    {
+     "state": "recall-question",
+     "vp": "390x844",
+     "selector": "film-recall__option",
+     "text": "Fixed",
+     "px": 14,
+     "large": false,
+     "ratio": 15.13,
+     "required": 4.5
+    },
+    {
+     "state": "recall-question",
+     "vp": "390x844",
+     "selector": "film-recall__option",
+     "text": "Pivot",
+     "px": 14,
+     "large": false,
+     "ratio": 14.99,
+     "required": 4.5
+    },
+    {
+     "state": "recall-question",
+     "vp": "390x844",
+     "selector": "film-recall__option",
+     "text": "Ball and socket",
+     "px": 14,
+     "large": false,
+     "ratio": 14.81,
+     "required": 4.5
+    },
+    {
+     "state": "recall-question",
+     "vp": "390x844",
+     "selector": "film-recall__option",
+     "text": "Hinge",
+     "px": 14,
+     "large": false,
+     "ratio": 15.13,
+     "required": 4.5
+    },
+    {
+     "state": "recall-question",
+     "vp": "390x844",
+     "selector": "film-btn",
+     "text": "Return to the lesson",
+     "px": 14,
+     "large": false,
+     "ratio": 14.99,
+     "required": 4.5
+    },
+    {
+     "state": "recall-answered",
+     "vp": "390x844",
+     "selector": "film-recall__progress",
+     "text": "Question 1 / 5",
+     "px": 12,
+     "large": false,
+     "ratio": 6.86,
+     "required": 4.5
+    },
+    {
+     "state": "recall-answered",
+     "vp": "390x844",
+     "selector": "film-recall__question",
+     "text": "These skull bones hardly move at a",
+     "px": 19,
+     "large": false,
+     "ratio": 16.71,
+     "required": 4.5
+    },
+    {
+     "state": "recall-answered",
+     "vp": "390x844",
+     "selector": "film-recall__prompt",
+     "text": "Which type of joint is this?",
+     "px": 14,
+     "large": false,
+     "ratio": 9.36,
+     "required": 4.5
+    },
+    {
+     "state": "recall-answered",
+     "vp": "390x844",
+     "selector": "film-recall__option",
+     "text": "Fixed",
+     "px": 14,
+     "large": false,
+     "ratio": 8.78,
+     "required": 4.5
+    },
+    {
+     "state": "recall-answered",
+     "vp": "390x844",
+     "selector": "film-recall__option",
+     "text": "Pivot",
+     "px": 14,
+     "large": false,
+     "ratio": 14.85,
+     "required": 4.5
+    },
+    {
+     "state": "recall-answered",
+     "vp": "390x844",
+     "selector": "film-recall__option",
+     "text": "Ball and socket",
+     "px": 14,
+     "large": false,
+     "ratio": 14.83,
+     "required": 4.5
+    },
+    {
+     "state": "recall-answered",
+     "vp": "390x844",
+     "selector": "film-recall__option",
+     "text": "Hinge",
+     "px": 14,
+     "large": false,
+     "ratio": 5.52,
+     "required": 4.5
+    },
+    {
+     "state": "recall-answered",
+     "vp": "390x844",
+     "selector": "film-recall__feedback",
+     "text": "Yes. That is right. Fixed: the bon",
+     "px": 14,
+     "large": false,
+     "ratio": 16.71,
+     "required": 4.5
+    },
+    {
+     "state": "recall-answered",
+     "vp": "390x844",
+     "selector": "film-btn",
+     "text": "Next",
+     "px": 14,
+     "large": false,
+     "ratio": 16.08,
+     "required": 4.5
+    },
+    {
+     "state": "recall-answered",
+     "vp": "390x844",
+     "selector": "film-btn",
+     "text": "Return to the lesson",
+     "px": 14,
+     "large": false,
+     "ratio": 14.84,
+     "required": 4.5
+    }
+   ],
+   "failing": []
+  }
+ }
+}

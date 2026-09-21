@@ -1,0 +1,570 @@
+{
+ "step": "13-final",
+ "document": "Anatomical review manifest - existing evidence for each review item. READ ONLY.",
+ "generatedAt": "2026-09-18T06:29:32.806Z",
+ "generator": "pipeline/qa/build_review_manifest.ts",
+ "productState": "FROZEN. No model, asset, rig or runtime feature was changed to produce this manifest.",
+ "howToUse": "Open qa/expert/reviewer-checklist.md and work through sections A, B and C. This manifest tells you which capture or report backs each item, with a SHA-256 so you can be sure which image you are looking at. Captures are of the frozen build.",
+ "validatedVsSchematic": {
+  "validated": {
+   "joint": "elbow (right)",
+   "basis": "procedural hinge rig fitted in Blender, runtime verified against the Blender rig at 0/45/90/145 deg to below 0.001 mm",
+   "report": "qa/reports/elbow_r.gate3.step12.json"
+  },
+  "schematic": [
+   {
+    "joint": "skull (fixed)",
+    "limitation": "schematic teaching representation; static marker, no motion, no rig"
+   },
+   {
+    "joint": "neck C1/C2 (pivot)",
+    "limitation": "schematic teaching representation; NO validated C1/C2 rig"
+   },
+   {
+    "joint": "shoulder (ball-and-socket)",
+    "limitation": "schematic teaching representation; NO validated shoulder rig"
+   },
+   {
+    "joint": "hip (ball-and-socket)",
+    "limitation": "schematic teaching representation; NO validated hip rig"
+   },
+   {
+    "joint": "knee (hinge)",
+    "limitation": "schematic teaching representation; NO validated knee rig"
+   }
+  ],
+  "reviewerQuestion": "Is the distinction between the validated elbow and the five schematic demonstrations sufficiently clear to a learner? (reviewer-checklist.md item A19)"
+ },
+ "fullBody": [
+  {
+   "stage": "intro",
+   "shots": [
+    "intro.title",
+    "intro.map"
+   ],
+   "captures": [
+    {
+     "path": "qa/visual/step12/film/01_intro_full_body.png",
+     "present": true,
+     "bytes": 448236,
+     "sha256": "d81a394d7f3da858be59286679690b27af30c9e8dea43466b8259f91cdba4195",
+     "modified": "2026-09-18T06:23:42.041Z"
+    },
+    {
+     "path": "qa/visual/step12/film/01b_intro_joint_map.png",
+     "present": true,
+     "bytes": 479908,
+     "sha256": "972e0e1e6c7cbd592a63ef151f041b4de860628d6126e93a91b51e65de0f8957",
+     "modified": "2026-09-18T06:23:43.347Z"
+    }
+   ],
+   "assess": [
+    "does the opening orient the learner",
+    "body shell + skeleton legibility"
+   ]
+  },
+  {
+   "stage": "fixed joint",
+   "shots": [
+    "fixed.travel",
+    "fixed.detail"
+   ],
+   "captures": [
+    {
+     "path": "qa/visual/step12/film/02_fixed_skull.png",
+     "present": true,
+     "bytes": 417509,
+     "sha256": "5d5b9041c5cd5b3ee87dd602176f0117fcb72e8478b17e3327b0bae49623fb6a",
+     "modified": "2026-09-18T06:23:44.804Z"
+    }
+   ],
+   "assess": [
+    "structure names",
+    "side",
+    "anatomical placement (frontal + right parietal, a cranial suture)",
+    "schematic marker clarity",
+    "wording does not overstate immobility"
+   ]
+  },
+  {
+   "stage": "pivot",
+   "shots": [
+    "pivot.travel",
+    "pivot.rotate"
+   ],
+   "captures": [
+    {
+     "path": "qa/visual/step12/film/03_pivot_upper_neck.png",
+     "present": true,
+     "bytes": 522464,
+     "sha256": "9e68ee77b71164b188a73f9f67481e65c2171e8ecc2876e0b0e22801b5c8cb3c",
+     "modified": "2026-09-18T06:23:46.143Z"
+    }
+   ],
+   "assess": [
+    "placement of the upper-neck region",
+    "rotation arrow direction",
+    "camera angle",
+    "SCHEMATIC: no validated C1/C2 rig"
+   ]
+  },
+  {
+   "stage": "ball-and-socket: shoulder",
+   "shots": [
+    "ball.travel",
+    "ball.shoulder"
+   ],
+   "captures": [
+    {
+     "path": "qa/visual/step12/film/04_ball_socket_shoulder.png",
+     "present": true,
+     "bytes": 568562,
+     "sha256": "8cedd7cde1b3e96f264e094e9f4eb01995f8a420a6003a5327ad67c7d3c4385f",
+     "modified": "2026-09-18T06:23:47.471Z"
+    }
+   ],
+   "assess": [
+    "humerus + scapula placement",
+    "side",
+    "directional arcs are not measured ranges",
+    "SCHEMATIC: no validated shoulder rig"
+   ]
+  },
+  {
+   "stage": "ball-and-socket: hip",
+   "shots": [
+    "ball.hip"
+   ],
+   "captures": [
+    {
+     "path": "qa/visual/step12/film/05_ball_socket_hip.png",
+     "present": true,
+     "bytes": 549017,
+     "sha256": "612954e6f274399e47bbfe0648c3460e983079c0b87725ee62579d4541f976a6",
+     "modified": "2026-09-18T06:23:48.821Z"
+    }
+   ],
+   "assess": [
+    "femur + pelvis placement",
+    "side",
+    "HIP CLAIM PENDING EXPERT CONFIRMATION",
+    "SCHEMATIC: no validated hip rig"
+   ]
+  },
+  {
+   "stage": "elbow (hero)",
+   "shots": [
+    "hinge.travel",
+    "hinge.source",
+    "hinge.bones",
+    "hinge.axis",
+    "hinge.flexion",
+    "hinge.extension",
+    "hinge.try",
+    "hinge.support",
+    "hinge.return"
+   ],
+   "captures": [
+    {
+     "path": "qa/visual/step12/film/06_hinge_elbow_source.png",
+     "present": true,
+     "bytes": 531098,
+     "sha256": "8da15dc6f607ca7ec768534ccec017929385d7a4800ceffb585a8501b6d6facb",
+     "modified": "2026-09-18T06:23:50.223Z"
+    },
+    {
+     "path": "qa/visual/step12/film/06b_hinge_elbow_bones.png",
+     "present": true,
+     "bytes": 463464,
+     "sha256": "3aa7e0a2eedf00528445abf4ee9867c7bfd260b2ba8aa782cfba789274df287e",
+     "modified": "2026-09-18T06:23:51.542Z"
+    },
+    {
+     "path": "qa/visual/step12/film/06c_hinge_elbow_axis.png",
+     "present": true,
+     "bytes": 467339,
+     "sha256": "566f3128f2d035ec8d1f9b1315036e9ee5851929798335937361954f53e817c8",
+     "modified": "2026-09-18T06:23:52.843Z"
+    },
+    {
+     "path": "qa/visual/step12/film/06d_hinge_elbow_support.png",
+     "present": true,
+     "bytes": 561556,
+     "sha256": "3b4ebf3683e5d333232e3d78d792a8bf0fab1b9ff680d0cb93248afd262f8601",
+     "modified": "2026-09-18T06:23:54.217Z"
+    },
+    {
+     "path": "qa/visual/step12/film/elbow_000.png",
+     "present": true,
+     "bytes": 463935,
+     "sha256": "1389e0331227c043aabcc87de39d46539d8a70fe8045fad45ca93fca827428d5",
+     "modified": "2026-09-18T06:24:00.681Z"
+    },
+    {
+     "path": "qa/visual/step12/film/elbow_045.png",
+     "present": true,
+     "bytes": 464259,
+     "sha256": "727cee23ac72c8cf2ebfb57eae9157ba7eaeeaa0bdae83b271769c3a46f7ea76",
+     "modified": "2026-09-18T06:24:01.965Z"
+    },
+    {
+     "path": "qa/visual/step12/film/elbow_090.png",
+     "present": true,
+     "bytes": 452298,
+     "sha256": "3f139088eb28fbf8ff60829438923952169d1f634227b26d704d6b5b34d0e0a0",
+     "modified": "2026-09-18T06:24:03.237Z"
+    },
+    {
+     "path": "qa/visual/step12/film/elbow_145.png",
+     "present": true,
+     "bytes": 482687,
+     "sha256": "73ddf7a079d9e6461c4798944310faf3cfb20250ac82c8fbc36c7b58d9ca8b8f",
+     "modified": "2026-09-18T06:24:04.587Z"
+    }
+   ],
+   "assess": [
+    "structure names",
+    "bone relationships",
+    "hinge-axis credibility",
+    "flexion direction and plane",
+    "capsule",
+    "RCL",
+    "UCL",
+    "annular ligament (present but never shown)",
+    "schematic band representation",
+    "body -> elbow handoff",
+    "VALIDATED procedural rig"
+   ]
+  },
+  {
+   "stage": "knee",
+   "shots": [
+    "hinge.knee"
+   ],
+   "captures": [
+    {
+     "path": "qa/visual/step12/film/07_hinge_knee.png",
+     "present": true,
+     "bytes": 425148,
+     "sha256": "36b00216ac28f2ebadd1ce04f3e8ffeb6aa689384362726efae41e3dbdd665e9",
+     "modified": "2026-09-18T06:23:55.455Z"
+    }
+   ],
+   "assess": [
+    "knee region placement",
+    "single-plane arc",
+    "SCHEMATIC: no validated knee rig"
+   ]
+  },
+  {
+   "stage": "recap",
+   "shots": [
+    "recap.pullback",
+    "recap.compare",
+    "recap.check"
+   ],
+   "captures": [
+    {
+     "path": "qa/visual/step12/film/08_recap_full_body.png",
+     "present": true,
+     "bytes": 464229,
+     "sha256": "540f01ce76e640b4ed37ece73976738df2d5dec2f2236c0e95fba97afe206621",
+     "modified": "2026-09-18T06:23:56.766Z"
+    },
+    {
+     "path": "qa/visual/step12/film/08b_recap_compare.png",
+     "present": true,
+     "bytes": 465384,
+     "sha256": "b466621df6f7c7dbf3a27aee57885b39181da98677c88b2abb2cccd1aae01501",
+     "modified": "2026-09-18T06:23:58.056Z"
+    },
+    {
+     "path": "qa/visual/step12/film/09_check.png",
+     "present": true,
+     "bytes": 448159,
+     "sha256": "1e15fa2b1ca1680d1ab390208322070ba8e5b534e23177b323ce5974f747ebf6",
+     "modified": "2026-09-18T06:23:59.364Z"
+    }
+   ],
+   "assess": [
+    "all four categories named",
+    "six site labels",
+    "only the elbow is rig-animated is stated",
+    "recap.pullback carries no note (documented exception)"
+   ]
+  }
+ ],
+ "elbowPoses": [
+  {
+   "flexionDeg": 0,
+   "meaning": "true extension (controller zero)",
+   "captures": [
+    {
+     "path": "qa/visual/step12/film/elbow_000.png",
+     "present": true,
+     "bytes": 463935,
+     "sha256": "1389e0331227c043aabcc87de39d46539d8a70fe8045fad45ca93fca827428d5",
+     "modified": "2026-09-18T06:24:00.681Z"
+    },
+    {
+     "path": "qa/visual/step12/reference_poses/elbow_r_closeup_000.png",
+     "present": true,
+     "bytes": 352556,
+     "sha256": "1119da3d5f9abca8549aa7bb485f678b07d1d8dd99476f8e25a780ef907cb097",
+     "modified": "2026-09-18T06:24:46.283Z"
+    },
+    {
+     "path": "qa/visual/step12/reference_poses/elbow_r_overview_000.png",
+     "present": true,
+     "bytes": 277340,
+     "sha256": "808371c4f1ab72fef1e71ceac6124e97191fa72e64a4713d7d56955861855ce8",
+     "modified": "2026-09-18T06:24:45.265Z"
+    },
+    {
+     "path": "qa/visual/step12/reference_poses/elbow_r_context_000.png",
+     "present": true,
+     "bytes": 314936,
+     "sha256": "e8f63d53c20591dbbe7249933710aa1afa249b8b1702a314a4971ce81ad93312",
+     "modified": "2026-09-18T06:24:47.497Z"
+    }
+   ],
+   "assess": [
+    "pose plausibility",
+    "articular congruence",
+    "no visible bone explosion or unexplained gap",
+    "label placement"
+   ]
+  },
+  {
+   "flexionDeg": 45,
+   "meaning": "mid-range",
+   "captures": [
+    {
+     "path": "qa/visual/step12/film/elbow_045.png",
+     "present": true,
+     "bytes": 464259,
+     "sha256": "727cee23ac72c8cf2ebfb57eae9157ba7eaeeaa0bdae83b271769c3a46f7ea76",
+     "modified": "2026-09-18T06:24:01.965Z"
+    },
+    {
+     "path": "qa/visual/step12/reference_poses/elbow_r_closeup_045.png",
+     "present": true,
+     "bytes": 370009,
+     "sha256": "291f6c8fd11a063f4bcf6096678ba57cd96d9fa0b4213dc28569d6975ebccd57",
+     "modified": "2026-09-18T06:24:46.518Z"
+    },
+    {
+     "path": "qa/visual/step12/reference_poses/elbow_r_overview_045.png",
+     "present": true,
+     "bytes": 275858,
+     "sha256": "679761794b8697247f13bc81c26b007c44d2fe8bc4a7f2fb984357936bd0f8a7",
+     "modified": "2026-09-18T06:24:45.525Z"
+    }
+   ],
+   "assess": [
+    "pose plausibility",
+    "articular congruence",
+    "no visible bone explosion or unexplained gap",
+    "label placement"
+   ]
+  },
+  {
+   "flexionDeg": 90,
+   "meaning": "the angle the learner is asked to reach",
+   "captures": [
+    {
+     "path": "qa/visual/step12/film/elbow_090.png",
+     "present": true,
+     "bytes": 452298,
+     "sha256": "3f139088eb28fbf8ff60829438923952169d1f634227b26d704d6b5b34d0e0a0",
+     "modified": "2026-09-18T06:24:03.237Z"
+    },
+    {
+     "path": "qa/visual/step12/reference_poses/elbow_r_closeup_090.png",
+     "present": true,
+     "bytes": 350168,
+     "sha256": "f1348aa99a27eca25591f93e76eca6cc10aa82c9f29d695819498134175f7e74",
+     "modified": "2026-09-18T06:24:46.756Z"
+    },
+    {
+     "path": "qa/visual/step12/reference_poses/elbow_r_overview_090.png",
+     "present": true,
+     "bytes": 270145,
+     "sha256": "c9dcd62f517676c92639a2116c9886e062e020bb98a1053aaf9df79ba7fd7d1e",
+     "modified": "2026-09-18T06:24:45.769Z"
+    },
+    {
+     "path": "qa/visual/step12/reference_poses/elbow_r_context_090.png",
+     "present": true,
+     "bytes": 275716,
+     "sha256": "3bb766e37a91800b13b14883e2de2d755181f29c0bb170090cf32c90e8c6a3fb",
+     "modified": "2026-09-18T06:24:47.810Z"
+    }
+   ],
+   "assess": [
+    "pose plausibility",
+    "articular congruence",
+    "no visible bone explosion or unexplained gap",
+    "label placement"
+   ]
+  },
+  {
+   "flexionDeg": 145,
+   "meaning": "approximate teaching maximum",
+   "captures": [
+    {
+     "path": "qa/visual/step12/film/elbow_145.png",
+     "present": true,
+     "bytes": 482687,
+     "sha256": "73ddf7a079d9e6461c4798944310faf3cfb20250ac82c8fbc36c7b58d9ca8b8f",
+     "modified": "2026-09-18T06:24:04.587Z"
+    },
+    {
+     "path": "qa/visual/step12/reference_poses/elbow_r_closeup_145.png",
+     "present": true,
+     "bytes": 373458,
+     "sha256": "981c4d3ae384ec8be25f346a54eb7a5d170f3386a8009961271050b2f536da7c",
+     "modified": "2026-09-18T06:24:47.009Z"
+    },
+    {
+     "path": "qa/visual/step12/reference_poses/elbow_r_overview_145.png",
+     "present": true,
+     "bytes": 277362,
+     "sha256": "9d8c648c36f097cc3b7d8c980c0a60d41223c208c5b5d1bc6c1484845e49f0e2",
+     "modified": "2026-09-18T06:24:46.011Z"
+    }
+   ],
+   "assess": [
+    "pose plausibility",
+    "articular congruence",
+    "no visible bone explosion or unexplained gap",
+    "label placement"
+   ]
+  }
+ ],
+ "elbowStructuresForReview": {
+  "shownToTheLearner": [
+   "Humerus",
+   "Radius",
+   "Ulna",
+   "Elbow joint",
+   "Articular capsule of elbow joint",
+   "Radial collateral ligament (schematic band)",
+   "Ulnar collateral ligament (schematic band)"
+  ],
+  "presentInTheAssetButNeverShown": [
+   "Head of radius",
+   "Olecranon",
+   "Coronoid process",
+   "Capitulum (region)",
+   "Trochlea (region)",
+   "Annular ligament of radius"
+  ],
+  "reviewerQuestion": "Should the elbow chapter name any of the unshown landmarks for the teaching goal? (item A18)"
+ },
+ "supportingReports": [
+  {
+   "path": "qa/expert/step13_review.json",
+   "present": true,
+   "bytes": 19482,
+   "sha256": "e8673721b355f8bb4390518cd3cf5731ed06c91529342780cf557ddd986aae2d",
+   "modified": "2026-09-18T06:00:16.471Z"
+  },
+  {
+   "path": "qa/expert/step13_cross_layer.json",
+   "present": true,
+   "bytes": 5539,
+   "sha256": "9f404b9e2cff5d653388c05f1111bcc6ee7d7a04a13a60e03951479ec57baed2",
+   "modified": "2026-09-18T06:03:50.423Z"
+  },
+  {
+   "path": "qa/expert/content_provenance.json",
+   "present": true,
+   "bytes": 42822,
+   "sha256": "ab1ab4d04e66d77fc2bf90117e3809105db0d003948fea333d446b2f959baaad",
+   "modified": "2026-09-18T05:54:35.554Z"
+  },
+  {
+   "path": "qa/elbow_r.poses.draft.json",
+   "present": true,
+   "bytes": 9484,
+   "sha256": "761a1f1ee799f10adf742f0c4e369851c8d034345e115f187291702c20b88472",
+   "modified": "2026-09-18T05:11:07.250Z"
+  },
+  {
+   "path": "qa/reports/elbow_r.gate3.step12.json",
+   "present": true,
+   "bytes": 2898,
+   "sha256": "1c76e37ca56d27e473e468cfc9cf97a96e74e392e65c641526d3766c8408e2da",
+   "modified": "2026-09-18T06:24:31.670Z"
+  },
+  {
+   "path": "qa/reports/elbow_r.gate2.step13.json",
+   "present": true,
+   "bytes": 11253,
+   "sha256": "2adb414b3c8814b24ea1c5726d3fc27ff960c0102bdd2a75efc0138016064fac",
+   "modified": "2026-09-18T06:05:02.214Z"
+  },
+  {
+   "path": "qa/reports/elbow_r.pivot_fit.json",
+   "present": true,
+   "bytes": 6806,
+   "sha256": "e153cfca91f45e4fa6607c0e0373177a45be82936c7d6818bd6c6b34c5ff0b1e",
+   "modified": "2026-09-17T09:18:21.916Z"
+  },
+  {
+   "path": "qa/reports/elbow_r.neutral_offset.json",
+   "present": true,
+   "bytes": 17690,
+   "sha256": "401c26eb0a5514829463882b055b8c0c48e64584fda215aa13ae046bbcf6f5de",
+   "modified": "2026-09-17T09:27:09.046Z"
+  },
+  {
+   "path": "qa/reports/step12.accessibility.json",
+   "present": true,
+   "bytes": 48982,
+   "sha256": "e8c8d1bf405c2a169209058f0384b7311063f0b382ac287f451ce5dbdca1785d",
+   "modified": "2026-09-18T06:25:52.235Z"
+  },
+  {
+   "path": "qa/reports/step12.reduced_motion.json",
+   "present": true,
+   "bytes": 3757,
+   "sha256": "28018797961ec91d6c74f85bb4ba7c195a19e59ef054a636a7d3f56e18eea36c",
+   "modified": "2026-09-18T06:26:25.902Z"
+  },
+  {
+   "path": "qa/reports/step13.bugsweep.json",
+   "present": true,
+   "bytes": 3530,
+   "sha256": "5cc6514a6e91217514fcf2f5d92c43dc9100c93ee6ecc157e986c425ab7f85b4",
+   "modified": "2026-09-18T06:28:31.533Z"
+  },
+  {
+   "path": "qa/reports/step12r.perf.final.json",
+   "present": true,
+   "bytes": 178519,
+   "sha256": "e7d6028a2dece1d45c047b54cfddc6317fc98bb9348a0630f947b71e5bc7f05e",
+   "modified": "2026-09-17T19:07:12.557Z"
+  },
+  {
+   "path": "qa/reports/step12.delivery_e2e.json",
+   "present": true,
+   "bytes": 2781,
+   "sha256": "f58e047a0bfa022d8cbfafb657f568de11b2a3a01cafd6b38ba2d4c27b582033",
+   "modified": "2026-09-18T06:26:01.623Z"
+  },
+  {
+   "path": "qa/devices.md",
+   "present": true,
+   "bytes": 5522,
+   "sha256": "fc3ce1f2a91d3bab7d1fb7d16cb874927417cc243a372676246cad03eeba5fa3",
+   "modified": "2026-09-17T18:38:46.849Z"
+  }
+ ],
+ "additionalCaptureSets": {
+  "responsiveLayouts": "qa/visual/step12/regression/<viewport>/ - 11 states at 390x844, 412x915, 768x1024, 1280x800, 1440x900",
+  "step13FixEvidence": "qa/visual/step13/ - the shots whose captions gained a provenance note, and the relabelled support shot",
+  "renderingComparison": "qa/visual/step12r/tradeoff-canvas/ - canvas-only comparison against the Step-11 build"
+ }
+}

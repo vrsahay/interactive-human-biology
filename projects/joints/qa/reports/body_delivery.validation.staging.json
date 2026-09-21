@@ -1,0 +1,596 @@
+{
+ "dir": "C:\\Users\\Admin\\dev\\joints-platform\\qa\\export\\body_v3",
+ "passed": true,
+ "checks": [
+  {
+   "name": "groups partition the structures exactly (every structure in exactly one group, groupId consistent)",
+   "pass": true,
+   "detail": {
+    "structures": 535,
+    "groups": 35
+   }
+  },
+  {
+   "name": "structure set identical to the Step-11 body asset (ids, labels, source objects, regions)",
+   "pass": true
+  },
+  {
+   "name": "joint sites, regions and frame carried over unchanged from Step 11",
+   "pass": true
+  },
+  {
+   "name": "every render group is homogeneous in output, regions, joint sites, joint handover and close-up class",
+   "pass": true
+  },
+  {
+   "name": "close-up classification matches the spec spheres",
+   "pass": true,
+   "detail": {
+    "closeup": 206
+   }
+  },
+  {
+   "name": "intro: bytes + sha256 match manifest",
+   "pass": true
+  },
+  {
+   "name": "intro: proxy = one untextured node covering the whole skeleton (bbox within 6.2 mm)",
+   "pass": true,
+   "detail": {
+    "nodes": 1,
+    "tris": 20231,
+    "bboxDevMm": 0.896
+   }
+  },
+  {
+   "name": "intro: bytes + sha256 match manifest",
+   "pass": true
+  },
+  {
+   "name": "intro: Khronos validator 0 errors (compressed + decoded)",
+   "pass": true,
+   "detail": {
+    "compressed": {
+     "errors": 0,
+     "warnings": 0,
+     "infos": 2,
+     "codes": [
+      "UNSUPPORTED_EXTENSION",
+      "UNUSED_OBJECT"
+     ]
+    },
+    "decoded": {
+     "errors": 0,
+     "warnings": 0,
+     "infos": 0,
+     "codes": []
+    }
+   }
+  },
+  {
+   "name": "intro: gzip within budget (220 KB)",
+   "pass": true,
+   "detail": {
+    "gzipBytes": 140994
+   }
+  },
+  {
+   "name": "skin_intro: bytes + sha256 match manifest",
+   "pass": true
+  },
+  {
+   "name": "skin_intro: proxy = one untextured node covering the whole skin (bbox within 8.2 mm)",
+   "pass": true,
+   "detail": {
+    "nodes": 1,
+    "tris": 7529,
+    "bboxDevMm": 0.226
+   }
+  },
+  {
+   "name": "skin_intro: bytes + sha256 match manifest",
+   "pass": true
+  },
+  {
+   "name": "skin_intro: Khronos validator 0 errors (compressed + decoded)",
+   "pass": true,
+   "detail": {
+    "compressed": {
+     "errors": 0,
+     "warnings": 0,
+     "infos": 2,
+     "codes": [
+      "UNSUPPORTED_EXTENSION",
+      "UNUSED_OBJECT"
+     ]
+    },
+    "decoded": {
+     "errors": 0,
+     "warnings": 0,
+     "infos": 0,
+     "codes": []
+    }
+   }
+  },
+  {
+   "name": "skin_intro: gzip within budget (90 KB)",
+   "pass": true,
+   "detail": {
+    "gzipBytes": 80101
+   }
+  },
+  {
+   "name": "closeup: bytes + sha256 match manifest",
+   "pass": true
+  },
+  {
+   "name": "closeup: group nodes match manifest (ids, LOD, triangle counts, coverage)",
+   "pass": true,
+   "detail": {
+    "nodes": 30,
+    "groups": 30
+   }
+  },
+  {
+   "name": "closeup: geometry finite",
+   "pass": true
+  },
+  {
+   "name": "closeup: Khronos validator 0 errors (compressed + decoded)",
+   "pass": true,
+   "detail": {
+    "compressed": {
+     "errors": 0,
+     "warnings": 0,
+     "infos": 32,
+     "codes": [
+      "UNSUPPORTED_EXTENSION",
+      "UNUSED_OBJECT"
+     ]
+    },
+    "decoded": {
+     "errors": 0,
+     "warnings": 0,
+     "infos": 30,
+     "codes": [
+      "UNUSED_OBJECT"
+     ]
+    }
+   }
+  },
+  {
+   "name": "closeup: gzip within budget (1150 KB)",
+   "pass": true,
+   "detail": {
+    "gzipBytes": 1090164
+   }
+  },
+  {
+   "name": "context: bytes + sha256 match manifest",
+   "pass": true
+  },
+  {
+   "name": "context: group nodes match manifest (ids, LOD, triangle counts, coverage)",
+   "pass": true,
+   "detail": {
+    "nodes": 4,
+    "groups": 4
+   }
+  },
+  {
+   "name": "context: geometry finite",
+   "pass": true
+  },
+  {
+   "name": "context: Khronos validator 0 errors (compressed + decoded)",
+   "pass": true,
+   "detail": {
+    "compressed": {
+     "errors": 0,
+     "warnings": 0,
+     "infos": 6,
+     "codes": [
+      "UNSUPPORTED_EXTENSION",
+      "UNUSED_OBJECT"
+     ]
+    },
+    "decoded": {
+     "errors": 0,
+     "warnings": 0,
+     "infos": 4,
+     "codes": [
+      "UNUSED_OBJECT"
+     ]
+    }
+   }
+  },
+  {
+   "name": "context: gzip within budget (150 KB)",
+   "pass": true,
+   "detail": {
+    "gzipBytes": 126866
+   }
+  },
+  {
+   "name": "context_lod1: bytes + sha256 match manifest",
+   "pass": true
+  },
+  {
+   "name": "context_lod1: group nodes match manifest (ids, LOD, triangle counts, coverage)",
+   "pass": true,
+   "detail": {
+    "nodes": 4,
+    "groups": 4
+   }
+  },
+  {
+   "name": "context_lod1: geometry finite",
+   "pass": true
+  },
+  {
+   "name": "context_lod1: Khronos validator 0 errors (compressed + decoded)",
+   "pass": true,
+   "detail": {
+    "compressed": {
+     "errors": 0,
+     "warnings": 0,
+     "infos": 6,
+     "codes": [
+      "UNSUPPORTED_EXTENSION",
+      "UNUSED_OBJECT"
+     ]
+    },
+    "decoded": {
+     "errors": 0,
+     "warnings": 0,
+     "infos": 4,
+     "codes": [
+      "UNUSED_OBJECT"
+     ]
+    }
+   }
+  },
+  {
+   "name": "context_lod1: gzip within budget (110 KB)",
+   "pass": true,
+   "detail": {
+    "gzipBytes": 62904
+   }
+  },
+  {
+   "name": "skin: bytes + sha256 match manifest",
+   "pass": true
+  },
+  {
+   "name": "skin: group nodes match manifest (ids, LOD, triangle counts, coverage)",
+   "pass": true,
+   "detail": {
+    "nodes": 1,
+    "groups": 1
+   }
+  },
+  {
+   "name": "skin: geometry finite",
+   "pass": true
+  },
+  {
+   "name": "skin: Khronos validator 0 errors (compressed + decoded)",
+   "pass": true,
+   "detail": {
+    "compressed": {
+     "errors": 0,
+     "warnings": 0,
+     "infos": 2,
+     "codes": [
+      "UNSUPPORTED_EXTENSION",
+      "UNUSED_OBJECT"
+     ]
+    },
+    "decoded": {
+     "errors": 0,
+     "warnings": 0,
+     "infos": 0,
+     "codes": []
+    }
+   }
+  },
+  {
+   "name": "skin: gzip within budget (280 KB)",
+   "pass": true,
+   "detail": {
+    "gzipBytes": 248883
+   }
+  },
+  {
+   "name": "skin_lod1: bytes + sha256 match manifest",
+   "pass": true
+  },
+  {
+   "name": "skin_lod1: group nodes match manifest (ids, LOD, triangle counts, coverage)",
+   "pass": true,
+   "detail": {
+    "nodes": 1,
+    "groups": 1
+   }
+  },
+  {
+   "name": "skin_lod1: geometry finite",
+   "pass": true
+  },
+  {
+   "name": "skin_lod1: Khronos validator 0 errors (compressed + decoded)",
+   "pass": true,
+   "detail": {
+    "compressed": {
+     "errors": 0,
+     "warnings": 0,
+     "infos": 2,
+     "codes": [
+      "UNSUPPORTED_EXTENSION",
+      "UNUSED_OBJECT"
+     ]
+    },
+    "decoded": {
+     "errors": 0,
+     "warnings": 0,
+     "infos": 0,
+     "codes": []
+    }
+   }
+  },
+  {
+   "name": "skin_lod1: gzip within budget (150 KB)",
+   "pass": true,
+   "detail": {
+    "gzipBytes": 130114
+   }
+  },
+  {
+   "name": "LOD0 geometry = Step-11 geometry: group bbox equals the union of the Step-11 structure boxes (<= 0.2 mm re-quantization)",
+   "pass": true,
+   "detail": {
+    "worstMm": 0.0255
+   }
+  },
+  {
+   "name": "LOD1 bbox deviation <= LOD1 max error (3 mm) + 0.2 mm",
+   "pass": true,
+   "detail": {
+    "worstMm": 1.0292
+   }
+  },
+  {
+   "name": "LOD1 simplification error within the spec bound for every structure",
+   "pass": true
+  },
+  {
+   "name": "tier high: proxy first stage shows the whole skeleton and is the same for every tier",
+   "pass": true
+  },
+  {
+   "name": "tier high: first group stage delivers the whole body (every group)",
+   "pass": true
+  },
+  {
+   "name": "tier high: every close-up skeleton group ends at LOD0",
+   "pass": true
+  },
+  {
+   "name": "tier high: stages match the spec",
+   "pass": true
+  },
+  {
+   "name": "tier medium: proxy first stage shows the whole skeleton and is the same for every tier",
+   "pass": true
+  },
+  {
+   "name": "tier medium: first group stage delivers the whole body (every group)",
+   "pass": true
+  },
+  {
+   "name": "tier medium: every close-up skeleton group ends at LOD0",
+   "pass": true
+  },
+  {
+   "name": "tier medium: stages match the spec",
+   "pass": true
+  },
+  {
+   "name": "tier low: proxy first stage shows the whole skeleton and is the same for every tier",
+   "pass": true
+  },
+  {
+   "name": "tier low: first group stage delivers the whole body (every group)",
+   "pass": true
+  },
+  {
+   "name": "tier low: every close-up skeleton group ends at LOD0",
+   "pass": true
+  },
+  {
+   "name": "tier low: stages match the spec",
+   "pass": true
+  },
+  {
+   "name": "material library: bytes + sha256 match manifest",
+   "pass": true
+  },
+  {
+   "name": "material library: Khronos validator 0 errors",
+   "pass": true,
+   "detail": {
+    "errors": 0,
+    "warnings": 4,
+    "infos": 0,
+    "codes": [
+     "MESH_PRIMITIVE_GENERATED_TANGENT_SPACE"
+    ]
+   }
+  },
+  {
+   "name": "material library: one material per group material (bone, cartilage, teeth, skin)",
+   "pass": true
+  },
+  {
+   "name": "material library textures are the Step-11 texture bytes (unchanged images)",
+   "pass": true
+  },
+  {
+   "name": "film handover (elbow core/detail shared source objects) covers whole render groups only",
+   "pass": true,
+   "detail": {
+    "groups": [
+     "skeleton.005.bone.closeup.elbow_right.shoulder_right.ball_socket.shoulder_right.hinge.elbow_right.elbow_r_core",
+     "skeleton.004.bone.closeup.elbow_right.elbow_r_core",
+     "skeleton.006.bone.closeup.elbow_right.hinge.elbow_right.elbow_r_core",
+     "skeleton.003.bone.closeup.elbow_r_core"
+    ],
+    "structures": 30
+   }
+  },
+  {
+   "name": "stationary shared structures align with the elbow asset (<= 2 mm)",
+   "pass": true,
+   "detail": {
+    "compared": 3,
+    "worstMm": 0.807
+   }
+  }
+ ],
+ "khronos": {
+  "intro": {
+   "compressed": {
+    "errors": 0,
+    "warnings": 0,
+    "infos": 2,
+    "codes": [
+     "UNSUPPORTED_EXTENSION",
+     "UNUSED_OBJECT"
+    ]
+   },
+   "decoded": {
+    "errors": 0,
+    "warnings": 0,
+    "infos": 0,
+    "codes": []
+   }
+  },
+  "skin_intro": {
+   "compressed": {
+    "errors": 0,
+    "warnings": 0,
+    "infos": 2,
+    "codes": [
+     "UNSUPPORTED_EXTENSION",
+     "UNUSED_OBJECT"
+    ]
+   },
+   "decoded": {
+    "errors": 0,
+    "warnings": 0,
+    "infos": 0,
+    "codes": []
+   }
+  },
+  "closeup": {
+   "compressed": {
+    "errors": 0,
+    "warnings": 0,
+    "infos": 32,
+    "codes": [
+     "UNSUPPORTED_EXTENSION",
+     "UNUSED_OBJECT"
+    ]
+   },
+   "decoded": {
+    "errors": 0,
+    "warnings": 0,
+    "infos": 30,
+    "codes": [
+     "UNUSED_OBJECT"
+    ]
+   }
+  },
+  "context": {
+   "compressed": {
+    "errors": 0,
+    "warnings": 0,
+    "infos": 6,
+    "codes": [
+     "UNSUPPORTED_EXTENSION",
+     "UNUSED_OBJECT"
+    ]
+   },
+   "decoded": {
+    "errors": 0,
+    "warnings": 0,
+    "infos": 4,
+    "codes": [
+     "UNUSED_OBJECT"
+    ]
+   }
+  },
+  "context_lod1": {
+   "compressed": {
+    "errors": 0,
+    "warnings": 0,
+    "infos": 6,
+    "codes": [
+     "UNSUPPORTED_EXTENSION",
+     "UNUSED_OBJECT"
+    ]
+   },
+   "decoded": {
+    "errors": 0,
+    "warnings": 0,
+    "infos": 4,
+    "codes": [
+     "UNUSED_OBJECT"
+    ]
+   }
+  },
+  "skin": {
+   "compressed": {
+    "errors": 0,
+    "warnings": 0,
+    "infos": 2,
+    "codes": [
+     "UNSUPPORTED_EXTENSION",
+     "UNUSED_OBJECT"
+    ]
+   },
+   "decoded": {
+    "errors": 0,
+    "warnings": 0,
+    "infos": 0,
+    "codes": []
+   }
+  },
+  "skin_lod1": {
+   "compressed": {
+    "errors": 0,
+    "warnings": 0,
+    "infos": 2,
+    "codes": [
+     "UNSUPPORTED_EXTENSION",
+     "UNUSED_OBJECT"
+    ]
+   },
+   "decoded": {
+    "errors": 0,
+    "warnings": 0,
+    "infos": 0,
+    "codes": []
+   }
+  },
+  "materialLibrary": {
+   "errors": 0,
+   "warnings": 4,
+   "infos": 0,
+   "codes": [
+    "MESH_PRIMITIVE_GENERATED_TANGENT_SPACE"
+   ]
+  }
+ },
+ "generatedAt": "2026-09-18T06:04:21.564Z"
+}

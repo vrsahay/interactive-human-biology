@@ -1,0 +1,2921 @@
+{
+ "generatedAt": "2026-09-21T06:35:56.675Z",
+ "rows": [
+  {
+   "width": 320,
+   "height": 844,
+   "explore": "explore.fixed",
+   "panel": {
+    "left": 12,
+    "top": 163,
+    "right": 308,
+    "bottom": 574,
+    "h": 411
+   },
+   "sections": [
+    {
+     "cls": "film-explore__head",
+     "h": 57
+    },
+    {
+     "cls": "film-explore__teaching",
+     "h": 38
+    },
+    {
+     "cls": "film-explore__task",
+     "h": 45
+    },
+    {
+     "cls": "film-explore__instruction",
+     "h": 20
+    },
+    {
+     "cls": "film-explore__readout",
+     "h": 26
+    },
+    {
+     "cls": "film-explore__explanation",
+     "h": 41
+    },
+    {
+     "cls": "film-explore__keys",
+     "h": 34
+    },
+    {
+     "cls": "film-explore__actions",
+     "h": 54
+    }
+   ],
+   "topBar": {
+    "left": 0,
+    "top": 0,
+    "right": 320,
+    "bottom": 80,
+    "h": 80
+   },
+   "player": {
+    "left": 0,
+    "top": 600,
+    "right": 320,
+    "bottom": 844,
+    "h": 244
+   },
+   "site": {
+    "x": 160,
+    "y": 253,
+    "inView": true
+   },
+   "siteHit": "film-explore-teaching",
+   "target": {
+    "left": 135,
+    "top": 242,
+    "right": 186,
+    "bottom": 273,
+    "heightFrac": 0.0365671253980032,
+    "widthFrac": 0.15784404308853456
+   },
+   "cameraDistance": 3.876,
+   "orbitEnabled": false,
+   "compose": {
+    "shift": 0,
+    "lift": 0.4
+   },
+   "targetCoveredFraction": 1
+  },
+  {
+   "width": 320,
+   "height": 844,
+   "explore": "explore.pivot",
+   "panel": {
+    "left": 12,
+    "top": 163,
+    "right": 308,
+    "bottom": 574,
+    "h": 411
+   },
+   "sections": [
+    {
+     "cls": "film-explore__head",
+     "h": 57
+    },
+    {
+     "cls": "film-explore__teaching",
+     "h": 38
+    },
+    {
+     "cls": "film-explore__task",
+     "h": 45
+    },
+    {
+     "cls": "film-explore__instruction",
+     "h": 20
+    },
+    {
+     "cls": "film-explore__readout",
+     "h": 26
+    },
+    {
+     "cls": "film-explore__explanation",
+     "h": 41
+    },
+    {
+     "cls": "film-explore__keys",
+     "h": 34
+    },
+    {
+     "cls": "film-explore__actions",
+     "h": 54
+    }
+   ],
+   "topBar": {
+    "left": 0,
+    "top": 0,
+    "right": 320,
+    "bottom": 80,
+    "h": 80
+   },
+   "player": {
+    "left": 0,
+    "top": 600,
+    "right": 320,
+    "bottom": 844,
+    "h": 244
+   },
+   "site": {
+    "x": 160,
+    "y": 253,
+    "inView": true
+   },
+   "siteHit": "film-explore-teaching",
+   "target": {
+    "left": 145,
+    "top": 231,
+    "right": 176,
+    "bottom": 260,
+    "heightFrac": 0.03376381325259231,
+    "widthFrac": 0.09529390132245466
+   },
+   "cameraDistance": 7.106,
+   "orbitEnabled": false,
+   "compose": {
+    "shift": 0,
+    "lift": 0.4
+   },
+   "targetCoveredFraction": 1
+  },
+  {
+   "width": 320,
+   "height": 844,
+   "explore": "explore.ball",
+   "panel": {
+    "left": 12,
+    "top": 163,
+    "right": 308,
+    "bottom": 574,
+    "h": 411
+   },
+   "sections": [
+    {
+     "cls": "film-explore__head",
+     "h": 57
+    },
+    {
+     "cls": "film-explore__teaching",
+     "h": 38
+    },
+    {
+     "cls": "film-explore__task",
+     "h": 45
+    },
+    {
+     "cls": "film-explore__instruction",
+     "h": 20
+    },
+    {
+     "cls": "film-explore__readout",
+     "h": 26
+    },
+    {
+     "cls": "film-explore__explanation",
+     "h": 41
+    },
+    {
+     "cls": "film-explore__keys",
+     "h": 34
+    },
+    {
+     "cls": "film-explore__actions",
+     "h": 54
+    }
+   ],
+   "topBar": {
+    "left": 0,
+    "top": 0,
+    "right": 320,
+    "bottom": 107,
+    "h": 107
+   },
+   "player": {
+    "left": 0,
+    "top": 600,
+    "right": 320,
+    "bottom": 844,
+    "h": 244
+   },
+   "site": {
+    "x": 160,
+    "y": 253,
+    "inView": true
+   },
+   "siteHit": "film-explore-teaching",
+   "target": {
+    "left": 142,
+    "top": 250,
+    "right": 170,
+    "bottom": 334,
+    "heightFrac": 0.09972327112725612,
+    "widthFrac": 0.08892550087432465
+   },
+   "cameraDistance": 7.752,
+   "orbitEnabled": false,
+   "compose": {
+    "shift": 0,
+    "lift": 0.4
+   },
+   "targetCoveredFraction": 1
+  },
+  {
+   "width": 320,
+   "height": 844,
+   "explore": "explore.hinge",
+   "panel": {
+    "left": 12,
+    "top": 74,
+    "right": 308,
+    "bottom": 574,
+    "h": 500
+   },
+   "sections": [
+    {
+     "cls": "film-explore__head",
+     "h": 55
+    },
+    {
+     "cls": "film-explore__task",
+     "h": 45
+    },
+    {
+     "cls": "film-explore__instruction",
+     "h": 40
+    },
+    {
+     "cls": "film-explore__readout",
+     "h": 26
+    },
+    {
+     "cls": "film-explore__explanation",
+     "h": 61
+    },
+    {
+     "cls": "film-explore__control",
+     "h": 86
+    },
+    {
+     "cls": "film-explore__keys",
+     "h": 34
+    },
+    {
+     "cls": "film-explore__actions",
+     "h": 54
+    }
+   ],
+   "topBar": {
+    "left": 0,
+    "top": 0,
+    "right": 320,
+    "bottom": 80,
+    "h": 80
+   },
+   "player": {
+    "left": 0,
+    "top": 600,
+    "right": 320,
+    "bottom": 844,
+    "h": 244
+   },
+   "site": {
+    "x": 160,
+    "y": 253,
+    "inView": true
+   },
+   "siteHit": "film-explore-panel",
+   "target": {
+    "left": 151,
+    "top": 184,
+    "right": 194,
+    "bottom": 350,
+    "heightFrac": 0.19674374013486118,
+    "widthFrac": 0.13461148707654963
+   },
+   "cameraDistance": 3.876,
+   "orbitEnabled": false,
+   "compose": {
+    "shift": 0,
+    "lift": 0.4
+   },
+   "targetCoveredFraction": 1
+  },
+  {
+   "width": 360,
+   "height": 800,
+   "explore": "explore.fixed",
+   "panel": {
+    "left": 12,
+    "top": 151,
+    "right": 348,
+    "bottom": 530,
+    "h": 379
+   },
+   "sections": [
+    {
+     "cls": "film-explore__head",
+     "h": 25
+    },
+    {
+     "cls": "film-explore__teaching",
+     "h": 38
+    },
+    {
+     "cls": "film-explore__task",
+     "h": 45
+    },
+    {
+     "cls": "film-explore__instruction",
+     "h": 20
+    },
+    {
+     "cls": "film-explore__readout",
+     "h": 26
+    },
+    {
+     "cls": "film-explore__explanation",
+     "h": 41
+    },
+    {
+     "cls": "film-explore__keys",
+     "h": 34
+    },
+    {
+     "cls": "film-explore__actions",
+     "h": 54
+    }
+   ],
+   "topBar": {
+    "left": 0,
+    "top": 0,
+    "right": 360,
+    "bottom": 80,
+    "h": 80
+   },
+   "player": {
+    "left": 0,
+    "top": 556,
+    "right": 360,
+    "bottom": 800,
+    "h": 244
+   },
+   "site": {
+    "x": 180,
+    "y": 240,
+    "inView": true
+   },
+   "siteHit": "film-explore-panel",
+   "target": {
+    "left": 152,
+    "top": 228,
+    "right": 209,
+    "bottom": 263,
+    "heightFrac": 0.04337207676751227,
+    "widthFrac": 0.15751818217459163
+   },
+   "cameraDistance": 3.269,
+   "orbitEnabled": false,
+   "compose": {
+    "shift": 0,
+    "lift": 0.4
+   },
+   "targetCoveredFraction": 1
+  },
+  {
+   "width": 360,
+   "height": 800,
+   "explore": "explore.pivot",
+   "panel": {
+    "left": 12,
+    "top": 119,
+    "right": 348,
+    "bottom": 530,
+    "h": 411
+   },
+   "sections": [
+    {
+     "cls": "film-explore__head",
+     "h": 57
+    },
+    {
+     "cls": "film-explore__teaching",
+     "h": 38
+    },
+    {
+     "cls": "film-explore__task",
+     "h": 45
+    },
+    {
+     "cls": "film-explore__instruction",
+     "h": 20
+    },
+    {
+     "cls": "film-explore__readout",
+     "h": 26
+    },
+    {
+     "cls": "film-explore__explanation",
+     "h": 41
+    },
+    {
+     "cls": "film-explore__keys",
+     "h": 34
+    },
+    {
+     "cls": "film-explore__actions",
+     "h": 54
+    }
+   ],
+   "topBar": {
+    "left": 0,
+    "top": 0,
+    "right": 360,
+    "bottom": 80,
+    "h": 80
+   },
+   "player": {
+    "left": 0,
+    "top": 556,
+    "right": 360,
+    "bottom": 800,
+    "h": 244
+   },
+   "site": {
+    "x": 180,
+    "y": 240,
+    "inView": true
+   },
+   "siteHit": "film-explore-panel",
+   "target": {
+    "left": 163,
+    "top": 216,
+    "right": 198,
+    "bottom": 248,
+    "heightFrac": 0.04001829892784478,
+    "widthFrac": 0.0953326373706337
+   },
+   "cameraDistance": 5.993,
+   "orbitEnabled": false,
+   "compose": {
+    "shift": 0,
+    "lift": 0.4
+   },
+   "targetCoveredFraction": 1
+  },
+  {
+   "width": 360,
+   "height": 800,
+   "explore": "explore.ball",
+   "panel": {
+    "left": 12,
+    "top": 119,
+    "right": 348,
+    "bottom": 530,
+    "h": 411
+   },
+   "sections": [
+    {
+     "cls": "film-explore__head",
+     "h": 57
+    },
+    {
+     "cls": "film-explore__teaching",
+     "h": 38
+    },
+    {
+     "cls": "film-explore__task",
+     "h": 45
+    },
+    {
+     "cls": "film-explore__instruction",
+     "h": 20
+    },
+    {
+     "cls": "film-explore__readout",
+     "h": 26
+    },
+    {
+     "cls": "film-explore__explanation",
+     "h": 41
+    },
+    {
+     "cls": "film-explore__keys",
+     "h": 34
+    },
+    {
+     "cls": "film-explore__actions",
+     "h": 54
+    }
+   ],
+   "topBar": {
+    "left": 0,
+    "top": 0,
+    "right": 360,
+    "bottom": 80,
+    "h": 80
+   },
+   "player": {
+    "left": 0,
+    "top": 556,
+    "right": 360,
+    "bottom": 800,
+    "h": 244
+   },
+   "site": {
+    "x": 180,
+    "y": 240,
+    "inView": true
+   },
+   "siteHit": "film-explore-panel",
+   "target": {
+    "left": 160,
+    "top": 236,
+    "right": 192,
+    "bottom": 331,
+    "heightFrac": 0.1187885915427173,
+    "widthFrac": 0.08913814840897084
+   },
+   "cameraDistance": 6.537,
+   "orbitEnabled": false,
+   "compose": {
+    "shift": 0,
+    "lift": 0.4
+   },
+   "targetCoveredFraction": 1
+  },
+  {
+   "width": 360,
+   "height": 800,
+   "explore": "explore.hinge",
+   "panel": {
+    "left": 12,
+    "top": 102,
+    "right": 348,
+    "bottom": 530,
+    "h": 428
+   },
+   "sections": [
+    {
+     "cls": "film-explore__head",
+     "h": 23
+    },
+    {
+     "cls": "film-explore__task",
+     "h": 45
+    },
+    {
+     "cls": "film-explore__instruction",
+     "h": 20
+    },
+    {
+     "cls": "film-explore__readout",
+     "h": 26
+    },
+    {
+     "cls": "film-explore__explanation",
+     "h": 41
+    },
+    {
+     "cls": "film-explore__control",
+     "h": 86
+    },
+    {
+     "cls": "film-explore__keys",
+     "h": 34
+    },
+    {
+     "cls": "film-explore__actions",
+     "h": 54
+    }
+   ],
+   "topBar": {
+    "left": 0,
+    "top": 0,
+    "right": 360,
+    "bottom": 80,
+    "h": 80
+   },
+   "player": {
+    "left": 0,
+    "top": 556,
+    "right": 360,
+    "bottom": 800,
+    "h": 244
+   },
+   "site": {
+    "x": 180,
+    "y": 240,
+    "inView": true
+   },
+   "siteHit": "film-explore-readout",
+   "target": {
+    "left": 170,
+    "top": 162,
+    "right": 218,
+    "bottom": 350,
+    "heightFrac": 0.23502175523452998,
+    "widthFrac": 0.13470248111176347
+   },
+   "cameraDistance": 3.269,
+   "orbitEnabled": false,
+   "compose": {
+    "shift": 0,
+    "lift": 0.4
+   },
+   "targetCoveredFraction": 1
+  },
+  {
+   "width": 390,
+   "height": 844,
+   "explore": "explore.fixed",
+   "panel": {
+    "left": 12,
+    "top": 212,
+    "right": 378,
+    "bottom": 574,
+    "h": 362
+   },
+   "sections": [
+    {
+     "cls": "film-explore__head",
+     "h": 25
+    },
+    {
+     "cls": "film-explore__teaching",
+     "h": 38
+    },
+    {
+     "cls": "film-explore__task",
+     "h": 45
+    },
+    {
+     "cls": "film-explore__instruction",
+     "h": 20
+    },
+    {
+     "cls": "film-explore__readout",
+     "h": 26
+    },
+    {
+     "cls": "film-explore__explanation",
+     "h": 41
+    },
+    {
+     "cls": "film-explore__keys",
+     "h": 17
+    },
+    {
+     "cls": "film-explore__actions",
+     "h": 54
+    }
+   ],
+   "topBar": {
+    "left": 0,
+    "top": 0,
+    "right": 390,
+    "bottom": 80,
+    "h": 80
+   },
+   "player": {
+    "left": 0,
+    "top": 600,
+    "right": 390,
+    "bottom": 844,
+    "h": 244
+   },
+   "site": {
+    "x": 195,
+    "y": 253,
+    "inView": true
+   },
+   "siteHit": "film-explore-panel",
+   "target": {
+    "left": 165,
+    "top": 240,
+    "right": 226,
+    "bottom": 277,
+    "heightFrac": 0.04447261158183044,
+    "widthFrac": 0.1572530684837586
+   },
+   "cameraDistance": 3.185,
+   "orbitEnabled": false,
+   "compose": {
+    "shift": 0,
+    "lift": 0.4
+   },
+   "targetCoveredFraction": 1
+  },
+  {
+   "width": 390,
+   "height": 844,
+   "explore": "explore.pivot",
+   "panel": {
+    "left": 12,
+    "top": 180,
+    "right": 378,
+    "bottom": 574,
+    "h": 394
+   },
+   "sections": [
+    {
+     "cls": "film-explore__head",
+     "h": 57
+    },
+    {
+     "cls": "film-explore__teaching",
+     "h": 38
+    },
+    {
+     "cls": "film-explore__task",
+     "h": 45
+    },
+    {
+     "cls": "film-explore__instruction",
+     "h": 20
+    },
+    {
+     "cls": "film-explore__readout",
+     "h": 26
+    },
+    {
+     "cls": "film-explore__explanation",
+     "h": 41
+    },
+    {
+     "cls": "film-explore__keys",
+     "h": 17
+    },
+    {
+     "cls": "film-explore__actions",
+     "h": 54
+    }
+   ],
+   "topBar": {
+    "left": 0,
+    "top": 0,
+    "right": 390,
+    "bottom": 80,
+    "h": 80
+   },
+   "player": {
+    "left": 0,
+    "top": 600,
+    "right": 390,
+    "bottom": 844,
+    "h": 244
+   },
+   "site": {
+    "x": 195,
+    "y": 253,
+    "inView": true
+   },
+   "siteHit": "film-explore-panel",
+   "target": {
+    "left": 177,
+    "top": 227,
+    "right": 214,
+    "bottom": 261,
+    "heightFrac": 0.041028656434530825,
+    "widthFrac": 0.09521160719466035
+   },
+   "cameraDistance": 5.839,
+   "orbitEnabled": false,
+   "compose": {
+    "shift": 0,
+    "lift": 0.4
+   },
+   "targetCoveredFraction": 1
+  },
+  {
+   "width": 390,
+   "height": 844,
+   "explore": "explore.ball",
+   "panel": {
+    "left": 12,
+    "top": 180,
+    "right": 378,
+    "bottom": 574,
+    "h": 394
+   },
+   "sections": [
+    {
+     "cls": "film-explore__head",
+     "h": 57
+    },
+    {
+     "cls": "film-explore__teaching",
+     "h": 38
+    },
+    {
+     "cls": "film-explore__task",
+     "h": 45
+    },
+    {
+     "cls": "film-explore__instruction",
+     "h": 20
+    },
+    {
+     "cls": "film-explore__readout",
+     "h": 26
+    },
+    {
+     "cls": "film-explore__explanation",
+     "h": 41
+    },
+    {
+     "cls": "film-explore__keys",
+     "h": 17
+    },
+    {
+     "cls": "film-explore__actions",
+     "h": 54
+    }
+   ],
+   "topBar": {
+    "left": 0,
+    "top": 0,
+    "right": 390,
+    "bottom": 80,
+    "h": 80
+   },
+   "player": {
+    "left": 0,
+    "top": 600,
+    "right": 390,
+    "bottom": 844,
+    "h": 244
+   },
+   "site": {
+    "x": 195,
+    "y": 253,
+    "inView": true
+   },
+   "siteHit": "film-explore-panel",
+   "target": {
+    "left": 173,
+    "top": 249,
+    "right": 208,
+    "bottom": 352,
+    "heightFrac": 0.12188982783095823,
+    "widthFrac": 0.08905461656619097
+   },
+   "cameraDistance": 6.37,
+   "orbitEnabled": false,
+   "compose": {
+    "shift": 0,
+    "lift": 0.4
+   },
+   "targetCoveredFraction": 1
+  },
+  {
+   "width": 390,
+   "height": 844,
+   "explore": "explore.hinge",
+   "panel": {
+    "left": 12,
+    "top": 163,
+    "right": 378,
+    "bottom": 574,
+    "h": 411
+   },
+   "sections": [
+    {
+     "cls": "film-explore__head",
+     "h": 23
+    },
+    {
+     "cls": "film-explore__task",
+     "h": 45
+    },
+    {
+     "cls": "film-explore__instruction",
+     "h": 20
+    },
+    {
+     "cls": "film-explore__readout",
+     "h": 26
+    },
+    {
+     "cls": "film-explore__explanation",
+     "h": 41
+    },
+    {
+     "cls": "film-explore__control",
+     "h": 86
+    },
+    {
+     "cls": "film-explore__keys",
+     "h": 17
+    },
+    {
+     "cls": "film-explore__actions",
+     "h": 54
+    }
+   ],
+   "topBar": {
+    "left": 0,
+    "top": 0,
+    "right": 390,
+    "bottom": 80,
+    "h": 80
+   },
+   "player": {
+    "left": 0,
+    "top": 600,
+    "right": 390,
+    "bottom": 844,
+    "h": 244
+   },
+   "site": {
+    "x": 195,
+    "y": 253,
+    "inView": true
+   },
+   "siteHit": "film-explore-task",
+   "target": {
+    "left": 184,
+    "top": 169,
+    "right": 237,
+    "bottom": 372,
+    "heightFrac": 0.24128243968440494,
+    "widthFrac": 0.1345378037600407
+   },
+   "cameraDistance": 3.185,
+   "orbitEnabled": false,
+   "compose": {
+    "shift": 0,
+    "lift": 0.4
+   },
+   "targetCoveredFraction": 1
+  },
+  {
+   "width": 412,
+   "height": 844,
+   "explore": "explore.fixed",
+   "panel": {
+    "left": 12,
+    "top": 281,
+    "right": 400,
+    "bottom": 622,
+    "h": 341
+   },
+   "sections": [
+    {
+     "cls": "film-explore__head",
+     "h": 25
+    },
+    {
+     "cls": "film-explore__teaching",
+     "h": 38
+    },
+    {
+     "cls": "film-explore__task",
+     "h": 24
+    },
+    {
+     "cls": "film-explore__instruction",
+     "h": 20
+    },
+    {
+     "cls": "film-explore__readout",
+     "h": 26
+    },
+    {
+     "cls": "film-explore__explanation",
+     "h": 41
+    },
+    {
+     "cls": "film-explore__keys",
+     "h": 17
+    },
+    {
+     "cls": "film-explore__actions",
+     "h": 54
+    }
+   ],
+   "topBar": {
+    "left": 0,
+    "top": 0,
+    "right": 412,
+    "bottom": 80,
+    "h": 80
+   },
+   "player": {
+    "left": 0,
+    "top": 648,
+    "right": 412,
+    "bottom": 844,
+    "h": 196
+   },
+   "site": {
+    "x": 206,
+    "y": 253,
+    "inView": true
+   },
+   "siteHit": "canvas",
+   "target": {
+    "left": 174,
+    "top": 239,
+    "right": 239,
+    "bottom": 279,
+    "heightFrac": 0.0469482257462461,
+    "widthFrac": 0.15705932048165266
+   },
+   "cameraDistance": 3.017,
+   "orbitEnabled": false,
+   "compose": {
+    "shift": 0,
+    "lift": 0.4
+   },
+   "targetCoveredFraction": 0
+  },
+  {
+   "width": 412,
+   "height": 844,
+   "explore": "explore.pivot",
+   "panel": {
+    "left": 12,
+    "top": 228,
+    "right": 400,
+    "bottom": 622,
+    "h": 394
+   },
+   "sections": [
+    {
+     "cls": "film-explore__head",
+     "h": 57
+    },
+    {
+     "cls": "film-explore__teaching",
+     "h": 38
+    },
+    {
+     "cls": "film-explore__task",
+     "h": 45
+    },
+    {
+     "cls": "film-explore__instruction",
+     "h": 20
+    },
+    {
+     "cls": "film-explore__readout",
+     "h": 26
+    },
+    {
+     "cls": "film-explore__explanation",
+     "h": 41
+    },
+    {
+     "cls": "film-explore__keys",
+     "h": 17
+    },
+    {
+     "cls": "film-explore__actions",
+     "h": 54
+    }
+   ],
+   "topBar": {
+    "left": 0,
+    "top": 0,
+    "right": 412,
+    "bottom": 80,
+    "h": 80
+   },
+   "player": {
+    "left": 0,
+    "top": 648,
+    "right": 412,
+    "bottom": 844,
+    "h": 196
+   },
+   "site": {
+    "x": 206,
+    "y": 253,
+    "inView": true
+   },
+   "siteHit": "film-explore-panel",
+   "target": {
+    "left": 187,
+    "top": 225,
+    "right": 226,
+    "bottom": 262,
+    "heightFrac": 0.043300729304793416,
+    "widthFrac": 0.09518021331274357
+   },
+   "cameraDistance": 5.53,
+   "orbitEnabled": false,
+   "compose": {
+    "shift": 0,
+    "lift": 0.4
+   },
+   "targetCoveredFraction": 0.919
+  },
+  {
+   "width": 412,
+   "height": 844,
+   "explore": "explore.ball",
+   "panel": {
+    "left": 12,
+    "top": 228,
+    "right": 400,
+    "bottom": 622,
+    "h": 394
+   },
+   "sections": [
+    {
+     "cls": "film-explore__head",
+     "h": 57
+    },
+    {
+     "cls": "film-explore__teaching",
+     "h": 38
+    },
+    {
+     "cls": "film-explore__task",
+     "h": 45
+    },
+    {
+     "cls": "film-explore__instruction",
+     "h": 20
+    },
+    {
+     "cls": "film-explore__readout",
+     "h": 26
+    },
+    {
+     "cls": "film-explore__explanation",
+     "h": 41
+    },
+    {
+     "cls": "film-explore__keys",
+     "h": 17
+    },
+    {
+     "cls": "film-explore__actions",
+     "h": 54
+    }
+   ],
+   "topBar": {
+    "left": 0,
+    "top": 0,
+    "right": 412,
+    "bottom": 80,
+    "h": 80
+   },
+   "player": {
+    "left": 0,
+    "top": 648,
+    "right": 412,
+    "bottom": 844,
+    "h": 196
+   },
+   "site": {
+    "x": 206,
+    "y": 253,
+    "inView": true
+   },
+   "siteHit": "film-explore-panel",
+   "target": {
+    "left": 183,
+    "top": 249,
+    "right": 219,
+    "bottom": 358,
+    "heightFrac": 0.1288753204615023,
+    "widthFrac": 0.08908996816235605
+   },
+   "cameraDistance": 6.033,
+   "orbitEnabled": false,
+   "compose": {
+    "shift": 0,
+    "lift": 0.4
+   },
+   "targetCoveredFraction": 1
+  },
+  {
+   "width": 412,
+   "height": 844,
+   "explore": "explore.hinge",
+   "panel": {
+    "left": 12,
+    "top": 211,
+    "right": 400,
+    "bottom": 622,
+    "h": 411
+   },
+   "sections": [
+    {
+     "cls": "film-explore__head",
+     "h": 23
+    },
+    {
+     "cls": "film-explore__task",
+     "h": 45
+    },
+    {
+     "cls": "film-explore__instruction",
+     "h": 20
+    },
+    {
+     "cls": "film-explore__readout",
+     "h": 26
+    },
+    {
+     "cls": "film-explore__explanation",
+     "h": 41
+    },
+    {
+     "cls": "film-explore__control",
+     "h": 86
+    },
+    {
+     "cls": "film-explore__keys",
+     "h": 17
+    },
+    {
+     "cls": "film-explore__actions",
+     "h": 54
+    }
+   ],
+   "topBar": {
+    "left": 0,
+    "top": 0,
+    "right": 412,
+    "bottom": 80,
+    "h": 80
+   },
+   "player": {
+    "left": 0,
+    "top": 648,
+    "right": 412,
+    "bottom": 844,
+    "h": 196
+   },
+   "site": {
+    "x": 206,
+    "y": 253,
+    "inView": true
+   },
+   "siteHit": "film-explore-panel",
+   "target": {
+    "left": 194,
+    "top": 164,
+    "right": 250,
+    "bottom": 379,
+    "heightFrac": 0.2553996398535251,
+    "widthFrac": 0.1345075231640557
+   },
+   "cameraDistance": 3.017,
+   "orbitEnabled": false,
+   "compose": {
+    "shift": 0,
+    "lift": 0.4
+   },
+   "targetCoveredFraction": 0.781
+  },
+  {
+   "width": 430,
+   "height": 932,
+   "explore": "explore.fixed",
+   "panel": {
+    "left": 12,
+    "top": 369,
+    "right": 418,
+    "bottom": 710,
+    "h": 341
+   },
+   "sections": [
+    {
+     "cls": "film-explore__head",
+     "h": 25
+    },
+    {
+     "cls": "film-explore__teaching",
+     "h": 38
+    },
+    {
+     "cls": "film-explore__task",
+     "h": 24
+    },
+    {
+     "cls": "film-explore__instruction",
+     "h": 20
+    },
+    {
+     "cls": "film-explore__readout",
+     "h": 26
+    },
+    {
+     "cls": "film-explore__explanation",
+     "h": 41
+    },
+    {
+     "cls": "film-explore__keys",
+     "h": 17
+    },
+    {
+     "cls": "film-explore__actions",
+     "h": 54
+    }
+   ],
+   "topBar": {
+    "left": 0,
+    "top": 0,
+    "right": 430,
+    "bottom": 80,
+    "h": 80
+   },
+   "player": {
+    "left": 0,
+    "top": 736,
+    "right": 430,
+    "bottom": 932,
+    "h": 196
+   },
+   "site": {
+    "x": 215,
+    "y": 280,
+    "inView": true
+   },
+   "siteHit": "canvas",
+   "target": {
+    "left": 182,
+    "top": 265,
+    "right": 250,
+    "bottom": 306,
+    "heightFrac": 0.044432271403929344,
+    "widthFrac": 0.15735484346733705
+   },
+   "cameraDistance": 3.189,
+   "orbitEnabled": false,
+   "compose": {
+    "shift": 0,
+    "lift": 0.4
+   },
+   "targetCoveredFraction": 0
+  },
+  {
+   "width": 430,
+   "height": 932,
+   "explore": "explore.pivot",
+   "panel": {
+    "left": 12,
+    "top": 316,
+    "right": 418,
+    "bottom": 710,
+    "h": 394
+   },
+   "sections": [
+    {
+     "cls": "film-explore__head",
+     "h": 57
+    },
+    {
+     "cls": "film-explore__teaching",
+     "h": 38
+    },
+    {
+     "cls": "film-explore__task",
+     "h": 45
+    },
+    {
+     "cls": "film-explore__instruction",
+     "h": 20
+    },
+    {
+     "cls": "film-explore__readout",
+     "h": 26
+    },
+    {
+     "cls": "film-explore__explanation",
+     "h": 41
+    },
+    {
+     "cls": "film-explore__keys",
+     "h": 17
+    },
+    {
+     "cls": "film-explore__actions",
+     "h": 54
+    }
+   ],
+   "topBar": {
+    "left": 0,
+    "top": 0,
+    "right": 430,
+    "bottom": 80,
+    "h": 80
+   },
+   "player": {
+    "left": 0,
+    "top": 736,
+    "right": 430,
+    "bottom": 932,
+    "h": 196
+   },
+   "site": {
+    "x": 215,
+    "y": 280,
+    "inView": true
+   },
+   "siteHit": "canvas",
+   "target": {
+    "left": 195,
+    "top": 251,
+    "right": 236,
+    "bottom": 289,
+    "heightFrac": 0.04099170734752278,
+    "widthFrac": 0.0952711583802213
+   },
+   "cameraDistance": 5.847,
+   "orbitEnabled": false,
+   "compose": {
+    "shift": 0,
+    "lift": 0.4
+   },
+   "targetCoveredFraction": 0
+  },
+  {
+   "width": 430,
+   "height": 932,
+   "explore": "explore.ball",
+   "panel": {
+    "left": 12,
+    "top": 337,
+    "right": 418,
+    "bottom": 710,
+    "h": 373
+   },
+   "sections": [
+    {
+     "cls": "film-explore__head",
+     "h": 57
+    },
+    {
+     "cls": "film-explore__teaching",
+     "h": 38
+    },
+    {
+     "cls": "film-explore__task",
+     "h": 24
+    },
+    {
+     "cls": "film-explore__instruction",
+     "h": 20
+    },
+    {
+     "cls": "film-explore__readout",
+     "h": 26
+    },
+    {
+     "cls": "film-explore__explanation",
+     "h": 41
+    },
+    {
+     "cls": "film-explore__keys",
+     "h": 17
+    },
+    {
+     "cls": "film-explore__actions",
+     "h": 54
+    }
+   ],
+   "topBar": {
+    "left": 0,
+    "top": 0,
+    "right": 430,
+    "bottom": 80,
+    "h": 80
+   },
+   "player": {
+    "left": 0,
+    "top": 736,
+    "right": 430,
+    "bottom": 932,
+    "h": 196
+   },
+   "site": {
+    "x": 215,
+    "y": 280,
+    "inView": true
+   },
+   "siteHit": "canvas",
+   "target": {
+    "left": 191,
+    "top": 275,
+    "right": 229,
+    "bottom": 389,
+    "heightFrac": 0.12177470026879211,
+    "widthFrac": 0.0891087600328341
+   },
+   "cameraDistance": 6.379,
+   "orbitEnabled": false,
+   "compose": {
+    "shift": 0,
+    "lift": 0.4
+   },
+   "targetCoveredFraction": 0.456
+  },
+  {
+   "width": 430,
+   "height": 932,
+   "explore": "explore.hinge",
+   "panel": {
+    "left": 12,
+    "top": 299,
+    "right": 418,
+    "bottom": 710,
+    "h": 411
+   },
+   "sections": [
+    {
+     "cls": "film-explore__head",
+     "h": 23
+    },
+    {
+     "cls": "film-explore__task",
+     "h": 45
+    },
+    {
+     "cls": "film-explore__instruction",
+     "h": 20
+    },
+    {
+     "cls": "film-explore__readout",
+     "h": 26
+    },
+    {
+     "cls": "film-explore__explanation",
+     "h": 41
+    },
+    {
+     "cls": "film-explore__control",
+     "h": 86
+    },
+    {
+     "cls": "film-explore__keys",
+     "h": 17
+    },
+    {
+     "cls": "film-explore__actions",
+     "h": 54
+    }
+   ],
+   "topBar": {
+    "left": 0,
+    "top": 0,
+    "right": 430,
+    "bottom": 80,
+    "h": 80
+   },
+   "player": {
+    "left": 0,
+    "top": 736,
+    "right": 430,
+    "bottom": 932,
+    "h": 196
+   },
+   "site": {
+    "x": 215,
+    "y": 280,
+    "inView": true
+   },
+   "siteHit": "canvas",
+   "target": {
+    "left": 203,
+    "top": 186,
+    "right": 261,
+    "bottom": 411,
+    "heightFrac": 0.24104798550427006,
+    "widthFrac": 0.1346216174092521
+   },
+   "cameraDistance": 3.189,
+   "orbitEnabled": false,
+   "compose": {
+    "shift": 0,
+    "lift": 0.4
+   },
+   "targetCoveredFraction": 0.498
+  },
+  {
+   "width": 768,
+   "height": 1024,
+   "explore": "explore.fixed",
+   "panel": {
+    "left": 12,
+    "top": 500,
+    "right": 756,
+    "bottom": 802,
+    "h": 302
+   },
+   "sections": [
+    {
+     "cls": "film-explore__head",
+     "h": 25
+    },
+    {
+     "cls": "film-explore__teaching",
+     "h": 19
+    },
+    {
+     "cls": "film-explore__task",
+     "h": 24
+    },
+    {
+     "cls": "film-explore__instruction",
+     "h": 20
+    },
+    {
+     "cls": "film-explore__readout",
+     "h": 26
+    },
+    {
+     "cls": "film-explore__explanation",
+     "h": 20
+    },
+    {
+     "cls": "film-explore__keys",
+     "h": 17
+    },
+    {
+     "cls": "film-explore__actions",
+     "h": 54
+    }
+   ],
+   "topBar": {
+    "left": 0,
+    "top": 0,
+    "right": 768,
+    "bottom": 80,
+    "h": 80
+   },
+   "player": {
+    "left": 0,
+    "top": 828,
+    "right": 768,
+    "bottom": 1024,
+    "h": 196
+   },
+   "site": {
+    "x": 384,
+    "y": 307,
+    "inView": true
+   },
+   "siteHit": "canvas",
+   "target": {
+    "left": 326,
+    "top": 282,
+    "right": 445,
+    "bottom": 355,
+    "heightFrac": 0.07155392542597627,
+    "widthFrac": 0.1549405841573593
+   },
+   "cameraDistance": 1.976,
+   "orbitEnabled": false,
+   "compose": {
+    "shift": 0,
+    "lift": 0.4
+   },
+   "targetCoveredFraction": 0
+  },
+  {
+   "width": 768,
+   "height": 1024,
+   "explore": "explore.pivot",
+   "panel": {
+    "left": 12,
+    "top": 500,
+    "right": 756,
+    "bottom": 802,
+    "h": 302
+   },
+   "sections": [
+    {
+     "cls": "film-explore__head",
+     "h": 25
+    },
+    {
+     "cls": "film-explore__teaching",
+     "h": 19
+    },
+    {
+     "cls": "film-explore__task",
+     "h": 24
+    },
+    {
+     "cls": "film-explore__instruction",
+     "h": 20
+    },
+    {
+     "cls": "film-explore__readout",
+     "h": 26
+    },
+    {
+     "cls": "film-explore__explanation",
+     "h": 20
+    },
+    {
+     "cls": "film-explore__keys",
+     "h": 17
+    },
+    {
+     "cls": "film-explore__actions",
+     "h": 54
+    }
+   ],
+   "topBar": {
+    "left": 0,
+    "top": 0,
+    "right": 768,
+    "bottom": 80,
+    "h": 80
+   },
+   "player": {
+    "left": 0,
+    "top": 828,
+    "right": 768,
+    "bottom": 1024,
+    "h": 196
+   },
+   "site": {
+    "x": 384,
+    "y": 307,
+    "inView": true
+   },
+   "siteHit": "canvas",
+   "target": {
+    "left": 349,
+    "top": 256,
+    "right": 421,
+    "bottom": 324,
+    "heightFrac": 0.06580064780729722,
+    "widthFrac": 0.09473954573725041
+   },
+   "cameraDistance": 3.623,
+   "orbitEnabled": false,
+   "compose": {
+    "shift": 0,
+    "lift": 0.4
+   },
+   "targetCoveredFraction": 0
+  },
+  {
+   "width": 768,
+   "height": 1024,
+   "explore": "explore.ball",
+   "panel": {
+    "left": 12,
+    "top": 500,
+    "right": 756,
+    "bottom": 802,
+    "h": 302
+   },
+   "sections": [
+    {
+     "cls": "film-explore__head",
+     "h": 25
+    },
+    {
+     "cls": "film-explore__teaching",
+     "h": 19
+    },
+    {
+     "cls": "film-explore__task",
+     "h": 24
+    },
+    {
+     "cls": "film-explore__instruction",
+     "h": 20
+    },
+    {
+     "cls": "film-explore__readout",
+     "h": 26
+    },
+    {
+     "cls": "film-explore__explanation",
+     "h": 20
+    },
+    {
+     "cls": "film-explore__keys",
+     "h": 17
+    },
+    {
+     "cls": "film-explore__actions",
+     "h": 54
+    }
+   ],
+   "topBar": {
+    "left": 0,
+    "top": 0,
+    "right": 768,
+    "bottom": 80,
+    "h": 80
+   },
+   "player": {
+    "left": 0,
+    "top": 828,
+    "right": 768,
+    "bottom": 1024,
+    "h": 196
+   },
+   "site": {
+    "x": 384,
+    "y": 307,
+    "inView": true
+   },
+   "siteHit": "canvas",
+   "target": {
+    "left": 340,
+    "top": 299,
+    "right": 409,
+    "bottom": 504,
+    "heightFrac": 0.19943745121928558,
+    "widthFrac": 0.08932385993068966
+   },
+   "cameraDistance": 3.953,
+   "orbitEnabled": false,
+   "compose": {
+    "shift": 0,
+    "lift": 0.4
+   },
+   "targetCoveredFraction": 0.02
+  },
+  {
+   "width": 768,
+   "height": 1024,
+   "explore": "explore.hinge",
+   "panel": {
+    "left": 12,
+    "top": 433,
+    "right": 756,
+    "bottom": 802,
+    "h": 369
+   },
+   "sections": [
+    {
+     "cls": "film-explore__head",
+     "h": 23
+    },
+    {
+     "cls": "film-explore__task",
+     "h": 24
+    },
+    {
+     "cls": "film-explore__instruction",
+     "h": 20
+    },
+    {
+     "cls": "film-explore__readout",
+     "h": 26
+    },
+    {
+     "cls": "film-explore__explanation",
+     "h": 20
+    },
+    {
+     "cls": "film-explore__control",
+     "h": 86
+    },
+    {
+     "cls": "film-explore__keys",
+     "h": 17
+    },
+    {
+     "cls": "film-explore__actions",
+     "h": 54
+    }
+   ],
+   "topBar": {
+    "left": 0,
+    "top": 0,
+    "right": 768,
+    "bottom": 80,
+    "h": 80
+   },
+   "player": {
+    "left": 0,
+    "top": 828,
+    "right": 768,
+    "bottom": 1024,
+    "h": 196
+   },
+   "site": {
+    "x": 384,
+    "y": 307,
+    "inView": true
+   },
+   "siteHit": "canvas",
+   "target": {
+    "left": 362,
+    "top": 136,
+    "right": 465,
+    "bottom": 545,
+    "heightFrac": 0.39982369474537244,
+    "widthFrac": 0.13404418041301627
+   },
+   "cameraDistance": 1.976,
+   "orbitEnabled": false,
+   "compose": {
+    "shift": 0,
+    "lift": 0.4
+   },
+   "targetCoveredFraction": 0.274
+  },
+  {
+   "width": 1024,
+   "height": 768,
+   "explore": "explore.fixed",
+   "panel": {
+    "left": 51,
+    "top": 249,
+    "right": 411,
+    "bottom": 636,
+    "h": 387
+   },
+   "sections": [
+    {
+     "cls": "film-explore__head",
+     "h": 25
+    },
+    {
+     "cls": "film-explore__teaching",
+     "h": 38
+    },
+    {
+     "cls": "film-explore__task",
+     "h": 45
+    },
+    {
+     "cls": "film-explore__instruction",
+     "h": 20
+    },
+    {
+     "cls": "film-explore__readout",
+     "h": 26
+    },
+    {
+     "cls": "film-explore__explanation",
+     "h": 41
+    },
+    {
+     "cls": "film-explore__keys",
+     "h": 34
+    },
+    {
+     "cls": "film-explore__actions",
+     "h": 54
+    }
+   ],
+   "topBar": {
+    "left": 0,
+    "top": 0,
+    "right": 1024,
+    "bottom": 96,
+    "h": 96
+   },
+   "player": {
+    "left": 0,
+    "top": 646,
+    "right": 1024,
+    "bottom": 768,
+    "h": 122
+   },
+   "site": {
+    "x": 512,
+    "y": 384,
+    "inView": true
+   },
+   "siteHit": "canvas",
+   "target": {
+    "left": 384,
+    "top": 331,
+    "right": 650,
+    "bottom": 497,
+    "heightFrac": 0.21640860815465426,
+    "widthFrac": 0.25964215617613357
+   },
+   "cameraDistance": 1.088,
+   "orbitEnabled": false,
+   "compose": {
+    "shift": 0,
+    "lift": 0
+   },
+   "targetCoveredFraction": 0.102
+  },
+  {
+   "width": 1024,
+   "height": 768,
+   "explore": "explore.pivot",
+   "panel": {
+    "left": 51,
+    "top": 217,
+    "right": 411,
+    "bottom": 636,
+    "h": 419
+   },
+   "sections": [
+    {
+     "cls": "film-explore__head",
+     "h": 57
+    },
+    {
+     "cls": "film-explore__teaching",
+     "h": 38
+    },
+    {
+     "cls": "film-explore__task",
+     "h": 45
+    },
+    {
+     "cls": "film-explore__instruction",
+     "h": 20
+    },
+    {
+     "cls": "film-explore__readout",
+     "h": 26
+    },
+    {
+     "cls": "film-explore__explanation",
+     "h": 41
+    },
+    {
+     "cls": "film-explore__keys",
+     "h": 34
+    },
+    {
+     "cls": "film-explore__actions",
+     "h": 54
+    }
+   ],
+   "topBar": {
+    "left": 0,
+    "top": 0,
+    "right": 1024,
+    "bottom": 96,
+    "h": 96
+   },
+   "player": {
+    "left": 0,
+    "top": 646,
+    "right": 1024,
+    "bottom": 768,
+    "h": 122
+   },
+   "site": {
+    "x": 512,
+    "y": 384,
+    "inView": true
+   },
+   "siteHit": "canvas",
+   "target": {
+    "left": 432,
+    "top": 271,
+    "right": 598,
+    "bottom": 423,
+    "heightFrac": 0.19732311717460269,
+    "widthFrac": 0.1621091112550206
+   },
+   "cameraDistance": 1.995,
+   "orbitEnabled": false,
+   "compose": {
+    "shift": 0,
+    "lift": 0
+   },
+   "targetCoveredFraction": 0
+  },
+  {
+   "width": 1024,
+   "height": 768,
+   "explore": "explore.ball",
+   "panel": {
+    "left": 51,
+    "top": 217,
+    "right": 411,
+    "bottom": 636,
+    "h": 419
+   },
+   "sections": [
+    {
+     "cls": "film-explore__head",
+     "h": 57
+    },
+    {
+     "cls": "film-explore__teaching",
+     "h": 38
+    },
+    {
+     "cls": "film-explore__task",
+     "h": 45
+    },
+    {
+     "cls": "film-explore__instruction",
+     "h": 20
+    },
+    {
+     "cls": "film-explore__readout",
+     "h": 26
+    },
+    {
+     "cls": "film-explore__explanation",
+     "h": 41
+    },
+    {
+     "cls": "film-explore__keys",
+     "h": 34
+    },
+    {
+     "cls": "film-explore__actions",
+     "h": 54
+    }
+   ],
+   "topBar": {
+    "left": 0,
+    "top": 0,
+    "right": 1024,
+    "bottom": 96,
+    "h": 96
+   },
+   "player": {
+    "left": 0,
+    "top": 646,
+    "right": 1024,
+    "bottom": 768,
+    "h": 122
+   },
+   "site": {
+    "x": 512,
+    "y": 384,
+    "inView": true
+   },
+   "siteHit": "canvas",
+   "target": {
+    "left": 411,
+    "top": 367,
+    "right": 570,
+    "bottom": 846,
+    "heightFrac": 0.6244094843973694,
+    "widthFrac": 0.1555318704632639
+   },
+   "cameraDistance": 2.177,
+   "orbitEnabled": false,
+   "compose": {
+    "shift": 0,
+    "lift": 0
+   },
+   "targetCoveredFraction": 0
+  },
+  {
+   "width": 1024,
+   "height": 768,
+   "explore": "explore.hinge",
+   "panel": {
+    "left": 51,
+    "top": 200,
+    "right": 411,
+    "bottom": 636,
+    "h": 436
+   },
+   "sections": [
+    {
+     "cls": "film-explore__head",
+     "h": 23
+    },
+    {
+     "cls": "film-explore__task",
+     "h": 45
+    },
+    {
+     "cls": "film-explore__instruction",
+     "h": 20
+    },
+    {
+     "cls": "film-explore__readout",
+     "h": 26
+    },
+    {
+     "cls": "film-explore__explanation",
+     "h": 41
+    },
+    {
+     "cls": "film-explore__control",
+     "h": 86
+    },
+    {
+     "cls": "film-explore__keys",
+     "h": 34
+    },
+    {
+     "cls": "film-explore__actions",
+     "h": 54
+    }
+   ],
+   "topBar": {
+    "left": 0,
+    "top": 0,
+    "right": 1024,
+    "bottom": 96,
+    "h": 96
+   },
+   "player": {
+    "left": 0,
+    "top": 646,
+    "right": 1024,
+    "bottom": 768,
+    "h": 122
+   },
+   "site": {
+    "x": 512,
+    "y": 384,
+    "inView": true
+   },
+   "siteHit": "canvas",
+   "target": {
+    "left": 459,
+    "top": -37,
+    "right": 695,
+    "bottom": 954,
+    "heightFrac": 1.2891323642033357,
+    "widthFrac": 0.2302795036890256
+   },
+   "cameraDistance": 1.088,
+   "orbitEnabled": false,
+   "compose": {
+    "shift": 0,
+    "lift": 0
+   },
+   "targetCoveredFraction": 0
+  },
+  {
+   "width": 1280,
+   "height": 800,
+   "explore": "explore.fixed",
+   "panel": {
+    "left": 64,
+    "top": 281,
+    "right": 424,
+    "bottom": 668,
+    "h": 387
+   },
+   "sections": [
+    {
+     "cls": "film-explore__head",
+     "h": 25
+    },
+    {
+     "cls": "film-explore__teaching",
+     "h": 38
+    },
+    {
+     "cls": "film-explore__task",
+     "h": 45
+    },
+    {
+     "cls": "film-explore__instruction",
+     "h": 20
+    },
+    {
+     "cls": "film-explore__readout",
+     "h": 26
+    },
+    {
+     "cls": "film-explore__explanation",
+     "h": 41
+    },
+    {
+     "cls": "film-explore__keys",
+     "h": 34
+    },
+    {
+     "cls": "film-explore__actions",
+     "h": 54
+    }
+   ],
+   "topBar": {
+    "left": 0,
+    "top": 0,
+    "right": 1280,
+    "bottom": 96,
+    "h": 96
+   },
+   "player": {
+    "left": 0,
+    "top": 678,
+    "right": 1280,
+    "bottom": 800,
+    "h": 122
+   },
+   "site": {
+    "x": 640,
+    "y": 400,
+    "inView": true
+   },
+   "siteHit": "canvas",
+   "target": {
+    "left": 507,
+    "top": 345,
+    "right": 784,
+    "bottom": 518,
+    "heightFrac": 0.2164086081546543,
+    "widthFrac": 0.2163684634801113
+   },
+   "cameraDistance": 1.088,
+   "orbitEnabled": false,
+   "compose": {
+    "shift": 0,
+    "lift": 0
+   },
+   "targetCoveredFraction": 0
+  },
+  {
+   "width": 1280,
+   "height": 800,
+   "explore": "explore.pivot",
+   "panel": {
+    "left": 64,
+    "top": 249,
+    "right": 424,
+    "bottom": 668,
+    "h": 419
+   },
+   "sections": [
+    {
+     "cls": "film-explore__head",
+     "h": 57
+    },
+    {
+     "cls": "film-explore__teaching",
+     "h": 38
+    },
+    {
+     "cls": "film-explore__task",
+     "h": 45
+    },
+    {
+     "cls": "film-explore__instruction",
+     "h": 20
+    },
+    {
+     "cls": "film-explore__readout",
+     "h": 26
+    },
+    {
+     "cls": "film-explore__explanation",
+     "h": 41
+    },
+    {
+     "cls": "film-explore__keys",
+     "h": 34
+    },
+    {
+     "cls": "film-explore__actions",
+     "h": 54
+    }
+   ],
+   "topBar": {
+    "left": 0,
+    "top": 0,
+    "right": 1280,
+    "bottom": 96,
+    "h": 96
+   },
+   "player": {
+    "left": 0,
+    "top": 678,
+    "right": 1280,
+    "bottom": 800,
+    "h": 122
+   },
+   "site": {
+    "x": 640,
+    "y": 400,
+    "inView": true
+   },
+   "siteHit": "canvas",
+   "target": {
+    "left": 557,
+    "top": 283,
+    "right": 729,
+    "bottom": 441,
+    "heightFrac": 0.19732311717460255,
+    "widthFrac": 0.13509092604585043
+   },
+   "cameraDistance": 1.995,
+   "orbitEnabled": false,
+   "compose": {
+    "shift": 0,
+    "lift": 0
+   },
+   "targetCoveredFraction": 0
+  },
+  {
+   "width": 1280,
+   "height": 800,
+   "explore": "explore.ball",
+   "panel": {
+    "left": 64,
+    "top": 249,
+    "right": 424,
+    "bottom": 668,
+    "h": 419
+   },
+   "sections": [
+    {
+     "cls": "film-explore__head",
+     "h": 57
+    },
+    {
+     "cls": "film-explore__teaching",
+     "h": 38
+    },
+    {
+     "cls": "film-explore__task",
+     "h": 45
+    },
+    {
+     "cls": "film-explore__instruction",
+     "h": 20
+    },
+    {
+     "cls": "film-explore__readout",
+     "h": 26
+    },
+    {
+     "cls": "film-explore__explanation",
+     "h": 41
+    },
+    {
+     "cls": "film-explore__keys",
+     "h": 34
+    },
+    {
+     "cls": "film-explore__actions",
+     "h": 54
+    }
+   ],
+   "topBar": {
+    "left": 0,
+    "top": 0,
+    "right": 1280,
+    "bottom": 96,
+    "h": 96
+   },
+   "player": {
+    "left": 0,
+    "top": 678,
+    "right": 1280,
+    "bottom": 800,
+    "h": 122
+   },
+   "site": {
+    "x": 640,
+    "y": 400,
+    "inView": true
+   },
+   "siteHit": "canvas",
+   "target": {
+    "left": 534,
+    "top": 382,
+    "right": 700,
+    "bottom": 881,
+    "heightFrac": 0.6244094843973694,
+    "widthFrac": 0.12960989205271983
+   },
+   "cameraDistance": 2.177,
+   "orbitEnabled": false,
+   "compose": {
+    "shift": 0,
+    "lift": 0
+   },
+   "targetCoveredFraction": 0
+  },
+  {
+   "width": 1280,
+   "height": 800,
+   "explore": "explore.hinge",
+   "panel": {
+    "left": 64,
+    "top": 232,
+    "right": 424,
+    "bottom": 668,
+    "h": 436
+   },
+   "sections": [
+    {
+     "cls": "film-explore__head",
+     "h": 23
+    },
+    {
+     "cls": "film-explore__task",
+     "h": 45
+    },
+    {
+     "cls": "film-explore__instruction",
+     "h": 20
+    },
+    {
+     "cls": "film-explore__readout",
+     "h": 26
+    },
+    {
+     "cls": "film-explore__explanation",
+     "h": 41
+    },
+    {
+     "cls": "film-explore__control",
+     "h": 86
+    },
+    {
+     "cls": "film-explore__keys",
+     "h": 34
+    },
+    {
+     "cls": "film-explore__actions",
+     "h": 54
+    }
+   ],
+   "topBar": {
+    "left": 0,
+    "top": 0,
+    "right": 1280,
+    "bottom": 96,
+    "h": 96
+   },
+   "player": {
+    "left": 0,
+    "top": 678,
+    "right": 1280,
+    "bottom": 800,
+    "h": 122
+   },
+   "site": {
+    "x": 640,
+    "y": 400,
+    "inView": true
+   },
+   "siteHit": "canvas",
+   "target": {
+    "left": 585,
+    "top": -38,
+    "right": 830,
+    "bottom": 993,
+    "heightFrac": 1.2891323642033359,
+    "widthFrac": 0.1918995864075213
+   },
+   "cameraDistance": 1.088,
+   "orbitEnabled": false,
+   "compose": {
+    "shift": 0,
+    "lift": 0
+   },
+   "targetCoveredFraction": 0
+  },
+  {
+   "width": 1440,
+   "height": 900,
+   "explore": "explore.fixed",
+   "panel": {
+    "left": 72,
+    "top": 381,
+    "right": 432,
+    "bottom": 768,
+    "h": 387
+   },
+   "sections": [
+    {
+     "cls": "film-explore__head",
+     "h": 25
+    },
+    {
+     "cls": "film-explore__teaching",
+     "h": 38
+    },
+    {
+     "cls": "film-explore__task",
+     "h": 45
+    },
+    {
+     "cls": "film-explore__instruction",
+     "h": 20
+    },
+    {
+     "cls": "film-explore__readout",
+     "h": 26
+    },
+    {
+     "cls": "film-explore__explanation",
+     "h": 41
+    },
+    {
+     "cls": "film-explore__keys",
+     "h": 34
+    },
+    {
+     "cls": "film-explore__actions",
+     "h": 54
+    }
+   ],
+   "topBar": {
+    "left": 0,
+    "top": 0,
+    "right": 1440,
+    "bottom": 96,
+    "h": 96
+   },
+   "player": {
+    "left": 0,
+    "top": 778,
+    "right": 1440,
+    "bottom": 900,
+    "h": 122
+   },
+   "site": {
+    "x": 720,
+    "y": 450,
+    "inView": true
+   },
+   "siteHit": "canvas",
+   "target": {
+    "left": 570,
+    "top": 388,
+    "right": 882,
+    "bottom": 582,
+    "heightFrac": 0.2164086081546543,
+    "widthFrac": 0.21636846348011124
+   },
+   "cameraDistance": 1.088,
+   "orbitEnabled": false,
+   "compose": {
+    "shift": 0,
+    "lift": 0
+   },
+   "targetCoveredFraction": 0
+  },
+  {
+   "width": 1440,
+   "height": 900,
+   "explore": "explore.pivot",
+   "panel": {
+    "left": 72,
+    "top": 349,
+    "right": 432,
+    "bottom": 768,
+    "h": 419
+   },
+   "sections": [
+    {
+     "cls": "film-explore__head",
+     "h": 57
+    },
+    {
+     "cls": "film-explore__teaching",
+     "h": 38
+    },
+    {
+     "cls": "film-explore__task",
+     "h": 45
+    },
+    {
+     "cls": "film-explore__instruction",
+     "h": 20
+    },
+    {
+     "cls": "film-explore__readout",
+     "h": 26
+    },
+    {
+     "cls": "film-explore__explanation",
+     "h": 41
+    },
+    {
+     "cls": "film-explore__keys",
+     "h": 34
+    },
+    {
+     "cls": "film-explore__actions",
+     "h": 54
+    }
+   ],
+   "topBar": {
+    "left": 0,
+    "top": 0,
+    "right": 1440,
+    "bottom": 96,
+    "h": 96
+   },
+   "player": {
+    "left": 0,
+    "top": 778,
+    "right": 1440,
+    "bottom": 900,
+    "h": 122
+   },
+   "site": {
+    "x": 720,
+    "y": 450,
+    "inView": true
+   },
+   "siteHit": "canvas",
+   "target": {
+    "left": 626,
+    "top": 318,
+    "right": 821,
+    "bottom": 496,
+    "heightFrac": 0.19732311717460257,
+    "widthFrac": 0.13509092604585055
+   },
+   "cameraDistance": 1.995,
+   "orbitEnabled": false,
+   "compose": {
+    "shift": 0,
+    "lift": 0
+   },
+   "targetCoveredFraction": 0
+  },
+  {
+   "width": 1440,
+   "height": 900,
+   "explore": "explore.ball",
+   "panel": {
+    "left": 72,
+    "top": 349,
+    "right": 432,
+    "bottom": 768,
+    "h": 419
+   },
+   "sections": [
+    {
+     "cls": "film-explore__head",
+     "h": 57
+    },
+    {
+     "cls": "film-explore__teaching",
+     "h": 38
+    },
+    {
+     "cls": "film-explore__task",
+     "h": 45
+    },
+    {
+     "cls": "film-explore__instruction",
+     "h": 20
+    },
+    {
+     "cls": "film-explore__readout",
+     "h": 26
+    },
+    {
+     "cls": "film-explore__explanation",
+     "h": 41
+    },
+    {
+     "cls": "film-explore__keys",
+     "h": 34
+    },
+    {
+     "cls": "film-explore__actions",
+     "h": 54
+    }
+   ],
+   "topBar": {
+    "left": 0,
+    "top": 0,
+    "right": 1440,
+    "bottom": 96,
+    "h": 96
+   },
+   "player": {
+    "left": 0,
+    "top": 778,
+    "right": 1440,
+    "bottom": 900,
+    "h": 122
+   },
+   "site": {
+    "x": 720,
+    "y": 450,
+    "inView": true
+   },
+   "siteHit": "canvas",
+   "target": {
+    "left": 601,
+    "top": 430,
+    "right": 788,
+    "bottom": 992,
+    "heightFrac": 0.6244094843973693,
+    "widthFrac": 0.12960989205271992
+   },
+   "cameraDistance": 2.177,
+   "orbitEnabled": false,
+   "compose": {
+    "shift": 0,
+    "lift": 0
+   },
+   "targetCoveredFraction": 0
+  },
+  {
+   "width": 1440,
+   "height": 900,
+   "explore": "explore.hinge",
+   "panel": {
+    "left": 72,
+    "top": 332,
+    "right": 432,
+    "bottom": 768,
+    "h": 436
+   },
+   "sections": [
+    {
+     "cls": "film-explore__head",
+     "h": 23
+    },
+    {
+     "cls": "film-explore__task",
+     "h": 45
+    },
+    {
+     "cls": "film-explore__instruction",
+     "h": 20
+    },
+    {
+     "cls": "film-explore__readout",
+     "h": 26
+    },
+    {
+     "cls": "film-explore__explanation",
+     "h": 41
+    },
+    {
+     "cls": "film-explore__control",
+     "h": 86
+    },
+    {
+     "cls": "film-explore__keys",
+     "h": 34
+    },
+    {
+     "cls": "film-explore__actions",
+     "h": 54
+    }
+   ],
+   "topBar": {
+    "left": 0,
+    "top": 0,
+    "right": 1440,
+    "bottom": 96,
+    "h": 96
+   },
+   "player": {
+    "left": 0,
+    "top": 778,
+    "right": 1440,
+    "bottom": 900,
+    "h": 122
+   },
+   "site": {
+    "x": 720,
+    "y": 450,
+    "inView": true
+   },
+   "siteHit": "canvas",
+   "target": {
+    "left": 658,
+    "top": -43,
+    "right": 934,
+    "bottom": 1117,
+    "heightFrac": 1.2891323642033357,
+    "widthFrac": 0.1918995864075214
+   },
+   "cameraDistance": 1.088,
+   "orbitEnabled": false,
+   "compose": {
+    "shift": 0,
+    "lift": 0
+   },
+   "targetCoveredFraction": 0
+  }
+ ]
+}

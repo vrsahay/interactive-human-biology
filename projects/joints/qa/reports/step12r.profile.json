@@ -1,0 +1,328 @@
+{
+ "step": "12R",
+ "phase": "A (profile first), F/H (startup bytes and waterfall), J/K (drag hot path), O (Explore)",
+ "generatedAt": "2026-09-17T18:36:30.622Z",
+ "machine": "Lenovo 20V9, Intel Core i5-1135G7, Iris Xe (shared), 16 GB, Windows 11 Pro, Chrome 152 headless, ANGLE D3D11",
+ "labelling": "EMULATED PROFILES ARE DEVELOPMENT EVIDENCE - NOT CERTIFICATION. No real Android or iPad hardware was available.",
+ "tooling": {
+  "tracer": "qa/perf/trace_profile.mjs (Chrome trace + V8 CPU samples mapped through the production sourcemaps; self time, inclusive time, long-frame attribution, forced style/layout attribution)",
+  "lab": "tests/perf/perf-lab-r.spec.ts (fresh browser per cold run, CDP network + CPU emulation, round-robin profiles, CPU benchmark gate)",
+  "experiments": [
+   "qa/perf/drag_variants.mjs (one variable removed at a time, repeatable)",
+   "qa/perf/drag_mutations.mjs (DOM mutations per rendered frame)",
+   "qa/perf/scene_stats.mjs (draw list, materials, frustum, matrix auto-update)",
+   "qa/perf/throttle_control.mjs (platform control pages: style-only and WebGL, same canvas size)"
+  ]
+ },
+ "firstMeaningful3D": {
+  "profile": "emulated phone, 412x915, DPR 2.625, CPU 4x, Fast 4G",
+  "baselineStep12": {
+   "1_html_shell": {
+    "responseEndMs": 190,
+    "headParsedMs": 269
+   },
+   "2_main_js_download": [
+    {
+     "file": "index-Px6V_7os.js",
+     "startMs": 259,
+     "endMs": 672,
+     "transferBytes": 208901
+    }
+   ],
+   "3_js_parse_compile_ms": 6,
+   "4_module_evaluation": {
+    "evaluateMs": 136.9,
+    "modulesEvaluatedAtMs": 746,
+    "shellRenderedAtMs": 788,
+    "appConstructAtMs": 966
+   },
+   "5_joint_manifest_fetch": [
+    {
+     "file": "joint-manifest.json",
+     "startMs": 1118,
+     "endMs": 1311,
+     "transferBytes": 12672
+    }
+   ],
+   "6_body_manifest_fetch": {
+    "request": [
+     {
+      "file": "body-delivery.json",
+      "startMs": 1356,
+      "endMs": 1587,
+      "transferBytes": 32226
+     }
+    ],
+    "parsedAtMs": 1606
+   },
+   "7_body_asset_fetch": [
+    {
+     "file": "body-materials.glb",
+     "startMs": 1614,
+     "endMs": 1921,
+     "transferBytes": 33589
+    },
+    {
+     "file": "body.overview.glb",
+     "startMs": 1616,
+     "endMs": 2637,
+     "transferBytes": 597635
+    },
+    {
+     "file": "body.skin_lod1.glb",
+     "startMs": 1618,
+     "endMs": 2157,
+     "transferBytes": 128497
+    },
+    {
+     "file": "body.context.glb",
+     "startMs": 2784,
+     "endMs": 3338,
+     "transferBytes": 123904
+    }
+   ],
+   "8_texture_fetch_decode": {
+    "environment": [
+     {
+      "file": "room_env_cubeuv_64.rgbe",
+      "startMs": 1314,
+      "endMs": 2051,
+      "transferBytes": 344364
+     }
+    ],
+    "environmentDecodeMs": 17,
+    "materialLibraryParseMs": 131,
+    "imageDecodeMs": 0
+   },
+   "9_renderer_creation_ms": 58,
+   "10_shader_compilation_ms": 434,
+   "11_scene_creation": {
+    "glbParseMs": {
+     "body.materials": 131,
+     "body.skin_lod1": 17,
+     "body.overview": 43,
+     "body.context": 11
+    },
+    "bindAfterLastFetchMs": -801,
+    "validateMs": 29,
+    "applyFirstShotMs": 41
+   },
+   "12_first_draw_ms": 106,
+   "13_first_meaningful_visual_ms": 3252,
+   "mainThreadTaskMs": 4876.3,
+   "gc": {
+    "minorMs": 32.9,
+    "majorMs": 0,
+    "count": 9
+   }
+  },
+  "afterStep12R": {
+   "1_html_shell": {
+    "responseEndMs": 179,
+    "headParsedMs": 260
+   },
+   "2_main_js_download": [
+    {
+     "file": "index-BZMZmscT.js",
+     "startMs": 242,
+     "endMs": 977,
+     "transferBytes": 210012
+    }
+   ],
+   "3_js_parse_compile_ms": 9.1,
+   "4_module_evaluation": {
+    "evaluateMs": 129.4,
+    "modulesEvaluatedAtMs": 1044,
+    "shellRenderedAtMs": 1068,
+    "appConstructAtMs": 1258
+   },
+   "5_joint_manifest_fetch": [
+    {
+     "file": "joint-manifest.json",
+     "startMs": 256,
+     "endMs": 480,
+     "transferBytes": 12672
+    }
+   ],
+   "6_body_manifest_fetch": {
+    "request": [
+     {
+      "file": "body-delivery.json",
+      "startMs": 256,
+      "endMs": 542,
+      "transferBytes": 32424
+     }
+    ],
+    "parsedAtMs": 1531
+   },
+   "7_body_asset_fetch": [
+    {
+     "file": "body.intro.glb",
+     "startMs": 258,
+     "endMs": 959,
+     "transferBytes": 139723
+    },
+    {
+     "file": "body.skin_intro.glb",
+     "startMs": 259,
+     "endMs": 861,
+     "transferBytes": 79462
+    },
+    {
+     "file": "body-materials.glb",
+     "startMs": 2138,
+     "endMs": 2344,
+     "transferBytes": 33589
+    },
+    {
+     "file": "body.context.glb",
+     "startMs": 2141,
+     "endMs": 2759,
+     "transferBytes": 123904
+    },
+    {
+     "file": "body.skin_lod1.glb",
+     "startMs": 2143,
+     "endMs": 2793,
+     "transferBytes": 128497
+    }
+   ],
+   "8_texture_fetch_decode": {
+    "environment": [
+     {
+      "file": "room_env_cubeuv_64.rgbe",
+      "startMs": 258,
+      "endMs": 609,
+      "transferBytes": 60159
+     }
+    ],
+    "environmentDecodeMs": 28,
+    "materialLibraryParseMs": 142,
+    "imageDecodeMs": 0
+   },
+   "9_renderer_creation_ms": 58,
+   "10_shader_compilation_ms": 359,
+   "11_scene_creation": {
+    "glbParseMs": {
+     "body.intro": 37,
+     "body.skin_intro": 5,
+     "body.materials": 142,
+     "body.context": 15,
+     "body.skin_lod1": 10
+    },
+    "bindAfterLastFetchMs": -1165,
+    "validateMs": 47,
+    "applyFirstShotMs": 17
+   },
+   "12_first_draw_ms": 76,
+   "13_first_meaningful_visual_ms": 2133,
+   "mainThreadTaskMs": 3878.4,
+   "gc": {
+    "minorMs": 29,
+    "majorMs": 0,
+    "count": 10
+   }
+  },
+  "rootCause": [
+   "BEFORE: the request chain was serialised. The bundle was parsed, then the app asked for the joint manifest, then the body manifest, then the body meshes; the first body stage was the full grouped skeleton (598 KB), and background stages competed with the first frame.",
+   "AFTER: the HTML preloads the two manifests, the baked environment and the two first-stage meshes, so every startup request begins at ~0.26 s and all of them finish by ~0.98 s; the first frame is a delivery-only proxy (2 body draw calls, 27,760 triangles, 219 KB brotli); background preloads are deferred until after the first frame.",
+   "REMAINING critical path at 4x: bundle download 0.25-0.99 s (210 KB brotli) -> module evaluation ~0.13 s -> app construct ~1.3 s -> content validation 47 ms -> first shot applied 17 ms -> shader compilation ~0.36 s -> first draw ~0.08 s -> first meaningful 3D ~2.1-2.5 s.",
+   "Tested and rejected: fetchPriority=low on the first-stage meshes so the bundle would win the link. The bundle still finished at ~0.99 s (the emulated Fast 4G link is saturated either way) and first 3D did not improve (2353 / 2543 ms vs 2133 ms). Not kept."
+  ]
+ },
+ "drag": {
+  "methodologyFix": {
+   "problem": "The Step 12 drag harness moved the pointer along a fixed sine path. That path drives the hinge into its 0 deg / 145 deg limits: for 53% of the steps the pose did not change, so the render loop correctly rendered nothing, and the harness counted those idle gaps as frame intervals and as input latency.",
+   "symptom": "frame interval max 734 ms, raw input latency p95 637 ms, 28.8 fps - all measurement artefact, confirmed by a trace with no main-thread task over 12 ms in the same window.",
+   "fix": "Closed-loop drag: each step reads the current angle and moves the pointer along the axis that drives the joint towards a 25-120 deg target (period 2.6 s), so every step changes the pose. unchangedStepFraction is recorded with every result and is 0.",
+   "afterOnTheSameBuild": {
+    "profile": "emulated phone CPU 2x",
+    "fps": 60,
+    "frameIntervalP50Ms": 16.6,
+    "frameIntervalP95Ms": 17.7,
+    "inputLatencyP95Ms": 17.8
+   }
+  },
+  "perFrameCost": {
+   "note": "render CPU = first gl.clear to the end of the frame callback (three render + label update), same closed-loop drag, same build",
+   "cpu1x": {
+    "renderCpuP50Ms": 0.7,
+    "renderCpuP95Ms": 1.5,
+    "fps": 60,
+    "frameIntervalP95Ms": 17.1
+   },
+   "cpu2x": {
+    "renderCpuP50Ms": 2.3,
+    "renderCpuP95Ms": 3.1,
+    "fps": 60,
+    "frameIntervalP95Ms": 17.5
+   },
+   "cpu4x": {
+    "renderCpuP50Ms": 3.8,
+    "renderCpuP95Ms": 25.9,
+    "fps": "43.8-48.3 over 5 runs",
+    "frameIntervalP95Ms": "44.9-50.2"
+   }
+  },
+  "hotPathAudit": {
+   "inclusiveCpuAt4xPer10s": {
+    "renderFrameMs": 3278,
+    "threeRenderMs": 2690,
+    "perDrawSubmissionMs": 1676,
+    "labelUpdateMs": 454,
+    "pointerMoveToSetDofMs": 579,
+    "preactRenderMs": 437,
+    "axisOverlayMs": 182
+   },
+   "allocations": "no per-frame Vector3/Matrix allocation left on the drag path (scratch vectors in LabelSystem, scratch Matrix3 in anchorLabelDirectionWorld); minor GC 14-21 ms per 8-10 s window, no major GC",
+   "layoutReads": "no getBoundingClientRect on the drag path (canvas rect and stage size cached, invalidated on resize/scroll/fullscreen); the tracer reports no forced style/layout stacks",
+   "domWrites": "17.4 mutations per rendered frame, all necessary: label transforms and leader-line endpoints (~13), slider fill/thumb/readout/aria-valuenow (~4). Change-only writes are already in place (setStyle/setAttr compare before writing).",
+   "drawCalls": "68 at hinge.try: 30 elbow meshes, 30 dimmed body groups, 8 overlay draws; 12 unique materials; 183k triangles; nothing out of frustum"
+  },
+  "whyCpu4xMissesTheTarget": {
+   "measured": "p50 is at vsync (16.7-17.2 ms) but p95 is 45-50 ms: about every 20th frame takes 3 vsync intervals.",
+   "eliminated": [
+    "not JS work volume: hiding the whole dimmed body (30 fewer draw calls, 180k fewer triangles) did not improve fps or p95; hiding the overlays did not; hiding the UI panel did not; every difference was inside the +/-6 fps run-to-run spread of this machine",
+    "not pixels: DPR 1.5 vs 1.25 vs 1.0 measured 44.8-47.9 / 46.2-47.9 / 45.7-47.4 fps over 3 runs each - no trend",
+    "not the CPU-throttle emulation by itself: a style-only control page holds 60 fps at 4x, and a WebGL control page with 68 draw calls at the same canvas size (618x1372) also holds 60 fps at 4x (p95 21.4 ms)",
+    "not a single long task: the tracer finds at most 1-2 frames over 30 ms per 8-10 s window, and inside them the time sits in a blocking GL call (uniformMatrix4fv 27 ms), i.e. the main thread waiting on the driver rather than running our code"
+   ],
+   "conclusion": "On this hardware the 4x-CPU emulated phone profile loses roughly every 20th frame to the throttled main thread plus the GL/compositor handshake, and the loss does not respond to any reduction of application work. The 4x figure is reported as measured: the p95 <= 22 ms target is NOT met on that profile. It is met at 1x and 2x. This is emulation, not a device certification."
+  }
+ },
+ "explore": {
+  "rootCauseFixedInStep12R": "Label occlusion raycasts ran on every frame while the camera moved (getVertexPosition 524 ms per 8 s at 4x). Occlusion testing is now deferred while the camera moves and runs once it settles (CAMERA_SETTLE_MS 180 plus a settle timer).",
+  "before": {
+   "framesPer8s": 233,
+   "frameIntervalP50Ms": 33.7
+  },
+  "afterTrace4x": {
+   "framesPer10s": 527,
+   "frameIntervalP50Ms": 16.8,
+   "frameIntervalP95Ms": 34.1,
+   "renderFrameMs": 2114,
+   "labelUpdateMs": 334,
+   "orbitControlsMs": 475
+  },
+  "remaining": "the same platform-level frame loss as the drag at 4x; 60 fps at 2x"
+ },
+ "traces": [
+  "drag-mobile2x.after2.json",
+  "drag-mobile2x.json",
+  "drag-mobile4x.after1.json",
+  "drag-mobile4x.after2.json",
+  "drag-mobile4x.before.json",
+  "drag-mobile4x.closedloop.json",
+  "orbit-mobile4x.after1.json",
+  "orbit-mobile4x.after2.json",
+  "orbit-mobile4x.after3.json",
+  "orbit-mobile4x.before.json",
+  "startup-mobile4x.after1.json",
+  "startup-mobile4x.after1b.json",
+  "startup-mobile4x.after2.json",
+  "startup-mobile4x.before.json",
+  "startup-mobile4x.json",
+  "startup-mobile4x.prio1.json",
+  "startup-mobile4x.prio2.json"
+ ]
+}

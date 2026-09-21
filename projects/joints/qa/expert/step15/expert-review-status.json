@@ -1,0 +1,28 @@
+{
+ "build": "step14b-complete",
+ "expertReview": "PENDING",
+ "anatomy": "PENDING",
+ "curriculum": "PENDING",
+ "landmarks": "PENDING",
+ "145DegreeRange": "PENDING",
+ "accessibilityHuman": "PENDING",
+ "assetLicence": "PENDING",
+ "document": "Expert decisions for the step14b-complete candidate build. Every item starts PENDING and may only be changed by the named human reviewer who made the decision. No automated test result may move an item off PENDING.",
+ "commit": "d6ec8d8e96b745bec53f648fa4b64e55d2678fd9",
+ "createdAt": "2026-09-18T12:16:09.756Z",
+ "reviewers": {
+  "curriculum": null,
+  "anatomy": null,
+  "accessibility": null,
+  "licensing": null
+ },
+ "decisions": [],
+ "publicReleaseReady": false,
+ "publicReleaseBlockers": [
+  "asset licence provenance unknown (RELEASE BLOCKER)",
+  "no expert sign-off of any kind",
+  "Step 12 performance: two emulated phone x4 misses, no real Android or iPad measurement",
+  "no real NVDA or VoiceOver test",
+  "hip ball-and-socket classification unconfirmed"
+ ]
+}

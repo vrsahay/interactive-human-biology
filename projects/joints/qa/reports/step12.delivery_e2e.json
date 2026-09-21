@@ -1,0 +1,114 @@
+{
+ "generatedAt": "2026-09-21T10:22:53.423Z",
+ "tier_high": {
+  "bodyFiles": [
+   "/assets/body/v3/body.closeup.glb",
+   "/assets/body/v3/body.context.glb",
+   "/assets/body/v3/body.intro.glb",
+   "/assets/body/v3/body.skin.glb",
+   "/assets/body/v3/body.skin_intro.glb"
+  ],
+  "requests": [
+   "/assets/body/v3/body-delivery.json",
+   "/assets/joints/elbow_r/joint-manifest.json",
+   "/assets/shared/env/environment.json",
+   "/assets/shared/env/room_env_cubeuv_64.rgbe",
+   "/assets/body/v3/body.intro.glb",
+   "/assets/body/v3/body.skin_intro.glb",
+   "/assets/audio/narration/narration.json",
+   "/assets/audio/narration/intro.title.mp3",
+   "/assets/shared/body-materials.glb",
+   "/assets/body/v3/body.closeup.glb",
+   "/assets/body/v3/body.context.glb",
+   "/assets/body/v3/body.skin.glb",
+   "/assets/audio/narration/fixed.travel.mp3",
+   "/assets/audio/narration/intro.map.mp3"
+  ],
+  "groups": 35
+ },
+ "tier_medium": {
+  "bodyFiles": [
+   "/assets/body/v3/body.closeup.glb",
+   "/assets/body/v3/body.context.glb",
+   "/assets/body/v3/body.intro.glb",
+   "/assets/body/v3/body.skin_intro.glb",
+   "/assets/body/v3/body.skin_lod1.glb"
+  ],
+  "requests": [
+   "/assets/body/v3/body-delivery.json",
+   "/assets/joints/elbow_r/joint-manifest.json",
+   "/assets/shared/env/environment.json",
+   "/assets/shared/env/room_env_cubeuv_64.rgbe",
+   "/assets/body/v3/body.intro.glb",
+   "/assets/body/v3/body.skin_intro.glb",
+   "/assets/audio/narration/narration.json",
+   "/assets/audio/narration/intro.title.mp3",
+   "/assets/shared/body-materials.glb",
+   "/assets/body/v3/body.closeup.glb",
+   "/assets/body/v3/body.context.glb",
+   "/assets/body/v3/body.skin_lod1.glb",
+   "/assets/audio/narration/fixed.travel.mp3",
+   "/assets/audio/narration/intro.map.mp3"
+  ],
+  "groups": 35
+ },
+ "tier_low": {
+  "bodyFiles": [
+   "/assets/body/v3/body.closeup.glb",
+   "/assets/body/v3/body.context_lod1.glb",
+   "/assets/body/v3/body.intro.glb",
+   "/assets/body/v3/body.skin_intro.glb",
+   "/assets/body/v3/body.skin_lod1.glb"
+  ],
+  "requests": [
+   "/assets/body/v3/body-delivery.json",
+   "/assets/joints/elbow_r/joint-manifest.json",
+   "/assets/shared/env/environment.json",
+   "/assets/shared/env/room_env_cubeuv_64.rgbe",
+   "/assets/body/v3/body.intro.glb",
+   "/assets/body/v3/body.skin_intro.glb",
+   "/assets/audio/narration/narration.json",
+   "/assets/audio/narration/intro.title.mp3",
+   "/assets/shared/body-materials.glb",
+   "/assets/body/v3/body.closeup.glb",
+   "/assets/body/v3/body.context_lod1.glb",
+   "/assets/body/v3/body.skin_lod1.glb",
+   "/assets/audio/narration/fixed.travel.mp3",
+   "/assets/audio/narration/intro.map.mp3"
+  ],
+  "groups": 35
+ },
+ "lazyJoint": {
+  "bufferedOnSeek": true,
+  "elbowRequests": [
+   "/assets/joints/elbow_r/elbow_r.core.glb",
+   "/assets/joints/elbow_r/elbow_r.detail.glb",
+   "/assets/joints/elbow_r/joint-manifest.json"
+  ]
+ },
+ "upgrades": [
+  {
+   "atShot": "intro.title",
+   "groups": 35
+  }
+ ],
+ "handover": {
+  "pose": "sourcePose (13.625 deg)",
+  "bboxDeviationMm": {
+   "humerus_r": 0.2735762557983801,
+   "radius_r": 0.7400123386847035,
+   "ulna_r": 0.6116295811752492,
+   "capitate_r": 0.0003137683590170859
+  }
+ },
+ "textures": {
+  "gpuTextures": 5,
+  "unique": 5,
+  "deduplicated": 2
+ },
+ "labelLayout": {
+  "renders": 10,
+  "layouts": 0,
+  "skipped": 10
+ }
+}

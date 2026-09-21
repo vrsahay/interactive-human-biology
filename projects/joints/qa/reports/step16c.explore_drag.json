@@ -1,0 +1,67 @@
+{
+ "generatedAt": "2026-09-20T17:12:06.072Z",
+ "rows": [
+  {
+   "exploreId": "explore.ball",
+   "controls": {
+    "enabled": null
+   },
+   "cameraMoved": 0,
+   "targetMoved": 0,
+   "declaredTargets": [
+    "skeleton.005.bone.closeup.elbow_right.shoulder_right.ball_socket.shoulder_right.hinge.elbow_right.elbow_r_core",
+    "skeleton.004.bone.closeup.elbow_right.elbow_r_core",
+    "skeleton.006.bone.closeup.elbow_right.hinge.elbow_right.elbow_r_core",
+    "skeleton.003.bone.closeup.elbow_r_core"
+   ],
+   "groupsThatMoved": [
+    "skeleton.003.bone.closeup.elbow_r_core",
+    "skeleton.004.bone.closeup.elbow_right.elbow_r_core",
+    "skeleton.005.bone.closeup.elbow_right.shoulder_right.ball_socket.shoulder_right.hinge.elbow_right.elbow_r_core",
+    "skeleton.006.bone.closeup.elbow_right.hinge.elbow_right.elbow_r_core"
+   ],
+   "unexpected": [],
+   "readout": {
+    "primary": 15,
+    "secondary": -28.79999999999999,
+    "atLimit": false
+   }
+  },
+  {
+   "exploreId": "explore.pivot",
+   "controls": {
+    "enabled": null
+   },
+   "cameraMoved": 0.81433,
+   "targetMoved": 0,
+   "declaredTargets": [],
+   "groupsThatMoved": [],
+   "unexpected": [],
+   "readout": null
+  },
+  {
+   "exploreId": "explore.fixed",
+   "controls": {
+    "enabled": null
+   },
+   "cameraMoved": 0.7096,
+   "targetMoved": 0,
+   "declaredTargets": [],
+   "groupsThatMoved": [],
+   "unexpected": [],
+   "readout": null
+  },
+  {
+   "exploreId": "explore.hinge",
+   "controls": {
+    "enabled": null
+   },
+   "cameraMoved": 0.74395,
+   "targetMoved": 0,
+   "declaredTargets": [],
+   "groupsThatMoved": [],
+   "unexpected": [],
+   "readout": null
+  }
+ ]
+}

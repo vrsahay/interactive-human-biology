@@ -1,0 +1,2207 @@
+{
+ "step": 12,
+ "kind": "baseline",
+ "generatedAt": "2026-09-17T15:25:08.866Z",
+ "build": "Step-11 production build (snapshot qa/perf/baseline-dist, built before any Step-12 change)",
+ "machine": {
+  "model": "Lenovo 20V9",
+  "cpu": "Intel Core i5-1135G7 (4C/8T)",
+  "gpu": "Intel Iris Xe Graphics (driver 31.0.101.1999)",
+  "memoryGB": 16,
+  "os": "Windows 11 Pro",
+  "browser": "Google Chrome 152.0.7977.83 (headless, ANGLE D3D11)"
+ },
+ "hashes": [
+  {
+   "path": "public/assets/joints/elbow_r/elbow_r.core.glb",
+   "bytes": 306880,
+   "sha256": "61c046262a823e95b141992f8bbaa13e5810c2bc7e7c76088dc3f9c6b1be93c1"
+  },
+  {
+   "path": "public/assets/joints/elbow_r/elbow_r.detail.glb",
+   "bytes": 93936,
+   "sha256": "c767e24c51c65d17034b11368ecb480618a690d9847505f0f013437d293c38b6"
+  },
+  {
+   "path": "public/assets/joints/elbow_r/elbow_r.context.glb",
+   "bytes": 628008,
+   "sha256": "a7d7fdc482d7e6bc30f65e524180cb4a613388b3406ce1e82cfc6677b31dfdbc"
+  },
+  {
+   "path": "public/assets/joints/elbow_r/joint-manifest.json",
+   "bytes": 93064,
+   "sha256": "009d51528bf5a6d84b2ab14499d4a1346f4cc1bcaff0ab1a0f99b1ccfd135e66"
+  },
+  {
+   "path": "public/assets/body/body.skeleton.glb",
+   "bytes": 2015164,
+   "sha256": "702a2d393cd8346ff2d68b8f9893d18334084a8c326023fba654de99c3096d15"
+  },
+  {
+   "path": "public/assets/body/body.skin.glb",
+   "bytes": 787444,
+   "sha256": "cb52db1f52107c4bdd0730437da209571de00a0305bd65a0c1cf3d70803e91ab"
+  },
+  {
+   "path": "public/assets/body/body-manifest.json",
+   "bytes": 276921,
+   "sha256": "a252c2672ddd6d71bdc3bb25e6a5cedce953a543923ad3cafd8faf7cc3e92e24"
+  }
+ ],
+ "blenderFiles": [
+  {
+   "path": "blender/Joints_Working.blend",
+   "bytes": 3539188,
+   "sha256": "9fb76d8c5b799d1bf65dc8e865c400299a3cc52fb8bf7ceab8c903a1671187f9"
+  },
+  {
+   "path": "blender/Joints_Working.v001.blend",
+   "bytes": 3514520,
+   "sha256": "323ba6c1ae4b58001e20ad1edb6c50ab7e35225c72204ab5e42127872a7b8f75"
+  },
+  {
+   "path": "blender/Joints_Working.v002.blend",
+   "bytes": 3520906,
+   "sha256": "9518004b2de8a749f0d1308c7fce9edd59399381588516f3b2a77f20bcc94f8f"
+  },
+  {
+   "path": "blender/Joints_Working.v003.blend",
+   "bytes": 3538356,
+   "sha256": "817123863ec3601589cfdfdc4461742ca8580e015f77c09780acb5729c4b7c1b"
+  },
+  {
+   "path": "blender/Joints_Working.v004.blend",
+   "bytes": 3539188,
+   "sha256": "9fb76d8c5b799d1bf65dc8e865c400299a3cc52fb8bf7ceab8c903a1671187f9"
+  }
+ ],
+ "masterSha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0",
+ "bundle": [
+  {
+   "file": "index-5JW1531B.css",
+   "bytes": 19435,
+   "gzipBytes": 5069,
+   "brotliBytes": 4739
+  },
+  {
+   "file": "index-BuFzrH_m.js",
+   "bytes": 1031454,
+   "gzipBytes": 242491,
+   "brotliBytes": 216546
+  }
+ ],
+ "textures": {
+  "loadedByFilm": [
+   {
+    "file": "elbow_r.core.glb",
+    "name": "Tissue normal | organ",
+    "bytes": 19986,
+    "sha256": "2c6f2e1c767edc8f8722cb4f037db59fba1ef4644ee2069f4d2bfe245c7868bf",
+    "width": 512,
+    "height": 512,
+    "gpuBytes": 1398101
+   },
+   {
+    "file": "elbow_r.core.glb",
+    "name": "Tissue color | bone",
+    "bytes": 2852,
+    "sha256": "87769ee294605ca6ea6a1b69adbc6c564569f25d3f40891d22c28cc8f43073f7",
+    "width": 512,
+    "height": 512,
+    "gpuBytes": 1398101
+   },
+   {
+    "file": "elbow_r.detail.glb",
+    "name": "Tissue normal | organ",
+    "bytes": 19986,
+    "sha256": "2c6f2e1c767edc8f8722cb4f037db59fba1ef4644ee2069f4d2bfe245c7868bf",
+    "width": 512,
+    "height": 512,
+    "gpuBytes": 1398101
+   },
+   {
+    "file": "elbow_r.detail.glb",
+    "name": "Tissue color | tendon",
+    "bytes": 3146,
+    "sha256": "8161ce4d85389356be03894cdeba194104cab00707122d2441489cf7a527470a",
+    "width": 512,
+    "height": 512,
+    "gpuBytes": 1398101
+   },
+   {
+    "file": "body.skeleton.glb",
+    "name": "Tissue normal | organ",
+    "bytes": 19986,
+    "sha256": "2c6f2e1c767edc8f8722cb4f037db59fba1ef4644ee2069f4d2bfe245c7868bf",
+    "width": 512,
+    "height": 512,
+    "gpuBytes": 1398101
+   },
+   {
+    "file": "body.skeleton.glb",
+    "name": "Tissue color | cartilage",
+    "bytes": 3078,
+    "sha256": "e45e64b19853a89763822ec04bbf6956413ad5940056b7014f13a5976bfa1eb1",
+    "width": 512,
+    "height": 512,
+    "gpuBytes": 1398101
+   },
+   {
+    "file": "body.skeleton.glb",
+    "name": "Tissue color | bone",
+    "bytes": 2852,
+    "sha256": "87769ee294605ca6ea6a1b69adbc6c564569f25d3f40891d22c28cc8f43073f7",
+    "width": 512,
+    "height": 512,
+    "gpuBytes": 1398101
+   },
+   {
+    "file": "body.skeleton.glb",
+    "name": "Tissue color | teeth",
+    "bytes": 3540,
+    "sha256": "c34b71ccbdb868e5c40d4a252351e58dc5e4ab37edffcdcba55be7981bfac6ee",
+    "width": 512,
+    "height": 512,
+    "gpuBytes": 1398101
+   },
+   {
+    "file": "body.skin.glb",
+    "name": "Tissue normal | organ",
+    "bytes": 19986,
+    "sha256": "2c6f2e1c767edc8f8722cb4f037db59fba1ef4644ee2069f4d2bfe245c7868bf",
+    "width": 512,
+    "height": 512,
+    "gpuBytes": 1398101
+   },
+   {
+    "file": "body.skin.glb",
+    "name": "Tissue color | skin",
+    "bytes": 2974,
+    "sha256": "9c88518f79503cdac81ddfeab5aa1af4ce4bb50d4aebeb26bee2727d4bdc7e18",
+    "width": 512,
+    "height": 512,
+    "gpuBytes": 1398101
+   }
+  ],
+  "gpuTextures": 10,
+  "gpuBytesEstimate": 13981010,
+  "uniqueContent": 6,
+  "duplicateGpuBytesEstimate": 5592404,
+  "environmentPmremGpuBytes": 6291456,
+  "note": "PMREM environment render target (RoomEnvironment, cube 256) is RGBA HalfFloat 768x1024"
+ },
+ "startupDiagnosis": {
+  "method": "qa/perf/diagnose.mjs on the Step-11 code with performance.mark instrumentation only (no behaviour change), fresh browser per run, laptop 1440x900, local server without throttling",
+  "runs": [
+   {
+    "marks": {
+     "stage-start": 782,
+     "renderer-created": 1306,
+     "environment-ready": 4314,
+     "start": 4370,
+     "joint-manifest": 4504,
+     "first-assets-loaded": 6173,
+     "ready": 6923,
+     "film-started": 6968
+    },
+    "longTasks": [
+     [
+      472,
+      146
+     ],
+     [
+      778,
+      3597
+     ],
+     [
+      4386,
+      89
+     ],
+     [
+      5834,
+      105
+     ],
+     [
+      6055,
+      53
+     ],
+     [
+      6128,
+      72
+     ],
+     [
+      6201,
+      682
+     ],
+     [
+      6909,
+      64
+     ],
+     [
+      6974,
+      2396
+     ]
+    ]
+   },
+   {
+    "marks": {
+     "stage-start": 336,
+     "renderer-created": 1229,
+     "environment-ready": 4051,
+     "start": 4106,
+     "joint-manifest": 4244,
+     "first-assets-loaded": 4649,
+     "ready": 5399,
+     "film-started": 5439
+    },
+    "longTasks": [
+     [
+      167,
+      128
+     ],
+     [
+      333,
+      3779
+     ],
+     [
+      4124,
+      85
+     ],
+     [
+      4404,
+      95
+     ],
+     [
+      4501,
+      59
+     ],
+     [
+      4597,
+      78
+     ],
+     [
+      4675,
+      678
+     ],
+     [
+      5385,
+      61
+     ],
+     [
+      5447,
+      2371
+     ]
+    ]
+   }
+  ],
+  "findings": [
+   "WebGL renderer creation: 0.5-0.9 s",
+   "Runtime PMREM generation of RoomEnvironment (blocking shader compile + render): 2.8-3.0 s on ANGLE D3D11",
+   "Asset download + parse: 0.4-1.7 s (local)",
+   "Structure binding / material clones before the first shot: ~0.7 s long task",
+   "First film frame: ~2.4 s long task (synchronous shader program compilation for every material/state in view)",
+   "Intro playback frames: 50-76 ms long tasks each (783 draw calls: 535 body meshes + overlays)"
+  ]
+ },
+ "perfLab": {
+  "method": "Cold loads in fresh browser contexts with the HTTP cache disabled; brotli/gzip static server (pipeline/tools/serve_static.mjs); CDP network + CPU throttling. first meaningful 3D = end of the first rendered frame after the film's first shot is applied. Frame times from rAF-rendered frames; input-to-render = event timestamp -> end of the first rendered frame after the event (display presentation adds up to one vsync).",
+  "runsPerProfile": 5,
+  "profiles": {
+   "laptop-igpu-broadband": {
+    "classification": "REAL HARDWARE: integrated-GPU laptop (headless Chrome); network emulated",
+    "network": {
+     "id": "broadband-50mbps",
+     "downBps": 6250000,
+     "upBps": 1250000,
+     "latencyMs": 20,
+     "note": "50 Mbps down / 10 Mbps up / 20 ms"
+    },
+    "cpuThrottle": 1,
+    "viewport": {
+     "width": 1440,
+     "height": 900
+    },
+    "dpr": 1,
+    "firstMeaningful3DMs": {
+     "n": 5,
+     "p50": 8078,
+     "p95": 9365,
+     "min": 7989,
+     "max": 9365
+    },
+    "shellVisibleMs": {
+     "n": 5,
+     "p50": 257,
+     "p95": 591,
+     "min": 251,
+     "max": 591
+    },
+    "bytesBeforeFirst3D": {
+     "n": 5,
+     "p50": 2199349,
+     "p95": 2199349,
+     "min": 2199349,
+     "max": 2199349
+    },
+    "jsHeapUsedBytes": {
+     "n": 5,
+     "p50": 28366988,
+     "p95": 35479449,
+     "min": 26954935,
+     "max": 35479449
+    },
+    "repeatVisit": {
+     "firstMeaningful3DMs": 1773,
+     "bytesTotal": 2100
+    },
+    "renderer": {
+     "drawCalls": 783,
+     "triangles": 235754,
+     "geometries": 542,
+     "textures": 6,
+     "pixelRatio": 1,
+     "gpu": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x00009A49) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+    },
+    "milestones": [
+     {
+      "name": "/app/index-BuFzrH_m.js",
+      "start": 71,
+      "end": 471,
+      "transfer": 216846
+     },
+     {
+      "name": "/app/index-5JW1531B.css",
+      "start": 72,
+      "end": 445,
+      "transfer": 5039
+     },
+     {
+      "name": "/assets/joints/elbow_r/joint-manifest.json",
+      "start": 4189,
+      "end": 4259,
+      "transfer": 12672
+     },
+     {
+      "name": "/assets/body/body-manifest.json",
+      "start": 4320,
+      "end": 4402,
+      "transfer": 26972
+     },
+     {
+      "name": "/assets/joints/elbow_r/elbow_r.core.glb",
+      "start": 4321,
+      "end": 4569,
+      "transfer": 188925
+     },
+     {
+      "name": "/assets/body/body.skeleton.glb",
+      "start": 4416,
+      "end": 5907,
+      "transfer": 1332696
+     },
+     {
+      "name": "/assets/body/body.skin.glb",
+      "start": 4416,
+      "end": 5955,
+      "transfer": 345924
+     },
+     {
+      "name": "/assets/joints/elbow_r/elbow_r.detail.glb",
+      "start": 6225,
+      "end": 6323,
+      "transfer": 70275
+     }
+    ],
+    "longTasksBeforeFirst3DMs": [
+     7032,
+     7235,
+     7365,
+     7252,
+     7308
+    ],
+    "consoleErrors": 0,
+    "interactions": {
+     "playTravel": {
+      "frames": 301,
+      "spanMs": 4997,
+      "fps": 60,
+      "frameIntervalMs": {
+       "n": 300,
+       "p50": 16.7,
+       "p95": 17.8,
+       "min": 14.4,
+       "max": 18.7
+      },
+      "frameCpuMs": {
+       "n": 301,
+       "p50": 1.4,
+       "p95": 2.3,
+       "min": 0.9,
+       "max": 3.9
+      },
+      "droppedFrames": 0,
+      "inputs": 0,
+      "inputToRenderMs": {
+       "n": 0,
+       "p50": null,
+       "p95": null,
+       "min": null,
+       "max": null
+      },
+      "inputsWithoutRender": 0
+     },
+     "playElbow": {
+      "frames": 290,
+      "spanMs": 4813,
+      "fps": 60,
+      "frameIntervalMs": {
+       "n": 289,
+       "p50": 16.6,
+       "p95": 18,
+       "min": 13.1,
+       "max": 20.2
+      },
+      "frameCpuMs": {
+       "n": 290,
+       "p50": 3.1,
+       "p95": 4.4,
+       "min": 1.8,
+       "max": 14.9
+      },
+      "droppedFrames": 0,
+      "inputs": 0,
+      "inputToRenderMs": {
+       "n": 0,
+       "p50": null,
+       "p95": null,
+       "min": null,
+       "max": null
+      },
+      "inputsWithoutRender": 0
+     },
+     "playRecap": {
+      "frames": 83,
+      "spanMs": 5029,
+      "fps": 16.3,
+      "frameIntervalMs": {
+       "n": 82,
+       "p50": 60.7,
+       "p95": 69.7,
+       "min": 50.1,
+       "max": 74
+      },
+      "frameCpuMs": {
+       "n": 83,
+       "p50": 51.6,
+       "p95": 61.4,
+       "min": 39.8,
+       "max": 65.3
+      },
+      "droppedFrames": 222,
+      "inputs": 0,
+      "inputToRenderMs": {
+       "n": 0,
+       "p50": null,
+       "p95": null,
+       "min": null,
+       "max": null
+      },
+      "inputsWithoutRender": 0
+     },
+     "shots": {
+      "intro.title": {
+       "drawCalls": 783,
+       "triangles": 235754,
+       "geometries": 592,
+       "textures": 8
+      },
+      "fixed.detail": {
+       "drawCalls": 87,
+       "triangles": 66851,
+       "geometries": 592,
+       "textures": 8
+      },
+      "pivot.rotate": {
+       "drawCalls": 132,
+       "triangles": 117459,
+       "geometries": 592,
+       "textures": 8
+      },
+      "ball.shoulder": {
+       "drawCalls": 96,
+       "triangles": 98978,
+       "geometries": 592,
+       "textures": 8
+      },
+      "ball.hip": {
+       "drawCalls": 60,
+       "triangles": 25931,
+       "geometries": 592,
+       "textures": 8
+      },
+      "hinge.flexion": {
+       "drawCalls": 165,
+       "triangles": 126871,
+       "geometries": 592,
+       "textures": 8
+      },
+      "hinge.support": {
+       "drawCalls": 91,
+       "triangles": 65131,
+       "geometries": 598,
+       "textures": 10
+      },
+      "hinge.knee": {
+       "drawCalls": 16,
+       "triangles": 4232,
+       "geometries": 598,
+       "textures": 10
+      },
+      "recap.compare": {
+       "drawCalls": 316,
+       "triangles": 174656,
+       "geometries": 598,
+       "textures": 10
+      }
+     },
+     "dragInput": {
+      "frames": 40,
+      "spanMs": 1663,
+      "fps": 23.5,
+      "frameIntervalMs": {
+       "n": 38,
+       "p50": 33.3,
+       "p95": 39.1,
+       "min": 25.7,
+       "max": 39.8
+      },
+      "frameCpuMs": {
+       "n": 40,
+       "p50": 5.2,
+       "p95": 6.3,
+       "min": 3.4,
+       "max": 10.4
+      },
+      "droppedFrames": 38,
+      "inputs": 61,
+      "inputToRenderMs": {
+       "n": 53,
+       "p50": 18.9,
+       "p95": 213.3,
+       "min": 11.6,
+       "max": 246.8
+      },
+      "inputsWithoutRender": 8
+     },
+     "dragDisplayRate": {
+      "frames": 128,
+      "spanMs": 2984,
+      "fps": 42.6,
+      "frameIntervalMs": {
+       "n": 126,
+       "p50": 16.9,
+       "p95": 20.3,
+       "min": 13.2,
+       "max": 112.3
+      },
+      "frameCpuMs": {
+       "n": 128,
+       "p50": 3.3,
+       "p95": 4.9,
+       "min": 2,
+       "max": 5.6
+      },
+      "droppedFrames": 6,
+      "inputs": 180,
+      "inputToRenderMs": {
+       "n": 148,
+       "p50": 16.9,
+       "p95": 123.1,
+       "min": 12.4,
+       "max": 239.8
+      },
+      "inputsWithoutRender": 32
+     },
+     "sliderKeyboard": {
+      "frames": 37,
+      "spanMs": 786,
+      "fps": 45.8,
+      "frameIntervalMs": {
+       "n": 36,
+       "p50": 19.9,
+       "p95": 30.5,
+       "min": 16.6,
+       "max": 44.1
+      },
+      "frameCpuMs": {
+       "n": 37,
+       "p50": 6.1,
+       "p95": 8.7,
+       "min": 4.1,
+       "max": 8.8
+      },
+      "droppedFrames": 9,
+      "inputs": 40,
+      "inputToRenderMs": {
+       "n": 40,
+       "p50": 18.3,
+       "p95": 25.9,
+       "min": 10.7,
+       "max": 33.2
+      },
+      "inputsWithoutRender": 0
+     },
+     "scrub": {
+      "frames": 42,
+      "spanMs": 1653,
+      "fps": 24.8,
+      "frameIntervalMs": {
+       "n": 41,
+       "p50": 35.6,
+       "p95": 52.2,
+       "min": 21.7,
+       "max": 97.2
+      },
+      "frameCpuMs": {
+       "n": 42,
+       "p50": 4.8,
+       "p95": 19.1,
+       "min": 0.8,
+       "max": 57.6
+      },
+      "droppedFrames": 58,
+      "inputs": 42,
+      "inputToRenderMs": {
+       "n": 42,
+       "p50": 22.4,
+       "p95": 38.1,
+       "min": 7.3,
+       "max": 81.8
+      },
+      "inputsWithoutRender": 0
+     },
+     "chapterJump": {
+      "frames": 6,
+      "spanMs": 2252,
+      "fps": 2.2,
+      "frameIntervalMs": {
+       "n": 0,
+       "p50": null,
+       "p95": null,
+       "min": null,
+       "max": null
+      },
+      "frameCpuMs": {
+       "n": 6,
+       "p50": 3.2,
+       "p95": 44.3,
+       "min": 1.1,
+       "max": 44.3
+      },
+      "droppedFrames": 0,
+      "inputs": 6,
+      "inputToRenderMs": {
+       "n": 6,
+       "p50": 17.8,
+       "p95": 59.3,
+       "min": 16.2,
+       "max": 59.3
+      },
+      "inputsWithoutRender": 0
+     },
+     "exploreOrbit": {
+      "frames": 114,
+      "spanMs": 1883,
+      "fps": 60,
+      "frameIntervalMs": {
+       "n": 113,
+       "p50": 16.6,
+       "p95": 18.1,
+       "min": 14.1,
+       "max": 18.8
+      },
+      "frameCpuMs": {
+       "n": 114,
+       "p50": 3.3,
+       "p95": 4.5,
+       "min": 2,
+       "max": 6.3
+      },
+      "droppedFrames": 0,
+      "inputs": 51,
+      "inputToRenderMs": {
+       "n": 51,
+       "p50": 14,
+       "p95": 23.5,
+       "min": 8.3,
+       "max": 30.5
+      },
+      "inputsWithoutRender": 0
+     },
+     "selection": {
+      "frames": 6,
+      "spanMs": 1556,
+      "fps": 3.2,
+      "frameIntervalMs": {
+       "n": 2,
+       "p50": 10.6,
+       "p95": 10.7,
+       "min": 10.6,
+       "max": 10.7
+      },
+      "frameCpuMs": {
+       "n": 6,
+       "p50": 7.4,
+       "p95": 14.4,
+       "min": 4.5,
+       "max": 14.4
+      },
+      "droppedFrames": 0,
+      "inputs": 4,
+      "inputToRenderMs": {
+       "n": 4,
+       "p50": 20.9,
+       "p95": 24.7,
+       "min": 18.8,
+       "max": 24.7
+      },
+      "inputsWithoutRender": 0
+     },
+     "heapAfterInteractionsBytes": 46036685
+    }
+   },
+   "laptop-igpu-fast4g": {
+    "classification": "REAL HARDWARE: integrated-GPU laptop (headless Chrome); network emulated",
+    "network": {
+     "id": "fast-4g-devtools",
+     "downBps": 1012500,
+     "upBps": 168750,
+     "latencyMs": 165,
+     "note": "Chrome DevTools Fast 4G preset"
+    },
+    "cpuThrottle": 1,
+    "viewport": {
+     "width": 1280,
+     "height": 800
+    },
+    "dpr": 1,
+    "firstMeaningful3DMs": {
+     "n": 5,
+     "p50": 10057,
+     "p95": 10082,
+     "min": 9965,
+     "max": 10082
+    },
+    "shellVisibleMs": {
+     "n": 5,
+     "p50": 722,
+     "p95": 733,
+     "min": 718,
+     "max": 733
+    },
+    "bytesBeforeFirst3D": {
+     "n": 5,
+     "p50": 2199349,
+     "p95": 2199349,
+     "min": 2199349,
+     "max": 2199349
+    },
+    "jsHeapUsedBytes": {
+     "n": 5,
+     "p50": 30643211,
+     "p95": 33397479,
+     "min": 25534743,
+     "max": 33397479
+    },
+    "repeatVisit": {
+     "firstMeaningful3DMs": 2442,
+     "bytesTotal": 2100
+    },
+    "renderer": {
+     "drawCalls": 783,
+     "triangles": 235754,
+     "geometries": 542,
+     "textures": 6,
+     "pixelRatio": 1,
+     "gpu": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x00009A49) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+    },
+    "milestones": [
+     {
+      "name": "/app/index-BuFzrH_m.js",
+      "start": 220,
+      "end": 650,
+      "transfer": 216846
+     },
+     {
+      "name": "/app/index-5JW1531B.css",
+      "start": 222,
+      "end": 421,
+      "transfer": 5039
+     },
+     {
+      "name": "/assets/joints/elbow_r/joint-manifest.json",
+      "start": 4271,
+      "end": 4466,
+      "transfer": 12672
+     },
+     {
+      "name": "/assets/body/body-manifest.json",
+      "start": 4489,
+      "end": 4731,
+      "transfer": 26972
+     },
+     {
+      "name": "/assets/joints/elbow_r/elbow_r.core.glb",
+      "start": 4491,
+      "end": 4918,
+      "transfer": 188925
+     },
+     {
+      "name": "/assets/body/body.skeleton.glb",
+      "start": 4744,
+      "end": 6683,
+      "transfer": 1332696
+     },
+     {
+      "name": "/assets/body/body.skin.glb",
+      "start": 4745,
+      "end": 5639,
+      "transfer": 345924
+     },
+     {
+      "name": "/assets/joints/elbow_r/elbow_r.detail.glb",
+      "start": 6913,
+      "end": 7162,
+      "transfer": 70275
+     }
+    ],
+    "longTasksBeforeFirst3DMs": [
+     6972,
+     6972,
+     6869,
+     7008,
+     6982
+    ],
+    "consoleErrors": 0,
+    "interactions": {
+     "playTravel": {
+      "frames": 301,
+      "spanMs": 4997,
+      "fps": 60,
+      "frameIntervalMs": {
+       "n": 300,
+       "p50": 16.6,
+       "p95": 18,
+       "min": 14.1,
+       "max": 19.2
+      },
+      "frameCpuMs": {
+       "n": 301,
+       "p50": 1.8,
+       "p95": 2.3,
+       "min": 0.9,
+       "max": 3.5
+      },
+      "droppedFrames": 0,
+      "inputs": 0,
+      "inputToRenderMs": {
+       "n": 0,
+       "p50": null,
+       "p95": null,
+       "min": null,
+       "max": null
+      },
+      "inputsWithoutRender": 0
+     },
+     "playElbow": {
+      "frames": 289,
+      "spanMs": 4807,
+      "fps": 59.9,
+      "frameIntervalMs": {
+       "n": 288,
+       "p50": 16.6,
+       "p95": 18.5,
+       "min": 11,
+       "max": 35.6
+      },
+      "frameCpuMs": {
+       "n": 289,
+       "p50": 3.2,
+       "p95": 5.2,
+       "min": 1.8,
+       "max": 14.9
+      },
+      "droppedFrames": 1,
+      "inputs": 0,
+      "inputToRenderMs": {
+       "n": 0,
+       "p50": null,
+       "p95": null,
+       "min": null,
+       "max": null
+      },
+      "inputsWithoutRender": 0
+     },
+     "playRecap": {
+      "frames": 88,
+      "spanMs": 5052,
+      "fps": 17.2,
+      "frameIntervalMs": {
+       "n": 87,
+       "p50": 58,
+       "p95": 66.4,
+       "min": 48.3,
+       "max": 67.8
+      },
+      "frameCpuMs": {
+       "n": 88,
+       "p50": 48.5,
+       "p95": 55.9,
+       "min": 40.4,
+       "max": 57.5
+      },
+      "droppedFrames": 213,
+      "inputs": 0,
+      "inputToRenderMs": {
+       "n": 0,
+       "p50": null,
+       "p95": null,
+       "min": null,
+       "max": null
+      },
+      "inputsWithoutRender": 0
+     },
+     "shots": {
+      "intro.title": {
+       "drawCalls": 783,
+       "triangles": 235754,
+       "geometries": 592,
+       "textures": 8
+      },
+      "fixed.detail": {
+       "drawCalls": 87,
+       "triangles": 66851,
+       "geometries": 592,
+       "textures": 8
+      },
+      "pivot.rotate": {
+       "drawCalls": 132,
+       "triangles": 117459,
+       "geometries": 592,
+       "textures": 8
+      },
+      "ball.shoulder": {
+       "drawCalls": 96,
+       "triangles": 98978,
+       "geometries": 592,
+       "textures": 8
+      },
+      "ball.hip": {
+       "drawCalls": 60,
+       "triangles": 25931,
+       "geometries": 592,
+       "textures": 8
+      },
+      "hinge.flexion": {
+       "drawCalls": 165,
+       "triangles": 126871,
+       "geometries": 592,
+       "textures": 8
+      },
+      "hinge.support": {
+       "drawCalls": 91,
+       "triangles": 65131,
+       "geometries": 598,
+       "textures": 10
+      },
+      "hinge.knee": {
+       "drawCalls": 16,
+       "triangles": 4232,
+       "geometries": 598,
+       "textures": 10
+      },
+      "recap.compare": {
+       "drawCalls": 316,
+       "triangles": 174656,
+       "geometries": 598,
+       "textures": 10
+      }
+     },
+     "dragInput": {
+      "frames": 38,
+      "spanMs": 1643,
+      "fps": 22.5,
+      "frameIntervalMs": {
+       "n": 36,
+       "p50": 33.4,
+       "p95": 36.2,
+       "min": 25.3,
+       "max": 56.2
+      },
+      "frameCpuMs": {
+       "n": 38,
+       "p50": 4.2,
+       "p95": 7.6,
+       "min": 2.8,
+       "max": 8.1
+      },
+      "droppedFrames": 37,
+      "inputs": 61,
+      "inputToRenderMs": {
+       "n": 51,
+       "p50": 20.2,
+       "p95": 215.3,
+       "min": 11.4,
+       "max": 248.5
+      },
+      "inputsWithoutRender": 10
+     },
+     "dragDisplayRate": {
+      "frames": 119,
+      "spanMs": 2967,
+      "fps": 39.8,
+      "frameIntervalMs": {
+       "n": 116,
+       "p50": 16.7,
+       "p95": 18.3,
+       "min": 10.1,
+       "max": 23.5
+      },
+      "frameCpuMs": {
+       "n": 119,
+       "p50": 3.4,
+       "p95": 4.6,
+       "min": 2,
+       "max": 5
+      },
+      "droppedFrames": 0,
+      "inputs": 180,
+      "inputToRenderMs": {
+       "n": 146,
+       "p50": 16.9,
+       "p95": 189,
+       "min": 11,
+       "max": 239.7
+      },
+      "inputsWithoutRender": 34
+     },
+     "sliderKeyboard": {
+      "frames": 35,
+      "spanMs": 728,
+      "fps": 46.7,
+      "frameIntervalMs": {
+       "n": 34,
+       "p50": 19.3,
+       "p95": 32,
+       "min": 13.1,
+       "max": 35.3
+      },
+      "frameCpuMs": {
+       "n": 35,
+       "p50": 6,
+       "p95": 8,
+       "min": 4.1,
+       "max": 8.2
+      },
+      "droppedFrames": 11,
+      "inputs": 40,
+      "inputToRenderMs": {
+       "n": 40,
+       "p50": 18.9,
+       "p95": 25.1,
+       "min": 9.8,
+       "max": 26.8
+      },
+      "inputsWithoutRender": 0
+     },
+     "scrub": {
+      "frames": 42,
+      "spanMs": 1604,
+      "fps": 25.6,
+      "frameIntervalMs": {
+       "n": 41,
+       "p50": 35.9,
+       "p95": 50.9,
+       "min": 21,
+       "max": 81.3
+      },
+      "frameCpuMs": {
+       "n": 42,
+       "p50": 5.2,
+       "p95": 18.1,
+       "min": 1,
+       "max": 50.5
+      },
+      "droppedFrames": 55,
+      "inputs": 42,
+      "inputToRenderMs": {
+       "n": 42,
+       "p50": 22.7,
+       "p95": 34.1,
+       "min": 11.8,
+       "max": 73.5
+      },
+      "inputsWithoutRender": 0
+     },
+     "chapterJump": {
+      "frames": 6,
+      "spanMs": 2266,
+      "fps": 2.2,
+      "frameIntervalMs": {
+       "n": 0,
+       "p50": null,
+       "p95": null,
+       "min": null,
+       "max": null
+      },
+      "frameCpuMs": {
+       "n": 6,
+       "p50": 2,
+       "p95": 40.6,
+       "min": 1.6,
+       "max": 40.6
+      },
+      "droppedFrames": 0,
+      "inputs": 6,
+      "inputToRenderMs": {
+       "n": 6,
+       "p50": 16.6,
+       "p95": 55.4,
+       "min": 11.1,
+       "max": 55.4
+      },
+      "inputsWithoutRender": 0
+     },
+     "exploreOrbit": {
+      "frames": 113,
+      "spanMs": 1867,
+      "fps": 60,
+      "frameIntervalMs": {
+       "n": 112,
+       "p50": 16.6,
+       "p95": 18.2,
+       "min": 14.3,
+       "max": 19.1
+      },
+      "frameCpuMs": {
+       "n": 113,
+       "p50": 3.5,
+       "p95": 4.6,
+       "min": 1.9,
+       "max": 8.9
+      },
+      "droppedFrames": 0,
+      "inputs": 51,
+      "inputToRenderMs": {
+       "n": 51,
+       "p50": 13.4,
+       "p95": 23.2,
+       "min": 8,
+       "max": 27.9
+      },
+      "inputsWithoutRender": 0
+     },
+     "selection": {
+      "frames": 6,
+      "spanMs": 1554,
+      "fps": 3.2,
+      "frameIntervalMs": {
+       "n": 2,
+       "p50": 8,
+       "p95": 10.7,
+       "min": 8,
+       "max": 10.7
+      },
+      "frameCpuMs": {
+       "n": 6,
+       "p50": 6.7,
+       "p95": 10.1,
+       "min": 3.5,
+       "max": 10.1
+      },
+      "droppedFrames": 0,
+      "inputs": 4,
+      "inputToRenderMs": {
+       "n": 4,
+       "p50": 20.1,
+       "p95": 25,
+       "min": 18.8,
+       "max": 25
+      },
+      "inputsWithoutRender": 0
+     },
+     "heapAfterInteractionsBytes": 36508129
+    }
+   },
+   "tablet-emulated-fast4g": {
+    "classification": "EMULATED — NOT CERTIFICATION (CPU 2x throttle, laptop GPU)",
+    "network": {
+     "id": "fast-4g-devtools",
+     "downBps": 1012500,
+     "upBps": 168750,
+     "latencyMs": 165,
+     "note": "Chrome DevTools Fast 4G preset"
+    },
+    "cpuThrottle": 2,
+    "viewport": {
+     "width": 768,
+     "height": 1024
+    },
+    "dpr": 2,
+    "firstMeaningful3DMs": {
+     "n": 5,
+     "p50": 12272,
+     "p95": 12851,
+     "min": 12157,
+     "max": 12851
+    },
+    "shellVisibleMs": {
+     "n": 5,
+     "p50": 838,
+     "p95": 848,
+     "min": 804,
+     "max": 848
+    },
+    "bytesBeforeFirst3D": {
+     "n": 5,
+     "p50": 2199349,
+     "p95": 2199349,
+     "min": 2199349,
+     "max": 2199349
+    },
+    "jsHeapUsedBytes": {
+     "n": 5,
+     "p50": 31236975,
+     "p95": 31712373,
+     "min": 28913343,
+     "max": 31712373
+    },
+    "repeatVisit": {
+     "firstMeaningful3DMs": 3839,
+     "bytesTotal": 2100
+    },
+    "renderer": {
+     "drawCalls": 783,
+     "triangles": 235754,
+     "geometries": 542,
+     "textures": 6,
+     "pixelRatio": 2,
+     "gpu": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x00009A49) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+    },
+    "milestones": [
+     {
+      "name": "/app/index-BuFzrH_m.js",
+      "start": 228,
+      "end": 659,
+      "transfer": 216846
+     },
+     {
+      "name": "/app/index-5JW1531B.css",
+      "start": 231,
+      "end": 423,
+      "transfer": 5039
+     },
+     {
+      "name": "/assets/joints/elbow_r/joint-manifest.json",
+      "start": 4987,
+      "end": 5175,
+      "transfer": 12672
+     },
+     {
+      "name": "/assets/body/body-manifest.json",
+      "start": 5337,
+      "end": 5554,
+      "transfer": 26972
+     },
+     {
+      "name": "/assets/joints/elbow_r/elbow_r.core.glb",
+      "start": 5343,
+      "end": 5735,
+      "transfer": 188925
+     },
+     {
+      "name": "/assets/body/body.skeleton.glb",
+      "start": 5584,
+      "end": 7522,
+      "transfer": 1332696
+     },
+     {
+      "name": "/assets/body/body.skin.glb",
+      "start": 5586,
+      "end": 6476,
+      "transfer": 345924
+     },
+     {
+      "name": "/assets/joints/elbow_r/elbow_r.detail.glb",
+      "start": 8101,
+      "end": 8360,
+      "transfer": 70275
+     }
+    ],
+    "longTasksBeforeFirst3DMs": [
+     9609,
+     9435,
+     9283,
+     9463,
+     9995
+    ],
+    "consoleErrors": 0,
+    "interactions": {
+     "playTravel": {
+      "frames": 280,
+      "spanMs": 5008,
+      "fps": 55.7,
+      "frameIntervalMs": {
+       "n": 279,
+       "p50": 17.2,
+       "p95": 23.4,
+       "min": 12.6,
+       "max": 33.3
+      },
+      "frameCpuMs": {
+       "n": 280,
+       "p50": 7.7,
+       "p95": 10.1,
+       "min": 3,
+       "max": 11.5
+      },
+      "droppedFrames": 5,
+      "inputs": 0,
+      "inputToRenderMs": {
+       "n": 0,
+       "p50": null,
+       "p95": null,
+       "min": null,
+       "max": null
+      },
+      "inputsWithoutRender": 0
+     },
+     "playElbow": {
+      "frames": 159,
+      "spanMs": 4815,
+      "fps": 32.8,
+      "frameIntervalMs": {
+       "n": 158,
+       "p50": 30.3,
+       "p95": 39.1,
+       "min": 23,
+       "max": 49.3
+      },
+      "frameCpuMs": {
+       "n": 159,
+       "p50": 14.6,
+       "p95": 18.9,
+       "min": 10.6,
+       "max": 43.4
+      },
+      "droppedFrames": 148,
+      "inputs": 0,
+      "inputToRenderMs": {
+       "n": 0,
+       "p50": null,
+       "p95": null,
+       "min": null,
+       "max": null
+      },
+      "inputsWithoutRender": 0
+     },
+     "playRecap": {
+      "frames": 27,
+      "spanMs": 5034,
+      "fps": 5.2,
+      "frameIntervalMs": {
+       "n": 26,
+       "p50": 189.7,
+       "p95": 220.1,
+       "min": 176.2,
+       "max": 223.1
+      },
+      "frameCpuMs": {
+       "n": 27,
+       "p50": 166.9,
+       "p95": 196.8,
+       "min": 155.4,
+       "max": 198.2
+      },
+      "droppedFrames": 276,
+      "inputs": 0,
+      "inputToRenderMs": {
+       "n": 0,
+       "p50": null,
+       "p95": null,
+       "min": null,
+       "max": null
+      },
+      "inputsWithoutRender": 0
+     },
+     "shots": {
+      "intro.title": {
+       "drawCalls": 783,
+       "triangles": 235754,
+       "geometries": 592,
+       "textures": 8
+      },
+      "fixed.detail": {
+       "drawCalls": 102,
+       "triangles": 87467,
+       "geometries": 592,
+       "textures": 8
+      },
+      "pivot.rotate": {
+       "drawCalls": 145,
+       "triangles": 126353,
+       "geometries": 592,
+       "textures": 8
+      },
+      "ball.shoulder": {
+       "drawCalls": 105,
+       "triangles": 108112,
+       "geometries": 592,
+       "textures": 8
+      },
+      "ball.hip": {
+       "drawCalls": 73,
+       "triangles": 39375,
+       "geometries": 592,
+       "textures": 8
+      },
+      "hinge.flexion": {
+       "drawCalls": 170,
+       "triangles": 132769,
+       "geometries": 592,
+       "textures": 8
+      },
+      "hinge.support": {
+       "drawCalls": 95,
+       "triangles": 69471,
+       "geometries": 598,
+       "textures": 10
+      },
+      "hinge.knee": {
+       "drawCalls": 24,
+       "triangles": 5430,
+       "geometries": 598,
+       "textures": 10
+      },
+      "recap.compare": {
+       "drawCalls": 316,
+       "triangles": 174656,
+       "geometries": 598,
+       "textures": 10
+      }
+     },
+     "dragInput": {
+      "frames": 38,
+      "spanMs": 3716,
+      "fps": 10,
+      "frameIntervalMs": {
+       "n": 36,
+       "p50": 77.4,
+       "p95": 107.1,
+       "min": 42.3,
+       "max": 118.4
+      },
+      "frameCpuMs": {
+       "n": 38,
+       "p50": 16.1,
+       "p95": 33.1,
+       "min": 6,
+       "max": 44
+      },
+      "droppedFrames": 128,
+      "inputs": 61,
+      "inputToRenderMs": {
+       "n": 43,
+       "p50": 37.9,
+       "p95": 203.5,
+       "min": 14.9,
+       "max": 261.7
+      },
+      "inputsWithoutRender": 18
+     },
+     "dragDisplayRate": {
+      "frames": 117,
+      "spanMs": 5440,
+      "fps": 21.3,
+      "frameIntervalMs": {
+       "n": 114,
+       "p50": 37.8,
+       "p95": 43.9,
+       "min": 32.5,
+       "max": 48.8
+      },
+      "frameCpuMs": {
+       "n": 117,
+       "p50": 15.4,
+       "p95": 18,
+       "min": 10.7,
+       "max": 21.7
+      },
+      "droppedFrames": 134,
+      "inputs": 180,
+      "inputToRenderMs": {
+       "n": 144,
+       "p50": 38.6,
+       "p95": 204.2,
+       "min": 32.2,
+       "max": 267.2
+      },
+      "inputsWithoutRender": 36
+     },
+     "sliderKeyboard": {
+      "frames": 40,
+      "spanMs": 1997,
+      "fps": 19.5,
+      "frameIntervalMs": {
+       "n": 39,
+       "p50": 51.3,
+       "p95": 56.3,
+       "min": 45.3,
+       "max": 58.4
+      },
+      "frameCpuMs": {
+       "n": 40,
+       "p50": 21,
+       "p95": 24.4,
+       "min": 15.8,
+       "max": 25.2
+      },
+      "droppedFrames": 79,
+      "inputs": 40,
+      "inputToRenderMs": {
+       "n": 40,
+       "p50": 38.5,
+       "p95": 44.8,
+       "min": 32.2,
+       "max": 81.3
+      },
+      "inputsWithoutRender": 0
+     },
+     "scrub": {
+      "frames": 42,
+      "spanMs": 3440,
+      "fps": 11.9,
+      "frameIntervalMs": {
+       "n": 41,
+       "p50": 80.5,
+       "p95": 106.2,
+       "min": 46.4,
+       "max": 229.4
+      },
+      "frameCpuMs": {
+       "n": 42,
+       "p50": 17.6,
+       "p95": 58.2,
+       "min": 3,
+       "max": 167.3
+      },
+      "droppedFrames": 164,
+      "inputs": 42,
+      "inputToRenderMs": {
+       "n": 42,
+       "p50": 53.3,
+       "p95": 96.7,
+       "min": 21.8,
+       "max": 200.5
+      },
+      "inputsWithoutRender": 0
+     },
+     "chapterJump": {
+      "frames": 7,
+      "spanMs": 2833,
+      "fps": 2.1,
+      "frameIntervalMs": {
+       "n": 1,
+       "p50": 109.6,
+       "p95": 109.6,
+       "min": 109.6,
+       "max": 109.6
+      },
+      "frameCpuMs": {
+       "n": 7,
+       "p50": 15.2,
+       "p95": 172.3,
+       "min": 7.5,
+       "max": 172.3
+      },
+      "droppedFrames": 6,
+      "inputs": 6,
+      "inputToRenderMs": {
+       "n": 6,
+       "p50": 51.5,
+       "p95": 213.4,
+       "min": 46.9,
+       "max": 213.4
+      },
+      "inputsWithoutRender": 0
+     },
+     "exploreOrbit": {
+      "frames": 163,
+      "spanMs": 4934,
+      "fps": 32.8,
+      "frameIntervalMs": {
+       "n": 162,
+       "p50": 30.2,
+       "p95": 35,
+       "min": 22.8,
+       "max": 40.6
+      },
+      "frameCpuMs": {
+       "n": 163,
+       "p50": 14.7,
+       "p95": 17.3,
+       "min": 10.6,
+       "max": 33.4
+      },
+      "droppedFrames": 158,
+      "inputs": 51,
+      "inputToRenderMs": {
+       "n": 51,
+       "p50": 49.9,
+       "p95": 58.4,
+       "min": 24,
+       "max": 60.3
+      },
+      "inputsWithoutRender": 0
+     },
+     "selection": {
+      "frames": 6,
+      "spanMs": 3173,
+      "fps": 1.6,
+      "frameIntervalMs": {
+       "n": 2,
+       "p50": 27.3,
+       "p95": 31.1,
+       "min": 27.3,
+       "max": 31.1
+      },
+      "frameCpuMs": {
+       "n": 6,
+       "p50": 29.1,
+       "p95": 39,
+       "min": 13.9,
+       "max": 39
+      },
+      "droppedFrames": 2,
+      "inputs": 4,
+      "inputToRenderMs": {
+       "n": 4,
+       "p50": 62.9,
+       "p95": 88.8,
+       "min": 60.3,
+       "max": 88.8
+      },
+      "inputsWithoutRender": 0
+     },
+     "heapAfterInteractionsBytes": 42469746
+    }
+   },
+   "mobile-emulated-fast4g": {
+    "classification": "EMULATED — NOT CERTIFICATION (CPU 4x throttle, laptop GPU)",
+    "network": {
+     "id": "fast-4g-devtools",
+     "downBps": 1012500,
+     "upBps": 168750,
+     "latencyMs": 165,
+     "note": "Chrome DevTools Fast 4G preset"
+    },
+    "cpuThrottle": 4,
+    "viewport": {
+     "width": 412,
+     "height": 915
+    },
+    "dpr": 2.625,
+    "firstMeaningful3DMs": {
+     "n": 5,
+     "p50": 17087,
+     "p95": 17942,
+     "min": 16494,
+     "max": 17942
+    },
+    "shellVisibleMs": {
+     "n": 5,
+     "p50": 1067,
+     "p95": 1120,
+     "min": 1022,
+     "max": 1120
+    },
+    "bytesBeforeFirst3D": {
+     "n": 5,
+     "p50": 2199349,
+     "p95": 2199349,
+     "min": 2199349,
+     "max": 2199349
+    },
+    "jsHeapUsedBytes": {
+     "n": 5,
+     "p50": 26882398,
+     "p95": 27773210,
+     "min": 21655794,
+     "max": 27773210
+    },
+    "repeatVisit": {
+     "firstMeaningful3DMs": 7122,
+     "bytesTotal": 2100
+    },
+    "renderer": {
+     "drawCalls": 783,
+     "triangles": 235754,
+     "geometries": 542,
+     "textures": 6,
+     "pixelRatio": 2,
+     "gpu": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x00009A49) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+    },
+    "milestones": [
+     {
+      "name": "/app/index-BuFzrH_m.js",
+      "start": 309,
+      "end": 739,
+      "transfer": 216846
+     },
+     {
+      "name": "/app/index-5JW1531B.css",
+      "start": 318,
+      "end": 501,
+      "transfer": 5039
+     },
+     {
+      "name": "/assets/joints/elbow_r/joint-manifest.json",
+      "start": 6273,
+      "end": 6460,
+      "transfer": 12672
+     },
+     {
+      "name": "/assets/body/body-manifest.json",
+      "start": 7089,
+      "end": 7315,
+      "transfer": 26972
+     },
+     {
+      "name": "/assets/joints/elbow_r/elbow_r.core.glb",
+      "start": 7104,
+      "end": 7498,
+      "transfer": 188925
+     },
+     {
+      "name": "/assets/body/body.skeleton.glb",
+      "start": 7409,
+      "end": 9351,
+      "transfer": 1332696
+     },
+     {
+      "name": "/assets/body/body.skin.glb",
+      "start": 7415,
+      "end": 8302,
+      "transfer": 345924
+     },
+     {
+      "name": "/assets/joints/elbow_r/elbow_r.detail.glb",
+      "start": 10815,
+      "end": 11074,
+      "transfer": 70275
+     }
+    ],
+    "longTasksBeforeFirst3DMs": [
+     15225,
+     15398,
+     14471,
+     14454,
+     14087
+    ],
+    "consoleErrors": 0,
+    "interactions": {
+     "playTravel": {
+      "frames": 90,
+      "spanMs": 5024,
+      "fps": 17.7,
+      "frameIntervalMs": {
+       "n": 89,
+       "p50": 56.9,
+       "p95": 77.9,
+       "min": 21.2,
+       "max": 87.3
+      },
+      "frameCpuMs": {
+       "n": 90,
+       "p50": 25,
+       "p95": 36.9,
+       "min": 3.6,
+       "max": 52.7
+      },
+      "droppedFrames": 211,
+      "inputs": 0,
+      "inputToRenderMs": {
+       "n": 0,
+       "p50": null,
+       "p95": null,
+       "min": null,
+       "max": null
+      },
+      "inputsWithoutRender": 0
+     },
+     "playElbow": {
+      "frames": 48,
+      "spanMs": 4866,
+      "fps": 9.7,
+      "frameIntervalMs": {
+       "n": 47,
+       "p50": 104.3,
+       "p95": 128.9,
+       "min": 74.3,
+       "max": 141.8
+      },
+      "frameCpuMs": {
+       "n": 48,
+       "p50": 48,
+       "p95": 75.2,
+       "min": 32.2,
+       "max": 100.2
+      },
+      "droppedFrames": 247,
+      "inputs": 0,
+      "inputToRenderMs": {
+       "n": 0,
+       "p50": null,
+       "p95": null,
+       "min": null,
+       "max": null
+      },
+      "inputsWithoutRender": 0
+     },
+     "playRecap": {
+      "frames": 11,
+      "spanMs": 5313,
+      "fps": 1.9,
+      "frameIntervalMs": {
+       "n": 0,
+       "p50": null,
+       "p95": null,
+       "min": null,
+       "max": null
+      },
+      "frameCpuMs": {
+       "n": 11,
+       "p50": 475.9,
+       "p95": 529.1,
+       "min": 419.6,
+       "max": 529.1
+      },
+      "droppedFrames": 0,
+      "inputs": 0,
+      "inputToRenderMs": {
+       "n": 0,
+       "p50": null,
+       "p95": null,
+       "min": null,
+       "max": null
+      },
+      "inputsWithoutRender": 0
+     },
+     "shots": {
+      "intro.title": {
+       "drawCalls": 783,
+       "triangles": 235754,
+       "geometries": 592,
+       "textures": 8
+      },
+      "fixed.detail": {
+       "drawCalls": 140,
+       "triangles": 125021,
+       "geometries": 592,
+       "textures": 8
+      },
+      "pivot.rotate": {
+       "drawCalls": 195,
+       "triangles": 148820,
+       "geometries": 592,
+       "textures": 8
+      },
+      "ball.shoulder": {
+       "drawCalls": 118,
+       "triangles": 118433,
+       "geometries": 592,
+       "textures": 8
+      },
+      "ball.hip": {
+       "drawCalls": 114,
+       "triangles": 89935,
+       "geometries": 592,
+       "textures": 8
+      },
+      "hinge.flexion": {
+       "drawCalls": 227,
+       "triangles": 167234,
+       "geometries": 592,
+       "textures": 8
+      },
+      "hinge.support": {
+       "drawCalls": 109,
+       "triangles": 91993,
+       "geometries": 598,
+       "textures": 10
+      },
+      "hinge.knee": {
+       "drawCalls": 102,
+       "triangles": 22966,
+       "geometries": 598,
+       "textures": 10
+      },
+      "recap.compare": {
+       "drawCalls": 316,
+       "triangles": 174656,
+       "geometries": 598,
+       "textures": 10
+      }
+     },
+     "dragInput": {
+      "frames": 3,
+      "spanMs": 2131,
+      "fps": 0.9,
+      "frameIntervalMs": {
+       "n": 1,
+       "p50": 202.2,
+       "p95": 202.2,
+       "min": 202.2,
+       "max": 202.2
+      },
+      "frameCpuMs": {
+       "n": 3,
+       "p50": 83.3,
+       "p95": 101.7,
+       "min": 61,
+       "max": 101.7
+      },
+      "droppedFrames": 11,
+      "inputs": 61,
+      "inputToRenderMs": {
+       "n": 10,
+       "p50": 165.9,
+       "p95": 289.4,
+       "min": 115.1,
+       "max": 289.4
+      },
+      "inputsWithoutRender": 51
+     },
+     "dragDisplayRate": {
+      "frames": 86,
+      "spanMs": 10195,
+      "fps": 8.3,
+      "frameIntervalMs": {
+       "n": 83,
+       "p50": 104.5,
+       "p95": 114.8,
+       "min": 87.1,
+       "max": 134.6
+      },
+      "frameCpuMs": {
+       "n": 86,
+       "p50": 43.8,
+       "p95": 48.9,
+       "min": 13.7,
+       "max": 69
+      },
+      "droppedFrames": 438,
+      "inputs": 180,
+      "inputToRenderMs": {
+       "n": 111,
+       "p50": 106.2,
+       "p95": 262.6,
+       "min": 51,
+       "max": 296.5
+      },
+      "inputsWithoutRender": 69
+     },
+     "sliderKeyboard": {
+      "frames": 40,
+      "spanMs": 5224,
+      "fps": 7.5,
+      "frameIntervalMs": {
+       "n": 39,
+       "p50": 133.3,
+       "p95": 144.5,
+       "min": 121.1,
+       "max": 160.7
+      },
+      "frameCpuMs": {
+       "n": 40,
+       "p50": 63.5,
+       "p95": 70.9,
+       "min": 53,
+       "max": 74.9
+      },
+      "droppedFrames": 274,
+      "inputs": 40,
+      "inputToRenderMs": {
+       "n": 40,
+       "p50": 111.2,
+       "p95": 213.6,
+       "min": 98.6,
+       "max": 214.4
+      },
+      "inputsWithoutRender": 0
+     },
+     "scrub": {
+      "frames": 42,
+      "spanMs": 7712,
+      "fps": 5.3,
+      "frameIntervalMs": {
+       "n": 39,
+       "p50": 162,
+       "p95": 235.9,
+       "min": 121.4,
+       "max": 241
+      },
+      "frameCpuMs": {
+       "n": 42,
+       "p50": 46.8,
+       "p95": 133,
+       "min": 14.8,
+       "max": 461
+      },
+      "droppedFrames": 355,
+      "inputs": 42,
+      "inputToRenderMs": {
+       "n": 42,
+       "p50": 126.5,
+       "p95": 226.1,
+       "min": 65.6,
+       "max": 554.5
+      },
+      "inputsWithoutRender": 0
+     },
+     "chapterJump": {
+      "frames": 6,
+      "spanMs": 3591,
+      "fps": 1.4,
+      "frameIntervalMs": {
+       "n": 0,
+       "p50": null,
+       "p95": null,
+       "min": null,
+       "max": null
+      },
+      "frameCpuMs": {
+       "n": 6,
+       "p50": 34,
+       "p95": 449.9,
+       "min": 20.9,
+       "max": 449.9
+      },
+      "droppedFrames": 0,
+      "inputs": 6,
+      "inputToRenderMs": {
+       "n": 6,
+       "p50": 134.6,
+       "p95": 556.2,
+       "min": 118.5,
+       "max": 556.2
+      },
+      "inputsWithoutRender": 0
+     },
+     "exploreOrbit": {
+      "frames": 61,
+      "spanMs": 7890,
+      "fps": 7.6,
+      "frameIntervalMs": {
+       "n": 60,
+       "p50": 139.6,
+       "p95": 155.3,
+       "min": 61.8,
+       "max": 160.1
+      },
+      "frameCpuMs": {
+       "n": 61,
+       "p50": 80.1,
+       "p95": 91.1,
+       "min": 28.3,
+       "max": 95.4
+      },
+      "droppedFrames": 407,
+      "inputs": 51,
+      "inputToRenderMs": {
+       "n": 51,
+       "p50": 105.4,
+       "p95": 121.9,
+       "min": 83.6,
+       "max": 131.1
+      },
+      "inputsWithoutRender": 0
+     },
+     "selection": {
+      "frames": 6,
+      "spanMs": 14131,
+      "fps": 0.4,
+      "frameIntervalMs": {
+       "n": 2,
+       "p50": 78.5,
+       "p95": 114.6,
+       "min": 78.5,
+       "max": 114.6
+      },
+      "frameCpuMs": {
+       "n": 6,
+       "p50": 78.7,
+       "p95": 107.2,
+       "min": 40.9,
+       "max": 107.2
+      },
+      "droppedFrames": 10,
+      "inputs": 4,
+      "inputToRenderMs": {
+       "n": 4,
+       "p50": 218.9,
+       "p95": 258.1,
+       "min": 148.5,
+       "max": 258.1
+      },
+      "inputsWithoutRender": 0
+     },
+     "heapAfterInteractionsBytes": 22247627
+    }
+   }
+  }
+ },
+ "targets": {
+  "mobileMidRange": {
+   "firstMeaningful3DMs": 2500,
+   "dragFpsMin": 45,
+   "p95FrameMs": 22,
+   "inputToVisualMs": 80
+  },
+  "tablet": {
+   "firstMeaningful3DMs": 2500,
+   "fpsMin": 50,
+   "p95FrameMs": 20
+  },
+  "laptopIntegratedGpu": {
+   "firstMeaningful3DMs": 1500,
+   "fps": 60
+  }
+ },
+ "step11ReportsPreserved": [
+  "step11.baseline_sha256.txt",
+  "step11.film_e2e.log",
+  "step11.film_visual.json",
+  "step11.playwright.json",
+  "step11.playwright.log",
+  "step11v.source_complete_sha_before.txt",
+  "qa/visual/step11/01b_intro_joint_map.png",
+  "qa/visual/step11/01_intro_full_body.png",
+  "qa/visual/step11/02_fixed_skull.png",
+  "qa/visual/step11/03_pivot_upper_neck.png",
+  "qa/visual/step11/04_ball_socket_shoulder.png",
+  "qa/visual/step11/05_ball_socket_hip.png",
+  "qa/visual/step11/06b_hinge_elbow_bones.png",
+  "qa/visual/step11/06c_hinge_elbow_axis.png",
+  "qa/visual/step11/06d_hinge_elbow_support.png",
+  "qa/visual/step11/06_hinge_elbow_source.png",
+  "qa/visual/step11/07_hinge_knee.png",
+  "qa/visual/step11/08b_recap_compare.png",
+  "qa/visual/step11/08_recap_full_body.png",
+  "qa/visual/step11/09_check.png",
+  "qa/visual/step11/elbow_000.png",
+  "qa/visual/step11/elbow_045.png",
+  "qa/visual/step11/elbow_090.png",
+  "qa/visual/step11/elbow_145.png"
+ ]
+}

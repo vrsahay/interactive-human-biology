@@ -1,0 +1,458 @@
+{
+ "generatedAt": "2026-09-21T10:24:26.870Z",
+ "rows": [
+  {
+   "shot": "intro.title",
+   "cameraMovedDuringPlayback": 0,
+   "concepts": 0,
+   "phases": [],
+   "captionTransition": "0s",
+   "stillInShot": true
+  },
+  {
+   "shot": "hook.shoulder",
+   "cameraMovedDuringPlayback": 0,
+   "concepts": 1,
+   "phases": [
+    0.125
+   ],
+   "captionTransition": "0s",
+   "stillInShot": true
+  },
+  {
+   "shot": "hook.elbow",
+   "cameraMovedDuringPlayback": 0,
+   "concepts": 1,
+   "phases": [
+    0.125
+   ],
+   "captionTransition": "0s",
+   "stillInShot": true
+  },
+  {
+   "shot": "hook.question",
+   "cameraMovedDuringPlayback": 0,
+   "concepts": 2,
+   "phases": [
+    0.125,
+    0.125
+   ],
+   "captionTransition": "0s",
+   "stillInShot": true
+  },
+  {
+   "shot": "concept.meet",
+   "cameraMovedDuringPlayback": 0,
+   "concepts": 0,
+   "phases": [],
+   "captionTransition": "0s",
+   "stillInShot": true
+  },
+  {
+   "shot": "concept.different",
+   "cameraMovedDuringPlayback": 0,
+   "concepts": 3,
+   "phases": [
+    0.125,
+    0.125,
+    0.125
+   ],
+   "captionTransition": "0s",
+   "stillInShot": true
+  },
+  {
+   "shot": "intro.map",
+   "cameraMovedDuringPlayback": 0,
+   "concepts": 0,
+   "phases": [],
+   "captionTransition": "0s",
+   "stillInShot": true
+  },
+  {
+   "shot": "fixed.travel",
+   "cameraMovedDuringPlayback": 0,
+   "concepts": 0,
+   "phases": [],
+   "captionTransition": "0s",
+   "stillInShot": true
+  },
+  {
+   "shot": "fixed.bones",
+   "cameraMovedDuringPlayback": 0,
+   "concepts": 0,
+   "phases": [],
+   "captionTransition": "0s",
+   "stillInShot": true
+  },
+  {
+   "shot": "fixed.try",
+   "cameraMovedDuringPlayback": 0,
+   "concepts": 1,
+   "phases": [
+    0.125
+   ],
+   "captionTransition": "0s",
+   "stillInShot": true
+  },
+  {
+   "shot": "fixed.why",
+   "cameraMovedDuringPlayback": 0,
+   "concepts": 0,
+   "phases": [],
+   "captionTransition": "0s",
+   "stillInShot": true
+  },
+  {
+   "shot": "fixed.name",
+   "cameraMovedDuringPlayback": 0,
+   "concepts": 0,
+   "phases": [],
+   "captionTransition": "0s",
+   "stillInShot": true
+  },
+  {
+   "shot": "fixed.task",
+   "cameraMovedDuringPlayback": 0,
+   "concepts": 0,
+   "phases": [],
+   "captionTransition": "0s",
+   "stillInShot": true
+  },
+  {
+   "shot": "pivot.travel",
+   "cameraMovedDuringPlayback": 0,
+   "concepts": 0,
+   "phases": [],
+   "captionTransition": "0s",
+   "stillInShot": true
+  },
+  {
+   "shot": "pivot.bones",
+   "cameraMovedDuringPlayback": 0,
+   "concepts": 0,
+   "phases": [],
+   "captionTransition": "0s",
+   "stillInShot": true
+  },
+  {
+   "shot": "pivot.rotate",
+   "cameraMovedDuringPlayback": 0,
+   "concepts": 1,
+   "phases": [
+    0.125
+   ],
+   "captionTransition": "0s",
+   "stillInShot": true
+  },
+  {
+   "shot": "pivot.why",
+   "cameraMovedDuringPlayback": 0,
+   "concepts": 1,
+   "phases": [
+    0.125
+   ],
+   "captionTransition": "0s",
+   "stillInShot": true
+  },
+  {
+   "shot": "pivot.name",
+   "cameraMovedDuringPlayback": 0,
+   "concepts": 0,
+   "phases": [],
+   "captionTransition": "0s",
+   "stillInShot": true
+  },
+  {
+   "shot": "pivot.task",
+   "cameraMovedDuringPlayback": 0,
+   "concepts": 0,
+   "phases": [],
+   "captionTransition": "0s",
+   "stillInShot": true
+  },
+  {
+   "shot": "ball.travel",
+   "cameraMovedDuringPlayback": 0,
+   "concepts": 0,
+   "phases": [],
+   "captionTransition": "0s",
+   "stillInShot": true
+  },
+  {
+   "shot": "ball.bones",
+   "cameraMovedDuringPlayback": 0,
+   "concepts": 0,
+   "phases": [],
+   "captionTransition": "0s",
+   "stillInShot": true
+  },
+  {
+   "shot": "ball.move",
+   "cameraMovedDuringPlayback": 0,
+   "concepts": 1,
+   "phases": [
+    0.125
+   ],
+   "captionTransition": "0s",
+   "stillInShot": true
+  },
+  {
+   "shot": "ball.why",
+   "cameraMovedDuringPlayback": 0,
+   "concepts": 0,
+   "phases": [],
+   "captionTransition": "0s",
+   "stillInShot": true
+  },
+  {
+   "shot": "ball.name",
+   "cameraMovedDuringPlayback": 0,
+   "concepts": 0,
+   "phases": [],
+   "captionTransition": "0s",
+   "stillInShot": true
+  },
+  {
+   "shot": "ball.task",
+   "cameraMovedDuringPlayback": 0,
+   "concepts": 0,
+   "phases": [],
+   "captionTransition": "0s",
+   "stillInShot": true
+  },
+  {
+   "shot": "hinge.travel",
+   "cameraMovedDuringPlayback": 0,
+   "concepts": 0,
+   "phases": [],
+   "captionTransition": "0s",
+   "stillInShot": true
+  },
+  {
+   "shot": "hinge.source",
+   "cameraMovedDuringPlayback": 0,
+   "concepts": 0,
+   "phases": [],
+   "captionTransition": "0s",
+   "stillInShot": true
+  },
+  {
+   "shot": "hinge.bones",
+   "cameraMovedDuringPlayback": 0,
+   "concepts": 0,
+   "phases": [],
+   "captionTransition": "0s",
+   "stillInShot": true
+  },
+  {
+   "shot": "hinge.axis",
+   "cameraMovedDuringPlayback": 0,
+   "concepts": 0,
+   "phases": [],
+   "captionTransition": "0s",
+   "stillInShot": true
+  },
+  {
+   "shot": "hinge.flexion",
+   "cameraMovedDuringPlayback": 0,
+   "concepts": 0,
+   "phases": [],
+   "captionTransition": "0s",
+   "stillInShot": true
+  },
+  {
+   "shot": "hinge.extension",
+   "cameraMovedDuringPlayback": 0,
+   "concepts": 0,
+   "phases": [],
+   "captionTransition": "0s",
+   "stillInShot": true
+  },
+  {
+   "shot": "hinge.why",
+   "cameraMovedDuringPlayback": 0,
+   "concepts": 0,
+   "phases": [],
+   "captionTransition": "0s",
+   "stillInShot": true
+  },
+  {
+   "shot": "hinge.name",
+   "cameraMovedDuringPlayback": 0,
+   "concepts": 0,
+   "phases": [],
+   "captionTransition": "0s",
+   "stillInShot": true
+  },
+  {
+   "shot": "hinge.try",
+   "cameraMovedDuringPlayback": 0,
+   "concepts": 0,
+   "phases": [],
+   "captionTransition": "0s",
+   "stillInShot": true
+  },
+  {
+   "shot": "hinge.check",
+   "cameraMovedDuringPlayback": 0,
+   "concepts": 0,
+   "phases": [],
+   "captionTransition": "0s",
+   "stillInShot": true
+  },
+  {
+   "shot": "hinge.support",
+   "cameraMovedDuringPlayback": 0,
+   "concepts": 0,
+   "phases": [],
+   "captionTransition": "0s",
+   "stillInShot": true
+  },
+  {
+   "shot": "hinge.return",
+   "cameraMovedDuringPlayback": 0,
+   "concepts": 0,
+   "phases": [],
+   "captionTransition": "0s",
+   "stillInShot": true
+  },
+  {
+   "shot": "hinge.knee",
+   "cameraMovedDuringPlayback": 0,
+   "concepts": 1,
+   "phases": [
+    0.125
+   ],
+   "captionTransition": "0s",
+   "stillInShot": true
+  },
+  {
+   "shot": "compare.pullback",
+   "cameraMovedDuringPlayback": 0,
+   "concepts": 0,
+   "phases": [],
+   "captionTransition": "0s",
+   "stillInShot": true
+  },
+  {
+   "shot": "compare.fixed",
+   "cameraMovedDuringPlayback": 0,
+   "concepts": 1,
+   "phases": [
+    0.125
+   ],
+   "captionTransition": "0s",
+   "stillInShot": true
+  },
+  {
+   "shot": "compare.pivot",
+   "cameraMovedDuringPlayback": 0,
+   "concepts": 1,
+   "phases": [
+    0.125
+   ],
+   "captionTransition": "0s",
+   "stillInShot": true
+  },
+  {
+   "shot": "compare.ball",
+   "cameraMovedDuringPlayback": 0,
+   "concepts": 1,
+   "phases": [
+    0.125
+   ],
+   "captionTransition": "0s",
+   "stillInShot": true
+  },
+  {
+   "shot": "compare.hinge",
+   "cameraMovedDuringPlayback": 0,
+   "concepts": 1,
+   "phases": [
+    0.125
+   ],
+   "captionTransition": "0s",
+   "stillInShot": true
+  },
+  {
+   "shot": "compare.together",
+   "cameraMovedDuringPlayback": 0,
+   "concepts": 0,
+   "phases": [],
+   "captionTransition": "0s",
+   "stillInShot": true
+  },
+  {
+   "shot": "recall.open",
+   "cameraMovedDuringPlayback": 0,
+   "concepts": 0,
+   "phases": [],
+   "captionTransition": "0s",
+   "stillInShot": true
+  },
+  {
+   "shot": "recall.challenge",
+   "cameraMovedDuringPlayback": 0,
+   "concepts": 0,
+   "phases": [],
+   "captionTransition": "0s",
+   "stillInShot": false
+  },
+  {
+   "shot": "map.intro",
+   "cameraMovedDuringPlayback": 0,
+   "concepts": 0,
+   "phases": [],
+   "captionTransition": "0s",
+   "stillInShot": true
+  },
+  {
+   "shot": "map.fixed",
+   "cameraMovedDuringPlayback": 0,
+   "concepts": 1,
+   "phases": [
+    0.125
+   ],
+   "captionTransition": "0s",
+   "stillInShot": true
+  },
+  {
+   "shot": "map.pivot",
+   "cameraMovedDuringPlayback": 0,
+   "concepts": 1,
+   "phases": [
+    0.125
+   ],
+   "captionTransition": "0s",
+   "stillInShot": true
+  },
+  {
+   "shot": "map.ball",
+   "cameraMovedDuringPlayback": 0,
+   "concepts": 1,
+   "phases": [
+    0.125
+   ],
+   "captionTransition": "0s",
+   "stillInShot": true
+  },
+  {
+   "shot": "map.hinge",
+   "cameraMovedDuringPlayback": 0,
+   "concepts": 1,
+   "phases": [
+    0.125
+   ],
+   "captionTransition": "0s",
+   "stillInShot": true
+  },
+  {
+   "shot": "map.all",
+   "cameraMovedDuringPlayback": 0,
+   "concepts": 0,
+   "phases": [],
+   "captionTransition": "0s",
+   "stillInShot": true
+  }
+ ]
+}

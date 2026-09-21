@@ -1,0 +1,218 @@
+{
+ "generatedAt": "2026-09-21T10:30:09.316Z",
+ "beats": [
+  {
+   "chapter": "fixed",
+   "shots": 6,
+   "durationS": 45.8,
+   "spokenWords": 133,
+   "beats": {
+    "arrive": 0,
+    "look": 1,
+    "movement": 2,
+    "reason": 3,
+    "name": 4
+   },
+   "explore": "explore.fixed"
+  },
+  {
+   "chapter": "pivot",
+   "shots": 6,
+   "durationS": 43.2,
+   "spokenWords": 124,
+   "beats": {
+    "arrive": 0,
+    "look": 1,
+    "movement": 2,
+    "reason": 3,
+    "name": 4
+   },
+   "explore": "explore.pivot"
+  },
+  {
+   "chapter": "ball_socket",
+   "shots": 6,
+   "durationS": 44.8,
+   "spokenWords": 116,
+   "beats": {
+    "arrive": 0,
+    "look": 1,
+    "movement": 2,
+    "reason": 3,
+    "name": 4
+   },
+   "explore": "explore.ball"
+  },
+  {
+   "chapter": "hinge",
+   "shots": 13,
+   "durationS": 116.2,
+   "spokenWords": 185,
+   "beats": {
+    "arrive": 0,
+    "look": 2,
+    "movement": 4,
+    "reason": 6,
+    "name": 7
+   },
+   "explore": "explore.hinge"
+  }
+ ],
+ "reasons": [
+  {
+   "chapter": "fixed",
+   "shot": "fixed.why",
+   "words": 36,
+   "text": "Why they cannot move The edges of these bones lock into each other, and tough fibres hold them tightly together. There is no gap for them to slide in, so they cannot move against each other.",
+   "spoken": true
+  },
+  {
+   "chapter": "pivot",
+   "shot": "pivot.why",
+   "words": 38,
+   "text": "Turning, and nothing else The upper bone turns around one line running straight up through both bones. Turning around that line is the only movement this shape allows, which is why the head swivels here rather than bending.",
+   "spoken": true
+  },
+  {
+   "chapter": "ball_socket",
+   "shot": "ball.why",
+   "words": 42,
+   "text": "Why it moves so freely A rounded end sitting in a hollow can roll and turn in every direction at once. Nothing holds it to a single line, so the arm is not limited to one direction the way the elbow is.",
+   "spoken": true
+  },
+  {
+   "chapter": "hinge",
+   "shot": "hinge.why",
+   "words": 47,
+   "text": "Why it bends only one way Look at the shape of the join. The end of the upper-arm bone is like a spool, and the forearm bone wraps around it. A spool can only turn about its own line, so the elbow can only bend and straighten.",
+   "spoken": true
+  }
+ ],
+ "tasks": [
+  {
+   "explore": "explore.fixed",
+   "prompt": "Try to move the two skull bones apart.",
+   "done": "They barely move, and they spring straight back. That is a fixed joint."
+  },
+  {
+   "explore": "explore.pivot",
+   "prompt": "Turn the head as if you were looking over one shoulder.",
+   "done": "The head turned, and the bone below stayed still. That is a pivot joint."
+  },
+  {
+   "explore": "explore.ball",
+   "prompt": "Move the arm in two different directions.",
+   "done": "One joint, more than one direction. That is a ball-and-socket joint."
+  }
+ ],
+ "claims": {
+  "narrationStrings": 49,
+  "allDraft": true,
+  "sourceExcerpts": 1,
+  "hipTaught": false
+ },
+ "start": {
+  "cardShown": true,
+  "pausedBefore": true,
+  "playingAfter": true,
+  "narrationShot": "intro.title"
+ },
+ "throttledClock": {
+  "fps": 4,
+  "filmMs": 6065,
+  "wallMs": 6207,
+  "ratio": 0.977
+ },
+ "shoulder": {
+  "shot": "ball.bones",
+  "camera": {
+   "transitionMs": 1800,
+   "preset": "site",
+   "site": "ball_socket.shoulder_right",
+   "view": "front",
+   "scale": 2,
+   "endScale": 1.85,
+   "compose": "right",
+   "elevation": 0.4
+  },
+  "site": {
+   "x": 844.8,
+   "y": 400,
+   "inView": true
+  },
+  "humerus": {
+   "w": 0.38587352221037646,
+   "h": 1.2990807751554214,
+   "offscreen": 4,
+   "corners": 8
+  },
+  "scapula": {
+   "w": 0.43005821553642753,
+   "h": 0.9351341393385131,
+   "offscreen": 2,
+   "corners": 8
+  },
+  "labels": 1
+ },
+ "compare": {
+  "moments": [
+   {
+    "shot": "compare.fixed",
+    "scale": 2.7,
+    "widthFraction": 0.49,
+    "heightFraction": 0.545
+   },
+   {
+    "shot": "compare.pivot",
+    "scale": 2.4,
+    "widthFraction": 0.269,
+    "heightFraction": 0.257
+   },
+   {
+    "shot": "compare.ball",
+    "scale": 2.6,
+    "widthFraction": 0.52,
+    "heightFraction": 1.183
+   },
+   {
+    "shot": "compare.hinge",
+    "scale": 3.2,
+    "widthFraction": 0.186,
+    "heightFraction": 1.934
+   }
+  ],
+  "summaryLabels": [
+   "fixed.skull: Fixed",
+   "pivot.upper_neck: Pivot",
+   "ball_socket.shoulder_right: Ball and socket",
+   "hinge.elbow_right: Hinge"
+  ]
+ },
+ "completion": {
+  "reachableByKeyboard": true,
+  "actions": [
+   "film-end-replay",
+   "film-end-recall",
+   "film-end-explore"
+  ]
+ },
+ "elbow": {
+  "dof": {
+   "id": "flexion",
+   "min": 0,
+   "max": 145,
+   "neutral": 0,
+   "axis": "+X",
+   "rangeStatus": "approximate, pending cited reference"
+  },
+  "validatedExplores": [
+   "explore.hinge"
+  ],
+  "poses": [
+   0,
+   45,
+   90,
+   145
+  ]
+ }
+}

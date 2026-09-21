@@ -1,0 +1,130 @@
+{
+ "joint": "elbow_r",
+ "step": "6B",
+ "generated_at": "2026-09-17T15:00:17",
+ "environment": {
+  "blender_version": "5.2.2 LTS",
+  "blender_version_ok": true,
+  "master_sha256_ok": true,
+  "open_file": "C:\\Users\\Admin\\dev\\joints-platform\\blender\\Joints_Working.blend"
+ },
+ "neutral_offset_deg": 13.62510376997268,
+ "consistency_deg": 0.0,
+ "source_reproduction_error": 1.1920928955078125e-07,
+ "true_extension_transform_error": 1.1362135410308838e-07,
+ "pivot_world_matrix": [
+  [
+   -0.9741145372390747,
+   -0.1932121366262436,
+   -0.11734577268362045,
+   -0.2213899940252304
+  ],
+  [
+   0.10983051359653473,
+   0.049196794629096985,
+   -0.992732048034668,
+   0.03483999893069267
+  ],
+  [
+   0.19758091866970062,
+   -0.9799227714538574,
+   -0.026702722534537315,
+   1.1033600568771362
+  ],
+  [
+   0.0,
+   0.0,
+   0.0,
+   1.0
+  ]
+ ],
+ "x_axis": [
+  -0.9741145372390747,
+  0.10983051359653473,
+  0.19758091866970062
+ ],
+ "y_true_extension": [
+  -0.1932121366262436,
+  0.049196794629096985,
+  -0.9799227714538574
+ ],
+ "z_flexion_travel": [
+  -0.11734577268362045,
+  -0.992732048034668,
+  -0.026702722534537315
+ ],
+ "assignments": {
+  "seg_prox": [
+   "humerus_r"
+  ],
+  "ctrl": [
+   "radius_r",
+   "ulna_r",
+   "scaphoid_r",
+   "lunate_r",
+   "triquetrum_r",
+   "pisiform_r",
+   "trapezium_r",
+   "trapezoid_r",
+   "capitate_r",
+   "hamate_r",
+   "metacarpal_1_r",
+   "metacarpal_2_r",
+   "metacarpal_3_r",
+   "metacarpal_4_r",
+   "metacarpal_5_r",
+   "proximal_phalanx_hand_1_r",
+   "proximal_phalanx_hand_2_r",
+   "proximal_phalanx_hand_3_r",
+   "proximal_phalanx_hand_4_r",
+   "proximal_phalanx_hand_5_r",
+   "middle_phalanx_hand_2_r",
+   "middle_phalanx_hand_3_r",
+   "middle_phalanx_hand_4_r",
+   "middle_phalanx_hand_5_r",
+   "distal_phalanx_hand_1_r",
+   "distal_phalanx_hand_2_r",
+   "distal_phalanx_hand_3_r",
+   "distal_phalanx_hand_4_r",
+   "distal_phalanx_hand_5_r",
+   "annular_ligament_radius_r",
+   "quadrate_ligament_r",
+   "oblique_cord_r",
+   "interosseous_membrane_forearm_r"
+  ],
+  "root": [
+   "elbow_capsule_r",
+   "radial_collateral_ligament_elbow_r",
+   "ulnar_collateral_ligament_elbow_r",
+   "biceps_brachii_long_head_r",
+   "biceps_brachii_short_head_r",
+   "brachialis_r",
+   "triceps_brachii_long_head_r",
+   "triceps_brachii_lateral_head_r",
+   "triceps_brachii_medial_head_r",
+   "brachioradialis_r",
+   "anconeus_r",
+   "supinator_r",
+   "triceps_subtendinous_bursa_r",
+   "scapula_r",
+   "clavicle_r"
+  ]
+ },
+ "rig_objects": [
+  "elbow_r__root",
+  "elbow_r__seg_prox",
+  "elbow_r__pivot",
+  "elbow_r__ctrl"
+ ],
+ "qa_objects": [
+  "elbow_r__qa__pivot_marker",
+  "elbow_r__qa__hinge_axis",
+  "elbow_r__qa__neutral_ref",
+  "elbow_r__qa__endpoint_145"
+ ],
+ "candidate": "C:\\Users\\Admin\\dev\\joints-platform\\blender\\Joints_Working.step6_candidate.blend",
+ "candidate_bytes": 3520906,
+ "candidate_sha256": "9518004b2de8a749f0d1308c7fce9edd59399381588516f3b2a77f20bcc94f8f",
+ "v001_sha256": "323ba6c1ae4b58001e20ad1edb6c50ab7e35225c72204ab5e42127872a7b8f75",
+ "working_sha256_unchanged": true
+}

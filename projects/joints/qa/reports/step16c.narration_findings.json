@@ -1,0 +1,9 @@
+{
+ "generatedAt": "2026-09-20T17:14:16.431Z",
+ "findings": {
+  "overlaps": 0,
+  "driftSamples": 320,
+  "staleClips": [],
+  "quietShots": []
+ }
+}

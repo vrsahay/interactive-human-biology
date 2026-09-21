@@ -1,0 +1,743 @@
+{
+ "label": "smoke",
+ "dist": "qa/perf/baseline-dist",
+ "generatedAt": "2026-09-17T15:07:33.824Z",
+ "method": "Cold loads in fresh browser contexts with the HTTP cache disabled; brotli/gzip static server (pipeline/tools/serve_static.mjs); CDP network + CPU throttling. first meaningful 3D = end of the first rendered frame after the film's first shot is applied. Frame times from rAF-rendered frames; input-to-render = event timestamp -> end of the first rendered frame after the event (display presentation adds up to one vsync).",
+ "profiles": {
+  "laptop-igpu-broadband": {
+   "profile": {
+    "id": "laptop-igpu-broadband",
+    "classification": "REAL HARDWARE: integrated-GPU laptop (headless Chrome); network emulated",
+    "viewport": {
+     "width": 1440,
+     "height": 900
+    },
+    "dpr": 1,
+    "cpu": 1,
+    "net": {
+     "id": "broadband-50mbps",
+     "downBps": 6250000,
+     "upBps": 1250000,
+     "latencyMs": 20,
+     "note": "50 Mbps down / 10 Mbps up / 20 ms"
+    },
+    "mobile": false
+   },
+   "summary": {
+    "firstMeaningful3DMs": {
+     "n": 1,
+     "p50": 9499,
+     "p95": 9499,
+     "min": 9499,
+     "max": 9499
+    },
+    "shellVisibleMs": {
+     "n": 1,
+     "p50": 579,
+     "p95": 579,
+     "min": 579,
+     "max": 579
+    },
+    "fcpMs": {
+     "n": 1,
+     "p50": 1112,
+     "p95": 1112,
+     "min": 1112,
+     "max": 1112
+    },
+    "bytesBeforeFirst3D": {
+     "n": 1,
+     "p50": 2199349,
+     "p95": 2199349,
+     "min": 2199349,
+     "max": 2199349
+    },
+    "bytesTotal": {
+     "n": 1,
+     "p50": 2200283,
+     "p95": 2200283,
+     "min": 2200283,
+     "max": 2200283
+    },
+    "jsHeapUsedBytes": {
+     "n": 1,
+     "p50": 30316352,
+     "p95": 30316352,
+     "min": 30316352,
+     "max": 30316352
+    },
+    "repeatVisit": {
+     "firstMeaningful3DMs": 1749,
+     "bytesTotal": 2100
+    },
+    "renderer": {
+     "drawCalls": 783,
+     "triangles": 235754,
+     "geometries": 542,
+     "textures": 6,
+     "pixelRatio": 1,
+     "gpu": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x00009A49) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+    },
+    "quality": null
+   },
+   "loads": [
+    {
+     "navigation": {
+      "responseEnd": 59,
+      "domContentLoaded": 579,
+      "transfer": 934
+     },
+     "fcpMs": 1112,
+     "shellVisibleMs": 579,
+     "filmReadyMs": 7091,
+     "firstMeaningful3DMs": 9499,
+     "bytesBeforeFirst3D": 2199349,
+     "bytesTotal": 2200283,
+     "resources": [
+      {
+       "name": "/app/index-BuFzrH_m.js",
+       "start": 80,
+       "end": 465,
+       "transfer": 216846,
+       "encoded": 216546,
+       "decoded": 1031454
+      },
+      {
+       "name": "/app/index-5JW1531B.css",
+       "start": 81,
+       "end": 447,
+       "transfer": 5039,
+       "encoded": 4739,
+       "decoded": 19435
+      },
+      {
+       "name": "/assets/joints/elbow_r/joint-manifest.json",
+       "start": 4317,
+       "end": 4378,
+       "transfer": 12672,
+       "encoded": 12372,
+       "decoded": 93064
+      },
+      {
+       "name": "/assets/body/body-manifest.json",
+       "start": 4441,
+       "end": 4529,
+       "transfer": 26972,
+       "encoded": 26672,
+       "decoded": 276921
+      },
+      {
+       "name": "/assets/joints/elbow_r/elbow_r.core.glb",
+       "start": 4443,
+       "end": 4703,
+       "transfer": 188925,
+       "encoded": 188625,
+       "decoded": 306880
+      },
+      {
+       "name": "/assets/body/body.skeleton.glb",
+       "start": 4544,
+       "end": 6030,
+       "transfer": 1332696,
+       "encoded": 1332396,
+       "decoded": 2015164
+      },
+      {
+       "name": "/assets/body/body.skin.glb",
+       "start": 4545,
+       "end": 6072,
+       "transfer": 345924,
+       "encoded": 345624,
+       "decoded": 787444
+      },
+      {
+       "name": "/assets/joints/elbow_r/elbow_r.detail.glb",
+       "start": 6335,
+       "end": 6428,
+       "transfer": 70275,
+       "encoded": 69975,
+       "decoded": 93936
+      }
+     ],
+     "longTasksBeforeFirst3D": [
+      [
+       538,
+       122
+      ],
+      [
+       699,
+       3620
+      ],
+      [
+       4336,
+       80
+      ],
+      [
+       6062,
+       101
+      ],
+      [
+       6179,
+       55
+      ],
+      [
+       6269,
+       68
+      ],
+      [
+       6337,
+       681
+      ],
+      [
+       7054,
+       58
+      ],
+      [
+       7113,
+       2393
+      ]
+     ],
+     "jsHeapUsedBytes": 30316352,
+     "quality": null,
+     "renderer": {
+      "drawCalls": 783,
+      "triangles": 235754,
+      "geometries": 542,
+      "textures": 6,
+      "pixelRatio": 1,
+      "gpu": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x00009A49) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+     },
+     "device": {
+      "hardwareConcurrency": 8,
+      "deviceMemory": 16,
+      "dpr": 1,
+      "width": 1440,
+      "height": 900,
+      "connection": "4g"
+     },
+     "consoleErrors": []
+    }
+   ],
+   "repeatVisit": {
+    "navigation": {
+     "responseEnd": 51,
+     "domContentLoaded": 199,
+     "transfer": 300
+    },
+    "fcpMs": 224,
+    "shellVisibleMs": 199,
+    "filmReadyMs": 1108,
+    "firstMeaningful3DMs": 1749,
+    "bytesBeforeFirst3D": 1800,
+    "bytesTotal": 2100,
+    "resources": [
+     {
+      "name": "/app/index-BuFzrH_m.js",
+      "start": 160,
+      "end": 160,
+      "transfer": 0,
+      "encoded": 216546,
+      "decoded": 1031454
+     },
+     {
+      "name": "/app/index-5JW1531B.css",
+      "start": 161,
+      "end": 161,
+      "transfer": 0,
+      "encoded": 4739,
+      "decoded": 19435
+     },
+     {
+      "name": "/assets/joints/elbow_r/joint-manifest.json",
+      "start": 474,
+      "end": 504,
+      "transfer": 300,
+      "encoded": 12372,
+      "decoded": 93064
+     },
+     {
+      "name": "/assets/body/body-manifest.json",
+      "start": 526,
+      "end": 571,
+      "transfer": 300,
+      "encoded": 26672,
+      "decoded": 276921
+     },
+     {
+      "name": "/assets/joints/elbow_r/elbow_r.core.glb",
+      "start": 527,
+      "end": 572,
+      "transfer": 300,
+      "encoded": 188625,
+      "decoded": 306880
+     },
+     {
+      "name": "/assets/body/body.skeleton.glb",
+      "start": 614,
+      "end": 713,
+      "transfer": 300,
+      "encoded": 1332396,
+      "decoded": 2015164
+     },
+     {
+      "name": "/assets/body/body.skin.glb",
+      "start": 615,
+      "end": 681,
+      "transfer": 300,
+      "encoded": 345624,
+      "decoded": 787444
+     },
+     {
+      "name": "/assets/joints/elbow_r/elbow_r.detail.glb",
+      "start": 964,
+      "end": 1007,
+      "transfer": 300,
+      "encoded": 69975,
+      "decoded": 93936
+     }
+    ],
+    "longTasksBeforeFirst3D": [
+     [
+      243,
+      232
+     ],
+     [
+      764,
+      70
+     ],
+     [
+      835,
+      51
+     ],
+     [
+      965,
+      95
+     ],
+     [
+      1120,
+      632
+     ]
+    ],
+    "jsHeapUsedBytes": 36074354,
+    "quality": null,
+    "renderer": {
+     "drawCalls": 783,
+     "triangles": 235754,
+     "geometries": 542,
+     "textures": 6,
+     "pixelRatio": 1,
+     "gpu": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x00009A49) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+    },
+    "device": {
+     "hardwareConcurrency": 8,
+     "deviceMemory": 16,
+     "dpr": 1,
+     "width": 1440,
+     "height": 900,
+     "connection": "4g"
+    }
+   },
+   "interactions": {
+    "playTravel": {
+     "frames": 301,
+     "spanMs": 4999,
+     "fps": 60,
+     "frameIntervalMs": {
+      "n": 300,
+      "p50": 16.6,
+      "p95": 17.9,
+      "min": 14.7,
+      "max": 18.7
+     },
+     "frameCpuMs": {
+      "n": 301,
+      "p50": 1.5,
+      "p95": 2.4,
+      "min": 0.9,
+      "max": 3.2
+     },
+     "droppedFrames": 0,
+     "inputs": 0,
+     "inputToRenderMs": {
+      "n": 0,
+      "p50": null,
+      "p95": null,
+      "min": null,
+      "max": null
+     },
+     "inputsWithoutRender": 0
+    },
+    "playTravelRenderer": {
+     "fps": 59,
+     "frameIntervalMeanMs": 16.673749999950328,
+     "frameIntervalP95Ms": 17.900000005960464,
+     "frameCpuMeanMs": 3.4850000005215405,
+     "frameCpuP95Ms": 4.300000011920929,
+     "drawCalls": 85,
+     "triangles": 69025,
+     "geometries": 542,
+     "textures": 6,
+     "textureMemoryBytes": 5592404,
+     "pixelRatio": 1,
+     "framesRendered": 391,
+     "firstFrameMs": 512.2999999821186,
+     "firstModelFrameMs": 1058.9000000059605,
+     "renderer": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x00009A49) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+    },
+    "playElbow": {
+     "frames": 288,
+     "spanMs": 4778,
+     "fps": 60.1,
+     "frameIntervalMs": {
+      "n": 287,
+      "p50": 16.7,
+      "p95": 18.3,
+      "min": 14.1,
+      "max": 19.7
+     },
+     "frameCpuMs": {
+      "n": 288,
+      "p50": 3.1,
+      "p95": 4.4,
+      "min": 1.9,
+      "max": 5.7
+     },
+     "droppedFrames": 0,
+     "inputs": 0,
+     "inputToRenderMs": {
+      "n": 0,
+      "p50": null,
+      "p95": null,
+      "min": null,
+      "max": null
+     },
+     "inputsWithoutRender": 0
+    },
+    "playElbowRenderer": {
+     "fps": 59,
+     "frameIntervalMeanMs": 16.674583333358168,
+     "frameIntervalP95Ms": 18.299999982118607,
+     "frameCpuMeanMs": 5.014583332712451,
+     "frameCpuP95Ms": 6.4000000059604645,
+     "drawCalls": 165,
+     "triangles": 126871,
+     "geometries": 574,
+     "textures": 8,
+     "textureMemoryBytes": 5592404,
+     "pixelRatio": 1,
+     "framesRendered": 681,
+     "firstFrameMs": 512.2999999821186,
+     "firstModelFrameMs": 1058.9000000059605,
+     "renderer": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x00009A49) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+    },
+    "playRecap": {
+     "frames": 86,
+     "spanMs": 5010,
+     "fps": 17,
+     "frameIntervalMs": {
+      "n": 85,
+      "p50": 58.6,
+      "p95": 65.8,
+      "min": 49.7,
+      "max": 69.4
+     },
+     "frameCpuMs": {
+      "n": 86,
+      "p50": 48.4,
+      "p95": 55.9,
+      "min": 38.4,
+      "max": 58.8
+     },
+     "droppedFrames": 216,
+     "inputs": 0,
+     "inputToRenderMs": {
+      "n": 0,
+      "p50": null,
+      "p95": null,
+      "min": null,
+      "max": null
+     },
+     "inputsWithoutRender": 0
+    },
+    "playRecapRenderer": {
+     "fps": 18,
+     "frameIntervalMeanMs": 31.80583333335817,
+     "frameIntervalP95Ms": 62.79999998211861,
+     "frameCpuMeanMs": 21.94166666716337,
+     "frameCpuP95Ms": 55.70000001788139,
+     "drawCalls": 812,
+     "triangles": 241996,
+     "geometries": 592,
+     "textures": 8,
+     "textureMemoryBytes": 5592404,
+     "pixelRatio": 1,
+     "framesRendered": 768,
+     "firstFrameMs": 512.2999999821186,
+     "firstModelFrameMs": 1058.9000000059605,
+     "renderer": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x00009A49) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+    },
+    "shots": {
+     "intro.title": {
+      "drawCalls": 783,
+      "triangles": 235754,
+      "geometries": 592,
+      "textures": 8
+     },
+     "fixed.detail": {
+      "drawCalls": 87,
+      "triangles": 66851,
+      "geometries": 592,
+      "textures": 8
+     },
+     "pivot.rotate": {
+      "drawCalls": 132,
+      "triangles": 117459,
+      "geometries": 592,
+      "textures": 8
+     },
+     "ball.shoulder": {
+      "drawCalls": 96,
+      "triangles": 98978,
+      "geometries": 592,
+      "textures": 8
+     },
+     "ball.hip": {
+      "drawCalls": 60,
+      "triangles": 25931,
+      "geometries": 592,
+      "textures": 8
+     },
+     "hinge.flexion": {
+      "drawCalls": 165,
+      "triangles": 126871,
+      "geometries": 592,
+      "textures": 8
+     },
+     "hinge.support": {
+      "drawCalls": 91,
+      "triangles": 65131,
+      "geometries": 598,
+      "textures": 10
+     },
+     "hinge.knee": {
+      "drawCalls": 16,
+      "triangles": 4232,
+      "geometries": 598,
+      "textures": 10
+     },
+     "recap.compare": {
+      "drawCalls": 316,
+      "triangles": 174656,
+      "geometries": 598,
+      "textures": 10
+     }
+    },
+    "dragInput": {
+     "frames": 40,
+     "spanMs": 1682,
+     "fps": 23.2,
+     "frameIntervalMs": {
+      "n": 38,
+      "p50": 33.3,
+      "p95": 42.3,
+      "min": 23.5,
+      "max": 63.6
+     },
+     "frameCpuMs": {
+      "n": 40,
+      "p50": 4.5,
+      "p95": 8.2,
+      "min": 3,
+      "max": 9.4
+     },
+     "droppedFrames": 39,
+     "inputs": 61,
+     "inputToRenderMs": {
+      "n": 61,
+      "p50": 19.6,
+      "p95": 328.7,
+      "min": 9.1,
+      "max": 377.9
+     },
+     "inputsWithoutRender": 0
+    },
+    "dragDisplayRate": {
+     "frames": 129,
+     "spanMs": 3000,
+     "fps": 42.7,
+     "frameIntervalMs": {
+      "n": 127,
+      "p50": 16.9,
+      "p95": 19.9,
+      "min": 12.3,
+      "max": 116
+     },
+     "frameCpuMs": {
+      "n": 129,
+      "p50": 3.6,
+      "p95": 5,
+      "min": 2.1,
+      "max": 5.5
+     },
+     "droppedFrames": 6,
+     "inputs": 180,
+     "inputToRenderMs": {
+      "n": 164,
+      "p50": 17.4,
+      "p95": 357.2,
+      "min": 11.1,
+      "max": 490
+     },
+     "inputsWithoutRender": 16
+    },
+    "sliderKeyboard": {
+     "frames": 36,
+     "spanMs": 787,
+     "fps": 44.5,
+     "frameIntervalMs": {
+      "n": 35,
+      "p50": 20.3,
+      "p95": 33,
+      "min": 16.5,
+      "max": 39.3
+     },
+     "frameCpuMs": {
+      "n": 36,
+      "p50": 6,
+      "p95": 8.2,
+      "min": 4.2,
+      "max": 8.6
+     },
+     "droppedFrames": 11,
+     "inputs": 40,
+     "inputToRenderMs": {
+      "n": 40,
+      "p50": 20.2,
+      "p95": 27.1,
+      "min": 10.2,
+      "max": 30.2
+     },
+     "inputsWithoutRender": 0
+    },
+    "scrub": {
+     "frames": 42,
+     "spanMs": 1688,
+     "fps": 24.3,
+     "frameIntervalMs": {
+      "n": 41,
+      "p50": 37.2,
+      "p95": 63.8,
+      "min": 22.4,
+      "max": 96.5
+     },
+     "frameCpuMs": {
+      "n": 42,
+      "p50": 4.5,
+      "p95": 19.2,
+      "min": 0.7,
+      "max": 58.8
+     },
+     "droppedFrames": 60,
+     "inputs": 42,
+     "inputToRenderMs": {
+      "n": 42,
+      "p50": 23.8,
+      "p95": 41.3,
+      "min": 7.5,
+      "max": 81.7
+     },
+     "inputsWithoutRender": 0
+    },
+    "chapterJump": {
+     "frames": 6,
+     "spanMs": 2251,
+     "fps": 2.2,
+     "frameIntervalMs": {
+      "n": 0,
+      "p50": null,
+      "p95": null,
+      "min": null,
+      "max": null
+     },
+     "frameCpuMs": {
+      "n": 6,
+      "p50": 2,
+      "p95": 43.5,
+      "min": 1.6,
+      "max": 43.5
+     },
+     "droppedFrames": 0,
+     "inputs": 6,
+     "inputToRenderMs": {
+      "n": 6,
+      "p50": 19.2,
+      "p95": 61.1,
+      "min": 12.2,
+      "max": 61.1
+     },
+     "inputsWithoutRender": 0
+    },
+    "exploreOrbit": {
+     "frames": 116,
+     "spanMs": 1917,
+     "fps": 60,
+     "frameIntervalMs": {
+      "n": 115,
+      "p50": 16.7,
+      "p95": 17.9,
+      "min": 14.9,
+      "max": 18.4
+     },
+     "frameCpuMs": {
+      "n": 116,
+      "p50": 3.4,
+      "p95": 4.7,
+      "min": 2,
+      "max": 11.2
+     },
+     "droppedFrames": 0,
+     "inputs": 51,
+     "inputToRenderMs": {
+      "n": 51,
+      "p50": 13.1,
+      "p95": 25.1,
+      "min": 9.3,
+      "max": 26.1
+     },
+     "inputsWithoutRender": 0
+    },
+    "selection": {
+     "frames": 6,
+     "spanMs": 1592,
+     "fps": 3.1,
+     "frameIntervalMs": {
+      "n": 2,
+      "p50": 8.3,
+      "p95": 13.2,
+      "min": 8.3,
+      "max": 13.2
+     },
+     "frameCpuMs": {
+      "n": 6,
+      "p50": 8.9,
+      "p95": 12.4,
+      "min": 3.8,
+      "max": 12.4
+     },
+     "droppedFrames": 0,
+     "inputs": 4,
+     "inputToRenderMs": {
+      "n": 4,
+      "p50": 18.9,
+      "p95": 25.8,
+      "min": 18,
+      "max": 25.8
+     },
+     "inputsWithoutRender": 0
+    },
+    "selectionResult": "radius_r",
+    "heapAfterInteractionsBytes": 47834858
+   }
+  }
+ }
+}

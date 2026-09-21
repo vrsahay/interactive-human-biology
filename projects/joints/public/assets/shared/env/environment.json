@@ -1,0 +1,17 @@
+{
+ "kind": "environment_cubeuv",
+ "encoding": "rgbe8",
+ "generator": "three r186 PMREMGenerator.fromScene(new RoomEnvironment(), sigma 0.04, near 0.1, far 100, { size })",
+ "note": "Baked from three's RoomEnvironment PMREM exactly as the Stage generated it at runtime until Step 11 (sigma 0.04). Encoding: RGB mantissa, alpha = exponent + 128; value = (c + 0.5) / 256 * 2^(a - 128). Serve with HTTP compression.",
+ "variants": [
+  {
+   "size": 64,
+   "url": "room_env_cubeuv_64.rgbe",
+   "width": 336,
+   "height": 256,
+   "bytes": 344064,
+   "sha256": "16f42df04448703d03203455d023074d9f278d04f0b2b4963f063506d7251510"
+  }
+ ],
+ "selection": "Size 64 for every tier: A/B vs the runtime PMREM gave PSNR 55-62 dB (max abs diff <= 14, ~0% pixels > 8) across six film shots (qa/reports/step12.environment_ab.json); 256 was identical (70-75 dB) at 6x the bytes and 9x the GPU memory."
+}

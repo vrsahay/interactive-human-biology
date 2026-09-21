@@ -1,0 +1,305 @@
+{
+ "schema": "joints.landmark-definitions/draft-1",
+ "jointId": "elbow_r",
+ "status": "DRAFT — PENDING EXPERT LANDMARK APPROVAL",
+ "approvalNote": "This file intentionally has no `approvedBy` field. Formal Gate 3 stays NOT AVAILABLE / PENDING EXPERT LANDMARK APPROVAL until a subject-matter reviewer approves each landmark definition and its tolerance, and the approved set is saved as qa/elbow_r.poses.json.",
+ "generatedAt": "2026-09-18T05:11:07.247Z",
+ "generator": "pipeline/qa/build_landmark_draft.ts",
+ "source": {
+  "manifest": "public/assets/joints/elbow_r/joint-manifest.json",
+  "manifestSha256": "009d51528bf5a6d84b2ab14499d4a1346f4cc1bcaff0ab1a0f99b1ccfd135e66",
+  "tiers": [
+   "core",
+   "detail"
+  ],
+  "note": "Coordinates are read from the production GLBs in their exported (bind) pose. Vertex indices refer to the decoded, quantised production geometry; they are only valid for the manifest SHA above."
+ },
+ "frame": {
+  "note": "Anatomical frame taken from the validated manifest pivot block, not re-derived here.",
+  "pivotPoint": [
+   -0.2213899940252304,
+   1.1033600568771362,
+   -0.03483999893069267
+  ],
+  "flexionAxisWorld": [
+   -0.9741144776344299,
+   0.1975809931755066,
+   -0.10983048379421234
+  ],
+  "trueExtensionForearmDirWorld": [
+   -0.19321219623088837,
+   -0.9799227714538574,
+   -0.04919680580496788
+  ],
+  "flexionTravelDirWorld": [
+   -0.11734575033187866,
+   -0.02670273557305336,
+   0.992732048034668
+  ],
+  "medialDirectionDerivation": {
+   "method": "right elbow: of the two distal-humerus extremes along the flexion axis, the medial one is nearer the body midline x = 0",
+   "medialIsAlongPlusFlexionAxis": false,
+   "probeXAlongPlusAxis": -0.248829,
+   "probeXAlongMinusAxis": -0.183655
+  }
+ },
+ "proposedPoses": [
+  {
+   "flexionDeg": 0,
+   "note": "true extension (controller zero)"
+  },
+  {
+   "flexionDeg": 45,
+   "note": "mid-range"
+  },
+  {
+   "flexionDeg": 90,
+   "note": "the angle the lesson asks the learner to reach"
+  },
+  {
+   "flexionDeg": 145,
+   "note": "approximate teaching maximum"
+  }
+ ],
+ "toleranceRationale": "Proposed tolerances are anatomical-identification tolerances, not numerical ones: runtime-vs-Blender pose consistency is already below 0.001 mm (qa/reports/elbow_r.gate3.step12.json), so any real disagreement would come from where a reviewer places the landmark. 2 mm matches the elbow/body handover tolerance already enforced in the delivery tests; distal and derived references are given more room because a small axis error is amplified by the lever arm.",
+ "reviewerActionsRequired": [
+  "Confirm or correct each definition method (in particular the coronoid band fraction and the radial-head centroid band).",
+  "Confirm the derived medial/lateral assignment of the epicondyles.",
+  "Accept or change each proposed tolerance.",
+  "Decide whether the ulnar styloid, radial styloid and third metacarpal head belong in a formal elbow landmark set at all, or whether the set should stop at the joint.",
+  "Add `approvedBy`, `approvedAt` and per-landmark approved positions, then save as qa/elbow_r.poses.json."
+ ],
+ "landmarks": [
+  {
+   "landmarkId": "olecranon_tip",
+   "structureId": "ulna_r",
+   "mesh": "elbow_r__bone__ulna__mesh",
+   "manifestAnchorId": "elbow_r.anchor.olecranon",
+   "palpableOnALivingSubject": true,
+   "reference": {
+    "kind": "mesh-vertex",
+    "vertexIndex": 399,
+    "vertexCount": 454
+   },
+   "definitionMethod": "ulna vertex furthest in the proximal direction (opposite the true-extension forearm direction)",
+   "bindPose": {
+    "localMeshSpace": [
+     0.129276,
+     1,
+     -0.225227
+    ],
+    "worldAtExportedPose": [
+     -0.212622,
+     1.113907,
+     -0.045009
+    ],
+    "distanceFromPivotMm": 17.074
+   },
+   "expectedUse": "posterior elbow reference; checks that the ulna tracks the humerus through flexion",
+   "proposedToleranceMm": 2,
+   "status": "DRAFT — NOT APPROVED"
+  },
+  {
+   "landmarkId": "coronoid_tip",
+   "structureId": "ulna_r",
+   "mesh": "elbow_r__bone__ulna__mesh",
+   "manifestAnchorId": "elbow_r.anchor.coronoid_process",
+   "palpableOnALivingSubject": false,
+   "reference": {
+    "kind": "mesh-vertex",
+    "vertexIndex": 228,
+    "vertexCount": 454
+   },
+   "definitionMethod": "most anterior ulna vertex within the proximal 15% of the bone's length along the forearm axis",
+   "bindPose": {
+    "localMeshSpace": [
+     0.089236,
+     0.844722,
+     -0.029542
+    ],
+    "worldAtExportedPose": [
+     -0.218196,
+     1.088756,
+     -0.025503
+    ],
+    "distanceFromPivotMm": 17.626
+   },
+   "expectedUse": "anterior congruence check at high flexion (the coronoid fossa contact at 145 deg)",
+   "proposedToleranceMm": 2.5,
+   "status": "DRAFT — NOT APPROVED"
+  },
+  {
+   "landmarkId": "ulnar_styloid",
+   "structureId": "ulna_r",
+   "mesh": "elbow_r__bone__ulna__mesh",
+   "manifestAnchorId": null,
+   "palpableOnALivingSubject": true,
+   "reference": {
+    "kind": "mesh-vertex",
+    "vertexIndex": 324,
+    "vertexCount": 454
+   },
+   "definitionMethod": "most distal ulna vertex along the true-extension forearm direction",
+   "bindPose": {
+    "localMeshSpace": [
+     -0.117679,
+     -0.999145,
+     0.241707
+    ],
+    "worldAtExportedPose": [
+     -0.238725,
+     0.851115,
+     -0.047028
+    ],
+    "distanceFromPivotMm": 253.134
+   },
+   "expectedUse": "distal forearm reference; largest lever arm, so it is the most sensitive test of the flexion axis",
+   "proposedToleranceMm": 3,
+   "status": "DRAFT — NOT APPROVED"
+  },
+  {
+   "landmarkId": "radial_styloid",
+   "structureId": "radius_r",
+   "mesh": "elbow_r__bone__radius__mesh",
+   "manifestAnchorId": null,
+   "palpableOnALivingSubject": true,
+   "reference": {
+    "kind": "mesh-vertex",
+    "vertexIndex": 56,
+    "vertexCount": 394
+   },
+   "definitionMethod": "most distal radius vertex along the true-extension forearm direction",
+   "bindPose": {
+    "localMeshSpace": [
+     -0.242927,
+     -0.998535,
+     0.213752
+    ],
+    "worldAtExportedPose": [
+     -0.28103,
+     0.849746,
+     -0.043463
+    ],
+    "distanceFromPivotMm": 260.675
+   },
+   "expectedUse": "distal forearm reference on the lateral side; pairs with the ulnar styloid",
+   "proposedToleranceMm": 3,
+   "status": "DRAFT — NOT APPROVED"
+  },
+  {
+   "landmarkId": "radial_head_centre",
+   "structureId": "radius_r",
+   "mesh": "elbow_r__bone__radius__mesh",
+   "manifestAnchorId": "elbow_r.anchor.radial_head",
+   "palpableOnALivingSubject": false,
+   "reference": {
+    "kind": "derived-centroid",
+    "bandVertexCount": 111
+   },
+   "definitionMethod": "centroid of the radius vertices in the proximal 8% of the bone's length (derived reference, not a single vertex)",
+   "bindPose": {
+    "localMeshSpace": [
+     0.165877,
+     0.936128,
+     -0.184137
+    ],
+    "worldAtExportedPose": [
+     -0.237776,
+     1.08465,
+     -0.034433
+    ],
+    "distanceFromPivotMm": 24.874
+   },
+   "expectedUse": "proximal articulation reference against the capitulum",
+   "proposedToleranceMm": 3,
+   "status": "DRAFT — NOT APPROVED"
+  },
+  {
+   "landmarkId": "medial_epicondyle",
+   "structureId": "humerus_r",
+   "mesh": "elbow_r__bone__humerus__mesh",
+   "manifestAnchorId": null,
+   "palpableOnALivingSubject": true,
+   "reference": {
+    "kind": "mesh-vertex",
+    "vertexIndex": 743,
+    "vertexCount": 2143
+   },
+   "definitionMethod": "distal-humerus vertex furthest medially (medial side derived from the model: the extreme nearer the body midline x = 0)",
+   "bindPose": {
+    "localMeshSpace": [
+     0.082278,
+     -0.880734,
+     -0.052004
+    ],
+    "worldAtExportedPose": [
+     -0.183655,
+     1.105961,
+     -0.0357
+    ],
+    "distanceFromPivotMm": 37.835
+   },
+   "expectedUse": "fixed bony reference: must not move when the controller moves",
+   "proposedToleranceMm": 2,
+   "status": "DRAFT — NOT APPROVED"
+  },
+  {
+   "landmarkId": "lateral_epicondyle",
+   "structureId": "humerus_r",
+   "mesh": "elbow_r__bone__humerus__mesh",
+   "manifestAnchorId": null,
+   "palpableOnALivingSubject": true,
+   "reference": {
+    "kind": "mesh-vertex",
+    "vertexIndex": 164,
+    "vertexCount": 2143
+   },
+   "definitionMethod": "distal-humerus vertex furthest laterally (opposite the derived medial direction)",
+   "bindPose": {
+    "localMeshSpace": [
+     -0.328166,
+     -0.837642,
+     -0.099857
+    ],
+    "worldAtExportedPose": [
+     -0.248829,
+     1.112803,
+     -0.043299
+    ],
+    "distanceFromPivotMm": 30.227
+   },
+   "expectedUse": "fixed bony reference; with the medial epicondyle it defines the clinical flexion-extension axis for comparison against the fitted axis",
+   "proposedToleranceMm": 2,
+   "status": "DRAFT — NOT APPROVED"
+  },
+  {
+   "landmarkId": "third_metacarpal_head",
+   "structureId": "metacarpal_3_r",
+   "mesh": "elbow_r__follow__metacarpal_3__mesh",
+   "manifestAnchorId": null,
+   "palpableOnALivingSubject": true,
+   "reference": {
+    "kind": "mesh-vertex",
+    "vertexIndex": 294,
+    "vertexCount": 356
+   },
+   "definitionMethod": "most distal vertex of the third metacarpal along the true-extension forearm direction",
+   "bindPose": {
+    "localMeshSpace": [
+     -0.190558,
+     -0.970702,
+     0.34489
+    ],
+    "worldAtExportedPose": [
+     -0.270034,
+     0.760603,
+     -0.042838
+    ],
+    "distanceFromPivotMm": 346.284
+   },
+   "expectedUse": "hand-end reference: checks that the follower chain (carpals and metacarpals) rides with the forearm",
+   "proposedToleranceMm": 4,
+   "status": "DRAFT — NOT APPROVED"
+  }
+ ]
+}

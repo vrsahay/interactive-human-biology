@@ -1,0 +1,2342 @@
+{
+ "joint": "elbow_r",
+ "label": "step8_candidate",
+ "validated_at": "2026-09-17T15:22:48",
+ "environment": {
+  "blender_version": "5.2.2 LTS",
+  "blender_version_ok": true,
+  "master_sha256_ok": true,
+  "open_file": "C:\\Users\\Admin\\dev\\joints-platform\\blender\\Joints_Working.step8_candidate.blend"
+ },
+ "file": "C:\\Users\\Admin\\dev\\joints-platform\\blender\\Joints_Working.step8_candidate.blend",
+ "file_sha256": "9fb76d8c5b799d1bf65dc8e865c400299a3cc52fb8bf7ceab8c903a1671187f9",
+ "counts": {
+  "objects": 77,
+  "anatomy": 49,
+  "rig": [
+   "elbow_r__ctrl",
+   "elbow_r__pivot",
+   "elbow_r__root",
+   "elbow_r__seg_prox"
+  ],
+  "qa": [
+   "elbow_r__qa__endpoint_145",
+   "elbow_r__qa__hinge_axis",
+   "elbow_r__qa__neutral_ref",
+   "elbow_r__qa__pivot_marker"
+  ],
+  "armatures": 0,
+  "actions": 0,
+  "constraints": {
+   "elbow_r__ctrl": [
+    "LIMIT_ROTATION"
+   ]
+  },
+  "animation_data": [],
+  "overlay": 20
+ },
+ "mesh_hashes_passed": 49,
+ "neutral_offset_deg": 13.62510376997268,
+ "source_reproduction_err": 1.1920928955078125e-07,
+ "pivot_point": [
+  -0.2213899940252304,
+  0.03483999893069267,
+  1.1033600568771362
+ ],
+ "pivot_axis": [
+  -0.9741144776344299,
+  0.10983048379421234,
+  0.1975809931755066
+ ],
+ "axis_vs_fit_deg": 5.0509930079323e-06,
+ "point_vs_fit_mm": 5.7200086778364925e-05,
+ "controller_properties": {
+  "jointId": "elbow_r",
+  "side": "right",
+  "rigId": "elbow_r__ctrl",
+  "role": "controller",
+  "jointType": "hinge",
+  "dofs": "[{\"id\": \"flexion\", \"axis\": \"+X\", \"min\": 0, \"max\": 145, \"neutral\": 0, \"unit\": \"deg\", \"rangeStatus\": \"approximate, pending cited reference\"}]",
+  "dof_id": "flexion",
+  "dof_axis": "+X",
+  "dof_min_deg": 0,
+  "dof_max_deg": 145,
+  "dof_neutral_deg": 0,
+  "dof_unit": "deg",
+  "dof_range_status": "approximate, pending cited reference",
+  "neutral_semantics": "flexion 0 = true anatomical extension (not the source pose)",
+  "source_pose_flexion_deg": 13.62510376997268,
+  "source_pose_note": "The source anatomy was supplied flexed; initial shaft-based estimate 25.97 deg, final ISB-based value stored here. The source pose is reproduced exactly at flexion = source_pose_flexion_deg.",
+  "neutral_offset_location": "elbow_r__pivot orientation (+Y = true extension); driven children parent inverse encodes the source pose",
+  "range_note": "145 deg maximum is approximate, pending a cited anatomical reference",
+  "drives": "[\"annular_ligament_radius_r\", \"capitate_r\", \"distal_phalanx_hand_1_r\", \"distal_phalanx_hand_2_r\", \"distal_phalanx_hand_3_r\", \"distal_phalanx_hand_4_r\", \"distal_phalanx_hand_5_r\", \"hamate_r\", \"interosseous_membrane_forearm_r\", \"lunate_r\", \"metacarpal_1_r\", \"metacarpal_2_r\", \"metacarpal_3_r\", \"metacarpal_4_r\", \"metacarpal_5_r\", \"middle_phalanx_hand_2_r\", \"middle_phalanx_hand_3_r\", \"middle_phalanx_hand_4_r\", \"middle_phalanx_hand_5_r\", \"oblique_cord_r\", \"pisiform_r\", \"proximal_phalanx_hand_1_r\", \"proximal_phalanx_hand_2_r\", \"proximal_phalanx_hand_3_r\", \"proximal_phalanx_hand_4_r\", \"proximal_phalanx_hand_5_r\", \"quadrate_ligament_r\", \"radius_r\", \"scaphoid_r\", \"trapezium_r\", \"trapezoid_r\", \"triquetrum_r\", \"ulna_r\"]",
+  "semantics": "{\"neutral_definition\": \"Controller flexion 0 deg = true anatomical elbow extension: humerus and forearm ISB long axes collinear in the plane perpendicular to the fitted flexion axis. The source pose is NOT flexion 0.\", \"neutral_offset_deg\": 13.62510376997268, \"neutral_offset_location\": \"Applied at rig level: elbow_r__pivot orientation (+Y = forearm direction at true extension); driven children's parent-inverse matrices encode the source pose. Anatomical mesh data is unchanged.\", \"neutral_offset_method\": \"Signed angle about the fitted flexion axis between the ISB humerus long axis (glenohumeral centre sphere fit -> epicondyle midpoint) and the ISB forearm long axis (epicondyle midpoint -> ulnar styloid), measured on the extracted source geometry. Cross-checks: styloid midpoint 14.53 deg, radius shaft 16.93 deg, ulna shaft 25.97 deg (rejected: ulnar diaphysis is angled relative to the forearm long axis), olecranon-fossa contact sweep (0.5 mm contact at -21 deg, 2 mm at -31 deg relative to the source pose). Report: qa/reports/elbow_r.neutral_offset.json\", \"range_reference_status\": \"No external anatomical reference has been cited. A cited anatomical source for the 0-145 deg flexion range is REQUIRED before release. Current evidence is geometric only: maximum bone overlap 1.724 mm at 145 deg (coronoid process / coronoid fossa), qa/reports/elbow_r.rig_validation.final.json.\", \"range_status\": \"approximate, pending cited reference\", \"source_pose_flexion_deg\": 13.62510376997268, \"source_pose_initial_estimate_deg\": 25.97, \"source_pose_reference\": \"Human_Body_Master.blend scene '01 Complete anatomy' (sha256 f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0). The source anatomy was supplied in a flexed pose; it is reproduced exactly at controller flexion = source_pose_flexion_deg.\", \"user_facing_dofs\": [\"flexion\"], \"validation_report\": \"qa/reports/elbow_r.rig_validation.final.json\"}"
+ },
+ "reference_poses": {
+  "0": {
+   "isb_flexion_deg": 0.412,
+   "shaft_ulna_flexion_deg": 12.347,
+   "max_overlap_mm": 0.209
+  },
+  "45": {
+   "isb_flexion_deg": 43.942,
+   "shaft_ulna_flexion_deg": 57.347,
+   "max_overlap_mm": 0.0
+  },
+  "90": {
+   "isb_flexion_deg": 87.612,
+   "shaft_ulna_flexion_deg": 102.347,
+   "max_overlap_mm": 0.0
+  },
+  "145": {
+   "isb_flexion_deg": 142.231,
+   "shaft_ulna_flexion_deg": 157.347,
+   "max_overlap_mm": 1.724
+  }
+ },
+ "sweep_max_overlap_mm": {
+  "0": 0.209,
+  "5": 0.098,
+  "10": 0.114,
+  "15": 0.0,
+  "20": 0.0,
+  "25": 0.0,
+  "30": 0.0,
+  "35": 0.0,
+  "40": 0.0,
+  "45": 0.0,
+  "50": 0.0,
+  "55": 0.0,
+  "60": 0.0,
+  "65": 0.0,
+  "70": 0.0,
+  "75": 0.0,
+  "80": 0.0,
+  "85": 0.0,
+  "90": 0.0,
+  "95": 0.0,
+  "100": 0.0,
+  "105": 0.0,
+  "110": 0.0,
+  "115": 0.0,
+  "120": 0.0,
+  "125": 0.0,
+  "130": 0.0,
+  "135": 0.0,
+  "140": 0.601,
+  "145": 1.724
+ },
+ "worst_pose": "145",
+ "worst_overlap_mm": 1.724,
+ "max_transform_errors": {
+  "stationary": 0.0,
+  "rig_qa": 0.0,
+  "driven_vs_analytic": 2.980232238769531e-07,
+  "pivot_disp_mm": 0.00013374777936202466,
+  "relative": 2.0011793822050095e-07
+ },
+ "limit_clamping": {
+  "-10": 4e-06,
+  "150": 144.999998
+ },
+ "landmark_validation": "NOT AVAILABLE",
+ "failures": [],
+ "passed": true,
+ "poses": {
+  "0": {
+   "isb_flexion_deg": 0.412,
+   "shaft_ulna_flexion_deg": 12.347,
+   "max_overlap_mm": 0.209,
+   "stationary_err": 0.0,
+   "rig_qa_err": 0.0,
+   "driven_vs_analytic_err": 1.1362135410308838e-07,
+   "pivot_disp_mm": 4.485843546238652e-05,
+   "relative_err": 0.0,
+   "overlaps": {
+    "ulna": {
+     "humerus_r": {
+      "max_overlap_mm": 0.209,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": 0.043,
+      "humerus_contact": {
+       "fossa": "olecranon fossa (posterior)",
+       "above_pivot_mm": 6.8,
+       "anterior_mm": -6.5,
+       "lateral_mm": -1.6
+      },
+      "forearm_contact": "olecranon (proximal-posterior ulna, 4.8 mm from tip)"
+     },
+     "scapula_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "clavicle_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     }
+    },
+    "radius": {
+     "humerus_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": 3.95
+     },
+     "scapula_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "clavicle_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     }
+    },
+    "hand": {
+     "humerus_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "scapula_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "clavicle_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     }
+    }
+   }
+  },
+  "5": {
+   "isb_flexion_deg": 5.268,
+   "shaft_ulna_flexion_deg": 17.347,
+   "max_overlap_mm": 0.098,
+   "stationary_err": 0.0,
+   "rig_qa_err": 0.0,
+   "driven_vs_analytic_err": 2.60770320892334e-07,
+   "pivot_disp_mm": 5.587935447692871e-05,
+   "relative_err": 1.7881393432617188e-07,
+   "overlaps": {
+    "ulna": {
+     "humerus_r": {
+      "max_overlap_mm": 0.098,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": 0.088,
+      "humerus_contact": {
+       "fossa": "olecranon fossa (posterior)",
+       "above_pivot_mm": 6.2,
+       "anterior_mm": -7.0,
+       "lateral_mm": -1.6
+      },
+      "forearm_contact": "olecranon (proximal-posterior ulna, 4.8 mm from tip)"
+     },
+     "scapula_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "clavicle_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     }
+    },
+    "radius": {
+     "humerus_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": 4.34
+     },
+     "scapula_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "clavicle_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     }
+    },
+    "hand": {
+     "humerus_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "scapula_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "clavicle_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     }
+    }
+   }
+  },
+  "10": {
+   "isb_flexion_deg": 10.116,
+   "shaft_ulna_flexion_deg": 22.347,
+   "max_overlap_mm": 0.114,
+   "stationary_err": 0.0,
+   "rig_qa_err": 0.0,
+   "driven_vs_analytic_err": 1.0803341865539551e-07,
+   "pivot_disp_mm": 5.1753386815822887e-05,
+   "relative_err": 1.1920928955078125e-07,
+   "overlaps": {
+    "ulna": {
+     "humerus_r": {
+      "max_overlap_mm": 0.114,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": 0.114,
+      "humerus_contact": {
+       "fossa": "olecranon fossa (posterior)",
+       "above_pivot_mm": 5.5,
+       "anterior_mm": -7.5,
+       "lateral_mm": -1.6
+      },
+      "forearm_contact": "olecranon (proximal-posterior ulna, 4.8 mm from tip)"
+     },
+     "scapula_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "clavicle_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     }
+    },
+    "radius": {
+     "humerus_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": 4.506
+     },
+     "scapula_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "clavicle_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     }
+    },
+    "hand": {
+     "humerus_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "scapula_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "clavicle_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     }
+    }
+   }
+  },
+  "15": {
+   "isb_flexion_deg": 14.958,
+   "shaft_ulna_flexion_deg": 27.347,
+   "max_overlap_mm": 0.0,
+   "stationary_err": 0.0,
+   "rig_qa_err": 0.0,
+   "driven_vs_analytic_err": 1.3969838619232178e-07,
+   "pivot_disp_mm": 0.00012753339684474238,
+   "relative_err": 2.2328094928525388e-08,
+   "overlaps": {
+    "ulna": {
+     "humerus_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": 0.1
+     },
+     "scapula_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "clavicle_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     }
+    },
+    "radius": {
+     "humerus_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": 4.618
+     },
+     "scapula_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "clavicle_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     }
+    },
+    "hand": {
+     "humerus_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "scapula_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "clavicle_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     }
+    }
+   }
+  },
+  "20": {
+   "isb_flexion_deg": 19.795,
+   "shaft_ulna_flexion_deg": 32.347,
+   "max_overlap_mm": 0.0,
+   "stationary_err": 0.0,
+   "rig_qa_err": 0.0,
+   "driven_vs_analytic_err": 8.754432201385498e-08,
+   "pivot_disp_mm": 2.9802322387695312e-05,
+   "relative_err": 5.960464477539063e-08,
+   "overlaps": {
+    "ulna": {
+     "humerus_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": 0.303
+     },
+     "scapula_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "clavicle_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     }
+    },
+    "radius": {
+     "humerus_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": 4.638
+     },
+     "scapula_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "clavicle_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     }
+    },
+    "hand": {
+     "humerus_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "scapula_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "clavicle_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     }
+    }
+   }
+  },
+  "25": {
+   "isb_flexion_deg": 24.628,
+   "shaft_ulna_flexion_deg": 37.347,
+   "max_overlap_mm": 0.0,
+   "stationary_err": 0.0,
+   "rig_qa_err": 0.0,
+   "driven_vs_analytic_err": 1.1920928955078125e-07,
+   "pivot_disp_mm": 3.5144318387123206e-05,
+   "relative_err": 1.1920928955078125e-07,
+   "overlaps": {
+    "ulna": {
+     "humerus_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": 0.432
+     },
+     "scapula_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "clavicle_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     }
+    },
+    "radius": {
+     "humerus_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": 4.645
+     },
+     "scapula_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "clavicle_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     }
+    },
+    "hand": {
+     "humerus_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "scapula_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "clavicle_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     }
+    }
+   }
+  },
+  "30": {
+   "isb_flexion_deg": 29.458,
+   "shaft_ulna_flexion_deg": 42.347,
+   "max_overlap_mm": 0.0,
+   "stationary_err": 0.0,
+   "rig_qa_err": 0.0,
+   "driven_vs_analytic_err": 2.123415470123291e-07,
+   "pivot_disp_mm": 1.862645149230957e-05,
+   "relative_err": 1.1920928955078125e-07,
+   "overlaps": {
+    "ulna": {
+     "humerus_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": 0.379
+     },
+     "scapula_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "clavicle_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     }
+    },
+    "radius": {
+     "humerus_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": 4.724
+     },
+     "scapula_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "clavicle_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     }
+    },
+    "hand": {
+     "humerus_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "scapula_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "clavicle_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     }
+    }
+   }
+  },
+  "35": {
+   "isb_flexion_deg": 34.286,
+   "shaft_ulna_flexion_deg": 47.347,
+   "max_overlap_mm": 0.0,
+   "stationary_err": 0.0,
+   "rig_qa_err": 0.0,
+   "driven_vs_analytic_err": 1.7881393432617188e-07,
+   "pivot_disp_mm": 4.485843546238652e-05,
+   "relative_err": 5.273614078760147e-08,
+   "overlaps": {
+    "ulna": {
+     "humerus_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": 0.279
+     },
+     "scapula_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "clavicle_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     }
+    },
+    "radius": {
+     "humerus_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": 4.72
+     },
+     "scapula_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "clavicle_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     }
+    },
+    "hand": {
+     "humerus_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "scapula_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "clavicle_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     }
+    }
+   }
+  },
+  "40": {
+   "isb_flexion_deg": 39.114,
+   "shaft_ulna_flexion_deg": 52.347,
+   "max_overlap_mm": 0.0,
+   "stationary_err": 0.0,
+   "rig_qa_err": 0.0,
+   "driven_vs_analytic_err": 1.7881393432617188e-07,
+   "pivot_disp_mm": 6.332993507385254e-05,
+   "relative_err": 5.960464477539063e-08,
+   "overlaps": {
+    "ulna": {
+     "humerus_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": 0.322
+     },
+     "scapula_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "clavicle_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     }
+    },
+    "radius": {
+     "humerus_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": 4.713
+     },
+     "scapula_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "clavicle_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     }
+    },
+    "hand": {
+     "humerus_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "scapula_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "clavicle_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     }
+    }
+   }
+  },
+  "45": {
+   "isb_flexion_deg": 43.942,
+   "shaft_ulna_flexion_deg": 57.347,
+   "max_overlap_mm": 0.0,
+   "stationary_err": 0.0,
+   "rig_qa_err": 0.0,
+   "driven_vs_analytic_err": 1.7881393432617188e-07,
+   "pivot_disp_mm": 3.003425057343598e-05,
+   "relative_err": 5.960464477539063e-08,
+   "overlaps": {
+    "ulna": {
+     "humerus_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": 0.526
+     },
+     "scapula_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "clavicle_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     }
+    },
+    "radius": {
+     "humerus_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": 4.691
+     },
+     "scapula_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "clavicle_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     }
+    },
+    "hand": {
+     "humerus_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "scapula_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "clavicle_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     }
+    }
+   }
+  },
+  "50": {
+   "isb_flexion_deg": 48.772,
+   "shaft_ulna_flexion_deg": 62.347,
+   "max_overlap_mm": 0.0,
+   "stationary_err": 0.0,
+   "rig_qa_err": 0.0,
+   "driven_vs_analytic_err": 1.1920928955078125e-07,
+   "pivot_disp_mm": 0.00012338530392705794,
+   "relative_err": 5.960464477539063e-08,
+   "overlaps": {
+    "ulna": {
+     "humerus_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": 0.677
+     },
+     "scapula_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "clavicle_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     }
+    },
+    "radius": {
+     "humerus_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": 4.583
+     },
+     "scapula_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "clavicle_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     }
+    },
+    "hand": {
+     "humerus_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "scapula_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "clavicle_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     }
+    }
+   }
+  },
+  "55": {
+   "isb_flexion_deg": 53.605,
+   "shaft_ulna_flexion_deg": 67.347,
+   "max_overlap_mm": 0.0,
+   "stationary_err": 0.0,
+   "rig_qa_err": 0.0,
+   "driven_vs_analytic_err": 1.7881393432617188e-07,
+   "pivot_disp_mm": 0.00013075715880680268,
+   "relative_err": 1.1920928955078125e-07,
+   "overlaps": {
+    "ulna": {
+     "humerus_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": 0.783
+     },
+     "scapula_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "clavicle_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     }
+    },
+    "radius": {
+     "humerus_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": 4.538
+     },
+     "scapula_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "clavicle_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     }
+    },
+    "hand": {
+     "humerus_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "scapula_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "clavicle_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     }
+    }
+   }
+  },
+  "60": {
+   "isb_flexion_deg": 58.442,
+   "shaft_ulna_flexion_deg": 72.347,
+   "max_overlap_mm": 0.0,
+   "stationary_err": 0.0,
+   "rig_qa_err": 0.0,
+   "driven_vs_analytic_err": 1.1920928955078125e-07,
+   "pivot_disp_mm": 6.999185021242476e-05,
+   "relative_err": 1.1920928955078125e-07,
+   "overlaps": {
+    "ulna": {
+     "humerus_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": 0.82
+     },
+     "scapula_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "clavicle_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     }
+    },
+    "radius": {
+     "humerus_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": 4.575
+     },
+     "scapula_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "clavicle_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     }
+    },
+    "hand": {
+     "humerus_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "scapula_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "clavicle_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     }
+    }
+   }
+  },
+  "65": {
+   "isb_flexion_deg": 63.284,
+   "shaft_ulna_flexion_deg": 77.347,
+   "max_overlap_mm": 0.0,
+   "stationary_err": 0.0,
+   "rig_qa_err": 0.0,
+   "driven_vs_analytic_err": 8.940696716308594e-08,
+   "pivot_disp_mm": 6.664001874625056e-05,
+   "relative_err": 9.241921361535788e-08,
+   "overlaps": {
+    "ulna": {
+     "humerus_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": 0.885
+     },
+     "scapula_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "clavicle_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     }
+    },
+    "radius": {
+     "humerus_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": 4.533
+     },
+     "scapula_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "clavicle_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     }
+    },
+    "hand": {
+     "humerus_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "scapula_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "clavicle_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     }
+    }
+   }
+  },
+  "70": {
+   "isb_flexion_deg": 68.133,
+   "shaft_ulna_flexion_deg": 82.347,
+   "max_overlap_mm": 0.0,
+   "stationary_err": 0.0,
+   "rig_qa_err": 0.0,
+   "driven_vs_analytic_err": 1.1920928955078125e-07,
+   "pivot_disp_mm": 6.332993507385254e-05,
+   "relative_err": 3.235436452087015e-08,
+   "overlaps": {
+    "ulna": {
+     "humerus_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": 0.921
+     },
+     "scapula_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "clavicle_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     }
+    },
+    "radius": {
+     "humerus_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": 4.422
+     },
+     "scapula_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "clavicle_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     }
+    },
+    "hand": {
+     "humerus_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "scapula_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "clavicle_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     }
+    }
+   }
+  },
+  "75": {
+   "isb_flexion_deg": 72.989,
+   "shaft_ulna_flexion_deg": 87.347,
+   "max_overlap_mm": 0.0,
+   "stationary_err": 0.0,
+   "rig_qa_err": 0.0,
+   "driven_vs_analytic_err": 1.1920928955078125e-07,
+   "pivot_disp_mm": 5.1753386815822887e-05,
+   "relative_err": 1.1920928955078125e-07,
+   "overlaps": {
+    "ulna": {
+     "humerus_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": 0.945
+     },
+     "scapula_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "clavicle_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     }
+    },
+    "radius": {
+     "humerus_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": 4.395
+     },
+     "scapula_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "clavicle_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     }
+    },
+    "hand": {
+     "humerus_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "scapula_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "clavicle_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     }
+    }
+   }
+  },
+  "80": {
+   "isb_flexion_deg": 77.854,
+   "shaft_ulna_flexion_deg": 92.347,
+   "max_overlap_mm": 0.0,
+   "stationary_err": 0.0,
+   "rig_qa_err": 0.0,
+   "driven_vs_analytic_err": 1.7881393432617188e-07,
+   "pivot_disp_mm": 0.00010803341865539551,
+   "relative_err": 4.371395334601402e-08,
+   "overlaps": {
+    "ulna": {
+     "humerus_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": 0.922
+     },
+     "scapula_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "clavicle_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     }
+    },
+    "radius": {
+     "humerus_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": 4.341
+     },
+     "scapula_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "clavicle_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     }
+    },
+    "hand": {
+     "humerus_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "scapula_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "clavicle_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     }
+    }
+   }
+  },
+  "85": {
+   "isb_flexion_deg": 82.728,
+   "shaft_ulna_flexion_deg": 97.347,
+   "max_overlap_mm": 0.0,
+   "stationary_err": 0.0,
+   "rig_qa_err": 0.0,
+   "driven_vs_analytic_err": 1.7881393432617188e-07,
+   "pivot_disp_mm": 3.5144318387123206e-05,
+   "relative_err": 7.718335837125778e-08,
+   "overlaps": {
+    "ulna": {
+     "humerus_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": 1.04
+     },
+     "scapula_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "clavicle_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     }
+    },
+    "radius": {
+     "humerus_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": 4.324
+     },
+     "scapula_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "clavicle_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     }
+    },
+    "hand": {
+     "humerus_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "scapula_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "clavicle_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     }
+    }
+   }
+  },
+  "90": {
+   "isb_flexion_deg": 87.612,
+   "shaft_ulna_flexion_deg": 102.347,
+   "max_overlap_mm": 0.0,
+   "stationary_err": 0.0,
+   "rig_qa_err": 0.0,
+   "driven_vs_analytic_err": 1.1920928955078125e-07,
+   "pivot_disp_mm": 7.963761063826066e-05,
+   "relative_err": 8.393544703722e-08,
+   "overlaps": {
+    "ulna": {
+     "humerus_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": 1.135
+     },
+     "scapula_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "clavicle_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     }
+    },
+    "radius": {
+     "humerus_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": 4.35
+     },
+     "scapula_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "clavicle_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     }
+    },
+    "hand": {
+     "humerus_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "scapula_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "clavicle_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     }
+    }
+   }
+  },
+  "95": {
+   "isb_flexion_deg": 92.508,
+   "shaft_ulna_flexion_deg": 107.347,
+   "max_overlap_mm": 0.0,
+   "stationary_err": 0.0,
+   "rig_qa_err": 0.0,
+   "driven_vs_analytic_err": 1.1920928955078125e-07,
+   "pivot_disp_mm": 8.059035112255788e-05,
+   "relative_err": 1.1920928955078125e-07,
+   "overlaps": {
+    "ulna": {
+     "humerus_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": 1.164
+     },
+     "scapula_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "clavicle_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     }
+    },
+    "radius": {
+     "humerus_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": 4.29
+     },
+     "scapula_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "clavicle_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     }
+    },
+    "hand": {
+     "humerus_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "scapula_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "clavicle_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     }
+    }
+   }
+  },
+  "100": {
+   "isb_flexion_deg": 97.416,
+   "shaft_ulna_flexion_deg": 112.347,
+   "max_overlap_mm": 0.0,
+   "stationary_err": 0.0,
+   "rig_qa_err": 0.0,
+   "driven_vs_analytic_err": 1.1920928955078125e-07,
+   "pivot_disp_mm": 8.568167686462402e-05,
+   "relative_err": 8.952338248491287e-08,
+   "overlaps": {
+    "ulna": {
+     "humerus_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": 1.128
+     },
+     "scapula_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "clavicle_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     }
+    },
+    "radius": {
+     "humerus_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": 4.325
+     },
+     "scapula_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "clavicle_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     }
+    },
+    "hand": {
+     "humerus_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "scapula_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "clavicle_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     }
+    }
+   }
+  },
+  "105": {
+   "isb_flexion_deg": 102.337,
+   "shaft_ulna_flexion_deg": 117.347,
+   "max_overlap_mm": 0.0,
+   "stationary_err": 0.0,
+   "rig_qa_err": 0.0,
+   "driven_vs_analytic_err": 1.1920928955078125e-07,
+   "pivot_disp_mm": 7.233205377663523e-05,
+   "relative_err": 4.575122147798538e-08,
+   "overlaps": {
+    "ulna": {
+     "humerus_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": 1.025
+     },
+     "scapula_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "clavicle_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     }
+    },
+    "radius": {
+     "humerus_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": 4.317
+     },
+     "scapula_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "clavicle_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     }
+    },
+    "hand": {
+     "humerus_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "scapula_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "clavicle_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     }
+    }
+   }
+  },
+  "110": {
+   "isb_flexion_deg": 107.271,
+   "shaft_ulna_flexion_deg": 122.347,
+   "max_overlap_mm": 0.0,
+   "stationary_err": 0.0,
+   "rig_qa_err": 0.0,
+   "driven_vs_analytic_err": 1.1920928955078125e-07,
+   "pivot_disp_mm": 8.195638656616211e-05,
+   "relative_err": 5.960464477539063e-08,
+   "overlaps": {
+    "ulna": {
+     "humerus_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": 0.856
+     },
+     "scapula_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "clavicle_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     }
+    },
+    "radius": {
+     "humerus_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": 4.3
+     },
+     "scapula_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "clavicle_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     }
+    },
+    "hand": {
+     "humerus_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "scapula_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "clavicle_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     }
+    }
+   }
+  },
+  "115": {
+   "isb_flexion_deg": 112.22,
+   "shaft_ulna_flexion_deg": 127.347,
+   "max_overlap_mm": 0.0,
+   "stationary_err": 0.0,
+   "rig_qa_err": 0.0,
+   "driven_vs_analytic_err": 1.1920928955078125e-07,
+   "pivot_disp_mm": 9.431681708374742e-05,
+   "relative_err": 1.2747477740049362e-07,
+   "overlaps": {
+    "ulna": {
+     "humerus_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": 0.915
+     },
+     "scapula_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "clavicle_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     }
+    },
+    "radius": {
+     "humerus_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": 4.222
+     },
+     "scapula_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "clavicle_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     }
+    },
+    "hand": {
+     "humerus_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "scapula_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "clavicle_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     }
+    }
+   }
+  },
+  "120": {
+   "isb_flexion_deg": 117.183,
+   "shaft_ulna_flexion_deg": 132.347,
+   "max_overlap_mm": 0.0,
+   "stationary_err": 0.0,
+   "rig_qa_err": 0.0,
+   "driven_vs_analytic_err": 1.7881393432617188e-07,
+   "pivot_disp_mm": 8.024520884654676e-05,
+   "relative_err": 9.580980986356735e-08,
+   "overlaps": {
+    "ulna": {
+     "humerus_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": 1.003
+     },
+     "scapula_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "clavicle_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     }
+    },
+    "radius": {
+     "humerus_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": 4.22
+     },
+     "scapula_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "clavicle_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     }
+    },
+    "hand": {
+     "humerus_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "scapula_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "clavicle_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     }
+    }
+   }
+  },
+  "125": {
+   "isb_flexion_deg": 122.162,
+   "shaft_ulna_flexion_deg": 137.347,
+   "max_overlap_mm": 0.0,
+   "stationary_err": 0.0,
+   "rig_qa_err": 0.0,
+   "driven_vs_analytic_err": 2.980232238769531e-07,
+   "pivot_disp_mm": 0.00013374777936202466,
+   "relative_err": 1.407461240887642e-07,
+   "overlaps": {
+    "ulna": {
+     "humerus_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": 0.989
+     },
+     "scapula_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "clavicle_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     }
+    },
+    "radius": {
+     "humerus_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": 4.165
+     },
+     "scapula_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "clavicle_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     }
+    },
+    "hand": {
+     "humerus_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "scapula_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "clavicle_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     }
+    }
+   }
+  },
+  "130": {
+   "isb_flexion_deg": 127.156,
+   "shaft_ulna_flexion_deg": 142.347,
+   "max_overlap_mm": 0.0,
+   "stationary_err": 0.0,
+   "rig_qa_err": 0.0,
+   "driven_vs_analytic_err": 1.7881393432617188e-07,
+   "pivot_disp_mm": 5.587935447692871e-05,
+   "relative_err": 1.9639264792203903e-07,
+   "overlaps": {
+    "ulna": {
+     "humerus_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": 0.876
+     },
+     "scapula_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "clavicle_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     }
+    },
+    "radius": {
+     "humerus_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": 4.161
+     },
+     "scapula_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "clavicle_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     }
+    },
+    "hand": {
+     "humerus_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "scapula_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "clavicle_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     }
+    }
+   }
+  },
+  "135": {
+   "isb_flexion_deg": 132.165,
+   "shaft_ulna_flexion_deg": 147.347,
+   "max_overlap_mm": 0.0,
+   "stationary_err": 0.0,
+   "rig_qa_err": 0.0,
+   "driven_vs_analytic_err": 1.1920928955078125e-07,
+   "pivot_disp_mm": 4.3603405023811855e-05,
+   "relative_err": 2.0011793822050095e-07,
+   "overlaps": {
+    "ulna": {
+     "humerus_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": 0.598
+     },
+     "scapula_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "clavicle_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     }
+    },
+    "radius": {
+     "humerus_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": 4.166
+     },
+     "scapula_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "clavicle_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     }
+    },
+    "hand": {
+     "humerus_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "scapula_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "clavicle_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     }
+    }
+   }
+  },
+  "140": {
+   "isb_flexion_deg": 137.19,
+   "shaft_ulna_flexion_deg": 152.347,
+   "max_overlap_mm": 0.601,
+   "stationary_err": 0.0,
+   "rig_qa_err": 0.0,
+   "driven_vs_analytic_err": 1.7881393432617188e-07,
+   "pivot_disp_mm": 0.00012157238179505409,
+   "relative_err": 1.5541445463895798e-07,
+   "overlaps": {
+    "ulna": {
+     "humerus_r": {
+      "max_overlap_mm": 0.601,
+      "vertices_over_0_5mm": 1,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": 0.004,
+      "humerus_contact": {
+       "fossa": "coronoid fossa (anterior-medial)",
+       "above_pivot_mm": 15.4,
+       "anterior_mm": 2.0,
+       "lateral_mm": -7.9
+      },
+      "forearm_contact": "coronoid process / trochlear notch anterior (depth 26.7 mm)"
+     },
+     "scapula_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "clavicle_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     }
+    },
+    "radius": {
+     "humerus_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": 2.653
+     },
+     "scapula_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "clavicle_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     }
+    },
+    "hand": {
+     "humerus_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "scapula_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "clavicle_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     }
+    }
+   }
+  },
+  "145": {
+   "isb_flexion_deg": 142.231,
+   "shaft_ulna_flexion_deg": 157.347,
+   "max_overlap_mm": 1.724,
+   "stationary_err": 0.0,
+   "rig_qa_err": 0.0,
+   "driven_vs_analytic_err": 1.1920928955078125e-07,
+   "pivot_disp_mm": 5.9720946631883826e-05,
+   "relative_err": 1.6961712390184402e-07,
+   "overlaps": {
+    "ulna": {
+     "humerus_r": {
+      "max_overlap_mm": 1.724,
+      "vertices_over_0_5mm": 3,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": 0.038,
+      "humerus_contact": {
+       "fossa": "coronoid fossa (anterior-medial)",
+       "above_pivot_mm": 15.0,
+       "anterior_mm": 1.6,
+       "lateral_mm": -7.4
+      },
+      "forearm_contact": "coronoid process / trochlear notch anterior (depth 26.7 mm)"
+     },
+     "scapula_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "clavicle_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     }
+    },
+    "radius": {
+     "humerus_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": 1.158
+     },
+     "scapula_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "clavicle_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     }
+    },
+    "hand": {
+     "humerus_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "scapula_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     },
+     "clavicle_r": {
+      "max_overlap_mm": 0.0,
+      "vertices_over_0_5mm": 0,
+      "vertices_over_2mm": 0,
+      "min_distance_mm": null
+     }
+    }
+   }
+  }
+ }
+}

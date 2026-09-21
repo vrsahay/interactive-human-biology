@@ -1,0 +1,139 @@
+{
+ "generatedAt": "2026-09-17T15:28:06.853Z",
+ "reference": "runtime PMREM (Step 11)",
+ "viewport": "1280x800 @1x",
+ "results": {
+  "intro.title": {
+   "32": {
+    "psnrDb": 57.46,
+    "maxAbsDiff": 9,
+    "pixelsOver8Pct": 0
+   },
+   "64": {
+    "psnrDb": 59.17,
+    "maxAbsDiff": 6,
+    "pixelsOver8Pct": 0
+   },
+   "128": {
+    "psnrDb": 61.21,
+    "maxAbsDiff": 3,
+    "pixelsOver8Pct": 0
+   },
+   "256": {
+    "psnrDb": 75.43,
+    "maxAbsDiff": 1,
+    "pixelsOver8Pct": 0
+   }
+  },
+  "fixed.detail": {
+   "32": {
+    "psnrDb": 53.48,
+    "maxAbsDiff": 23,
+    "pixelsOver8Pct": 0.039
+   },
+   "64": {
+    "psnrDb": 57.82,
+    "maxAbsDiff": 14,
+    "pixelsOver8Pct": 0
+   },
+   "128": {
+    "psnrDb": 59.28,
+    "maxAbsDiff": 8,
+    "pixelsOver8Pct": 0
+   },
+   "256": {
+    "psnrDb": 71.92,
+    "maxAbsDiff": 1,
+    "pixelsOver8Pct": 0
+   }
+  },
+  "ball.shoulder": {
+   "32": {
+    "psnrDb": 54,
+    "maxAbsDiff": 9,
+    "pixelsOver8Pct": 0
+   },
+   "64": {
+    "psnrDb": 55.65,
+    "maxAbsDiff": 5,
+    "pixelsOver8Pct": 0
+   },
+   "128": {
+    "psnrDb": 56.71,
+    "maxAbsDiff": 3,
+    "pixelsOver8Pct": 0
+   },
+   "256": {
+    "psnrDb": 69.81,
+    "maxAbsDiff": 1,
+    "pixelsOver8Pct": 0
+   }
+  },
+  "hinge.bones": {
+   "32": {
+    "psnrDb": 59.3,
+    "maxAbsDiff": 14,
+    "pixelsOver8Pct": 0.009
+   },
+   "64": {
+    "psnrDb": 62.36,
+    "maxAbsDiff": 9,
+    "pixelsOver8Pct": 0
+   },
+   "128": {
+    "psnrDb": 63.24,
+    "maxAbsDiff": 4,
+    "pixelsOver8Pct": 0
+   },
+   "256": {
+    "psnrDb": 74.69,
+    "maxAbsDiff": 1,
+    "pixelsOver8Pct": 0
+   }
+  },
+  "hinge.support": {
+   "32": {
+    "psnrDb": 51.42,
+    "maxAbsDiff": 17,
+    "pixelsOver8Pct": 0.142
+   },
+   "64": {
+    "psnrDb": 55.01,
+    "maxAbsDiff": 10,
+    "pixelsOver8Pct": 0.001
+   },
+   "128": {
+    "psnrDb": 57.28,
+    "maxAbsDiff": 5,
+    "pixelsOver8Pct": 0
+   },
+   "256": {
+    "psnrDb": 69.73,
+    "maxAbsDiff": 1,
+    "pixelsOver8Pct": 0
+   }
+  },
+  "hinge.knee": {
+   "32": {
+    "psnrDb": 56.12,
+    "maxAbsDiff": 12,
+    "pixelsOver8Pct": 0.018
+   },
+   "64": {
+    "psnrDb": 58.95,
+    "maxAbsDiff": 7,
+    "pixelsOver8Pct": 0
+   },
+   "128": {
+    "psnrDb": 60.43,
+    "maxAbsDiff": 4,
+    "pixelsOver8Pct": 0
+   },
+   "256": {
+    "psnrDb": 73.26,
+    "maxAbsDiff": 1,
+    "pixelsOver8Pct": 0
+   }
+  }
+ }
+}

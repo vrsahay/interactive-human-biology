@@ -1,0 +1,13 @@
+
+Running 5 tests using 1 worker
+
+  ok 1 tests\perf\perf-lab.spec.ts:351:3 › perf lab: laptop-igpu-broadband (1.2m)
+  ok 2 tests\perf\perf-lab.spec.ts:351:3 › perf lab: laptop-igpu-fast4g (1.7m)
+  ok 3 tests\perf\perf-lab.spec.ts:351:3 › perf lab: tablet-emulated-fast4g (2.3m)
+  ok 4 tests\perf\perf-lab.spec.ts:351:3 › perf lab: mobile-emulated-fast4g (4.3m)
+  ok 5 tests\perf\perf-lab.spec.ts:351:3 › perf lab: mobile-emulated-fast4g-cpu2x (2.7m)
+
+  Slow test file: tests\perf\perf-lab.spec.ts (12.2m)
+  Consider running tests from slow files in parallel. See: https://playwright.dev/docs/test-parallel
+  5 passed (12.2m)
+EXIT 0

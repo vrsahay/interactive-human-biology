@@ -1,0 +1,163 @@
+{
+ "imported": {
+  "core": 80,
+  "detail": 18,
+  "context": 24
+ },
+ "attached": 19,
+ "qa_imported": [],
+ "missing_nodes": [],
+ "bbox_max_deviation_mm": 0.01121,
+ "bands": {
+  "elbow_r.band.radial_collateral_ligament": {
+   "0": {
+    "imported_mm": 23.66,
+    "blender_mm": 23.66,
+    "diff_mm": 0.0003
+   },
+   "45": {
+    "imported_mm": 23.228,
+    "blender_mm": 23.228,
+    "diff_mm": 0.0
+   },
+   "90": {
+    "imported_mm": 22.264,
+    "blender_mm": 22.264,
+    "diff_mm": 0.0004
+   },
+   "145": {
+    "imported_mm": 21.158,
+    "blender_mm": 21.158,
+    "diff_mm": 0.0001
+   }
+  },
+  "elbow_r.band.ulnar_collateral_ligament": {
+   "0": {
+    "imported_mm": 27.599,
+    "blender_mm": 27.599,
+    "diff_mm": 0.0004
+   },
+   "45": {
+    "imported_mm": 27.434,
+    "blender_mm": 27.434,
+    "diff_mm": 0.0
+   },
+   "90": {
+    "imported_mm": 25.858,
+    "blender_mm": 25.859,
+    "diff_mm": 0.0006
+   },
+   "145": {
+    "imported_mm": 23.191,
+    "blender_mm": 23.191,
+    "diff_mm": 0.0002
+   }
+  }
+ },
+ "images": [
+  [
+   "Tissue color | bone",
+   [
+    "WEBP",
+    [
+     512,
+     512
+    ]
+   ]
+  ],
+  [
+   "Tissue color | bone.001",
+   [
+    "WEBP",
+    [
+     512,
+     512
+    ]
+   ]
+  ],
+  [
+   "Tissue color | muscle",
+   [
+    "WEBP",
+    [
+     512,
+     512
+    ]
+   ]
+  ],
+  [
+   "Tissue color | tendon",
+   [
+    "WEBP",
+    [
+     512,
+     512
+    ]
+   ]
+  ],
+  [
+   "Tissue color | tendon.001",
+   [
+    "WEBP",
+    [
+     512,
+     512
+    ]
+   ]
+  ],
+  [
+   "Tissue normal | muscle",
+   [
+    "WEBP",
+    [
+     512,
+     512
+    ]
+   ]
+  ],
+  [
+   "Tissue normal | organ",
+   [
+    "WEBP",
+    [
+     512,
+     512
+    ]
+   ]
+  ],
+  [
+   "Tissue normal | organ.001",
+   [
+    "WEBP",
+    [
+     512,
+     512
+    ]
+   ]
+  ],
+  [
+   "Tissue normal | organ.002",
+   [
+    "WEBP",
+    [
+     512,
+     512
+    ]
+   ]
+  ]
+ ],
+ "renders": [
+  "C:\\Users\\Admin\\dev\\joints-platform\\qa\\visual\\step9\\elbow_r_core_000.png",
+  "C:\\Users\\Admin\\dev\\joints-platform\\qa\\visual\\step9\\elbow_r_core_090.png",
+  "C:\\Users\\Admin\\dev\\joints-platform\\qa\\visual\\step9\\elbow_r_core_145.png",
+  "C:\\Users\\Admin\\dev\\joints-platform\\qa\\visual\\step9\\elbow_r_detail_000.png",
+  "C:\\Users\\Admin\\dev\\joints-platform\\qa\\visual\\step9\\elbow_r_detail_090.png",
+  "C:\\Users\\Admin\\dev\\joints-platform\\qa\\visual\\step9\\elbow_r_detail_145.png",
+  "C:\\Users\\Admin\\dev\\joints-platform\\qa\\visual\\step9\\elbow_r_context_000.png",
+  "C:\\Users\\Admin\\dev\\joints-platform\\qa\\visual\\step9\\elbow_r_context_090.png",
+  "C:\\Users\\Admin\\dev\\joints-platform\\qa\\visual\\step9\\elbow_r_context_145.png",
+  "C:\\Users\\Admin\\dev\\joints-platform\\qa\\visual\\step9\\elbow_r_detail_medial_090.png"
+ ],
+ "problems": [],
+ "passed": true
+}

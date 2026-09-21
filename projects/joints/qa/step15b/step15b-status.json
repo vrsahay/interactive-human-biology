@@ -1,0 +1,160 @@
+{
+ "step": "15B",
+ "title": "Learner clarity pass - targeted teaching fixes after direct Class-10 learner review",
+ "status": "COMPLETE",
+ "statusReason": "All five learner stumbling points and the timing problem are resolved in the shipped content and the running build, each one held by a test. The pedagogical spine, the Explore system and the validated elbow are unchanged.",
+ "generatedAt": "2026-09-18T14:05:00.000Z",
+ "branch": "step15b-learner-clarity",
+ "baseline": {
+  "candidateBefore": "step14b-complete",
+  "commitBefore": "d6ec8d8e96b745bec53f648fa4b64e55d2678fd9",
+  "step15aPackage": "qa/expert/step15/ - left untouched; it describes the previous candidate",
+  "step13Frozen": "step13-frozen-baseline (537ac71) - unchanged",
+  "publicReleaseReady": false
+ },
+ "fixes": [
+  {
+   "id": 1,
+   "issue": "The same reviewer-language disclaimer appeared under 19 of 38 captions",
+   "resolution": "Said once instead: a persistent on-stage status while indicators are visible, one plain line on entering a teaching-simulation exploration, and the full technical wording in the Sources & draft status dialog",
+   "captionsCarryingItBefore": 19,
+   "captionsCarryingItAfter": 0,
+   "metadataRemoved": false,
+   "provedBy": "step15b-clarity #1, video-lesson unit test"
+  },
+  {
+   "id": 2,
+   "issue": "Three anatomical names introduced in one sentence",
+   "before": "At the elbow, the humerus meets the radius and the ulna.",
+   "after": "The elbow is where the upper-arm bone meets two bones in the forearm.",
+   "namesRetainedOn": "the anchor labels already on the model in that shot (Humerus, Radius, Ulna)",
+   "provedBy": "step15b-clarity #2"
+  },
+  {
+   "id": 3,
+   "issue": "\"Axis\" used twice before it was ever explained",
+   "resolution": "The pivot chapter no longer uses the word; it is introduced once, in the shot that shows the blue line, explained before it is named",
+   "after": "This blue line shows the direction the elbow bends around. We call that line the axis.",
+   "provedBy": "step15b-clarity #3"
+  },
+  {
+   "id": 4,
+   "issue": "The pivot chapter showed rotation but never showed one bone turning around another",
+   "resolution": "A new beat looks at the two neck bones with nothing moving, from behind and level, then the rotation beat pulls back so the head is in frame; framing chosen by comparing eight rendered candidates",
+   "newShot": "pivot.bones",
+   "newRig": false,
+   "claimsAboutC1C2Mechanics": "none",
+   "provedBy": "step15b-clarity #4"
+  },
+  {
+   "id": 5,
+   "issue": "Flexion and extension were named and never used again",
+   "decision": "teach and reuse",
+   "taughtIn": ["hinge.flexion", "hinge.extension"],
+   "reusedIn": "explore.hinge explanation",
+   "engineDofNameUnchanged": true,
+   "provedBy": "step15b-clarity #5"
+  },
+  {
+   "id": "timing",
+   "issue": "~5.5 s of silence around 3:04 that read as a stall",
+   "rootCause": "hinge.return is a deliberate transition with real motion (camera 0-1.5 s, elbow 0.9-4.2 s) but had no caption at all, so the narration builder produced no clip for it - and its last 1.3 s was a static frame with no text and no audio",
+   "notCausedBy": ["pause-state bug", "narration scheduling bug", "animation timing bug"],
+   "resolution": "Kept as a transition; it now says what it is doing (which gives it a narration clip) and the dead tail is trimmed to where the motion ends",
+   "durationMsBefore": 5500,
+   "durationMsAfter": 4600,
+   "silentShotsBefore": 1,
+   "silentShotsAfter": 0,
+   "separateEnvironmentNote": "Playback also crawls while the desktop Browser pane is hidden, because the browser throttles animation frames for an occluded tab and the film clock rides the render loop. That is environment behaviour, not this defect.",
+   "provedBy": "step15b-clarity #6, step14b-lesson #11"
+  }
+ ],
+ "unchanged": {
+  "chapters": ["hook", "what_is_joint", "fixed", "pivot", "ball_socket", "hinge", "compare", "recall", "body_map"],
+  "categories": ["Fixed", "Pivot", "Ball-and-socket", "Hinge"],
+  "categoriesAdded": 0,
+  "explores": { "fixed": "teaching-simulation", "pivot": "teaching-simulation", "ball_socket": "teaching-simulation", "hinge": "validated-rig" },
+  "newRigs": 0,
+  "newAssets": 0,
+  "validatedElbow": "pivot, fitted axis, neutral offset, DOF, 0-145 range, geometry, manifest, controller and runtime consistency all untouched; git diff against the candidate tag over public/assets/joints, public/assets/body, public/assets/shared and blender is empty",
+  "hipClassification": "PENDING EXPERT CONFIRMATION - not touched"
+ },
+ "content": {
+  "shotsBefore": 39,
+  "shotsAfter": 40,
+  "durationBefore": "4:35",
+  "durationAfter": "4:40",
+  "localeStrings": 199,
+  "byProvenance": { "figure-reference": 21, "ui": 115, "source-excerpt": 1, "draft-enrichment": 62 },
+  "changedOrNewLearnerStrings": 14,
+  "newCurriculumClaims": 0
+ },
+ "narration": {
+  "shotClips": 40,
+  "shotsTotal": 40,
+  "silentShots": [],
+  "cueClips": 16,
+  "overruns": 0,
+  "orphanClips": 0,
+  "voice": "en-IN-Chirp3-HD-Aoede",
+  "keyHandling": "environment at build time only; never written to a file, a manifest or the web build"
+ },
+ "tests": {
+  "typecheck": "clean",
+  "unit": { "passed": 97, "failed": 0 },
+  "e2e": { "passed": 83, "failed": 0 },
+  "newSpec": { "file": "tests/e2e/step15b-clarity.spec.ts", "tests": 8 },
+  "testsChanged": [
+   "step14b-lesson #11: the silent-shot exception list is now asserted empty (stricter)",
+   "video-lesson unit: the Step-13 honesty invariant was replaced by a stronger pair of checks - see regression-report.md"
+  ],
+  "consoleErrors": 0
+ },
+ "accessibility": {
+  "axeStates": 24,
+  "axeViolations": 0,
+  "measuredContrastRuns": 341,
+  "contrastBelowThreshold": 0,
+  "newTextMeasured": { "film-teachmark": "lowest 7.42:1", "film-explore__teaching": "lowest 9.28:1" },
+  "statusInformationLost": false,
+  "viewports": [1280, 1440, 768, 412, 390, 320],
+  "screenReaderTested": false,
+  "screenReaderNote": "NVDA and VoiceOver still NOT TESTED; unchanged from Step 12"
+ },
+ "performance": {
+  "method": "A/B against the rebuilt step14b-complete build, alternating on the reference profile",
+  "comparablePass": {
+   "cpuBenchMs": { "step14b": 81, "step15b": 81 },
+   "firstMeaningful3DMs": { "step14b": 532, "step15b": 522 },
+   "introCompleteMs": { "step14b": 967, "step15b": 972 },
+   "bytesBeforeFirst3D": { "step14b": "548 KB", "step15b": "548 KB" },
+   "elbowDrag": { "step14b": "60.0 fps, p95 17.1 ms", "step15b": "60.0 fps, p95 17.1 ms" }
+  },
+  "verdict": "no measurable difference; this step added no asset",
+  "step12EmulatedMisses": "unchanged and still open: phone x4 first 3D 2742 ms vs 2500 ms, drag p95 45.1 ms vs 22 ms",
+  "mobileCertification": false
+ },
+ "integrity": {
+  "frozenFilesVerified": 29,
+  "frozenFilesTotal": 29,
+  "masterSha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0",
+  "masterMatchesPin": true,
+  "productionAssetsChanged": 0,
+  "blenderFilesChanged": 0
+ },
+ "openItems": [
+  "Step 12 remains FAIL: no real Android device, no real iPad, no real NVDA/VoiceOver test, two emulated x4 misses",
+  "expert review remains PENDING on every item: anatomy, curriculum, landmarks, the 0-145 range, human accessibility, asset licence",
+  "asset licence is still a RELEASE BLOCKER",
+  "formal Gate 3 still PENDING EXPERT LANDMARK APPROVAL; qa/elbow_r.poses.draft.json is still a draft",
+  "the hip's ball-and-socket classification is still PENDING EXPERT CONFIRMATION",
+  "all 62 draft-enrichment lines, including the 14 changed here, still need subject-expert review"
+ ],
+ "doesNotClaim": [
+  "public release readiness",
+  "expert approval",
+  "device certification",
+  "screen-reader certification",
+  "that any teaching simulation is a validated biomechanical rig"
+ ]
+}

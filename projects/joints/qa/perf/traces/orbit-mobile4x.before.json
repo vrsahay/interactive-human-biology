@@ -1,0 +1,397 @@
+{
+ "breakdown": null,
+ "scenario": "orbit",
+ "profile": "mobile4x",
+ "dist": "dist",
+ "query": "",
+ "generatedAt": "2026-09-17T17:40:22.294Z",
+ "markers": {},
+ "mainThread": {
+  "totalTaskMs": 7548.7,
+  "topTasks": [
+   {
+    "atMs": 3.3,
+    "durMs": 635.8
+   },
+   {
+    "atMs": 3.3,
+    "durMs": 635.7
+   },
+   {
+    "atMs": 6312.6,
+    "durMs": 13.1
+   },
+   {
+    "atMs": 6312.6,
+    "durMs": 13.1
+   },
+   {
+    "atMs": 3746.3,
+    "durMs": 12.3
+   },
+   {
+    "atMs": 3746.3,
+    "durMs": 12.3
+   },
+   {
+    "atMs": 7746.2,
+    "durMs": 12.3
+   },
+   {
+    "atMs": 5946.3,
+    "durMs": 12.2
+   },
+   {
+    "atMs": 7746.2,
+    "durMs": 12.1
+   },
+   {
+    "atMs": 5946.3,
+    "durMs": 11.9
+   },
+   {
+    "atMs": 5579.3,
+    "durMs": 11.3
+   },
+   {
+    "atMs": 6562.7,
+    "durMs": 11.3
+   },
+   {
+    "atMs": 5579.3,
+    "durMs": 11.1
+   },
+   {
+    "atMs": 763,
+    "durMs": 10.9
+   },
+   {
+    "atMs": 763,
+    "durMs": 10.9
+   }
+  ],
+  "byEvent": [
+   [
+    "v8.callFunction",
+    1855.4
+   ],
+   [
+    "WebFrameWidgetImpl::BeginMainFrame",
+    1748.7
+   ],
+   [
+    "Blink.Animate.UpdateTime",
+    1696.3
+   ],
+   [
+    "PageAnimator::serviceScriptedAnimations",
+    1664.6
+   ],
+   [
+    "FrameRequestCallbackCollection::ExecuteFrameCallbacks",
+    1551.7
+   ],
+   [
+    "FireAnimationFrame",
+    1532.1
+   ],
+   [
+    "AsyncTask Run",
+    1494.8
+   ],
+   [
+    "FunctionCall",
+    1289.4
+   ],
+   [
+    "WebFrameWidgetImpl::UpdateLifecycle",
+    637.1
+   ],
+   [
+    "Receive mojo message",
+    635.2
+   ],
+   [
+    "V8.StackGuard",
+    619.8
+   ],
+   [
+    "V8.HandleInterrupts",
+    619.6
+   ],
+   [
+    "V8.InvokeApiInterruptCallbacks",
+    616.5
+   ],
+   [
+    "CpuProfiler::StartProfiling",
+    614.3
+   ],
+   [
+    "EventDispatch",
+    600
+   ],
+   [
+    "Commit",
+    475.2
+   ],
+   [
+    "LocalFrameView::RunPaintLifecyclePhase",
+    245.7
+   ],
+   [
+    "Blink.Paint.UpdateTime",
+    156.1
+   ],
+   [
+    "PrePaint",
+    119.7
+   ],
+   [
+    "LocalFrameView::RunStyleAndLayoutLifecyclePhases",
+    94.3
+   ],
+   [
+    "LocalFrameView::UpdateStyleAndLayout",
+    45
+   ],
+   [
+    "LocalFrameView::RunPrePaintLifecyclePhase",
+    43.7
+   ],
+   [
+    "LocalFrameView::RunCompositingInputsLifecyclePhase",
+    40.3
+   ],
+   [
+    "LocalFrameView::pushPaintArtifactToCompositor",
+    40.3
+   ],
+   [
+    "Blink.PrePaint.UpdateTime",
+    30.9
+   ],
+   [
+    "Blink.CompositingCommit.UpdateTime",
+    28.6
+   ],
+   [
+    "LocalFrameView::RunAccessibilitySteps",
+    27.2
+   ],
+   [
+    "AsyncTask Scheduled",
+    26.1
+   ],
+   [
+    "Blink.CompositingInputs.UpdateTime",
+    25.7
+   ],
+   [
+    "LocalFrameView::NotifyResizeObservers",
+    20.4
+   ],
+   [
+    "Layerize",
+    18.7
+   ],
+   [
+    "LocalFrameView::UpdateViewportIntersectionsForSubtree",
+    17.9
+   ],
+   [
+    "BlinkScheduler_PerformMicrotaskCheckpoint",
+    13.3
+   ],
+   [
+    "LocalFrameView::WillStartLifecycleUpdate",
+    13.1
+   ],
+   [
+    "WidgetBase::WillBeginMainFrame",
+    12.5
+   ],
+   [
+    "CullRectUpdate",
+    12.2
+   ],
+   [
+    "Blink.IntersectionObservation.UpdateTime",
+    10
+   ],
+   [
+    "RootScrollerController::PerformRootScrollerSelection",
+    9
+   ],
+   [
+    "Blink.Accessibility.UpdateTime",
+    7.2
+   ],
+   [
+    "AnimationTimeline::serviceAnimations",
+    6.5
+   ]
+  ],
+  "gc": {
+   "minorMs": 0,
+   "majorMs": 0,
+   "count": 0
+  }
+ },
+ "cpuProfile": {
+  "sampledMs": 8598,
+  "bySource": [
+   [
+    "(idle)",
+    4755
+   ],
+   [
+    "(program)",
+    2776
+   ],
+   [
+    "(native)",
+    931
+   ],
+   [
+    "src/engine/interaction",
+    80
+   ],
+   [
+    "src/ui/video",
+    34
+   ],
+   [
+    "nm/preact",
+    12
+   ],
+   [
+    "(garbage collector)",
+    4
+   ],
+   [
+    "src/engine/core",
+    3
+   ],
+   [
+    "three.js",
+    2
+   ],
+   [
+    "src/ui/FlexionSlider.tsx",
+    1
+   ]
+  ],
+  "topFunctions": [
+   [
+    "(idle)",
+    4755
+   ],
+   [
+    "(program)",
+    2776
+   ],
+   [
+    "dispatchEvent",
+    253
+   ],
+   [
+    "requestAnimationFrame",
+    206
+   ],
+   [
+    "fire",
+    153
+   ],
+   [
+    "setTimeout",
+    132
+   ],
+   [
+    "clearTimeout",
+    93
+   ],
+   [
+    "step",
+    83
+   ],
+   [
+    "pointerMove (src/engine/interaction/InteractionController.ts:80)",
+    61
+   ],
+   [
+    "t (src/ui/video/FilmShell.tsx:232)",
+    34
+   ],
+   [
+    "n (src/engine/interaction/InteractionController.ts:149)",
+    17
+   ],
+   [
+    "now",
+    10
+   ],
+   [
+    "Se.r.__c.r.__ (nm/preact/hooks/dist/hooks.module.js:1)",
+    8
+   ],
+   [
+    "(garbage collector)",
+    4
+   ],
+   [
+    "ke (nm/preact/hooks/dist/hooks.module.js:1)",
+    3
+   ],
+   [
+    "e (src/engine/core/App.ts:660)",
+    3
+   ],
+   [
+    "F (nm/preact/dist/preact.module.js:1)",
+    1
+   ],
+   [
+    "getBoundingClientRect",
+    1
+   ],
+   [
+    "t (src/engine/interaction/InteractionController.ts:141)",
+    1
+   ],
+   [
+    "yf (nm/three/examples/jsm/controls/OrbitControls.js:1553)",
+    1
+   ],
+   [
+    "(anonymous)",
+    1
+   ],
+   [
+    "Fg (src/ui/FlexionSlider.tsx:19)",
+    1
+   ],
+   [
+    "applyMatrix4 (nm/three/build/three.core.js:5244)",
+    1
+   ],
+   [
+    "setFromCamera (nm/three/build/three.core.js:56627)",
+    1
+   ],
+   [
+    "pointerDown (src/engine/interaction/InteractionController.ts:62)",
+    1
+   ],
+   [
+    "mark",
+    0
+   ]
+  ]
+ },
+ "frames": {
+  "count": 482,
+  "intervalP50": 16.683,
+  "intervalP95": 17.892
+ }
+}

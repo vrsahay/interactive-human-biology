@@ -1,0 +1,3787 @@
+{
+ "schema": 1,
+ "jointId": "elbow_r",
+ "jointName": "Elbow (humeroulnar hinge)",
+ "jointType": "hinge",
+ "side": "right",
+ "coordinateSystem": {
+  "space": "glTF",
+  "up": "+Y",
+  "units": "metres",
+  "note": "converted from Blender Z-up (x, y, z) -> (x, z, -y)"
+ },
+ "pivot": {
+  "node": "elbow_r__pivot",
+  "point": [
+   -0.2213899940252304,
+   1.1033600568771362,
+   -0.03483999893069267
+  ],
+  "flexionAxisWorld": [
+   -0.9741144776344299,
+   0.1975809931755066,
+   -0.10983048379421234
+  ],
+  "trueExtensionForearmDirWorld": [
+   -0.19321219623088837,
+   -0.9799227714538574,
+   -0.04919680580496788
+  ],
+  "flexionTravelDirWorld": [
+   -0.11734575033187866,
+   -0.02670273557305336,
+   0.992732048034668
+  ],
+  "method": "Functional congruence fit (Nelder-Mead) of the flexion axis started from the distal-band sphere fits: minimises articular gap variation of ulnar-notch and radial-head vertices against the humerus over 0-145 deg with a penetration penalty",
+  "report": "qa/reports/elbow_r.pivot_fit.json"
+ },
+ "controller": {
+  "node": "elbow_r__ctrl",
+  "localAxis": "+X",
+  "rotationSource": "node local rotation about +X (radians in glTF)",
+  "drives": [
+   "annular_ligament_radius_r",
+   "capitate_r",
+   "distal_phalanx_hand_1_r",
+   "distal_phalanx_hand_2_r",
+   "distal_phalanx_hand_3_r",
+   "distal_phalanx_hand_4_r",
+   "distal_phalanx_hand_5_r",
+   "hamate_r",
+   "interosseous_membrane_forearm_r",
+   "lunate_r",
+   "metacarpal_1_r",
+   "metacarpal_2_r",
+   "metacarpal_3_r",
+   "metacarpal_4_r",
+   "metacarpal_5_r",
+   "middle_phalanx_hand_2_r",
+   "middle_phalanx_hand_3_r",
+   "middle_phalanx_hand_4_r",
+   "middle_phalanx_hand_5_r",
+   "oblique_cord_r",
+   "pisiform_r",
+   "proximal_phalanx_hand_1_r",
+   "proximal_phalanx_hand_2_r",
+   "proximal_phalanx_hand_3_r",
+   "proximal_phalanx_hand_4_r",
+   "proximal_phalanx_hand_5_r",
+   "quadrate_ligament_r",
+   "radius_r",
+   "scaphoid_r",
+   "trapezium_r",
+   "trapezoid_r",
+   "triquetrum_r",
+   "ulna_r"
+  ]
+ },
+ "dofs": [
+  {
+   "id": "flexion",
+   "axis": "+X",
+   "min": 0,
+   "max": 145,
+   "neutral": 0,
+   "unit": "deg",
+   "rangeStatus": "approximate, pending cited reference"
+  }
+ ],
+ "semantics": {
+  "neutral_definition": "Controller flexion 0 deg = true anatomical elbow extension: humerus and forearm ISB long axes collinear in the plane perpendicular to the fitted flexion axis. The source pose is NOT flexion 0.",
+  "neutral_offset_deg": 13.62510376997268,
+  "neutral_offset_method": "Signed angle about the fitted flexion axis between the ISB humerus long axis (glenohumeral centre sphere fit -> epicondyle midpoint) and the ISB forearm long axis (epicondyle midpoint -> ulnar styloid), measured on the extracted source geometry. Cross-checks: styloid midpoint 14.53 deg, radius shaft 16.93 deg, ulna shaft 25.97 deg (rejected: ulnar diaphysis is angled relative to the forearm long axis), olecranon-fossa contact sweep (0.5 mm contact at -21 deg, 2 mm at -31 deg relative to the source pose). Report: qa/reports/elbow_r.neutral_offset.json",
+  "neutral_offset_location": "Applied at rig level: elbow_r__pivot orientation (+Y = forearm direction at true extension); driven children's parent-inverse matrices encode the source pose. Anatomical mesh data is unchanged.",
+  "source_pose_flexion_deg": 13.62510376997268,
+  "source_pose_initial_estimate_deg": 25.97,
+  "source_pose_reference": "Human_Body_Master.blend scene '01 Complete anatomy' (sha256 f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0). The source anatomy was supplied in a flexed pose; it is reproduced exactly at controller flexion = source_pose_flexion_deg.",
+  "user_facing_dofs": [
+   "flexion"
+  ],
+  "range_status": "approximate, pending cited reference",
+  "range_reference_status": "No external anatomical reference has been cited. A cited anatomical source for the 0-145 deg flexion range is REQUIRED before release. Current evidence is geometric only: maximum bone overlap 1.724 mm at 145 deg (coronoid process / coronoid fossa), qa/reports/elbow_r.rig_validation.final.json.",
+  "validation_report": "qa/reports/elbow_r.rig_validation.final.json"
+ },
+ "structures": [
+  {
+   "structureId": "humerus_r",
+   "label": "Humerus",
+   "role": "bone_fixed",
+   "tier": "core",
+   "side": "right",
+   "nodeName": "elbow_r__bone__humerus",
+   "meshName": "elbow_r__bone__humerus__mesh",
+   "triangles": 4280,
+   "attachTo": null,
+   "motionBehavior": "stationary",
+   "group": "fixed_bone",
+   "neutralWorldBBox": {
+    "min": [
+     -0.24883277714252472,
+     1.0870224237442017,
+     -0.053626202046871185
+    ],
+    "max": [
+     -0.1446065455675125,
+     1.4046043157577515,
+     -0.0012591537088155746
+    ]
+   },
+   "neutralWorldMatrix": [
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1
+   ],
+   "materials": [
+    "PBR | bone"
+   ],
+   "source": {
+    "object": "Humerus | Right",
+    "mesh": "Humerus.002",
+    "fileSha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0"
+   }
+  },
+  {
+   "structureId": "radius_r",
+   "label": "Radius",
+   "role": "bone_moving",
+   "tier": "core",
+   "side": "right",
+   "nodeName": "elbow_r__bone__radius",
+   "meshName": "elbow_r__bone__radius__mesh",
+   "triangles": 784,
+   "attachTo": null,
+   "motionBehavior": "moves_with_forearm",
+   "group": "forearm_bones",
+   "neutralWorldBBox": {
+    "min": [
+     -0.28324388795029376,
+     0.8496816007752732,
+     -0.0563720620555222
+    ],
+    "max": [
+     -0.22647127937007283,
+     1.0912635904700707,
+     -0.02283265932776335
+    ]
+   },
+   "neutralWorldMatrix": [
+    0.9985619783401489,
+    0.020456045866012573,
+    0.049554578959941864,
+    0,
+    -0.03128891438245773,
+    0.9729565382003784,
+    0.2288595288991928,
+    0,
+    -0.043532878160476685,
+    -0.23008091747760773,
+    0.9721973538398743,
+    0,
+    0.03268791735172272,
+    0.026351451873779297,
+    -0.24251224100589752,
+    1
+   ],
+   "materials": [
+    "PBR | bone"
+   ],
+   "source": {
+    "object": "Radius | Right",
+    "mesh": "Radius.002",
+    "fileSha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0"
+   }
+  },
+  {
+   "structureId": "ulna_r",
+   "label": "Ulna",
+   "role": "bone_moving",
+   "tier": "core",
+   "side": "right",
+   "nodeName": "elbow_r__bone__ulna",
+   "meshName": "elbow_r__bone__ulna__mesh",
+   "triangles": 904,
+   "attachTo": null,
+   "motionBehavior": "moves_with_forearm",
+   "group": "forearm_bones",
+   "neutralWorldBBox": {
+    "min": [
+     -0.25039411727802097,
+     0.8511097676203252,
+     -0.06210590553318829
+    ],
+    "max": [
+     -0.20236049538086165,
+     1.1139075002747356,
+     -0.02550207594418563
+    ]
+   },
+   "neutralWorldMatrix": [
+    0.9985619783401489,
+    0.020456045866012573,
+    0.049554578959941864,
+    0,
+    -0.03128891438245773,
+    0.9729565382003784,
+    0.2288595288991928,
+    0,
+    -0.043532878160476685,
+    -0.23008091747760773,
+    0.9721973538398743,
+    0,
+    0.03268791735172272,
+    0.026351451873779297,
+    -0.24251224100589752,
+    1
+   ],
+   "materials": [
+    "PBR | bone"
+   ],
+   "source": {
+    "object": "Ulna | Right",
+    "mesh": "Ulna.002",
+    "fileSha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0"
+   }
+  },
+  {
+   "structureId": "scaphoid_r",
+   "label": "Scaphoid",
+   "role": "follow",
+   "tier": "core",
+   "side": "right",
+   "nodeName": "elbow_r__follow__scaphoid",
+   "meshName": "elbow_r__follow__scaphoid__mesh",
+   "triangles": 390,
+   "attachTo": null,
+   "motionBehavior": "moves_with_forearm",
+   "group": "hand",
+   "neutralWorldBBox": {
+    "min": [
+     -0.276749616943393,
+     0.8395619611230836,
+     -0.05043140320005063
+    ],
+    "max": [
+     -0.25188575498639915,
+     0.8562482347092687,
+     -0.035371712513623255
+    ]
+   },
+   "neutralWorldMatrix": [
+    0.9985619783401489,
+    0.020456045866012573,
+    0.049554578959941864,
+    0,
+    -0.03128891438245773,
+    0.9729565382003784,
+    0.2288595288991928,
+    0,
+    -0.043532878160476685,
+    -0.23008091747760773,
+    0.9721973538398743,
+    0,
+    0.03268791735172272,
+    0.026351451873779297,
+    -0.24251224100589752,
+    1
+   ],
+   "materials": [
+    "PBR | bone"
+   ],
+   "source": {
+    "object": "Scaphoid bone | Right",
+    "mesh": "Scaphoid bone.001",
+    "fileSha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0"
+   }
+  },
+  {
+   "structureId": "lunate_r",
+   "label": "Lunate",
+   "role": "follow",
+   "tier": "core",
+   "side": "right",
+   "nodeName": "elbow_r__follow__lunate",
+   "meshName": "elbow_r__follow__lunate__mesh",
+   "triangles": 2088,
+   "attachTo": null,
+   "motionBehavior": "moves_with_forearm",
+   "group": "hand",
+   "neutralWorldBBox": {
+    "min": [
+     -0.2556988543384572,
+     0.8421760905053485,
+     -0.05134382051206676
+    ],
+    "max": [
+     -0.23849056063789437,
+     0.8541864306277782,
+     -0.03383305476668008
+    ]
+   },
+   "neutralWorldMatrix": [
+    0.9985619783401489,
+    0.020456045866012573,
+    0.049554578959941864,
+    0,
+    -0.03128891438245773,
+    0.9729565382003784,
+    0.2288595288991928,
+    0,
+    -0.043532878160476685,
+    -0.23008091747760773,
+    0.9721973538398743,
+    0,
+    0.03268791735172272,
+    0.026351451873779297,
+    -0.24251224100589752,
+    1
+   ],
+   "materials": [
+    "PBR | bone"
+   ],
+   "source": {
+    "object": "Lunate bone | Right",
+    "mesh": "Mesh.130",
+    "fileSha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0"
+   }
+  },
+  {
+   "structureId": "triquetrum_r",
+   "label": "Triquetrum",
+   "role": "follow",
+   "tier": "core",
+   "side": "right",
+   "nodeName": "elbow_r__follow__triquetrum",
+   "meshName": "elbow_r__follow__triquetrum__mesh",
+   "triangles": 176,
+   "attachTo": null,
+   "motionBehavior": "moves_with_forearm",
+   "group": "hand",
+   "neutralWorldBBox": {
+    "min": [
+     -0.24493778853974912,
+     0.8322161600417415,
+     -0.048615576138167194
+    ],
+    "max": [
+     -0.23408350405659972,
+     0.8467892045268948,
+     -0.03304115343645486
+    ]
+   },
+   "neutralWorldMatrix": [
+    0.9985619783401489,
+    0.020456045866012573,
+    0.049554578959941864,
+    0,
+    -0.03128891438245773,
+    0.9729565382003784,
+    0.2288595288991928,
+    0,
+    -0.043532878160476685,
+    -0.23008091747760773,
+    0.9721973538398743,
+    0,
+    0.03268791735172272,
+    0.026351451873779297,
+    -0.24251224100589752,
+    1
+   ],
+   "materials": [
+    "PBR | bone"
+   ],
+   "source": {
+    "object": "Triquetrum bone | Right",
+    "mesh": "Triquetrum bone.002",
+    "fileSha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0"
+   }
+  },
+  {
+   "structureId": "pisiform_r",
+   "label": "Pisiform",
+   "role": "follow",
+   "tier": "core",
+   "side": "right",
+   "nodeName": "elbow_r__follow__pisiform",
+   "meshName": "elbow_r__follow__pisiform__mesh",
+   "triangles": 1668,
+   "attachTo": null,
+   "motionBehavior": "moves_with_forearm",
+   "group": "hand",
+   "neutralWorldBBox": {
+    "min": [
+     -0.2429829229842536,
+     0.8310676660462799,
+     -0.03426510519808501
+    ],
+    "max": [
+     -0.23431124531341518,
+     0.8429541044158414,
+     -0.024795939612731632
+    ]
+   },
+   "neutralWorldMatrix": [
+    0.9985619783401489,
+    0.020456045866012573,
+    0.049554578959941864,
+    0,
+    -0.03128891438245773,
+    0.9729565382003784,
+    0.2288595288991928,
+    0,
+    -0.043532878160476685,
+    -0.23008091747760773,
+    0.9721973538398743,
+    0,
+    0.03268791735172272,
+    0.026351451873779297,
+    -0.24251224100589752,
+    1
+   ],
+   "materials": [
+    "PBR | bone"
+   ],
+   "source": {
+    "object": "Pisiform bone | Right",
+    "mesh": "Mesh.157",
+    "fileSha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0"
+   }
+  },
+  {
+   "structureId": "trapezium_r",
+   "label": "Trapezium",
+   "role": "follow",
+   "tier": "core",
+   "side": "right",
+   "nodeName": "elbow_r__follow__trapezium",
+   "meshName": "elbow_r__follow__trapezium__mesh",
+   "triangles": 500,
+   "attachTo": null,
+   "motionBehavior": "moves_with_forearm",
+   "group": "hand",
+   "neutralWorldBBox": {
+    "min": [
+     -0.2857920688086728,
+     0.8276387658168078,
+     -0.04821012747435216
+    ],
+    "max": [
+     -0.2679626159653996,
+     0.8472251581684311,
+     -0.02873510304058602
+    ]
+   },
+   "neutralWorldMatrix": [
+    0.9985619783401489,
+    0.020456045866012573,
+    0.049554578959941864,
+    0,
+    -0.03128891438245773,
+    0.9729565382003784,
+    0.2288595288991928,
+    0,
+    -0.043532878160476685,
+    -0.23008091747760773,
+    0.9721973538398743,
+    0,
+    0.03268791735172272,
+    0.026351451873779297,
+    -0.24251224100589752,
+    1
+   ],
+   "materials": [
+    "PBR | bone"
+   ],
+   "source": {
+    "object": "Trapezium bone | Right",
+    "mesh": "Trapezium bone.002",
+    "fileSha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0"
+   }
+  },
+  {
+   "structureId": "trapezoid_r",
+   "label": "Trapezoid",
+   "role": "follow",
+   "tier": "core",
+   "side": "right",
+   "nodeName": "elbow_r__follow__trapezoid",
+   "meshName": "elbow_r__follow__trapezoid__mesh",
+   "triangles": 364,
+   "attachTo": null,
+   "motionBehavior": "moves_with_forearm",
+   "group": "hand",
+   "neutralWorldBBox": {
+    "min": [
+     -0.2762789394888995,
+     0.8273987136623213,
+     -0.05317501756549414
+    ],
+    "max": [
+     -0.26497904042965087,
+     0.8390959111796523,
+     -0.03630826973881118
+    ]
+   },
+   "neutralWorldMatrix": [
+    0.9985619783401489,
+    0.020456045866012573,
+    0.049554578959941864,
+    0,
+    -0.03128891438245773,
+    0.9729565382003784,
+    0.2288595288991928,
+    0,
+    -0.043532878160476685,
+    -0.23008091747760773,
+    0.9721973538398743,
+    0,
+    0.03268791735172272,
+    0.026351451873779297,
+    -0.24251224100589752,
+    1
+   ],
+   "materials": [
+    "PBR | bone"
+   ],
+   "source": {
+    "object": "Trapezoid bone | Right",
+    "mesh": "Trapezoid bone.002",
+    "fileSha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0"
+   }
+  },
+  {
+   "structureId": "capitate_r",
+   "label": "Capitate",
+   "role": "follow",
+   "tier": "core",
+   "side": "right",
+   "nodeName": "elbow_r__follow__capitate",
+   "meshName": "elbow_r__follow__capitate__mesh",
+   "triangles": 472,
+   "attachTo": null,
+   "motionBehavior": "moves_with_forearm",
+   "group": "hand",
+   "neutralWorldBBox": {
+    "min": [
+     -0.2672082325868089,
+     0.8270240959896749,
+     -0.05544103589317334
+    ],
+    "max": [
+     -0.25091562709821413,
+     0.8486956360095101,
+     -0.03686106037890402
+    ]
+   },
+   "neutralWorldMatrix": [
+    0.9985619783401489,
+    0.020456045866012573,
+    0.049554578959941864,
+    0,
+    -0.03128891438245773,
+    0.9729565382003784,
+    0.2288595288991928,
+    0,
+    -0.043532878160476685,
+    -0.23008091747760773,
+    0.9721973538398743,
+    0,
+    0.03268791735172272,
+    0.026351451873779297,
+    -0.24251224100589752,
+    1
+   ],
+   "materials": [
+    "PBR | bone"
+   ],
+   "source": {
+    "object": "Capitate bone | Right",
+    "mesh": "Capitate bone.002",
+    "fileSha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0"
+   }
+  },
+  {
+   "structureId": "hamate_r",
+   "label": "Hamate",
+   "role": "follow",
+   "tier": "core",
+   "side": "right",
+   "nodeName": "elbow_r__follow__hamate",
+   "meshName": "elbow_r__follow__hamate__mesh",
+   "triangles": 536,
+   "attachTo": null,
+   "motionBehavior": "moves_with_forearm",
+   "group": "hand",
+   "neutralWorldBBox": {
+    "min": [
+     -0.25429216356695916,
+     0.8260840163137946,
+     -0.052908732948985016
+    ],
+    "max": [
+     -0.23826370382307205,
+     0.8451841871650159,
+     -0.03010389564756233
+    ]
+   },
+   "neutralWorldMatrix": [
+    0.9985619783401489,
+    0.020456045866012573,
+    0.049554578959941864,
+    0,
+    -0.03128891438245773,
+    0.9729565382003784,
+    0.2288595288991928,
+    0,
+    -0.043532878160476685,
+    -0.23008091747760773,
+    0.9721973538398743,
+    0,
+    0.03268791735172272,
+    0.026351451873779297,
+    -0.24251224100589752,
+    1
+   ],
+   "materials": [
+    "PBR | bone"
+   ],
+   "source": {
+    "object": "Hamate bone | Right",
+    "mesh": "Hamate bone.002",
+    "fileSha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0"
+   }
+  },
+  {
+   "structureId": "metacarpal_1_r",
+   "label": "First metacarpal",
+   "role": "follow",
+   "tier": "core",
+   "side": "right",
+   "nodeName": "elbow_r__follow__metacarpal_1",
+   "meshName": "elbow_r__follow__metacarpal_1__mesh",
+   "triangles": 682,
+   "attachTo": null,
+   "motionBehavior": "moves_with_forearm",
+   "group": "hand",
+   "neutralWorldBBox": {
+    "min": [
+     -0.3143784575807109,
+     0.797390025519399,
+     -0.042451083104202536
+    ],
+    "max": [
+     -0.2757400599944597,
+     0.8385262530272786,
+     -0.01843488982831709
+    ]
+   },
+   "neutralWorldMatrix": [
+    0.9985619783401489,
+    0.020456045866012573,
+    0.049554578959941864,
+    0,
+    -0.03128891438245773,
+    0.9729565382003784,
+    0.2288595288991928,
+    0,
+    -0.043532878160476685,
+    -0.23008091747760773,
+    0.9721973538398743,
+    0,
+    0.03268791735172272,
+    0.026351451873779297,
+    -0.24251224100589752,
+    1
+   ],
+   "materials": [
+    "PBR | bone"
+   ],
+   "source": {
+    "object": "First metacarpal bone | Right",
+    "mesh": "First metacarpal bone.002",
+    "fileSha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0"
+   }
+  },
+  {
+   "structureId": "metacarpal_2_r",
+   "label": "Second metacarpal",
+   "role": "follow",
+   "tier": "core",
+   "side": "right",
+   "nodeName": "elbow_r__follow__metacarpal_2",
+   "meshName": "elbow_r__follow__metacarpal_2__mesh",
+   "triangles": 764,
+   "attachTo": null,
+   "motionBehavior": "moves_with_forearm",
+   "group": "hand",
+   "neutralWorldBBox": {
+    "min": [
+     -0.2951479345393184,
+     0.757877148729873,
+     -0.05299782021379573
+    ],
+    "max": [
+     -0.264418322062983,
+     0.8299280302833697,
+     -0.034750069835459474
+    ]
+   },
+   "neutralWorldMatrix": [
+    0.9985619783401489,
+    0.020456045866012573,
+    0.049554578959941864,
+    0,
+    -0.03128891438245773,
+    0.9729565382003784,
+    0.2288595288991928,
+    0,
+    -0.043532878160476685,
+    -0.23008091747760773,
+    0.9721973538398743,
+    0,
+    0.03268791735172272,
+    0.026351451873779297,
+    -0.24251224100589752,
+    1
+   ],
+   "materials": [
+    "PBR | bone"
+   ],
+   "source": {
+    "object": "Second metacarpal bone | Right",
+    "mesh": "Second metacarpal bone.002",
+    "fileSha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0"
+   }
+  },
+  {
+   "structureId": "metacarpal_3_r",
+   "label": "Third metacarpal",
+   "role": "follow",
+   "tier": "core",
+   "side": "right",
+   "nodeName": "elbow_r__follow__metacarpal_3",
+   "meshName": "elbow_r__follow__metacarpal_3__mesh",
+   "triangles": 708,
+   "attachTo": null,
+   "motionBehavior": "moves_with_forearm",
+   "group": "hand",
+   "neutralWorldBBox": {
+    "min": [
+     -0.2743374834029979,
+     0.7599388164548438,
+     -0.05457482974617128
+    ],
+    "max": [
+     -0.2540549016771952,
+     0.8304919999448893,
+     -0.03686502416680426
+    ]
+   },
+   "neutralWorldMatrix": [
+    0.9985619783401489,
+    0.020456045866012573,
+    0.049554578959941864,
+    0,
+    -0.03128891438245773,
+    0.9729565382003784,
+    0.2288595288991928,
+    0,
+    -0.043532878160476685,
+    -0.23008091747760773,
+    0.9721973538398743,
+    0,
+    0.03268791735172272,
+    0.026351451873779297,
+    -0.24251224100589752,
+    1
+   ],
+   "materials": [
+    "PBR | bone"
+   ],
+   "source": {
+    "object": "Third metacarpal bone | Right",
+    "mesh": "Third metacarpal bone.002",
+    "fileSha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0"
+   }
+  },
+  {
+   "structureId": "metacarpal_4_r",
+   "label": "Fourth metacarpal",
+   "role": "follow",
+   "tier": "core",
+   "side": "right",
+   "nodeName": "elbow_r__follow__metacarpal_4",
+   "meshName": "elbow_r__follow__metacarpal_4__mesh",
+   "triangles": 642,
+   "attachTo": null,
+   "motionBehavior": "moves_with_forearm",
+   "group": "hand",
+   "neutralWorldBBox": {
+    "min": [
+     -0.256072668331729,
+     0.7652057751547623,
+     -0.05198132365507113
+    ],
+    "max": [
+     -0.24220083452945418,
+     0.8281133742833668,
+     -0.03580865280160217
+    ]
+   },
+   "neutralWorldMatrix": [
+    0.9985619783401489,
+    0.020456045866012573,
+    0.049554578959941864,
+    0,
+    -0.03128891438245773,
+    0.9729565382003784,
+    0.2288595288991928,
+    0,
+    -0.043532878160476685,
+    -0.23008091747760773,
+    0.9721973538398743,
+    0,
+    0.03268791735172272,
+    0.026351451873779297,
+    -0.24251224100589752,
+    1
+   ],
+   "materials": [
+    "PBR | bone"
+   ],
+   "source": {
+    "object": "Fourth metacarpal bone | Right",
+    "mesh": "Fourth metacarpal bone.002",
+    "fileSha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0"
+   }
+  },
+  {
+   "structureId": "metacarpal_5_r",
+   "label": "Fifth metacarpal",
+   "role": "follow",
+   "tier": "core",
+   "side": "right",
+   "nodeName": "elbow_r__follow__metacarpal_5",
+   "meshName": "elbow_r__follow__metacarpal_5__mesh",
+   "triangles": 512,
+   "attachTo": null,
+   "motionBehavior": "moves_with_forearm",
+   "group": "hand",
+   "neutralWorldBBox": {
+    "min": [
+     -0.2476791343742657,
+     0.7715569403816661,
+     -0.04642659504659685
+    ],
+    "max": [
+     -0.22587976919701802,
+     0.8300537083101236,
+     -0.030925090239363406
+    ]
+   },
+   "neutralWorldMatrix": [
+    0.9985619783401489,
+    0.020456045866012573,
+    0.049554578959941864,
+    0,
+    -0.03128891438245773,
+    0.9729565382003784,
+    0.2288595288991928,
+    0,
+    -0.043532878160476685,
+    -0.23008091747760773,
+    0.9721973538398743,
+    0,
+    0.03268791735172272,
+    0.026351451873779297,
+    -0.24251224100589752,
+    1
+   ],
+   "materials": [
+    "PBR | bone"
+   ],
+   "source": {
+    "object": "Fifth metacarpal bone | Right",
+    "mesh": "Fifth metacarpal bone.002",
+    "fileSha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0"
+   }
+  },
+  {
+   "structureId": "proximal_phalanx_hand_1_r",
+   "label": "Proximal phalanx (thumb)",
+   "role": "follow",
+   "tier": "core",
+   "side": "right",
+   "nodeName": "elbow_r__follow__proximal_phalanx_hand_1",
+   "meshName": "elbow_r__follow__proximal_phalanx_hand_1__mesh",
+   "triangles": 328,
+   "attachTo": null,
+   "motionBehavior": "moves_with_forearm",
+   "group": "hand",
+   "neutralWorldBBox": {
+    "min": [
+     -0.32346629182034803,
+     0.7690160848466627,
+     -0.03178945274709433
+    ],
+    "max": [
+     -0.30249655612186943,
+     0.802776073240745,
+     -0.01384276125567152
+    ]
+   },
+   "neutralWorldMatrix": [
+    0.9985619783401489,
+    0.020456045866012573,
+    0.049554578959941864,
+    0,
+    -0.03128891438245773,
+    0.9729565382003784,
+    0.2288595288991928,
+    0,
+    -0.043532878160476685,
+    -0.23008091747760773,
+    0.9721973538398743,
+    0,
+    0.03268791735172272,
+    0.026351451873779297,
+    -0.24251224100589752,
+    1
+   ],
+   "materials": [
+    "PBR | bone"
+   ],
+   "source": {
+    "object": "Proximal phalanx of first finger of hand | Right",
+    "mesh": "Proximal phalanx of first finger of hand.002",
+    "fileSha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0"
+   }
+  },
+  {
+   "structureId": "proximal_phalanx_hand_2_r",
+   "label": "Proximal phalanx (index)",
+   "role": "follow",
+   "tier": "core",
+   "side": "right",
+   "nodeName": "elbow_r__follow__proximal_phalanx_hand_2",
+   "meshName": "elbow_r__follow__proximal_phalanx_hand_2__mesh",
+   "triangles": 414,
+   "attachTo": null,
+   "motionBehavior": "moves_with_forearm",
+   "group": "hand",
+   "neutralWorldBBox": {
+    "min": [
+     -0.30508634763281717,
+     0.7202611383995853,
+     -0.04958480803108034
+    ],
+    "max": [
+     -0.2825585030117095,
+     0.7615742049797695,
+     -0.0336131247597391
+    ]
+   },
+   "neutralWorldMatrix": [
+    0.9985619783401489,
+    0.020456045866012573,
+    0.049554578959941864,
+    0,
+    -0.03128891438245773,
+    0.9729565382003784,
+    0.2288595288991928,
+    0,
+    -0.043532878160476685,
+    -0.23008091747760773,
+    0.9721973538398743,
+    0,
+    0.03268791735172272,
+    0.026351451873779297,
+    -0.24251224100589752,
+    1
+   ],
+   "materials": [
+    "PBR | bone"
+   ],
+   "source": {
+    "object": "Proximal phalanx of second finger of hand | Right",
+    "mesh": "Proximal phalanx of second finger of hand.002",
+    "fileSha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0"
+   }
+  },
+  {
+   "structureId": "proximal_phalanx_hand_3_r",
+   "label": "Proximal phalanx (middle)",
+   "role": "follow",
+   "tier": "core",
+   "side": "right",
+   "nodeName": "elbow_r__follow__proximal_phalanx_hand_3",
+   "meshName": "elbow_r__follow__proximal_phalanx_hand_3__mesh",
+   "triangles": 440,
+   "attachTo": null,
+   "motionBehavior": "moves_with_forearm",
+   "group": "hand",
+   "neutralWorldBBox": {
+    "min": [
+     -0.2792389269838673,
+     0.7177746343983119,
+     -0.04729836388402808
+    ],
+    "max": [
+     -0.2603879039604512,
+     0.7630842361312606,
+     -0.02514027700433208
+    ]
+   },
+   "neutralWorldMatrix": [
+    0.9985619783401489,
+    0.020456045866012573,
+    0.049554578959941864,
+    0,
+    -0.03128891438245773,
+    0.9729565382003784,
+    0.2288595288991928,
+    0,
+    -0.043532878160476685,
+    -0.23008091747760773,
+    0.9721973538398743,
+    0,
+    0.03268791735172272,
+    0.026351451873779297,
+    -0.24251224100589752,
+    1
+   ],
+   "materials": [
+    "PBR | bone"
+   ],
+   "source": {
+    "object": "Proximal phalanx of third finger of hand | Right",
+    "mesh": "Proximal phalanx of third finger of hand.002",
+    "fileSha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0"
+   }
+  },
+  {
+   "structureId": "proximal_phalanx_hand_4_r",
+   "label": "Proximal phalanx (ring)",
+   "role": "follow",
+   "tier": "core",
+   "side": "right",
+   "nodeName": "elbow_r__follow__proximal_phalanx_hand_4",
+   "meshName": "elbow_r__follow__proximal_phalanx_hand_4__mesh",
+   "triangles": 368,
+   "attachTo": null,
+   "motionBehavior": "moves_with_forearm",
+   "group": "hand",
+   "neutralWorldBBox": {
+    "min": [
+     -0.2551253703399766,
+     0.7244125996688155,
+     -0.044582807619739206
+    ],
+    "max": [
+     -0.24106140941325604,
+     0.7673314670769915,
+     -0.024988845882572663
+    ]
+   },
+   "neutralWorldMatrix": [
+    0.9985619783401489,
+    0.020456045866012573,
+    0.049554578959941864,
+    0,
+    -0.03128891438245773,
+    0.9729565382003784,
+    0.2288595288991928,
+    0,
+    -0.043532878160476685,
+    -0.23008091747760773,
+    0.9721973538398743,
+    0,
+    0.03268791735172272,
+    0.026351451873779297,
+    -0.24251224100589752,
+    1
+   ],
+   "materials": [
+    "PBR | bone"
+   ],
+   "source": {
+    "object": "Proximal phalanx of fourth finger of hand | Right",
+    "mesh": "Proximal phalanx of fourth finger of hand.002",
+    "fileSha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0"
+   }
+  },
+  {
+   "structureId": "proximal_phalanx_hand_5_r",
+   "label": "Proximal phalanx (little)",
+   "role": "follow",
+   "tier": "core",
+   "side": "right",
+   "nodeName": "elbow_r__follow__proximal_phalanx_hand_5",
+   "meshName": "elbow_r__follow__proximal_phalanx_hand_5__mesh",
+   "triangles": 560,
+   "attachTo": null,
+   "motionBehavior": "moves_with_forearm",
+   "group": "hand",
+   "neutralWorldBBox": {
+    "min": [
+     -0.23751642492815572,
+     0.7386679133599594,
+     -0.03907813288088324
+    ],
+    "max": [
+     -0.22250884822565065,
+     0.774390331513874,
+     -0.023657660077741727
+    ]
+   },
+   "neutralWorldMatrix": [
+    0.9985619783401489,
+    0.020456045866012573,
+    0.049554578959941864,
+    0,
+    -0.03128891438245773,
+    0.9729565382003784,
+    0.2288595288991928,
+    0,
+    -0.043532878160476685,
+    -0.23008091747760773,
+    0.9721973538398743,
+    0,
+    0.03268791735172272,
+    0.026351451873779297,
+    -0.24251224100589752,
+    1
+   ],
+   "materials": [
+    "PBR | bone"
+   ],
+   "source": {
+    "object": "Proximal phalanx of fifth finger of hand | Right",
+    "mesh": "Proximal phalanx of fifth finger of hand.002",
+    "fileSha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0"
+   }
+  },
+  {
+   "structureId": "middle_phalanx_hand_2_r",
+   "label": "Middle phalanx (index)",
+   "role": "follow",
+   "tier": "core",
+   "side": "right",
+   "nodeName": "elbow_r__follow__middle_phalanx_hand_2",
+   "meshName": "elbow_r__follow__middle_phalanx_hand_2__mesh",
+   "triangles": 314,
+   "attachTo": null,
+   "motionBehavior": "moves_with_forearm",
+   "group": "hand",
+   "neutralWorldBBox": {
+    "min": [
+     -0.3116505921358037,
+     0.7011081512588562,
+     -0.04040208924499322
+    ],
+    "max": [
+     -0.29636423634576026,
+     0.7252593436220185,
+     -0.022350175070347866
+    ]
+   },
+   "neutralWorldMatrix": [
+    0.9985619783401489,
+    0.020456045866012573,
+    0.049554578959941864,
+    0,
+    -0.03128891438245773,
+    0.9729565382003784,
+    0.2288595288991928,
+    0,
+    -0.043532878160476685,
+    -0.23008091747760773,
+    0.9721973538398743,
+    0,
+    0.03268791735172272,
+    0.026351451873779297,
+    -0.24251224100589752,
+    1
+   ],
+   "materials": [
+    "PBR | bone"
+   ],
+   "source": {
+    "object": "Middle phalanx of second finger of hand | Right",
+    "mesh": "Middle phalanx of second finger of hand.002",
+    "fileSha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0"
+   }
+  },
+  {
+   "structureId": "middle_phalanx_hand_3_r",
+   "label": "Middle phalanx (middle)",
+   "role": "follow",
+   "tier": "core",
+   "side": "right",
+   "nodeName": "elbow_r__follow__middle_phalanx_hand_3",
+   "meshName": "elbow_r__follow__middle_phalanx_hand_3__mesh",
+   "triangles": 360,
+   "attachTo": null,
+   "motionBehavior": "moves_with_forearm",
+   "group": "hand",
+   "neutralWorldBBox": {
+    "min": [
+     -0.2821499438559738,
+     0.6913545052088318,
+     -0.03303251076086777
+    ],
+    "max": [
+     -0.267807289095783,
+     0.7202437209625073,
+     -0.014068882678750283
+    ]
+   },
+   "neutralWorldMatrix": [
+    0.9985619783401489,
+    0.020456045866012573,
+    0.049554578959941864,
+    0,
+    -0.03128891438245773,
+    0.9729565382003784,
+    0.2288595288991928,
+    0,
+    -0.043532878160476685,
+    -0.23008091747760773,
+    0.9721973538398743,
+    0,
+    0.03268791735172272,
+    0.026351451873779297,
+    -0.24251224100589752,
+    1
+   ],
+   "materials": [
+    "PBR | bone"
+   ],
+   "source": {
+    "object": "Middle phalanx of third finger of hand | Right",
+    "mesh": "Middle phalanx of third finger of hand.002",
+    "fileSha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0"
+   }
+  },
+  {
+   "structureId": "middle_phalanx_hand_4_r",
+   "label": "Middle phalanx (ring)",
+   "role": "follow",
+   "tier": "core",
+   "side": "right",
+   "nodeName": "elbow_r__follow__middle_phalanx_hand_4",
+   "meshName": "elbow_r__follow__middle_phalanx_hand_4__mesh",
+   "triangles": 446,
+   "attachTo": null,
+   "motionBehavior": "moves_with_forearm",
+   "group": "hand",
+   "neutralWorldBBox": {
+    "min": [
+     -0.2557687951672325,
+     0.6994480794095451,
+     -0.03190099664409596
+    ],
+    "max": [
+     -0.24325374813525258,
+     0.7271759707313614,
+     -0.011040620174387339
+    ]
+   },
+   "neutralWorldMatrix": [
+    0.9985619783401489,
+    0.020456045866012573,
+    0.049554578959941864,
+    0,
+    -0.03128891438245773,
+    0.9729565382003784,
+    0.2288595288991928,
+    0,
+    -0.043532878160476685,
+    -0.23008091747760773,
+    0.9721973538398743,
+    0,
+    0.03268791735172272,
+    0.026351451873779297,
+    -0.24251224100589752,
+    1
+   ],
+   "materials": [
+    "PBR | bone"
+   ],
+   "source": {
+    "object": "Middle phalanx of fourth finger of hand | Right",
+    "mesh": "Middle phalanx of fourth finger of hand.002",
+    "fileSha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0"
+   }
+  },
+  {
+   "structureId": "middle_phalanx_hand_5_r",
+   "label": "Middle phalanx (little)",
+   "role": "follow",
+   "tier": "core",
+   "side": "right",
+   "nodeName": "elbow_r__follow__middle_phalanx_hand_5",
+   "meshName": "elbow_r__follow__middle_phalanx_hand_5__mesh",
+   "triangles": 292,
+   "attachTo": null,
+   "motionBehavior": "moves_with_forearm",
+   "group": "hand",
+   "neutralWorldBBox": {
+    "min": [
+     -0.23114256672803402,
+     0.7198312456583289,
+     -0.028999719994541318
+    ],
+    "max": [
+     -0.21926425179822862,
+     0.7419355898627772,
+     -0.014951473183521524
+    ]
+   },
+   "neutralWorldMatrix": [
+    0.9985619783401489,
+    0.020456045866012573,
+    0.049554578959941864,
+    0,
+    -0.03128891438245773,
+    0.9729565382003784,
+    0.2288595288991928,
+    0,
+    -0.043532878160476685,
+    -0.23008091747760773,
+    0.9721973538398743,
+    0,
+    0.03268791735172272,
+    0.026351451873779297,
+    -0.24251224100589752,
+    1
+   ],
+   "materials": [
+    "PBR | bone"
+   ],
+   "source": {
+    "object": "Middle phalanx of fifth finger of hand | Right",
+    "mesh": "Middle phalanx of fifth finger of hand.002",
+    "fileSha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0"
+   }
+  },
+  {
+   "structureId": "distal_phalanx_hand_1_r",
+   "label": "Distal phalanx (thumb)",
+   "role": "follow",
+   "tier": "core",
+   "side": "right",
+   "nodeName": "elbow_r__follow__distal_phalanx_hand_1",
+   "meshName": "elbow_r__follow__distal_phalanx_hand_1__mesh",
+   "triangles": 222,
+   "attachTo": null,
+   "motionBehavior": "moves_with_forearm",
+   "group": "hand",
+   "neutralWorldBBox": {
+    "min": [
+     -0.32871705219398595,
+     0.7493634620874724,
+     -0.02366442036483485
+    ],
+    "max": [
+     -0.3145588616354169,
+     0.774110107848655,
+     -0.010161853281744015
+    ]
+   },
+   "neutralWorldMatrix": [
+    0.9985619783401489,
+    0.020456045866012573,
+    0.049554578959941864,
+    0,
+    -0.03128891438245773,
+    0.9729565382003784,
+    0.2288595288991928,
+    0,
+    -0.043532878160476685,
+    -0.23008091747760773,
+    0.9721973538398743,
+    0,
+    0.03268791735172272,
+    0.026351451873779297,
+    -0.24251224100589752,
+    1
+   ],
+   "materials": [
+    "PBR | bone"
+   ],
+   "source": {
+    "object": "Distal phalanx of first finger of hand | Right",
+    "mesh": "Distal phalanx of first finger of hand.002",
+    "fileSha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0"
+   }
+  },
+  {
+   "structureId": "distal_phalanx_hand_2_r",
+   "label": "Distal phalanx (index)",
+   "role": "follow",
+   "tier": "core",
+   "side": "right",
+   "nodeName": "elbow_r__follow__distal_phalanx_hand_2",
+   "meshName": "elbow_r__follow__distal_phalanx_hand_2__mesh",
+   "triangles": 250,
+   "attachTo": null,
+   "motionBehavior": "moves_with_forearm",
+   "group": "hand",
+   "neutralWorldBBox": {
+    "min": [
+     -0.3143966469843673,
+     0.688965488205126,
+     -0.02571341222280088
+    ],
+    "max": [
+     -0.30371422334092313,
+     0.7056295889666131,
+     -0.010430184265985298
+    ]
+   },
+   "neutralWorldMatrix": [
+    0.9985619783401489,
+    0.020456045866012573,
+    0.049554578959941864,
+    0,
+    -0.03128891438245773,
+    0.9729565382003784,
+    0.2288595288991928,
+    0,
+    -0.043532878160476685,
+    -0.23008091747760773,
+    0.9721973538398743,
+    0,
+    0.03268791735172272,
+    0.026351451873779297,
+    -0.24251224100589752,
+    1
+   ],
+   "materials": [
+    "PBR | bone"
+   ],
+   "source": {
+    "object": "Distal phalanx of second finger of hand | Right",
+    "mesh": "Distal phalanx of second finger of hand.002",
+    "fileSha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0"
+   }
+  },
+  {
+   "structureId": "distal_phalanx_hand_3_r",
+   "label": "Distal phalanx (middle)",
+   "role": "follow",
+   "tier": "core",
+   "side": "right",
+   "nodeName": "elbow_r__follow__distal_phalanx_hand_3",
+   "meshName": "elbow_r__follow__distal_phalanx_hand_3__mesh",
+   "triangles": 192,
+   "attachTo": null,
+   "motionBehavior": "moves_with_forearm",
+   "group": "hand",
+   "neutralWorldBBox": {
+    "min": [
+     -0.2828289624444058,
+     0.6783490152163669,
+     -0.01776874233343384
+    ],
+    "max": [
+     -0.27297443665263743,
+     0.6949760702441768,
+     -0.001759742158679245
+    ]
+   },
+   "neutralWorldMatrix": [
+    0.9985619783401489,
+    0.020456045866012573,
+    0.049554578959941864,
+    0,
+    -0.03128891438245773,
+    0.9729565382003784,
+    0.2288595288991928,
+    0,
+    -0.043532878160476685,
+    -0.23008091747760773,
+    0.9721973538398743,
+    0,
+    0.03268791735172272,
+    0.026351451873779297,
+    -0.24251224100589752,
+    1
+   ],
+   "materials": [
+    "PBR | bone"
+   ],
+   "source": {
+    "object": "Distal phalanx of third finger of hand | Right",
+    "mesh": "Distal phalanx of third finger of hand.002",
+    "fileSha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0"
+   }
+  },
+  {
+   "structureId": "distal_phalanx_hand_4_r",
+   "label": "Distal phalanx (ring)",
+   "role": "follow",
+   "tier": "core",
+   "side": "right",
+   "nodeName": "elbow_r__follow__distal_phalanx_hand_4",
+   "meshName": "elbow_r__follow__distal_phalanx_hand_4__mesh",
+   "triangles": 134,
+   "attachTo": null,
+   "motionBehavior": "moves_with_forearm",
+   "group": "hand",
+   "neutralWorldBBox": {
+    "min": [
+     -0.2549023986122061,
+     0.690803522464737,
+     -0.013978898033999876
+    ],
+    "max": [
+     -0.2463559209332713,
+     0.7031168880414681,
+     0.0010287750833950504
+    ]
+   },
+   "neutralWorldMatrix": [
+    0.9985619783401489,
+    0.020456045866012573,
+    0.049554578959941864,
+    0,
+    -0.03128891438245773,
+    0.9729565382003784,
+    0.2288595288991928,
+    0,
+    -0.043532878160476685,
+    -0.23008091747760773,
+    0.9721973538398743,
+    0,
+    0.03268791735172272,
+    0.026351451873779297,
+    -0.24251224100589752,
+    1
+   ],
+   "materials": [
+    "PBR | bone"
+   ],
+   "source": {
+    "object": "Distal phalanx of fourth finger of hand | Right",
+    "mesh": "Distal phalanx of fourth finger of hand.002",
+    "fileSha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0"
+   }
+  },
+  {
+   "structureId": "distal_phalanx_hand_5_r",
+   "label": "Distal phalanx (little)",
+   "role": "follow",
+   "tier": "core",
+   "side": "right",
+   "nodeName": "elbow_r__follow__distal_phalanx_hand_5",
+   "meshName": "elbow_r__follow__distal_phalanx_hand_5__mesh",
+   "triangles": 192,
+   "attachTo": null,
+   "motionBehavior": "moves_with_forearm",
+   "group": "hand",
+   "neutralWorldBBox": {
+    "min": [
+     -0.22773479007837194,
+     0.7062749554964886,
+     -0.01914374473488034
+    ],
+    "max": [
+     -0.21921537898860355,
+     0.7211882613079166,
+     -0.006473169368990006
+    ]
+   },
+   "neutralWorldMatrix": [
+    0.9985619783401489,
+    0.020456045866012573,
+    0.049554578959941864,
+    0,
+    -0.03128891438245773,
+    0.9729565382003784,
+    0.2288595288991928,
+    0,
+    -0.043532878160476685,
+    -0.23008091747760773,
+    0.9721973538398743,
+    0,
+    0.03268791735172272,
+    0.026351451873779297,
+    -0.24251224100589752,
+    1
+   ],
+   "materials": [
+    "PBR | bone"
+   ],
+   "source": {
+    "object": "Distal phalanx of fifth finger of hand | Right",
+    "mesh": "Distal phalanx of fifth finger of hand.r.002",
+    "fileSha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0"
+   }
+  },
+  {
+   "structureId": "elbow_capsule_r",
+   "label": "Articular capsule of elbow joint",
+   "role": "spanning_soft",
+   "tier": "detail",
+   "side": "right",
+   "nodeName": "elbow_r__soft__elbow_capsule",
+   "meshName": "elbow_r__soft__elbow_capsule__mesh",
+   "triangles": 1728,
+   "attachTo": "elbow_r__root",
+   "motionBehavior": "cross_joint_stationary",
+   "group": "cross_joint_soft",
+   "neutralWorldBBox": {
+    "min": [
+     -0.2500781714916229,
+     1.0803331136703491,
+     -0.05814211070537567
+    ],
+    "max": [
+     -0.18893514573574066,
+     1.133542776107788,
+     -0.015864059329032898
+    ]
+   },
+   "neutralWorldMatrix": [
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1
+   ],
+   "materials": [
+    "PBR | tendon"
+   ],
+   "source": {
+    "object": "Articular capsule of elbow joint | Right",
+    "mesh": "Articular capsule of elbow joint.002",
+    "fileSha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0"
+   }
+  },
+  {
+   "structureId": "radial_collateral_ligament_elbow_r",
+   "label": "Radial collateral ligament",
+   "role": "spanning_soft",
+   "tier": "detail",
+   "side": "right",
+   "nodeName": "elbow_r__soft__radial_collateral_ligament_elbow",
+   "meshName": "elbow_r__soft__radial_collateral_ligament_elbow__mesh",
+   "triangles": 96,
+   "attachTo": "elbow_r__root",
+   "motionBehavior": "cross_joint_stationary",
+   "group": "cross_joint_soft",
+   "neutralWorldBBox": {
+    "min": [
+     -0.2503734827041626,
+     1.0865195989608765,
+     -0.042535074055194855
+    ],
+    "max": [
+     -0.24583952128887177,
+     1.114756464958191,
+     -0.023792734369635582
+    ]
+   },
+   "neutralWorldMatrix": [
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1
+   ],
+   "materials": [
+    "PBR | tendon"
+   ],
+   "source": {
+    "object": "Radial collateral ligament | Right",
+    "mesh": "Radial collateral ligament.002",
+    "fileSha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0"
+   }
+  },
+  {
+   "structureId": "ulnar_collateral_ligament_elbow_r",
+   "label": "Ulnar collateral ligament",
+   "role": "spanning_soft",
+   "tier": "detail",
+   "side": "right",
+   "nodeName": "elbow_r__soft__ulnar_collateral_ligament_elbow",
+   "meshName": "elbow_r__soft__ulnar_collateral_ligament_elbow__mesh",
+   "triangles": 152,
+   "attachTo": "elbow_r__root",
+   "motionBehavior": "cross_joint_stationary",
+   "group": "cross_joint_soft",
+   "neutralWorldBBox": {
+    "min": [
+     -0.23556484282016754,
+     1.0792909860610962,
+     -0.03279413655400276
+    ],
+    "max": [
+     -0.18907012045383453,
+     1.102863073348999,
+     -0.015332495793700218
+    ]
+   },
+   "neutralWorldMatrix": [
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1
+   ],
+   "materials": [
+    "PBR | tendon"
+   ],
+   "source": {
+    "object": "Ulnar collateral ligament | Right",
+    "mesh": "Ulnar collateral ligament.002",
+    "fileSha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0"
+   }
+  },
+  {
+   "structureId": "annular_ligament_radius_r",
+   "label": "Annular ligament of radius",
+   "role": "attached_soft",
+   "tier": "detail",
+   "side": "right",
+   "nodeName": "elbow_r__soft__annular_ligament_radius",
+   "meshName": "elbow_r__soft__annular_ligament_radius__mesh",
+   "triangles": 376,
+   "attachTo": "elbow_r__ctrl",
+   "motionBehavior": "moves_with_forearm",
+   "group": "forearm_soft",
+   "neutralWorldBBox": {
+    "min": [
+     -0.2498167462829355,
+     1.0742308836387808,
+     -0.04791287664181443
+    ],
+    "max": [
+     -0.225221124693739,
+     1.0873949905658638,
+     -0.0244887794611649
+    ]
+   },
+   "neutralWorldMatrix": [
+    0.9985619783401489,
+    0.020456045866012573,
+    0.049554578959941864,
+    0,
+    -0.03128891438245773,
+    0.9729565382003784,
+    0.2288595288991928,
+    0,
+    -0.043532878160476685,
+    -0.23008091747760773,
+    0.9721973538398743,
+    0,
+    0.03268791735172272,
+    0.026351451873779297,
+    -0.24251224100589752,
+    1
+   ],
+   "materials": [
+    "PBR | tendon"
+   ],
+   "source": {
+    "object": "Annular ligament of radius | Right",
+    "mesh": "Annular ligament of radius.002",
+    "fileSha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0"
+   }
+  },
+  {
+   "structureId": "quadrate_ligament_r",
+   "label": "Quadrate ligament",
+   "role": "attached_soft",
+   "tier": "detail",
+   "side": "right",
+   "nodeName": "elbow_r__soft__quadrate_ligament",
+   "meshName": "elbow_r__soft__quadrate_ligament__mesh",
+   "triangles": 12,
+   "attachTo": "elbow_r__ctrl",
+   "motionBehavior": "moves_with_forearm",
+   "group": "forearm_soft",
+   "neutralWorldBBox": {
+    "min": [
+     -0.2312994475362326,
+     1.0690926830000018,
+     -0.04167521993436485
+    ],
+    "max": [
+     -0.2258911427730892,
+     1.078320396083289,
+     -0.038361666076756507
+    ]
+   },
+   "neutralWorldMatrix": [
+    0.9985619783401489,
+    0.020456045866012573,
+    0.049554578959941864,
+    0,
+    -0.03128891438245773,
+    0.9729565382003784,
+    0.2288595288991928,
+    0,
+    -0.043532878160476685,
+    -0.23008091747760773,
+    0.9721973538398743,
+    0,
+    0.03268791735172272,
+    0.026351451873779297,
+    -0.24251224100589752,
+    1
+   ],
+   "materials": [
+    "PBR | tendon"
+   ],
+   "source": {
+    "object": "Quadrate ligament | Right",
+    "mesh": "Quadrate ligament.002",
+    "fileSha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0"
+   }
+  },
+  {
+   "structureId": "oblique_cord_r",
+   "label": "Oblique cord",
+   "role": "attached_soft",
+   "tier": "detail",
+   "side": "right",
+   "nodeName": "elbow_r__soft__oblique_cord",
+   "meshName": "elbow_r__soft__oblique_cord__mesh",
+   "triangles": 12,
+   "attachTo": "elbow_r__ctrl",
+   "motionBehavior": "moves_with_forearm",
+   "group": "forearm_soft",
+   "neutralWorldBBox": {
+    "min": [
+     -0.23479942107708723,
+     1.0406370546707409,
+     -0.03965558828024596
+    ],
+    "max": [
+     -0.22374611928942723,
+     1.0697062758430123,
+     -0.03626771048735222
+    ]
+   },
+   "neutralWorldMatrix": [
+    0.9985619783401489,
+    0.020456045866012573,
+    0.049554578959941864,
+    0,
+    -0.03128891438245773,
+    0.9729565382003784,
+    0.2288595288991928,
+    0,
+    -0.043532878160476685,
+    -0.23008091747760773,
+    0.9721973538398743,
+    0,
+    0.03268791735172272,
+    0.026351451873779297,
+    -0.24251224100589752,
+    1
+   ],
+   "materials": [
+    "PBR | tendon"
+   ],
+   "source": {
+    "object": "Oblique cord | Right",
+    "mesh": "Oblique cord.002",
+    "fileSha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0"
+   }
+  },
+  {
+   "structureId": "interosseous_membrane_forearm_r",
+   "label": "Interosseous membrane of forearm",
+   "role": "attached_soft",
+   "tier": "detail",
+   "side": "right",
+   "nodeName": "elbow_r__soft__interosseous_membrane_forearm",
+   "meshName": "elbow_r__soft__interosseous_membrane_forearm__mesh",
+   "triangles": 2766,
+   "attachTo": "elbow_r__ctrl",
+   "motionBehavior": "moves_with_forearm",
+   "group": "forearm_soft",
+   "neutralWorldBBox": {
+    "min": [
+     -0.25402679574410475,
+     0.8661842026924008,
+     -0.04937967390472853
+    ],
+    "max": [
+     -0.23438594666720275,
+     1.0349802737019247,
+     -0.03863811103813031
+    ]
+   },
+   "neutralWorldMatrix": [
+    0.9985619783401489,
+    0.020456045866012573,
+    0.049554578959941864,
+    0,
+    -0.03128891438245773,
+    0.9729565382003784,
+    0.2288595288991928,
+    0,
+    -0.043532878160476685,
+    -0.23008091747760773,
+    0.9721973538398743,
+    0,
+    0.03268791735172272,
+    0.026351451873779297,
+    -0.24251224100589752,
+    1
+   ],
+   "materials": [
+    "PBR | tendon"
+   ],
+   "source": {
+    "object": "Interosseous membrane of forearm | Right",
+    "mesh": "Interosseous membrane of forearm.002",
+    "fileSha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0"
+   }
+  },
+  {
+   "structureId": "biceps_brachii_long_head_r",
+   "label": "Biceps brachii (long head)",
+   "role": "context",
+   "tier": "context",
+   "side": "right",
+   "nodeName": "elbow_r__context__biceps_brachii_long_head",
+   "meshName": "elbow_r__context__biceps_brachii_long_head__mesh",
+   "triangles": 3218,
+   "attachTo": "elbow_r__root",
+   "motionBehavior": "context_stationary",
+   "group": "context",
+   "neutralWorldBBox": {
+    "min": [
+     -0.23747877776622772,
+     1.0508124828338623,
+     -0.04129200056195259
+    ],
+    "max": [
+     -0.1422821283340454,
+     1.407930850982666,
+     0.008411533199250698
+    ]
+   },
+   "neutralWorldMatrix": [
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1
+   ],
+   "materials": [
+    "PBR | muscle"
+   ],
+   "source": {
+    "object": "Long head of biceps brachii | Right",
+    "mesh": "Long head of biceps brachii.002",
+    "fileSha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0"
+   }
+  },
+  {
+   "structureId": "biceps_brachii_short_head_r",
+   "label": "Biceps brachii (short head)",
+   "role": "context",
+   "tier": "context",
+   "side": "right",
+   "nodeName": "elbow_r__context__biceps_brachii_short_head",
+   "meshName": "elbow_r__context__biceps_brachii_short_head__mesh",
+   "triangles": 2696,
+   "attachTo": "elbow_r__root",
+   "motionBehavior": "context_stationary",
+   "group": "context",
+   "neutralWorldBBox": {
+    "min": [
+     -0.2196807861328125,
+     1.1241426467895508,
+     -0.02649921551346779
+    ],
+    "max": [
+     -0.13818997144699097,
+     1.397200107574463,
+     0.007932032458484173
+    ]
+   },
+   "neutralWorldMatrix": [
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1
+   ],
+   "materials": [
+    "PBR | muscle"
+   ],
+   "source": {
+    "object": "Short head of biceps brachii | Right",
+    "mesh": "Short head of biceps brachii.002",
+    "fileSha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0"
+   }
+  },
+  {
+   "structureId": "brachialis_r",
+   "label": "Brachialis",
+   "role": "context",
+   "tier": "context",
+   "side": "right",
+   "nodeName": "elbow_r__context__brachialis",
+   "meshName": "elbow_r__context__brachialis__mesh",
+   "triangles": 3478,
+   "attachTo": "elbow_r__root",
+   "motionBehavior": "context_stationary",
+   "group": "context",
+   "neutralWorldBBox": {
+    "min": [
+     -0.24288880825042725,
+     1.0521903038024902,
+     -0.04225198179483414
+    ],
+    "max": [
+     -0.18199317157268524,
+     1.2844921350479126,
+     -0.015104075893759727
+    ]
+   },
+   "neutralWorldMatrix": [
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1
+   ],
+   "materials": [
+    "PBR | muscle"
+   ],
+   "source": {
+    "object": "Brachialis muscle | Right",
+    "mesh": "Brachialis muscle.002",
+    "fileSha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0"
+   }
+  },
+  {
+   "structureId": "triceps_brachii_long_head_r",
+   "label": "Triceps brachii (long head)",
+   "role": "context",
+   "tier": "context",
+   "side": "right",
+   "nodeName": "elbow_r__context__triceps_brachii_long_head",
+   "meshName": "elbow_r__context__triceps_brachii_long_head__mesh",
+   "triangles": 3950,
+   "attachTo": "elbow_r__root",
+   "motionBehavior": "context_stationary",
+   "group": "context",
+   "neutralWorldBBox": {
+    "min": [
+     -0.22357085347175598,
+     1.093281865119934,
+     -0.08574287593364716
+    ],
+    "max": [
+     -0.13185079395771027,
+     1.3653568029403687,
+     -0.03835517540574074
+    ]
+   },
+   "neutralWorldMatrix": [
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1
+   ],
+   "materials": [
+    "PBR | muscle"
+   ],
+   "source": {
+    "object": "Long head of triceps brachii | Right",
+    "mesh": "Long head of triceps brachii.002",
+    "fileSha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0"
+   }
+  },
+  {
+   "structureId": "triceps_brachii_lateral_head_r",
+   "label": "Triceps brachii (lateral head)",
+   "role": "context",
+   "tier": "context",
+   "side": "right",
+   "nodeName": "elbow_r__context__triceps_brachii_lateral_head",
+   "meshName": "elbow_r__context__triceps_brachii_lateral_head__mesh",
+   "triangles": 3628,
+   "attachTo": "elbow_r__root",
+   "motionBehavior": "context_stationary",
+   "group": "context",
+   "neutralWorldBBox": {
+    "min": [
+     -0.23628494143486023,
+     1.0940253734588623,
+     -0.08418194949626923
+    ],
+    "max": [
+     -0.18009915947914124,
+     1.3588143587112427,
+     -0.03348429873585701
+    ]
+   },
+   "neutralWorldMatrix": [
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1
+   ],
+   "materials": [
+    "PBR | muscle"
+   ],
+   "source": {
+    "object": "Lateral head of triceps brachii | Right",
+    "mesh": "Lateral head of triceps brachii.002",
+    "fileSha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0"
+   }
+  },
+  {
+   "structureId": "triceps_brachii_medial_head_r",
+   "label": "Triceps brachii (medial head)",
+   "role": "context",
+   "tier": "context",
+   "side": "right",
+   "nodeName": "elbow_r__context__triceps_brachii_medial_head",
+   "meshName": "elbow_r__context__triceps_brachii_medial_head__mesh",
+   "triangles": 2686,
+   "attachTo": "elbow_r__root",
+   "motionBehavior": "context_stationary",
+   "group": "context",
+   "neutralWorldBBox": {
+    "min": [
+     -0.2346428483724594,
+     1.0871999263763428,
+     -0.05738057196140289
+    ],
+    "max": [
+     -0.17233848571777344,
+     1.3215361833572388,
+     -0.03065553680062294
+    ]
+   },
+   "neutralWorldMatrix": [
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1
+   ],
+   "materials": [
+    "PBR | muscle"
+   ],
+   "source": {
+    "object": "Medial head of triceps brachii | Right",
+    "mesh": "Medial head of triceps brachii.002",
+    "fileSha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0"
+   }
+  },
+  {
+   "structureId": "brachioradialis_r",
+   "label": "Brachioradialis",
+   "role": "context",
+   "tier": "context",
+   "side": "right",
+   "nodeName": "elbow_r__context__brachioradialis",
+   "meshName": "elbow_r__context__brachioradialis__mesh",
+   "triangles": 7312,
+   "attachTo": "elbow_r__root",
+   "motionBehavior": "context_stationary",
+   "group": "context",
+   "neutralWorldBBox": {
+    "min": [
+     -0.2897978723049164,
+     0.8604024052619934,
+     -0.04727264866232872
+    ],
+    "max": [
+     -0.2149825245141983,
+     1.2094767093658447,
+     0.02208097279071808
+    ]
+   },
+   "neutralWorldMatrix": [
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1
+   ],
+   "materials": [
+    "PBR | muscle"
+   ],
+   "source": {
+    "object": "Brachioradialis muscle | Right",
+    "mesh": "Brachioradialis muscle.002",
+    "fileSha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0"
+   }
+  },
+  {
+   "structureId": "anconeus_r",
+   "label": "Anconeus",
+   "role": "context",
+   "tier": "context",
+   "side": "right",
+   "nodeName": "elbow_r__context__anconeus",
+   "meshName": "elbow_r__context__anconeus__mesh",
+   "triangles": 1442,
+   "attachTo": "elbow_r__root",
+   "motionBehavior": "context_stationary",
+   "group": "context",
+   "neutralWorldBBox": {
+    "min": [
+     -0.236930713057518,
+     1.0151993036270142,
+     -0.061825405806303024
+    ],
+    "max": [
+     -0.21313123404979706,
+     1.119828224182129,
+     -0.03561927378177643
+    ]
+   },
+   "neutralWorldMatrix": [
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1
+   ],
+   "materials": [
+    "PBR | muscle"
+   ],
+   "source": {
+    "object": "Anconeus muscle | Right",
+    "mesh": "Anconeus muscle.002",
+    "fileSha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0"
+   }
+  },
+  {
+   "structureId": "supinator_r",
+   "label": "Supinator",
+   "role": "context",
+   "tier": "context",
+   "side": "right",
+   "nodeName": "elbow_r__context__supinator",
+   "meshName": "elbow_r__context__supinator__mesh",
+   "triangles": 2754,
+   "attachTo": "elbow_r__root",
+   "motionBehavior": "context_stationary",
+   "group": "context",
+   "neutralWorldBBox": {
+    "min": [
+     -0.2624622583389282,
+     0.9873347878456116,
+     -0.046990372240543365
+    ],
+    "max": [
+     -0.22956177592277527,
+     1.115285038948059,
+     -0.011380720883607864
+    ]
+   },
+   "neutralWorldMatrix": [
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1
+   ],
+   "materials": [
+    "PBR | muscle"
+   ],
+   "source": {
+    "object": "Supinator | Right",
+    "mesh": "Supinator.002",
+    "fileSha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0"
+   }
+  },
+  {
+   "structureId": "triceps_subtendinous_bursa_r",
+   "label": "Subtendinous bursa of triceps brachii",
+   "role": "context",
+   "tier": "context",
+   "side": "right",
+   "nodeName": "elbow_r__context__triceps_subtendinous_bursa",
+   "meshName": "elbow_r__context__triceps_subtendinous_bursa__mesh",
+   "triangles": 1472,
+   "attachTo": "elbow_r__root",
+   "motionBehavior": "context_stationary",
+   "group": "context",
+   "neutralWorldBBox": {
+    "min": [
+     -0.23094387352466583,
+     1.0936435461044312,
+     -0.06320935487747192
+    ],
+    "max": [
+     -0.20079410076141357,
+     1.1238317489624023,
+     -0.04692539945244789
+    ]
+   },
+   "neutralWorldMatrix": [
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1
+   ],
+   "materials": [
+    "PBR | tendon"
+   ],
+   "source": {
+    "object": "Subtendinous bursa of triceps brachii muscle | Right",
+    "mesh": "Mesh.229",
+    "fileSha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0"
+   }
+  },
+  {
+   "structureId": "scapula_r",
+   "label": "Scapula",
+   "role": "context",
+   "tier": "context",
+   "side": "right",
+   "nodeName": "elbow_r__context__scapula",
+   "meshName": "elbow_r__context__scapula__mesh",
+   "triangles": 25326,
+   "attachTo": "elbow_r__root",
+   "motionBehavior": "context_stationary",
+   "group": "context",
+   "neutralWorldBBox": {
+    "min": [
+     -0.17357537150382996,
+     1.254274606704712,
+     -0.11280736327171326
+    ],
+    "max": [
+     -0.06061115115880966,
+     1.417839765548706,
+     0.0012646988034248352
+    ]
+   },
+   "neutralWorldMatrix": [
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1
+   ],
+   "materials": [
+    "PBR | bone"
+   ],
+   "source": {
+    "object": "Scapula | Right",
+    "mesh": "Scapula.002",
+    "fileSha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0"
+   }
+  },
+  {
+   "structureId": "clavicle_r",
+   "label": "Clavicle",
+   "role": "context",
+   "tier": "context",
+   "side": "right",
+   "nodeName": "elbow_r__context__clavicle",
+   "meshName": "elbow_r__context__clavicle__mesh",
+   "triangles": 1550,
+   "attachTo": "elbow_r__root",
+   "motionBehavior": "context_stationary",
+   "group": "context",
+   "neutralWorldBBox": {
+    "min": [
+     -0.15433064103126526,
+     1.389112114906311,
+     -0.05226176232099533
+    ],
+    "max": [
+     -0.011214524507522583,
+     1.4252153635025024,
+     0.050509873777627945
+    ]
+   },
+   "neutralWorldMatrix": [
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1
+   ],
+   "materials": [
+    "PBR | bone"
+   ],
+   "source": {
+    "object": "Clavicle | Right",
+    "mesh": "Clavicle.002",
+    "fileSha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0"
+   }
+  }
+ ],
+ "anchors": [
+  {
+   "anchorId": "elbow_r.anchor.annular_ligament",
+   "key": "annular_ligament",
+   "nodeName": "elbow_r__anchor__annular_ligament",
+   "tier": "detail",
+   "structureId": "annular_ligament_radius_r",
+   "label": "Annular ligament of radius",
+   "anchorType": "structure_label",
+   "precision": "label placement point on the structure; not an anatomical landmark",
+   "displayCategory": "ligament",
+   "motionBehavior": "moves_with_forearm",
+   "parentNode": "elbow_r__soft__annular_ligament_radius",
+   "export": true,
+   "neutralWorldPosition": [
+    -0.24938324093818665,
+    1.0851408243179321,
+    -0.037251099944114685
+   ],
+   "blenderLocalPosition": [
+    -0.24983517825603485,
+    0.03177350014448166,
+    1.0859575271606445
+   ],
+   "labelDirectionLocalBlender": [
+    -0.9741144778430421,
+    0.10983048381773317,
+    0.1975809932178197
+   ],
+   "visibility": {
+    "tier": "detail",
+    "defaultVisible": false,
+    "requiresStructureVisible": true,
+    "hideDuringMotion": false
+   }
+  },
+  {
+   "anchorId": "elbow_r.anchor.capitulum",
+   "key": "capitulum",
+   "nodeName": "elbow_r__anchor__capitulum",
+   "tier": "core",
+   "structureId": "humerus_r",
+   "label": "Capitulum (region)",
+   "anchorType": "region",
+   "precision": "approximate articular region derived from bone-to-bone proximity (no cartilage geometry exists)",
+   "displayCategory": "articular_region",
+   "motionBehavior": "stationary",
+   "parentNode": "elbow_r__bone__humerus",
+   "export": true,
+   "neutralWorldPosition": [
+    -0.23613370954990387,
+    1.0957621335983276,
+    -0.0354376882314682
+   ],
+   "blenderLocalPosition": [
+    -0.23613370954990387,
+    0.0354376882314682,
+    1.0957621335983276
+   ],
+   "labelDirectionLocalBlender": [
+    -0.7717789294897873,
+    -0.6243056900067189,
+    0.12082917454337186
+   ],
+   "visibility": {
+    "tier": "core",
+    "defaultVisible": false,
+    "requiresStructureVisible": true,
+    "hideDuringMotion": true
+   }
+  },
+  {
+   "anchorId": "elbow_r.anchor.coronoid_process",
+   "key": "coronoid_process",
+   "nodeName": "elbow_r__anchor__coronoid_process",
+   "tier": "core",
+   "structureId": "ulna_r",
+   "label": "Coronoid process",
+   "anchorType": "bony_landmark_approx",
+   "precision": "extreme-vertex heuristic on the bone mesh; approximate, not a measured landmark",
+   "displayCategory": "bony_landmark",
+   "motionBehavior": "moves_with_forearm",
+   "parentNode": "elbow_r__bone__ulna",
+   "export": true,
+   "neutralWorldPosition": [
+    -0.21819713711738586,
+    1.0887587070465088,
+    -0.025502070784568787
+   ],
+   "blenderLocalPosition": [
+    -0.21803772449493408,
+    0.022541159763932228,
+    1.0911906957626343
+   ],
+   "labelDirectionLocalBlender": [
+    -0.06852878904569495,
+    -0.9763836663912487,
+    0.20488714229134392
+   ],
+   "visibility": {
+    "tier": "core",
+    "defaultVisible": false,
+    "requiresStructureVisible": true,
+    "hideDuringMotion": false
+   }
+  },
+  {
+   "anchorId": "elbow_r.anchor.elbow_capsule",
+   "key": "elbow_capsule",
+   "nodeName": "elbow_r__anchor__elbow_capsule",
+   "tier": "detail",
+   "structureId": "elbow_capsule_r",
+   "label": "Articular capsule of elbow joint",
+   "anchorType": "structure_label",
+   "precision": "label placement point on the structure; not an anatomical landmark",
+   "displayCategory": "capsule",
+   "motionBehavior": "cross_joint_stationary",
+   "parentNode": "elbow_r__soft__elbow_capsule",
+   "export": true,
+   "neutralWorldPosition": [
+    -0.2199181467294693,
+    1.104956030845642,
+    -0.019319631159305573
+   ],
+   "blenderLocalPosition": [
+    -0.2199181467294693,
+    0.019319631159305573,
+    1.104956030845642
+   ],
+   "labelDirectionLocalBlender": [
+    -0.11734575148168266,
+    -0.9927320577618824,
+    -0.02670273583469822
+   ],
+   "visibility": {
+    "tier": "detail",
+    "defaultVisible": false,
+    "requiresStructureVisible": true,
+    "hideDuringMotion": true
+   }
+  },
+  {
+   "anchorId": "elbow_r.anchor.elbow_joint",
+   "key": "elbow_joint",
+   "nodeName": "elbow_r__anchor__elbow_joint",
+   "tier": "core",
+   "structureId": "elbow_joint_r",
+   "label": "Elbow joint",
+   "anchorType": "joint_center",
+   "precision": "fitted flexion pivot",
+   "displayCategory": "joint",
+   "motionBehavior": "stationary_joint_center",
+   "parentNode": "elbow_r__pivot",
+   "export": true,
+   "neutralWorldPosition": [
+    -0.2213899940252304,
+    1.1033600568771362,
+    -0.03483999893069267
+   ],
+   "blenderLocalPosition": [
+    0,
+    0,
+    0
+   ],
+   "labelDirectionLocalBlender": [
+    0,
+    0,
+    1
+   ],
+   "visibility": {
+    "tier": "core",
+    "defaultVisible": false,
+    "requiresStructureVisible": false,
+    "hideDuringMotion": false
+   }
+  },
+  {
+   "anchorId": "elbow_r.anchor.humerus",
+   "key": "humerus",
+   "nodeName": "elbow_r__anchor__humerus",
+   "tier": "core",
+   "structureId": "humerus_r",
+   "label": "Humerus",
+   "anchorType": "structure_label",
+   "precision": "label placement point on the structure; not an anatomical landmark",
+   "displayCategory": "bone",
+   "motionBehavior": "stationary",
+   "parentNode": "elbow_r__bone__humerus",
+   "export": true,
+   "neutralWorldPosition": [
+    -0.2137538343667984,
+    1.2473888397216797,
+    -0.031390491873025894
+   ],
+   "blenderLocalPosition": [
+    -0.2137538343667984,
+    0.031390491873025894,
+    1.2473888397216797
+   ],
+   "labelDirectionLocalBlender": [
+    -0.7717789294897873,
+    -0.6243056900067189,
+    0.12082917454337186
+   ],
+   "visibility": {
+    "tier": "core",
+    "defaultVisible": false,
+    "requiresStructureVisible": true,
+    "hideDuringMotion": false
+   }
+  },
+  {
+   "anchorId": "elbow_r.anchor.olecranon",
+   "key": "olecranon",
+   "nodeName": "elbow_r__anchor__olecranon",
+   "tier": "core",
+   "structureId": "ulna_r",
+   "label": "Olecranon",
+   "anchorType": "bony_landmark_approx",
+   "precision": "extreme-vertex heuristic on the bone mesh; approximate, not a measured landmark",
+   "displayCategory": "bony_landmark",
+   "motionBehavior": "moves_with_forearm",
+   "parentNode": "elbow_r__bone__ulna",
+   "export": true,
+   "neutralWorldPosition": [
+    -0.21262630820274353,
+    1.1139074563980103,
+    -0.04501347988843918
+   ],
+   "blenderLocalPosition": [
+    -0.21292731165885925,
+    0.0475388765335083,
+    1.1110197305679321
+   ],
+   "labelDirectionLocalBlender": [
+    0.06852878904569495,
+    0.9763836663912487,
+    -0.20488714229134392
+   ],
+   "visibility": {
+    "tier": "core",
+    "defaultVisible": false,
+    "requiresStructureVisible": true,
+    "hideDuringMotion": false
+   }
+  },
+  {
+   "anchorId": "elbow_r.anchor.radial_collateral_ligament",
+   "key": "radial_collateral_ligament",
+   "nodeName": "elbow_r__anchor__radial_collateral_ligament",
+   "tier": "detail",
+   "structureId": "radial_collateral_ligament_elbow_r",
+   "label": "Radial collateral ligament",
+   "anchorType": "structure_label",
+   "precision": "label placement point on the structure; not an anatomical landmark",
+   "displayCategory": "ligament",
+   "motionBehavior": "cross_joint_stationary",
+   "parentNode": "elbow_r__soft__radial_collateral_ligament_elbow",
+   "export": true,
+   "neutralWorldPosition": [
+    -0.249839186668396,
+    1.0987637042999268,
+    -0.034384582191705704
+   ],
+   "blenderLocalPosition": [
+    -0.249839186668396,
+    0.034384582191705704,
+    1.0987637042999268
+   ],
+   "labelDirectionLocalBlender": [
+    -0.9741144778430421,
+    0.10983048381773317,
+    0.1975809932178197
+   ],
+   "visibility": {
+    "tier": "detail",
+    "defaultVisible": false,
+    "requiresStructureVisible": true,
+    "hideDuringMotion": true
+   }
+  },
+  {
+   "anchorId": "elbow_r.anchor.radial_head",
+   "key": "radial_head",
+   "nodeName": "elbow_r__anchor__radial_head",
+   "tier": "core",
+   "structureId": "radius_r",
+   "label": "Head of radius",
+   "anchorType": "region",
+   "precision": "approximate articular region derived from bone-to-bone proximity (no cartilage geometry exists)",
+   "displayCategory": "bony_landmark",
+   "motionBehavior": "moves_with_forearm",
+   "parentNode": "elbow_r__bone__radius",
+   "export": true,
+   "neutralWorldPosition": [
+    -0.24892953038215637,
+    1.0892515182495117,
+    -0.035128481686115265
+   ],
+   "blenderLocalPosition": [
+    -0.24919284880161285,
+    0.030675457790493965,
+    1.0904287099838257
+   ],
+   "labelDirectionLocalBlender": [
+    -0.9741144778430421,
+    0.10983048381773317,
+    0.1975809932178197
+   ],
+   "visibility": {
+    "tier": "core",
+    "defaultVisible": false,
+    "requiresStructureVisible": true,
+    "hideDuringMotion": false
+   }
+  },
+  {
+   "anchorId": "elbow_r.anchor.radius",
+   "key": "radius",
+   "nodeName": "elbow_r__anchor__radius",
+   "tier": "core",
+   "structureId": "radius_r",
+   "label": "Radius",
+   "anchorType": "structure_label",
+   "precision": "label placement point on the structure; not an anatomical landmark",
+   "displayCategory": "bone",
+   "motionBehavior": "moves_with_forearm",
+   "parentNode": "elbow_r__bone__radius",
+   "export": true,
+   "neutralWorldPosition": [
+    -0.25322821736335754,
+    1.0089881420135498,
+    -0.037030644714832306
+   ],
+   "blenderLocalPosition": [
+    -0.25522148609161377,
+    0.013870539143681526,
+    1.0120351314544678
+   ],
+   "labelDirectionLocalBlender": [
+    -0.7372601243171065,
+    -0.612745631607968,
+    0.28458794780748736
+   ],
+   "visibility": {
+    "tier": "core",
+    "defaultVisible": false,
+    "requiresStructureVisible": true,
+    "hideDuringMotion": false
+   }
+  },
+  {
+   "anchorId": "elbow_r.anchor.rcl_dist",
+   "key": "rcl_dist",
+   "nodeName": "elbow_r__anchor__rcl_dist",
+   "tier": "core",
+   "structureId": "radial_collateral_ligament_elbow_r",
+   "label": "Radial collateral ligament band - forearm end (schematic)",
+   "anchorType": "band_attachment",
+   "precision": "schematic ligament-band end point: ligament end-region centroid snapped to the nearest bone surface; approximate attachment, not a measured insertion",
+   "displayCategory": "ligament_band",
+   "motionBehavior": "moves_with_forearm",
+   "parentNode": "elbow_r__ctrl",
+   "export": true,
+   "neutralWorldPosition": [
+    -0.24920088052749634,
+    1.086389183998108,
+    -0.03631865605711937
+   ],
+   "blenderLocalPosition": [
+    -0.24958133697509766,
+    0.031162168830633163,
+    1.0873799324035645
+   ],
+   "labelDirectionLocalBlender": [
+    -0.9741144778430421,
+    0.10983048381773317,
+    0.1975809932178197
+   ],
+   "visibility": {
+    "defaultVisible": false,
+    "hideDuringMotion": false,
+    "requiresStructureVisible": false,
+    "showWithBand": true,
+    "tier": "detail"
+   },
+   "attachmentSide": "distal",
+   "attachedBone": "radius_r",
+   "bandId": "elbow_r.band.radial_collateral_ligament",
+   "band": {
+    "bandId": "elbow_r.band.radial_collateral_ligament",
+    "deformationSimulation": false,
+    "endpoint": "distal",
+    "pairedAnchorId": "elbow_r.anchor.rcl_prox",
+    "representation": "schematic",
+    "side": "lateral"
+   }
+  },
+  {
+   "anchorId": "elbow_r.anchor.rcl_prox",
+   "key": "rcl_prox",
+   "nodeName": "elbow_r__anchor__rcl_prox",
+   "tier": "core",
+   "structureId": "radial_collateral_ligament_elbow_r",
+   "label": "Radial collateral ligament band - humeral end (schematic)",
+   "anchorType": "band_attachment",
+   "precision": "schematic ligament-band end point: ligament end-region centroid snapped to the nearest bone surface; approximate attachment, not a measured insertion",
+   "displayCategory": "ligament_band",
+   "motionBehavior": "stationary",
+   "parentNode": "elbow_r__seg_prox",
+   "export": true,
+   "neutralWorldPosition": [
+    -0.24658094346523285,
+    1.1098631620407104,
+    -0.037700846791267395
+   ],
+   "blenderLocalPosition": [
+    -0.24658094346523285,
+    0.037700846791267395,
+    1.1098631620407104
+   ],
+   "labelDirectionLocalBlender": [
+    -0.9741144778430421,
+    0.10983048381773317,
+    0.1975809932178197
+   ],
+   "visibility": {
+    "defaultVisible": false,
+    "hideDuringMotion": false,
+    "requiresStructureVisible": false,
+    "showWithBand": true,
+    "tier": "detail"
+   },
+   "attachmentSide": "proximal",
+   "attachedBone": "humerus_r",
+   "bandId": "elbow_r.band.radial_collateral_ligament",
+   "band": {
+    "bandId": "elbow_r.band.radial_collateral_ligament",
+    "deformationSimulation": false,
+    "endpoint": "proximal",
+    "pairedAnchorId": "elbow_r.anchor.rcl_dist",
+    "representation": "schematic",
+    "side": "lateral"
+   }
+  },
+  {
+   "anchorId": "elbow_r.anchor.trochlea",
+   "key": "trochlea",
+   "nodeName": "elbow_r__anchor__trochlea",
+   "tier": "core",
+   "structureId": "humerus_r",
+   "label": "Trochlea (region)",
+   "anchorType": "region",
+   "precision": "approximate articular region derived from bone-to-bone proximity (no cartilage geometry exists)",
+   "displayCategory": "articular_region",
+   "motionBehavior": "stationary",
+   "parentNode": "elbow_r__bone__humerus",
+   "export": true,
+   "neutralWorldPosition": [
+    -0.21332044899463654,
+    1.0975596904754639,
+    -0.041955266147851944
+   ],
+   "blenderLocalPosition": [
+    -0.21332044899463654,
+    0.041955266147851944,
+    1.0975596904754639
+   ],
+   "labelDirectionLocalBlender": [
+    0.6058269763666798,
+    -0.7796294498949928,
+    -0.15859254573540735
+   ],
+   "visibility": {
+    "tier": "core",
+    "defaultVisible": false,
+    "requiresStructureVisible": true,
+    "hideDuringMotion": true
+   }
+  },
+  {
+   "anchorId": "elbow_r.anchor.ucl_dist",
+   "key": "ucl_dist",
+   "nodeName": "elbow_r__anchor__ucl_dist",
+   "tier": "core",
+   "structureId": "ulnar_collateral_ligament_elbow_r",
+   "label": "Ulnar collateral ligament band - forearm end (schematic)",
+   "anchorType": "band_attachment",
+   "precision": "schematic ligament-band end point: ligament end-region centroid snapped to the nearest bone surface; approximate attachment, not a measured insertion",
+   "displayCategory": "ligament_band",
+   "motionBehavior": "moves_with_forearm",
+   "parentNode": "elbow_r__ctrl",
+   "export": true,
+   "neutralWorldPosition": [
+    -0.2081110030412674,
+    1.0795239210128784,
+    -0.032148730009794235
+   ],
+   "blenderLocalPosition": [
+    -0.20848436653614044,
+    0.02731734700500965,
+    1.0803688764572144
+   ],
+   "labelDirectionLocalBlender": [
+    0.9741144778430421,
+    -0.10983048381773317,
+    -0.1975809932178197
+   ],
+   "visibility": {
+    "defaultVisible": false,
+    "hideDuringMotion": false,
+    "requiresStructureVisible": false,
+    "showWithBand": true,
+    "tier": "detail"
+   },
+   "attachmentSide": "distal",
+   "attachedBone": "ulna_r",
+   "bandId": "elbow_r.band.ulnar_collateral_ligament",
+   "band": {
+    "bandId": "elbow_r.band.ulnar_collateral_ligament",
+    "deformationSimulation": false,
+    "endpoint": "distal",
+    "pairedAnchorId": "elbow_r.anchor.ucl_prox",
+    "representation": "schematic",
+    "side": "medial"
+   }
+  },
+  {
+   "anchorId": "elbow_r.anchor.ucl_prox",
+   "key": "ucl_prox",
+   "nodeName": "elbow_r__anchor__ucl_prox",
+   "tier": "core",
+   "structureId": "ulnar_collateral_ligament_elbow_r",
+   "label": "Ulnar collateral ligament band - humeral end (schematic)",
+   "anchorType": "band_attachment",
+   "precision": "schematic ligament-band end point: ligament end-region centroid snapped to the nearest bone surface; approximate attachment, not a measured insertion",
+   "displayCategory": "ligament_band",
+   "motionBehavior": "stationary",
+   "parentNode": "elbow_r__seg_prox",
+   "export": true,
+   "neutralWorldPosition": [
+    -0.18996453285217285,
+    1.1003150939941406,
+    -0.03254926949739456
+   ],
+   "blenderLocalPosition": [
+    -0.18996453285217285,
+    0.03254926949739456,
+    1.1003150939941406
+   ],
+   "labelDirectionLocalBlender": [
+    0.9741144778430421,
+    -0.10983048381773317,
+    -0.1975809932178197
+   ],
+   "visibility": {
+    "defaultVisible": false,
+    "hideDuringMotion": false,
+    "requiresStructureVisible": false,
+    "showWithBand": true,
+    "tier": "detail"
+   },
+   "attachmentSide": "proximal",
+   "attachedBone": "humerus_r",
+   "bandId": "elbow_r.band.ulnar_collateral_ligament",
+   "band": {
+    "bandId": "elbow_r.band.ulnar_collateral_ligament",
+    "deformationSimulation": false,
+    "endpoint": "proximal",
+    "pairedAnchorId": "elbow_r.anchor.ucl_dist",
+    "representation": "schematic",
+    "side": "medial"
+   }
+  },
+  {
+   "anchorId": "elbow_r.anchor.ulna",
+   "key": "ulna",
+   "nodeName": "elbow_r__anchor__ulna",
+   "tier": "core",
+   "structureId": "ulna_r",
+   "label": "Ulna",
+   "anchorType": "structure_label",
+   "precision": "label placement point on the structure; not an anatomical landmark",
+   "displayCategory": "bone",
+   "motionBehavior": "moves_with_forearm",
+   "parentNode": "elbow_r__bone__ulna",
+   "export": true,
+   "neutralWorldPosition": [
+    -0.22418922185897827,
+    1.0202102661132812,
+    -0.045298799872398376
+   ],
+   "blenderLocalPosition": [
+    -0.22640442848205566,
+    0.025754962116479874,
+    1.0201529264450073
+   ],
+   "labelDirectionLocalBlender": [
+    0.7372601243171065,
+    0.612745631607968,
+    -0.28458794780748736
+   ],
+   "visibility": {
+    "tier": "core",
+    "defaultVisible": false,
+    "requiresStructureVisible": true,
+    "hideDuringMotion": false
+   }
+  },
+  {
+   "anchorId": "elbow_r.anchor.ulnar_collateral_ligament",
+   "key": "ulnar_collateral_ligament",
+   "nodeName": "elbow_r__anchor__ulnar_collateral_ligament",
+   "tier": "detail",
+   "structureId": "ulnar_collateral_ligament_elbow_r",
+   "label": "Ulnar collateral ligament",
+   "anchorType": "structure_label",
+   "precision": "label placement point on the structure; not an anatomical landmark",
+   "displayCategory": "ligament",
+   "motionBehavior": "cross_joint_stationary",
+   "parentNode": "elbow_r__soft__ulnar_collateral_ligament_elbow",
+   "export": true,
+   "neutralWorldPosition": [
+    -0.2012883424758911,
+    1.0883264541625977,
+    -0.023816391825675964
+   ],
+   "blenderLocalPosition": [
+    -0.2012883424758911,
+    0.023816391825675964,
+    1.0883264541625977
+   ],
+   "labelDirectionLocalBlender": [
+    0.9741144778430421,
+    -0.10983048381773317,
+    -0.1975809932178197
+   ],
+   "visibility": {
+    "tier": "detail",
+    "defaultVisible": false,
+    "requiresStructureVisible": true,
+    "hideDuringMotion": true
+   }
+  }
+ ],
+ "bands": [
+  {
+   "bandId": "elbow_r.band.radial_collateral_ligament",
+   "structureId": "radial_collateral_ligament_elbow_r",
+   "side": "lateral",
+   "representation": "schematic",
+   "deformationSimulation": false,
+   "contentLabel": "Schematic ligament band",
+   "proximalAnchorId": "elbow_r.anchor.rcl_prox",
+   "distalAnchorId": "elbow_r.anchor.rcl_dist",
+   "realLigamentMesh": {
+    "structureId": "radial_collateral_ligament_elbow_r",
+    "tier": "detail",
+    "motionBehavior": "cross_joint_stationary"
+   }
+  },
+  {
+   "bandId": "elbow_r.band.ulnar_collateral_ligament",
+   "structureId": "ulnar_collateral_ligament_elbow_r",
+   "side": "medial",
+   "representation": "schematic",
+   "deformationSimulation": false,
+   "contentLabel": "Schematic ligament band",
+   "proximalAnchorId": "elbow_r.anchor.ucl_prox",
+   "distalAnchorId": "elbow_r.anchor.ucl_dist",
+   "realLigamentMesh": {
+    "structureId": "ulnar_collateral_ligament_elbow_r",
+    "tier": "detail",
+    "motionBehavior": "cross_joint_stationary"
+   }
+  }
+ ],
+ "bandRepresentation": {
+  "representation": "schematic",
+  "deformationSimulation": false,
+  "statement": "A band is an educational schematic drawn between two attachment anchors. It is NOT a physically simulated or deforming ligament. Changes in endpoint distance during flexion are a visualization aid only and must not be presented as quantitative ligament strain or stretch.",
+  "ligamentMesh": "The real RCL/UCL meshes are anatomical source geometry, cross-joint stationary for Milestone 1, and are never edited.",
+  "anchors": "Band anchors are educational attachment representations: proximal ends are parented to elbow_r__seg_prox (fixed), distal ends to elbow_r__ctrl (move with the forearm).",
+  "contentLabel": "Schematic ligament band"
+ },
+ "registry": {
+  "capabilities": [
+   "highlight",
+   "isolate",
+   "visibility_toggle",
+   "anchor_point",
+   "leader_line_origin",
+   "label_target",
+   "motion_indicator",
+   "joint_axis",
+   "schematic_band"
+  ],
+  "groups": {
+   "fixed_bone": [
+    "humerus_r"
+   ],
+   "forearm_bones": [
+    "radius_r",
+    "ulna_r"
+   ],
+   "hand": [
+    "capitate_r",
+    "distal_phalanx_hand_1_r",
+    "distal_phalanx_hand_2_r",
+    "distal_phalanx_hand_3_r",
+    "distal_phalanx_hand_4_r",
+    "distal_phalanx_hand_5_r",
+    "hamate_r",
+    "lunate_r",
+    "metacarpal_1_r",
+    "metacarpal_2_r",
+    "metacarpal_3_r",
+    "metacarpal_4_r",
+    "metacarpal_5_r",
+    "middle_phalanx_hand_2_r",
+    "middle_phalanx_hand_3_r",
+    "middle_phalanx_hand_4_r",
+    "middle_phalanx_hand_5_r",
+    "pisiform_r",
+    "proximal_phalanx_hand_1_r",
+    "proximal_phalanx_hand_2_r",
+    "proximal_phalanx_hand_3_r",
+    "proximal_phalanx_hand_4_r",
+    "proximal_phalanx_hand_5_r",
+    "scaphoid_r",
+    "trapezium_r",
+    "trapezoid_r",
+    "triquetrum_r"
+   ],
+   "forearm_soft": [
+    "annular_ligament_radius_r",
+    "interosseous_membrane_forearm_r",
+    "oblique_cord_r",
+    "quadrate_ligament_r"
+   ],
+   "cross_joint_soft": [
+    "elbow_capsule_r",
+    "radial_collateral_ligament_elbow_r",
+    "ulnar_collateral_ligament_elbow_r"
+   ],
+   "context": [
+    "anconeus_r",
+    "biceps_brachii_long_head_r",
+    "biceps_brachii_short_head_r",
+    "brachialis_r",
+    "brachioradialis_r",
+    "clavicle_r",
+    "scapula_r",
+    "supinator_r",
+    "triceps_brachii_lateral_head_r",
+    "triceps_brachii_long_head_r",
+    "triceps_brachii_medial_head_r",
+    "triceps_subtendinous_bursa_r"
+   ]
+  }
+ },
+ "motion": {
+  "axisObject": "elbow_r__overlay__axis",
+  "forearmObject": "elbow_r__overlay__forearm",
+  "hingeAxis": "elbow_r__overlay__axis local +X (parented to elbow_r__pivot; stationary)",
+  "neutralDirection": "elbow_r__overlay__axis local +Y (forearm direction at true extension)",
+  "flexionTravelAtNeutral": "elbow_r__overlay__axis local +Z",
+  "forearmDirection": "elbow_r__overlay__forearm local +Y (parented to elbow_r__ctrl; rotates with flexion)",
+  "motionDirection": "elbow_r__overlay__forearm local +Z (tangent of the flexion arc at the current angle)",
+  "currentFlexionSource": "elbow_r__ctrl local rotation X, degrees",
+  "maxFlexionSource": "rig.dofs[flexion].max",
+  "axisLengthMm": 90,
+  "arcRadiusMm": 70,
+  "arcTickDeg": 15
+ },
+ "tiers": {
+  "core": {
+   "url": "elbow_r.core.glb",
+   "nodes": [
+    "elbow_r__anchor__capitulum",
+    "elbow_r__anchor__coronoid_process",
+    "elbow_r__anchor__elbow_joint",
+    "elbow_r__anchor__humerus",
+    "elbow_r__anchor__olecranon",
+    "elbow_r__anchor__radial_head",
+    "elbow_r__anchor__radius",
+    "elbow_r__anchor__rcl_dist",
+    "elbow_r__anchor__rcl_prox",
+    "elbow_r__anchor__trochlea",
+    "elbow_r__anchor__ucl_dist",
+    "elbow_r__anchor__ucl_prox",
+    "elbow_r__anchor__ulna",
+    "elbow_r__bone__humerus",
+    "elbow_r__bone__radius",
+    "elbow_r__bone__ulna",
+    "elbow_r__ctrl",
+    "elbow_r__follow__capitate",
+    "elbow_r__follow__distal_phalanx_hand_1",
+    "elbow_r__follow__distal_phalanx_hand_2",
+    "elbow_r__follow__distal_phalanx_hand_3",
+    "elbow_r__follow__distal_phalanx_hand_4",
+    "elbow_r__follow__distal_phalanx_hand_5",
+    "elbow_r__follow__hamate",
+    "elbow_r__follow__lunate",
+    "elbow_r__follow__metacarpal_1",
+    "elbow_r__follow__metacarpal_2",
+    "elbow_r__follow__metacarpal_3",
+    "elbow_r__follow__metacarpal_4",
+    "elbow_r__follow__metacarpal_5",
+    "elbow_r__follow__middle_phalanx_hand_2",
+    "elbow_r__follow__middle_phalanx_hand_3",
+    "elbow_r__follow__middle_phalanx_hand_4",
+    "elbow_r__follow__middle_phalanx_hand_5",
+    "elbow_r__follow__pisiform",
+    "elbow_r__follow__proximal_phalanx_hand_1",
+    "elbow_r__follow__proximal_phalanx_hand_2",
+    "elbow_r__follow__proximal_phalanx_hand_3",
+    "elbow_r__follow__proximal_phalanx_hand_4",
+    "elbow_r__follow__proximal_phalanx_hand_5",
+    "elbow_r__follow__scaphoid",
+    "elbow_r__follow__trapezium",
+    "elbow_r__follow__trapezoid",
+    "elbow_r__follow__triquetrum",
+    "elbow_r__overlay__axis",
+    "elbow_r__overlay__forearm",
+    "elbow_r__overlay__registry",
+    "elbow_r__pivot",
+    "elbow_r__root",
+    "elbow_r__seg_prox"
+   ],
+   "structureIds": [
+    "capitate_r",
+    "distal_phalanx_hand_1_r",
+    "distal_phalanx_hand_2_r",
+    "distal_phalanx_hand_3_r",
+    "distal_phalanx_hand_4_r",
+    "distal_phalanx_hand_5_r",
+    "hamate_r",
+    "humerus_r",
+    "lunate_r",
+    "metacarpal_1_r",
+    "metacarpal_2_r",
+    "metacarpal_3_r",
+    "metacarpal_4_r",
+    "metacarpal_5_r",
+    "middle_phalanx_hand_2_r",
+    "middle_phalanx_hand_3_r",
+    "middle_phalanx_hand_4_r",
+    "middle_phalanx_hand_5_r",
+    "pisiform_r",
+    "proximal_phalanx_hand_1_r",
+    "proximal_phalanx_hand_2_r",
+    "proximal_phalanx_hand_3_r",
+    "proximal_phalanx_hand_4_r",
+    "proximal_phalanx_hand_5_r",
+    "radius_r",
+    "scaphoid_r",
+    "trapezium_r",
+    "trapezoid_r",
+    "triquetrum_r",
+    "ulna_r"
+   ],
+   "triangles": 19982,
+   "materials": [
+    "PBR | bone"
+   ],
+   "textures": [
+    {
+     "name": "Tissue normal | organ",
+     "mimeType": "image/webp",
+     "bytes": 19986,
+     "sha256": "2c6f2e1c767edc8f8722cb4f037db59fba1ef4644ee2069f4d2bfe245c7868bf",
+     "size": [
+      512,
+      512
+     ]
+    },
+    {
+     "name": "Tissue color | bone",
+     "mimeType": "image/webp",
+     "bytes": 2852,
+     "sha256": "87769ee294605ca6ea6a1b69adbc6c564569f25d3f40891d22c28cc8f43073f7",
+     "size": [
+      512,
+      512
+     ]
+    }
+   ],
+   "loadTrigger": "lesson start",
+   "bytes": 306880,
+   "sha256": "61c046262a823e95b141992f8bbaa13e5810c2bc7e7c76088dc3f9c6b1be93c1",
+   "gzipBytes": 193848,
+   "brotliBytes": 178081,
+   "embeddedTextureBytes": 22838,
+   "bytesExcludingTextures": 283472,
+   "gzipBytesExcludingTextures": 170087,
+   "brotliBytesExcludingTextures": 154922,
+   "rawBytes": 884344,
+   "rawSha256": "899cc11c51ed6ca29007e687e50a0a6ede6c1ae486bc867fce6c7e2a8e4849d2",
+   "extensionsRequired": [
+    "EXT_texture_webp",
+    "KHR_mesh_quantization",
+    "EXT_meshopt_compression"
+   ]
+  },
+  "detail": {
+   "url": "elbow_r.detail.glb",
+   "nodes": [
+    "elbow_r__anchor__annular_ligament",
+    "elbow_r__anchor__elbow_capsule",
+    "elbow_r__anchor__radial_collateral_ligament",
+    "elbow_r__anchor__ulnar_collateral_ligament",
+    "elbow_r__soft__annular_ligament_radius",
+    "elbow_r__soft__elbow_capsule",
+    "elbow_r__soft__interosseous_membrane_forearm",
+    "elbow_r__soft__oblique_cord",
+    "elbow_r__soft__quadrate_ligament",
+    "elbow_r__soft__radial_collateral_ligament_elbow",
+    "elbow_r__soft__ulnar_collateral_ligament_elbow"
+   ],
+   "structureIds": [
+    "annular_ligament_radius_r",
+    "elbow_capsule_r",
+    "interosseous_membrane_forearm_r",
+    "oblique_cord_r",
+    "quadrate_ligament_r",
+    "radial_collateral_ligament_elbow_r",
+    "ulnar_collateral_ligament_elbow_r"
+   ],
+   "triangles": 5142,
+   "materials": [
+    "PBR | tendon"
+   ],
+   "textures": [
+    {
+     "name": "Tissue normal | organ",
+     "mimeType": "image/webp",
+     "bytes": 19986,
+     "sha256": "2c6f2e1c767edc8f8722cb4f037db59fba1ef4644ee2069f4d2bfe245c7868bf",
+     "size": [
+      512,
+      512
+     ]
+    },
+    {
+     "name": "Tissue color | tendon",
+     "mimeType": "image/webp",
+     "bytes": 3146,
+     "sha256": "8161ce4d85389356be03894cdeba194104cab00707122d2441489cf7a527470a",
+     "size": [
+      512,
+      512
+     ]
+    }
+   ],
+   "loadTrigger": "idle after core or structure step",
+   "bytes": 93936,
+   "sha256": "c767e24c51c65d17034b11368ecb480618a690d9847505f0f013437d293c38b6",
+   "gzipBytes": 72275,
+   "brotliBytes": 67625,
+   "embeddedTextureBytes": 23132,
+   "bytesExcludingTextures": 70228,
+   "gzipBytesExcludingTextures": 48359,
+   "brotliBytesExcludingTextures": 44243,
+   "rawBytes": 496196,
+   "rawSha256": "c053d5cb078be69f8f5bc5e8df9135c8f120677df28769a55a8c7359560781d8",
+   "extensionsRequired": [
+    "EXT_texture_webp",
+    "KHR_mesh_quantization",
+    "EXT_meshopt_compression"
+   ]
+  },
+  "context": {
+   "url": "elbow_r.context.glb",
+   "nodes": [
+    "elbow_r__context__anconeus",
+    "elbow_r__context__biceps_brachii_long_head",
+    "elbow_r__context__biceps_brachii_short_head",
+    "elbow_r__context__brachialis",
+    "elbow_r__context__brachioradialis",
+    "elbow_r__context__clavicle",
+    "elbow_r__context__scapula",
+    "elbow_r__context__supinator",
+    "elbow_r__context__triceps_brachii_lateral_head",
+    "elbow_r__context__triceps_brachii_long_head",
+    "elbow_r__context__triceps_brachii_medial_head",
+    "elbow_r__context__triceps_subtendinous_bursa"
+   ],
+   "structureIds": [
+    "anconeus_r",
+    "biceps_brachii_long_head_r",
+    "biceps_brachii_short_head_r",
+    "brachialis_r",
+    "brachioradialis_r",
+    "clavicle_r",
+    "scapula_r",
+    "supinator_r",
+    "triceps_brachii_lateral_head_r",
+    "triceps_brachii_long_head_r",
+    "triceps_brachii_medial_head_r",
+    "triceps_subtendinous_bursa_r"
+   ],
+   "triangles": 59512,
+   "materials": [
+    "PBR | bone",
+    "PBR | muscle",
+    "PBR | tendon"
+   ],
+   "textures": [
+    {
+     "name": "Tissue normal | muscle",
+     "mimeType": "image/webp",
+     "bytes": 91690,
+     "sha256": "33fe11b652671162f8f67a8f8f26bd63eb91585543ba4c293fbf89b42cc62b1a",
+     "size": [
+      512,
+      512
+     ]
+    },
+    {
+     "name": "Tissue color | muscle",
+     "mimeType": "image/webp",
+     "bytes": 3232,
+     "sha256": "97ba131b76fa35e11a3c9d656dc3b1893f37857441d724047048f92b14ae56ae",
+     "size": [
+      512,
+      512
+     ]
+    },
+    {
+     "name": "Tissue normal | organ",
+     "mimeType": "image/webp",
+     "bytes": 19986,
+     "sha256": "2c6f2e1c767edc8f8722cb4f037db59fba1ef4644ee2069f4d2bfe245c7868bf",
+     "size": [
+      512,
+      512
+     ]
+    },
+    {
+     "name": "Tissue color | bone",
+     "mimeType": "image/webp",
+     "bytes": 2852,
+     "sha256": "87769ee294605ca6ea6a1b69adbc6c564569f25d3f40891d22c28cc8f43073f7",
+     "size": [
+      512,
+      512
+     ]
+    },
+    {
+     "name": "Tissue color | tendon",
+     "mimeType": "image/webp",
+     "bytes": 3146,
+     "sha256": "8161ce4d85389356be03894cdeba194104cab00707122d2441489cf7a527470a",
+     "size": [
+      512,
+      512
+     ]
+    }
+   ],
+   "loadTrigger": "learner opt-in",
+   "bytes": 628008,
+   "sha256": "a7d7fdc482d7e6bc30f65e524180cb4a613388b3406ce1e82cfc6677b31dfdbc",
+   "gzipBytes": 530154,
+   "brotliBytes": 490737,
+   "embeddedTextureBytes": 120906,
+   "bytesExcludingTextures": 505788,
+   "gzipBytesExcludingTextures": 409231,
+   "brotliBytesExcludingTextures": 369734,
+   "rawBytes": 2252360,
+   "rawSha256": "bcad5b41891ed29a3b4838db10072c61d8b6958034e5745cec946e9e667e56d2",
+   "extensionsRequired": [
+    "EXT_texture_webp",
+    "KHR_mesh_quantization",
+    "EXT_meshopt_compression"
+   ]
+  }
+ },
+ "budgetsKB": {
+  "coreKB": 350,
+  "detailKB": 150,
+  "contextKB": 600
+ },
+ "source": {
+  "file": "Human_Body_Master.blend",
+  "scene": "01 Complete anatomy",
+  "sha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0",
+  "workingFileSha256": "9fb76d8c5b799d1bf65dc8e865c400299a3cc52fb8bf7ceab8c903a1671187f9"
+ },
+ "attribution": {
+  "status": "pending licence confirmation of the source anatomy asset"
+ },
+ "meshConvention": "Each anatomy node carries extras (structureId, role, tier, side, label) and has exactly one child '<node>__mesh' with extras.meshCarrierFor = structureId holding the quantised mesh. Resolve picks by walking up to the node with extras.structureId and an anatomy role.",
+ "compression": {
+  "geometry": "EXT_meshopt_compression (QUANTIZE) + KHR_mesh_quantization",
+  "positionBits": 14,
+  "normalBits": 10,
+  "texcoordBits": 12,
+  "draco": false,
+  "textures": "WebP fallback (toktx not installed)",
+  "textureQualityGate": {
+   "minPsnrDb": 47,
+   "maxAbsDiff": 6
+  },
+  "textureNote": "Textures are embedded per tier at original resolution (self-contained tiers); identical images repeat across tiers (see sharedTextures)."
+ },
+ "sharedTextures": {
+  "unique": [
+   {
+    "sha256": "2c6f2e1c767edc8f8722cb4f037db59fba1ef4644ee2069f4d2bfe245c7868bf",
+    "name": "Tissue normal | organ",
+    "mime": "image/webp",
+    "bytes": 19986,
+    "size": [
+     512,
+     512
+    ],
+    "tiers": [
+     "core",
+     "detail",
+     "context"
+    ]
+   },
+   {
+    "sha256": "87769ee294605ca6ea6a1b69adbc6c564569f25d3f40891d22c28cc8f43073f7",
+    "name": "Tissue color | bone",
+    "mime": "image/webp",
+    "bytes": 2852,
+    "size": [
+     512,
+     512
+    ],
+    "tiers": [
+     "core",
+     "context"
+    ]
+   },
+   {
+    "sha256": "8161ce4d85389356be03894cdeba194104cab00707122d2441489cf7a527470a",
+    "name": "Tissue color | tendon",
+    "mime": "image/webp",
+    "bytes": 3146,
+    "size": [
+     512,
+     512
+    ],
+    "tiers": [
+     "detail",
+     "context"
+    ]
+   },
+   {
+    "sha256": "33fe11b652671162f8f67a8f8f26bd63eb91585543ba4c293fbf89b42cc62b1a",
+    "name": "Tissue normal | muscle",
+    "mime": "image/webp",
+    "bytes": 91690,
+    "size": [
+     512,
+     512
+    ],
+    "tiers": [
+     "context"
+    ]
+   },
+   {
+    "sha256": "97ba131b76fa35e11a3c9d656dc3b1893f37857441d724047048f92b14ae56ae",
+    "name": "Tissue color | muscle",
+    "mime": "image/webp",
+    "bytes": 3232,
+    "size": [
+     512,
+     512
+    ],
+    "tiers": [
+     "context"
+    ]
+   }
+  ],
+  "uniqueBytes": 120906,
+  "budgetKB": 450
+ },
+ "generatedAt": "2026-09-17T10:07:11.940Z"
+}

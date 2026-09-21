@@ -1,0 +1,53 @@
+[WebServer] [plugin builtin:vite-reporter] 
+[WebServer] (!) Some chunks are larger than 500 kB after minification. Consider:
+[WebServer] - Using dynamic import() to code-split the application
+[WebServer] - Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
+[WebServer] - Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+
+Running 42 tests using 1 worker
+
+  ok  1 tests\e2e\film-visual.spec.ts:31:1 › film visual QA: deterministic frames for every chapter and the elbow poses (27.7s)
+  ok  2 tests\e2e\film.spec.ts:17:3 › video-first lesson (default route) › opens on the full-body intro with the title card, no joint asset, badges and chapter markers (1.2s)
+  ok  3 tests\e2e\film.spec.ts:33:3 › video-first lesson (default route) › play / pause, and the camera travels across a shot boundary into the skull (3.3s)
+  ok  4 tests\e2e\film.spec.ts:59:3 › video-first lesson (default route) › chapter markers seek and reconstruct each section: fixed, pivot, ball-and-socket, hinge (2.5s)
+  ok  5 tests\e2e\film.spec.ts:104:3 › video-first lesson (default route) › elbow hero: plays from 45° to 90°, extension reaches the approximate 145° and returns to 0° (5.5s)
+  ok  6 tests\e2e\film.spec.ts:125:3 › video-first lesson (default route) › recap returns to the full body with all four joint types marked (1.6s)
+  ok  7 tests\e2e\film.spec.ts:149:3 › video-first lesson (default route) › timeline keyboard seeking, replay and reset (1.8s)
+  ok  8 tests\e2e\film.spec.ts:174:3 › video-first lesson (default route) › hinge chapter: dragging the forearm pauses the film, bends the elbow, and the film resumes (8.5s)
+  ok  9 tests\e2e\film.spec.ts:222:3 › video-first lesson (default route) › interactive check: bending to about 90° with the keyboard completes the lesson (2.0s)
+  ok 10 tests\e2e\film.spec.ts:241:3 › video-first lesson (default route) › reduced motion: shot boundaries cut, poses hold keyframes, captions do not animate (2.1s)
+  ok 11 tests\e2e\film.spec.ts:263:3 › video-first lesson (default route) › mobile viewport: no horizontal scroll, controls reachable, subject centred (1.3s)
+  ok 12 tests\e2e\gate3-pose-consistency.spec.ts:15:1 › gate 3: runtime pose consistency vs Blender + landmark status (1.7s)
+  ok 13 tests\e2e\performance.spec.ts:59:1 › development performance measurements (not a device certification) (22.9s)
+  ok 14 tests\e2e\reference-poses.spec.ts:17:1 › reference poses 0/45/90/145: runtime checks + deterministic snapshots (5.7s)
+  ok 15 tests\e2e\smoke.spec.ts:5:3 › elbow vertical slice smoke › application loads and the elbow appears (1.1s)
+  ok 16 tests\e2e\smoke.spec.ts:35:3 › elbow vertical slice smoke › slider (keyboard + pointer) changes pose, 90° is reached, reset returns to 0° (2.2s)
+  ok 17 tests\e2e\smoke.spec.ts:81:3 › elbow vertical slice smoke › dragging the forearm bends the elbow (and does not orbit) (3.3s)
+  ok 18 tests\e2e\smoke.spec.ts:124:3 › elbow vertical slice smoke › dragging a stationary structure orbits the camera (distinct mode) and never changes the pose (2.9s)
+  ok 19 tests\e2e\smoke.spec.ts:144:3 › elbow vertical slice smoke › structures can be selected by click (structureId, pose preserved) (5.6s)
+  ok 20 tests\e2e\smoke.spec.ts:169:3 › elbow vertical slice smoke › camera presets and reduced-motion cut transitions (1.2s)
+  ok 21 tests\e2e\step12-a11y.spec.ts:36:5 › Step 12 accessibility › axe (desktop): intro, dialogs, interactive elbow, quiz, explore (11.9s)
+  ok 22 tests\e2e\step12-a11y.spec.ts:36:5 › Step 12 accessibility › axe (mobile): intro, dialogs, interactive elbow, quiz, explore (12.0s)
+  ok 23 tests\e2e\step12-a11y.spec.ts:80:3 › Step 12 accessibility › keyboard only: the whole lesson can be completed without a pointer (focus visible, no traps, completion announced) (2.8s)
+  ok 24 tests\e2e\step12-a11y.spec.ts:153:3 › Step 12 accessibility › dialogs: focus moves in, Tab stays inside, Escape closes, focus returns to the opener (1.3s)
+  ok 25 tests\e2e\step12-a11y.spec.ts:180:3 › Step 12 accessibility › target size >= 44 px, reflow at 320 px, captions readable (2.6s)
+  ok 26 tests\e2e\step12-a11y.spec.ts:206:3 › Step 12 accessibility › measured text contrast over the rendered scene (not only automated tooling) (20.9s)
+  ok 27 tests\e2e\step12-a11y.spec.ts:276:3 › Step 12 accessibility › live announcements: selection in Explore is announced (1.5s)
+  ok 28 tests\e2e\step12-delivery.spec.ts:30:5 › Step 12 delivery: quality tiers, lazy loading, handover › tier high: selected before the body download, only its files are requested, elbow deferred (1.3s)
+  ok 29 tests\e2e\step12-delivery.spec.ts:30:5 › Step 12 delivery: quality tiers, lazy loading, handover › tier medium: selected before the body download, only its files are requested, elbow deferred (1.2s)
+  ok 30 tests\e2e\step12-delivery.spec.ts:30:5 › Step 12 delivery: quality tiers, lazy loading, handover › tier low: selected before the body download, only its files are requested, elbow deferred (1.2s)
+  ok 31 tests\e2e\step12-delivery.spec.ts:53:3 › Step 12 delivery: quality tiers, lazy loading, handover › the elbow asset loads when the film needs it (seek buffers, then reconstructs); the context tier is never requested (1.4s)
+  ok 32 tests\e2e\step12-delivery.spec.ts:71:3 › Step 12 delivery: quality tiers, lazy loading, handover › learner intent preloads a chapter: focusing the hinge marker fetches the elbow before the jump (1.3s)
+  ok 33 tests\e2e\step12-delivery.spec.ts:81:3 › Step 12 delivery: quality tiers, lazy loading, handover › LOD upgrades are applied only on full-body framing or a cut (never inside a close-up) (2.6s)
+  ok 34 tests\e2e\step12-delivery.spec.ts:94:3 › Step 12 delivery: quality tiers, lazy loading, handover › elbow handover is seamless: no duplicate bones, joint asset aligned with the body at the source pose (1.3s)
+  ok 35 tests\e2e\step12-delivery.spec.ts:121:3 › Step 12 delivery: quality tiers, lazy loading, handover › labels skip layout when nothing moved on screen (1.8s)
+  ok 36 tests\e2e\step12-motion-visual.spec.ts:13:3 › Step 12 reduced motion (entire film) › every shot: cut on entry, no dolly while playing, static indicators, stepped poses, captions without transitions (26.2s)
+  ok 37 tests\e2e\step12-motion-visual.spec.ts:67:3 › Step 12 reduced motion (entire film) › the learner setting overrides the system preference (full motion restores travel) (2.1s)
+  ok 38 tests\e2e\step12-motion-visual.spec.ts:112:5 › Step 12 responsive visual regression › captures + layout checks at 390x844 (17.6s)
+  ok 39 tests\e2e\step12-motion-visual.spec.ts:112:5 › Step 12 responsive visual regression › captures + layout checks at 412x915 (17.6s)
+  ok 40 tests\e2e\step12-motion-visual.spec.ts:112:5 › Step 12 responsive visual regression › captures + layout checks at 768x1024 (18.7s)
+  ok 41 tests\e2e\step12-motion-visual.spec.ts:112:5 › Step 12 responsive visual regression › captures + layout checks at 1280x800 (19.1s)
+  ok 42 tests\e2e\step12-motion-visual.spec.ts:112:5 › Step 12 responsive visual regression › captures + layout checks at 1440x900 (19.7s)
+
+  42 passed (5.0m)
+EXIT 0

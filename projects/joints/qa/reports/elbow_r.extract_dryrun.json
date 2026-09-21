@@ -1,0 +1,3203 @@
+{
+ "summary": {
+  "joint": "elbow_r",
+  "mode": "dry-run",
+  "generated_at": "2026-09-17T13:56:02",
+  "environment": {
+   "blender_version": "5.2.2 LTS",
+   "blender_version_ok": true,
+   "master_sha256_ok": true,
+   "open_file": "C:\\Users\\Admin\\OneDrive - Calance\\Desktop\\Types of Joints\\Human_Body_Master.blend",
+   "open_file_is_master": true
+  },
+  "errors": [],
+  "warnings": [],
+  "structures": 49,
+  "found": 49,
+  "by_tier": {
+   "context": 12,
+   "core": 30,
+   "detail": 7
+  },
+  "by_role": {
+   "attached_soft": 4,
+   "bone_fixed": 1,
+   "bone_moving": 2,
+   "context": 12,
+   "follow": 27,
+   "spanning_soft": 3
+  },
+  "by_collection": {
+   "elbow_r__geo_bone": 3,
+   "elbow_r__geo_capsule": 1,
+   "elbow_r__geo_context": 12,
+   "elbow_r__geo_follow": 27,
+   "elbow_r__geo_ligament": 6
+  },
+  "triangles_by_tier": {
+   "core": 19982,
+   "detail": 5142,
+   "context": 59512
+  },
+  "triangles_total": 84636,
+  "vertices_total": 42446,
+  "source_meshes_shared_with_other_objects": 6,
+  "would_append": {
+   "meshes": 49,
+   "materials": [
+    "PBR | bone",
+    "PBR | cartilage",
+    "PBR | muscle",
+    "PBR | tendon"
+   ],
+   "images": [
+    "Tissue color | bone",
+    "Tissue color | cartilage",
+    "Tissue color | muscle",
+    "Tissue color | tendon",
+    "Tissue normal | muscle",
+    "Tissue normal | organ"
+   ],
+   "node_groups": []
+  },
+  "would_create": {
+   "file": "blender/Joints_Working.blend",
+   "scene": "JOINTS_WORK",
+   "collections": [
+    "JOINTS",
+    "elbow_r",
+    "elbow_r__geo",
+    "elbow_r__rig",
+    "elbow_r__overlay",
+    "elbow_r__qa",
+    "elbow_r__geo_bone",
+    "elbow_r__geo_follow",
+    "elbow_r__geo_capsule",
+    "elbow_r__geo_ligament",
+    "elbow_r__geo_context"
+   ],
+   "objects": 49,
+   "empties": 0,
+   "note": "Rig and overlay empties (elbow_r__rig / __overlay / __qa contents) are created in steps 6-8, not by extraction."
+  },
+  "not_appended": [
+   "source objects (new objects are created for appended meshes)",
+   "system parent empties (e.g. '02 Skeletal system')",
+   "source collections",
+   "other scenes, cameras, lights, worlds",
+   "Cutaway / Organ-study copies"
+  ],
+  "estimates": {
+   "mesh_bytes": 5751516,
+   "packed_image_bytes": 1080108
+  }
+ },
+ "structures": [
+  {
+   "structureId": "humerus_r",
+   "src": "Humerus | Right",
+   "target_object": "elbow_r__bone__humerus",
+   "target_mesh": "elbow_r__bone__humerus__mesh",
+   "target_collection": "elbow_r__geo_bone",
+   "role": "bone_fixed",
+   "tier": "core",
+   "label": "Humerus",
+   "found": true,
+   "object_type": "MESH",
+   "source_collection": "02 Skeletal system",
+   "source_parent": "02 Skeletal system",
+   "world_matrix_identity": true,
+   "source_mesh": "Humerus.002",
+   "source_mesh_users": 1,
+   "source_mesh_shared_with": [],
+   "vertices": 2143,
+   "edges": 6421,
+   "faces": 4280,
+   "triangles": 4280,
+   "uv_layers": [
+    "TissueUV"
+   ],
+   "material_slots": [
+    {
+     "index": 0,
+     "material": "PBR | bone",
+     "link": "DATA",
+     "polygons": 4280
+    },
+    {
+     "index": 1,
+     "material": "PBR | cartilage",
+     "link": "DATA",
+     "polygons": 0
+    }
+   ],
+   "bbox_min": [
+    -0.2488,
+    0.0013,
+    1.087
+   ],
+   "bbox_max": [
+    -0.1446,
+    0.0536,
+    1.4046
+   ],
+   "geometry_sha256": "546b188c87a9665ded05184eb233f2b74c565691eb38b2be8ae52c803610858b",
+   "est_mesh_bytes": 299644,
+   "custom_props_to_set": {
+    "structureId": "humerus_r",
+    "jointId": "elbow_r",
+    "role": "bone_fixed",
+    "tier": "core",
+    "side": "right",
+    "label": "Humerus",
+    "src_object": "Humerus | Right",
+    "src_mesh": "Humerus.002",
+    "src_file_sha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0"
+   }
+  },
+  {
+   "structureId": "radius_r",
+   "src": "Radius | Right",
+   "target_object": "elbow_r__bone__radius",
+   "target_mesh": "elbow_r__bone__radius__mesh",
+   "target_collection": "elbow_r__geo_bone",
+   "role": "bone_moving",
+   "tier": "core",
+   "label": "Radius",
+   "found": true,
+   "object_type": "MESH",
+   "source_collection": "02 Skeletal system",
+   "source_parent": "02 Skeletal system",
+   "world_matrix_identity": true,
+   "source_mesh": "Radius.002",
+   "source_mesh_users": 1,
+   "source_mesh_shared_with": [],
+   "vertices": 394,
+   "edges": 1111,
+   "faces": 719,
+   "triangles": 784,
+   "uv_layers": [
+    "TissueUV"
+   ],
+   "material_slots": [
+    {
+     "index": 0,
+     "material": "PBR | bone",
+     "link": "DATA",
+     "polygons": 719
+    },
+    {
+     "index": 1,
+     "material": "PBR | cartilage",
+     "link": "DATA",
+     "polygons": 0
+    }
+   ],
+   "bbox_min": [
+    -0.2887,
+    -0.0267,
+    0.8563
+   ],
+   "bbox_max": [
+    -0.2269,
+    0.0419,
+    1.0933
+   ],
+   "geometry_sha256": "2e3843c2f693418559d80d3f0e25896d326f179eea47e05ec34307000d1995a1",
+   "est_mesh_bytes": 52044,
+   "custom_props_to_set": {
+    "structureId": "radius_r",
+    "jointId": "elbow_r",
+    "role": "bone_moving",
+    "tier": "core",
+    "side": "right",
+    "label": "Radius",
+    "src_object": "Radius | Right",
+    "src_mesh": "Radius.002",
+    "src_file_sha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0"
+   }
+  },
+  {
+   "structureId": "ulna_r",
+   "src": "Ulna | Right",
+   "target_object": "elbow_r__bone__ulna",
+   "target_mesh": "elbow_r__bone__ulna__mesh",
+   "target_collection": "elbow_r__geo_bone",
+   "role": "bone_moving",
+   "tier": "core",
+   "label": "Ulna",
+   "found": true,
+   "object_type": "MESH",
+   "source_collection": "02 Skeletal system",
+   "source_parent": "02 Skeletal system",
+   "world_matrix_identity": true,
+   "source_mesh": "Ulna.002",
+   "source_mesh_users": 1,
+   "source_mesh_shared_with": [],
+   "vertices": 454,
+   "edges": 1327,
+   "faces": 875,
+   "triangles": 904,
+   "uv_layers": [
+    "TissueUV"
+   ],
+   "material_slots": [
+    {
+     "index": 0,
+     "material": "PBR | bone",
+     "link": "DATA",
+     "polygons": 875
+    },
+    {
+     "index": 1,
+     "material": "PBR | cartilage",
+     "link": "DATA",
+     "polygons": 0
+    }
+   ],
+   "bbox_min": [
+    -0.2556,
+    -0.0229,
+    0.8556
+   ],
+   "bbox_max": [
+    -0.2032,
+    0.0604,
+    1.111
+   ],
+   "geometry_sha256": "02c57c40e20b5dbf8904738b02edbc9e087bd9329125d7ce830444110f7e71ba",
+   "est_mesh_bytes": 62028,
+   "custom_props_to_set": {
+    "structureId": "ulna_r",
+    "jointId": "elbow_r",
+    "role": "bone_moving",
+    "tier": "core",
+    "side": "right",
+    "label": "Ulna",
+    "src_object": "Ulna | Right",
+    "src_mesh": "Ulna.002",
+    "src_file_sha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0"
+   }
+  },
+  {
+   "structureId": "scaphoid_r",
+   "src": "Scaphoid bone | Right",
+   "target_object": "elbow_r__follow__scaphoid",
+   "target_mesh": "elbow_r__follow__scaphoid__mesh",
+   "target_collection": "elbow_r__geo_follow",
+   "role": "follow",
+   "tier": "core",
+   "label": "Scaphoid",
+   "found": true,
+   "object_type": "MESH",
+   "source_collection": "02 Skeletal system",
+   "source_parent": "02 Skeletal system",
+   "world_matrix_identity": true,
+   "source_mesh": "Scaphoid bone.001",
+   "source_mesh_users": 1,
+   "source_mesh_shared_with": [],
+   "vertices": 197,
+   "edges": 585,
+   "faces": 390,
+   "triangles": 390,
+   "uv_layers": [
+    "TissueUV"
+   ],
+   "material_slots": [
+    {
+     "index": 0,
+     "material": "PBR | bone",
+     "link": "DATA",
+     "polygons": 390
+    },
+    {
+     "index": 1,
+     "material": "PBR | cartilage",
+     "link": "DATA",
+     "polygons": 0
+    }
+   ],
+   "bbox_min": [
+    -0.2821,
+    -0.026,
+    0.8465
+   ],
+   "bbox_max": [
+    -0.2575,
+    -0.0101,
+    0.8627
+   ],
+   "geometry_sha256": "07ca7410879b56deb208350732c3e87a8b977d9b89bef410065bd2b2b04865a4",
+   "est_mesh_bytes": 27324,
+   "custom_props_to_set": {
+    "structureId": "scaphoid_r",
+    "jointId": "elbow_r",
+    "role": "follow",
+    "tier": "core",
+    "side": "right",
+    "label": "Scaphoid",
+    "src_object": "Scaphoid bone | Right",
+    "src_mesh": "Scaphoid bone.001",
+    "src_file_sha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0"
+   }
+  },
+  {
+   "structureId": "lunate_r",
+   "src": "Lunate bone | Right",
+   "target_object": "elbow_r__follow__lunate",
+   "target_mesh": "elbow_r__follow__lunate__mesh",
+   "target_collection": "elbow_r__geo_follow",
+   "role": "follow",
+   "tier": "core",
+   "label": "Lunate",
+   "found": true,
+   "object_type": "MESH",
+   "source_collection": "02 Skeletal system",
+   "source_parent": "02 Skeletal system",
+   "world_matrix_identity": true,
+   "source_mesh": "Mesh.130",
+   "source_mesh_users": 1,
+   "source_mesh_shared_with": [],
+   "vertices": 1046,
+   "edges": 2088,
+   "faces": 1044,
+   "triangles": 2088,
+   "uv_layers": [
+    "TissueUV"
+   ],
+   "material_slots": [
+    {
+     "index": 0,
+     "material": "PBR | bone",
+     "link": "DATA",
+     "polygons": 1044
+    },
+    {
+     "index": 1,
+     "material": "PBR | cartilage",
+     "link": "DATA",
+     "polygons": 0
+    }
+   ],
+   "bbox_min": [
+    -0.2611,
+    -0.0261,
+    0.8478
+   ],
+   "bbox_max": [
+    -0.244,
+    -0.0095,
+    0.8605
+   ],
+   "geometry_sha256": "47c3ce99a03a14c6e7695a1c76140e3ddf09f539ecbf99947ed80f7323ae0818",
+   "est_mesh_bytes": 100248,
+   "custom_props_to_set": {
+    "structureId": "lunate_r",
+    "jointId": "elbow_r",
+    "role": "follow",
+    "tier": "core",
+    "side": "right",
+    "label": "Lunate",
+    "src_object": "Lunate bone | Right",
+    "src_mesh": "Mesh.130",
+    "src_file_sha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0"
+   }
+  },
+  {
+   "structureId": "triquetrum_r",
+   "src": "Triquetrum bone | Right",
+   "target_object": "elbow_r__follow__triquetrum",
+   "target_mesh": "elbow_r__follow__triquetrum__mesh",
+   "target_collection": "elbow_r__geo_follow",
+   "role": "follow",
+   "tier": "core",
+   "label": "Triquetrum",
+   "found": true,
+   "object_type": "MESH",
+   "source_collection": "02 Skeletal system",
+   "source_parent": "02 Skeletal system",
+   "world_matrix_identity": true,
+   "source_mesh": "Triquetrum bone.002",
+   "source_mesh_users": 1,
+   "source_mesh_shared_with": [],
+   "vertices": 90,
+   "edges": 264,
+   "faces": 176,
+   "triangles": 176,
+   "uv_layers": [
+    "TissueUV"
+   ],
+   "material_slots": [
+    {
+     "index": 0,
+     "material": "PBR | bone",
+     "link": "DATA",
+     "polygons": 176
+    },
+    {
+     "index": 1,
+     "material": "PBR | cartilage",
+     "link": "DATA",
+     "polygons": 0
+    }
+   ],
+   "bbox_min": [
+    -0.2508,
+    -0.0294,
+    0.8389
+   ],
+   "bbox_max": [
+    -0.2397,
+    -0.0134,
+    0.8532
+   ],
+   "geometry_sha256": "2a7899f192251c396a6abe84025ce7ff883754402e0d1840703773aa83d9ea0e",
+   "est_mesh_bytes": 12344,
+   "custom_props_to_set": {
+    "structureId": "triquetrum_r",
+    "jointId": "elbow_r",
+    "role": "follow",
+    "tier": "core",
+    "side": "right",
+    "label": "Triquetrum",
+    "src_object": "Triquetrum bone | Right",
+    "src_mesh": "Triquetrum bone.002",
+    "src_file_sha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0"
+   }
+  },
+  {
+   "structureId": "pisiform_r",
+   "src": "Pisiform bone | Right",
+   "target_object": "elbow_r__follow__pisiform",
+   "target_mesh": "elbow_r__follow__pisiform__mesh",
+   "target_collection": "elbow_r__geo_follow",
+   "role": "follow",
+   "tier": "core",
+   "label": "Pisiform",
+   "found": true,
+   "object_type": "MESH",
+   "source_collection": "02 Skeletal system",
+   "source_parent": "02 Skeletal system",
+   "world_matrix_identity": true,
+   "source_mesh": "Mesh.157",
+   "source_mesh_users": 1,
+   "source_mesh_shared_with": [],
+   "vertices": 836,
+   "edges": 1668,
+   "faces": 834,
+   "triangles": 1668,
+   "uv_layers": [
+    "TissueUV"
+   ],
+   "material_slots": [
+    {
+     "index": 0,
+     "material": "PBR | bone",
+     "link": "DATA",
+     "polygons": 834
+    },
+    {
+     "index": 1,
+     "material": "PBR | cartilage",
+     "link": "DATA",
+     "polygons": 0
+    }
+   ],
+   "bbox_min": [
+    -0.2481,
+    -0.0373,
+    0.8398
+   ],
+   "bbox_max": [
+    -0.2396,
+    -0.0269,
+    0.8519
+   ],
+   "geometry_sha256": "03ae618e5eccab6f9790fa77a78f962e68c0bfa6d2e89b34809f2611ef32d1e7",
+   "est_mesh_bytes": 80088,
+   "custom_props_to_set": {
+    "structureId": "pisiform_r",
+    "jointId": "elbow_r",
+    "role": "follow",
+    "tier": "core",
+    "side": "right",
+    "label": "Pisiform",
+    "src_object": "Pisiform bone | Right",
+    "src_mesh": "Mesh.157",
+    "src_file_sha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0"
+   }
+  },
+  {
+   "structureId": "trapezium_r",
+   "src": "Trapezium bone | Right",
+   "target_object": "elbow_r__follow__trapezium",
+   "target_mesh": "elbow_r__follow__trapezium__mesh",
+   "target_collection": "elbow_r__geo_follow",
+   "role": "follow",
+   "tier": "core",
+   "label": "Trapezium",
+   "found": true,
+   "object_type": "MESH",
+   "source_collection": "02 Skeletal system",
+   "source_parent": "02 Skeletal system",
+   "world_matrix_identity": true,
+   "source_mesh": "Trapezium bone.002",
+   "source_mesh_users": 1,
+   "source_mesh_shared_with": [],
+   "vertices": 252,
+   "edges": 750,
+   "faces": 500,
+   "triangles": 500,
+   "uv_layers": [
+    "TissueUV"
+   ],
+   "material_slots": [
+    {
+     "index": 0,
+     "material": "PBR | bone",
+     "link": "DATA",
+     "polygons": 500
+    },
+    {
+     "index": 1,
+     "material": "PBR | cartilage",
+     "link": "DATA",
+     "polygons": 0
+    }
+   ],
+   "bbox_min": [
+    -0.2911,
+    -0.0342,
+    0.8357
+   ],
+   "bbox_max": [
+    -0.2734,
+    -0.0167,
+    0.8565
+   ],
+   "geometry_sha256": "daa9eb7f69ef7494b385de2ba01fc995accfa74446566472345dc329030eb601",
+   "est_mesh_bytes": 35024,
+   "custom_props_to_set": {
+    "structureId": "trapezium_r",
+    "jointId": "elbow_r",
+    "role": "follow",
+    "tier": "core",
+    "side": "right",
+    "label": "Trapezium",
+    "src_object": "Trapezium bone | Right",
+    "src_mesh": "Trapezium bone.002",
+    "src_file_sha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0"
+   }
+  },
+  {
+   "structureId": "trapezoid_r",
+   "src": "Trapezoid bone | Right",
+   "target_object": "elbow_r__follow__trapezoid",
+   "target_mesh": "elbow_r__follow__trapezoid__mesh",
+   "target_collection": "elbow_r__geo_follow",
+   "role": "follow",
+   "tier": "core",
+   "label": "Trapezoid",
+   "found": true,
+   "object_type": "MESH",
+   "source_collection": "02 Skeletal system",
+   "source_parent": "02 Skeletal system",
+   "world_matrix_identity": true,
+   "source_mesh": "Trapezoid bone.002",
+   "source_mesh_users": 1,
+   "source_mesh_shared_with": [],
+   "vertices": 184,
+   "edges": 546,
+   "faces": 364,
+   "triangles": 364,
+   "uv_layers": [
+    "TissueUV"
+   ],
+   "material_slots": [
+    {
+     "index": 0,
+     "material": "PBR | bone",
+     "link": "DATA",
+     "polygons": 364
+    },
+    {
+     "index": 1,
+     "material": "PBR | cartilage",
+     "link": "DATA",
+     "polygons": 0
+    }
+   ],
+   "bbox_min": [
+    -0.2824,
+    -0.0278,
+    0.8326
+   ],
+   "bbox_max": [
+    -0.2707,
+    -0.0123,
+    0.8457
+   ],
+   "geometry_sha256": "8739f0c775d531521cdc2d18e1d2b8867df6791ac45e80cfb86092d0c4df8ec7",
+   "est_mesh_bytes": 25504,
+   "custom_props_to_set": {
+    "structureId": "trapezoid_r",
+    "jointId": "elbow_r",
+    "role": "follow",
+    "tier": "core",
+    "side": "right",
+    "label": "Trapezoid",
+    "src_object": "Trapezoid bone | Right",
+    "src_mesh": "Trapezoid bone.002",
+    "src_file_sha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0"
+   }
+  },
+  {
+   "structureId": "capitate_r",
+   "src": "Capitate bone | Right",
+   "target_object": "elbow_r__follow__capitate",
+   "target_mesh": "elbow_r__follow__capitate__mesh",
+   "target_collection": "elbow_r__geo_follow",
+   "role": "follow",
+   "tier": "core",
+   "label": "Capitate",
+   "found": true,
+   "object_type": "MESH",
+   "source_collection": "02 Skeletal system",
+   "source_parent": "02 Skeletal system",
+   "world_matrix_identity": true,
+   "source_mesh": "Capitate bone.002",
+   "source_mesh_users": 1,
+   "source_mesh_shared_with": [],
+   "vertices": 238,
+   "edges": 706,
+   "faces": 470,
+   "triangles": 472,
+   "uv_layers": [
+    "TissueUV"
+   ],
+   "material_slots": [
+    {
+     "index": 0,
+     "material": "PBR | bone",
+     "link": "DATA",
+     "polygons": 470
+    },
+    {
+     "index": 1,
+     "material": "PBR | cartilage",
+     "link": "DATA",
+     "polygons": 0
+    }
+   ],
+   "bbox_min": [
+    -0.2732,
+    -0.0269,
+    0.8319
+   ],
+   "bbox_max": [
+    -0.2565,
+    -0.009,
+    0.8553
+   ],
+   "geometry_sha256": "881c46bddcc4f0f9b1bb05b2648256c973f4293afc8430c94945f0c97c86ecad",
+   "est_mesh_bytes": 32976,
+   "custom_props_to_set": {
+    "structureId": "capitate_r",
+    "jointId": "elbow_r",
+    "role": "follow",
+    "tier": "core",
+    "side": "right",
+    "label": "Capitate",
+    "src_object": "Capitate bone | Right",
+    "src_mesh": "Capitate bone.002",
+    "src_file_sha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0"
+   }
+  },
+  {
+   "structureId": "hamate_r",
+   "src": "Hamate bone | Right",
+   "target_object": "elbow_r__follow__hamate",
+   "target_mesh": "elbow_r__follow__hamate__mesh",
+   "target_collection": "elbow_r__geo_follow",
+   "role": "follow",
+   "tier": "core",
+   "label": "Hamate",
+   "found": true,
+   "object_type": "MESH",
+   "source_collection": "02 Skeletal system",
+   "source_parent": "02 Skeletal system",
+   "world_matrix_identity": true,
+   "source_mesh": "Hamate bone.002",
+   "source_mesh_users": 1,
+   "source_mesh_shared_with": [],
+   "vertices": 270,
+   "edges": 804,
+   "faces": 536,
+   "triangles": 536,
+   "uv_layers": [
+    "TissueUV"
+   ],
+   "material_slots": [
+    {
+     "index": 0,
+     "material": "PBR | bone",
+     "link": "DATA",
+     "polygons": 536
+    },
+    {
+     "index": 1,
+     "material": "PBR | cartilage",
+     "link": "DATA",
+     "polygons": 0
+    }
+   ],
+   "bbox_min": [
+    -0.2603,
+    -0.0335,
+    0.8309
+   ],
+   "bbox_max": [
+    -0.2442,
+    -0.0101,
+    0.8511
+   ],
+   "geometry_sha256": "5c592b16c6e4ca0e14da97f769fcce34de010d0b22620dfa9750d82e7ed7c526",
+   "est_mesh_bytes": 37544,
+   "custom_props_to_set": {
+    "structureId": "hamate_r",
+    "jointId": "elbow_r",
+    "role": "follow",
+    "tier": "core",
+    "side": "right",
+    "label": "Hamate",
+    "src_object": "Hamate bone | Right",
+    "src_mesh": "Hamate bone.002",
+    "src_file_sha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0"
+   }
+  },
+  {
+   "structureId": "metacarpal_1_r",
+   "src": "First metacarpal bone | Right",
+   "target_object": "elbow_r__follow__metacarpal_1",
+   "target_mesh": "elbow_r__follow__metacarpal_1__mesh",
+   "target_collection": "elbow_r__geo_follow",
+   "role": "follow",
+   "tier": "core",
+   "label": "First metacarpal",
+   "found": true,
+   "object_type": "MESH",
+   "source_collection": "02 Skeletal system",
+   "source_parent": "02 Skeletal system",
+   "world_matrix_identity": true,
+   "source_mesh": "First metacarpal bone.002",
+   "source_mesh_users": 1,
+   "source_mesh_shared_with": [],
+   "vertices": 343,
+   "edges": 1023,
+   "faces": 682,
+   "triangles": 682,
+   "uv_layers": [
+    "TissueUV"
+   ],
+   "material_slots": [
+    {
+     "index": 0,
+     "material": "PBR | bone",
+     "link": "DATA",
+     "polygons": 682
+    },
+    {
+     "index": 1,
+     "material": "PBR | cartilage",
+     "link": "DATA",
+     "polygons": 0
+    }
+   ],
+   "bbox_min": [
+    -0.3198,
+    -0.054,
+    0.8094
+   ],
+   "bbox_max": [
+    -0.2812,
+    -0.0226,
+    0.8477
+   ],
+   "geometry_sha256": "67e2e6d7255f42e916954820bb157ae8b0df87eb3c5d7523de734c1922ae82e6",
+   "est_mesh_bytes": 47764,
+   "custom_props_to_set": {
+    "structureId": "metacarpal_1_r",
+    "jointId": "elbow_r",
+    "role": "follow",
+    "tier": "core",
+    "side": "right",
+    "label": "First metacarpal",
+    "src_object": "First metacarpal bone | Right",
+    "src_mesh": "First metacarpal bone.002",
+    "src_file_sha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0"
+   }
+  },
+  {
+   "structureId": "metacarpal_2_r",
+   "src": "Second metacarpal bone | Right",
+   "target_object": "elbow_r__follow__metacarpal_2",
+   "target_mesh": "elbow_r__follow__metacarpal_2__mesh",
+   "target_collection": "elbow_r__geo_follow",
+   "role": "follow",
+   "tier": "core",
+   "label": "Second metacarpal",
+   "found": true,
+   "object_type": "MESH",
+   "source_collection": "02 Skeletal system",
+   "source_parent": "02 Skeletal system",
+   "world_matrix_identity": true,
+   "source_mesh": "Second metacarpal bone.002",
+   "source_mesh_users": 1,
+   "source_mesh_shared_with": [],
+   "vertices": 384,
+   "edges": 1146,
+   "faces": 764,
+   "triangles": 764,
+   "uv_layers": [
+    "TissueUV"
+   ],
+   "material_slots": [
+    {
+     "index": 0,
+     "material": "PBR | bone",
+     "link": "DATA",
+     "polygons": 764
+    },
+    {
+     "index": 1,
+     "material": "PBR | cartilage",
+     "link": "DATA",
+     "polygons": 0
+    }
+   ],
+   "bbox_min": [
+    -0.3024,
+    -0.0426,
+    0.7665
+   ],
+   "bbox_max": [
+    -0.2703,
+    -0.0159,
+    0.8371
+   ],
+   "geometry_sha256": "84cbd5ae372c95ec92937e503cf0a210a6d4055c04cabf89179380950db1b56c",
+   "est_mesh_bytes": 53504,
+   "custom_props_to_set": {
+    "structureId": "metacarpal_2_r",
+    "jointId": "elbow_r",
+    "role": "follow",
+    "tier": "core",
+    "side": "right",
+    "label": "Second metacarpal",
+    "src_object": "Second metacarpal bone | Right",
+    "src_mesh": "Second metacarpal bone.002",
+    "src_file_sha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0"
+   }
+  },
+  {
+   "structureId": "metacarpal_3_r",
+   "src": "Third metacarpal bone | Right",
+   "target_object": "elbow_r__follow__metacarpal_3",
+   "target_mesh": "elbow_r__follow__metacarpal_3__mesh",
+   "target_collection": "elbow_r__geo_follow",
+   "role": "follow",
+   "tier": "core",
+   "label": "Third metacarpal",
+   "found": true,
+   "object_type": "MESH",
+   "source_collection": "02 Skeletal system",
+   "source_parent": "02 Skeletal system",
+   "world_matrix_identity": true,
+   "source_mesh": "Third metacarpal bone.002",
+   "source_mesh_users": 1,
+   "source_mesh_shared_with": [],
+   "vertices": 356,
+   "edges": 1062,
+   "faces": 708,
+   "triangles": 708,
+   "uv_layers": [
+    "TissueUV"
+   ],
+   "material_slots": [
+    {
+     "index": 0,
+     "material": "PBR | bone",
+     "link": "DATA",
+     "polygons": 708
+    },
+    {
+     "index": 1,
+     "material": "PBR | cartilage",
+     "link": "DATA",
+     "polygons": 0
+    }
+   ],
+   "bbox_min": [
+    -0.2814,
+    -0.0427,
+    0.7686
+   ],
+   "bbox_max": [
+    -0.2606,
+    -0.011,
+    0.8353
+   ],
+   "geometry_sha256": "809ccaf96fd1014c6ae65385ad039759538006a98939bb3d82c65783ab6fb443",
+   "est_mesh_bytes": 49584,
+   "custom_props_to_set": {
+    "structureId": "metacarpal_3_r",
+    "jointId": "elbow_r",
+    "role": "follow",
+    "tier": "core",
+    "side": "right",
+    "label": "Third metacarpal",
+    "src_object": "Third metacarpal bone | Right",
+    "src_mesh": "Third metacarpal bone.002",
+    "src_file_sha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0"
+   }
+  },
+  {
+   "structureId": "metacarpal_4_r",
+   "src": "Fourth metacarpal bone | Right",
+   "target_object": "elbow_r__follow__metacarpal_4",
+   "target_mesh": "elbow_r__follow__metacarpal_4__mesh",
+   "target_collection": "elbow_r__geo_follow",
+   "role": "follow",
+   "tier": "core",
+   "label": "Fourth metacarpal",
+   "found": true,
+   "object_type": "MESH",
+   "source_collection": "02 Skeletal system",
+   "source_parent": "02 Skeletal system",
+   "world_matrix_identity": true,
+   "source_mesh": "Fourth metacarpal bone.002",
+   "source_mesh_users": 1,
+   "source_mesh_shared_with": [],
+   "vertices": 323,
+   "edges": 963,
+   "faces": 642,
+   "triangles": 642,
+   "uv_layers": [
+    "TissueUV"
+   ],
+   "material_slots": [
+    {
+     "index": 0,
+     "material": "PBR | bone",
+     "link": "DATA",
+     "polygons": 642
+    },
+    {
+     "index": 1,
+     "material": "PBR | cartilage",
+     "link": "DATA",
+     "polygons": 0
+    }
+   ],
+   "bbox_min": [
+    -0.2623,
+    -0.0419,
+    0.7731
+   ],
+   "bbox_max": [
+    -0.2492,
+    -0.0147,
+    0.8352
+   ],
+   "geometry_sha256": "566b7bbd575fd9f70c419c902d128a6e8884ba9506e949a699fa01ebb1b6dc9c",
+   "est_mesh_bytes": 44964,
+   "custom_props_to_set": {
+    "structureId": "metacarpal_4_r",
+    "jointId": "elbow_r",
+    "role": "follow",
+    "tier": "core",
+    "side": "right",
+    "label": "Fourth metacarpal",
+    "src_object": "Fourth metacarpal bone | Right",
+    "src_mesh": "Fourth metacarpal bone.002",
+    "src_file_sha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0"
+   }
+  },
+  {
+   "structureId": "metacarpal_5_r",
+   "src": "Fifth metacarpal bone | Right",
+   "target_object": "elbow_r__follow__metacarpal_5",
+   "target_mesh": "elbow_r__follow__metacarpal_5__mesh",
+   "target_collection": "elbow_r__geo_follow",
+   "role": "follow",
+   "tier": "core",
+   "label": "Fifth metacarpal",
+   "found": true,
+   "object_type": "MESH",
+   "source_collection": "02 Skeletal system",
+   "source_parent": "02 Skeletal system",
+   "world_matrix_identity": true,
+   "source_mesh": "Fifth metacarpal bone.002",
+   "source_mesh_users": 1,
+   "source_mesh_shared_with": [],
+   "vertices": 258,
+   "edges": 759,
+   "faces": 503,
+   "triangles": 512,
+   "uv_layers": [
+    "TissueUV"
+   ],
+   "material_slots": [
+    {
+     "index": 0,
+     "material": "PBR | bone",
+     "link": "DATA",
+     "polygons": 503
+    },
+    {
+     "index": 1,
+     "material": "PBR | cartilage",
+     "link": "DATA",
+     "polygons": 0
+    }
+   ],
+   "bbox_min": [
+    -0.2534,
+    -0.0444,
+    0.7801
+   ],
+   "bbox_max": [
+    -0.2325,
+    -0.0189,
+    0.8371
+   ],
+   "geometry_sha256": "db7e1fcbe323a4d5b392591cd2ff1214db3dab8c3da291fbf8d0f2d90841b919",
+   "est_mesh_bytes": 35468,
+   "custom_props_to_set": {
+    "structureId": "metacarpal_5_r",
+    "jointId": "elbow_r",
+    "role": "follow",
+    "tier": "core",
+    "side": "right",
+    "label": "Fifth metacarpal",
+    "src_object": "Fifth metacarpal bone | Right",
+    "src_mesh": "Fifth metacarpal bone.002",
+    "src_file_sha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0"
+   }
+  },
+  {
+   "structureId": "proximal_phalanx_hand_1_r",
+   "src": "Proximal phalanx of first finger of hand | Right",
+   "target_object": "elbow_r__follow__proximal_phalanx_hand_1",
+   "target_mesh": "elbow_r__follow__proximal_phalanx_hand_1__mesh",
+   "target_collection": "elbow_r__geo_follow",
+   "role": "follow",
+   "tier": "core",
+   "label": "Proximal phalanx (thumb)",
+   "found": true,
+   "object_type": "MESH",
+   "source_collection": "02 Skeletal system",
+   "source_parent": "02 Skeletal system",
+   "world_matrix_identity": true,
+   "source_mesh": "Proximal phalanx of first finger of hand.002",
+   "source_mesh_users": 1,
+   "source_mesh_shared_with": [],
+   "vertices": 166,
+   "edges": 492,
+   "faces": 328,
+   "triangles": 328,
+   "uv_layers": [
+    "TissueUV"
+   ],
+   "material_slots": [
+    {
+     "index": 0,
+     "material": "PBR | bone",
+     "link": "DATA",
+     "polygons": 328
+    },
+    {
+     "index": 1,
+     "material": "PBR | cartilage",
+     "link": "DATA",
+     "polygons": 0
+    }
+   ],
+   "bbox_min": [
+    -0.3293,
+    -0.0654,
+    0.7839
+   ],
+   "bbox_max": [
+    -0.3084,
+    -0.0423,
+    0.8165
+   ],
+   "geometry_sha256": "c9da4dbe17047d5ba506ffbd1da3c594c7a407670490db93bbf023d5ed7994a2",
+   "est_mesh_bytes": 22984,
+   "custom_props_to_set": {
+    "structureId": "proximal_phalanx_hand_1_r",
+    "jointId": "elbow_r",
+    "role": "follow",
+    "tier": "core",
+    "side": "right",
+    "label": "Proximal phalanx (thumb)",
+    "src_object": "Proximal phalanx of first finger of hand | Right",
+    "src_mesh": "Proximal phalanx of first finger of hand.002",
+    "src_file_sha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0"
+   }
+  },
+  {
+   "structureId": "proximal_phalanx_hand_2_r",
+   "src": "Proximal phalanx of second finger of hand | Right",
+   "target_object": "elbow_r__follow__proximal_phalanx_hand_2",
+   "target_mesh": "elbow_r__follow__proximal_phalanx_hand_2__mesh",
+   "target_collection": "elbow_r__geo_follow",
+   "role": "follow",
+   "tier": "core",
+   "label": "Proximal phalanx (index)",
+   "found": true,
+   "object_type": "MESH",
+   "source_collection": "02 Skeletal system",
+   "source_parent": "02 Skeletal system",
+   "world_matrix_identity": true,
+   "source_mesh": "Proximal phalanx of second finger of hand.002",
+   "source_mesh_users": 1,
+   "source_mesh_shared_with": [],
+   "vertices": 209,
+   "edges": 621,
+   "faces": 414,
+   "triangles": 414,
+   "uv_layers": [
+    "TissueUV"
+   ],
+   "material_slots": [
+    {
+     "index": 0,
+     "material": "PBR | bone",
+     "link": "DATA",
+     "polygons": 414
+    },
+    {
+     "index": 1,
+     "material": "PBR | cartilage",
+     "link": "DATA",
+     "polygons": 0
+    }
+   ],
+   "bbox_min": [
+    -0.3127,
+    -0.0572,
+    0.7324
+   ],
+   "bbox_max": [
+    -0.29,
+    -0.0335,
+    0.7713
+   ],
+   "geometry_sha256": "c3de35b28620aa2c2c0eb847ddbdf532d8f500f791c456f93543b7838e34d274",
+   "est_mesh_bytes": 29004,
+   "custom_props_to_set": {
+    "structureId": "proximal_phalanx_hand_2_r",
+    "jointId": "elbow_r",
+    "role": "follow",
+    "tier": "core",
+    "side": "right",
+    "label": "Proximal phalanx (index)",
+    "src_object": "Proximal phalanx of second finger of hand | Right",
+    "src_mesh": "Proximal phalanx of second finger of hand.002",
+    "src_file_sha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0"
+   }
+  },
+  {
+   "structureId": "proximal_phalanx_hand_3_r",
+   "src": "Proximal phalanx of third finger of hand | Right",
+   "target_object": "elbow_r__follow__proximal_phalanx_hand_3",
+   "target_mesh": "elbow_r__follow__proximal_phalanx_hand_3__mesh",
+   "target_collection": "elbow_r__geo_follow",
+   "role": "follow",
+   "tier": "core",
+   "label": "Proximal phalanx (middle)",
+   "found": true,
+   "object_type": "MESH",
+   "source_collection": "02 Skeletal system",
+   "source_parent": "02 Skeletal system",
+   "world_matrix_identity": true,
+   "source_mesh": "Proximal phalanx of third finger of hand.002",
+   "source_mesh_users": 1,
+   "source_mesh_shared_with": [],
+   "vertices": 222,
+   "edges": 659,
+   "faces": 439,
+   "triangles": 440,
+   "uv_layers": [
+    "TissueUV"
+   ],
+   "material_slots": [
+    {
+     "index": 0,
+     "material": "PBR | bone",
+     "link": "DATA",
+     "polygons": 439
+    },
+    {
+     "index": 1,
+     "material": "PBR | cartilage",
+     "link": "DATA",
+     "polygons": 0
+    }
+   ],
+   "bbox_min": [
+    -0.2866,
+    -0.0648,
+    0.7308
+   ],
+   "bbox_max": [
+    -0.2677,
+    -0.0346,
+    0.773
+   ],
+   "geometry_sha256": "3f7de1421a181e9b96e5bfb7880e3747d3398370087f4a5f5652881d7a654198",
+   "est_mesh_bytes": 30780,
+   "custom_props_to_set": {
+    "structureId": "proximal_phalanx_hand_3_r",
+    "jointId": "elbow_r",
+    "role": "follow",
+    "tier": "core",
+    "side": "right",
+    "label": "Proximal phalanx (middle)",
+    "src_object": "Proximal phalanx of third finger of hand | Right",
+    "src_mesh": "Proximal phalanx of third finger of hand.002",
+    "src_file_sha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0"
+   }
+  },
+  {
+   "structureId": "proximal_phalanx_hand_4_r",
+   "src": "Proximal phalanx of fourth finger of hand | Right",
+   "target_object": "elbow_r__follow__proximal_phalanx_hand_4",
+   "target_mesh": "elbow_r__follow__proximal_phalanx_hand_4__mesh",
+   "target_collection": "elbow_r__geo_follow",
+   "role": "follow",
+   "tier": "core",
+   "label": "Proximal phalanx (ring)",
+   "found": true,
+   "object_type": "MESH",
+   "source_collection": "02 Skeletal system",
+   "source_parent": "02 Skeletal system",
+   "world_matrix_identity": true,
+   "source_mesh": "Proximal phalanx of fourth finger of hand.002",
+   "source_mesh_users": 1,
+   "source_mesh_shared_with": [],
+   "vertices": 186,
+   "edges": 552,
+   "faces": 368,
+   "triangles": 368,
+   "uv_layers": [
+    "TissueUV"
+   ],
+   "material_slots": [
+    {
+     "index": 0,
+     "material": "PBR | bone",
+     "link": "DATA",
+     "polygons": 368
+    },
+    {
+     "index": 1,
+     "material": "PBR | cartilage",
+     "link": "DATA",
+     "polygons": 0
+    }
+   ],
+   "bbox_min": [
+    -0.2622,
+    -0.0624,
+    0.7367
+   ],
+   "bbox_max": [
+    -0.2482,
+    -0.0351,
+    0.7771
+   ],
+   "geometry_sha256": "60aadf7007ee48f660a08a5ad5ac9d043abcb7f07a5ba8afe13446ef6ae9a5ef",
+   "est_mesh_bytes": 25784,
+   "custom_props_to_set": {
+    "structureId": "proximal_phalanx_hand_4_r",
+    "jointId": "elbow_r",
+    "role": "follow",
+    "tier": "core",
+    "side": "right",
+    "label": "Proximal phalanx (ring)",
+    "src_object": "Proximal phalanx of fourth finger of hand | Right",
+    "src_mesh": "Proximal phalanx of fourth finger of hand.002",
+    "src_file_sha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0"
+   }
+  },
+  {
+   "structureId": "proximal_phalanx_hand_5_r",
+   "src": "Proximal phalanx of fifth finger of hand | Right",
+   "target_object": "elbow_r__follow__proximal_phalanx_hand_5",
+   "target_mesh": "elbow_r__follow__proximal_phalanx_hand_5__mesh",
+   "target_collection": "elbow_r__geo_follow",
+   "role": "follow",
+   "tier": "core",
+   "label": "Proximal phalanx (little)",
+   "found": true,
+   "object_type": "MESH",
+   "source_collection": "02 Skeletal system",
+   "source_parent": "02 Skeletal system",
+   "world_matrix_identity": true,
+   "source_mesh": "Proximal phalanx of fifth finger of hand.002",
+   "source_mesh_users": 1,
+   "source_mesh_shared_with": [],
+   "vertices": 282,
+   "edges": 840,
+   "faces": 560,
+   "triangles": 560,
+   "uv_layers": [
+    "TissueUV"
+   ],
+   "material_slots": [
+    {
+     "index": 0,
+     "material": "PBR | bone",
+     "link": "DATA",
+     "polygons": 560
+    },
+    {
+     "index": 1,
+     "material": "PBR | cartilage",
+     "link": "DATA",
+     "polygons": 0
+    }
+   ],
+   "bbox_min": [
+    -0.2442,
+    -0.0598,
+    0.7505
+   ],
+   "bbox_max": [
+    -0.2294,
+    -0.0382,
+    0.7843
+   ],
+   "geometry_sha256": "e49d9a75f0361bcbfed95f6498295cf08cd3f6809a1d2f28746ff5a560090fc1",
+   "est_mesh_bytes": 39224,
+   "custom_props_to_set": {
+    "structureId": "proximal_phalanx_hand_5_r",
+    "jointId": "elbow_r",
+    "role": "follow",
+    "tier": "core",
+    "side": "right",
+    "label": "Proximal phalanx (little)",
+    "src_object": "Proximal phalanx of fifth finger of hand | Right",
+    "src_mesh": "Proximal phalanx of fifth finger of hand.002",
+    "src_file_sha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0"
+   }
+  },
+  {
+   "structureId": "middle_phalanx_hand_2_r",
+   "src": "Middle phalanx of second finger of hand | Right",
+   "target_object": "elbow_r__follow__middle_phalanx_hand_2",
+   "target_mesh": "elbow_r__follow__middle_phalanx_hand_2__mesh",
+   "target_collection": "elbow_r__geo_follow",
+   "role": "follow",
+   "tier": "core",
+   "label": "Middle phalanx (index)",
+   "found": true,
+   "object_type": "MESH",
+   "source_collection": "02 Skeletal system",
+   "source_parent": "02 Skeletal system",
+   "world_matrix_identity": true,
+   "source_mesh": "Middle phalanx of second finger of hand.002",
+   "source_mesh_users": 1,
+   "source_mesh_shared_with": [],
+   "vertices": 159,
+   "edges": 471,
+   "faces": 314,
+   "triangles": 314,
+   "uv_layers": [
+    "TissueUV"
+   ],
+   "material_slots": [
+    {
+     "index": 0,
+     "material": "PBR | bone",
+     "link": "DATA",
+     "polygons": 314
+    },
+    {
+     "index": 1,
+     "material": "PBR | cartilage",
+     "link": "DATA",
+     "polygons": 0
+    }
+   ],
+   "bbox_min": [
+    -0.3192,
+    -0.0728,
+    0.7171
+   ],
+   "bbox_max": [
+    -0.304,
+    -0.0512,
+    0.7384
+   ],
+   "geometry_sha256": "ed2787ae8cea9f7abd155a97e20865a24a512775239f03e2f6a44c46c5587fa9",
+   "est_mesh_bytes": 22004,
+   "custom_props_to_set": {
+    "structureId": "middle_phalanx_hand_2_r",
+    "jointId": "elbow_r",
+    "role": "follow",
+    "tier": "core",
+    "side": "right",
+    "label": "Middle phalanx (index)",
+    "src_object": "Middle phalanx of second finger of hand | Right",
+    "src_mesh": "Middle phalanx of second finger of hand.002",
+    "src_file_sha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0"
+   }
+  },
+  {
+   "structureId": "middle_phalanx_hand_3_r",
+   "src": "Middle phalanx of third finger of hand | Right",
+   "target_object": "elbow_r__follow__middle_phalanx_hand_3",
+   "target_mesh": "elbow_r__follow__middle_phalanx_hand_3__mesh",
+   "target_collection": "elbow_r__geo_follow",
+   "role": "follow",
+   "tier": "core",
+   "label": "Middle phalanx (middle)",
+   "found": true,
+   "object_type": "MESH",
+   "source_collection": "02 Skeletal system",
+   "source_parent": "02 Skeletal system",
+   "world_matrix_identity": true,
+   "source_mesh": "Middle phalanx of third finger of hand.002",
+   "source_mesh_users": 1,
+   "source_mesh_shared_with": [],
+   "vertices": 182,
+   "edges": 540,
+   "faces": 360,
+   "triangles": 360,
+   "uv_layers": [
+    "TissueUV"
+   ],
+   "material_slots": [
+    {
+     "index": 0,
+     "material": "PBR | bone",
+     "link": "DATA",
+     "polygons": 360
+    },
+    {
+     "index": 1,
+     "material": "PBR | cartilage",
+     "link": "DATA",
+     "polygons": 0
+    }
+   ],
+   "bbox_min": [
+    -0.2895,
+    -0.0818,
+    0.7083
+   ],
+   "bbox_max": [
+    -0.2753,
+    -0.058,
+    0.7345
+   ],
+   "geometry_sha256": "b9fe1ca26f68f5cde4e710cac586a6bbc3ea866bf045086feda8b289a7eb37bb",
+   "est_mesh_bytes": 25224,
+   "custom_props_to_set": {
+    "structureId": "middle_phalanx_hand_3_r",
+    "jointId": "elbow_r",
+    "role": "follow",
+    "tier": "core",
+    "side": "right",
+    "label": "Middle phalanx (middle)",
+    "src_object": "Middle phalanx of third finger of hand | Right",
+    "src_mesh": "Middle phalanx of third finger of hand.002",
+    "src_file_sha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0"
+   }
+  },
+  {
+   "structureId": "middle_phalanx_hand_4_r",
+   "src": "Middle phalanx of fourth finger of hand | Right",
+   "target_object": "elbow_r__follow__middle_phalanx_hand_4",
+   "target_mesh": "elbow_r__follow__middle_phalanx_hand_4__mesh",
+   "target_collection": "elbow_r__geo_follow",
+   "role": "follow",
+   "tier": "core",
+   "label": "Middle phalanx (ring)",
+   "found": true,
+   "object_type": "MESH",
+   "source_collection": "02 Skeletal system",
+   "source_parent": "02 Skeletal system",
+   "world_matrix_identity": true,
+   "source_mesh": "Middle phalanx of fourth finger of hand.002",
+   "source_mesh_users": 1,
+   "source_mesh_shared_with": [],
+   "vertices": 225,
+   "edges": 669,
+   "faces": 446,
+   "triangles": 446,
+   "uv_layers": [
+    "TissueUV"
+   ],
+   "material_slots": [
+    {
+     "index": 0,
+     "material": "PBR | bone",
+     "link": "DATA",
+     "polygons": 446
+    },
+    {
+     "index": 1,
+     "material": "PBR | cartilage",
+     "link": "DATA",
+     "polygons": 0
+    }
+   ],
+   "bbox_min": [
+    -0.2631,
+    -0.0817,
+    0.7159
+   ],
+   "bbox_max": [
+    -0.2505,
+    -0.0566,
+    0.7407
+   ],
+   "geometry_sha256": "aa7ffe5ced056a73537784dccfbd2d52e844fdff10d934ea9d51639130323fa8",
+   "est_mesh_bytes": 31244,
+   "custom_props_to_set": {
+    "structureId": "middle_phalanx_hand_4_r",
+    "jointId": "elbow_r",
+    "role": "follow",
+    "tier": "core",
+    "side": "right",
+    "label": "Middle phalanx (ring)",
+    "src_object": "Middle phalanx of fourth finger of hand | Right",
+    "src_mesh": "Middle phalanx of fourth finger of hand.002",
+    "src_file_sha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0"
+   }
+  },
+  {
+   "structureId": "middle_phalanx_hand_5_r",
+   "src": "Middle phalanx of fifth finger of hand | Right",
+   "target_object": "elbow_r__follow__middle_phalanx_hand_5",
+   "target_mesh": "elbow_r__follow__middle_phalanx_hand_5__mesh",
+   "target_collection": "elbow_r__geo_follow",
+   "role": "follow",
+   "tier": "core",
+   "label": "Middle phalanx (little)",
+   "found": true,
+   "object_type": "MESH",
+   "source_collection": "02 Skeletal system",
+   "source_parent": "02 Skeletal system",
+   "world_matrix_identity": true,
+   "source_mesh": "Middle phalanx of fifth finger of hand.002",
+   "source_mesh_users": 1,
+   "source_mesh_shared_with": [],
+   "vertices": 148,
+   "edges": 438,
+   "faces": 292,
+   "triangles": 292,
+   "uv_layers": [
+    "TissueUV"
+   ],
+   "material_slots": [
+    {
+     "index": 0,
+     "material": "PBR | bone",
+     "link": "DATA",
+     "polygons": 292
+    },
+    {
+     "index": 1,
+     "material": "PBR | cartilage",
+     "link": "DATA",
+     "polygons": 0
+    }
+   ],
+   "bbox_min": [
+    -0.2381,
+    -0.0722,
+    0.7342
+   ],
+   "bbox_max": [
+    -0.2261,
+    -0.0549,
+    0.7546
+   ],
+   "geometry_sha256": "fa26fbc3b4f1c4d6c457cab8507cdfbc3948c06d4319b6668c95e193b1ec915c",
+   "est_mesh_bytes": 20464,
+   "custom_props_to_set": {
+    "structureId": "middle_phalanx_hand_5_r",
+    "jointId": "elbow_r",
+    "role": "follow",
+    "tier": "core",
+    "side": "right",
+    "label": "Middle phalanx (little)",
+    "src_object": "Middle phalanx of fifth finger of hand | Right",
+    "src_mesh": "Middle phalanx of fifth finger of hand.002",
+    "src_file_sha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0"
+   }
+  },
+  {
+   "structureId": "distal_phalanx_hand_1_r",
+   "src": "Distal phalanx of first finger of hand | Right",
+   "target_object": "elbow_r__follow__distal_phalanx_hand_1",
+   "target_mesh": "elbow_r__follow__distal_phalanx_hand_1__mesh",
+   "target_collection": "elbow_r__geo_follow",
+   "role": "follow",
+   "tier": "core",
+   "label": "Distal phalanx (thumb)",
+   "found": true,
+   "object_type": "MESH",
+   "source_collection": "02 Skeletal system",
+   "source_parent": "02 Skeletal system",
+   "world_matrix_identity": true,
+   "source_mesh": "Distal phalanx of first finger of hand.002",
+   "source_mesh_users": 1,
+   "source_mesh_shared_with": [],
+   "vertices": 113,
+   "edges": 333,
+   "faces": 222,
+   "triangles": 222,
+   "uv_layers": [
+    "TissueUV"
+   ],
+   "material_slots": [
+    {
+     "index": 0,
+     "material": "PBR | bone",
+     "link": "DATA",
+     "polygons": 222
+    },
+    {
+     "index": 1,
+     "material": "PBR | cartilage",
+     "link": "DATA",
+     "polygons": 0
+    }
+   ],
+   "bbox_min": [
+    -0.3346,
+    -0.0741,
+    0.7669
+   ],
+   "bbox_max": [
+    -0.3206,
+    -0.0574,
+    0.791
+   ],
+   "geometry_sha256": "db7baa1446c493ea2eaab7031b327088383a4e84a1ef6929e14415f7b218a477",
+   "est_mesh_bytes": 15564,
+   "custom_props_to_set": {
+    "structureId": "distal_phalanx_hand_1_r",
+    "jointId": "elbow_r",
+    "role": "follow",
+    "tier": "core",
+    "side": "right",
+    "label": "Distal phalanx (thumb)",
+    "src_object": "Distal phalanx of first finger of hand | Right",
+    "src_mesh": "Distal phalanx of first finger of hand.002",
+    "src_file_sha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0"
+   }
+  },
+  {
+   "structureId": "distal_phalanx_hand_2_r",
+   "src": "Distal phalanx of second finger of hand | Right",
+   "target_object": "elbow_r__follow__distal_phalanx_hand_2",
+   "target_mesh": "elbow_r__follow__distal_phalanx_hand_2__mesh",
+   "target_collection": "elbow_r__geo_follow",
+   "role": "follow",
+   "tier": "core",
+   "label": "Distal phalanx (index)",
+   "found": true,
+   "object_type": "MESH",
+   "source_collection": "02 Skeletal system",
+   "source_parent": "02 Skeletal system",
+   "world_matrix_identity": true,
+   "source_mesh": "Distal phalanx of second finger of hand.002",
+   "source_mesh_users": 1,
+   "source_mesh_shared_with": [],
+   "vertices": 127,
+   "edges": 375,
+   "faces": 250,
+   "triangles": 250,
+   "uv_layers": [
+    "TissueUV"
+   ],
+   "material_slots": [
+    {
+     "index": 0,
+     "material": "PBR | bone",
+     "link": "DATA",
+     "polygons": 250
+    },
+    {
+     "index": 1,
+     "material": "PBR | cartilage",
+     "link": "DATA",
+     "polygons": 0
+    }
+   ],
+   "bbox_min": [
+    -0.3216,
+    -0.0879,
+    0.7078
+   ],
+   "bbox_max": [
+    -0.3111,
+    -0.0703,
+    0.7221
+   ],
+   "geometry_sha256": "d67583483b8619f267390dc1d84550d4f3a2cbf35bac021c4ccecc56d2007366",
+   "est_mesh_bytes": 17524,
+   "custom_props_to_set": {
+    "structureId": "distal_phalanx_hand_2_r",
+    "jointId": "elbow_r",
+    "role": "follow",
+    "tier": "core",
+    "side": "right",
+    "label": "Distal phalanx (index)",
+    "src_object": "Distal phalanx of second finger of hand | Right",
+    "src_mesh": "Distal phalanx of second finger of hand.002",
+    "src_file_sha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0"
+   }
+  },
+  {
+   "structureId": "distal_phalanx_hand_3_r",
+   "src": "Distal phalanx of third finger of hand | Right",
+   "target_object": "elbow_r__follow__distal_phalanx_hand_3",
+   "target_mesh": "elbow_r__follow__distal_phalanx_hand_3__mesh",
+   "target_collection": "elbow_r__geo_follow",
+   "role": "follow",
+   "tier": "core",
+   "label": "Distal phalanx (middle)",
+   "found": true,
+   "object_type": "MESH",
+   "source_collection": "02 Skeletal system",
+   "source_parent": "02 Skeletal system",
+   "world_matrix_identity": true,
+   "source_mesh": "Distal phalanx of third finger of hand.002",
+   "source_mesh_users": 1,
+   "source_mesh_shared_with": [],
+   "vertices": 98,
+   "edges": 288,
+   "faces": 192,
+   "triangles": 192,
+   "uv_layers": [
+    "TissueUV"
+   ],
+   "material_slots": [
+    {
+     "index": 0,
+     "material": "PBR | bone",
+     "link": "DATA",
+     "polygons": 192
+    },
+    {
+     "index": 1,
+     "material": "PBR | cartilage",
+     "link": "DATA",
+     "polygons": 0
+    }
+   ],
+   "bbox_min": [
+    -0.2901,
+    -0.097,
+    0.6987
+   ],
+   "bbox_max": [
+    -0.2802,
+    -0.0791,
+    0.7126
+   ],
+   "geometry_sha256": "7b176bb8ba787041c06a73dd66dd6dd2c43795b9a17f3860f5f69d271672b0b1",
+   "est_mesh_bytes": 13464,
+   "custom_props_to_set": {
+    "structureId": "distal_phalanx_hand_3_r",
+    "jointId": "elbow_r",
+    "role": "follow",
+    "tier": "core",
+    "side": "right",
+    "label": "Distal phalanx (middle)",
+    "src_object": "Distal phalanx of third finger of hand | Right",
+    "src_mesh": "Distal phalanx of third finger of hand.002",
+    "src_file_sha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0"
+   }
+  },
+  {
+   "structureId": "distal_phalanx_hand_4_r",
+   "src": "Distal phalanx of fourth finger of hand | Right",
+   "target_object": "elbow_r__follow__distal_phalanx_hand_4",
+   "target_mesh": "elbow_r__follow__distal_phalanx_hand_4__mesh",
+   "target_collection": "elbow_r__geo_follow",
+   "role": "follow",
+   "tier": "core",
+   "label": "Distal phalanx (ring)",
+   "found": true,
+   "object_type": "MESH",
+   "source_collection": "02 Skeletal system",
+   "source_parent": "02 Skeletal system",
+   "world_matrix_identity": true,
+   "source_mesh": "Distal phalanx of fourth finger of hand.002",
+   "source_mesh_users": 1,
+   "source_mesh_shared_with": [],
+   "vertices": 69,
+   "edges": 201,
+   "faces": 134,
+   "triangles": 134,
+   "uv_layers": [
+    "TissueUV"
+   ],
+   "material_slots": [
+    {
+     "index": 0,
+     "material": "PBR | bone",
+     "link": "DATA",
+     "polygons": 134
+    },
+    {
+     "index": 1,
+     "material": "PBR | cartilage",
+     "link": "DATA",
+     "polygons": 0
+    }
+   ],
+   "bbox_min": [
+    -0.2619,
+    -0.0958,
+    0.7108
+   ],
+   "bbox_max": [
+    -0.2533,
+    -0.0797,
+    0.7204
+   ],
+   "geometry_sha256": "65ba02acc79bb8e51bbdd6d807f9496c89f0ebeed7dbc3ad0e5214f0ec91d773",
+   "est_mesh_bytes": 9404,
+   "custom_props_to_set": {
+    "structureId": "distal_phalanx_hand_4_r",
+    "jointId": "elbow_r",
+    "role": "follow",
+    "tier": "core",
+    "side": "right",
+    "label": "Distal phalanx (ring)",
+    "src_object": "Distal phalanx of fourth finger of hand | Right",
+    "src_mesh": "Distal phalanx of fourth finger of hand.002",
+    "src_file_sha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0"
+   }
+  },
+  {
+   "structureId": "distal_phalanx_hand_5_r",
+   "src": "Distal phalanx of fifth finger of hand | Right",
+   "target_object": "elbow_r__follow__distal_phalanx_hand_5",
+   "target_mesh": "elbow_r__follow__distal_phalanx_hand_5__mesh",
+   "target_collection": "elbow_r__geo_follow",
+   "role": "follow",
+   "tier": "core",
+   "label": "Distal phalanx (little)",
+   "found": true,
+   "object_type": "MESH",
+   "source_collection": "02 Skeletal system",
+   "source_parent": "02 Skeletal system",
+   "world_matrix_identity": true,
+   "source_mesh": "Distal phalanx of fifth finger of hand.r.002",
+   "source_mesh_users": 1,
+   "source_mesh_shared_with": [],
+   "vertices": 98,
+   "edges": 288,
+   "faces": 192,
+   "triangles": 192,
+   "uv_layers": [
+    "TissueUV"
+   ],
+   "material_slots": [
+    {
+     "index": 0,
+     "material": "PBR | bone",
+     "link": "DATA",
+     "polygons": 192
+    },
+    {
+     "index": 1,
+     "material": "PBR | cartilage",
+     "link": "DATA",
+     "polygons": 0
+    }
+   ],
+   "bbox_min": [
+    -0.2347,
+    -0.0836,
+    0.723
+   ],
+   "bbox_max": [
+    -0.2261,
+    -0.0688,
+    0.7361
+   ],
+   "geometry_sha256": "a20660e69e1f3a385870cd99f625c530cf99f5358c8ed00649cf6f3c0d82c74d",
+   "est_mesh_bytes": 13464,
+   "custom_props_to_set": {
+    "structureId": "distal_phalanx_hand_5_r",
+    "jointId": "elbow_r",
+    "role": "follow",
+    "tier": "core",
+    "side": "right",
+    "label": "Distal phalanx (little)",
+    "src_object": "Distal phalanx of fifth finger of hand | Right",
+    "src_mesh": "Distal phalanx of fifth finger of hand.r.002",
+    "src_file_sha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0"
+   }
+  },
+  {
+   "structureId": "elbow_capsule_r",
+   "src": "Articular capsule of elbow joint | Right",
+   "target_object": "elbow_r__soft__elbow_capsule",
+   "target_mesh": "elbow_r__soft__elbow_capsule__mesh",
+   "target_collection": "elbow_r__geo_capsule",
+   "role": "spanning_soft",
+   "tier": "detail",
+   "label": "Articular capsule of elbow joint",
+   "found": true,
+   "object_type": "MESH",
+   "source_collection": "03 Joints and connective tissues",
+   "source_parent": "03 Joints and connective tissues",
+   "world_matrix_identity": true,
+   "source_mesh": "Articular capsule of elbow joint.002",
+   "source_mesh_users": 1,
+   "source_mesh_shared_with": [],
+   "vertices": 864,
+   "edges": 1742,
+   "faces": 878,
+   "triangles": 1728,
+   "uv_layers": [
+    "UVMap"
+   ],
+   "material_slots": [
+    {
+     "index": 0,
+     "material": "PBR | tendon",
+     "link": "DATA",
+     "polygons": 878
+    }
+   ],
+   "bbox_min": [
+    -0.2501,
+    0.0159,
+    1.0803
+   ],
+   "bbox_max": [
+    -0.1889,
+    0.0581,
+    1.1335
+   ],
+   "geometry_sha256": "b1d443b937ef42ac83db31f085b44ff1d4c976587533f35889204f81942276cd",
+   "est_mesh_bytes": 83560,
+   "custom_props_to_set": {
+    "structureId": "elbow_capsule_r",
+    "jointId": "elbow_r",
+    "role": "spanning_soft",
+    "tier": "detail",
+    "side": "right",
+    "label": "Articular capsule of elbow joint",
+    "src_object": "Articular capsule of elbow joint | Right",
+    "src_mesh": "Articular capsule of elbow joint.002",
+    "src_file_sha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0"
+   }
+  },
+  {
+   "structureId": "radial_collateral_ligament_elbow_r",
+   "src": "Radial collateral ligament | Right",
+   "target_object": "elbow_r__soft__radial_collateral_ligament_elbow",
+   "target_mesh": "elbow_r__soft__radial_collateral_ligament_elbow__mesh",
+   "target_collection": "elbow_r__geo_ligament",
+   "role": "spanning_soft",
+   "tier": "detail",
+   "label": "Radial collateral ligament",
+   "found": true,
+   "object_type": "MESH",
+   "source_collection": "03 Joints and connective tissues",
+   "source_parent": "03 Joints and connective tissues",
+   "world_matrix_identity": true,
+   "source_mesh": "Radial collateral ligament.002",
+   "source_mesh_users": 2,
+   "source_mesh_shared_with": [
+    "Radial collateral ligament | Right | Cutaway"
+   ],
+   "vertices": 50,
+   "edges": 96,
+   "faces": 48,
+   "triangles": 96,
+   "uv_layers": [
+    "UVMap"
+   ],
+   "material_slots": [
+    {
+     "index": 0,
+     "material": "PBR | tendon",
+     "link": "DATA",
+     "polygons": 48
+    }
+   ],
+   "bbox_min": [
+    -0.2504,
+    0.0238,
+    1.0865
+   ],
+   "bbox_max": [
+    -0.2458,
+    0.0425,
+    1.1148
+   ],
+   "geometry_sha256": "216a34c084c734af735d0997d383d1059046b258bced4490b1b89718200ba8ca",
+   "est_mesh_bytes": 4632,
+   "custom_props_to_set": {
+    "structureId": "radial_collateral_ligament_elbow_r",
+    "jointId": "elbow_r",
+    "role": "spanning_soft",
+    "tier": "detail",
+    "side": "right",
+    "label": "Radial collateral ligament",
+    "src_object": "Radial collateral ligament | Right",
+    "src_mesh": "Radial collateral ligament.002",
+    "src_file_sha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0"
+   }
+  },
+  {
+   "structureId": "ulnar_collateral_ligament_elbow_r",
+   "src": "Ulnar collateral ligament | Right",
+   "target_object": "elbow_r__soft__ulnar_collateral_ligament_elbow",
+   "target_mesh": "elbow_r__soft__ulnar_collateral_ligament_elbow__mesh",
+   "target_collection": "elbow_r__geo_ligament",
+   "role": "spanning_soft",
+   "tier": "detail",
+   "label": "Ulnar collateral ligament",
+   "found": true,
+   "object_type": "MESH",
+   "source_collection": "03 Joints and connective tissues",
+   "source_parent": "03 Joints and connective tissues",
+   "world_matrix_identity": true,
+   "source_mesh": "Ulnar collateral ligament.002",
+   "source_mesh_users": 2,
+   "source_mesh_shared_with": [
+    "Ulnar collateral ligament | Right | Cutaway"
+   ],
+   "vertices": 78,
+   "edges": 152,
+   "faces": 76,
+   "triangles": 152,
+   "uv_layers": [
+    "UVMap"
+   ],
+   "material_slots": [
+    {
+     "index": 0,
+     "material": "PBR | tendon",
+     "link": "DATA",
+     "polygons": 76
+    }
+   ],
+   "bbox_min": [
+    -0.2356,
+    0.0153,
+    1.0793
+   ],
+   "bbox_max": [
+    -0.1891,
+    0.0328,
+    1.1029
+   ],
+   "geometry_sha256": "a3bba54be4bc87a262d2abc01210abbdc3a02c02a83640973ef7160451145ce6",
+   "est_mesh_bytes": 7320,
+   "custom_props_to_set": {
+    "structureId": "ulnar_collateral_ligament_elbow_r",
+    "jointId": "elbow_r",
+    "role": "spanning_soft",
+    "tier": "detail",
+    "side": "right",
+    "label": "Ulnar collateral ligament",
+    "src_object": "Ulnar collateral ligament | Right",
+    "src_mesh": "Ulnar collateral ligament.002",
+    "src_file_sha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0"
+   }
+  },
+  {
+   "structureId": "annular_ligament_radius_r",
+   "src": "Annular ligament of radius | Right",
+   "target_object": "elbow_r__soft__annular_ligament_radius",
+   "target_mesh": "elbow_r__soft__annular_ligament_radius__mesh",
+   "target_collection": "elbow_r__geo_ligament",
+   "role": "attached_soft",
+   "tier": "detail",
+   "label": "Annular ligament of radius",
+   "found": true,
+   "object_type": "MESH",
+   "source_collection": "03 Joints and connective tissues",
+   "source_parent": "03 Joints and connective tissues",
+   "world_matrix_identity": true,
+   "source_mesh": "Annular ligament of radius.002",
+   "source_mesh_users": 2,
+   "source_mesh_shared_with": [
+    "Annular ligament of radius | Right | Cutaway"
+   ],
+   "vertices": 190,
+   "edges": 376,
+   "faces": 188,
+   "triangles": 376,
+   "uv_layers": [
+    "UVMap"
+   ],
+   "material_slots": [
+    {
+     "index": 0,
+     "material": "PBR | tendon",
+     "link": "DATA",
+     "polygons": 188
+    }
+   ],
+   "bbox_min": [
+    -0.2502,
+    0.02,
+    1.0723
+   ],
+   "bbox_max": [
+    -0.2253,
+    0.042,
+    1.0896
+   ],
+   "geometry_sha256": "82a71036f1475b6b0b7a46f1404d88b48d41b6a86587d2230665bb8f37384225",
+   "est_mesh_bytes": 18072,
+   "custom_props_to_set": {
+    "structureId": "annular_ligament_radius_r",
+    "jointId": "elbow_r",
+    "role": "attached_soft",
+    "tier": "detail",
+    "side": "right",
+    "label": "Annular ligament of radius",
+    "src_object": "Annular ligament of radius | Right",
+    "src_mesh": "Annular ligament of radius.002",
+    "src_file_sha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0"
+   }
+  },
+  {
+   "structureId": "quadrate_ligament_r",
+   "src": "Quadrate ligament | Right",
+   "target_object": "elbow_r__soft__quadrate_ligament",
+   "target_mesh": "elbow_r__soft__quadrate_ligament__mesh",
+   "target_collection": "elbow_r__geo_ligament",
+   "role": "attached_soft",
+   "tier": "detail",
+   "label": "Quadrate ligament",
+   "found": true,
+   "object_type": "MESH",
+   "source_collection": "03 Joints and connective tissues",
+   "source_parent": "03 Joints and connective tissues",
+   "world_matrix_identity": true,
+   "source_mesh": "Quadrate ligament.002",
+   "source_mesh_users": 2,
+   "source_mesh_shared_with": [
+    "Quadrate ligament | Right | Cutaway"
+   ],
+   "vertices": 8,
+   "edges": 12,
+   "faces": 6,
+   "triangles": 12,
+   "uv_layers": [
+    "UVMap"
+   ],
+   "material_slots": [
+    {
+     "index": 0,
+     "material": "PBR | tendon",
+     "link": "DATA",
+     "polygons": 6
+    }
+   ],
+   "bbox_min": [
+    -0.2322,
+    0.03,
+    1.0686
+   ],
+   "bbox_max": [
+    -0.2269,
+    0.035,
+    1.0781
+   ],
+   "geometry_sha256": "0f6f544986477ca5e1b9faa2f97bcb6af7253921e6093eeecc0c6823e0679467",
+   "est_mesh_bytes": 600,
+   "custom_props_to_set": {
+    "structureId": "quadrate_ligament_r",
+    "jointId": "elbow_r",
+    "role": "attached_soft",
+    "tier": "detail",
+    "side": "right",
+    "label": "Quadrate ligament",
+    "src_object": "Quadrate ligament | Right",
+    "src_mesh": "Quadrate ligament.002",
+    "src_file_sha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0"
+   }
+  },
+  {
+   "structureId": "oblique_cord_r",
+   "src": "Oblique cord | Right",
+   "target_object": "elbow_r__soft__oblique_cord",
+   "target_mesh": "elbow_r__soft__oblique_cord__mesh",
+   "target_collection": "elbow_r__geo_ligament",
+   "role": "attached_soft",
+   "tier": "detail",
+   "label": "Oblique cord",
+   "found": true,
+   "object_type": "MESH",
+   "source_collection": "03 Joints and connective tissues",
+   "source_parent": "03 Joints and connective tissues",
+   "world_matrix_identity": true,
+   "source_mesh": "Oblique cord.002",
+   "source_mesh_users": 2,
+   "source_mesh_shared_with": [
+    "Oblique cord | Right | Cutaway"
+   ],
+   "vertices": 8,
+   "edges": 12,
+   "faces": 6,
+   "triangles": 12,
+   "uv_layers": [
+    "TissueUV"
+   ],
+   "material_slots": [
+    {
+     "index": 0,
+     "material": "PBR | tendon",
+     "link": "DATA",
+     "polygons": 6
+    }
+   ],
+   "bbox_min": [
+    -0.2362,
+    0.0227,
+    1.0421
+   ],
+   "bbox_max": [
+    -0.2246,
+    0.0296,
+    1.0702
+   ],
+   "geometry_sha256": "9c4e727640064399eb883e8af91cfd4f36231a01eb25f66f6a720f05a7954feb",
+   "est_mesh_bytes": 600,
+   "custom_props_to_set": {
+    "structureId": "oblique_cord_r",
+    "jointId": "elbow_r",
+    "role": "attached_soft",
+    "tier": "detail",
+    "side": "right",
+    "label": "Oblique cord",
+    "src_object": "Oblique cord | Right",
+    "src_mesh": "Oblique cord.002",
+    "src_file_sha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0"
+   }
+  },
+  {
+   "structureId": "interosseous_membrane_forearm_r",
+   "src": "Interosseous membrane of forearm | Right",
+   "target_object": "elbow_r__soft__interosseous_membrane_forearm",
+   "target_mesh": "elbow_r__soft__interosseous_membrane_forearm__mesh",
+   "target_collection": "elbow_r__geo_ligament",
+   "role": "attached_soft",
+   "tier": "detail",
+   "label": "Interosseous membrane of forearm",
+   "found": true,
+   "object_type": "MESH",
+   "source_collection": "03 Joints and connective tissues",
+   "source_parent": "03 Joints and connective tissues",
+   "world_matrix_identity": true,
+   "source_mesh": "Interosseous membrane of forearm.002",
+   "source_mesh_users": 2,
+   "source_mesh_shared_with": [
+    "Interosseous membrane of forearm | Right | Cutaway"
+   ],
+   "vertices": 1385,
+   "edges": 4149,
+   "faces": 2766,
+   "triangles": 2766,
+   "uv_layers": [
+    "TissueUV"
+   ],
+   "material_slots": [
+    {
+     "index": 0,
+     "material": "PBR | tendon",
+     "link": "DATA",
+     "polygons": 2766
+    }
+   ],
+   "bbox_min": [
+    -0.2589,
+    -0.0172,
+    0.8726
+   ],
+   "bbox_max": [
+    -0.2364,
+    0.0325,
+    1.034
+   ],
+   "geometry_sha256": "49e310ee5d24e7f0f8f0b67d6ce79dda178b0df33d825beb7480bc805d3be6bc",
+   "est_mesh_bytes": 193644,
+   "custom_props_to_set": {
+    "structureId": "interosseous_membrane_forearm_r",
+    "jointId": "elbow_r",
+    "role": "attached_soft",
+    "tier": "detail",
+    "side": "right",
+    "label": "Interosseous membrane of forearm",
+    "src_object": "Interosseous membrane of forearm | Right",
+    "src_mesh": "Interosseous membrane of forearm.002",
+    "src_file_sha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0"
+   }
+  },
+  {
+   "structureId": "biceps_brachii_long_head_r",
+   "src": "Long head of biceps brachii | Right",
+   "target_object": "elbow_r__context__biceps_brachii_long_head",
+   "target_mesh": "elbow_r__context__biceps_brachii_long_head__mesh",
+   "target_collection": "elbow_r__geo_context",
+   "role": "context",
+   "tier": "context",
+   "label": "Biceps brachii (long head)",
+   "found": true,
+   "object_type": "MESH",
+   "source_collection": "04 Muscular system",
+   "source_parent": "04 Muscular system",
+   "world_matrix_identity": true,
+   "source_mesh": "Long head of biceps brachii.002",
+   "source_mesh_users": 1,
+   "source_mesh_shared_with": [],
+   "vertices": 1611,
+   "edges": 4827,
+   "faces": 3218,
+   "triangles": 3218,
+   "uv_layers": [
+    "TissueUV"
+   ],
+   "material_slots": [
+    {
+     "index": 0,
+     "material": "PBR | muscle",
+     "link": "DATA",
+     "polygons": 3218
+    },
+    {
+     "index": 1,
+     "material": "PBR | tendon",
+     "link": "DATA",
+     "polygons": 0
+    }
+   ],
+   "bbox_min": [
+    -0.2375,
+    -0.0084,
+    1.0508
+   ],
+   "bbox_max": [
+    -0.1423,
+    0.0413,
+    1.4079
+   ],
+   "geometry_sha256": "8d92cdafed8a6fe8783b40c149ca7bf8b9632b5cb56ccffdc44b36c916e2d5c2",
+   "est_mesh_bytes": 225284,
+   "custom_props_to_set": {
+    "structureId": "biceps_brachii_long_head_r",
+    "jointId": "elbow_r",
+    "role": "context",
+    "tier": "context",
+    "side": "right",
+    "label": "Biceps brachii (long head)",
+    "src_object": "Long head of biceps brachii | Right",
+    "src_mesh": "Long head of biceps brachii.002",
+    "src_file_sha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0"
+   }
+  },
+  {
+   "structureId": "biceps_brachii_short_head_r",
+   "src": "Short head of biceps brachii | Right",
+   "target_object": "elbow_r__context__biceps_brachii_short_head",
+   "target_mesh": "elbow_r__context__biceps_brachii_short_head__mesh",
+   "target_collection": "elbow_r__geo_context",
+   "role": "context",
+   "tier": "context",
+   "label": "Biceps brachii (short head)",
+   "found": true,
+   "object_type": "MESH",
+   "source_collection": "04 Muscular system",
+   "source_parent": "04 Muscular system",
+   "world_matrix_identity": true,
+   "source_mesh": "Short head of biceps brachii.002",
+   "source_mesh_users": 1,
+   "source_mesh_shared_with": [],
+   "vertices": 1344,
+   "edges": 4044,
+   "faces": 2696,
+   "triangles": 2696,
+   "uv_layers": [
+    "TissueUV"
+   ],
+   "material_slots": [
+    {
+     "index": 0,
+     "material": "PBR | muscle",
+     "link": "DATA",
+     "polygons": 2696
+    },
+    {
+     "index": 1,
+     "material": "PBR | tendon",
+     "link": "DATA",
+     "polygons": 0
+    }
+   ],
+   "bbox_min": [
+    -0.2197,
+    -0.0079,
+    1.1241
+   ],
+   "bbox_max": [
+    -0.1382,
+    0.0265,
+    1.3972
+   ],
+   "geometry_sha256": "0504498ec48c56fb485098fe49592e2b9172c1f2e443a1c08c066ca0298ece69",
+   "est_mesh_bytes": 188672,
+   "custom_props_to_set": {
+    "structureId": "biceps_brachii_short_head_r",
+    "jointId": "elbow_r",
+    "role": "context",
+    "tier": "context",
+    "side": "right",
+    "label": "Biceps brachii (short head)",
+    "src_object": "Short head of biceps brachii | Right",
+    "src_mesh": "Short head of biceps brachii.002",
+    "src_file_sha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0"
+   }
+  },
+  {
+   "structureId": "brachialis_r",
+   "src": "Brachialis muscle | Right",
+   "target_object": "elbow_r__context__brachialis",
+   "target_mesh": "elbow_r__context__brachialis__mesh",
+   "target_collection": "elbow_r__geo_context",
+   "role": "context",
+   "tier": "context",
+   "label": "Brachialis",
+   "found": true,
+   "object_type": "MESH",
+   "source_collection": "04 Muscular system",
+   "source_parent": "04 Muscular system",
+   "world_matrix_identity": true,
+   "source_mesh": "Brachialis muscle.002",
+   "source_mesh_users": 1,
+   "source_mesh_shared_with": [],
+   "vertices": 1741,
+   "edges": 5217,
+   "faces": 3478,
+   "triangles": 3478,
+   "uv_layers": [
+    "TissueUV"
+   ],
+   "material_slots": [
+    {
+     "index": 0,
+     "material": "PBR | muscle",
+     "link": "DATA",
+     "polygons": 3478
+    },
+    {
+     "index": 1,
+     "material": "PBR | tendon",
+     "link": "DATA",
+     "polygons": 0
+    }
+   ],
+   "bbox_min": [
+    -0.2429,
+    0.0151,
+    1.0522
+   ],
+   "bbox_max": [
+    -0.182,
+    0.0423,
+    1.2845
+   ],
+   "geometry_sha256": "7f4a1a12a16646724c6f2c0c72bd29efabf29aaafddaa78b21365772df177733",
+   "est_mesh_bytes": 243484,
+   "custom_props_to_set": {
+    "structureId": "brachialis_r",
+    "jointId": "elbow_r",
+    "role": "context",
+    "tier": "context",
+    "side": "right",
+    "label": "Brachialis",
+    "src_object": "Brachialis muscle | Right",
+    "src_mesh": "Brachialis muscle.002",
+    "src_file_sha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0"
+   }
+  },
+  {
+   "structureId": "triceps_brachii_long_head_r",
+   "src": "Long head of triceps brachii | Right",
+   "target_object": "elbow_r__context__triceps_brachii_long_head",
+   "target_mesh": "elbow_r__context__triceps_brachii_long_head__mesh",
+   "target_collection": "elbow_r__geo_context",
+   "role": "context",
+   "tier": "context",
+   "label": "Triceps brachii (long head)",
+   "found": true,
+   "object_type": "MESH",
+   "source_collection": "04 Muscular system",
+   "source_parent": "04 Muscular system",
+   "world_matrix_identity": true,
+   "source_mesh": "Long head of triceps brachii.002",
+   "source_mesh_users": 1,
+   "source_mesh_shared_with": [],
+   "vertices": 1977,
+   "edges": 5925,
+   "faces": 3950,
+   "triangles": 3950,
+   "uv_layers": [
+    "TissueUV"
+   ],
+   "material_slots": [
+    {
+     "index": 0,
+     "material": "PBR | muscle",
+     "link": "DATA",
+     "polygons": 3950
+    },
+    {
+     "index": 1,
+     "material": "PBR | tendon",
+     "link": "DATA",
+     "polygons": 0
+    }
+   ],
+   "bbox_min": [
+    -0.2236,
+    0.0384,
+    1.0933
+   ],
+   "bbox_max": [
+    -0.1319,
+    0.0857,
+    1.3654
+   ],
+   "geometry_sha256": "29921d59ea1d9b902269be8ed3434d290f412e1aabd53bffcff98783e4e9ebb5",
+   "est_mesh_bytes": 276524,
+   "custom_props_to_set": {
+    "structureId": "triceps_brachii_long_head_r",
+    "jointId": "elbow_r",
+    "role": "context",
+    "tier": "context",
+    "side": "right",
+    "label": "Triceps brachii (long head)",
+    "src_object": "Long head of triceps brachii | Right",
+    "src_mesh": "Long head of triceps brachii.002",
+    "src_file_sha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0"
+   }
+  },
+  {
+   "structureId": "triceps_brachii_lateral_head_r",
+   "src": "Lateral head of triceps brachii | Right",
+   "target_object": "elbow_r__context__triceps_brachii_lateral_head",
+   "target_mesh": "elbow_r__context__triceps_brachii_lateral_head__mesh",
+   "target_collection": "elbow_r__geo_context",
+   "role": "context",
+   "tier": "context",
+   "label": "Triceps brachii (lateral head)",
+   "found": true,
+   "object_type": "MESH",
+   "source_collection": "04 Muscular system",
+   "source_parent": "04 Muscular system",
+   "world_matrix_identity": true,
+   "source_mesh": "Lateral head of triceps brachii.002",
+   "source_mesh_users": 1,
+   "source_mesh_shared_with": [],
+   "vertices": 1816,
+   "edges": 5442,
+   "faces": 3628,
+   "triangles": 3628,
+   "uv_layers": [
+    "TissueUV"
+   ],
+   "material_slots": [
+    {
+     "index": 0,
+     "material": "PBR | muscle",
+     "link": "DATA",
+     "polygons": 3628
+    },
+    {
+     "index": 1,
+     "material": "PBR | tendon",
+     "link": "DATA",
+     "polygons": 0
+    }
+   ],
+   "bbox_min": [
+    -0.2363,
+    0.0335,
+    1.094
+   ],
+   "bbox_max": [
+    -0.1801,
+    0.0842,
+    1.3588
+   ],
+   "geometry_sha256": "e515e5ff2a309d9d005fe72699812cb435e25cad967452eb53a6c5e1ffb870e7",
+   "est_mesh_bytes": 253984,
+   "custom_props_to_set": {
+    "structureId": "triceps_brachii_lateral_head_r",
+    "jointId": "elbow_r",
+    "role": "context",
+    "tier": "context",
+    "side": "right",
+    "label": "Triceps brachii (lateral head)",
+    "src_object": "Lateral head of triceps brachii | Right",
+    "src_mesh": "Lateral head of triceps brachii.002",
+    "src_file_sha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0"
+   }
+  },
+  {
+   "structureId": "triceps_brachii_medial_head_r",
+   "src": "Medial head of triceps brachii | Right",
+   "target_object": "elbow_r__context__triceps_brachii_medial_head",
+   "target_mesh": "elbow_r__context__triceps_brachii_medial_head__mesh",
+   "target_collection": "elbow_r__geo_context",
+   "role": "context",
+   "tier": "context",
+   "label": "Triceps brachii (medial head)",
+   "found": true,
+   "object_type": "MESH",
+   "source_collection": "04 Muscular system",
+   "source_parent": "04 Muscular system",
+   "world_matrix_identity": true,
+   "source_mesh": "Medial head of triceps brachii.002",
+   "source_mesh_users": 1,
+   "source_mesh_shared_with": [],
+   "vertices": 1345,
+   "edges": 4029,
+   "faces": 2686,
+   "triangles": 2686,
+   "uv_layers": [
+    "TissueUV"
+   ],
+   "material_slots": [
+    {
+     "index": 0,
+     "material": "PBR | muscle",
+     "link": "DATA",
+     "polygons": 2686
+    },
+    {
+     "index": 1,
+     "material": "PBR | tendon",
+     "link": "DATA",
+     "polygons": 0
+    }
+   ],
+   "bbox_min": [
+    -0.2346,
+    0.0307,
+    1.0872
+   ],
+   "bbox_max": [
+    -0.1723,
+    0.0574,
+    1.3215
+   ],
+   "geometry_sha256": "de7ca9c3bc0e0a7c9c26cbec241d66795be4c38172abb83e689d55cf91722172",
+   "est_mesh_bytes": 188044,
+   "custom_props_to_set": {
+    "structureId": "triceps_brachii_medial_head_r",
+    "jointId": "elbow_r",
+    "role": "context",
+    "tier": "context",
+    "side": "right",
+    "label": "Triceps brachii (medial head)",
+    "src_object": "Medial head of triceps brachii | Right",
+    "src_mesh": "Medial head of triceps brachii.002",
+    "src_file_sha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0"
+   }
+  },
+  {
+   "structureId": "brachioradialis_r",
+   "src": "Brachioradialis muscle | Right",
+   "target_object": "elbow_r__context__brachioradialis",
+   "target_mesh": "elbow_r__context__brachioradialis__mesh",
+   "target_collection": "elbow_r__geo_context",
+   "role": "context",
+   "tier": "context",
+   "label": "Brachioradialis",
+   "found": true,
+   "object_type": "MESH",
+   "source_collection": "04 Muscular system",
+   "source_parent": "04 Muscular system",
+   "world_matrix_identity": true,
+   "source_mesh": "Brachioradialis muscle.002",
+   "source_mesh_users": 1,
+   "source_mesh_shared_with": [],
+   "vertices": 3658,
+   "edges": 10968,
+   "faces": 7312,
+   "triangles": 7312,
+   "uv_layers": [
+    "TissueUV"
+   ],
+   "material_slots": [
+    {
+     "index": 0,
+     "material": "PBR | muscle",
+     "link": "DATA",
+     "polygons": 7312
+    },
+    {
+     "index": 1,
+     "material": "PBR | tendon",
+     "link": "DATA",
+     "polygons": 0
+    }
+   ],
+   "bbox_min": [
+    -0.2898,
+    -0.0221,
+    0.8604
+   ],
+   "bbox_max": [
+    -0.215,
+    0.0473,
+    1.2095
+   ],
+   "geometry_sha256": "e3af69fcfe3857635d1db14500c705d5bdd55813e0b8280e9e57423b51339e5e",
+   "est_mesh_bytes": 511864,
+   "custom_props_to_set": {
+    "structureId": "brachioradialis_r",
+    "jointId": "elbow_r",
+    "role": "context",
+    "tier": "context",
+    "side": "right",
+    "label": "Brachioradialis",
+    "src_object": "Brachioradialis muscle | Right",
+    "src_mesh": "Brachioradialis muscle.002",
+    "src_file_sha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0"
+   }
+  },
+  {
+   "structureId": "anconeus_r",
+   "src": "Anconeus muscle | Right",
+   "target_object": "elbow_r__context__anconeus",
+   "target_mesh": "elbow_r__context__anconeus__mesh",
+   "target_collection": "elbow_r__geo_context",
+   "role": "context",
+   "tier": "context",
+   "label": "Anconeus",
+   "found": true,
+   "object_type": "MESH",
+   "source_collection": "04 Muscular system",
+   "source_parent": "04 Muscular system",
+   "world_matrix_identity": true,
+   "source_mesh": "Anconeus muscle.002",
+   "source_mesh_users": 1,
+   "source_mesh_shared_with": [],
+   "vertices": 723,
+   "edges": 2163,
+   "faces": 1442,
+   "triangles": 1442,
+   "uv_layers": [
+    "TissueUV"
+   ],
+   "material_slots": [
+    {
+     "index": 0,
+     "material": "PBR | muscle",
+     "link": "DATA",
+     "polygons": 1442
+    },
+    {
+     "index": 1,
+     "material": "PBR | tendon",
+     "link": "DATA",
+     "polygons": 0
+    }
+   ],
+   "bbox_min": [
+    -0.2369,
+    0.0356,
+    1.0152
+   ],
+   "bbox_max": [
+    -0.2131,
+    0.0618,
+    1.1198
+   ],
+   "geometry_sha256": "6cbdb8f5ed38ff8b0049543a1632f991ff91d73721f8689995f6c58394d075e0",
+   "est_mesh_bytes": 100964,
+   "custom_props_to_set": {
+    "structureId": "anconeus_r",
+    "jointId": "elbow_r",
+    "role": "context",
+    "tier": "context",
+    "side": "right",
+    "label": "Anconeus",
+    "src_object": "Anconeus muscle | Right",
+    "src_mesh": "Anconeus muscle.002",
+    "src_file_sha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0"
+   }
+  },
+  {
+   "structureId": "supinator_r",
+   "src": "Supinator | Right",
+   "target_object": "elbow_r__context__supinator",
+   "target_mesh": "elbow_r__context__supinator__mesh",
+   "target_collection": "elbow_r__geo_context",
+   "role": "context",
+   "tier": "context",
+   "label": "Supinator",
+   "found": true,
+   "object_type": "MESH",
+   "source_collection": "04 Muscular system",
+   "source_parent": "04 Muscular system",
+   "world_matrix_identity": true,
+   "source_mesh": "Supinator.002",
+   "source_mesh_users": 1,
+   "source_mesh_shared_with": [],
+   "vertices": 1379,
+   "edges": 4131,
+   "faces": 2754,
+   "triangles": 2754,
+   "uv_layers": [
+    "TissueUV"
+   ],
+   "material_slots": [
+    {
+     "index": 0,
+     "material": "PBR | muscle",
+     "link": "DATA",
+     "polygons": 2754
+    },
+    {
+     "index": 1,
+     "material": "PBR | tendon",
+     "link": "DATA",
+     "polygons": 0
+    }
+   ],
+   "bbox_min": [
+    -0.2625,
+    0.0114,
+    0.9873
+   ],
+   "bbox_max": [
+    -0.2296,
+    0.047,
+    1.1153
+   ],
+   "geometry_sha256": "5086dfffcb1313f4e7e148ad22934e7a987cec9afa00fe97485e28087540dec0",
+   "est_mesh_bytes": 192804,
+   "custom_props_to_set": {
+    "structureId": "supinator_r",
+    "jointId": "elbow_r",
+    "role": "context",
+    "tier": "context",
+    "side": "right",
+    "label": "Supinator",
+    "src_object": "Supinator | Right",
+    "src_mesh": "Supinator.002",
+    "src_file_sha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0"
+   }
+  },
+  {
+   "structureId": "triceps_subtendinous_bursa_r",
+   "src": "Subtendinous bursa of triceps brachii muscle | Right",
+   "target_object": "elbow_r__context__triceps_subtendinous_bursa",
+   "target_mesh": "elbow_r__context__triceps_subtendinous_bursa__mesh",
+   "target_collection": "elbow_r__geo_context",
+   "role": "context",
+   "tier": "context",
+   "label": "Subtendinous bursa of triceps brachii",
+   "found": true,
+   "object_type": "MESH",
+   "source_collection": "04 Muscular system",
+   "source_parent": "04 Muscular system",
+   "world_matrix_identity": true,
+   "source_mesh": "Mesh.229",
+   "source_mesh_users": 1,
+   "source_mesh_shared_with": [],
+   "vertices": 738,
+   "edges": 1472,
+   "faces": 736,
+   "triangles": 1472,
+   "uv_layers": [
+    "UVMap"
+   ],
+   "material_slots": [
+    {
+     "index": 0,
+     "material": "PBR | tendon",
+     "link": "DATA",
+     "polygons": 736
+    }
+   ],
+   "bbox_min": [
+    -0.2309,
+    0.0469,
+    1.0936
+   ],
+   "bbox_max": [
+    -0.2008,
+    0.0632,
+    1.1238
+   ],
+   "geometry_sha256": "f29465273e5ae7cca882aed713ffb1e96c3c51dc00c05eb81909f02752ac6656",
+   "est_mesh_bytes": 70680,
+   "custom_props_to_set": {
+    "structureId": "triceps_subtendinous_bursa_r",
+    "jointId": "elbow_r",
+    "role": "context",
+    "tier": "context",
+    "side": "right",
+    "label": "Subtendinous bursa of triceps brachii",
+    "src_object": "Subtendinous bursa of triceps brachii muscle | Right",
+    "src_mesh": "Mesh.229",
+    "src_file_sha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0"
+   }
+  },
+  {
+   "structureId": "scapula_r",
+   "src": "Scapula | Right",
+   "target_object": "elbow_r__context__scapula",
+   "target_mesh": "elbow_r__context__scapula__mesh",
+   "target_collection": "elbow_r__geo_context",
+   "role": "context",
+   "tier": "context",
+   "label": "Scapula",
+   "found": true,
+   "object_type": "MESH",
+   "source_collection": "02 Skeletal system",
+   "source_parent": "02 Skeletal system",
+   "world_matrix_identity": true,
+   "source_mesh": "Scapula.002",
+   "source_mesh_users": 1,
+   "source_mesh_shared_with": [],
+   "vertices": 12690,
+   "edges": 37918,
+   "faces": 25255,
+   "triangles": 25326,
+   "uv_layers": [
+    "TissueUV"
+   ],
+   "material_slots": [
+    {
+     "index": 0,
+     "material": "PBR | bone",
+     "link": "DATA",
+     "polygons": 25255
+    },
+    {
+     "index": 1,
+     "material": "PBR | cartilage",
+     "link": "DATA",
+     "polygons": 0
+    }
+   ],
+   "bbox_min": [
+    -0.1736,
+    -0.0013,
+    1.2543
+   ],
+   "bbox_max": [
+    -0.0606,
+    0.1128,
+    1.4178
+   ],
+   "geometry_sha256": "67e104aa480cd4252bf30fa8096be369bc49f1a7803492800efa3b86538e2283",
+   "est_mesh_bytes": 1770020,
+   "custom_props_to_set": {
+    "structureId": "scapula_r",
+    "jointId": "elbow_r",
+    "role": "context",
+    "tier": "context",
+    "side": "right",
+    "label": "Scapula",
+    "src_object": "Scapula | Right",
+    "src_mesh": "Scapula.002",
+    "src_file_sha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0"
+   }
+  },
+  {
+   "structureId": "clavicle_r",
+   "src": "Clavicle | Right",
+   "target_object": "elbow_r__context__clavicle",
+   "target_mesh": "elbow_r__context__clavicle__mesh",
+   "target_collection": "elbow_r__geo_context",
+   "role": "context",
+   "tier": "context",
+   "label": "Clavicle",
+   "found": true,
+   "object_type": "MESH",
+   "source_collection": "02 Skeletal system",
+   "source_parent": "02 Skeletal system",
+   "world_matrix_identity": true,
+   "source_mesh": "Clavicle.002",
+   "source_mesh_users": 1,
+   "source_mesh_shared_with": [],
+   "vertices": 789,
+   "edges": 2323,
+   "faces": 1548,
+   "triangles": 1550,
+   "uv_layers": [
+    "TissueUV"
+   ],
+   "material_slots": [
+    {
+     "index": 0,
+     "material": "PBR | bone",
+     "link": "DATA",
+     "polygons": 1548
+    },
+    {
+     "index": 1,
+     "material": "PBR | cartilage",
+     "link": "DATA",
+     "polygons": 0
+    }
+   ],
+   "bbox_min": [
+    -0.1543,
+    -0.0505,
+    1.3891
+   ],
+   "bbox_max": [
+    -0.0112,
+    0.0523,
+    1.4252
+   ],
+   "geometry_sha256": "05b6cfd84a7c61d9c0ca965c3ab0379fc4702d1a33250ef26aa7f4a9914437a1",
+   "est_mesh_bytes": 108580,
+   "custom_props_to_set": {
+    "structureId": "clavicle_r",
+    "jointId": "elbow_r",
+    "role": "context",
+    "tier": "context",
+    "side": "right",
+    "label": "Clavicle",
+    "src_object": "Clavicle | Right",
+    "src_mesh": "Clavicle.002",
+    "src_file_sha256": "f7313dabbf27d990ce1d7d3f771ebf1f914ffc5fb1162a7f71339bd3e6dc7fb0"
+   }
+  }
+ ],
+ "materials": [
+  {
+   "name": "PBR | bone",
+   "images": [
+    "Tissue color | bone",
+    "Tissue normal | organ"
+   ],
+   "node_groups": [],
+   "structures_with_faces": 32,
+   "slot_only_no_faces": false
+  },
+  {
+   "name": "PBR | cartilage",
+   "images": [
+    "Tissue color | cartilage",
+    "Tissue normal | organ"
+   ],
+   "node_groups": [],
+   "structures_with_faces": 0,
+   "slot_only_no_faces": true
+  },
+  {
+   "name": "PBR | muscle",
+   "images": [
+    "Tissue color | muscle",
+    "Tissue normal | muscle"
+   ],
+   "node_groups": [],
+   "structures_with_faces": 9,
+   "slot_only_no_faces": false
+  },
+  {
+   "name": "PBR | tendon",
+   "images": [
+    "Tissue color | tendon",
+    "Tissue normal | organ"
+   ],
+   "node_groups": [],
+   "structures_with_faces": 8,
+   "slot_only_no_faces": false
+  }
+ ],
+ "images": [
+  {
+   "name": "Tissue color | bone",
+   "size": [
+    512,
+    512
+   ],
+   "packed": true,
+   "packed_bytes": 169497,
+   "filepath": ""
+  },
+  {
+   "name": "Tissue color | cartilage",
+   "size": [
+    512,
+    512
+   ],
+   "packed": true,
+   "packed_bytes": 160631,
+   "filepath": ""
+  },
+  {
+   "name": "Tissue color | muscle",
+   "size": [
+    512,
+    512
+   ],
+   "packed": true,
+   "packed_bytes": 153613,
+   "filepath": ""
+  },
+  {
+   "name": "Tissue color | tendon",
+   "size": [
+    512,
+    512
+   ],
+   "packed": true,
+   "packed_bytes": 168414,
+   "filepath": ""
+  },
+  {
+   "name": "Tissue normal | muscle",
+   "size": [
+    512,
+    512
+   ],
+   "packed": true,
+   "packed_bytes": 237824,
+   "filepath": ""
+  },
+  {
+   "name": "Tissue normal | organ",
+   "size": [
+    512,
+    512
+   ],
+   "packed": true,
+   "packed_bytes": 190129,
+   "filepath": ""
+  }
+ ]
+}

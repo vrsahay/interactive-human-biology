@@ -1,0 +1,13 @@
+# Secrets and generated config — the API key must never be committed
+.env
+config.js
+
+# Build output and tooling
+_site/
+node_modules/
+.claude/
+
+# OS clutter
+.DS_Store
+Thumbs.db
+desktop.ini

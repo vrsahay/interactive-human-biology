@@ -1,0 +1,1447 @@
+{
+ "document": "Every learner-facing string the candidate build can show, split by provenance. A: source-backed. B: draft enrichment (needs expert review). C: interface-only. Nothing here is classified as NCERT content unless it carries a declared sourceId.",
+ "build": "step16e-mobile-finalization-complete",
+ "generatedAt": "2026-09-21T07:55:01.783Z",
+ "declaredSources": {
+  "brief-excerpt-hinge": {
+   "description": "Curriculum excerpt supplied by the project owner in the project brief under the heading 'Hinge joint'. The original NCERT reference files are not present in the repository.",
+   "verifiedAgainstTextbook": false
+  },
+  "elbow-rom-normative": {
+   "description": "Normative range-of-motion reference for the approximate 0-145 deg teaching range. Zwerus EL, Willigenburg NW, Scholtes VA, Somford MP, Eygendaal D, van den Bekerom MPJ. 'Normative values and affecting factors for the elbow range of motion.' Shoulder & Elbow 11(3):215-224 (2019). doi:10.1177/1758573217728711, PMCID PMC6555111. Mean active flexion of the dominant hand was 146 deg across 352 healthy adults; the paper cites a literature range of 130-154 deg and reports that elbow range varies with age, sex and BMI. It supports the reasonableness of the teaching range only: it does not validate the geometry, axis or limits of this 3D model, which remain pending expert review.",
+   "verifiedAgainstTextbook": false
+  }
+ },
+ "curriculumBlock": {
+  "status": "draft",
+  "sourceIds": [
+   "brief-excerpt-hinge"
+  ],
+  "figureReference": "NCERT 'Types of joints' figure supplied by the project owner: joint categories and body locations only (no artwork, wording or layout reused).",
+  "noteKey": "lesson.curriculum_note"
+ },
+ "counts": {
+  "A_sourceBacked": 1,
+  "figureReference": 22,
+  "B_draftEnrichment": 125,
+  "C_interfaceOnly": 8,
+  "total": 156
+ },
+ "A_sourceBacked": [
+  {
+   "key": "source.elbow_hinge",
+   "text": "The elbow bends and straightens in one direction, similar to a door hinge.",
+   "provenance": "source-excerpt",
+   "sourceId": "brief-excerpt-hinge",
+   "where": [
+    "hinge.source caption text"
+   ],
+   "spoken": false
+  }
+ ],
+ "figureReference": [
+  {
+   "key": "chapter.ball_socket",
+   "text": "Ball-and-socket joint",
+   "provenance": "figure-reference",
+   "where": [
+    "chapter 05 ball_socket title"
+   ],
+   "spoken": false
+  },
+  {
+   "key": "chapter.fixed",
+   "text": "Fixed joint",
+   "provenance": "figure-reference",
+   "where": [
+    "chapter 03 fixed title"
+   ],
+   "spoken": false
+  },
+  {
+   "key": "chapter.hinge",
+   "text": "Hinge joint",
+   "provenance": "figure-reference",
+   "where": [
+    "chapter 06 hinge title"
+   ],
+   "spoken": false
+  },
+  {
+   "key": "chapter.pivot",
+   "text": "Pivot joint",
+   "provenance": "figure-reference",
+   "where": [
+    "chapter 04 pivot title"
+   ],
+   "spoken": false
+  },
+  {
+   "key": "compare.ball.label",
+   "text": "Ball and socket",
+   "provenance": "figure-reference",
+   "where": [
+    "compare.ball caption title"
+   ],
+   "spoken": false
+  },
+  {
+   "key": "compare.fixed.label",
+   "text": "Fixed",
+   "provenance": "figure-reference",
+   "where": [
+    "compare.fixed caption title"
+   ],
+   "spoken": false
+  },
+  {
+   "key": "compare.hinge.label",
+   "text": "Hinge",
+   "provenance": "figure-reference",
+   "where": [
+    "compare.hinge caption title"
+   ],
+   "spoken": false
+  },
+  {
+   "key": "compare.pivot.label",
+   "text": "Pivot",
+   "provenance": "figure-reference",
+   "where": [
+    "compare.pivot caption title"
+   ],
+   "spoken": false
+  },
+  {
+   "key": "explore.ball.title",
+   "text": "Ball-and-socket joint · shoulder",
+   "provenance": "figure-reference",
+   "where": [
+    "explore.ball title"
+   ],
+   "spoken": false
+  },
+  {
+   "key": "explore.fixed.title",
+   "text": "Fixed joint · skull",
+   "provenance": "figure-reference",
+   "where": [
+    "explore.fixed title"
+   ],
+   "spoken": false
+  },
+  {
+   "key": "explore.hinge.title",
+   "text": "Hinge joint · elbow",
+   "provenance": "figure-reference",
+   "where": [
+    "explore.hinge title"
+   ],
+   "spoken": false
+  },
+  {
+   "key": "explore.pivot.title",
+   "text": "Pivot joint · top of the neck",
+   "provenance": "figure-reference",
+   "where": [
+    "explore.pivot title"
+   ],
+   "spoken": false
+  },
+  {
+   "key": "hinge.name.label",
+   "text": "Hinge joint",
+   "provenance": "figure-reference",
+   "where": [
+    "hinge.name caption title"
+   ],
+   "spoken": false
+  },
+  {
+   "key": "intro.title",
+   "text": "Types of Joints",
+   "provenance": "figure-reference",
+   "where": [
+    "intro.title caption title"
+   ],
+   "spoken": false
+  },
+  {
+   "key": "map.ball.label",
+   "text": "Ball and socket · shoulder",
+   "provenance": "figure-reference",
+   "where": [
+    "map.ball caption text"
+   ],
+   "spoken": false
+  },
+  {
+   "key": "map.fixed.label",
+   "text": "Fixed · skull",
+   "provenance": "figure-reference",
+   "where": [
+    "map.fixed caption text"
+   ],
+   "spoken": false
+  },
+  {
+   "key": "map.hinge.label",
+   "text": "Hinge · elbow",
+   "provenance": "figure-reference",
+   "where": [
+    "map.hinge caption text"
+   ],
+   "spoken": false
+  },
+  {
+   "key": "map.pivot.label",
+   "text": "Pivot · top of the neck",
+   "provenance": "figure-reference",
+   "where": [
+    "map.pivot caption text"
+   ],
+   "spoken": false
+  },
+  {
+   "key": "recap.label.ball",
+   "text": "Ball and socket",
+   "provenance": "figure-reference",
+   "where": [
+    "recall option ball_and_socket"
+   ],
+   "spoken": false
+  },
+  {
+   "key": "recap.label.fixed",
+   "text": "Fixed",
+   "provenance": "figure-reference",
+   "where": [
+    "recall option fixed"
+   ],
+   "spoken": false
+  },
+  {
+   "key": "recap.label.hinge",
+   "text": "Hinge",
+   "provenance": "figure-reference",
+   "where": [
+    "recall option hinge"
+   ],
+   "spoken": false
+  },
+  {
+   "key": "recap.label.pivot",
+   "text": "Pivot",
+   "provenance": "figure-reference",
+   "where": [
+    "recall option pivot"
+   ],
+   "spoken": false
+  }
+ ],
+ "B_draftEnrichment": [
+  {
+   "key": "ball.bones.head",
+   "text": "A round end and a hollow",
+   "provenance": "draft-enrichment",
+   "where": [
+    "ball.bones caption title"
+   ],
+   "spoken": false
+  },
+  {
+   "key": "ball.move.head",
+   "text": "Movement in many directions",
+   "provenance": "draft-enrichment",
+   "where": [
+    "ball.move caption title"
+   ],
+   "spoken": false
+  },
+  {
+   "key": "ball.task.head",
+   "text": "Your turn",
+   "provenance": "draft-enrichment",
+   "where": [
+    "ball.task caption title"
+   ],
+   "spoken": false
+  },
+  {
+   "key": "ball.text.shoulder",
+   "text": "At the shoulder, the rounded top of the upper arm bone sits in a hollow of the shoulder bone, so the arm can move in many directions.",
+   "provenance": "draft-enrichment",
+   "where": [
+    "ball.name caption text"
+   ],
+   "spoken": false
+  },
+  {
+   "key": "ball.travel.head",
+   "text": "Where the arm meets the body",
+   "provenance": "draft-enrichment",
+   "where": [
+    "ball.travel caption title"
+   ],
+   "spoken": false
+  },
+  {
+   "key": "ball.why.head",
+   "text": "Why it moves so freely",
+   "provenance": "draft-enrichment",
+   "where": [
+    "ball.why caption title"
+   ],
+   "spoken": false
+  },
+  {
+   "key": "check.correct",
+   "text": "That is about 90°. Well done.",
+   "provenance": "draft-enrichment",
+   "where": [
+    "hinge.check check correct"
+   ],
+   "spoken": false
+  },
+  {
+   "key": "check.incorrect",
+   "text": "Not quite yet. Aim for about 90°.",
+   "provenance": "draft-enrichment",
+   "where": [
+    "hinge.check check incorrect"
+   ],
+   "spoken": false
+  },
+  {
+   "key": "check.prompt",
+   "text": "Try it: bend the elbow to about 90°.",
+   "provenance": "draft-enrichment",
+   "where": [
+    "hinge.check caption text",
+    "hinge.check prompt",
+    "hinge.check check prompt"
+   ],
+   "spoken": true
+  },
+  {
+   "key": "compare.intro",
+   "text": "Four joints. Four different ways of moving.",
+   "provenance": "draft-enrichment",
+   "where": [
+    "compare.pullback caption text"
+   ],
+   "spoken": false
+  },
+  {
+   "key": "compare.together",
+   "text": "The type of joint tells you the pattern of movement.",
+   "provenance": "draft-enrichment",
+   "where": [
+    "compare.together caption text"
+   ],
+   "spoken": false
+  },
+  {
+   "key": "concept.different",
+   "text": "The way the bones meet decides how they can move.",
+   "provenance": "draft-enrichment",
+   "where": [
+    "concept.different caption text"
+   ],
+   "spoken": false
+  },
+  {
+   "key": "concept.meet",
+   "text": "A joint is a place where bones meet.",
+   "provenance": "draft-enrichment",
+   "where": [
+    "concept.meet caption text"
+   ],
+   "spoken": false
+  },
+  {
+   "key": "explore.ball.done",
+   "text": "One joint, more than one direction. That is a ball-and-socket joint.",
+   "provenance": "draft-enrichment",
+   "where": [
+    "explore.ball task done"
+   ],
+   "spoken": true
+  },
+  {
+   "key": "explore.ball.explanation",
+   "text": "The arm moves in many directions, not just one. That is a ball-and-socket joint.",
+   "provenance": "draft-enrichment",
+   "where": [
+    "explore.ball explanation"
+   ],
+   "spoken": false
+  },
+  {
+   "key": "explore.ball.instruction",
+   "text": "Drag in any direction to move the arm.",
+   "provenance": "draft-enrichment",
+   "where": [
+    "explore.ball instruction"
+   ],
+   "spoken": true
+  },
+  {
+   "key": "explore.ball.task",
+   "text": "Move the arm in two different directions.",
+   "provenance": "draft-enrichment",
+   "where": [
+    "explore.ball task"
+   ],
+   "spoken": true
+  },
+  {
+   "key": "explore.fixed.done",
+   "text": "They barely move, and they spring straight back. That is a fixed joint.",
+   "provenance": "draft-enrichment",
+   "where": [
+    "explore.fixed task done"
+   ],
+   "spoken": true
+  },
+  {
+   "key": "explore.fixed.explanation",
+   "text": "These bones barely move. A fixed joint holds bones firmly together.",
+   "provenance": "draft-enrichment",
+   "where": [
+    "explore.fixed explanation"
+   ],
+   "spoken": false
+  },
+  {
+   "key": "explore.fixed.instruction",
+   "text": "Try to move the skull bones.",
+   "provenance": "draft-enrichment",
+   "where": [
+    "explore.fixed instruction"
+   ],
+   "spoken": true
+  },
+  {
+   "key": "explore.fixed.task",
+   "text": "Try to move the two skull bones apart.",
+   "provenance": "draft-enrichment",
+   "where": [
+    "explore.fixed task"
+   ],
+   "spoken": true
+  },
+  {
+   "key": "explore.hinge.done",
+   "text": "That is flexion. Straighten it again and that is extension — one line, two directions.",
+   "provenance": "draft-enrichment",
+   "where": [
+    "explore.hinge task done"
+   ],
+   "spoken": true
+  },
+  {
+   "key": "explore.hinge.explanation",
+   "text": "Bending is flexion. Straightening is extension. A hinge joint does both, in one direction.",
+   "provenance": "draft-enrichment",
+   "where": [
+    "explore.hinge explanation"
+   ],
+   "spoken": false
+  },
+  {
+   "key": "explore.hinge.instruction",
+   "text": "Drag to bend and straighten the elbow.",
+   "provenance": "draft-enrichment",
+   "where": [
+    "explore.hinge instruction"
+   ],
+   "spoken": true
+  },
+  {
+   "key": "explore.hinge.task",
+   "text": "Bend the elbow until it is about half-way — around 90 degrees.",
+   "provenance": "draft-enrichment",
+   "where": [
+    "explore.hinge task"
+   ],
+   "spoken": true
+  },
+  {
+   "key": "explore.pivot.done",
+   "text": "The head turned, and the bone below stayed still. That is a pivot joint.",
+   "provenance": "draft-enrichment",
+   "where": [
+    "explore.pivot task done"
+   ],
+   "spoken": true
+  },
+  {
+   "key": "explore.pivot.explanation",
+   "text": "The head turns around the bone below it. A pivot joint allows rotation.",
+   "provenance": "draft-enrichment",
+   "where": [
+    "explore.pivot explanation"
+   ],
+   "spoken": false
+  },
+  {
+   "key": "explore.pivot.instruction",
+   "text": "Drag left and right to turn the head.",
+   "provenance": "draft-enrichment",
+   "where": [
+    "explore.pivot instruction"
+   ],
+   "spoken": true
+  },
+  {
+   "key": "explore.pivot.task",
+   "text": "Turn the head as if you were looking over one shoulder.",
+   "provenance": "draft-enrichment",
+   "where": [
+    "explore.pivot task"
+   ],
+   "spoken": true
+  },
+  {
+   "key": "fixed.bones.head",
+   "text": "Two bones, one join",
+   "provenance": "draft-enrichment",
+   "where": [
+    "fixed.bones caption title"
+   ],
+   "spoken": false
+  },
+  {
+   "key": "fixed.task.head",
+   "text": "Your turn",
+   "provenance": "draft-enrichment",
+   "where": [
+    "fixed.task caption title"
+   ],
+   "spoken": false
+  },
+  {
+   "key": "fixed.text",
+   "text": "The bones of the skull meet at fixed joints. These bones do not move against each other.",
+   "provenance": "draft-enrichment",
+   "where": [
+    "fixed.name caption text"
+   ],
+   "spoken": false
+  },
+  {
+   "key": "fixed.travel.head",
+   "text": "Several bones, one skull",
+   "provenance": "draft-enrichment",
+   "where": [
+    "fixed.travel caption title"
+   ],
+   "spoken": false
+  },
+  {
+   "key": "fixed.try.head",
+   "text": "Almost no movement",
+   "provenance": "draft-enrichment",
+   "where": [
+    "fixed.try caption title"
+   ],
+   "spoken": false
+  },
+  {
+   "key": "fixed.why.head",
+   "text": "Why they cannot move",
+   "provenance": "draft-enrichment",
+   "where": [
+    "fixed.why caption title"
+   ],
+   "spoken": false
+  },
+  {
+   "key": "hinge.axis",
+   "text": "This blue line shows the direction the elbow bends around. We call that line the axis.",
+   "provenance": "draft-enrichment",
+   "where": [
+    "hinge.axis caption text"
+   ],
+   "spoken": false
+  },
+  {
+   "key": "hinge.bands_note",
+   "text": "The thin coloured lines mark where the ligaments run. They are a guide, not real tissue.",
+   "provenance": "draft-enrichment",
+   "where": [
+    "hinge.support caption note"
+   ],
+   "spoken": false
+  },
+  {
+   "key": "hinge.bones",
+   "text": "Three bones meet here",
+   "provenance": "draft-enrichment",
+   "where": [
+    "hinge.bones caption text"
+   ],
+   "spoken": false
+  },
+  {
+   "key": "hinge.extension",
+   "text": "When it straightens again, that is called extension.",
+   "provenance": "draft-enrichment",
+   "where": [
+    "hinge.extension caption text"
+   ],
+   "spoken": false
+  },
+  {
+   "key": "hinge.flexion",
+   "text": "When the elbow bends, that is called flexion.",
+   "provenance": "draft-enrichment",
+   "where": [
+    "hinge.flexion caption text"
+   ],
+   "spoken": false
+  },
+  {
+   "key": "hinge.knee",
+   "text": "The knee is another hinge joint.",
+   "provenance": "draft-enrichment",
+   "where": [
+    "hinge.knee caption text"
+   ],
+   "spoken": false
+  },
+  {
+   "key": "hinge.range_note",
+   "text": "0-145 deg is an approximate teaching range for this model; adult elbow flexion varies between people (see Sources).",
+   "provenance": "draft-enrichment",
+   "where": [
+    "hinge.extension caption note"
+   ],
+   "spoken": false
+  },
+  {
+   "key": "hinge.return",
+   "text": "The elbow settles back to rest.",
+   "provenance": "draft-enrichment",
+   "where": [
+    "hinge.return caption text"
+   ],
+   "spoken": false
+  },
+  {
+   "key": "hinge.support",
+   "text": "A joint capsule and ligaments surround the elbow.",
+   "provenance": "draft-enrichment",
+   "where": [
+    "hinge.support caption text"
+   ],
+   "spoken": false
+  },
+  {
+   "key": "hinge.travel.head",
+   "text": "The elbow",
+   "provenance": "draft-enrichment",
+   "where": [
+    "hinge.travel caption title"
+   ],
+   "spoken": false
+  },
+  {
+   "key": "hinge.try",
+   "text": "Your turn: bend and straighten the elbow.",
+   "provenance": "draft-enrichment",
+   "where": [
+    "hinge.try caption text"
+   ],
+   "spoken": true
+  },
+  {
+   "key": "hinge.why.head",
+   "text": "Why it bends only one way",
+   "provenance": "draft-enrichment",
+   "where": [
+    "hinge.why caption title"
+   ],
+   "spoken": false
+  },
+  {
+   "key": "hook.elbow",
+   "text": "Your elbow mainly bends and straightens.",
+   "provenance": "draft-enrichment",
+   "where": [
+    "hook.elbow caption text"
+   ],
+   "spoken": false
+  },
+  {
+   "key": "hook.question",
+   "text": "Both are joints. So why do they move so differently?",
+   "provenance": "draft-enrichment",
+   "where": [
+    "hook.question caption text"
+   ],
+   "spoken": false
+  },
+  {
+   "key": "hook.shoulder",
+   "text": "Your shoulder can swing your arm in almost any direction.",
+   "provenance": "draft-enrichment",
+   "where": [
+    "hook.shoulder caption text"
+   ],
+   "spoken": false
+  },
+  {
+   "key": "intro.subtitle",
+   "text": "How different joints allow different kinds of movement.",
+   "provenance": "draft-enrichment",
+   "where": [
+    "intro.title caption text"
+   ],
+   "spoken": false
+  },
+  {
+   "key": "intro.where",
+   "text": "You have joints like these all over your body. We will look at four kinds.",
+   "provenance": "draft-enrichment",
+   "where": [
+    "intro.map caption text"
+   ],
+   "spoken": false
+  },
+  {
+   "key": "map.intro",
+   "text": "Here they are, together, in one body.",
+   "provenance": "draft-enrichment",
+   "where": [
+    "map.intro caption text"
+   ],
+   "spoken": false
+  },
+  {
+   "key": "narr.ball.bones",
+   "text": "The top of the upper-arm bone is a smooth, rounded ball. Beside it, the shoulder blade has a shallow hollow, and the ball rests in it.",
+   "provenance": "draft-enrichment",
+   "where": [
+    "ball.bones spoken line (subtitle)"
+   ],
+   "spoken": true
+  },
+  {
+   "key": "narr.ball.move",
+   "text": "From this one joint, the arm can move in many directions: forward, backwards, out sideways, and right round.",
+   "provenance": "draft-enrichment",
+   "where": [
+    "ball.move spoken line (subtitle)"
+   ],
+   "spoken": true
+  },
+  {
+   "key": "narr.ball.name",
+   "text": "A rounded end sitting in a hollow like this is called a ball-and-socket joint.",
+   "provenance": "draft-enrichment",
+   "where": [
+    "ball.name spoken line (subtitle)"
+   ],
+   "spoken": true
+  },
+  {
+   "key": "narr.ball.task",
+   "text": "Try it yourself. Move the arm in two different directions.",
+   "provenance": "draft-enrichment",
+   "where": [
+    "ball.task spoken line (subtitle)"
+   ],
+   "spoken": true
+  },
+  {
+   "key": "narr.ball.travel",
+   "text": "Back up to the shoulder, where the arm meets the body.",
+   "provenance": "draft-enrichment",
+   "where": [
+    "ball.travel spoken line (subtitle)"
+   ],
+   "spoken": true
+  },
+  {
+   "key": "narr.ball.why",
+   "text": "A rounded end sitting in a hollow can roll and turn in every direction at once. Nothing holds it to a single line, so the arm is not limited to one direction the way the elbow is.",
+   "provenance": "draft-enrichment",
+   "where": [
+    "ball.why spoken line (subtitle)"
+   ],
+   "spoken": true
+  },
+  {
+   "key": "narr.compare.ball",
+   "text": "The shoulder: a round end in a hollow, so movement in many directions.",
+   "provenance": "draft-enrichment",
+   "where": [
+    "compare.ball spoken line (subtitle)"
+   ],
+   "spoken": true
+  },
+  {
+   "key": "narr.compare.fixed",
+   "text": "The skull: edges locked together, so almost no movement.",
+   "provenance": "draft-enrichment",
+   "where": [
+    "compare.fixed spoken line (subtitle)"
+   ],
+   "spoken": true
+  },
+  {
+   "key": "narr.compare.hinge",
+   "text": "The elbow: bending and straightening around one line.",
+   "provenance": "draft-enrichment",
+   "where": [
+    "compare.hinge spoken line (subtitle)"
+   ],
+   "spoken": true
+  },
+  {
+   "key": "narr.compare.pivot",
+   "text": "The top of the neck: one bone turning around another.",
+   "provenance": "draft-enrichment",
+   "where": [
+    "compare.pivot spoken line (subtitle)"
+   ],
+   "spoken": true
+  },
+  {
+   "key": "narr.compare.pullback",
+   "text": "Four joints, in one body, with four different ways of moving. Look at each one again.",
+   "provenance": "draft-enrichment",
+   "where": [
+    "compare.pullback spoken line (subtitle)"
+   ],
+   "spoken": true
+  },
+  {
+   "key": "narr.compare.together",
+   "text": "Four different shapes, four different movements. The shape of the join decides what the joint can do.",
+   "provenance": "draft-enrichment",
+   "where": [
+    "compare.together spoken line (subtitle)"
+   ],
+   "spoken": true
+  },
+  {
+   "key": "narr.concept.different",
+   "text": "How the bones meet at a joint decides how that joint can move. Change the shape of the join and you change the movement.",
+   "provenance": "draft-enrichment",
+   "where": [
+    "concept.different spoken line (subtitle)"
+   ],
+   "spoken": true
+  },
+  {
+   "key": "narr.concept.meet",
+   "text": "A joint is any place where bones meet. Most joints are two bones meeting; here at the elbow, three bones come together.",
+   "provenance": "draft-enrichment",
+   "where": [
+    "concept.meet spoken line (subtitle)"
+   ],
+   "spoken": true
+  },
+  {
+   "key": "narr.fixed.bones",
+   "text": "These are two of those bones, and this is the line where they meet. Look at how the edges follow each other.",
+   "provenance": "draft-enrichment",
+   "where": [
+    "fixed.bones spoken line (subtitle)"
+   ],
+   "spoken": true
+  },
+  {
+   "key": "narr.fixed.name",
+   "text": "A join that holds two bones still like this is called a fixed joint. Its job is strength, not movement: together these bones make one solid case around the brain.",
+   "provenance": "draft-enrichment",
+   "where": [
+    "fixed.name spoken line (subtitle)"
+   ],
+   "spoken": true
+  },
+  {
+   "key": "narr.fixed.task",
+   "text": "Try it yourself. See whether you can move these two bones apart.",
+   "provenance": "draft-enrichment",
+   "where": [
+    "fixed.task spoken line (subtitle)"
+   ],
+   "spoken": true
+  },
+  {
+   "key": "narr.fixed.travel",
+   "text": "Go up to the top of the head. The skull looks like a single piece, but it is several separate bones meeting along wavy lines.",
+   "provenance": "draft-enrichment",
+   "where": [
+    "fixed.travel spoken line (subtitle)"
+   ],
+   "spoken": true
+  },
+  {
+   "key": "narr.fixed.try",
+   "text": "Watch the join itself. Nothing slides, nothing bends, nothing shifts at all.",
+   "provenance": "draft-enrichment",
+   "where": [
+    "fixed.try spoken line (subtitle)"
+   ],
+   "spoken": true
+  },
+  {
+   "key": "narr.fixed.why",
+   "text": "The edges of these bones lock into each other, and tough fibres hold them tightly together. There is no gap for them to slide in, so they cannot move against each other.",
+   "provenance": "draft-enrichment",
+   "where": [
+    "fixed.why spoken line (subtitle)"
+   ],
+   "spoken": true
+  },
+  {
+   "key": "narr.hinge.axis",
+   "text": "This blue line shows the direction the elbow bends around. We call that line the axis.",
+   "provenance": "draft-enrichment",
+   "where": [
+    "hinge.axis spoken line (subtitle)"
+   ],
+   "spoken": true
+  },
+  {
+   "key": "narr.hinge.bones",
+   "text": "The elbow is where the upper-arm bone meets two bones in the forearm.",
+   "provenance": "draft-enrichment",
+   "where": [
+    "hinge.bones spoken line (subtitle)"
+   ],
+   "spoken": true
+  },
+  {
+   "key": "narr.hinge.extension",
+   "text": "And as it straightens again, that movement is called extension.",
+   "provenance": "draft-enrichment",
+   "where": [
+    "hinge.extension spoken line (subtitle)"
+   ],
+   "spoken": true
+  },
+  {
+   "key": "narr.hinge.flexion",
+   "text": "Watch the forearm come up. When the elbow bends like this, the movement is called flexion.",
+   "provenance": "draft-enrichment",
+   "where": [
+    "hinge.flexion spoken line (subtitle)"
+   ],
+   "spoken": true
+  },
+  {
+   "key": "narr.hinge.knee",
+   "text": "The knee is another hinge joint. It is bigger, but it does the same thing: it bends and straightens one way.",
+   "provenance": "draft-enrichment",
+   "where": [
+    "hinge.knee spoken line (subtitle)"
+   ],
+   "spoken": true
+  },
+  {
+   "key": "narr.hinge.name",
+   "text": "A joint that bends and straightens around one line like this is called a hinge joint.",
+   "provenance": "draft-enrichment",
+   "where": [
+    "hinge.name spoken line (subtitle)"
+   ],
+   "spoken": true
+  },
+  {
+   "key": "narr.hinge.return",
+   "text": "The elbow settles back to rest.",
+   "provenance": "draft-enrichment",
+   "where": [
+    "hinge.return spoken line (subtitle)"
+   ],
+   "spoken": true
+  },
+  {
+   "key": "narr.hinge.source",
+   "text": "The elbow bends and straightens in one direction, the way a door swings on its hinges.",
+   "provenance": "draft-enrichment",
+   "where": [
+    "hinge.source spoken line (subtitle)"
+   ],
+   "spoken": true
+  },
+  {
+   "key": "narr.hinge.support",
+   "text": "A joint capsule and ligaments wrap around the elbow. They hold the bones together and keep the movement on that one line.",
+   "provenance": "draft-enrichment",
+   "where": [
+    "hinge.support spoken line (subtitle)"
+   ],
+   "spoken": true
+  },
+  {
+   "key": "narr.hinge.travel",
+   "text": "Down the same arm now, to the elbow.",
+   "provenance": "draft-enrichment",
+   "where": [
+    "hinge.travel spoken line (subtitle)"
+   ],
+   "spoken": true
+  },
+  {
+   "key": "narr.hinge.why",
+   "text": "Look at the shape of the join. The end of the upper-arm bone is like a spool, and the forearm bone wraps around it. A spool can only turn about its own line, so the elbow can only bend and straighten.",
+   "provenance": "draft-enrichment",
+   "where": [
+    "hinge.why spoken line (subtitle)"
+   ],
+   "spoken": true
+  },
+  {
+   "key": "narr.hook.elbow",
+   "text": "Now the elbow, on the same arm. It does one thing: it bends and it straightens.",
+   "provenance": "draft-enrichment",
+   "where": [
+    "hook.elbow spoken line (subtitle)"
+   ],
+   "spoken": true
+  },
+  {
+   "key": "narr.hook.question",
+   "text": "Both are joints in the same arm. So why does one move in every direction and the other in only one?",
+   "provenance": "draft-enrichment",
+   "where": [
+    "hook.question spoken line (subtitle)"
+   ],
+   "spoken": true
+  },
+  {
+   "key": "narr.hook.shoulder",
+   "text": "Start with the shoulder. Your arm can swing forward, out to the side, and round in a circle.",
+   "provenance": "draft-enrichment",
+   "where": [
+    "hook.shoulder spoken line (subtitle)"
+   ],
+   "spoken": true
+  },
+  {
+   "key": "narr.intro.map",
+   "text": "You have joints like these all over your body. We will look at four kinds, and at what each shape allows.",
+   "provenance": "draft-enrichment",
+   "where": [
+    "intro.map spoken line (subtitle)"
+   ],
+   "spoken": true
+  },
+  {
+   "key": "narr.intro.title",
+   "text": "Every time you move, bones move against each other at a joint. Different joints allow very different movements.",
+   "provenance": "draft-enrichment",
+   "where": [
+    "intro.title spoken line (subtitle)"
+   ],
+   "spoken": true
+  },
+  {
+   "key": "narr.map.all",
+   "text": "Four joins, four shapes, four kinds of movement. The shape of the join is what decides.",
+   "provenance": "draft-enrichment",
+   "where": [
+    "map.all spoken line (subtitle)"
+   ],
+   "spoken": true
+  },
+  {
+   "key": "narr.map.ball",
+   "text": "A ball-and-socket joint at the shoulder moves many ways.",
+   "provenance": "draft-enrichment",
+   "where": [
+    "map.ball spoken line (subtitle)"
+   ],
+   "spoken": true
+  },
+  {
+   "key": "narr.map.fixed",
+   "text": "Fixed joints hold the skull bones together.",
+   "provenance": "draft-enrichment",
+   "where": [
+    "map.fixed spoken line (subtitle)"
+   ],
+   "spoken": true
+  },
+  {
+   "key": "narr.map.hinge",
+   "text": "A hinge joint at the elbow bends and straightens.",
+   "provenance": "draft-enrichment",
+   "where": [
+    "map.hinge spoken line (subtitle)"
+   ],
+   "spoken": true
+  },
+  {
+   "key": "narr.map.intro",
+   "text": "Here they are together, in one body.",
+   "provenance": "draft-enrichment",
+   "where": [
+    "map.intro spoken line (subtitle)"
+   ],
+   "spoken": true
+  },
+  {
+   "key": "narr.map.pivot",
+   "text": "A pivot joint at the top of the neck turns the head.",
+   "provenance": "draft-enrichment",
+   "where": [
+    "map.pivot spoken line (subtitle)"
+   ],
+   "spoken": true
+  },
+  {
+   "key": "narr.pivot.bones",
+   "text": "At the top of the neck, one small bone sits on top of another. Nothing is moving yet. The lower bone is the one that stays still.",
+   "provenance": "draft-enrichment",
+   "where": [
+    "pivot.bones spoken line (subtitle)"
+   ],
+   "spoken": true
+  },
+  {
+   "key": "narr.pivot.name",
+   "text": "A joint where one bone turns around another like this is called a pivot joint.",
+   "provenance": "draft-enrichment",
+   "where": [
+    "pivot.name spoken line (subtitle)"
+   ],
+   "spoken": true
+  },
+  {
+   "key": "narr.pivot.rotate",
+   "text": "Now the upper bone turns around the one below it, and your head turns with it.",
+   "provenance": "draft-enrichment",
+   "where": [
+    "pivot.rotate spoken line (subtitle)"
+   ],
+   "spoken": true
+  },
+  {
+   "key": "narr.pivot.task",
+   "text": "Try it yourself. Turn the head as if you were looking over one shoulder.",
+   "provenance": "draft-enrichment",
+   "where": [
+    "pivot.task spoken line (subtitle)"
+   ],
+   "spoken": true
+  },
+  {
+   "key": "narr.pivot.travel",
+   "text": "Now down to the top of the neck, just under the skull, where the head meets the backbone.",
+   "provenance": "draft-enrichment",
+   "where": [
+    "pivot.travel spoken line (subtitle)"
+   ],
+   "spoken": true
+  },
+  {
+   "key": "narr.pivot.why",
+   "text": "The upper bone turns around one line running straight up through both bones. Turning around that line is the only movement this shape allows, which is why the head swivels here rather than bending.",
+   "provenance": "draft-enrichment",
+   "where": [
+    "pivot.why spoken line (subtitle)"
+   ],
+   "spoken": true
+  },
+  {
+   "key": "narr.recall.open",
+   "text": "Your turn again. This time you name each joint from the way it moves.",
+   "provenance": "draft-enrichment",
+   "where": [
+    "recall.open spoken line (subtitle)"
+   ],
+   "spoken": true
+  },
+  {
+   "key": "pivot.bones.head",
+   "text": "One bone on top of another",
+   "provenance": "draft-enrichment",
+   "where": [
+    "pivot.bones caption title"
+   ],
+   "spoken": false
+  },
+  {
+   "key": "pivot.rotate.head",
+   "text": "The upper bone turns",
+   "provenance": "draft-enrichment",
+   "where": [
+    "pivot.rotate caption title"
+   ],
+   "spoken": false
+  },
+  {
+   "key": "pivot.task.head",
+   "text": "Your turn",
+   "provenance": "draft-enrichment",
+   "where": [
+    "pivot.task caption title"
+   ],
+   "spoken": false
+  },
+  {
+   "key": "pivot.text",
+   "text": "The upper bone turns around the one below it. Your head turns with it.",
+   "provenance": "draft-enrichment",
+   "where": [
+    "pivot.name caption text"
+   ],
+   "spoken": false
+  },
+  {
+   "key": "pivot.travel.head",
+   "text": "The top of the neck",
+   "provenance": "draft-enrichment",
+   "where": [
+    "pivot.travel caption title"
+   ],
+   "spoken": false
+  },
+  {
+   "key": "pivot.why.head",
+   "text": "Turning, and nothing else",
+   "provenance": "draft-enrichment",
+   "where": [
+    "pivot.why caption title"
+   ],
+   "spoken": false
+  },
+  {
+   "key": "recall.a.elbow",
+   "text": "Hinge: it bends and straightens in one main direction.",
+   "provenance": "draft-enrichment",
+   "where": [
+    "recall step elbow reveal"
+   ],
+   "spoken": true
+  },
+  {
+   "key": "recall.a.knee",
+   "text": "Hinge: the knee bends and straightens, like the elbow.",
+   "provenance": "draft-enrichment",
+   "where": [
+    "recall step knee reveal"
+   ],
+   "spoken": true
+  },
+  {
+   "key": "recall.a.neck",
+   "text": "Pivot: one bone rotates around another.",
+   "provenance": "draft-enrichment",
+   "where": [
+    "recall step neck reveal"
+   ],
+   "spoken": true
+  },
+  {
+   "key": "recall.a.shoulder",
+   "text": "Ball-and-socket: the rounded end sits in a socket, so it moves many ways.",
+   "provenance": "draft-enrichment",
+   "where": [
+    "recall step shoulder reveal"
+   ],
+   "spoken": true
+  },
+  {
+   "key": "recall.a.skull",
+   "text": "Fixed: the bones hold firm, so there is little or no movement.",
+   "provenance": "draft-enrichment",
+   "where": [
+    "recall step skull reveal"
+   ],
+   "spoken": true
+  },
+  {
+   "key": "recall.complete",
+   "text": "You named every joint from the way it moves.",
+   "provenance": "draft-enrichment",
+   "where": [
+    "recall complete"
+   ],
+   "spoken": true
+  },
+  {
+   "key": "recall.correct",
+   "text": "Yes. That is right.",
+   "provenance": "draft-enrichment",
+   "where": [
+    "recall correct"
+   ],
+   "spoken": true
+  },
+  {
+   "key": "recall.incorrect",
+   "text": "Not that one. Look at how it moves.",
+   "provenance": "draft-enrichment",
+   "where": [
+    "recall incorrect"
+   ],
+   "spoken": true
+  },
+  {
+   "key": "recall.open",
+   "text": "Your turn. Name each joint from the way it moves.",
+   "provenance": "draft-enrichment",
+   "where": [
+    "recall.open caption text"
+   ],
+   "spoken": false
+  },
+  {
+   "key": "recall.prompt",
+   "text": "Which type of joint is this?",
+   "provenance": "draft-enrichment",
+   "where": [
+    "recall prompt"
+   ],
+   "spoken": false
+  },
+  {
+   "key": "recall.q.elbow",
+   "text": "This joint bends and straightens in one direction.",
+   "provenance": "draft-enrichment",
+   "where": [
+    "recall step elbow question"
+   ],
+   "spoken": true
+  },
+  {
+   "key": "recall.q.knee",
+   "text": "This joint in the leg bends and straightens one way.",
+   "provenance": "draft-enrichment",
+   "where": [
+    "recall step knee question"
+   ],
+   "spoken": true
+  },
+  {
+   "key": "recall.q.neck",
+   "text": "The head turns around the bone below it.",
+   "provenance": "draft-enrichment",
+   "where": [
+    "recall step neck question"
+   ],
+   "spoken": true
+  },
+  {
+   "key": "recall.q.shoulder",
+   "text": "The arm moves in many directions.",
+   "provenance": "draft-enrichment",
+   "where": [
+    "recall step shoulder question"
+   ],
+   "spoken": true
+  },
+  {
+   "key": "recall.q.skull",
+   "text": "These skull bones hardly move at all.",
+   "provenance": "draft-enrichment",
+   "where": [
+    "recall step skull question"
+   ],
+   "spoken": true
+  },
+  {
+   "key": "recall.start_hint",
+   "text": "Choose the joint type for each movement.",
+   "provenance": "draft-enrichment",
+   "where": [
+    "recall.challenge caption text"
+   ],
+   "spoken": true
+  },
+  {
+   "key": "recap.compare",
+   "text": "Fixed: no movement · Pivot: turning · Ball and socket: many directions · Hinge: one direction",
+   "provenance": "draft-enrichment",
+   "where": [
+    "map.all caption text"
+   ],
+   "spoken": false
+  }
+ ],
+ "C_interfaceOnly": [
+  {
+   "key": "chapter.body_map",
+   "text": "The body map",
+   "provenance": "ui",
+   "where": [
+    "chapter 09 body_map title"
+   ],
+   "spoken": false
+  },
+  {
+   "key": "chapter.compare",
+   "text": "Comparing the four",
+   "provenance": "ui",
+   "where": [
+    "chapter 07 compare title"
+   ],
+   "spoken": false
+  },
+  {
+   "key": "chapter.hook",
+   "text": "Two joints, two movements",
+   "provenance": "ui",
+   "where": [
+    "chapter 01 hook title"
+   ],
+   "spoken": false
+  },
+  {
+   "key": "chapter.recall",
+   "text": "Recall challenge",
+   "provenance": "ui",
+   "where": [
+    "chapter 08 recall title"
+   ],
+   "spoken": false
+  },
+  {
+   "key": "chapter.what_is_joint",
+   "text": "What is a joint?",
+   "provenance": "ui",
+   "where": [
+    "chapter 02 what_is_joint title"
+   ],
+   "spoken": false
+  },
+  {
+   "key": "hinge.try_prompt",
+   "text": "Drag the forearm, or use the slider.",
+   "provenance": "ui",
+   "where": [
+    "hinge.try prompt"
+   ],
+   "spoken": true
+  },
+  {
+   "key": "ui.explore_status_teaching",
+   "text": "Teaching simulation",
+   "provenance": "ui",
+   "where": [
+    "explore.fixed status",
+    "explore.pivot status",
+    "explore.ball status"
+   ],
+   "spoken": false
+  },
+  {
+   "key": "ui.explore_status_validated",
+   "text": "3D joint model",
+   "provenance": "ui",
+   "where": [
+    "explore.hinge status"
+   ],
+   "spoken": false
+  }
+ ]
+}

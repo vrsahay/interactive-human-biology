@@ -1,0 +1,189 @@
+{
+ "label": "diag150",
+ "generatedAt": "2026-09-17T18:04:52.395Z",
+ "methodology": "see header of tests/perf/perf-lab-r.spec.ts",
+ "machine": "Lenovo 20V9, Intel Core i5-1135G7, Iris Xe, 16 GB, Windows 11 Pro, Chrome 152 headless",
+ "coldLoads": {},
+ "interactions": {
+  "mobile-2x-fast4g": {
+   "profile": {
+    "id": "mobile-2x-fast4g",
+    "classification": "EMULATED — NOT CERTIFICATION (CPU 2x, laptop GPU)",
+    "viewport": {
+     "width": 412,
+     "height": 915
+    },
+    "dpr": 2.625,
+    "cpu": 2,
+    "net": {
+     "id": "fast-4g-devtools",
+     "downBps": 1012500,
+     "upBps": 168750,
+     "latencyMs": 165,
+     "note": "Chrome DevTools Fast 4G preset"
+    },
+    "mobile": true,
+    "signals": {
+     "deviceMemory": 4,
+     "hardwareConcurrency": 8
+    }
+   },
+   "elbowReadyAfterIntentMs": 1267,
+   "drag": {
+    "frames": 225,
+    "durationS": 7.8,
+    "fps": 28.8,
+    "frameIntervalMs": {
+     "n": 224,
+     "p50": 16.6,
+     "p95": 17.6,
+     "min": 14.7,
+     "max": 733.5
+    },
+    "droppedFrames": 243,
+    "inputs": 482,
+    "inputLatencyRawMs": {
+     "n": 469,
+     "p50": 53.6,
+     "p95": 637.3,
+     "min": 13.5,
+     "max": 733.3
+    },
+    "inputLatencyEffectiveMs": {
+     "n": 469,
+     "p50": 53.6,
+     "p95": 637.3,
+     "min": 13.5,
+     "max": 733.3
+    },
+    "inputsWithoutFrame": 13,
+    "longFrames": {
+     "count": 6,
+     "first": [
+      [
+       0,
+       667
+      ],
+      [
+       1282,
+       684
+      ],
+      [
+       2549,
+       734
+      ],
+      [
+       3916,
+       667
+      ],
+      [
+       5166,
+       733
+      ],
+      [
+       6532,
+       667
+      ]
+     ],
+     "note": "[ms since the first frame of the window, interval ms] for intervals > 50 ms"
+    }
+   },
+   "dragPose": {
+    "pointerAmplitudePx": 150,
+    "angleMin": 0,
+    "angleMax": 145,
+    "unchangedStepFraction": 0.533,
+    "note": "steps where the pose did not change render no frame (idle render loop) — a drag held at a joint limit is not a stall"
+   },
+   "dragHeapBytes": 24226734,
+   "orbit": {
+    "frames": 481,
+    "durationS": 8,
+    "fps": 60,
+    "frameIntervalMs": {
+     "n": 480,
+     "p50": 16.7,
+     "p95": 17.4,
+     "min": 13.8,
+     "max": 18.2
+    },
+    "droppedFrames": 0,
+    "inputs": 483,
+    "inputLatencyRawMs": {
+     "n": 483,
+     "p50": 11.7,
+     "p95": 13.5,
+     "min": 5.7,
+     "max": 34
+    },
+    "inputLatencyEffectiveMs": {
+     "n": 483,
+     "p50": 11.7,
+     "p95": 13.5,
+     "min": 5.7,
+     "max": 34
+    },
+    "inputsWithoutFrame": 0,
+    "longFrames": {
+     "count": 0,
+     "first": [],
+     "note": "[ms since the first frame of the window, interval ms] for intervals > 50 ms"
+    }
+   },
+   "recapPlayback": {
+    "frames": 481,
+    "durationS": 8,
+    "fps": 60,
+    "frameIntervalMs": {
+     "n": 480,
+     "p50": 16.7,
+     "p95": 17.5,
+     "min": 14.2,
+     "max": 19.5
+    },
+    "droppedFrames": 0,
+    "inputs": 0,
+    "inputLatencyRawMs": {
+     "n": 0,
+     "p50": null,
+     "p95": null,
+     "min": null,
+     "max": null
+    },
+    "inputLatencyEffectiveMs": {
+     "n": 0,
+     "p50": null,
+     "p95": null,
+     "min": null,
+     "max": null
+    },
+    "inputsWithoutFrame": 0,
+    "longFrames": {
+     "count": 0,
+     "first": [],
+     "note": "[ms since the first frame of the window, interval ms] for intervals > 50 ms"
+    }
+   },
+   "recapRenderer": {
+    "fps": 60,
+    "frameIntervalMeanMs": 16.677083333333332,
+    "frameIntervalP95Ms": 17.5,
+    "frameCpuMeanMs": 3.0270833330849807,
+    "frameCpuP95Ms": 3.7000000178813934,
+    "drawCalls": 63,
+    "triangles": 174656,
+    "geometries": 91,
+    "textures": 6,
+    "textureMemoryBytes": 4194303,
+    "pixelRatio": 1.5,
+    "framesRendered": 1215,
+    "firstFrameMs": 1614.6000000238419,
+    "firstModelFrameMs": 1614.6000000238419,
+    "renderer": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x00009A49) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+   },
+   "consoleErrors": [
+    "pageerror: Failed to execute 'setPointerCapture' on 'Element': No active pointer with the given id is found."
+   ]
+  }
+ }
+}

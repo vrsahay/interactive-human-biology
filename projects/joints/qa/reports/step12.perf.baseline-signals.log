@@ -1,0 +1,11 @@
+
+Running 3 tests using 1 worker
+
+  ok 1 tests\perf\perf-lab.spec.ts:351:3 › perf lab: tablet-emulated-fast4g (3.1m)
+  ok 2 tests\perf\perf-lab.spec.ts:351:3 › perf lab: mobile-emulated-fast4g (4.8m)
+  ok 3 tests\perf\perf-lab.spec.ts:351:3 › perf lab: mobile-emulated-fast4g-cpu2x (3.2m)
+
+  Slow test file: tests\perf\perf-lab.spec.ts (11.0m)
+  Consider running tests from slow files in parallel. See: https://playwright.dev/docs/test-parallel
+  3 passed (11.1m)
+EXIT 0
