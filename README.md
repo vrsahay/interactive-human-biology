@@ -1,5 +1,7 @@
 # Interactive Human Biology
 
+**Live:** https://interactive-human-biology.vercel.app · **Source:** https://github.com/vrsahay/interactive-human-biology
+
 One platform for interactive 3D human-biology lessons. **One repository, one build, one deployment, one domain.**
 Each lesson is a separate project inside this repository, and each is published at its own route:
 
@@ -323,6 +325,12 @@ homepage cards match the registry, each card opens its route, refresh and browse
 unknown routes return the 404 page, every asset request stays inside its module's route and succeeds, the Respiratory
 model and Google narration load and the lesson plays, Explore mode opens, the Joints manifests/models/environment/
 narration load, there are no console errors, and the homepage fits a 390 px phone.
+
+To test the deployed site instead of the local build:
+
+```bash
+BASE_URL=https://interactive-human-biology.vercel.app npm test
+```
 
 Each project keeps its own tests (`projects/joints`: `npm run typecheck`, `npm test`, `npm run test:e2e`).
 

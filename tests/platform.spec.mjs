@@ -15,7 +15,8 @@ function watch(page) {
   page.on("requestfailed", (r) => { if (!/net::ERR_ABORTED/.test(r.failure()?.errorText ?? "")) problems.push(`failed: ${r.url()} ${r.failure()?.errorText}`); });
   page.on("response", (r) => {
     const url = new URL(r.url());
-    if (url.hostname === "localhost") assets.push({ path: url.pathname, status: r.status() });
+    // same-origin network requests only (not blob: textures), against the local server or a deployed site
+    if (url.protocol.startsWith("http") && url.origin === new URL(test.info().project.use.baseURL).origin) assets.push({ path: url.pathname, status: r.status() });
     if (r.status() >= 400) problems.push(`HTTP ${r.status()}: ${r.url()}`);
   });
   return { problems, assets };
