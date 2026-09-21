@@ -116,6 +116,17 @@ test("unknown routes return the platform 404 page", async ({ page }) => {
   await expect(page.getByRole("link", { name: "Go to the homepage" })).toBeVisible();
 });
 
+// The homepage is a single screen on desktops and laptops: intro and every module card visible without scrolling.
+for (const [width, height] of [[1280, 720], [1366, 768], [1440, 900], [1536, 864], [1920, 1080]]) {
+  test(`homepage fits one screen at ${width}×${height}`, async ({ page }) => {
+    await page.setViewportSize({ width, height });
+    await page.goto("/");
+    await page.waitForLoadState("networkidle");
+    expect(await page.evaluate(() => document.documentElement.scrollHeight - innerHeight)).toBeLessThanOrEqual(0);
+    for (const cta of await page.locator(".card-cta").all()) await expect(cta).toBeInViewport({ ratio: 1 });
+  });
+}
+
 test.describe("mobile", () => {
   test.use({ viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true });
   test("homepage fits a phone screen without horizontal scrolling", async ({ page }) => {

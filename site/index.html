@@ -18,55 +18,25 @@
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
-  <div class="backdrop" aria-hidden="true">
-    <div class="glow glow--a"></div>
-    <div class="glow glow--b"></div>
-    <div class="grid-lines"></div>
-    <svg class="branches" viewBox="0 0 600 640" preserveAspectRatio="xMidYMin slice">
-      <g fill="none" stroke="currentColor" stroke-linecap="round">
-        <path stroke-width="7" d="M300 0 V170"/>
-        <path stroke-width="5.5" d="M300 170 C300 205 262 222 228 250 S178 318 168 360"/>
-        <path stroke-width="5.5" d="M300 170 C300 205 338 222 374 248 S430 312 442 356"/>
-        <path stroke-width="3.6" d="M168 360 C160 392 128 410 104 440 S74 500 70 530"/>
-        <path stroke-width="3.6" d="M168 360 C176 398 200 420 206 456 S204 520 214 552"/>
-        <path stroke-width="3.6" d="M442 356 C452 392 486 410 506 440 S530 498 536 528"/>
-        <path stroke-width="3.6" d="M442 356 C434 396 410 420 402 458 S404 520 394 552"/>
-        <path stroke-width="3" d="M228 250 C206 262 176 268 150 288 S112 320 92 330"/>
-        <path stroke-width="3" d="M374 248 C398 262 428 266 454 286 S494 318 514 328"/>
-        <path stroke-width="2.2" d="M104 440 C88 448 64 450 44 468"/><path stroke-width="2.2" d="M70 530 C58 548 44 560 30 590"/>
-        <path stroke-width="2.2" d="M70 530 C78 556 90 572 96 602"/><path stroke-width="2.2" d="M214 552 C204 574 196 590 190 620"/>
-        <path stroke-width="2.2" d="M214 552 C230 572 244 584 252 612"/><path stroke-width="2.2" d="M506 440 C522 448 544 452 566 470"/>
-        <path stroke-width="2.2" d="M536 528 C548 548 560 562 574 590"/><path stroke-width="2.2" d="M536 528 C526 556 516 572 510 602"/>
-        <path stroke-width="2.2" d="M394 552 C404 574 410 590 414 620"/><path stroke-width="2.2" d="M394 552 C378 572 366 586 356 612"/>
-        <path stroke-width="2" d="M150 288 C140 306 136 322 138 344"/><path stroke-width="2" d="M454 286 C464 304 468 320 466 342"/>
-      </g>
-      <g fill="currentColor">
-        <circle cx="30" cy="590" r="4"/><circle cx="96" cy="602" r="4"/><circle cx="190" cy="620" r="4"/><circle cx="252" cy="612" r="4"/>
-        <circle cx="574" cy="590" r="4"/><circle cx="510" cy="602" r="4"/><circle cx="414" cy="620" r="4"/><circle cx="356" cy="612" r="4"/>
-        <circle cx="44" cy="468" r="3.4"/><circle cx="566" cy="470" r="3.4"/><circle cx="92" cy="330" r="3.4"/><circle cx="514" cy="328" r="3.4"/>
-        <circle cx="138" cy="344" r="3"/><circle cx="466" cy="342" r="3"/>
-      </g>
-    </svg>
-  </div>
+  <div class="backdrop" aria-hidden="true"></div>
 
   <header class="site-header">
     <a class="brand" href="{{BASE}}" aria-label="Interactive Human Biology — home">
-      <svg class="brand-mark" viewBox="0 0 32 32" width="30" height="30" aria-hidden="true">
-        <circle cx="16" cy="16" r="14.5" fill="none" stroke="currentColor" stroke-opacity=".35"/>
-        <path d="M16 5v8M16 13c0 3-5 3.6-6.6 7.4M16 13c0 3 5 3.6 6.6 7.4M9.4 20.4 7.6 25M9.4 20.4l2.4 4.4M22.6 20.4l1.8 4.6M22.6 20.4l-2.4 4.4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-        <circle cx="16" cy="5" r="1.6" fill="var(--gold)"/>
+      <svg class="brand-mark" viewBox="0 0 32 32" width="28" height="28" aria-hidden="true">
+        <rect x=".5" y=".5" width="31" height="31" rx="8" fill="rgba(255,255,255,.04)" stroke="currentColor" stroke-opacity=".3"/>
+        <path d="M16 6v7M16 13c0 3-5 3.6-6.6 7.4M16 13c0 3 5 3.6 6.6 7.4M9.4 20.4 7.8 25M9.4 20.4l2.4 4.4M22.6 20.4l1.6 4.6M22.6 20.4l-2.4 4.4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        <circle cx="16" cy="6" r="1.6" fill="var(--gold)"/>
       </svg>
       <span>Interactive <strong>Human Biology</strong></span>
     </a>
-    <nav aria-label="Primary"><a href="{{BASE}}#modules">Modules</a></nav>
+    <p class="header-meta">Class 10 Science · 3D lessons</p>
   </header>
 
   <main id="main">{{MAIN}}
   </main>
 
   <footer class="site-footer">
-    <p>Best on a desktop or laptop with a recent browser and WebGL. Turn the sound on for narration.</p>
-    <p>Interactive Human Biology · lessons for Class 10 science</p>
+    <p>Best on a desktop or laptop with a recent browser. Turn the sound on for narration.</p>
   </footer>
 </body>
 </html>

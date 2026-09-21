@@ -7,38 +7,34 @@ const safeColor = (c) => (/^(#[0-9a-f]{3,8}|[a-z]+|(rgb|hsl|oklch)a?\([\d\s.,%/-
 
 export function renderHomepage(template, modules, images, base) {
   const available = modules.filter((m) => (m.status ?? "available") === "available");
-  const cards = modules.map((m, i) => card(m, images[m.id], i)).join("\n") + "\n" + upcomingCard();
+  const count = `${available.length} ${available.length === 1 ? "module" : "modules"}`;
+  const cards = modules.map((m, i) => card(m, images[m.id], i)).join("\n");
   return fill(template, base, {
     TITLE: "Interactive Human Biology",
     MAIN: `
-      <section class="hero" aria-labelledby="hero-title">
-        <p class="eyebrow"><span class="pulse" aria-hidden="true"></span>Interactive 3D learning</p>
-        <h1 id="hero-title">Interactive Human Biology</h1>
-        <p class="lede">Explore the human body through interactive 3D learning experiences.</p>
-        <div class="hero-actions">
-          <a class="btn btn--primary" href="#modules">Browse modules <span aria-hidden="true">↓</span></a>
-          <p class="hero-note">${available.length} ${available.length === 1 ? "module" : "modules"} · narrated lessons · free exploration in 3D</p>
-        </div>
-      </section>
+      <div class="home">
+        <section class="intro" aria-labelledby="hero-title">
+          <p class="eyebrow">Interactive 3D learning</p>
+          <h1 id="hero-title">Interactive Human Biology</h1>
+          <p class="lede">Explore the human body through interactive 3D learning experiences.</p>
+          <ol class="steps" aria-label="How each lesson works">
+            <li><span class="step-n" aria-hidden="true">01</span><div><h3>Watch</h3><p>A narrated 3D film names and labels each part.</p></div></li>
+            <li><span class="step-n" aria-hidden="true">02</span><div><h3>Explore</h3><p>Pause anytime to rotate, zoom and inspect the model.</p></div></li>
+            <li><span class="step-n" aria-hidden="true">03</span><div><h3>Understand</h3><p>See how each structure's shape decides what it does.</p></div></li>
+          </ol>
+        </section>
 
-      <section id="modules" class="modules" aria-labelledby="modules-title">
-        <div class="section-head">
-          <h2 id="modules-title">Learning modules</h2>
-          <p>Each module is a complete lesson: watch it, then take the model into your own hands.</p>
-        </div>
-        <ul class="grid" role="list">
+        <section class="modules" aria-labelledby="modules-title">
+          <div class="modules-head">
+            <h2 id="modules-title">Learning modules</h2>
+            <span class="count">${count} available</span>
+          </div>
+          <ul class="grid" role="list">
 ${cards}
-        </ul>
-      </section>
-
-      <section class="how" aria-labelledby="how-title">
-        <h2 id="how-title" class="visually-hidden">How the lessons work</h2>
-        <ol class="steps" role="list">
-          <li><span class="step-n" aria-hidden="true">01</span><h3>Watch</h3><p>A narrated 3D film walks through the anatomy, with every part labelled as it is named.</p></li>
-          <li><span class="step-n" aria-hidden="true">02</span><h3>Explore</h3><p>Pause at any moment. Rotate, zoom and pick parts of the model to study them up close.</p></li>
-          <li><span class="step-n" aria-hidden="true">03</span><h3>Understand</h3><p>See why structures are shaped the way they are, and how that shape decides what they do.</p></li>
-        </ol>
-      </section>`,
+          </ul>
+          <p class="upcoming"><span class="upcoming-icon" aria-hidden="true">+</span><span><strong>More systems on the way.</strong> Digestive, nervous, circulatory and more will join the platform.</span></p>
+        </section>
+      </div>`,
   });
 }
 
@@ -50,11 +46,11 @@ export function renderNotFound(template, modules, base) {
   return fill(template, base, {
     TITLE: "Page not found · Interactive Human Biology",
     MAIN: `
-      <section class="hero hero--compact" aria-labelledby="nf-title">
-        <p class="eyebrow">404</p>
+      <section class="not-found" aria-labelledby="nf-title">
+        <p class="eyebrow">Error 404</p>
         <h1 id="nf-title">This page isn’t part of the body</h1>
         <p class="lede">The address may be mistyped, or the module may have moved.</p>
-        <div class="hero-actions"><a class="btn btn--primary" href="${esc(base)}">Go to the homepage</a></div>
+        <a class="btn" href="${esc(base)}">Go to the homepage</a>
         <ul class="nf-links" role="list">${links}</ul>
       </section>`,
   });
@@ -66,35 +62,24 @@ function card(m, image, index) {
   const href = moduleUrl(m);
   const titleId = `card-${esc(m.id)}`;
   const media = image
-    ? `<img src="${esc(image)}" alt="${esc(c.imageAlt ?? "")}" width="1280" height="800" ${index > 1 ? 'loading="lazy" ' : ""}decoding="async">`
+    ? `<img src="${esc(image)}" alt="${esc(c.imageAlt ?? "")}" width="960" height="600" ${index > 2 ? 'loading="lazy" ' : ""}decoding="async">`
     : `<div class="card-placeholder" aria-hidden="true">${esc(m.title.slice(0, 1))}</div>`;
   const facts = (c.facts ?? []).map((f) => `<li>${esc(f)}</li>`).join("");
   const title = soon ? esc(m.title) : `<a class="card-link" href="${esc(href)}">${esc(m.title)}</a>`;
   const action = soon
     ? `<span class="card-cta card-cta--soon">Coming soon</span>`
-    : `<span class="card-cta" aria-hidden="true">Explore <span class="arrow">→</span></span>`;
-  return `          <li class="card${soon ? " card--soon" : ""}" style="--accent:${safeColor(c.accent)}" data-module="${esc(m.id)}">
-            <article aria-labelledby="${titleId}">
-              <div class="card-media">${media}</div>
-              <div class="card-body">
-                ${c.eyebrow ? `<p class="card-eyebrow">${esc(c.eyebrow)}</p>` : ""}
-                <h3 id="${titleId}">${title}</h3>
-                <p class="card-desc">${esc(m.description)}</p>
-                ${facts ? `<ul class="facts" role="list">${facts}</ul>` : ""}
-                ${action}
-              </div>
-            </article>
-          </li>`;
-}
-
-function upcomingCard() {
-  return `          <li class="card card--upcoming" aria-label="More modules are in development">
-            <div class="upcoming">
-              <svg viewBox="0 0 48 48" width="40" height="40" aria-hidden="true"><circle cx="24" cy="24" r="21" fill="none" stroke="currentColor" stroke-width="1.5" stroke-dasharray="3 4"/><path d="M24 15v18M15 24h18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-              <h3>More systems on the way</h3>
-              <p>Digestive, nervous, circulatory and more will join the platform as they are built.</p>
-            </div>
-          </li>`;
+    : `<span class="card-cta" aria-hidden="true">Explore module <span class="arrow">→</span></span>`;
+  return `            <li class="card${soon ? " card--soon" : ""}" style="--accent:${safeColor(c.accent)}" data-module="${esc(m.id)}">
+              <article aria-labelledby="${titleId}">
+                <div class="card-media">${media}${c.eyebrow ? `<span class="card-tag">${esc(c.eyebrow)}</span>` : ""}</div>
+                <div class="card-body">
+                  <h3 id="${titleId}">${title}</h3>
+                  <p class="card-desc">${esc(m.description)}</p>
+                  ${facts ? `<ul class="facts" role="list">${facts}</ul>` : ""}
+                  ${action}
+                </div>
+              </article>
+            </li>`;
 }
 
 function fill(template, base, values) {

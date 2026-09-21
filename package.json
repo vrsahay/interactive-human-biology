@@ -7,14 +7,13 @@
     "node": ">=24"
   },
   "scripts": {
-    "build": "node scripts/build.mjs",
+    "build": "node scripts/check-secrets.mjs && node scripts/build.mjs",
     "build:home": "node scripts/build.mjs --home-only",
+    "dev": "node scripts/dev.mjs",
     "preview": "node scripts/serve.mjs",
     "start": "node scripts/serve.mjs",
-    "dev": "node scripts/dev.mjs",
-    "check:secrets": "node scripts/check-secrets.mjs",
-    "check:links": "node scripts/check-links.mjs",
-    "test": "playwright test"
+    "test": "playwright test",
+    "check:secrets": "node scripts/check-secrets.mjs --dist"
   },
   "devDependencies": {
     "@playwright/test": "^1.63.0"
