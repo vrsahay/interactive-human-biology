@@ -36,7 +36,7 @@ test("homepage lists every module from the registry, with internal links", async
   await page.waitForLoadState("networkidle");
   // card images and fonts resolve
   expect(await page.locator(".card img").evaluateAll((imgs) => imgs.every((i) => i.complete && i.naturalWidth > 0))).toBe(true);
-  expect(await page.evaluate(() => document.fonts.check('700 16px "Manrope"'))).toBe(true);
+  expect(await page.evaluate(() => document.fonts.check('500 20px "Newsreader"') && document.fonts.check('400 16px "IBM Plex Sans"'))).toBe(true);
   expect(w.problems).toEqual([]);
 });
 
@@ -113,7 +113,7 @@ test("unknown routes return the platform 404 page", async ({ page }) => {
   const res = await page.goto("/digestive/");
   expect(res.status()).toBe(404);
   await expect(page.getByRole("heading", { level: 1 })).toContainText("isn’t part of the body");
-  await expect(page.getByRole("link", { name: "Go to the homepage" })).toBeVisible();
+  await expect(page.getByRole("link", { name: "Return to the homepage" })).toBeVisible();
 });
 
 // The homepage is a single screen on desktops and laptops: intro and every module card visible without scrolling.

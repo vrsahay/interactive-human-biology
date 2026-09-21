@@ -122,6 +122,8 @@ module is a single-page app with its own client routes, see [SPA modules](#if-a-
 order, into `site/index.html`. Cards are static HTML: no JavaScript is needed to see or use the homepage. The same
 data is written to `dist/modules.json` for anything else that wants it.
 
+The homepage is styled like an anatomy atlas: warm paper (the Joints sandbox palette), a serif title, and each
+lesson presented as a numbered plate (Plate I, Plate II, …) with a caption. Fonts: Newsreader and IBM Plex Sans.
 On desktops and laptops the homepage is a single screen (tested from 1280×720 to 1920×1080): the intro sits on
 the left and the module cards on the right, up to three per row. A fourth module wraps onto a second row, at which
 point the page scrolls; tablets and phones stack everything and scroll as usual.
@@ -133,7 +135,7 @@ Each entry drives:
 | `id`, `title`, `description` | the card text (and the page `id`) |
 | `route` | where the module is published and what the card links to |
 | `source`, `build` | how the build produces the module |
-| `card` | eyebrow label, fact chips, preview image, accent colour |
+| `card` | caption label, facts line, preview image, accent colour (plate number and link) |
 | `backLink` | position/theme of the "← Interactive Human Biology" link, or `false` |
 | `status` | `"coming-soon"` shows a non-clickable card and skips the build |
 
@@ -186,7 +188,7 @@ projects/
     facts: ["10 scenes", "About 4 minutes"],
     image: "site/images/digestive.webp",     // 16:10, ~960×600
     imageAlt: "3D model of the stomach and intestines",
-    accent: "#7bd88f",
+    accent: "#2f6b3a",                       // dark enough to read on the paper background
   },
   backLink: { position: "left-center", theme: "dark" },
 },

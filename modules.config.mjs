@@ -35,7 +35,7 @@ export default [
       facts: ["13 narrated scenes", "About 3 minutes", "Explore mode"],
       image: "site/images/respiratory.webp",
       imageAlt: "3D model of the lungs, with the trachea branching into the bronchial tree",
-      accent: "#ff8a7a",
+      accent: "#a4402b",
     },
 
     // Integration-level link back to the homepage. `false` turns it off.
@@ -63,7 +63,7 @@ export default [
       facts: ["9 chapters", "About 6½ minutes", "Hands-on joints"],
       image: "site/images/joints.webp",
       imageAlt: "3D shoulder joint: the rounded head of the upper-arm bone in its socket, labelled ball-and-socket joint",
-      accent: "#e2a95c",
+      accent: "#8a5a12",
     },
 
     backLink: { position: "left-center", theme: "dark" },

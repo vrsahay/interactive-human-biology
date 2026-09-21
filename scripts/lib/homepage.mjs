@@ -3,36 +3,28 @@
 import { moduleUrl } from "./config.mjs";
 
 const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
-const safeColor = (c) => (/^(#[0-9a-f]{3,8}|[a-z]+|(rgb|hsl|oklch)a?\([\d\s.,%/-]+\))$/i.test(c ?? "") ? c : "#7fb4ff");
+const safeColor = (c) => (/^(#[0-9a-f]{3,8}|[a-z]+|(rgb|hsl|oklch)a?\([\d\s.,%/-]+\))$/i.test(c ?? "") ? c : "#8a3b2a");
 
 export function renderHomepage(template, modules, images, base) {
   const available = modules.filter((m) => (m.status ?? "available") === "available");
-  const count = `${available.length} ${available.length === 1 ? "module" : "modules"}`;
   const cards = modules.map((m, i) => card(m, images[m.id], i)).join("\n");
   return fill(template, base, {
     TITLE: "Interactive Human Biology",
     MAIN: `
       <div class="home">
         <section class="intro" aria-labelledby="hero-title">
-          <p class="eyebrow">Interactive 3D learning</p>
+          <p class="intro-kicker">A 3D atlas for Class 10 science</p>
           <h1 id="hero-title">Interactive Human Biology</h1>
           <p class="lede">Explore the human body through interactive 3D learning experiences.</p>
-          <ol class="steps" aria-label="How each lesson works">
-            <li><span class="step-n" aria-hidden="true">01</span><div><h3>Watch</h3><p>A narrated 3D film names and labels each part.</p></div></li>
-            <li><span class="step-n" aria-hidden="true">02</span><div><h3>Explore</h3><p>Pause anytime to rotate, zoom and inspect the model.</p></div></li>
-            <li><span class="step-n" aria-hidden="true">03</span><div><h3>Understand</h3><p>See how each structure's shape decides what it does.</p></div></li>
-          </ol>
+          <p class="intro-body">Each lesson pairs a narrated film with a model you can pause, turn and examine for yourself, so every structure is seen from every side as it is named.</p>
         </section>
 
         <section class="modules" aria-labelledby="modules-title">
-          <div class="modules-head">
-            <h2 id="modules-title">Learning modules</h2>
-            <span class="count">${count} available</span>
-          </div>
+          <h2 id="modules-title" class="modules-title">Lessons <span class="count">${available.length} available</span></h2>
           <ul class="grid" role="list">
 ${cards}
           </ul>
-          <p class="upcoming"><span class="upcoming-icon" aria-hidden="true">+</span><span><strong>More systems on the way.</strong> Digestive, nervous, circulatory and more will join the platform.</span></p>
+          <p class="upcoming"><em>In preparation</em> — the digestive, nervous and circulatory systems.</p>
         </section>
       </div>`,
   });
@@ -47,14 +39,18 @@ export function renderNotFound(template, modules, base) {
     TITLE: "Page not found · Interactive Human Biology",
     MAIN: `
       <section class="not-found" aria-labelledby="nf-title">
-        <p class="eyebrow">Error 404</p>
-        <h1 id="nf-title">This page isn’t part of the body</h1>
-        <p class="lede">The address may be mistyped, or the module may have moved.</p>
-        <a class="btn" href="${esc(base)}">Go to the homepage</a>
+        <p class="intro-kicker">Error 404</p>
+        <h1 id="nf-title">This page isn’t part of the body.</h1>
+        <p class="lede">The address may be mistyped, or the lesson may have moved.</p>
+        <p class="nf-home"><a href="${esc(base)}">Return to the homepage <span aria-hidden="true">→</span></a></p>
         <ul class="nf-links" role="list">${links}</ul>
       </section>`,
   });
 }
+
+const ROMAN = [[10, "X"], [9, "IX"], [5, "V"], [4, "IV"], [1, "I"]];
+const roman = (n) => ROMAN.reduce((out, [v, s]) => { while (n >= v) { out += s; n -= v; } return out; }, "");
+const nbsp = (s) => esc(s).replace(/ /g, "&nbsp;");
 
 function card(m, image, index) {
   const soon = (m.status ?? "available") === "coming-soon";
@@ -64,20 +60,20 @@ function card(m, image, index) {
   const media = image
     ? `<img src="${esc(image)}" alt="${esc(c.imageAlt ?? "")}" width="960" height="600" ${index > 2 ? 'loading="lazy" ' : ""}decoding="async">`
     : `<div class="card-placeholder" aria-hidden="true">${esc(m.title.slice(0, 1))}</div>`;
-  const facts = (c.facts ?? []).map((f) => `<li>${esc(f)}</li>`).join("");
+  // A fact never breaks inside itself, and a separator stays at the end of a line, never at the start of the next.
+  const facts = (c.facts ?? []).map(nbsp).join("&nbsp;· ");
   const title = soon ? esc(m.title) : `<a class="card-link" href="${esc(href)}">${esc(m.title)}</a>`;
   const action = soon
-    ? `<span class="card-cta card-cta--soon">Coming soon</span>`
-    : `<span class="card-cta" aria-hidden="true">Explore module <span class="arrow">→</span></span>`;
+    ? `<span class="card-cta card-cta--soon">In preparation</span>`
+    : `<span class="card-cta" aria-hidden="true">Open the lesson <span class="arrow">→</span></span>`;
   return `            <li class="card${soon ? " card--soon" : ""}" style="--accent:${safeColor(c.accent)}" data-module="${esc(m.id)}">
               <article aria-labelledby="${titleId}">
-                <div class="card-media">${media}${c.eyebrow ? `<span class="card-tag">${esc(c.eyebrow)}</span>` : ""}</div>
-                <div class="card-body">
-                  <h3 id="${titleId}">${title}</h3>
-                  <p class="card-desc">${esc(m.description)}</p>
-                  ${facts ? `<ul class="facts" role="list">${facts}</ul>` : ""}
-                  ${action}
-                </div>
+                <div class="card-media">${media}</div>
+                <p class="card-kicker"><span class="plate">Plate ${roman(index + 1)}</span>${c.eyebrow ? `<span class="card-eyebrow">${esc(c.eyebrow)}</span>` : ""}</p>
+                <h3 id="${titleId}">${title}</h3>
+                <p class="card-desc">${esc(m.description)}</p>
+                ${facts ? `<p class="facts">${facts}</p>` : ""}
+                ${action}
               </article>
             </li>`;
 }
