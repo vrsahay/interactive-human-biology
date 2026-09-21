@@ -3,7 +3,7 @@ import type { JointContent } from "../types";
 /** Elbow (right) vertical-slice content. Geometry, range, anchors and structures come from the manifest. */
 export const elbowRight: JointContent = {
   jointId: "elbow_r",
-  manifestUrl: "/assets/joints/elbow_r/joint-manifest.json",
+  manifestUrl: `${import.meta.env.BASE_URL}assets/joints/elbow_r/joint-manifest.json`,
   title: "Elbow joint",
   subtitle: "Hinge joint · flexion and extension",
   dofControls: {

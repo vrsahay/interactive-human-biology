@@ -1,0 +1,22 @@
+{
+  "name": "interactive-human-biology",
+  "private": true,
+  "version": "1.0.0",
+  "description": "One platform, one deployment: interactive 3D human-biology lessons as internal routes.",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "build:home": "node scripts/build.mjs --home-only",
+    "preview": "node scripts/serve.mjs",
+    "start": "node scripts/serve.mjs",
+    "dev": "node scripts/dev.mjs",
+    "check:secrets": "node scripts/check-secrets.mjs",
+    "check:links": "node scripts/check-links.mjs",
+    "test": "playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.63.0"
+  }
+}

@@ -1,4 +1,4 @@
-* text=auto
+* text=auto eol=lf
 *.glb binary
 *.bin binary
 *.rgbe binary

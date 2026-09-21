@@ -6,6 +6,8 @@ import type { Plugin } from "vite";
 import { defineConfig } from "vitest/config";
 
 const ROOT = resolve(import.meta.dirname);
+// Public URL prefix: "/" when deployed on its own; the Interactive Human Biology platform builds with BASE_PATH=/joints/.
+const BASE = process.env.BASE_PATH ?? "/";
 
 type GeneratedValidator = ((data: unknown) => boolean) & { errors?: { instancePath: string; message?: string }[] | null };
 
@@ -37,7 +39,7 @@ function contentValidation(): Plugin {
         const text = readFileSync(path, "utf8");
         const before = problems.length;
         check(manifestSchema, JSON.parse(text), `public/assets/joints/${joint}/joint-manifest.json`);
-        if (problems.length === before) validated[`/assets/joints/${joint}/joint-manifest.json`] = createHash("sha256").update(text).digest("hex");
+        if (problems.length === before) validated[`${BASE}assets/joints/${joint}/joint-manifest.json`] = createHash("sha256").update(text).digest("hex");
       }
       if (problems.length) throw new Error(`content validation failed:\n - ${problems.join("\n - ")}`);
       return { define: { __VALIDATED_MANIFESTS__: JSON.stringify(validated) } };
@@ -55,17 +57,17 @@ function filmPreload(): Plugin {
     name: "joints-film-preload",
     transformIndexHtml() {
       const registry = readFileSync(join(ROOT, "src/content/lessons/index.ts"), "utf8");
-      const bodyUrl = /bodyManifestUrl: "([^"]+)"/.exec(registry)?.[1];
+      const bodyUrl = /bodyManifestUrl: `\$\{import\.meta\.env\.BASE_URL\}([^`]+)`/.exec(registry)?.[1];
       if (!bodyUrl) throw new Error("film preload: no bodyManifestUrl in the lesson registry");
       const body = JSON.parse(readFileSync(join(ROOT, "public", bodyUrl), "utf8"));
       const tiers = Object.values(body.tiers) as { stages: { files: string[] }[] }[];
       const common = tiers[0].stages[0].files.filter((f) => tiers.every((t) => t.stages[0].files.includes(f)));
-      const base = bodyUrl.slice(0, bodyUrl.lastIndexOf("/") + 1);
+      const base = BASE + bodyUrl.slice(0, bodyUrl.lastIndexOf("/") + 1);
       const env = JSON.parse(readFileSync(join(ROOT, "public/assets/shared/env/environment.json"), "utf8"));
       // All five are on the critical path for the first frame: two manifests, the baked environment and the first-stage meshes.
       // (Step 12R measured fetchPriority="low" on the meshes: no change to the bundle's download time on an emulated Fast 4G
       // link, because the link is saturated either way - see qa/reports/step12r.profile.json.)
-      const urls = [bodyUrl, "/assets/joints/elbow_r/joint-manifest.json", "/assets/shared/env/environment.json", `/assets/shared/env/${env.variants[0].url}`, ...common.map((f) => base + body.files[f].url)];
+      const urls = [BASE + bodyUrl, `${BASE}assets/joints/elbow_r/joint-manifest.json`, `${BASE}assets/shared/env/environment.json`, `${BASE}assets/shared/env/${env.variants[0].url}`, ...common.map((f) => base + body.files[f].url)];
       const code = `(function(){if(new URLSearchParams(location.search).get("mode")==="sandbox")return;${JSON.stringify(urls)}.forEach(function(h){var l=document.createElement("link");l.rel="preload";l.as="fetch";l.crossOrigin="anonymous";l.href=h;document.head.appendChild(l);});})();`;
       return [{ tag: "script", children: code, injectTo: "head-prepend" }];
     },
@@ -73,6 +75,7 @@ function filmPreload(): Plugin {
 }
 
 export default defineConfig({
+  base: BASE,
   plugins: [contentValidation(), filmPreload()],
   // public/assets/joints/** is served as-is; keep Vite's own bundle output out of /assets.
   build: { assetsDir: "app", target: "es2022", sourcemap: true },

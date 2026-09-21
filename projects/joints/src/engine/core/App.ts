@@ -280,7 +280,7 @@ export class App {
   }
 
   private async loadEnvironment(): Promise<void> {
-    const env = this.options.environment ?? { manifestUrl: "/assets/shared/env/environment.json", size: 64 };
+    const env = this.options.environment ?? { manifestUrl: `${import.meta.env.BASE_URL}assets/shared/env/environment.json`, size: 64 };
     if ("live" in env) {
       await this.stage.generateRoomEnvironment(env.size);
       return;

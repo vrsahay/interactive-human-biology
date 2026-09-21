@@ -266,7 +266,7 @@ export function FilmShell({ qa, fixedPixelRatio }: { qa: boolean; fixedPixelRati
         });
         instance.labels.insets = { top: 100, bottom: innerWidth < 900 ? 190 : 170 };
         timeline = new VideoTimeline(lesson, runtime);
-        const player = new NarrationPlayer("/assets/audio/narration/narration.json", { enabled: readSetting("joints.narration") !== "off" });
+        const player = new NarrationPlayer(`${import.meta.env.BASE_URL}assets/audio/narration/narration.json`, { enabled: readSetting("joints.narration") !== "off" });
         player.onChange = () => setNarrationBlocked(player.blocked);
         narrator.current = player;
         offs.push(() => { player.dispose(); narrator.current = null; });
