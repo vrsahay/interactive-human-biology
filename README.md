@@ -1,8 +1,8 @@
-# Interactive Human Biology
+# Interactive Biology
 
 **Live:** https://interactive-human-biology.vercel.app · **Source:** https://github.com/vrsahay/interactive-human-biology
 
-One platform for interactive 3D human-biology lessons. **One repository, one build, one deployment, one domain.**
+One platform for interactive 3D biology lessons, human and plant. **One repository, one build, one deployment, one domain.**
 Each lesson is a separate project inside this repository, and each is published at its own route:
 
 ```
@@ -144,7 +144,7 @@ Each entry drives:
 | `route` | where the module is published and what the card links to |
 | `source`, `build` | how the build produces the module |
 | `card` | caption label, facts line, preview image, accent colour (plate number and link) |
-| `backLink` | position/theme of the "← Interactive Human Biology" link, or `false` |
+| `backLink` | position/theme of the "← Interactive Biology" link, or `false` |
 | `status` | `"coming-soon"` shows a non-clickable card and skips the build |
 
 The config is validated before anything is built: missing fields, a malformed or duplicate route, a missing source
@@ -153,7 +153,7 @@ folder or card image all stop the build with a clear message.
 ### Navigation back to the homepage
 
 The build appends one self-contained element to each module's HTML: a small "Home" tab on the left edge (it expands to
-"Interactive Human Biology" on hover/focus). It is added to the **built** HTML only; the projects' source files do not
+"Interactive Biology" on hover/focus). It is added to the **built** HTML only; the projects' source files do not
 contain it. The left-middle edge was chosen because both lessons use every corner (titles top-left, options/legend
 top-right, playback controls bottom-left and bottom-right). Change it per module with `backLink.position`
 (`left-center`, `top-left`, `top-right`, `bottom-left`, `bottom-right`) and `backLink.theme` (`dark`, `light`), or

@@ -1,11 +1,11 @@
 // ─────────────────────────────────────────────────────────────────────────────
-//  Interactive Human Biology — module registry
+//  Interactive Biology — module registry
 //
 //  This is the ONLY file you edit to add, remove, reorder or re-describe a
 //  learning module. The build reads it to:
 //    • build each project and place its output under its route  (dist/<route>)
 //    • generate the homepage cards, in this order
-//    • inject the "← Interactive Human Biology" link into each module
+//    • inject the "← Interactive Biology" link into each module
 //
 //  See README.md → "Adding a new module" for a worked example.
 // ─────────────────────────────────────────────────────────────────────────────

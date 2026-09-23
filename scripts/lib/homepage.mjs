@@ -9,13 +9,13 @@ export function renderHomepage(template, modules, images, base) {
   const available = modules.filter((m) => (m.status ?? "available") === "available");
   const cards = modules.map((m, i) => card(m, images[m.id], i)).join("\n");
   return fill(template, base, {
-    TITLE: "Interactive Human Biology",
+    TITLE: "Interactive Biology",
     MAIN: `
       <div class="home">
         <section class="intro" aria-labelledby="hero-title">
           <p class="intro-kicker">A 3D atlas for Class 10 science</p>
-          <h1 id="hero-title">Interactive Human Biology</h1>
-          <p class="lede">Explore the human body through interactive 3D learning experiences.</p>
+          <h1 id="hero-title">Interactive Biology</h1>
+          <p class="lede">Explore living things through interactive 3D learning experiences.</p>
           <p class="intro-body">Each lesson pairs a narrated film with a model you can pause, turn and examine for yourself, so every structure is seen from every side as it is named.</p>
         </section>
 
@@ -24,7 +24,7 @@ export function renderHomepage(template, modules, images, base) {
           <ul class="grid" role="list">
 ${cards}
           </ul>
-          <p class="upcoming"><em>In preparation</em> — the digestive, nervous and circulatory systems.</p>
+          <p class="upcoming"><em>In preparation</em> — the digestive and nervous systems, photosynthesis, and more.</p>
         </section>
       </div>`,
   });
@@ -36,11 +36,11 @@ export function renderNotFound(template, modules, base) {
     .map((m) => `<li><a href="${esc(moduleUrl(m))}">${esc(m.title)}</a></li>`)
     .join("");
   return fill(template, base, {
-    TITLE: "Page not found · Interactive Human Biology",
+    TITLE: "Page not found · Interactive Biology",
     MAIN: `
       <section class="not-found" aria-labelledby="nf-title">
         <p class="intro-kicker">Error 404</p>
-        <h1 id="nf-title">This page isn’t part of the body.</h1>
+        <h1 id="nf-title">This page isn’t in the atlas.</h1>
         <p class="lede">The address may be mistyped, or the lesson may have moved.</p>
         <p class="nf-home"><a href="${esc(base)}">Return to the homepage <span aria-hidden="true">→</span></a></p>
         <ul class="nf-links" role="list">${links}</ul>
@@ -82,12 +82,12 @@ function fill(template, base, values) {
   return template.replaceAll("{{BASE}}", esc(base)).replace(/\{\{(\w+)\}\}/g, (all, k) => (k in values ? values[k] : all));
 }
 
-/** The fixed "← Interactive Human Biology" pill injected into each module's HTML. Fully self-contained and namespaced. */
+/** The fixed "← Interactive Biology" pill injected into each module's HTML. Fully self-contained and namespaced. */
 export function backLinkSnippet(m, base) {
   const pos = m.backLink?.position ?? "left-center";
   const theme = m.backLink?.theme ?? "dark";
-  return `<!-- Interactive Human Biology: platform navigation, added by scripts/build.mjs (not part of the module's source) -->
-<a id="hb-back" href="${esc(base)}" data-pos="${esc(pos)}" data-theme="${esc(theme)}" aria-label="Back to Interactive Human Biology home"><svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M10 3 5 8l5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="hb-full">Interactive Human Biology</span><span class="hb-short">Home</span></a>
+  return `<!-- Interactive Biology: platform navigation, added by scripts/build.mjs (not part of the module's source) -->
+<a id="hb-back" href="${esc(base)}" data-pos="${esc(pos)}" data-theme="${esc(theme)}" aria-label="Back to Interactive Biology home"><svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M10 3 5 8l5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="hb-full">Interactive Biology</span><span class="hb-short">Home</span></a>
 <style>
 #hb-back{all:initial;box-sizing:border-box;position:fixed;z-index:2147483000;display:inline-flex;align-items:center;gap:7px;height:32px;padding:0 13px 0 10px;border-radius:999px;font:600 12.5px/1 "Manrope","Inter","Segoe UI",system-ui,-apple-system,sans-serif;letter-spacing:.01em;text-decoration:none;cursor:pointer;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);opacity:.78;transition:opacity .18s ease,transform .18s ease,background-color .18s ease}
 #hb-back svg{display:block;flex:none}

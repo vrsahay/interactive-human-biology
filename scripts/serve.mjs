@@ -39,7 +39,7 @@ createServer((req, res) => {
     return send(res, join(DIST, "404.html"), 404);
   }
   send(res, target, 200, req);
-}).listen(port, () => console.log(`Interactive Human Biology → http://localhost:${port}${SITE_BASE}`));
+}).listen(port, () => console.log(`Interactive Biology → http://localhost:${port}${SITE_BASE}`));
 
 function send(res, file, status, req) {
   const size = statSync(file).size;

@@ -1,8 +1,8 @@
 {
-  "name": "interactive-human-biology",
+  "name": "interactive-biology",
   "private": true,
   "version": "1.0.0",
-  "description": "One platform, one deployment: interactive 3D human-biology lessons as internal routes.",
+  "description": "One platform, one deployment: interactive 3D biology lessons as internal routes.",
   "engines": {
     "node": ">=24"
   },

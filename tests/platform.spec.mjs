@@ -25,8 +25,8 @@ function watch(page) {
 test("homepage lists every module from the registry, with internal links", async ({ page }) => {
   const w = watch(page);
   await page.goto("/");
-  await expect(page).toHaveTitle("Interactive Human Biology");
-  await expect(page.getByRole("heading", { level: 1 })).toHaveText("Interactive Human Biology");
+  await expect(page).toHaveTitle("Interactive Biology");
+  await expect(page.getByRole("heading", { level: 1 })).toHaveText("Interactive Biology");
   const cards = page.locator(".card[data-module]");
   await expect(cards).toHaveCount(registry.length);
   for (const m of available) {
@@ -56,10 +56,10 @@ for (const m of available) {
 
       const back = page.locator("#hb-back");
       await expect(back).toBeVisible();
-      await expect(back).toHaveAccessibleName("Back to Interactive Human Biology home");
+      await expect(back).toHaveAccessibleName("Back to Interactive Biology home");
       await back.click();
       await expect(page).toHaveURL(/\/$/);
-      await expect(page.getByRole("heading", { level: 1 })).toHaveText("Interactive Human Biology");
+      await expect(page.getByRole("heading", { level: 1 })).toHaveText("Interactive Biology");
       await page.goBack();                                   // browser back returns to the module
       await expect(page).toHaveURL(new RegExp(`${m.url}$`));
       expect(w.problems).toEqual([]);
@@ -128,7 +128,7 @@ test("Excretion in Plants: models, Draco decoder and narration load under /excre
 test("unknown routes return the platform 404 page", async ({ page }) => {
   const res = await page.goto("/digestive/");
   expect(res.status()).toBe(404);
-  await expect(page.getByRole("heading", { level: 1 })).toContainText("isn’t part of the body");
+  await expect(page.getByRole("heading", { level: 1 })).toContainText("isn’t in the atlas");
   await expect(page.getByRole("link", { name: "Return to the homepage" })).toBeVisible();
 });
 
