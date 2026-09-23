@@ -1,0 +1,36 @@
+{
+ "status": "ok",
+ "datablock_counts": {
+  "all_ids": 384,
+  "cameras": 17,
+  "collections": 24,
+  "images": 3,
+  "lights": 2,
+  "linestyles": 1,
+  "materials": 30,
+  "meshes": 86,
+  "objects": 195,
+  "palettes": 1,
+  "scenes": 1,
+  "screens": 11,
+  "window_managers": 1,
+  "workspaces": 11,
+  "worlds": 1
+ },
+ "render_engine": "BLENDER_EEVEE",
+ "scene_name": "ExcretionInPlants",
+ "workspaces": [
+  "Animation",
+  "Compositing",
+  "Geometry Nodes",
+  "Layout",
+  "Modeling",
+  "Rendering",
+  "Scripting",
+  "Sculpting",
+  "Shading",
+  "Texture Paint",
+  "UV Editing"
+ ],
+ "active_workspace": "Layout"
+}

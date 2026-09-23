@@ -1,0 +1,1238 @@
+[
+ {
+  "kind": "shots",
+  "key": "what.alive",
+  "before": 5960,
+  "after": 6384,
+  "startsBefore": [
+   0,
+   2130
+  ],
+  "startsAfter": [
+   0,
+   2100
+  ]
+ },
+ {
+  "kind": "shots",
+  "key": "what.processes",
+  "before": 6560,
+  "after": 6864,
+  "startsBefore": [
+   0,
+   3050
+  ],
+  "startsAfter": [
+   0,
+   3140
+  ]
+ },
+ {
+  "kind": "shots",
+  "key": "what.byproducts",
+  "before": 6440,
+  "after": 6336,
+  "startsBefore": [
+   0,
+   4270
+  ],
+  "startsAfter": [
+   0,
+   4250
+  ]
+ },
+ {
+  "kind": "shots",
+  "key": "what.excretion",
+  "before": 6200,
+  "after": 6744,
+  "startsBefore": [
+   0,
+   3970
+  ],
+  "startsAfter": [
+   0,
+   4310
+  ]
+ },
+ {
+  "kind": "shots",
+  "key": "what.question",
+  "before": 5480,
+  "after": 5544,
+  "startsBefore": [
+   0,
+   2960
+  ],
+  "startsAfter": [
+   0,
+   3010
+  ]
+ },
+ {
+  "kind": "shots",
+  "key": "different.animals",
+  "before": 6280,
+  "after": 6048,
+  "startsBefore": [
+   0,
+   4000
+  ],
+  "startsAfter": [
+   0,
+   3620
+  ]
+ },
+ {
+  "kind": "shots",
+  "key": "different.parts",
+  "before": 5040,
+  "after": 5088,
+  "startsBefore": [
+   0,
+   1500
+  ],
+  "startsAfter": [
+   0,
+   1540
+  ]
+ },
+ {
+  "kind": "shots",
+  "key": "different.none",
+  "before": 6080,
+  "after": 6144,
+  "startsBefore": [
+   0,
+   2790
+  ],
+  "startsAfter": [
+   0,
+   2820
+  ]
+ },
+ {
+  "kind": "shots",
+  "key": "different.question",
+  "before": 7040,
+  "after": 5616,
+  "startsBefore": [
+   0,
+   2590
+  ],
+  "startsAfter": [
+   0,
+   1660
+  ]
+ },
+ {
+  "kind": "shots",
+  "key": "different.plan",
+  "before": 6480,
+  "after": 6096,
+  "startsBefore": [
+   0,
+   1700
+  ],
+  "startsAfter": [
+   0,
+   1560
+  ]
+ },
+ {
+  "kind": "shots",
+  "key": "oxygen.travel",
+  "before": 2800,
+  "after": 2856,
+  "startsBefore": [
+   0
+  ],
+  "startsAfter": [
+   0
+  ]
+ },
+ {
+  "kind": "shots",
+  "key": "oxygen.look",
+  "before": 4680,
+  "after": 4728,
+  "startsBefore": [
+   0,
+   2020
+  ],
+  "startsAfter": [
+   0,
+   2070
+  ]
+ },
+ {
+  "kind": "shots",
+  "key": "oxygen.leaf",
+  "before": 3480,
+  "after": 3528,
+  "startsBefore": [
+   0
+  ],
+  "startsAfter": [
+   0
+  ]
+ },
+ {
+  "kind": "shots",
+  "key": "oxygen.inside",
+  "before": 5720,
+  "after": 5904,
+  "startsBefore": [
+   0,
+   2170
+  ],
+  "startsAfter": [
+   0,
+   2510
+  ]
+ },
+ {
+  "kind": "shots",
+  "key": "oxygen.chloroplast",
+  "before": 7040,
+  "after": 7416,
+  "startsBefore": [
+   0,
+   3950
+  ],
+  "startsAfter": [
+   0,
+   4250
+  ]
+ },
+ {
+  "kind": "shots",
+  "key": "oxygen.photo",
+  "before": 4800,
+  "after": 4848,
+  "startsBefore": [
+   0
+  ],
+  "startsAfter": [
+   0
+  ]
+ },
+ {
+  "kind": "shots",
+  "key": "oxygen.produce",
+  "before": 4680,
+  "after": 4656,
+  "startsBefore": [
+   0,
+   3680
+  ],
+  "startsAfter": [
+   0,
+   3540
+  ]
+ },
+ {
+  "kind": "shots",
+  "key": "oxygen.path",
+  "before": 6240,
+  "after": 6264,
+  "startsBefore": [
+   0,
+   3710
+  ],
+  "startsAfter": [
+   0,
+   3850
+  ]
+ },
+ {
+  "kind": "shots",
+  "key": "oxygen.release",
+  "before": 5200,
+  "after": 6024,
+  "startsBefore": [
+   0,
+   2560
+  ],
+  "startsAfter": [
+   0,
+   3160
+  ]
+ },
+ {
+  "kind": "shots",
+  "key": "oxygen.reason",
+  "before": 10560,
+  "after": 9264,
+  "startsBefore": [
+   0,
+   3700
+  ],
+  "startsAfter": [
+   0,
+   3080
+  ]
+ },
+ {
+  "kind": "shots",
+  "key": "oxygen.try",
+  "before": 4520,
+  "after": 4944,
+  "startsBefore": [
+   0,
+   1220
+  ],
+  "startsAfter": [
+   0,
+   1630
+  ]
+ },
+ {
+  "kind": "shots",
+  "key": "stoma.look",
+  "before": 10280,
+  "after": 8496,
+  "startsBefore": [
+   0,
+   3140,
+   6700
+  ],
+  "startsAfter": [
+   0,
+   2130,
+   5280
+  ]
+ },
+ {
+  "kind": "shots",
+  "key": "stoma.open",
+  "before": 5800,
+  "after": 6096,
+  "startsBefore": [
+   0
+  ],
+  "startsAfter": [
+   0
+  ]
+ },
+ {
+  "kind": "shots",
+  "key": "stoma.reason",
+  "before": 7600,
+  "after": 9096,
+  "startsBefore": [
+   0,
+   3320,
+   5270
+  ],
+  "startsAfter": [
+   0,
+   4100,
+   6590
+  ]
+ },
+ {
+  "kind": "shots",
+  "key": "stoma.close",
+  "before": 6880,
+  "after": 7104,
+  "startsBefore": [
+   0,
+   3170
+  ],
+  "startsAfter": [
+   0,
+   3500
+  ]
+ },
+ {
+  "kind": "shots",
+  "key": "stoma.try",
+  "before": 4640,
+  "after": 5016,
+  "startsBefore": [
+   0,
+   1490
+  ],
+  "startsAfter": [
+   0,
+   1660
+  ]
+ },
+ {
+  "kind": "shots",
+  "key": "stoma.other",
+  "before": 5120,
+  "after": 5664,
+  "startsBefore": [
+   0,
+   1980
+  ],
+  "startsAfter": [
+   0,
+   2230
+  ]
+ },
+ {
+  "kind": "shots",
+  "key": "night.respire",
+  "before": 10160,
+  "after": 9864,
+  "startsBefore": [
+   0,
+   2310,
+   5600
+  ],
+  "startsAfter": [
+   0,
+   2040,
+   5280
+  ]
+ },
+ {
+  "kind": "shots",
+  "key": "night.night",
+  "before": 6040,
+  "after": 6768,
+  "startsBefore": [
+   0,
+   2520
+  ],
+  "startsAfter": [
+   0,
+   3010
+  ]
+ },
+ {
+  "kind": "shots",
+  "key": "night.day",
+  "before": 7040,
+  "after": 6696,
+  "startsBefore": [
+   0,
+   5650
+  ],
+  "startsAfter": [
+   0,
+   5180
+  ]
+ },
+ {
+  "kind": "shots",
+  "key": "night.reason",
+  "before": 9960,
+  "after": 9336,
+  "startsBefore": [
+   0,
+   5940
+  ],
+  "startsAfter": [
+   0,
+   5250
+  ]
+ },
+ {
+  "kind": "shots",
+  "key": "water.question",
+  "before": 5960,
+  "after": 6168,
+  "startsBefore": [
+   0,
+   4220
+  ],
+  "startsAfter": [
+   0,
+   4360
+  ]
+ },
+ {
+  "kind": "shots",
+  "key": "water.enter",
+  "before": 3000,
+  "after": 3624,
+  "startsBefore": [
+   0
+  ],
+  "startsAfter": [
+   0
+  ]
+ },
+ {
+  "kind": "shots",
+  "key": "water.hairs",
+  "before": 6320,
+  "after": 6384,
+  "startsBefore": [
+   0,
+   3190
+  ],
+  "startsAfter": [
+   0,
+   3240
+  ]
+ },
+ {
+  "kind": "shots",
+  "key": "water.root",
+  "before": 3880,
+  "after": 4056,
+  "startsBefore": [
+   0
+  ],
+  "startsAfter": [
+   0
+  ]
+ },
+ {
+  "kind": "shots",
+  "key": "water.rise",
+  "before": 5120,
+  "after": 5736,
+  "startsBefore": [
+   0
+  ],
+  "startsAfter": [
+   0
+  ]
+ },
+ {
+  "kind": "shots",
+  "key": "water.leaf",
+  "before": 3840,
+  "after": 4368,
+  "startsBefore": [
+   0
+  ],
+  "startsAfter": [
+   0
+  ]
+ },
+ {
+  "kind": "shots",
+  "key": "water.vapour",
+  "before": 4200,
+  "after": 4776,
+  "startsBefore": [
+   0
+  ],
+  "startsAfter": [
+   0
+  ]
+ },
+ {
+  "kind": "shots",
+  "key": "water.out",
+  "before": 3560,
+  "after": 4104,
+  "startsBefore": [
+   0
+  ],
+  "startsAfter": [
+   0
+  ]
+ },
+ {
+  "kind": "shots",
+  "key": "water.reason",
+  "before": 6960,
+  "after": 7536,
+  "startsBefore": [
+   0,
+   4220
+  ],
+  "startsAfter": [
+   0,
+   4680
+  ]
+ },
+ {
+  "kind": "shots",
+  "key": "vacuole.pivot",
+  "before": 7560,
+  "after": 7488,
+  "startsBefore": [
+   0,
+   3380,
+   5790
+  ],
+  "startsAfter": [
+   0,
+   3380,
+   5820
+  ]
+ },
+ {
+  "kind": "shots",
+  "key": "vacuole.dive",
+  "before": 3720,
+  "after": 3408,
+  "startsBefore": [
+   0
+  ],
+  "startsAfter": [
+   0
+  ]
+ },
+ {
+  "kind": "shots",
+  "key": "vacuole.tissue",
+  "before": 4040,
+  "after": 4488,
+  "startsBefore": [
+   0
+  ],
+  "startsAfter": [
+   0
+  ]
+ },
+ {
+  "kind": "shots",
+  "key": "vacuole.cell",
+  "before": 7320,
+  "after": 8424,
+  "startsBefore": [
+   0,
+   2430
+  ],
+  "startsAfter": [
+   0,
+   2980
+  ]
+ },
+ {
+  "kind": "shots",
+  "key": "vacuole.store",
+  "before": 5400,
+  "after": 5448,
+  "startsBefore": [
+   0,
+   2930
+  ],
+  "startsAfter": [
+   0,
+   2980
+  ]
+ },
+ {
+  "kind": "shots",
+  "key": "vacuole.reason",
+  "before": 10880,
+  "after": 11496,
+  "startsBefore": [
+   0,
+   5030,
+   8460
+  ],
+  "startsAfter": [
+   0,
+   5100,
+   8700
+  ]
+ },
+ {
+  "kind": "shots",
+  "key": "vacuole.try",
+  "before": 5440,
+  "after": 5496,
+  "startsBefore": [
+   0,
+   1670,
+   4030
+  ],
+  "startsAfter": [
+   0,
+   1710,
+   4080
+  ]
+ },
+ {
+  "kind": "shots",
+  "key": "vacuole.back",
+  "before": 4280,
+  "after": 4344,
+  "startsBefore": [
+   0
+  ],
+  "startsAfter": [
+   0
+  ]
+ },
+ {
+  "kind": "shots",
+  "key": "vacuole.plant",
+  "before": 5360,
+  "after": 4824,
+  "startsBefore": [
+   0,
+   2330
+  ],
+  "startsAfter": [
+   0,
+   1950
+  ]
+ },
+ {
+  "kind": "shots",
+  "key": "leaves.lose",
+  "before": 5120,
+  "after": 5184,
+  "startsBefore": [
+   0,
+   2310
+  ],
+  "startsAfter": [
+   0,
+   2360
+  ]
+ },
+ {
+  "kind": "shots",
+  "key": "leaves.look",
+  "before": 5240,
+  "after": 4584,
+  "startsBefore": [
+   0,
+   3050
+  ],
+  "startsAfter": [
+   0,
+   2840
+  ]
+ },
+ {
+  "kind": "shots",
+  "key": "leaves.load",
+  "before": 5840,
+  "after": 6216,
+  "startsBefore": [
+   0,
+   3390
+  ],
+  "startsAfter": [
+   0,
+   3600
+  ]
+ },
+ {
+  "kind": "shots",
+  "key": "leaves.fall",
+  "before": 2320,
+  "after": 2424,
+  "startsBefore": [
+   0
+  ],
+  "startsAfter": [
+   0
+  ]
+ },
+ {
+  "kind": "shots",
+  "key": "leaves.reason",
+  "before": 8080,
+  "after": 8136,
+  "startsBefore": [
+   0,
+   4640
+  ],
+  "startsAfter": [
+   0,
+   4690
+  ]
+ },
+ {
+  "kind": "shots",
+  "key": "resin.travel",
+  "before": 5080,
+  "after": 5208,
+  "startsBefore": [
+   0,
+   2330
+  ],
+  "startsAfter": [
+   0,
+   2370
+  ]
+ },
+ {
+  "kind": "shots",
+  "key": "resin.cut",
+  "before": 6160,
+  "after": 5928,
+  "startsBefore": [
+   0,
+   3450
+  ],
+  "startsAfter": [
+   0,
+   3140
+  ]
+ },
+ {
+  "kind": "shots",
+  "key": "resin.layers",
+  "before": 8080,
+  "after": 7776,
+  "startsBefore": [
+   0,
+   2010
+  ],
+  "startsAfter": [
+   0,
+   1980
+  ]
+ },
+ {
+  "kind": "shots",
+  "key": "resin.old",
+  "before": 6400,
+  "after": 6696,
+  "startsBefore": [
+   0,
+   2500
+  ],
+  "startsAfter": [
+   0,
+   2590
+  ]
+ },
+ {
+  "kind": "shots",
+  "key": "xylem.cells",
+  "before": 11200,
+  "after": 11256,
+  "startsBefore": [
+   0,
+   4270,
+   6790
+  ],
+  "startsAfter": [
+   0,
+   4320,
+   6840
+  ]
+ },
+ {
+  "kind": "shots",
+  "key": "resin.store",
+  "before": 4560,
+  "after": 4416,
+  "startsBefore": [
+   0,
+   1300
+  ],
+  "startsAfter": [
+   0,
+   1340
+  ]
+ },
+ {
+  "kind": "shots",
+  "key": "resin.reason",
+  "before": 6400,
+  "after": 7584,
+  "startsBefore": [
+   0,
+   4090
+  ],
+  "startsAfter": [
+   0,
+   4960
+  ]
+ },
+ {
+  "kind": "shots",
+  "key": "resin.try",
+  "before": 4760,
+  "after": 4656,
+  "startsBefore": [
+   0,
+   1720
+  ],
+  "startsAfter": [
+   0,
+   1880
+  ]
+ },
+ {
+  "kind": "shots",
+  "key": "soil.travel",
+  "before": 3760,
+  "after": 3744,
+  "startsBefore": [
+   0
+  ],
+  "startsAfter": [
+   0
+  ]
+ },
+ {
+  "kind": "shots",
+  "key": "soil.look",
+  "before": 4120,
+  "after": 4584,
+  "startsBefore": [
+   0
+  ],
+  "startsAfter": [
+   0
+  ]
+ },
+ {
+  "kind": "shots",
+  "key": "soil.excrete",
+  "before": 5400,
+  "after": 5616,
+  "startsBefore": [
+   0,
+   1330
+  ],
+  "startsAfter": [
+   0,
+   1450
+  ]
+ },
+ {
+  "kind": "shots",
+  "key": "soil.reason",
+  "before": 4520,
+  "after": 4416,
+  "startsBefore": [
+   0
+  ],
+  "startsAfter": [
+   0
+  ]
+ },
+ {
+  "kind": "shots",
+  "key": "whole.return",
+  "before": 3480,
+  "after": 3528,
+  "startsBefore": [
+   0
+  ],
+  "startsAfter": [
+   0
+  ]
+ },
+ {
+  "kind": "shots",
+  "key": "whole.oxygen",
+  "before": 9240,
+  "after": 8424,
+  "startsBefore": [
+   0,
+   5760
+  ],
+  "startsAfter": [
+   0,
+   5600
+  ]
+ },
+ {
+  "kind": "shots",
+  "key": "whole.water",
+  "before": 4640,
+  "after": 5064,
+  "startsBefore": [
+   0,
+   3300
+  ],
+  "startsAfter": [
+   0,
+   3630
+  ]
+ },
+ {
+  "kind": "shots",
+  "key": "whole.vacuole",
+  "before": 4160,
+  "after": 3408,
+  "startsBefore": [
+   0
+  ],
+  "startsAfter": [
+   0
+  ]
+ },
+ {
+  "kind": "shots",
+  "key": "whole.leaf",
+  "before": 4760,
+  "after": 4776,
+  "startsBefore": [
+   0
+  ],
+  "startsAfter": [
+   0
+  ]
+ },
+ {
+  "kind": "shots",
+  "key": "whole.xylem",
+  "before": 3800,
+  "after": 3624,
+  "startsBefore": [
+   0
+  ],
+  "startsAfter": [
+   0
+  ]
+ },
+ {
+  "kind": "shots",
+  "key": "whole.soil",
+  "before": 3480,
+  "after": 3528,
+  "startsBefore": [
+   0
+  ],
+  "startsAfter": [
+   0
+  ]
+ },
+ {
+  "kind": "shots",
+  "key": "whole.answer",
+  "before": 11120,
+  "after": 11424,
+  "startsBefore": [
+   0,
+   4860
+  ],
+  "startsAfter": [
+   0,
+   5210
+  ]
+ },
+ {
+  "kind": "shots",
+  "key": "recall.open",
+  "before": 6040,
+  "after": 5736,
+  "startsBefore": [
+   0,
+   2240
+  ],
+  "startsAfter": [
+   0,
+   2180
+  ]
+ },
+ {
+  "kind": "cues",
+  "key": "task.oxygen.try.done",
+  "before": 4480,
+  "after": 3936
+ },
+ {
+  "kind": "cues",
+  "key": "task.stoma.try.done",
+  "before": 3000,
+  "after": 3744
+ },
+ {
+  "kind": "cues",
+  "key": "task.vacuole.try.done",
+  "before": 3280,
+  "after": 3528
+ },
+ {
+  "kind": "cues",
+  "key": "task.resin.try.done",
+  "before": 4600,
+  "after": 4656
+ },
+ {
+  "kind": "cues",
+  "key": "task.resin.try.wrong",
+  "before": 3080,
+  "after": 2784
+ },
+ {
+  "kind": "cues",
+  "key": "recall.water.question",
+  "before": 2200,
+  "after": 2376
+ },
+ {
+  "kind": "cues",
+  "key": "recall.water.reveal",
+  "before": 5280,
+  "after": 5784
+ },
+ {
+  "kind": "cues",
+  "key": "recall.oxygen.question",
+  "before": 4600,
+  "after": 5016
+ },
+ {
+  "kind": "cues",
+  "key": "recall.oxygen.reveal",
+  "before": 4400,
+  "after": 4944
+ },
+ {
+  "kind": "cues",
+  "key": "recall.stoma.question",
+  "before": 3360,
+  "after": 3816
+ },
+ {
+  "kind": "cues",
+  "key": "recall.stoma.reveal",
+  "before": 5160,
+  "after": 5424
+ },
+ {
+  "kind": "cues",
+  "key": "recall.night.question",
+  "before": 4920,
+  "after": 4968
+ },
+ {
+  "kind": "cues",
+  "key": "recall.night.reveal",
+  "before": 4120,
+  "after": 4176
+ },
+ {
+  "kind": "cues",
+  "key": "recall.store.question",
+  "before": 3600,
+  "after": 3408
+ },
+ {
+  "kind": "cues",
+  "key": "recall.store.reveal",
+  "before": 5040,
+  "after": 4248
+ },
+ {
+  "kind": "cues",
+  "key": "recall.leaves.question",
+  "before": 2880,
+  "after": 2784
+ },
+ {
+  "kind": "cues",
+  "key": "recall.leaves.reveal",
+  "before": 6240,
+  "after": 5448
+ },
+ {
+  "kind": "cues",
+  "key": "recall.resin.question",
+  "before": 2800,
+  "after": 2976
+ },
+ {
+  "kind": "cues",
+  "key": "recall.resin.reveal",
+  "before": 4360,
+  "after": 4176
+ },
+ {
+  "kind": "cues",
+  "key": "recall.soil.question",
+  "before": 3040,
+  "after": 2784
+ },
+ {
+  "kind": "cues",
+  "key": "recall.soil.reveal",
+  "before": 4720,
+  "after": 5736
+ },
+ {
+  "kind": "cues",
+  "key": "recall.incorrect",
+  "before": 2920,
+  "after": 2784
+ },
+ {
+  "kind": "cues",
+  "key": "recall.open.prompt",
+  "before": 3880,
+  "after": 3888
+ },
+ {
+  "kind": "cues",
+  "key": "recall.open.model",
+  "before": 22640,
+  "after": 21648
+ },
+ {
+  "kind": "cues",
+  "key": "recall.complete",
+  "before": 3840,
+  "after": 4488
+ },
+ {
+  "kind": "cues",
+  "key": "explore.intro",
+  "before": 5560,
+  "after": 4848
+ },
+ {
+  "kind": "cues",
+  "key": "explore.plant",
+  "before": 6440,
+  "after": 6504
+ },
+ {
+  "kind": "cues",
+  "key": "explore.leaf",
+  "before": 6000,
+  "after": 6168
+ },
+ {
+  "kind": "cues",
+  "key": "explore.leafInside",
+  "before": 7760,
+  "after": 7968
+ },
+ {
+  "kind": "cues",
+  "key": "explore.chloroplast",
+  "before": 8520,
+  "after": 8304
+ },
+ {
+  "kind": "cues",
+  "key": "explore.stoma",
+  "before": 10280,
+  "after": 10176
+ },
+ {
+  "kind": "cues",
+  "key": "explore.cell",
+  "before": 9000,
+  "after": 9048
+ },
+ {
+  "kind": "cues",
+  "key": "explore.stem",
+  "before": 7520,
+  "after": 7104
+ },
+ {
+  "kind": "cues",
+  "key": "explore.xylem",
+  "before": 11360,
+  "after": 12936
+ },
+ {
+  "kind": "cues",
+  "key": "explore.root",
+  "before": 6920,
+  "after": 6696
+ },
+ {
+  "kind": "cues",
+  "key": "explore.rootHairs",
+  "before": 7240,
+  "after": 7008
+ }
+]

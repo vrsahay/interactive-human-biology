@@ -1,0 +1,42 @@
+{
+ "status": "ok",
+ "name": "Roots",
+ "type": "MESH",
+ "location": [
+  0,
+  0,
+  0
+ ],
+ "rotation": [
+  0,
+  0,
+  0
+ ],
+ "scale": [
+  1,
+  1,
+  1
+ ],
+ "dimensions": [
+  0.6826938390731812,
+  0.1721862107515335,
+  0.47767800092697144
+ ],
+ "parent": "Plant",
+ "children": [],
+ "modifiers": [],
+ "constraints": [],
+ "materials": [
+  "MAT_Root"
+ ],
+ "visibility": {
+  "hide_viewport": false,
+  "hide_render": false,
+  "hide_get": false
+ },
+ "data_name": "Roots",
+ "collections": [
+  "ROOTS"
+ ],
+ "message": null
+}

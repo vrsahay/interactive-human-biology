@@ -10,6 +10,7 @@ my-website.com/
 ├── /                 → homepage (generated from modules.config.mjs)
 ├── /respiratory/     → Respiratory System   (projects/respiratory)
 ├── /joints/          → Types of Joints      (projects/joints)
+├── /excretion/       → Excretion in Plants  (projects/excretion)
 └── /<next>/          → add a folder + one config entry, then redeploy
 ```
 
@@ -47,14 +48,15 @@ the browser's built-in voice.
 
 ## Architecture
 
-The two lessons use different technology, so neither was rewritten to match the other:
+The lessons use different technology, so none of them was rewritten to match the others:
 
-| | Respiratory System | Types of Joints |
-|---|---|---|
-| Technology | One HTML file, Three.js 0.160 from jsDelivr (import map), Google Fonts | Vite 8 + Preact + TypeScript, Three.js 0.186 bundled |
-| Build | none (a script writes `config.js` with the narration key) | `vite build` |
-| Assets | `respiratory_system.glb` (63 MB), relative path `./` | `public/assets/**`: GLBs, manifests, baked environment, 76 MP3s |
-| Paths | all relative → work under any folder unchanged | root-absolute `/assets/...` → needed a base path |
+| | Respiratory System | Types of Joints | Excretion in Plants |
+|---|---|---|---|
+| Technology | One HTML file, Three.js 0.160 from jsDelivr (import map), Google Fonts | Vite 8 + Preact + TypeScript, Three.js 0.186 bundled | Vite 8 + Three.js 0.186, plain JavaScript |
+| Build | none (a script writes `config.js` with the narration key) | `vite build` | `vite build` (app root is `web/`) |
+| Assets | `respiratory_system.glb` (63 MB), relative path `./` | `public/assets/**`: GLBs, manifests, baked environment, 76 MP3s | `web/public`: 12 Draco GLBs (~2 MB) + 112 MP3s |
+| Paths | all relative → work under any folder unchanged | root-absolute `/assets/...` → needed a base path | Vite `base: './'` and relative fetches → unchanged |
+| Narration | Google TTS **from the browser** (key is public) | pre-rendered MP3s, no key in the browser | pre-rendered MP3s, no key in the browser |
 
 The platform is a **static multi-app build**: a small Node script (`scripts/build.mjs`, no dependencies) builds each
 project with its own tooling and places its output in `dist/<route>/`, then generates the homepage from
@@ -63,6 +65,7 @@ project with its own tooling and places its output in `dist/<route>/`, then gene
 ```
 modules.config.mjs ──► scripts/build.mjs ──┬─► projects/respiratory  (static: copy files, entry → index.html) ─► dist/respiratory/
                                            ├─► projects/joints       (npm: npm ci; BASE_PATH=/joints/ npm run build) ─► dist/joints/
+                                           ├─► projects/excretion/web (npm: npm ci; npm run build) ─► dist/excretion/
                                            ├─► back link injected into each module's HTML
                                            └─► site/index.html + cards ─► dist/index.html, dist/404.html, dist/modules.json
 ```
@@ -94,12 +97,14 @@ human-biology/
 │   └── static/               ← styles.css, favicon.svg → published at /static/
 ├── projects/
 │   ├── respiratory/          ← the Respiratory System lesson (its own README, scripts, deploy files)
-│   └── joints/               ← the Types of Joints app (its own README, tests, pipeline, package.json)
+│   ├── joints/               ← the Types of Joints app (its own README, tests, pipeline, package.json)
+│   └── excretion/            ← Excretion in Plants (web/ is the app; blender/, pipeline/, docs/, releases/ alongside)
 ├── tests/platform.spec.mjs   ← platform smoke tests
 └── dist/                     ← build output (not committed)
     ├── index.html  404.html  modules.json  favicon.ico  static/
     ├── respiratory/          ← index.html, respiratory_system.html, respiratory_system.glb, config.js
-    └── joints/               ← index.html, app/ (hashed JS/CSS), assets/ (GLB, JSON, audio, environment)
+    ├── joints/               ← index.html, app/ (hashed JS/CSS), assets/ (GLB, JSON, audio, environment)
+    └── excretion/            ← index.html, assets/ (hashed JS/CSS + Draco WASM), models/, audio/
 ```
 
 ### How routing works
@@ -270,6 +275,10 @@ npm run test:e2e        # its own Playwright suite (in projects/joints)
 
 # Respiratory System: its own tiny server at http://localhost:8000/respiratory_system.html
 cd projects/respiratory && node scripts/build-config.js && node scripts/serve.js
+
+# Excretion in Plants: Vite dev server at http://localhost:5174/
+cd projects/excretion/web && npm ci && npm run dev
+npm run qa               # its own content, asset and secret checks
 ```
 
 Then `npm run build -- joints` (from the repository root) to update the platform build.
@@ -352,6 +361,11 @@ reviewable diff: `git diff <first commit> -- projects/`.
 | `src/engine/core/App.ts` | same, for the baked environment manifest |
 | `src/ui/video/FilmShell.tsx` | same, for the narration manifest |
 
+**Excretion in Plants**: no source changes. Its Vite config already uses a relative base (`base: './'`) and it fetches
+its models and audio relatively, so it runs under `/excretion/` as it is. Only the app (`web/`) is built and published;
+`blender/`, `pipeline/`, `docs/` and `releases/` travel with it but are not part of the site. Its 718 MB
+`local-archive/` and the NCERT PDFs were left behind, as its own `.gitignore` excludes them.
+
 **Respiratory System**: no source changes. The platform publishes the committed `respiratory_system.html` as
 `/respiratory/index.html` (and keeps `/respiratory/respiratory_system.html` for old links), with the GLB and the
 generated `config.js`. Its own deploy files (`vercel.json`, `.github/workflows/deploy.yml`, start scripts) are kept
@@ -369,8 +383,9 @@ UI, styling, fonts, the Joints asset pipeline, Blender files, tests and QA evide
   (`scripts/build-narration.js`) and the clips do not exist yet, so that version cannot load its narration. The
   platform uses the committed version. When the script and clips exist, replace `projects/respiratory/respiratory_system.html`,
   add `"narration"` to `build.files` and drop `config.js`.
-- **Two Three.js copies**: Respiratory loads Three.js 0.160 from jsDelivr, Joints bundles 0.186. They are separate
-  pages, so they never conflict; Respiratory (and its Google Fonts) still needs internet access, as before.
+- **Three Three.js copies**: Respiratory loads 0.160 from jsDelivr; Joints and Excretion each bundle their own 0.186.
+  They are separate pages, so they never conflict; Respiratory (and its Google Fonts) still needs internet access.
+- **Excretion in Plants is not final**: its own README lists a phone test and a Biology teacher review as pending.
 - **Large first load**: the Respiratory model is 63 MB (unchanged). The homepage itself is about 90 kB (HTML, CSS, both card images) plus fonts.
 - **Joints licence**: its README states the anatomy source's licence is unknown and blocks public release, and that
   the lesson awaits expert review. Integration does not change that status.

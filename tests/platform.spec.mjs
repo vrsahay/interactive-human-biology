@@ -110,6 +110,21 @@ test("Types of Joints: manifests, models, environment and narration load under /
   expect(w.problems).toEqual([]);
 });
 
+test("Excretion in Plants: models, Draco decoder and narration load under /excretion/", async ({ page }) => {
+  const w = watch(page);
+  await page.goto("/excretion/?qa=1");
+  await page.getByRole("button", { name: "Start lesson" }).click({ timeout: 150_000 });
+  await page.waitForTimeout(4000);
+  await page.evaluate(() => window.app.qa.at("oxygen.release", 1200));   // a shot deep in the lesson
+  await page.waitForTimeout(6000);
+  const paths = w.assets.map((a) => a.path);
+  for (const needle of ["models/manifest.json", ".glb", "draco", ".mp3"]) {
+    expect(paths.some((p) => p.includes(needle)), `a ${needle} request`).toBe(true);
+  }
+  expect(paths.filter((p) => !p.startsWith("/excretion/"))).toEqual([]);
+  expect(w.problems).toEqual([]);
+});
+
 test("unknown routes return the platform 404 page", async ({ page }) => {
   const res = await page.goto("/digestive/");
   expect(res.status()).toBe(404);

@@ -1,0 +1,9 @@
+{
+  "frozenAt": "2026-09-22T14:46:36.192Z",
+  "lessonVersion": 2,
+  "spoken": "1bd750e41e0b6b613166b7b5aee0613a6eccbe9e24b78b64253538ff4c5483db",
+  "surface": "7c4d6ad18018d02733734387f009f5e9538389134cecc3578d9564bbbc3a67d4",
+  "spokenLines": 111,
+  "surfaceLines": 375,
+  "note": "Content frozen for V2 narration. Change any learner-facing text and the TTS pipeline refuses to run until the audits are redone and the freeze is recorded again."
+}

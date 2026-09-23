@@ -1,0 +1,417 @@
+{
+  "blender": "5.2.2 LTS",
+  "ok": true,
+  "partial": true,
+  "issues": [],
+  "warnings": [],
+  "placement": {
+    "stem_embedded_in_soil": true,
+    "roots_outside_soil_vertices": 0,
+    "max_leaf_attach_gap": 0.0
+  },
+  "structure": {
+    "top_level": [
+      "PLANT",
+      "LEAF",
+      "STOMA",
+      "CELL",
+      "VACUOLE",
+      "CHLOROPLAST",
+      "STEM",
+      "XYLEM",
+      "ROOT",
+      "SOIL",
+      "WASTE_VISUALS",
+      "CAMERAS",
+      "LIGHTS",
+      "QA"
+    ],
+    "objects_per_collection": {
+      "BRANCHES": 7,
+      "CAMERAS": 20,
+      "CARBON_DIOXIDE": 0,
+      "CELL": 0,
+      "CELL_BOUNDARY": 0,
+      "CHLOROPLAST": 0,
+      "CYTOPLASM": 0,
+      "EPIDERMIS": 0,
+      "GUARD_CELLS": 0,
+      "LEAF": 0,
+      "LEAF_BLADE": 0,
+      "LEAF_INTERNAL": 0,
+      "LEAVES": 40,
+      "LIGHTS": 0,
+      "NUCLEUS": 0,
+      "OXYGEN": 0,
+      "PLANT": 1,
+      "PLANT_STEM": 3,
+      "QA": 0,
+      "RESIN_GUM": 0,
+      "ROOT": 0,
+      "ROOT_HAIRS": 0,
+      "ROOT_TIP": 0,
+      "ROOTS": 2,
+      "SOIL": 7,
+      "SOIL_EXCRETION": 0,
+      "STEM": 0,
+      "STEM_CROSS_SECTION": 0,
+      "STOMA": 0,
+      "STORED_WASTE": 12,
+      "VACUOLE": 0,
+      "WASTE_VISUALS": 0,
+      "WATER": 26,
+      "XYLEM": 0
+    }
+  },
+  "transforms": {
+    "checked": 118,
+    "unapplied_scale": [],
+    "non_uniform_parents": []
+  },
+  "cameras": {
+    "CAM_Final": {
+      "distance": 4.153,
+      "facing": 1.0,
+      "exported": true
+    },
+    "CAM_Leaf_Fall": {
+      "distance": 1.583,
+      "facing": 1.0,
+      "exported": true
+    },
+    "CAM_Leaf_Hero": {
+      "distance": 0.311,
+      "facing": 1.0,
+      "exported": true
+    },
+    "CAM_Leaf_Hero_Air": {
+      "distance": 0.562,
+      "facing": 1.0,
+      "exported": true
+    },
+    "CAM_Leaf_Old": {
+      "distance": 0.581,
+      "facing": 1.0,
+      "exported": true
+    },
+    "CAM_Plant_Intro": {
+      "distance": 5.739,
+      "facing": 1.0,
+      "exported": true
+    },
+    "CAM_Plant_Wide": {
+      "distance": 3.886,
+      "facing": 1.0,
+      "exported": true
+    },
+    "CAM_Roots": {
+      "distance": 1.431,
+      "facing": 1.0,
+      "exported": true
+    },
+    "CAM_Stem_Cut": {
+      "distance": 0.605,
+      "facing": 1.0,
+      "exported": true
+    },
+    "CAM_Stem_Mid": {
+      "distance": 1.194,
+      "facing": 1.0,
+      "exported": true
+    }
+  },
+  "assets": {
+    "01_plant.glb": {
+      "root": "Plant",
+      "objects": 112,
+      "meshes": 42,
+      "triangles": 21060,
+      "per_object": {
+        "Branch_01": {
+          "tris": 284,
+          "loose_verts": 0,
+          "degenerate_faces": 0,
+          "non_manifold_edges": 0
+        },
+        "Branch_02": {
+          "tris": 284,
+          "loose_verts": 0,
+          "degenerate_faces": 0,
+          "non_manifold_edges": 0
+        },
+        "Branch_03": {
+          "tris": 284,
+          "loose_verts": 0,
+          "degenerate_faces": 0,
+          "non_manifold_edges": 0
+        },
+        "Branch_04": {
+          "tris": 284,
+          "loose_verts": 0,
+          "degenerate_faces": 0,
+          "non_manifold_edges": 0
+        },
+        "Branch_05": {
+          "tris": 284,
+          "loose_verts": 0,
+          "degenerate_faces": 0,
+          "non_manifold_edges": 0
+        },
+        "Branch_06": {
+          "tris": 284,
+          "loose_verts": 0,
+          "degenerate_faces": 0,
+          "non_manifold_edges": 0
+        },
+        "Branch_07": {
+          "tris": 284,
+          "loose_verts": 0,
+          "degenerate_faces": 0,
+          "non_manifold_edges": 0
+        },
+        "Leaf_01": {
+          "tris": 428,
+          "loose_verts": 0,
+          "degenerate_faces": 0,
+          "non_manifold_edges": 66
+        },
+        "Leaf_02": {
+          "tris": 428,
+          "loose_verts": 0,
+          "degenerate_faces": 0,
+          "non_manifold_edges": 66
+        },
+        "Leaf_03": {
+          "tris": 428,
+          "loose_verts": 0,
+          "degenerate_faces": 0,
+          "non_manifold_edges": 66
+        },
+        "Leaf_04": {
+          "tris": 428,
+          "loose_verts": 0,
+          "degenerate_faces": 0,
+          "non_manifold_edges": 66
+        },
+        "Leaf_05": {
+          "tris": 428,
+          "loose_verts": 0,
+          "degenerate_faces": 0,
+          "non_manifold_edges": 66
+        },
+        "Leaf_06": {
+          "tris": 428,
+          "loose_verts": 0,
+          "degenerate_faces": 0,
+          "non_manifold_edges": 66
+        },
+        "Leaf_07": {
+          "tris": 428,
+          "loose_verts": 0,
+          "degenerate_faces": 0,
+          "non_manifold_edges": 66
+        },
+        "Leaf_08": {
+          "tris": 428,
+          "loose_verts": 0,
+          "degenerate_faces": 0,
+          "non_manifold_edges": 66
+        },
+        "Leaf_09": {
+          "tris": 428,
+          "loose_verts": 0,
+          "degenerate_faces": 0,
+          "non_manifold_edges": 66
+        },
+        "Leaf_10": {
+          "tris": 428,
+          "loose_verts": 0,
+          "degenerate_faces": 0,
+          "non_manifold_edges": 66
+        },
+        "Leaf_11": {
+          "tris": 428,
+          "loose_verts": 0,
+          "degenerate_faces": 0,
+          "non_manifold_edges": 66
+        },
+        "Leaf_12": {
+          "tris": 428,
+          "loose_verts": 0,
+          "degenerate_faces": 0,
+          "non_manifold_edges": 66
+        },
+        "Leaf_13": {
+          "tris": 428,
+          "loose_verts": 0,
+          "degenerate_faces": 0,
+          "non_manifold_edges": 66
+        },
+        "Leaf_14": {
+          "tris": 428,
+          "loose_verts": 0,
+          "degenerate_faces": 0,
+          "non_manifold_edges": 66
+        },
+        "Leaf_15": {
+          "tris": 428,
+          "loose_verts": 0,
+          "degenerate_faces": 0,
+          "non_manifold_edges": 66
+        },
+        "Leaf_16": {
+          "tris": 428,
+          "loose_verts": 0,
+          "degenerate_faces": 0,
+          "non_manifold_edges": 66
+        },
+        "Leaf_17": {
+          "tris": 428,
+          "loose_verts": 0,
+          "degenerate_faces": 0,
+          "non_manifold_edges": 66
+        },
+        "Leaf_18": {
+          "tris": 428,
+          "loose_verts": 0,
+          "degenerate_faces": 0,
+          "non_manifold_edges": 66
+        },
+        "Leaf_19": {
+          "tris": 428,
+          "loose_verts": 0,
+          "degenerate_faces": 0,
+          "non_manifold_edges": 66
+        },
+        "Leaf_20": {
+          "tris": 428,
+          "loose_verts": 0,
+          "degenerate_faces": 0,
+          "non_manifold_edges": 66
+        },
+        "Leaf_21": {
+          "tris": 428,
+          "loose_verts": 0,
+          "degenerate_faces": 0,
+          "non_manifold_edges": 66
+        },
+        "Leaf_22": {
+          "tris": 428,
+          "loose_verts": 0,
+          "degenerate_faces": 0,
+          "non_manifold_edges": 66
+        },
+        "Leaf_23": {
+          "tris": 428,
+          "loose_verts": 0,
+          "degenerate_faces": 0,
+          "non_manifold_edges": 66
+        },
+        "Leaf_24": {
+          "tris": 428,
+          "loose_verts": 0,
+          "degenerate_faces": 0,
+          "non_manifold_edges": 66
+        },
+        "Leaf_25": {
+          "tris": 428,
+          "loose_verts": 0,
+          "degenerate_faces": 0,
+          "non_manifold_edges": 66
+        },
+        "Leaf_26": {
+          "tris": 428,
+          "loose_verts": 0,
+          "degenerate_faces": 0,
+          "non_manifold_edges": 66
+        },
+        "Leaf_27": {
+          "tris": 428,
+          "loose_verts": 0,
+          "degenerate_faces": 0,
+          "non_manifold_edges": 66
+        },
+        "Leaf_28": {
+          "tris": 428,
+          "loose_verts": 0,
+          "degenerate_faces": 0,
+          "non_manifold_edges": 66
+        },
+        "Leaf_29": {
+          "tris": 428,
+          "loose_verts": 0,
+          "degenerate_faces": 0,
+          "non_manifold_edges": 66
+        },
+        "Leaf_30": {
+          "tris": 428,
+          "loose_verts": 0,
+          "degenerate_faces": 0,
+          "non_manifold_edges": 66
+        },
+        "Leaf_31": {
+          "tris": 428,
+          "loose_verts": 0,
+          "degenerate_faces": 0,
+          "non_manifold_edges": 66
+        },
+        "Leaf_Hero": {
+          "tris": 428,
+          "loose_verts": 0,
+          "degenerate_faces": 0,
+          "non_manifold_edges": 66
+        },
+        "Leaf_Old": {
+          "tris": 428,
+          "loose_verts": 0,
+          "degenerate_faces": 0,
+          "non_manifold_edges": 66
+        },
+        "Roots": {
+          "tris": 3944,
+          "loose_verts": 0,
+          "degenerate_faces": 0,
+          "non_manifold_edges": 0
+        },
+        "Stem_Main": {
+          "tris": 1004,
+          "loose_verts": 0,
+          "degenerate_faces": 0,
+          "non_manifold_edges": 0
+        }
+      }
+    },
+    "16_soil.glb": {
+      "root": "RootSoil",
+      "objects": 6,
+      "meshes": 4,
+      "triangles": 5256,
+      "per_object": {
+        "Diorama_Base": {
+          "tris": 256,
+          "loose_verts": 0,
+          "degenerate_faces": 0,
+          "non_manifold_edges": 0
+        },
+        "Soil_Back": {
+          "tris": 1896,
+          "loose_verts": 0,
+          "degenerate_faces": 0,
+          "non_manifold_edges": 0
+        },
+        "Soil_Front": {
+          "tris": 2824,
+          "loose_verts": 0,
+          "degenerate_faces": 0,
+          "non_manifold_edges": 0
+        },
+        "Soil_Pebbles": {
+          "tris": 280,
+          "loose_verts": 0,
+          "degenerate_faces": 0,
+          "non_manifold_edges": 0
+        }
+      }
+    }
+  }
+}

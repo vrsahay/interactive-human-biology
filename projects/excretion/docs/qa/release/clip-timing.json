@@ -1,0 +1,677 @@
+[
+ {
+  "id": "soil.travel",
+  "file": 3744,
+  "manifest": 3744,
+  "speechEnd": 3680,
+  "lead": 350,
+  "shot": 4800,
+  "margin": 770
+ },
+ {
+  "id": "vacuole.try",
+  "file": 5496,
+  "manifest": 5496,
+  "speechEnd": 5460,
+  "lead": 350,
+  "shot": 6600,
+  "margin": 790
+ },
+ {
+  "id": "leaves.look",
+  "file": 4584,
+  "manifest": 4584,
+  "speechEnd": 4520,
+  "lead": 350,
+  "shot": 5700,
+  "margin": 830
+ },
+ {
+  "id": "whole.oxygen",
+  "file": 8424,
+  "manifest": 8424,
+  "speechEnd": 8300,
+  "lead": 350,
+  "shot": 9500,
+  "margin": 850
+ },
+ {
+  "id": "different.animals",
+  "file": 6048,
+  "manifest": 6048,
+  "speechEnd": 5840,
+  "lead": 350,
+  "shot": 7100,
+  "margin": 910
+ },
+ {
+  "id": "whole.vacuole",
+  "file": 3408,
+  "manifest": 3408,
+  "speechEnd": 3240,
+  "lead": 350,
+  "shot": 4500,
+  "margin": 910
+ },
+ {
+  "id": "recall.open",
+  "file": 5736,
+  "manifest": 5736,
+  "speechEnd": 5540,
+  "lead": 350,
+  "shot": 6800,
+  "margin": 910
+ },
+ {
+  "id": "oxygen.inside",
+  "file": 5904,
+  "manifest": 5904,
+  "speechEnd": 5720,
+  "lead": 350,
+  "shot": 7000,
+  "margin": 930
+ },
+ {
+  "id": "different.none",
+  "file": 6144,
+  "manifest": 6144,
+  "speechEnd": 5900,
+  "lead": 350,
+  "shot": 7200,
+  "margin": 950
+ },
+ {
+  "id": "stoma.reason",
+  "file": 9096,
+  "manifest": 9096,
+  "speechEnd": 8900,
+  "lead": 350,
+  "shot": 10200,
+  "margin": 950
+ },
+ {
+  "id": "water.reason",
+  "file": 7536,
+  "manifest": 7536,
+  "speechEnd": 7300,
+  "lead": 350,
+  "shot": 8600,
+  "margin": 950
+ },
+ {
+  "id": "resin.travel",
+  "file": 5208,
+  "manifest": 5208,
+  "speechEnd": 5000,
+  "lead": 350,
+  "shot": 6300,
+  "margin": 950
+ },
+ {
+  "id": "resin.old",
+  "file": 6696,
+  "manifest": 6696,
+  "speechEnd": 6500,
+  "lead": 350,
+  "shot": 7800,
+  "margin": 950
+ },
+ {
+  "id": "soil.reason",
+  "file": 4416,
+  "manifest": 4416,
+  "speechEnd": 4200,
+  "lead": 350,
+  "shot": 5500,
+  "margin": 950
+ },
+ {
+  "id": "vacuole.pivot",
+  "file": 7488,
+  "manifest": 7488,
+  "speechEnd": 7280,
+  "lead": 350,
+  "shot": 8600,
+  "margin": 970
+ },
+ {
+  "id": "vacuole.plant",
+  "file": 4824,
+  "manifest": 4824,
+  "speechEnd": 4580,
+  "lead": 350,
+  "shot": 5900,
+  "margin": 970
+ },
+ {
+  "id": "whole.leaf",
+  "file": 4776,
+  "manifest": 4776,
+  "speechEnd": 4580,
+  "lead": 350,
+  "shot": 5900,
+  "margin": 970
+ },
+ {
+  "id": "oxygen.chloroplast",
+  "file": 7416,
+  "manifest": 7416,
+  "speechEnd": 7160,
+  "lead": 350,
+  "shot": 8500,
+  "margin": 990
+ },
+ {
+  "id": "stoma.close",
+  "file": 7104,
+  "manifest": 7104,
+  "speechEnd": 6860,
+  "lead": 350,
+  "shot": 8200,
+  "margin": 990
+ },
+ {
+  "id": "stoma.try",
+  "file": 5016,
+  "manifest": 5016,
+  "speechEnd": 4760,
+  "lead": 350,
+  "shot": 6100,
+  "margin": 990
+ },
+ {
+  "id": "what.excretion",
+  "file": 6744,
+  "manifest": 6744,
+  "speechEnd": 6440,
+  "lead": 350,
+  "shot": 7800,
+  "margin": 1010
+ },
+ {
+  "id": "oxygen.reason",
+  "file": 9264,
+  "manifest": 9264,
+  "speechEnd": 9040,
+  "lead": 350,
+  "shot": 10400,
+  "margin": 1010
+ },
+ {
+  "id": "oxygen.try",
+  "file": 4944,
+  "manifest": 4944,
+  "speechEnd": 4640,
+  "lead": 350,
+  "shot": 6000,
+  "margin": 1010
+ },
+ {
+  "id": "stoma.look",
+  "file": 8496,
+  "manifest": 8496,
+  "speechEnd": 8240,
+  "lead": 350,
+  "shot": 9600,
+  "margin": 1010
+ },
+ {
+  "id": "night.respire",
+  "file": 9864,
+  "manifest": 9864,
+  "speechEnd": 9640,
+  "lead": 350,
+  "shot": 11000,
+  "margin": 1010
+ },
+ {
+  "id": "vacuole.cell",
+  "file": 8424,
+  "manifest": 8424,
+  "speechEnd": 8140,
+  "lead": 350,
+  "shot": 9500,
+  "margin": 1010
+ },
+ {
+  "id": "leaves.reason",
+  "file": 8136,
+  "manifest": 8136,
+  "speechEnd": 7840,
+  "lead": 350,
+  "shot": 9200,
+  "margin": 1010
+ },
+ {
+  "id": "oxygen.look",
+  "file": 4728,
+  "manifest": 4728,
+  "speechEnd": 4420,
+  "lead": 350,
+  "shot": 5800,
+  "margin": 1030
+ },
+ {
+  "id": "vacuole.reason",
+  "file": 11496,
+  "manifest": 11496,
+  "speechEnd": 11220,
+  "lead": 350,
+  "shot": 12600,
+  "margin": 1030
+ },
+ {
+  "id": "xylem.cells",
+  "file": 11256,
+  "manifest": 11256,
+  "speechEnd": 11020,
+  "lead": 350,
+  "shot": 12400,
+  "margin": 1030
+ },
+ {
+  "id": "resin.reason",
+  "file": 7584,
+  "manifest": 7584,
+  "speechEnd": 7320,
+  "lead": 350,
+  "shot": 8700,
+  "margin": 1030
+ },
+ {
+  "id": "whole.water",
+  "file": 5064,
+  "manifest": 5064,
+  "speechEnd": 4820,
+  "lead": 350,
+  "shot": 6200,
+  "margin": 1030
+ },
+ {
+  "id": "whole.xylem",
+  "file": 3624,
+  "manifest": 3624,
+  "speechEnd": 3320,
+  "lead": 350,
+  "shot": 4700,
+  "margin": 1030
+ },
+ {
+  "id": "leaves.lose",
+  "file": 5184,
+  "manifest": 5184,
+  "speechEnd": 4900,
+  "lead": 350,
+  "shot": 6300,
+  "margin": 1050
+ },
+ {
+  "id": "whole.soil",
+  "file": 3528,
+  "manifest": 3528,
+  "speechEnd": 3200,
+  "lead": 350,
+  "shot": 4600,
+  "margin": 1050
+ },
+ {
+  "id": "stoma.open",
+  "file": 6096,
+  "manifest": 6096,
+  "speechEnd": 5780,
+  "lead": 350,
+  "shot": 7200,
+  "margin": 1070
+ },
+ {
+  "id": "night.reason",
+  "file": 9336,
+  "manifest": 9336,
+  "speechEnd": 8980,
+  "lead": 350,
+  "shot": 10400,
+  "margin": 1070
+ },
+ {
+  "id": "soil.look",
+  "file": 4584,
+  "manifest": 4584,
+  "speechEnd": 4280,
+  "lead": 350,
+  "shot": 5700,
+  "margin": 1070
+ },
+ {
+  "id": "what.processes",
+  "file": 6864,
+  "manifest": 6864,
+  "speechEnd": 6560,
+  "lead": 350,
+  "shot": 8000,
+  "margin": 1090
+ },
+ {
+  "id": "resin.layers",
+  "file": 7776,
+  "manifest": 7776,
+  "speechEnd": 7460,
+  "lead": 350,
+  "shot": 8900,
+  "margin": 1090
+ },
+ {
+  "id": "resin.try",
+  "file": 4656,
+  "manifest": 4656,
+  "speechEnd": 4340,
+  "lead": 350,
+  "shot": 5800,
+  "margin": 1110
+ },
+ {
+  "id": "whole.return",
+  "file": 3528,
+  "manifest": 3528,
+  "speechEnd": 3340,
+  "lead": 350,
+  "shot": 4800,
+  "margin": 1110
+ },
+ {
+  "id": "stoma.other",
+  "file": 5664,
+  "manifest": 5664,
+  "speechEnd": 5500,
+  "lead": 350,
+  "shot": 7000,
+  "margin": 1150
+ },
+ {
+  "id": "different.plan",
+  "file": 6096,
+  "manifest": 6096,
+  "speechEnd": 5680,
+  "lead": 350,
+  "shot": 7200,
+  "margin": 1170
+ },
+ {
+  "id": "night.day",
+  "file": 6696,
+  "manifest": 6696,
+  "speechEnd": 6340,
+  "lead": 350,
+  "shot": 8000,
+  "margin": 1310
+ },
+ {
+  "id": "water.question",
+  "file": 6168,
+  "manifest": 6168,
+  "speechEnd": 5900,
+  "lead": 350,
+  "shot": 7600,
+  "margin": 1350
+ },
+ {
+  "id": "oxygen.release",
+  "file": 6024,
+  "manifest": 6024,
+  "speechEnd": 5740,
+  "lead": 350,
+  "shot": 7500,
+  "margin": 1410
+ },
+ {
+  "id": "oxygen.travel",
+  "file": 2856,
+  "manifest": 2856,
+  "speechEnd": 2600,
+  "lead": 350,
+  "shot": 4400,
+  "margin": 1450
+ },
+ {
+  "id": "resin.cut",
+  "file": 5928,
+  "manifest": 5928,
+  "speechEnd": 5680,
+  "lead": 350,
+  "shot": 7500,
+  "margin": 1470
+ },
+ {
+  "id": "water.hairs",
+  "file": 6384,
+  "manifest": 6384,
+  "speechEnd": 6140,
+  "lead": 350,
+  "shot": 8000,
+  "margin": 1510
+ },
+ {
+  "id": "night.night",
+  "file": 6768,
+  "manifest": 6768,
+  "speechEnd": 6560,
+  "lead": 350,
+  "shot": 8500,
+  "margin": 1590
+ },
+ {
+  "id": "what.alive",
+  "file": 6384,
+  "manifest": 6384,
+  "speechEnd": 5520,
+  "lead": 350,
+  "shot": 7500,
+  "margin": 1630
+ },
+ {
+  "id": "what.question",
+  "file": 5544,
+  "manifest": 5544,
+  "speechEnd": 5320,
+  "lead": 350,
+  "shot": 7500,
+  "margin": 1830
+ },
+ {
+  "id": "vacuole.dive",
+  "file": 3408,
+  "manifest": 3408,
+  "speechEnd": 2980,
+  "lead": 350,
+  "shot": 5200,
+  "margin": 1870
+ },
+ {
+  "id": "oxygen.leaf",
+  "file": 3528,
+  "manifest": 3528,
+  "speechEnd": 3320,
+  "lead": 350,
+  "shot": 5600,
+  "margin": 1930
+ },
+ {
+  "id": "vacuole.tissue",
+  "file": 4488,
+  "manifest": 4488,
+  "speechEnd": 4220,
+  "lead": 350,
+  "shot": 6500,
+  "margin": 1930
+ },
+ {
+  "id": "what.byproducts",
+  "file": 6336,
+  "manifest": 6336,
+  "speechEnd": 6180,
+  "lead": 350,
+  "shot": 8500,
+  "margin": 1970
+ },
+ {
+  "id": "oxygen.path",
+  "file": 6264,
+  "manifest": 6264,
+  "speechEnd": 6100,
+  "lead": 350,
+  "shot": 8500,
+  "margin": 2050
+ },
+ {
+  "id": "water.vapour",
+  "file": 4776,
+  "manifest": 4776,
+  "speechEnd": 4500,
+  "lead": 350,
+  "shot": 7000,
+  "margin": 2150
+ },
+ {
+  "id": "oxygen.produce",
+  "file": 4656,
+  "manifest": 4656,
+  "speechEnd": 4360,
+  "lead": 350,
+  "shot": 7000,
+  "margin": 2290
+ },
+ {
+  "id": "water.out",
+  "file": 4104,
+  "manifest": 4104,
+  "speechEnd": 3840,
+  "lead": 350,
+  "shot": 6500,
+  "margin": 2310
+ },
+ {
+  "id": "whole.answer",
+  "file": 11424,
+  "manifest": 11424,
+  "speechEnd": 11140,
+  "lead": 350,
+  "shot": 13800,
+  "margin": 2310
+ },
+ {
+  "id": "oxygen.photo",
+  "file": 4848,
+  "manifest": 4848,
+  "speechEnd": 4600,
+  "lead": 350,
+  "shot": 7500,
+  "margin": 2550
+ },
+ {
+  "id": "water.leaf",
+  "file": 4368,
+  "manifest": 4368,
+  "speechEnd": 3980,
+  "lead": 350,
+  "shot": 7000,
+  "margin": 2670
+ },
+ {
+  "id": "leaves.load",
+  "file": 6216,
+  "manifest": 6216,
+  "speechEnd": 5940,
+  "lead": 350,
+  "shot": 9000,
+  "margin": 2710
+ },
+ {
+  "id": "soil.excrete",
+  "file": 5616,
+  "manifest": 5616,
+  "speechEnd": 5400,
+  "lead": 350,
+  "shot": 8500,
+  "margin": 2750
+ },
+ {
+  "id": "different.parts",
+  "file": 5088,
+  "manifest": 5088,
+  "speechEnd": 4860,
+  "lead": 350,
+  "shot": 8000,
+  "margin": 2790
+ },
+ {
+  "id": "different.question",
+  "file": 5616,
+  "manifest": 5616,
+  "speechEnd": 5560,
+  "lead": 350,
+  "shot": 8800,
+  "margin": 2890
+ },
+ {
+  "id": "water.root",
+  "file": 4056,
+  "manifest": 4056,
+  "speechEnd": 3820,
+  "lead": 350,
+  "shot": 7500,
+  "margin": 3330
+ },
+ {
+  "id": "vacuole.store",
+  "file": 5448,
+  "manifest": 5448,
+  "speechEnd": 5220,
+  "lead": 350,
+  "shot": 9000,
+  "margin": 3430
+ },
+ {
+  "id": "leaves.fall",
+  "file": 2424,
+  "manifest": 2424,
+  "speechEnd": 2200,
+  "lead": 350,
+  "shot": 6000,
+  "margin": 3450
+ },
+ {
+  "id": "vacuole.back",
+  "file": 4344,
+  "manifest": 4344,
+  "speechEnd": 3880,
+  "lead": 350,
+  "shot": 7800,
+  "margin": 3570
+ },
+ {
+  "id": "water.enter",
+  "file": 3624,
+  "manifest": 3624,
+  "speechEnd": 3360,
+  "lead": 350,
+  "shot": 7500,
+  "margin": 3790
+ },
+ {
+  "id": "water.rise",
+  "file": 5736,
+  "manifest": 5736,
+  "speechEnd": 4980,
+  "lead": 350,
+  "shot": 9500,
+  "margin": 4170
+ },
+ {
+  "id": "resin.store",
+  "file": 4416,
+  "manifest": 4416,
+  "speechEnd": 4080,
+  "lead": 350,
+  "shot": 9000,
+  "margin": 4570
+ }
+]

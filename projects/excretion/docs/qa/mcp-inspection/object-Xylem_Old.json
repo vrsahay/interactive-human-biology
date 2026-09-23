@@ -1,0 +1,42 @@
+{
+ "status": "ok",
+ "name": "Xylem_Old",
+ "type": "MESH",
+ "location": [
+  0,
+  0,
+  0
+ ],
+ "rotation": [
+  0,
+  0,
+  0
+ ],
+ "scale": [
+  1,
+  1,
+  1
+ ],
+ "dimensions": [
+  0.33000001311302185,
+  0.33000001311302185,
+  0.35749998688697815
+ ],
+ "parent": "StemSection",
+ "children": [],
+ "modifiers": [],
+ "constraints": [],
+ "materials": [
+  "MAT_Xylem_Old"
+ ],
+ "visibility": {
+  "hide_viewport": false,
+  "hide_render": false,
+  "hide_get": false
+ },
+ "data_name": "Xylem_Old",
+ "collections": [
+  "XYLEM"
+ ],
+ "message": null
+}

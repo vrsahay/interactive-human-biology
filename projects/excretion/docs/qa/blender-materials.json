@@ -1,0 +1,434 @@
+{
+  "MAT_Bark": {
+    "linear_rgb": [
+      0.147,
+      0.078,
+      0.037
+    ],
+    "textured": false,
+    "roughness": 0.9,
+    "alpha": 1.0,
+    "users": 2,
+    "example": [
+      "Bark",
+      "Stem_Continuation"
+    ]
+  },
+  "MAT_Branch": {
+    "linear_rgb": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "textured": false,
+    "roughness": 0.65,
+    "alpha": 1.0,
+    "users": 7,
+    "example": [
+      "Branch_01",
+      "Branch_02",
+      "Branch_03"
+    ]
+  },
+  "MAT_Cell_Wall": {
+    "linear_rgb": [
+      0.078,
+      0.323,
+      0.045
+    ],
+    "textured": false,
+    "roughness": 0.4,
+    "alpha": 1.0,
+    "users": 1,
+    "example": [
+      "Cell_Wall"
+    ]
+  },
+  "MAT_Chloroplast": {
+    "linear_rgb": [
+      0.05,
+      0.328,
+      0.042
+    ],
+    "textured": false,
+    "roughness": 0.5,
+    "alpha": 1.0,
+    "users": 1,
+    "example": [
+      "Chloroplasts"
+    ]
+  },
+  "MAT_Cytoplasm": {
+    "linear_rgb": [
+      0.776,
+      0.888,
+      0.624
+    ],
+    "textured": false,
+    "roughness": 0.7,
+    "alpha": 1.0,
+    "users": 1,
+    "example": [
+      "Cytoplasm"
+    ]
+  },
+  "MAT_Diorama_Base": {
+    "linear_rgb": [
+      0.041,
+      0.053,
+      0.068
+    ],
+    "textured": false,
+    "roughness": 0.55,
+    "alpha": 1.0,
+    "users": 1,
+    "example": [
+      "Diorama_Base"
+    ]
+  },
+  "MAT_Leaf": {
+    "linear_rgb": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "textured": true,
+    "roughness": 0.55,
+    "alpha": 1.0,
+    "users": 33,
+    "example": [
+      "Leaf_01",
+      "Leaf_02",
+      "Leaf_03"
+    ]
+  },
+  "MAT_Leaf_Cells_Column": {
+    "linear_rgb": [
+      0.275,
+      0.591,
+      0.159
+    ],
+    "textured": false,
+    "roughness": 0.55,
+    "alpha": 1.0,
+    "users": 1,
+    "example": [
+      "Tissue_Column_Cells"
+    ]
+  },
+  "MAT_Leaf_Cells_Round": {
+    "linear_rgb": [
+      0.392,
+      0.687,
+      0.254
+    ],
+    "textured": false,
+    "roughness": 0.6,
+    "alpha": 1.0,
+    "users": 1,
+    "example": [
+      "Tissue_Round_Cells"
+    ]
+  },
+  "MAT_Leaf_Skin": {
+    "linear_rgb": [
+      0.624,
+      0.815,
+      0.456
+    ],
+    "textured": false,
+    "roughness": 0.45,
+    "alpha": 1.0,
+    "users": 2,
+    "example": [
+      "Tissue_Skin_Bottom",
+      "Tissue_Skin_Top"
+    ]
+  },
+  "MAT_Nucleus": {
+    "linear_rgb": [
+      0.144,
+      0.202,
+      0.479
+    ],
+    "textured": false,
+    "roughness": 0.45,
+    "alpha": 1.0,
+    "users": 1,
+    "example": [
+      "Nucleus"
+    ]
+  },
+  "MAT_Oxygen": {
+    "linear_rgb": [
+      0.584,
+      0.855,
+      1.0
+    ],
+    "textured": false,
+    "roughness": 0.3,
+    "alpha": 1.0,
+    "users": 1,
+    "example": [
+      "O2_Molecule"
+    ]
+  },
+  "MAT_Pebble": {
+    "linear_rgb": [
+      0.323,
+      0.275,
+      0.223
+    ],
+    "textured": false,
+    "roughness": 0.8,
+    "alpha": 1.0,
+    "users": 1,
+    "example": [
+      "Soil_Pebbles"
+    ]
+  },
+  "MAT_Phloem": {
+    "linear_rgb": [
+      0.275,
+      0.423,
+      0.102
+    ],
+    "textured": false,
+    "roughness": 0.7,
+    "alpha": 1.0,
+    "users": 1,
+    "example": [
+      "Phloem"
+    ]
+  },
+  "MAT_Pith": {
+    "linear_rgb": [
+      0.687,
+      0.597,
+      0.434
+    ],
+    "textured": false,
+    "roughness": 0.85,
+    "alpha": 1.0,
+    "users": 1,
+    "example": [
+      "Pith"
+    ]
+  },
+  "MAT_Resin_Drop": {
+    "linear_rgb": [
+      0.888,
+      0.356,
+      0.027
+    ],
+    "textured": false,
+    "roughness": 0.18,
+    "alpha": 1.0,
+    "users": 1,
+    "example": [
+      "Resin_Drop"
+    ]
+  },
+  "MAT_Resin_Gum": {
+    "linear_rgb": [
+      0.888,
+      0.356,
+      0.027
+    ],
+    "textured": false,
+    "roughness": 0.18,
+    "alpha": 1.0,
+    "users": 16,
+    "example": [
+      "Resin_01",
+      "Resin_02",
+      "Resin_03"
+    ]
+  },
+  "MAT_Root": {
+    "linear_rgb": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "textured": false,
+    "roughness": 0.8,
+    "alpha": 1.0,
+    "users": 1,
+    "example": [
+      "Roots"
+    ]
+  },
+  "MAT_Soil_Bottom": {
+    "linear_rgb": [
+      0.023,
+      0.012,
+      0.007
+    ],
+    "textured": false,
+    "roughness": 1.0,
+    "alpha": 1.0,
+    "users": 2,
+    "example": [
+      "Soil_Back",
+      "Soil_Front"
+    ]
+  },
+  "MAT_Soil_Section": {
+    "linear_rgb": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "textured": true,
+    "roughness": 0.95,
+    "alpha": 1.0,
+    "users": 2,
+    "example": [
+      "Soil_Back",
+      "Soil_Front"
+    ]
+  },
+  "MAT_Soil_Top": {
+    "linear_rgb": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "textured": true,
+    "roughness": 0.95,
+    "alpha": 1.0,
+    "users": 2,
+    "example": [
+      "Soil_Back",
+      "Soil_Front"
+    ]
+  },
+  "MAT_Stem": {
+    "linear_rgb": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "textured": false,
+    "roughness": 0.7,
+    "alpha": 1.0,
+    "users": 1,
+    "example": [
+      "Stem_Main"
+    ]
+  },
+  "MAT_Stem_Cover": {
+    "linear_rgb": [
+      0.147,
+      0.078,
+      0.037
+    ],
+    "textured": false,
+    "roughness": 0.9,
+    "alpha": 1.0,
+    "users": 1,
+    "example": [
+      "Stem_Cover"
+    ]
+  },
+  "MAT_Vacuole": {
+    "linear_rgb": [
+      0.125,
+      0.509,
+      0.716
+    ],
+    "textured": false,
+    "roughness": 0.2,
+    "alpha": 0.5,
+    "users": 1,
+    "example": [
+      "Vacuole"
+    ]
+  },
+  "MAT_Vapour": {
+    "linear_rgb": [
+      0.716,
+      0.863,
+      1.0
+    ],
+    "textured": false,
+    "roughness": 0.9,
+    "alpha": 0.7,
+    "users": 1,
+    "example": [
+      "Vapour_Puff"
+    ]
+  },
+  "MAT_Waste": {
+    "linear_rgb": [
+      0.445,
+      0.056,
+      0.521
+    ],
+    "textured": false,
+    "roughness": 0.35,
+    "alpha": 1.0,
+    "users": 2,
+    "example": [
+      "Soil_Waste_Particle",
+      "Waste_Crystal"
+    ]
+  },
+  "MAT_Water": {
+    "linear_rgb": [
+      0.05,
+      0.275,
+      0.745
+    ],
+    "textured": false,
+    "roughness": 0.12,
+    "alpha": 1.0,
+    "users": 1,
+    "example": [
+      "Water_Droplet"
+    ]
+  },
+  "MAT_Xylem_New": {
+    "linear_rgb": [
+      0.807,
+      0.672,
+      0.361
+    ],
+    "textured": false,
+    "roughness": 0.75,
+    "alpha": 1.0,
+    "users": 1,
+    "example": [
+      "Xylem_New"
+    ]
+  },
+  "MAT_Xylem_Old": {
+    "linear_rgb": [
+      0.323,
+      0.202,
+      0.125
+    ],
+    "textured": false,
+    "roughness": 0.8,
+    "alpha": 1.0,
+    "users": 1,
+    "example": [
+      "Xylem_Old"
+    ]
+  },
+  "MAT_Xylem_Vessel": {
+    "linear_rgb": [
+      0.068,
+      0.042,
+      0.023
+    ],
+    "textured": false,
+    "roughness": 0.9,
+    "alpha": 1.0,
+    "users": 1,
+    "example": [
+      "Xylem_Vessels"
+    ]
+  }
+}

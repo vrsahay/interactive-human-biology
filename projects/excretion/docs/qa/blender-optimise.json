@@ -1,0 +1,230 @@
+{
+  "materials_merged": [],
+  "textures": [
+    {
+      "name": "Render Result",
+      "size": [
+        0,
+        0
+      ]
+    },
+    {
+      "name": "tex_bark_outer",
+      "size": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "name": "tex_bark_outer_n",
+      "size": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "name": "tex_cell_wall",
+      "size": [
+        512,
+        512
+      ]
+    },
+    {
+      "name": "tex_cell_wall_n",
+      "size": [
+        512,
+        512
+      ]
+    },
+    {
+      "name": "tex_cytoplasm_n",
+      "size": [
+        512,
+        512
+      ]
+    },
+    {
+      "name": "tex_epidermis_color",
+      "size": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "name": "tex_epidermis_normal",
+      "size": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "name": "tex_leaf",
+      "size": [
+        512,
+        1024
+      ]
+    },
+    {
+      "name": "tex_leaf2_bottom",
+      "size": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "name": "tex_leaf2_bottom_n",
+      "size": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "name": "tex_leaf2_top",
+      "size": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "name": "tex_leaf2_top_n",
+      "size": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "name": "tex_root_cortex_cut",
+      "size": [
+        512,
+        512
+      ]
+    },
+    {
+      "name": "tex_root_cortex_cut_n",
+      "size": [
+        512,
+        512
+      ]
+    },
+    {
+      "name": "tex_root_surface",
+      "size": [
+        256,
+        1024
+      ]
+    },
+    {
+      "name": "tex_root_surface_n",
+      "size": [
+        256,
+        1024
+      ]
+    },
+    {
+      "name": "tex_soil_section",
+      "size": [
+        1024,
+        512
+      ]
+    },
+    {
+      "name": "tex_soil_top",
+      "size": [
+        512,
+        512
+      ]
+    },
+    {
+      "name": "tex_wood_section",
+      "size": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "name": "tex_wood_section_n",
+      "size": [
+        1024,
+        1024
+      ]
+    }
+  ],
+  "purged": 0,
+  "triangles": {
+    "01_plant.glb": {
+      "triangles": 21780,
+      "budget": 30000
+    },
+    "02_leaf.glb": {
+      "triangles": 12000,
+      "budget": 16000
+    },
+    "03_stoma.glb": {
+      "triangles": 37192,
+      "budget": 40000
+    },
+    "05_leaf_internal.glb": {
+      "triangles": 58172,
+      "budget": 60000
+    },
+    "06_plant_cell.glb": {
+      "triangles": 5872,
+      "budget": 20000
+    },
+    "08_chloroplast.glb": {
+      "triangles": 55954,
+      "budget": 60000
+    },
+    "10_stem_cross_section.glb": {
+      "triangles": 6160,
+      "budget": 20000
+    },
+    "11_xylem.glb": {
+      "triangles": 22552,
+      "budget": 30000
+    },
+    "14_root.glb": {
+      "triangles": 55240,
+      "budget": 60000
+    },
+    "15_root_hairs.glb": {
+      "triangles": 50544,
+      "budget": 60000
+    },
+    "16_soil.glb": {
+      "triangles": 5256,
+      "budget": 12000
+    },
+    "17_waste_visuals.glb": {
+      "triangles": 2172,
+      "budget": 6000
+    }
+  },
+  "over_budget": [],
+  "unused_slots": [
+    {
+      "object": "Phloem",
+      "slots": [
+        1
+      ]
+    },
+    {
+      "object": "Pith",
+      "slots": [
+        1
+      ]
+    },
+    {
+      "object": "Xylem_New",
+      "slots": [
+        1
+      ]
+    },
+    {
+      "object": "Xylem_Old",
+      "slots": [
+        1
+      ]
+    }
+  ]
+}

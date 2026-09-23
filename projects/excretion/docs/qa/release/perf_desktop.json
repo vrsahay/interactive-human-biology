@@ -1,0 +1,162 @@
+{
+  "when": "2026-09-22T16:58:27.889Z",
+  "url": "http://localhost:5182/",
+  "profile": "fresh headless Chrome profile, HTTP cache disabled",
+  "mobile": false,
+  "wallMs": 49311,
+  "load": {
+    "ttfb": 16,
+    "domContentLoaded": 115,
+    "loadEvent": 117,
+    "paint": {
+      "first-paint": 2276,
+      "first-contentful-paint": 2276
+    },
+    "firstWebGLDraw": 662,
+    "firstFullPlantFrame": 474,
+    "jsLoadedAt": 2235,
+    "resources": {
+      "js": {
+        "n": 2,
+        "kb": 225,
+        "lastEnd": 2235
+      },
+      "css": {
+        "n": 1,
+        "kb": 5,
+        "lastEnd": 45
+      },
+      "json": {
+        "n": 2,
+        "kb": 16,
+        "lastEnd": 2203
+      },
+      "glb": {
+        "n": 12,
+        "kb": 2036,
+        "lastEnd": 3518
+      },
+      "wasm": {
+        "n": 1,
+        "kb": 188,
+        "lastEnd": 2232
+      },
+      "audio": {
+        "n": 2,
+        "kb": 52,
+        "lastEnd": 2713
+      }
+    },
+    "glbs": [
+      [
+        "01_plant.glb",
+        2220,
+        165
+      ],
+      [
+        "16_soil.glb",
+        2223,
+        72
+      ],
+      [
+        "17_waste_visuals.glb",
+        2221,
+        16
+      ],
+      [
+        "02_leaf.glb",
+        2535,
+        207
+      ],
+      [
+        "05_leaf_internal.glb",
+        2788,
+        166
+      ],
+      [
+        "08_chloroplast.glb",
+        2874,
+        157
+      ],
+      [
+        "03_stoma.glb",
+        2999,
+        233
+      ],
+      [
+        "15_root_hairs.glb",
+        3220,
+        120
+      ],
+      [
+        "14_root.glb",
+        3263,
+        341
+      ],
+      [
+        "06_plant_cell.glb",
+        3354,
+        94
+      ],
+      [
+        "10_stem_cross_section.glb",
+        3422,
+        394
+      ],
+      [
+        "11_xylem.glb",
+        3518,
+        70
+      ]
+    ],
+    "renderer": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x00009A49) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "heapMB": 26,
+    "title": "01 What is excretion? · Excretion in Plants"
+  },
+  "playback": {
+    "frameMs": {
+      "n": 1200,
+      "median": 16.7,
+      "p95": 16.8,
+      "max": 18.8
+    },
+    "fps": 60,
+    "drawCalls": {
+      "n": 1201,
+      "median": 50,
+      "p95": 51,
+      "max": 51
+    },
+    "title": "01 What is excretion? · Excretion in Plants"
+  },
+  "explore": {
+    "opened": true,
+    "frameMs": {
+      "n": 300,
+      "median": 16.7,
+      "p95": 17.1,
+      "max": 17.6
+    },
+    "drawCalls": {
+      "n": 301,
+      "median": 51,
+      "p95": 51,
+      "max": 51
+    }
+  },
+  "interactionEvents": {
+    "count": 2,
+    "worst": [
+      {
+        "name": "keydown",
+        "duration": 56,
+        "delay": 0.8000000715255737
+      },
+      {
+        "name": "keyup",
+        "duration": 56,
+        "delay": 0.20000004768371582
+      }
+    ]
+  }
+}

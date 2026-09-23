@@ -18,7 +18,7 @@ export default [
     id: "respiratory",
     title: "Respiratory System",
     description:
-      "Follow one breath of air from the nostrils to the alveoli in a narrated 3D lesson, then explore every part of the airway yourself.",
+      "Follow one breath from the nostrils to the alveoli, then explore every part of the airway yourself.",
     route: "/respiratory/",
     source: "projects/respiratory",
 
@@ -46,7 +46,7 @@ export default [
     id: "joints",
     title: "Types of Joints",
     description:
-      "Watch a real skeleton move, then take each joint yourself: fixed, pivot, ball-and-socket and hinge, with a recall challenge at the end.",
+      "Watch a real skeleton move, then take each joint yourself: fixed, pivot, ball-and-socket and hinge.",
     route: "/joints/",
     source: "projects/joints",
 
@@ -64,6 +64,33 @@ export default [
       image: "site/images/joints.webp",
       imageAlt: "3D shoulder joint: the rounded head of the upper-arm bone in its socket, labelled ball-and-socket joint",
       accent: "#e2a95c",
+    },
+
+    backLink: { position: "left-center", theme: "dark" },
+  },
+
+  {
+    id: "excretion",
+    title: "Excretion in Plants",
+    description:
+      "Follow a plant's wastes: oxygen from a leaf, water by transpiration, stores inside a cell, fallen leaves.",
+    route: "/excretion/",
+    source: "projects/excretion/web",
+
+    // A Vite app whose own config already uses a relative base ("./"), so it runs correctly under any route.
+    build: {
+      type: "npm",
+      install: "npm ci",
+      command: "npm run build",
+      output: "dist",
+    },
+
+    card: {
+      eyebrow: "Class 10 · Biology",
+      facts: ["Six waste routes", "About 9½ minutes", "Explore + recall"],
+      image: "site/images/excretion.webp",
+      imageAlt: "3D plant with a magnified leaf showing an open stoma releasing oxygen",
+      accent: "#8fca6f",
     },
 
     backLink: { position: "left-center", theme: "dark" },

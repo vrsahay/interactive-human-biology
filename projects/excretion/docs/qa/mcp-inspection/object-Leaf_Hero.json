@@ -1,0 +1,42 @@
+{
+ "status": "ok",
+ "name": "Leaf_Hero",
+ "type": "MESH",
+ "location": [
+  -0.2066153585910797,
+  -0.09107444435358047,
+  0.8036015033721924
+ ],
+ "rotation": [
+  -1.0404421091079712,
+  -0.3045516014099121,
+  -2.184955596923828
+ ],
+ "scale": [
+  1.0000001192092896,
+  1.0000001192092896,
+  0.9999999403953552
+ ],
+ "dimensions": [
+  0.24496199190616608,
+  0.09987892955541611,
+  0.024872854351997375
+ ],
+ "parent": "Plant",
+ "children": [],
+ "modifiers": [],
+ "constraints": [],
+ "materials": [
+  "MAT_Leaf"
+ ],
+ "visibility": {
+  "hide_viewport": false,
+  "hide_render": false,
+  "hide_get": false
+ },
+ "data_name": "Leaf_Hero",
+ "collections": [
+  "LEAVES"
+ ],
+ "message": null
+}

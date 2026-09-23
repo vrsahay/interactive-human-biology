@@ -1,0 +1,1075 @@
+{
+ "schema": "excretion.narration/1",
+ "lessonId": "excretion-in-plants",
+ "generatedAt": "2026-09-22T11:53:21.096Z",
+ "generator": "pipeline/narration/build-narration.mjs",
+ "provider": "Google Cloud Text-to-Speech",
+ "voice": {
+  "name": "en-IN-Chirp3-HD-Aoede",
+  "languageCode": "en-IN",
+  "gender": "FEMALE",
+  "accent": "Indian English"
+ },
+ "audioConfig": {
+  "audioEncoding": "MP3",
+  "sampleRateHertz": 24000,
+  "speakingRate": 1
+ },
+ "platformReference": "Same voice and settings as the Types of Joints lesson (joints-platform, pipeline/audio/build_narration.ts).",
+ "keyHandling": "The API key was read from the environment or the git-ignored .env at build time. It is not in this file, the audio or the web build.",
+ "timing": {
+  "leadInMs": 350
+ },
+ "shots": {
+  "what.alive": {
+   "url": "01_what_alive.mp3",
+   "bytes": 25536,
+   "sha256": "e4399097092779973ef20b66b197fe98c04e460e93d4d16f60de43b243b9879b",
+   "durationMs": 5960,
+   "leadInMs": 350,
+   "sentenceStartsMs": [
+    0,
+    2130
+   ],
+   "voice": "en-IN-Chirp3-HD-Aoede",
+   "speakingRate": 1,
+   "text": "This plant is alive. Like every living thing, it has to keep working just to stay alive."
+  },
+  "what.processes": {
+   "url": "01_what_processes.mp3",
+   "bytes": 27456,
+   "sha256": "1da45eecdfbafe87c63b1de2f46d5b7c9aa65d7aed231d74af9976ee3cdbb6a8",
+   "durationMs": 6560,
+   "leadInMs": 350,
+   "sentenceStartsMs": [
+    0,
+    3050
+   ],
+   "voice": "en-IN-Chirp3-HD-Aoede",
+   "speakingRate": 1,
+   "text": "The jobs that keep it alive are called life processes. A plant makes its own food, and breaks food down to get energy."
+  },
+  "what.byproducts": {
+   "url": "01_what_byproducts.mp3",
+   "bytes": 25344,
+   "sha256": "4f62179dc4e46b91abb3a544ebc329486f92c9e6723e3b45e1f70eb07b640b31",
+   "durationMs": 6440,
+   "leadInMs": 350,
+   "sentenceStartsMs": [
+    0,
+    4270
+   ],
+   "voice": "en-IN-Chirp3-HD-Aoede",
+   "speakingRate": 1,
+   "text": "But life processes also make substances the plant does not need. Some of them could even harm it if they stayed."
+  },
+  "what.excretion": {
+   "url": "01_what_excretion.mp3",
+   "bytes": 26976,
+   "sha256": "9d6cad7dc2b231e581b1a3ca565eef39f7b57e70c03b9dcf33081d867fced6a7",
+   "durationMs": 6200,
+   "leadInMs": 350,
+   "sentenceStartsMs": [
+    0,
+    3970
+   ],
+   "voice": "en-IN-Chirp3-HD-Aoede",
+   "speakingRate": 1,
+   "text": "Removing these harmful wastes from the body is called excretion. Every living thing has to do it in some way."
+  },
+  "what.question": {
+   "url": "01_what_question.mp3",
+   "bytes": 22176,
+   "sha256": "baa9d63e6a4fcf894ad12f9994fdafbc996c732229e945600d787f31f09e5faa",
+   "durationMs": 5480,
+   "leadInMs": 350,
+   "sentenceStartsMs": [
+    0,
+    2960
+   ],
+   "voice": "en-IN-Chirp3-HD-Aoede",
+   "speakingRate": 1,
+   "text": "Plants also carry out life processes. So what happens to the substances they do not need?"
+  },
+  "different.animals": {
+   "url": "02_different_animals.mp3",
+   "bytes": 24192,
+   "sha256": "74010761e040aa210ee3f1c0d6a7e668dfedaeb809f984b7ff8f597fd48a9f99",
+   "durationMs": 6280,
+   "leadInMs": 350,
+   "sentenceStartsMs": [
+    0,
+    4000
+   ],
+   "voice": "en-IN-Chirp3-HD-Aoede",
+   "speakingRate": 1,
+   "text": "Many animals, like us, have special organs for this job. Our two kidneys filter wastes out of the blood."
+  },
+  "different.parts": {
+   "url": "02_different_parts.mp3",
+   "bytes": 20352,
+   "sha256": "71ed956f3b6b9cfeef8a9a02c51f1bd03ac61e578391ae17470abe8fdc92f1bb",
+   "durationMs": 5040,
+   "leadInMs": 350,
+   "sentenceStartsMs": [
+    0,
+    1500
+   ],
+   "voice": "en-IN-Chirp3-HD-Aoede",
+   "speakingRate": 1,
+   "text": "Now look at the plant. It has leaves, a stem with branches, and roots in the soil."
+  },
+  "different.none": {
+   "url": "02_different_none.mp3",
+   "bytes": 24576,
+   "sha256": "051e4ce0ee8ef7eaca716ef5356e864480ae489a964cf8394ce3867f3df34f80",
+   "durationMs": 6080,
+   "leadInMs": 350,
+   "sentenceStartsMs": [
+    0,
+    2790
+   ],
+   "voice": "en-IN-Chirp3-HD-Aoede",
+   "speakingRate": 1,
+   "text": "But none of these parts works like a kidney. Plants use completely different ways to deal with their wastes."
+  },
+  "different.question": {
+   "url": "02_different_question.mp3",
+   "bytes": 22464,
+   "sha256": "daf86991779ef1e3eb7e06b1ae0070b16a88f4cdab72cf3135e1cd71775be35c",
+   "durationMs": 7040,
+   "leadInMs": 350,
+   "sentenceStartsMs": [
+    0,
+    2590
+   ],
+   "voice": "en-IN-Chirp3-HD-Aoede",
+   "speakingRate": 1,
+   "text": "So here is our big question. If a plant has no special excretory organ, what does it do with its wastes?"
+  },
+  "different.plan": {
+   "url": "02_different_plan.mp3",
+   "bytes": 24384,
+   "sha256": "bb654d08143c3df7138b06796e43852453cadd71218a7747146f3a379f901fe2",
+   "durationMs": 6480,
+   "leadInMs": 350,
+   "sentenceStartsMs": [
+    0,
+    1700
+   ],
+   "voice": "en-IN-Chirp3-HD-Aoede",
+   "speakingRate": 1,
+   "text": "Let’s find out. We will follow the waste through the plant, one place at a time, starting high up at a leaf."
+  },
+  "oxygen.travel": {
+   "url": "03a_oxygen_travel.mp3",
+   "bytes": 11424,
+   "sha256": "0d8e07a76205d2f9632059b4e90374c66581cfbe35671c6591e0889d56994874",
+   "durationMs": 2800,
+   "leadInMs": 350,
+   "sentenceStartsMs": [
+    0
+   ],
+   "voice": "en-IN-Chirp3-HD-Aoede",
+   "speakingRate": 1,
+   "text": "Our first stop is a leaf, high up on the plant."
+  },
+  "oxygen.look": {
+   "url": "03a_oxygen_look.mp3",
+   "bytes": 18912,
+   "sha256": "0b7abc40907be8ebdf5189dd0699472088bc19a3fdf36beccec2d6e7bd052d59",
+   "durationMs": 4680,
+   "leadInMs": 350,
+   "sentenceStartsMs": [
+    0,
+    2020
+   ],
+   "voice": "en-IN-Chirp3-HD-Aoede",
+   "speakingRate": 1,
+   "text": "Leaves make the plant’s food. They do it by a process called photosynthesis."
+  },
+  "oxygen.photo": {
+   "url": "03a_oxygen_photo.mp3",
+   "bytes": 17856,
+   "sha256": "c12bbdee2567663bd4b781a838b93de089b3cff08eeb56d22441f26a4a897bd7",
+   "durationMs": 4400,
+   "leadInMs": 350,
+   "sentenceStartsMs": [
+    0
+   ],
+   "voice": "en-IN-Chirp3-HD-Aoede",
+   "speakingRate": 1,
+   "text": "In sunlight, the leaf uses carbon dioxide and water to make food."
+  },
+  "oxygen.produce": {
+   "url": "03a_oxygen_produce.mp3",
+   "bytes": 18336,
+   "sha256": "0c5a89a1f56b8bc7c3e8897cd2c532eab5f9a539c5ed758772fbc5cd2e4bd4b6",
+   "durationMs": 4920,
+   "leadInMs": 350,
+   "sentenceStartsMs": [
+    0,
+    3500
+   ],
+   "voice": "en-IN-Chirp3-HD-Aoede",
+   "speakingRate": 1,
+   "text": "Photosynthesis also makes a gas: oxygen. Watch it form in the leaf."
+  },
+  "oxygen.release": {
+   "url": "03a_oxygen_release.mp3",
+   "bytes": 15552,
+   "sha256": "29b60822b20ffe183fc5d94a537f743ec997cb398e125a1a6b006e9e9d9755cc",
+   "durationMs": 4200,
+   "leadInMs": 350,
+   "sentenceStartsMs": [
+    0
+   ],
+   "voice": "en-IN-Chirp3-HD-Aoede",
+   "speakingRate": 1,
+   "text": "The oxygen passes out of the leaf, into the air around the plant."
+  },
+  "oxygen.reason": {
+   "url": "03a_oxygen_reason.mp3",
+   "bytes": 37056,
+   "sha256": "cc44e64c3cd347b0f1e793cef207edc28b7fd703ff04e1b467310015032a68bd",
+   "durationMs": 10560,
+   "leadInMs": 350,
+   "sentenceStartsMs": [
+    0,
+    3700
+   ],
+   "voice": "en-IN-Chirp3-HD-Aoede",
+   "speakingRate": 1,
+   "text": "The plant makes this oxygen and then gives it out. So oxygen can be thought of as a waste product of photosynthesis, and the plant gets rid of it by releasing it into the air."
+  },
+  "oxygen.try": {
+   "url": "03a_oxygen_try.mp3",
+   "bytes": 19776,
+   "sha256": "2a27492375f1016bc05f883d1b0f06f87c23e142b2283c7a66b7adc42eb4a8ff",
+   "durationMs": 4520,
+   "leadInMs": 350,
+   "sentenceStartsMs": [
+    0,
+    1220
+   ],
+   "voice": "en-IN-Chirp3-HD-Aoede",
+   "speakingRate": 1,
+   "text": "Your turn. Bring the sunlight to the leaf, and watch what comes out of it."
+  },
+  "water.question": {
+   "url": "03b_water_question.mp3",
+   "bytes": 24672,
+   "sha256": "95d1e0bf260423ad01caceb0bc388a14478b71cfd16c98026670e1d943c0511f",
+   "durationMs": 5960,
+   "leadInMs": 350,
+   "sentenceStartsMs": [
+    0,
+    4220
+   ],
+   "voice": "en-IN-Chirp3-HD-Aoede",
+   "speakingRate": 1,
+   "text": "A plant also takes in a lot of water, often more than it needs. What happens to the extra water?"
+  },
+  "water.enter": {
+   "url": "03b_water_enter.mp3",
+   "bytes": 14496,
+   "sha256": "05cad16243a65122069543985c7405e54b8bc9e1f6542b2042a5763fa0513408",
+   "durationMs": 3000,
+   "leadInMs": 350,
+   "sentenceStartsMs": [
+    0
+   ],
+   "voice": "en-IN-Chirp3-HD-Aoede",
+   "speakingRate": 1,
+   "text": "Water from the soil enters the plant through its roots."
+  },
+  "water.rise": {
+   "url": "03b_water_rise.mp3",
+   "bytes": 21312,
+   "sha256": "e3869008404380f58689738afcedc292758e0b84644d7a4eb6608d33e93dfa17",
+   "durationMs": 4800,
+   "leadInMs": 350,
+   "sentenceStartsMs": [
+    0
+   ],
+   "voice": "en-IN-Chirp3-HD-Aoede",
+   "speakingRate": 1,
+   "text": "It moves up the stem inside tubes called xylem, and out along the branches to the leaves."
+  },
+  "water.vapour": {
+   "url": "03b_water_vapour.mp3",
+   "bytes": 19776,
+   "sha256": "c33573b6437a006d82ad0fafc14796bd96aab2358c79a76c946aebe4e5feb74a",
+   "durationMs": 4920,
+   "leadInMs": 350,
+   "sentenceStartsMs": [
+    0
+   ],
+   "voice": "en-IN-Chirp3-HD-Aoede",
+   "speakingRate": 1,
+   "text": "In the leaves, some of this water turns into water vapour and escapes into the air."
+  },
+  "water.reason": {
+   "url": "03b_water_reason.mp3",
+   "bytes": 30144,
+   "sha256": "abb546f3906a8a2a8ab69a13eff1d478254db0d6f225b1b61907b3e51abe3db2",
+   "durationMs": 6960,
+   "leadInMs": 350,
+   "sentenceStartsMs": [
+    0,
+    4220
+   ],
+   "voice": "en-IN-Chirp3-HD-Aoede",
+   "speakingRate": 1,
+   "text": "Losing water as vapour like this is called transpiration. It is how a plant gets rid of its excess water."
+  },
+  "vacuole.pivot": {
+   "url": "03c_vacuole_pivot.mp3",
+   "bytes": 27744,
+   "sha256": "826238ebd1878f0699418e2e46dd4994688b7e3cb645ac5107486b3eb3425d94",
+   "durationMs": 6880,
+   "leadInMs": 350,
+   "sentenceStartsMs": [
+    0,
+    3210,
+    5260
+   ],
+   "voice": "en-IN-Chirp3-HD-Aoede",
+   "speakingRate": 1,
+   "text": "Oxygen and extra water leave the plant. But some wastes are not removed at all. They are kept inside the plant."
+  },
+  "vacuole.dive": {
+   "url": "03c_vacuole_dive.mp3",
+   "bytes": 13632,
+   "sha256": "46757398ed0a344d5875fffdeb7a11771478e403f99fbc6ada3eed8b1042422f",
+   "durationMs": 3720,
+   "leadInMs": 350,
+   "sentenceStartsMs": [
+    0
+   ],
+   "voice": "en-IN-Chirp3-HD-Aoede",
+   "speakingRate": 1,
+   "text": "To see where, we need to zoom right into a leaf."
+  },
+  "vacuole.tissue": {
+   "url": "03c_vacuole_tissue.mp3",
+   "bytes": 17952,
+   "sha256": "78d104c9079d55eb30dc58e7428eb10154083a5ffd970b283a539ea605ba9c9b",
+   "durationMs": 4040,
+   "leadInMs": 350,
+   "sentenceStartsMs": [
+    0
+   ],
+   "voice": "en-IN-Chirp3-HD-Aoede",
+   "speakingRate": 1,
+   "text": "Up close, a leaf is made of many tiny cells, packed together."
+  },
+  "vacuole.cell": {
+   "url": "03c_vacuole_cell.mp3",
+   "bytes": 33696,
+   "sha256": "4ae2b000a8c5f78fc7846618df79ca0baafab9cd0dcbead5c482aacd5f8cc7a3",
+   "durationMs": 7320,
+   "leadInMs": 350,
+   "sentenceStartsMs": [
+    0,
+    2430
+   ],
+   "voice": "en-IN-Chirp3-HD-Aoede",
+   "speakingRate": 1,
+   "text": "Here is one of those cells, opened up. It has a cell wall, jelly-like cytoplasm, a nucleus, and one large vacuole."
+  },
+  "vacuole.store": {
+   "url": "03c_vacuole_store.mp3",
+   "bytes": 21792,
+   "sha256": "52b89257a6c126b1baa63d24a377ec824e0fc611838e5fb521ab159a797cef30",
+   "durationMs": 5400,
+   "leadInMs": 350,
+   "sentenceStartsMs": [
+    0,
+    2930
+   ],
+   "voice": "en-IN-Chirp3-HD-Aoede",
+   "speakingRate": 1,
+   "text": "Now watch the wastes in the cytoplasm. They move into the vacuole, and there they stay."
+  },
+  "vacuole.reason": {
+   "url": "03c_vacuole_reason.mp3",
+   "bytes": 35712,
+   "sha256": "d369d9578445fb89efc3839afadcc258eaf26dc3b49f3198dda3f4e309c1e330",
+   "durationMs": 8880,
+   "leadInMs": 350,
+   "sentenceStartsMs": [
+    0,
+    3040,
+    6470
+   ],
+   "voice": "en-IN-Chirp3-HD-Aoede",
+   "speakingRate": 1,
+   "text": "The vacuole is a storage space inside the cell. Many plant waste products are stored in vacuoles like this one. They are kept, not removed from the plant."
+  },
+  "vacuole.try": {
+   "url": "03c_vacuole_try.mp3",
+   "bytes": 21984,
+   "sha256": "5335967f80f425c1c6a5ffff76eb0d07e74e0a2e30d139bc78a87d48491d7ca5",
+   "durationMs": 5440,
+   "leadInMs": 350,
+   "sentenceStartsMs": [
+    0,
+    1670,
+    4030
+   ],
+   "voice": "en-IN-Chirp3-HD-Aoede",
+   "speakingRate": 1,
+   "text": "Your turn. A few wastes are still in the cytoplasm. Move them into the vacuole."
+  },
+  "vacuole.back": {
+   "url": "03c_vacuole_back.mp3",
+   "bytes": 17376,
+   "sha256": "b91cb6661ac27d2b7d83a291784a8e6cd177ea953b59c132d9cc74cf8745f472",
+   "durationMs": 4280,
+   "leadInMs": 350,
+   "sentenceStartsMs": [
+    0
+   ],
+   "voice": "en-IN-Chirp3-HD-Aoede",
+   "speakingRate": 1,
+   "text": "Now let’s pull back out: from the vacuole, to the cell, to the leaf."
+  },
+  "vacuole.plant": {
+   "url": "03c_vacuole_plant.mp3",
+   "bytes": 19296,
+   "sha256": "61dbf3979f1e1e5f40c157676c730ca1d8ecae979785afdaf90f0fa93479b30c",
+   "durationMs": 5360,
+   "leadInMs": 350,
+   "sentenceStartsMs": [
+    0,
+    2330
+   ],
+   "voice": "en-IN-Chirp3-HD-Aoede",
+   "speakingRate": 1,
+   "text": "And back to the whole plant. Its leaves are made of cells like the one we just saw."
+  },
+  "leaves.lose": {
+   "url": "03d_leaves_lose.mp3",
+   "bytes": 20736,
+   "sha256": "f726aef8ec7c4296c1147cf21e65197922e451d0e89b61769530337c32ba3b06",
+   "durationMs": 5120,
+   "leadInMs": 350,
+   "sentenceStartsMs": [
+    0,
+    2310
+   ],
+   "voice": "en-IN-Chirp3-HD-Aoede",
+   "speakingRate": 1,
+   "text": "Plants have another useful ability. They can even lose some of their parts, such as leaves."
+  },
+  "leaves.look": {
+   "url": "03d_leaves_look.mp3",
+   "bytes": 18336,
+   "sha256": "8ead2a9679fb493524c321accb3cc7618269332932a970879395ee4a49b0b0a9",
+   "durationMs": 5240,
+   "leadInMs": 350,
+   "sentenceStartsMs": [
+    0,
+    3050
+   ],
+   "voice": "en-IN-Chirp3-HD-Aoede",
+   "speakingRate": 1,
+   "text": "Look at this leaf, low down on the stem. It is one of the plant’s older leaves."
+  },
+  "leaves.load": {
+   "url": "03d_leaves_load.mp3",
+   "bytes": 24864,
+   "sha256": "14e0ee7d08fe6ab661e5c7a1ecc00d7e795db1f895cebf874c0de6ad0b242abf",
+   "durationMs": 5840,
+   "leadInMs": 350,
+   "sentenceStartsMs": [
+    0,
+    3390
+   ],
+   "voice": "en-IN-Chirp3-HD-Aoede",
+   "speakingRate": 1,
+   "text": "Some waste products are stored in leaves like this one. Time passes, and the leaf grows older."
+  },
+  "leaves.fall": {
+   "url": "03d_leaves_fall.mp3",
+   "bytes": 9696,
+   "sha256": "6352967b49ee58ba51acbb4a8a5b75636403d450199ca6f443940cc64dde758b",
+   "durationMs": 2320,
+   "leadInMs": 350,
+   "sentenceStartsMs": [
+    0
+   ],
+   "voice": "en-IN-Chirp3-HD-Aoede",
+   "speakingRate": 1,
+   "text": "Then the leaf drops off the plant."
+  },
+  "leaves.reason": {
+   "url": "03d_leaves_reason.mp3",
+   "bytes": 33504,
+   "sha256": "edb4550fe60b3e54af2c8924031b159cf6d6f8da375805fcbc7fadf8212f332a",
+   "durationMs": 8880,
+   "leadInMs": 350,
+   "sentenceStartsMs": [
+    0,
+    4270
+   ],
+   "voice": "en-IN-Chirp3-HD-Aoede",
+   "speakingRate": 1,
+   "text": "When the leaf falls, the wastes stored in it leave the plant too. Leaves also fall for other reasons, but this is one way a plant gets rid of wastes."
+  },
+  "resin.travel": {
+   "url": "03e_resin_travel.mp3",
+   "bytes": 20832,
+   "sha256": "b6a699b5f5903c38b79d8ba4624bb57cb2cbc59d4ae9cbbcb9ebf7108124cef3",
+   "durationMs": 5080,
+   "leadInMs": 350,
+   "sentenceStartsMs": [
+    0,
+    2330
+   ],
+   "voice": "en-IN-Chirp3-HD-Aoede",
+   "speakingRate": 1,
+   "text": "Next, the stem. It looks solid from the outside, so let’s look inside it."
+  },
+  "resin.cut": {
+   "url": "03e_resin_cut.mp3",
+   "bytes": 23712,
+   "sha256": "789414db0db41e46a60f79f8f258c12ecf2360a6d0f0869fae0cf674b2169856",
+   "durationMs": 6160,
+   "leadInMs": 350,
+   "sentenceStartsMs": [
+    0,
+    3450
+   ],
+   "voice": "en-IN-Chirp3-HD-Aoede",
+   "speakingRate": 1,
+   "text": "Here is a magnified piece of the stem. As the top lifts away, we can see its layers."
+  },
+  "resin.layers": {
+   "url": "03e_resin_layers.mp3",
+   "bytes": 31104,
+   "sha256": "303c6960dcd145ecac8b24ef092c354befcbfac36fa458cbce6fc59dd2449719",
+   "durationMs": 8080,
+   "leadInMs": 350,
+   "sentenceStartsMs": [
+    0,
+    2010
+   ],
+   "voice": "en-IN-Chirp3-HD-Aoede",
+   "speakingRate": 1,
+   "text": "Bark covers the outside. Inside are phloem, which carries food, and xylem, the same kind of tubes that carried water up the stem."
+  },
+  "resin.old": {
+   "url": "03e_resin_old.mp3",
+   "bytes": 24096,
+   "sha256": "cfc65b0550f934f073090b8423c10021e7b26fcb7f398ebb4b106dd2332fa948",
+   "durationMs": 6040,
+   "leadInMs": 350,
+   "sentenceStartsMs": [
+    0,
+    2680
+   ],
+   "voice": "en-IN-Chirp3-HD-Aoede",
+   "speakingRate": 1,
+   "text": "This darker part is old xylem. Like many plant tissues, it is made mostly of dead cells."
+  },
+  "resin.store": {
+   "url": "03e_resin_store.mp3",
+   "bytes": 17664,
+   "sha256": "5108b87767ac1ad15dcc6568c8c897dce9ee61ceffdbfa78c54c4f1b8cee9ce3",
+   "durationMs": 4560,
+   "leadInMs": 350,
+   "sentenceStartsMs": [
+    0,
+    1300
+   ],
+   "voice": "en-IN-Chirp3-HD-Aoede",
+   "speakingRate": 1,
+   "text": "Watch. Some waste products are stored here, as resins and gums."
+  },
+  "resin.reason": {
+   "url": "03e_resin_reason.mp3",
+   "bytes": 30336,
+   "sha256": "8f34b6e888055cc67393a0fadca16510118abfbe6a11a49dcaa61213a4f7115e",
+   "durationMs": 6400,
+   "leadInMs": 350,
+   "sentenceStartsMs": [
+    0,
+    4090
+   ],
+   "voice": "en-IN-Chirp3-HD-Aoede",
+   "speakingRate": 1,
+   "text": "So other waste products are stored as resins and gums, especially in old xylem. They are kept inside the stem, not removed."
+  },
+  "resin.try": {
+   "url": "03e_resin_try.mp3",
+   "bytes": 18624,
+   "sha256": "08e97632520bd11431f1a4493472ef0d57e7478ebed4bd5896d5f47a4af61ab2",
+   "durationMs": 4760,
+   "leadInMs": 350,
+   "sentenceStartsMs": [
+    0,
+    1720
+   ],
+   "voice": "en-IN-Chirp3-HD-Aoede",
+   "speakingRate": 1,
+   "text": "Your turn. Find the part of the stem where resins and gums are stored."
+  },
+  "soil.travel": {
+   "url": "03f_soil_travel.mp3",
+   "bytes": 14976,
+   "sha256": "d826e393bdd8d0ebca212df8249dd521e6f2f821f5a5a78f339a697d095ae485",
+   "durationMs": 3760,
+   "leadInMs": 350,
+   "sentenceStartsMs": [
+    0
+   ],
+   "voice": "en-IN-Chirp3-HD-Aoede",
+   "speakingRate": 1,
+   "text": "Our last stop is below the ground, around the roots."
+  },
+  "soil.look": {
+   "url": "03f_soil_look.mp3",
+   "bytes": 18336,
+   "sha256": "15e9fec4f4b83ab4a200056fea980872f1648eea9dc07b46e720866c3b6fff7a",
+   "durationMs": 4120,
+   "leadInMs": 350,
+   "sentenceStartsMs": [
+    0
+   ],
+   "voice": "en-IN-Chirp3-HD-Aoede",
+   "speakingRate": 1,
+   "text": "The roots spread out through the soil, and the soil surrounds them on every side."
+  },
+  "soil.excrete": {
+   "url": "03f_soil_excrete.mp3",
+   "bytes": 22464,
+   "sha256": "f834f8eb616be530e1083e8855f1c790596ce03e760a97b90e601552d1b3344c",
+   "durationMs": 5400,
+   "leadInMs": 350,
+   "sentenceStartsMs": [
+    0,
+    1330
+   ],
+   "voice": "en-IN-Chirp3-HD-Aoede",
+   "speakingRate": 1,
+   "text": "Watch closely. Some waste substances pass out of the plant, into the soil around the roots."
+  },
+  "soil.reason": {
+   "url": "03f_soil_reason.mp3",
+   "bytes": 17664,
+   "sha256": "3c0c07c5b171f779b5926904af896047531cf051d035c9eded93939cd96c73b5",
+   "durationMs": 4520,
+   "leadInMs": 350,
+   "sentenceStartsMs": [
+    0
+   ],
+   "voice": "en-IN-Chirp3-HD-Aoede",
+   "speakingRate": 1,
+   "text": "So plants also excrete some waste substances into the soil around them."
+  },
+  "whole.return": {
+   "url": "04_whole_return.mp3",
+   "bytes": 14112,
+   "sha256": "f4059a33c60092839c84f7cf554ec2e08570e9863bb20cf347ea0a0495c65601",
+   "durationMs": 3480,
+   "leadInMs": 350,
+   "sentenceStartsMs": [
+    0
+   ],
+   "voice": "en-IN-Chirp3-HD-Aoede",
+   "speakingRate": 1,
+   "text": "Now let’s put the whole journey together, on one plant."
+  },
+  "whole.oxygen": {
+   "url": "04_whole_oxygen.mp3",
+   "bytes": 17664,
+   "sha256": "f2363217118cacc2af88d30f94fa2f656d8cfd64d02862a16bc7f48dc3412347",
+   "durationMs": 4080,
+   "leadInMs": 350,
+   "sentenceStartsMs": [
+    0
+   ],
+   "voice": "en-IN-Chirp3-HD-Aoede",
+   "speakingRate": 1,
+   "text": "From the leaves, oxygen made in photosynthesis is released into the air."
+  },
+  "whole.water": {
+   "url": "04_whole_water.mp3",
+   "bytes": 20256,
+   "sha256": "dcef8e97884a41c058d1e1c2b79cedb4b857ce3b389f9063c3c02a5cf5e62715",
+   "durationMs": 4640,
+   "leadInMs": 350,
+   "sentenceStartsMs": [
+    0,
+    3300
+   ],
+   "voice": "en-IN-Chirp3-HD-Aoede",
+   "speakingRate": 1,
+   "text": "Excess water is lost from the leaves as water vapour. That is transpiration."
+  },
+  "whole.vacuole": {
+   "url": "04_whole_vacuole.mp3",
+   "bytes": 13632,
+   "sha256": "15bb017d96117b0a61a96c9f8f4d2e682e2e4b526d52e1489537931b1e11e329",
+   "durationMs": 4160,
+   "leadInMs": 350,
+   "sentenceStartsMs": [
+    0
+   ],
+   "voice": "en-IN-Chirp3-HD-Aoede",
+   "speakingRate": 1,
+   "text": "Inside the cells, many wastes are stored in vacuoles."
+  },
+  "whole.leaf": {
+   "url": "04_whole_leaf.mp3",
+   "bytes": 19104,
+   "sha256": "a44eaf0583f7c68c4061ed5c2726b9b6af48cf8d89cc6779ddcc8a0110e8c8ea",
+   "durationMs": 4760,
+   "leadInMs": 350,
+   "sentenceStartsMs": [
+    0
+   ],
+   "voice": "en-IN-Chirp3-HD-Aoede",
+   "speakingRate": 1,
+   "text": "Some wastes are stored in leaves, which later fall off and take the wastes with them."
+  },
+  "whole.xylem": {
+   "url": "04_whole_xylem.mp3",
+   "bytes": 14496,
+   "sha256": "bd29f326dc2f9a9f6c39eec7430e1b33046e22b7efbbf7c94151ac13bb81f571",
+   "durationMs": 3800,
+   "leadInMs": 350,
+   "sentenceStartsMs": [
+    0
+   ],
+   "voice": "en-IN-Chirp3-HD-Aoede",
+   "speakingRate": 1,
+   "text": "In the stem, old xylem holds resins and gums."
+  },
+  "whole.soil": {
+   "url": "04_whole_soil.mp3",
+   "bytes": 14112,
+   "sha256": "44e0bf2767f51c5df72665433b0647fac2f0999bea75968d4799b559c7ae0d1e",
+   "durationMs": 3480,
+   "leadInMs": 350,
+   "sentenceStartsMs": [
+    0
+   ],
+   "voice": "en-IN-Chirp3-HD-Aoede",
+   "speakingRate": 1,
+   "text": "Below ground, some wastes are excreted into the soil."
+  },
+  "whole.answer": {
+   "url": "04_whole_answer.mp3",
+   "bytes": 45696,
+   "sha256": "89498ead960b517957c176f81215b33f67e0b22140d88a8f233b9aa99aac2d86",
+   "durationMs": 11120,
+   "leadInMs": 350,
+   "sentenceStartsMs": [
+    0,
+    4860
+   ],
+   "voice": "en-IN-Chirp3-HD-Aoede",
+   "speakingRate": 1,
+   "text": "So a plant has no single excretory organ, yet it still deals with its wastes. Some leave as a gas or as vapour, many are stored, some fall away with leaves, and some go into the soil."
+  },
+  "recall.open": {
+   "url": "05_recall_open.mp3",
+   "bytes": 22944,
+   "sha256": "7697004f133755b3cb380a3bc8dceee74361636eade4bb85058c137f033dde41",
+   "durationMs": 6040,
+   "leadInMs": 350,
+   "sentenceStartsMs": [
+    0,
+    2240
+   ],
+   "voice": "en-IN-Chirp3-HD-Aoede",
+   "speakingRate": 1,
+   "text": "Now it is your turn to remember. Answer from what you have seen, then explain it in your own words."
+  }
+ },
+ "cues": {
+  "task.oxygen.try.done": {
+   "url": "cue_task_oxygen_try_done.mp3",
+   "bytes": 15744,
+   "sha256": "e2675ecb979bcaa6a1177330d28db42c0e6f4a002d5013d8aba88a43bf3e165e",
+   "durationMs": 4480,
+   "leadInMs": 0,
+   "voice": "en-IN-Chirp3-HD-Aoede",
+   "speakingRate": 1,
+   "text": "With sunlight, the leaf makes food, and oxygen leaves it."
+  },
+  "task.vacuole.try.done": {
+   "url": "cue_task_vacuole_try_done.mp3",
+   "bytes": 14112,
+   "sha256": "c042a5ef9d28d834e42ec1af9ebc66e442c1a9daa0db56375d2f337e5a2163ba",
+   "durationMs": 3280,
+   "leadInMs": 0,
+   "voice": "en-IN-Chirp3-HD-Aoede",
+   "speakingRate": 1,
+   "text": "Stored. The wastes stay inside the vacuole."
+  },
+  "task.resin.try.done": {
+   "url": "cue_task_resin_try_done.mp3",
+   "bytes": 18624,
+   "sha256": "4d48b948a43d042b857a30d1dae187041f731ec11b1828478e692ef0b9bdfae8",
+   "durationMs": 4600,
+   "leadInMs": 0,
+   "voice": "en-IN-Chirp3-HD-Aoede",
+   "speakingRate": 1,
+   "text": "Yes. Resins and gums are stored especially in old xylem."
+  },
+  "task.resin.try.wrong": {
+   "url": "cue_task_resin_try_wrong.mp3",
+   "bytes": 11136,
+   "sha256": "285b836ea970d033a2f6196422ccaf9d3365faa421b61cd1768e527ddb8e92ea",
+   "durationMs": 3080,
+   "leadInMs": 0,
+   "voice": "en-IN-Chirp3-HD-Aoede",
+   "speakingRate": 1,
+   "text": "Not that part. Look for the amber drops."
+  },
+  "recall.water.question": {
+   "url": "cue_recall_water_question.mp3",
+   "bytes": 9504,
+   "sha256": "5d9eb6f49c5a072e000d1f9ce9a13df091dc8028dd4ae13bc541690c9dc30675",
+   "durationMs": 2200,
+   "leadInMs": 0,
+   "voice": "en-IN-Chirp3-HD-Aoede",
+   "speakingRate": 1,
+   "text": "How do plants get rid of excess water?"
+  },
+  "recall.water.reveal": {
+   "url": "cue_recall_water_reveal.mp3",
+   "bytes": 23136,
+   "sha256": "c109a57b346229aae7016319210de343722853571857ea785741d2dd455d6f4f",
+   "durationMs": 5280,
+   "leadInMs": 0,
+   "voice": "en-IN-Chirp3-HD-Aoede",
+   "speakingRate": 1,
+   "text": "Yes, that’s right. Excess water is lost as water vapour. This is transpiration."
+  },
+  "recall.oxygen.question": {
+   "url": "cue_recall_oxygen_question.mp3",
+   "bytes": 20064,
+   "sha256": "5ce09a63950c3f7166bbee3c2958a264a2ef764f9451c17b5285206d60a26ebc",
+   "durationMs": 4600,
+   "leadInMs": 0,
+   "voice": "en-IN-Chirp3-HD-Aoede",
+   "speakingRate": 1,
+   "text": "Which gas, made during photosynthesis, can be thought of as a waste product?"
+  },
+  "recall.oxygen.reveal": {
+   "url": "cue_recall_oxygen_reveal.mp3",
+   "bytes": 19776,
+   "sha256": "c490912c268c37e28daa7c53c89344be3741db7a722107c89277f28b834ebd63",
+   "durationMs": 4400,
+   "leadInMs": 0,
+   "voice": "en-IN-Chirp3-HD-Aoede",
+   "speakingRate": 1,
+   "text": "Yes, that’s right. Oxygen is made in photosynthesis and released into the air."
+  },
+  "recall.store.question": {
+   "url": "cue_recall_store_question.mp3",
+   "bytes": 13632,
+   "sha256": "dd8e5076b0e31be9fd6c789e270315459ad79960481bca3ffd11dd05382cd71a",
+   "durationMs": 3600,
+   "leadInMs": 0,
+   "voice": "en-IN-Chirp3-HD-Aoede",
+   "speakingRate": 1,
+   "text": "Where can many plant waste products be stored inside cells?"
+  },
+  "recall.store.reveal": {
+   "url": "cue_recall_store_reveal.mp3",
+   "bytes": 16992,
+   "sha256": "40f5d92a9f20443d9a998ab7c1a5a351756091b251c0024b346ce13226e9aabe",
+   "durationMs": 5040,
+   "leadInMs": 0,
+   "voice": "en-IN-Chirp3-HD-Aoede",
+   "speakingRate": 1,
+   "text": "Yes, that’s right. Many plant waste products are stored in cellular vacuoles."
+  },
+  "recall.leaves.question": {
+   "url": "cue_recall_leaves_question.mp3",
+   "bytes": 11136,
+   "sha256": "cf2f31c44545d8bbe8b1d8e0d868b13f5e55be3fd86fa1d71213ef22efc75c65",
+   "durationMs": 2880,
+   "leadInMs": 0,
+   "voice": "en-IN-Chirp3-HD-Aoede",
+   "speakingRate": 1,
+   "text": "What happens to leaves containing stored waste?"
+  },
+  "recall.leaves.reveal": {
+   "url": "cue_recall_leaves_reveal.mp3",
+   "bytes": 21792,
+   "sha256": "b15e170b9e3cc571245ddd4d171fa5e9a22b27112999f3db2ce92998dce07f64",
+   "durationMs": 6240,
+   "leadInMs": 0,
+   "voice": "en-IN-Chirp3-HD-Aoede",
+   "speakingRate": 1,
+   "text": "Yes, that’s right. Wastes may be stored in leaves that later fall off, taking the wastes with them."
+  },
+  "recall.resin.question": {
+   "url": "cue_recall_resin_question.mp3",
+   "bytes": 11904,
+   "sha256": "1d14e728c355ff6e9a3146e925cb46c84e776cd4d1030aec4f17b6af9d3b6ea1",
+   "durationMs": 2800,
+   "leadInMs": 0,
+   "voice": "en-IN-Chirp3-HD-Aoede",
+   "speakingRate": 1,
+   "text": "Where are resins and gums stored, especially?"
+  },
+  "recall.resin.reveal": {
+   "url": "cue_recall_resin_reveal.mp3",
+   "bytes": 16704,
+   "sha256": "0b5ba1e2d2e3c29f31f6345932137a85d44afd78609f13f8ce25c66b859df355",
+   "durationMs": 4360,
+   "leadInMs": 0,
+   "voice": "en-IN-Chirp3-HD-Aoede",
+   "speakingRate": 1,
+   "text": "Yes, that’s right. Resins and gums are stored especially in old xylem."
+  },
+  "recall.soil.question": {
+   "url": "cue_recall_soil_question.mp3",
+   "bytes": 11136,
+   "sha256": "d8ae8aae3cd84623b3000bc302e33a9ce047b7cc55ec19db0aeaf334e4cda971",
+   "durationMs": 3040,
+   "leadInMs": 0,
+   "voice": "en-IN-Chirp3-HD-Aoede",
+   "speakingRate": 1,
+   "text": "Where can plants excrete some waste substances?"
+  },
+  "recall.soil.reveal": {
+   "url": "cue_recall_soil_reveal.mp3",
+   "bytes": 22944,
+   "sha256": "e9e26f87d2c36007dacd320153db27ff51c40b8283a591c5bca021a0070b31e1",
+   "durationMs": 4720,
+   "leadInMs": 0,
+   "voice": "en-IN-Chirp3-HD-Aoede",
+   "speakingRate": 1,
+   "text": "Yes, that’s right. Plants excrete some waste substances into the soil around them."
+  },
+  "recall.incorrect": {
+   "url": "cue_recall_incorrect.mp3",
+   "bytes": 11136,
+   "sha256": "13c97fc4060f8dcce78649d10c2c9314252fafe1f6e9222e7d90b06e7d291d3a",
+   "durationMs": 2920,
+   "leadInMs": 0,
+   "voice": "en-IN-Chirp3-HD-Aoede",
+   "speakingRate": 1,
+   "text": "Not that one. Think back to what you saw."
+  },
+  "recall.open.prompt": {
+   "url": "cue_recall_open_prompt.mp3",
+   "bytes": 15552,
+   "sha256": "d76118e15f38a23d50f4356fbba316c1e47db6d759f372d1fa2d715c5f321d1c",
+   "durationMs": 3880,
+   "leadInMs": 0,
+   "voice": "en-IN-Chirp3-HD-Aoede",
+   "speakingRate": 1,
+   "text": "Can you explain, in your own words, how plants deal with wastes?"
+  },
+  "recall.open.model": {
+   "url": "cue_recall_open_model.mp3",
+   "bytes": 73824,
+   "sha256": "b3af383e601e5c0ae0df92d4f3b5bbce999f24350f93e029975851e57129a7a5",
+   "durationMs": 18800,
+   "leadInMs": 0,
+   "voice": "en-IN-Chirp3-HD-Aoede",
+   "speakingRate": 1,
+   "text": "Plants have no single excretory organ. Oxygen made in photosynthesis is released into the air, and excess water is lost as vapour by transpiration. Many wastes are stored in cell vacuoles, some in leaves that later fall off, and others as resins and gums, especially in old xylem. Some waste substances go into the soil."
+  },
+  "recall.complete": {
+   "url": "cue_recall_complete.mp3",
+   "bytes": 17952,
+   "sha256": "ad7590ccd902c456dc4285093b8f69499519f52d9d9610516cc821775ed02f02",
+   "durationMs": 3840,
+   "leadInMs": 0,
+   "voice": "en-IN-Chirp3-HD-Aoede",
+   "speakingRate": 1,
+   "text": "Well done. You have followed the waste all the way through the plant."
+  },
+  "explore.intro": {
+   "url": "cue_explore_intro.mp3",
+   "bytes": 19392,
+   "sha256": "19045b7eb3b3efc3591c25f89eedca2d01deafe6dc7e397f00a2c6fadf6d8b66",
+   "durationMs": 5560,
+   "leadInMs": 0,
+   "voice": "en-IN-Chirp3-HD-Aoede",
+   "speakingRate": 1,
+   "text": "Explore what you have learned so far. Turn a model, and tap a part to see what it is."
+  },
+  "explore.plant": {
+   "url": "cue_explore_plant.mp3",
+   "bytes": 26016,
+   "sha256": "b3e1cfd2ad1ac0e1d02a596cc8fcf6ef6ac0afd2a2d0df5dfcd475d4baf07872",
+   "durationMs": 6440,
+   "leadInMs": 0,
+   "voice": "en-IN-Chirp3-HD-Aoede",
+   "speakingRate": 1,
+   "text": "A plant has leaves, a stem with branches, and roots in the soil. None of these parts works like a kidney."
+  },
+  "explore.leaf": {
+   "url": "cue_explore_leaf.mp3",
+   "bytes": 26976,
+   "sha256": "8fe41eefa1a385b421d8eb6ad526ac491b0ab6f3b5d89b07afde3877d70c3223",
+   "durationMs": 6680,
+   "leadInMs": 0,
+   "voice": "en-IN-Chirp3-HD-Aoede",
+   "speakingRate": 1,
+   "text": "Oxygen made in photosynthesis leaves the leaf into the air. Excess water leaves it as water vapour: transpiration."
+  },
+  "explore.cell": {
+   "url": "cue_explore_cell.mp3",
+   "bytes": 35232,
+   "sha256": "56a386199c13f747e2a3ee8e6020b56c77f17bcb3b69cf3dd22a3729828b7496",
+   "durationMs": 8080,
+   "leadInMs": 0,
+   "voice": "en-IN-Chirp3-HD-Aoede",
+   "speakingRate": 1,
+   "text": "A leaf is made of many cells. Each of these cells has a cell wall, cytoplasm, a nucleus and one large vacuole."
+  },
+  "explore.vacuole": {
+   "url": "cue_explore_vacuole.mp3",
+   "bytes": 24384,
+   "sha256": "9120f6dcedf13fd4d08928713779fba2db84f34324281026f6690f0fd4a408ec",
+   "durationMs": 5560,
+   "leadInMs": 0,
+   "voice": "en-IN-Chirp3-HD-Aoede",
+   "speakingRate": 1,
+   "text": "Many plant waste products are stored in the vacuole. They are kept inside the cell, not removed."
+  },
+  "explore.stem": {
+   "url": "cue_explore_stem.mp3",
+   "bytes": 28416,
+   "sha256": "d980bdd3d147d9630ee9f1de22cd31f0588ce16658d64f6fe760f0e78b762bdc",
+   "durationMs": 7520,
+   "leadInMs": 0,
+   "voice": "en-IN-Chirp3-HD-Aoede",
+   "speakingRate": 1,
+   "text": "A magnified piece of stem: bark on the outside; inside it, phloem, which carries food, and xylem, which carries water."
+  },
+  "explore.oldxylem": {
+   "url": "cue_explore_oldxylem.mp3",
+   "bytes": 22176,
+   "sha256": "8c88ee3ab7233b25008ef0985ec56a21f0bf243d6add170f28111c352f585901",
+   "durationMs": 5120,
+   "leadInMs": 0,
+   "voice": "en-IN-Chirp3-HD-Aoede",
+   "speakingRate": 1,
+   "text": "Old xylem is made mostly of dead cells. Resins and gums are stored especially here."
+  },
+  "explore.roots": {
+   "url": "cue_explore_roots.mp3",
+   "bytes": 17664,
+   "sha256": "c258fb1b1c4ec1e99bc9933fb44811bf71b65f66935b1ad5f1ecb40dd83c492b",
+   "durationMs": 4160,
+   "leadInMs": 0,
+   "voice": "en-IN-Chirp3-HD-Aoede",
+   "speakingRate": 1,
+   "text": "Some waste substances pass from the plant into the soil around its roots."
+  }
+ }
+}

@@ -1,0 +1,474 @@
+{
+  "generated": "2026-09-22T11:28:25.612Z",
+  "source": "blender/source/excretion_in_plants.blend",
+  "assets": [
+    {
+      "id": "plant",
+      "file": "models/plant.glb",
+      "stage": "plant",
+      "bytes": 534992,
+      "nodes": 112,
+      "meshes": 42,
+      "materials": [
+        "MAT_Branch",
+        "MAT_Leaf",
+        "MAT_Root",
+        "MAT_Stem"
+      ],
+      "textures": [
+        {
+          "name": "tex_leaf",
+          "mime": "image/jpeg",
+          "bytes": 33826
+        }
+      ],
+      "triangles": 21060,
+      "vertices": 12237,
+      "parts": {
+        "branch": [
+          "Branch_01",
+          "Branch_02",
+          "Branch_03",
+          "Branch_04",
+          "Branch_05",
+          "Branch_06",
+          "Branch_07"
+        ],
+        "leaf": [
+          "Leaf_01",
+          "Leaf_02",
+          "Leaf_03",
+          "Leaf_04",
+          "Leaf_05",
+          "Leaf_06",
+          "Leaf_07",
+          "Leaf_08",
+          "Leaf_09",
+          "Leaf_10",
+          "Leaf_11",
+          "Leaf_12",
+          "Leaf_13",
+          "Leaf_14",
+          "Leaf_15",
+          "Leaf_16",
+          "Leaf_17",
+          "Leaf_18",
+          "Leaf_19",
+          "Leaf_20",
+          "Leaf_21",
+          "Leaf_22",
+          "Leaf_23",
+          "Leaf_24",
+          "Leaf_25",
+          "Leaf_26",
+          "Leaf_27",
+          "Leaf_28",
+          "Leaf_29",
+          "Leaf_30",
+          "Leaf_31",
+          "Leaf_Hero",
+          "Leaf_Old"
+        ],
+        "roots": [
+          "Roots"
+        ],
+        "stem": [
+          "Stem_Main"
+        ]
+      },
+      "cameras": [
+        "CAM_Final",
+        "CAM_Leaf_Fall",
+        "CAM_Leaf_Hero",
+        "CAM_Leaf_Hero_Air",
+        "CAM_Leaf_Old",
+        "CAM_Plant_Intro",
+        "CAM_Plant_Wide",
+        "CAM_Roots",
+        "CAM_Stem_Cut",
+        "CAM_Stem_Mid"
+      ],
+      "anchors": [
+        "ANCHOR_Canopy_Top",
+        "ANCHOR_Leaf_Hero",
+        "ANCHOR_Leaf_Hero_Normal",
+        "ANCHOR_Leaf_Hero_Tip",
+        "ANCHOR_Leaf_Old",
+        "ANCHOR_Leaf_Old_Base",
+        "ANCHOR_Leaf_Old_Landing",
+        "ANCHOR_Plant_Center",
+        "ANCHOR_Root_Zone",
+        "ANCHOR_Soil_Surface",
+        "ANCHOR_Stem_Cut"
+      ],
+      "paths": [
+        "PATH_OldLeaf_00",
+        "PATH_OldLeaf_01",
+        "PATH_OldLeaf_02",
+        "PATH_OldLeaf_03",
+        "PATH_OldLeaf_04",
+        "PATH_OldLeaf_05",
+        "PATH_OldLeaf_06",
+        "PATH_OldLeaf_07",
+        "PATH_OldLeaf_08",
+        "PATH_OldLeaf_09",
+        "PATH_OldLeaf_10",
+        "PATH_OldLeaf_11",
+        "PATH_Water_00",
+        "PATH_Water_01",
+        "PATH_Water_02",
+        "PATH_Water_03",
+        "PATH_Water_04",
+        "PATH_Water_05",
+        "PATH_Water_06",
+        "PATH_Water_07",
+        "PATH_Water_08",
+        "PATH_Water_09",
+        "PATH_Water_10",
+        "PATH_Water_11",
+        "PATH_Water_12",
+        "PATH_Water_13",
+        "PATH_Water_14",
+        "PATH_Water_15",
+        "PATH_Water_16",
+        "PATH_Water_17",
+        "PATH_Water_18",
+        "PATH_Water_19",
+        "PATH_Water_20",
+        "PATH_Water_21",
+        "PATH_Water_22",
+        "PATH_Water_23",
+        "PATH_Water_24",
+        "PATH_Water_25"
+      ],
+      "requiredNodes": [
+        "Plant",
+        "Stem_Main",
+        "Branch_01",
+        "Branch_02",
+        "Branch_03",
+        "Branch_04",
+        "Branch_05",
+        "Leaf_Hero",
+        "Leaf_Old",
+        "Roots",
+        "Branch_06",
+        "Branch_07",
+        "ANCHOR_Leaf_Hero",
+        "ANCHOR_Leaf_Hero_Normal",
+        "ANCHOR_Leaf_Old",
+        "ANCHOR_Leaf_Old_Base",
+        "ANCHOR_Leaf_Old_Landing",
+        "ANCHOR_Stem_Cut",
+        "ANCHOR_Root_Zone",
+        "ANCHOR_Plant_Center",
+        "ANCHOR_Canopy_Top",
+        "PATH_Water_00",
+        "PATH_Water_25",
+        "PATH_OldLeaf_00",
+        "PATH_OldLeaf_11",
+        "CAM_Plant_Wide",
+        "TGT_Plant_Wide",
+        "CAM_Plant_Intro",
+        "CAM_Leaf_Hero",
+        "CAM_Leaf_Hero_Air",
+        "CAM_Roots",
+        "CAM_Leaf_Old",
+        "CAM_Leaf_Fall",
+        "CAM_Stem_Cut",
+        "CAM_Stem_Mid",
+        "CAM_Final"
+      ],
+      "missingNodes": []
+    },
+    {
+      "id": "root-soil",
+      "file": "models/root-soil.glb",
+      "stage": "plant",
+      "bytes": 192932,
+      "nodes": 6,
+      "meshes": 4,
+      "materials": [
+        "MAT_Diorama_Base",
+        "MAT_Soil_Top",
+        "MAT_Soil_Section",
+        "MAT_Soil_Bottom",
+        "MAT_Pebble"
+      ],
+      "textures": [
+        {
+          "name": "tex_soil_top",
+          "mime": "image/jpeg",
+          "bytes": 16722
+        },
+        {
+          "name": "tex_soil_section",
+          "mime": "image/jpeg",
+          "bytes": 33142
+        }
+      ],
+      "triangles": 5256,
+      "vertices": 3350,
+      "parts": {
+        "base": [
+          "Diorama_Base"
+        ],
+        "soil": [
+          "Soil_Back",
+          "Soil_Front",
+          "Soil_Pebbles"
+        ]
+      },
+      "cameras": [],
+      "anchors": [
+        "ANCHOR_Soil_Cut_Face"
+      ],
+      "paths": [],
+      "requiredNodes": [
+        "RootSoil",
+        "Soil_Back",
+        "Soil_Front",
+        "Soil_Pebbles",
+        "Diorama_Base",
+        "ANCHOR_Soil_Cut_Face"
+      ],
+      "missingNodes": []
+    },
+    {
+      "id": "plant-cell",
+      "file": "models/plant-cell.glb",
+      "stage": "cell",
+      "bytes": 227892,
+      "nodes": 28,
+      "meshes": 9,
+      "materials": [
+        "MAT_Cell_Wall",
+        "MAT_Chloroplast",
+        "MAT_Cytoplasm",
+        "MAT_Nucleus",
+        "MAT_Vacuole",
+        "MAT_Leaf_Cells_Column",
+        "MAT_Leaf_Cells_Round",
+        "MAT_Leaf_Skin"
+      ],
+      "textures": [],
+      "triangles": 12380,
+      "vertices": 6470,
+      "parts": {
+        "cell_wall": [
+          "Cell_Wall"
+        ],
+        "chloroplast": [
+          "Chloroplasts"
+        ],
+        "cytoplasm": [
+          "Cytoplasm"
+        ],
+        "nucleus": [
+          "Nucleus"
+        ],
+        "vacuole": [
+          "Vacuole"
+        ],
+        "tissue": [
+          "Tissue_Column_Cells",
+          "Tissue_Round_Cells",
+          "Tissue_Skin_Bottom",
+          "Tissue_Skin_Top"
+        ]
+      },
+      "cameras": [
+        "CAM_Cell",
+        "CAM_Tissue_Far",
+        "CAM_Tissue_Wide",
+        "CAM_Vacuole"
+      ],
+      "anchors": [
+        "ANCHOR_Cell_Wall",
+        "ANCHOR_Chloroplast",
+        "ANCHOR_Cyto_Waste_Zone",
+        "ANCHOR_Cytoplasm",
+        "ANCHOR_Nucleus",
+        "ANCHOR_Tissue_Center",
+        "ANCHOR_Tissue_Top",
+        "ANCHOR_Vacuole",
+        "ANCHOR_Vacuole_Front"
+      ],
+      "paths": [],
+      "requiredNodes": [
+        "PlantCell",
+        "Tissue_Column_Cells",
+        "Tissue_Round_Cells",
+        "Tissue_Skin_Top",
+        "Cell_Hero",
+        "Cell_Wall",
+        "Cytoplasm",
+        "Vacuole",
+        "Nucleus",
+        "Chloroplasts",
+        "ANCHOR_Vacuole",
+        "ANCHOR_Vacuole_Front",
+        "ANCHOR_Cell_Wall",
+        "ANCHOR_Cytoplasm",
+        "ANCHOR_Nucleus",
+        "CAM_Tissue_Far",
+        "CAM_Tissue_Wide",
+        "CAM_Cell",
+        "CAM_Vacuole"
+      ],
+      "missingNodes": []
+    },
+    {
+      "id": "stem-cross-section",
+      "file": "models/stem-cross-section.glb",
+      "stage": "stem",
+      "bytes": 262612,
+      "nodes": 39,
+      "meshes": 24,
+      "materials": [
+        "MAT_Bark",
+        "MAT_Phloem",
+        "MAT_Pith",
+        "MAT_Resin_Gum",
+        "MAT_Stem_Cover",
+        "MAT_Xylem_New",
+        "MAT_Xylem_Old",
+        "MAT_Xylem_Vessel"
+      ],
+      "textures": [],
+      "triangles": 9264,
+      "vertices": 8928,
+      "parts": {
+        "bark": [
+          "Bark",
+          "Stem_Continuation"
+        ],
+        "phloem": [
+          "Phloem"
+        ],
+        "pith": [
+          "Pith"
+        ],
+        "resin": [
+          "Resin_01",
+          "Resin_02",
+          "Resin_03",
+          "Resin_04",
+          "Resin_05",
+          "Resin_06",
+          "Resin_07",
+          "Resin_08",
+          "Resin_09",
+          "Resin_10",
+          "Resin_11",
+          "Resin_12",
+          "Resin_13",
+          "Resin_14",
+          "Resin_15",
+          "Resin_16"
+        ],
+        "stem_cover": [
+          "Stem_Cover"
+        ],
+        "xylem": [
+          "Xylem_New",
+          "Xylem_Vessels"
+        ],
+        "old_xylem": [
+          "Xylem_Old"
+        ]
+      },
+      "cameras": [
+        "CAM_Stem_Intact",
+        "CAM_Stem_OldXylem",
+        "CAM_Stem_Top"
+      ],
+      "anchors": [
+        "ANCHOR_Bark",
+        "ANCHOR_Phloem",
+        "ANCHOR_Pith",
+        "ANCHOR_Section_Top",
+        "ANCHOR_Waste_Entry",
+        "ANCHOR_Xylem_New",
+        "ANCHOR_Xylem_Old",
+        "ANCHOR_Xylem_Old_Face"
+      ],
+      "paths": [],
+      "requiredNodes": [
+        "StemSection",
+        "Bark",
+        "Phloem",
+        "Xylem_New",
+        "Xylem_Old",
+        "Pith",
+        "Xylem_Vessels",
+        "Stem_Cover",
+        "Stem_Continuation",
+        "Resin_01",
+        "Resin_03",
+        "Resin_16",
+        "ANCHOR_Xylem_Old",
+        "ANCHOR_Xylem_Old_Face",
+        "ANCHOR_Bark",
+        "ANCHOR_Phloem",
+        "ANCHOR_Xylem_New",
+        "CAM_Stem_Intact",
+        "CAM_Stem_Top",
+        "CAM_Stem_OldXylem"
+      ],
+      "missingNodes": []
+    },
+    {
+      "id": "waste-visuals",
+      "file": "models/waste-visuals.glb",
+      "stage": "shared",
+      "bytes": 33160,
+      "nodes": 7,
+      "meshes": 6,
+      "materials": [
+        "MAT_Oxygen",
+        "MAT_Resin_Drop",
+        "MAT_Waste",
+        "MAT_Vapour",
+        "MAT_Water"
+      ],
+      "textures": [],
+      "triangles": 1416,
+      "vertices": 774,
+      "parts": {
+        "oxygen": [
+          "O2_Molecule"
+        ],
+        "resin": [
+          "Resin_Drop"
+        ],
+        "soil_waste": [
+          "Soil_Waste_Particle"
+        ],
+        "water_vapour": [
+          "Vapour_Puff"
+        ],
+        "waste": [
+          "Waste_Crystal"
+        ],
+        "water": [
+          "Water_Droplet"
+        ]
+      },
+      "cameras": [],
+      "anchors": [],
+      "paths": [],
+      "requiredNodes": [
+        "WasteVisuals",
+        "O2_Molecule",
+        "Water_Droplet",
+        "Vapour_Puff",
+        "Waste_Crystal",
+        "Resin_Drop",
+        "Soil_Waste_Particle"
+      ],
+      "missingNodes": []
+    }
+  ],
+  "totalBytes": 1251588
+}

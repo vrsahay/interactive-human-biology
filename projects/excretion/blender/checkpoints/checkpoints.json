@@ -1,0 +1,443 @@
+[
+  {
+    "file": "Excretion_in_Plants_v001.blend",
+    "step": "plant",
+    "note": "Plant: stem, 7 branches, 33 leaves (hero leaf, old leaf with petiole pivot), roots, anchors, water and old-leaf paths, camera references",
+    "saved": "2026-09-22T15:56:22",
+    "objects": 112,
+    "validated": true,
+    "issues": 0
+  },
+  {
+    "file": "Excretion_in_Plants_v002.blend",
+    "step": "cell",
+    "note": "Plant cell: leaf tissue section + hero cell cutaway (cell wall, cytoplasm, vacuole, nucleus, chloroplasts)",
+    "saved": "2026-09-22T15:56:30",
+    "objects": 140,
+    "validated": true,
+    "issues": 0
+  },
+  {
+    "file": "Excretion_in_Plants_v003.blend",
+    "step": "stem",
+    "note": "Stem cross-section: bark, phloem, xylem, old xylem, pith, vessels, 16 resin/gum deposits, lifting cover",
+    "saved": "2026-09-22T15:56:30",
+    "objects": 179,
+    "validated": true,
+    "issues": 0
+  },
+  {
+    "file": "Excretion_in_Plants_v004.blend",
+    "step": "soil",
+    "note": "Root/soil view: soil block split at a cut plane (front half fades to a shell), pebbles, display base",
+    "saved": "2026-09-22T15:56:31",
+    "objects": 185,
+    "validated": true,
+    "issues": 0
+  },
+  {
+    "file": "Excretion_in_Plants_v005.blend",
+    "step": "waste",
+    "note": "Waste visuals: oxygen, water drop, vapour, stored waste, resin drop, soil waste particle",
+    "saved": "2026-09-22T15:56:32",
+    "objects": 192,
+    "validated": true,
+    "issues": 0
+  },
+  {
+    "file": "Excretion_in_Plants_v006.blend",
+    "step": "validate",
+    "note": "All assets built and organised; full validation passed",
+    "saved": "2026-09-22T15:57:22",
+    "objects": 195,
+    "validated": true,
+    "issues": 0
+  },
+  {
+    "file": "Excretion_in_Plants_v007.blend",
+    "step": "optimise",
+    "note": "Optimised for WebGL and re-validated; this version is exported",
+    "saved": "2026-09-22T15:57:30",
+    "objects": 195,
+    "validated": true,
+    "issues": 0
+  },
+  {
+    "file": "Excretion_in_Plants_v008.blend",
+    "step": "plant",
+    "note": "V2 whole plant (macro)",
+    "saved": "2026-09-22T18:02:59",
+    "objects": 112,
+    "validated": true,
+    "issues": 0
+  },
+  {
+    "file": "Excretion_in_Plants_v009.blend",
+    "step": "soil",
+    "note": "V2 soil block (macro)",
+    "saved": "2026-09-22T18:03:00",
+    "objects": 118,
+    "validated": true,
+    "issues": 0
+  },
+  {
+    "file": "Excretion_in_Plants_v010.blend",
+    "step": "leaf",
+    "note": "02_leaf: one leaf, veins, stalk, both surfaces (meso)",
+    "saved": "2026-09-22T18:03:15",
+    "objects": 137,
+    "validated": true,
+    "issues": 0
+  },
+  {
+    "file": "Excretion_in_Plants_v011.blend",
+    "step": "stoma",
+    "note": "03_stoma: epidermis patch, stoma with guard cells (open/closed), air space (micro)",
+    "saved": "2026-09-22T18:03:18",
+    "objects": 170,
+    "validated": true,
+    "issues": 0
+  },
+  {
+    "file": "Excretion_in_Plants_v012.blend",
+    "step": "leaf_internal",
+    "note": "05_leaf_internal: leaf cross-section with air spaces, vein and stoma (micro)",
+    "saved": "2026-09-22T18:03:19",
+    "objects": 246,
+    "validated": false,
+    "issues": 1
+  },
+  {
+    "file": "Excretion_in_Plants_v013.blend",
+    "step": "cell",
+    "note": "06_plant_cell: wall, membrane, cytoplasm, nucleus, chloroplasts, central vacuole (micro)",
+    "saved": "2026-09-22T18:03:21",
+    "objects": 272,
+    "validated": false,
+    "issues": 1
+  },
+  {
+    "file": "Excretion_in_Plants_v014.blend",
+    "step": "chloroplast",
+    "note": "08_chloroplast: double membrane, stroma, disc stacks (subcellular)",
+    "saved": "2026-09-22T18:03:22",
+    "objects": 288,
+    "validated": false,
+    "issues": 1
+  },
+  {
+    "file": "Excretion_in_Plants_v015.blend",
+    "step": "stem_section",
+    "note": "10_stem_cross_section: bark, phloem, xylem rings, old xylem with resin (meso)",
+    "saved": "2026-09-22T18:03:26",
+    "objects": 326,
+    "validated": false,
+    "issues": 1
+  },
+  {
+    "file": "Excretion_in_Plants_v016.blend",
+    "step": "xylem",
+    "note": "11_xylem: vessels, tracheids, living parenchyma, resin/gum in old xylem (micro)",
+    "saved": "2026-09-22T18:03:27",
+    "objects": 371,
+    "validated": false,
+    "issues": 1
+  },
+  {
+    "file": "Excretion_in_Plants_v017.blend",
+    "step": "root",
+    "note": "14_root: root tip, root cap, root-hair zone (meso)",
+    "saved": "2026-09-22T18:03:35",
+    "objects": 422,
+    "validated": false,
+    "issues": 5
+  },
+  {
+    "file": "Excretion_in_Plants_v018.blend",
+    "step": "root_hairs",
+    "note": "15_root_hairs: epidermal cells, root hairs, soil particles, water films (micro)",
+    "saved": "2026-09-22T18:03:37",
+    "objects": 473,
+    "validated": false,
+    "issues": 6
+  },
+  {
+    "file": "Excretion_in_Plants_v019.blend",
+    "step": "waste",
+    "note": "17_waste_visuals: O2, CO2, water, vapour, waste, resin (symbols)",
+    "saved": "2026-09-22T18:03:38",
+    "objects": 481,
+    "validated": false,
+    "issues": 6
+  },
+  {
+    "file": "Excretion_in_Plants_v020.blend",
+    "step": "root",
+    "note": "14_root: root tip, root cap, root-hair zone (meso)",
+    "saved": "2026-09-22T18:04:22",
+    "objects": 483,
+    "validated": false,
+    "issues": 3
+  },
+  {
+    "file": "Excretion_in_Plants_v021.blend",
+    "step": "root_hairs",
+    "note": "15_root_hairs: epidermal cells, root hairs, soil particles, water films (micro)",
+    "saved": "2026-09-22T18:04:25",
+    "objects": 483,
+    "validated": false,
+    "issues": 2
+  },
+  {
+    "file": "Excretion_in_Plants_v022.blend",
+    "step": "leaf_internal",
+    "note": "05_leaf_internal: leaf cross-section with air spaces, vein and stoma (micro)",
+    "saved": "2026-09-22T18:04:28",
+    "objects": 483,
+    "validated": false,
+    "issues": 2
+  },
+  {
+    "file": "Excretion_in_Plants_v023.blend",
+    "step": "root",
+    "note": "14_root: root tip, root cap, root-hair zone (meso)",
+    "saved": "2026-09-22T18:04:52",
+    "objects": 483,
+    "validated": true,
+    "issues": 0
+  },
+  {
+    "file": "Excretion_in_Plants_v024.blend",
+    "step": "validate",
+    "note": "V2: all scale-specific assets built and organised; full validation passed",
+    "saved": "2026-09-22T18:04:53",
+    "objects": 483,
+    "validated": true,
+    "issues": 0
+  },
+  {
+    "file": "Excretion_in_Plants_v025.blend",
+    "step": "optimise",
+    "note": "V2: optimised for WebGL and re-validated; this version is exported",
+    "saved": "2026-09-22T18:05:45",
+    "objects": 483,
+    "validated": true,
+    "issues": 0
+  },
+  {
+    "file": "Excretion_in_Plants_v026.blend",
+    "step": "root_hairs",
+    "note": "15_root_hairs: epidermal cells, root hairs, soil particles, water films (micro)",
+    "saved": "2026-09-22T18:06:13",
+    "objects": 483,
+    "validated": true,
+    "issues": 0
+  },
+  {
+    "file": "Excretion_in_Plants_v027.blend",
+    "step": "validate",
+    "note": "V2: all scale-specific assets built and organised; full validation passed",
+    "saved": "2026-09-22T18:06:14",
+    "objects": 483,
+    "validated": true,
+    "issues": 0
+  },
+  {
+    "file": "Excretion_in_Plants_v028.blend",
+    "step": "optimise",
+    "note": "V2: optimised for WebGL and re-validated; this version is exported",
+    "saved": "2026-09-22T18:06:15",
+    "objects": 483,
+    "validated": true,
+    "issues": 0
+  },
+  {
+    "file": "Excretion_in_Plants_v029.blend",
+    "step": "stoma",
+    "note": "03_stoma: epidermis patch, stoma with guard cells (open/closed), air space (micro)",
+    "saved": "2026-09-22T19:00:26",
+    "objects": 485,
+    "validated": true,
+    "issues": 0
+  },
+  {
+    "file": "Excretion_in_Plants_v030.blend",
+    "step": "root_hairs",
+    "note": "15_root_hairs: epidermal cells, root hairs, soil particles, water films (micro)",
+    "saved": "2026-09-22T19:01:45",
+    "objects": 485,
+    "validated": true,
+    "issues": 0
+  },
+  {
+    "file": "Excretion_in_Plants_v031.blend",
+    "step": "leaf_internal",
+    "note": "05_leaf_internal: leaf cross-section with air spaces, vein and stoma (micro)",
+    "saved": "2026-09-22T19:03:55",
+    "objects": 487,
+    "validated": true,
+    "issues": 0
+  },
+  {
+    "file": "Excretion_in_Plants_v032.blend",
+    "step": "cell",
+    "note": "06_plant_cell: wall, membrane, cytoplasm, nucleus, chloroplasts, central vacuole (micro)",
+    "saved": "2026-09-22T19:05:08",
+    "objects": 487,
+    "validated": true,
+    "issues": 0
+  },
+  {
+    "file": "Excretion_in_Plants_v033.blend",
+    "step": "stem_section",
+    "note": "10_stem_cross_section: bark, phloem, xylem rings, old xylem with resin (meso)",
+    "saved": "2026-09-22T19:05:12",
+    "objects": 487,
+    "validated": true,
+    "issues": 0
+  },
+  {
+    "file": "Excretion_in_Plants_v034.blend",
+    "step": "validate",
+    "note": "V2: all scale-specific assets built and organised; full validation passed",
+    "saved": "2026-09-22T19:05:26",
+    "objects": 487,
+    "validated": true,
+    "issues": 0
+  },
+  {
+    "file": "Excretion_in_Plants_v035.blend",
+    "step": "optimise",
+    "note": "V2: optimised for WebGL and re-validated; this version is exported",
+    "saved": "2026-09-22T19:05:27",
+    "objects": 487,
+    "validated": true,
+    "issues": 0
+  },
+  {
+    "file": "Excretion_in_Plants_v036.blend",
+    "step": "leaf_internal",
+    "note": "05_leaf_internal: leaf cross-section with air spaces, vein and stoma (micro)",
+    "saved": "2026-09-22T19:05:47",
+    "objects": 487,
+    "validated": true,
+    "issues": 0
+  },
+  {
+    "file": "Excretion_in_Plants_v037.blend",
+    "step": "optimise",
+    "note": "V2: optimised for WebGL and re-validated; this version is exported",
+    "saved": "2026-09-22T19:05:49",
+    "objects": 487,
+    "validated": true,
+    "issues": 0
+  },
+  {
+    "file": "Excretion_in_Plants_v038.blend",
+    "step": "validate",
+    "note": "V2: all scale-specific assets built and organised; full validation passed",
+    "saved": "2026-09-22T19:06:55",
+    "objects": 487,
+    "validated": true,
+    "issues": 0
+  },
+  {
+    "file": "Excretion_in_Plants_v039.blend",
+    "step": "optimise",
+    "note": "V2: optimised for WebGL and re-validated; this version is exported",
+    "saved": "2026-09-22T19:06:56",
+    "objects": 487,
+    "validated": true,
+    "issues": 0
+  },
+  {
+    "file": "Excretion_in_Plants_v040.blend",
+    "step": "stem_section",
+    "note": "10_stem_cross_section: bark, phloem, xylem rings, old xylem with resin (meso)",
+    "saved": "2026-09-22T20:14:43",
+    "objects": 487,
+    "validated": true,
+    "issues": 0
+  },
+  {
+    "file": "Excretion_in_Plants_v041.blend",
+    "step": "validate",
+    "note": "V2: all scale-specific assets built and organised; full validation passed",
+    "saved": "2026-09-22T20:15:16",
+    "objects": 487,
+    "validated": true,
+    "issues": 0
+  },
+  {
+    "file": "Excretion_in_Plants_v042.blend",
+    "step": "optimise",
+    "note": "V2: optimised for WebGL and re-validated; this version is exported",
+    "saved": "2026-09-22T20:15:22",
+    "objects": 487,
+    "validated": true,
+    "issues": 0
+  },
+  {
+    "file": "Excretion_in_Plants_v043.blend",
+    "step": "optimise",
+    "note": "V2.4 DA-01: guard-cell chloroplasts follow the Open shape key (inside the guard cell at every opening); optimised + validated; 03_stoma exported",
+    "saved": "2026-09-22T20:48:09",
+    "objects": 487,
+    "validated": true,
+    "issues": 0
+  },
+  {
+    "file": "Excretion_in_Plants_v044.blend",
+    "step": "optimise",
+    "note": "V2.4 DA-06/DA-07: leaf section stoma ",
+    "saved": "2026-09-22T21:09:06",
+    "objects": 488,
+    "validated": true,
+    "issues": 0
+  },
+  {
+    "file": "Excretion_in_Plants_v045.blend",
+    "step": "optimise",
+    "note": "V2.4 DA-05: guard cells joined at both poles by their own shape (ends overlap) + thin shared end wall; no pole beads; 03_stoma exported",
+    "saved": "2026-09-22T21:13:03",
+    "objects": 488,
+    "validated": true,
+    "issues": 0
+  },
+  {
+    "file": "Excretion_in_Plants_v046.blend",
+    "step": "optimise",
+    "note": "V2.4 DA-09: root xylem recoloured to the leaf-vein xylem tan (distinct from amber resin/gum); 14_root exported",
+    "saved": "2026-09-22T21:14:50",
+    "objects": 488,
+    "validated": true,
+    "issues": 0
+  },
+  {
+    "file": "Excretion_in_Plants_v047.blend",
+    "step": "optimise",
+    "note": "V2.4 DA-10: plant is a young woody tree (thicker tapering trunk with bark up to the lowest branches, green shoot above; tap root matches), so the stem slice with old xylem belongs to it; 01_plant exported",
+    "saved": "2026-09-22T21:23:42",
+    "objects": 488,
+    "validated": true,
+    "issues": 0
+  },
+  {
+    "file": "Excretion_in_Plants_v048.blend",
+    "step": "optimise",
+    "note": "V2.4 P3: DA-12 plant leaves get a faint green emission floor (no near-black leaves); DA-19 partial epidermis cell at the leaf block's cut edge; 01_plant + 05_leaf_internal exported. This is the V2.4 export state.",
+    "saved": "2026-09-22T21:28:11",
+    "objects": 488,
+    "validated": true,
+    "issues": 0
+  },
+  {
+    "file": "Excretion_in_Plants_v049.blend",
+    "step": "optimise",
+    "note": "V2.4.1 root hairs + soil + water refinement: thinner irregular hairs from their own cells, grains packed along every hair, static moisture as water bridges between grains/hairs (no per-grain shells); 15_root_hairs exported",
+    "saved": "2026-09-22T23:09:59",
+    "objects": 488,
+    "validated": true,
+    "issues": 0
+  }
+]

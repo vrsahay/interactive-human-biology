@@ -1,0 +1,1968 @@
+{
+ "status": "ok",
+ "scene_name": "ExcretionInPlants",
+ "active_workspace": "Layout",
+ "active_object": null,
+ "object_mode": null,
+ "camera_object": null,
+ "collections": [
+  {
+   "name": "Scene Collection",
+   "exclude": false,
+   "hide_viewport": false,
+   "objects": [],
+   "children": [
+    {
+     "name": "CAMERAS",
+     "exclude": false,
+     "hide_viewport": false,
+     "objects": [
+      {
+       "name": "CAM_Cell",
+       "type": "CAMERA",
+       "parent": "PlantCell",
+       "data_name": "CAM_Cell",
+       "selected": false,
+       "visible": true,
+       "hide_viewport": false
+      },
+      {
+       "name": "CAM_Final",
+       "type": "CAMERA",
+       "parent": "Plant",
+       "data_name": "CAM_Final",
+       "selected": false,
+       "visible": true,
+       "hide_viewport": false
+      },
+      {
+       "name": "CAM_Leaf_Fall",
+       "type": "CAMERA",
+       "parent": "Plant",
+       "data_name": "CAM_Leaf_Fall",
+       "selected": false,
+       "visible": true,
+       "hide_viewport": false
+      },
+      {
+       "name": "CAM_Leaf_Hero",
+       "type": "CAMERA",
+       "parent": "Plant",
+       "data_name": "CAM_Leaf_Hero",
+       "selected": false,
+       "visible": true,
+       "hide_viewport": false
+      },
+      {
+       "name": "CAM_Leaf_Hero_Air",
+       "type": "CAMERA",
+       "parent": "Plant",
+       "data_name": "CAM_Leaf_Hero_Air",
+       "selected": false,
+       "visible": true,
+       "hide_viewport": false
+      },
+      {
+       "name": "CAM_Leaf_Old",
+       "type": "CAMERA",
+       "parent": "Plant",
+       "data_name": "CAM_Leaf_Old",
+       "selected": false,
+       "visible": true,
+       "hide_viewport": false
+      },
+      {
+       "name": "CAM_Plant_Intro",
+       "type": "CAMERA",
+       "parent": "Plant",
+       "data_name": "CAM_Plant_Intro",
+       "selected": false,
+       "visible": true,
+       "hide_viewport": false
+      },
+      {
+       "name": "CAM_Plant_Wide",
+       "type": "CAMERA",
+       "parent": "Plant",
+       "data_name": "CAM_Plant_Wide",
+       "selected": false,
+       "visible": true,
+       "hide_viewport": false
+      },
+      {
+       "name": "CAM_Roots",
+       "type": "CAMERA",
+       "parent": "Plant",
+       "data_name": "CAM_Roots",
+       "selected": false,
+       "visible": true,
+       "hide_viewport": false
+      },
+      {
+       "name": "CAM_Stem_Cut",
+       "type": "CAMERA",
+       "parent": "Plant",
+       "data_name": "CAM_Stem_Cut",
+       "selected": false,
+       "visible": true,
+       "hide_viewport": false
+      },
+      {
+       "name": "CAM_Stem_Intact",
+       "type": "CAMERA",
+       "parent": "StemSection",
+       "data_name": "CAM_Stem_Intact",
+       "selected": false,
+       "visible": true,
+       "hide_viewport": false
+      },
+      {
+       "name": "CAM_Stem_Mid",
+       "type": "CAMERA",
+       "parent": "Plant",
+       "data_name": "CAM_Stem_Mid",
+       "selected": false,
+       "visible": true,
+       "hide_viewport": false
+      },
+      {
+       "name": "CAM_Stem_OldXylem",
+       "type": "CAMERA",
+       "parent": "StemSection",
+       "data_name": "CAM_Stem_OldXylem",
+       "selected": false,
+       "visible": true,
+       "hide_viewport": false
+      },
+      {
+       "name": "CAM_Stem_Top",
+       "type": "CAMERA",
+       "parent": "StemSection",
+       "data_name": "CAM_Stem_Top",
+       "selected": false,
+       "visible": true,
+       "hide_viewport": false
+      },
+      {
+       "name": "CAM_Tissue_Far",
+       "type": "CAMERA",
+       "parent": "PlantCell",
+       "data_name": "CAM_Tissue_Far",
+       "selected": false,
+       "visible": true,
+       "hide_viewport": false
+      },
+      {
+       "name": "CAM_Tissue_Wide",
+       "type": "CAMERA",
+       "parent": "PlantCell",
+       "data_name": "CAM_Tissue_Wide",
+       "selected": false,
+       "visible": true,
+       "hide_viewport": false
+      },
+      {
+       "name": "CAM_Vacuole",
+       "type": "CAMERA",
+       "parent": "PlantCell",
+       "data_name": "CAM_Vacuole",
+       "selected": false,
+       "visible": true,
+       "hide_viewport": false
+      },
+      {
+       "name": "TGT_Cell",
+       "type": "EMPTY",
+       "parent": "PlantCell",
+       "data_name": null,
+       "selected": false,
+       "visible": true,
+       "hide_viewport": false
+      },
+      {
+       "name": "TGT_Final",
+       "type": "EMPTY",
+       "parent": "Plant",
+       "data_name": null,
+       "selected": false,
+       "visible": true,
+       "hide_viewport": false
+      },
+      {
+       "name": "TGT_Leaf_Fall",
+       "type": "EMPTY",
+       "parent": "Plant",
+       "data_name": null,
+       "selected": false,
+       "visible": true,
+       "hide_viewport": false
+      },
+      {
+       "name": "TGT_Leaf_Hero",
+       "type": "EMPTY",
+       "parent": "Plant",
+       "data_name": null,
+       "selected": false,
+       "visible": true,
+       "hide_viewport": false
+      },
+      {
+       "name": "TGT_Leaf_Hero_Air",
+       "type": "EMPTY",
+       "parent": "Plant",
+       "data_name": null,
+       "selected": false,
+       "visible": true,
+       "hide_viewport": false
+      },
+      {
+       "name": "TGT_Leaf_Old",
+       "type": "EMPTY",
+       "parent": "Plant",
+       "data_name": null,
+       "selected": false,
+       "visible": true,
+       "hide_viewport": false
+      },
+      {
+       "name": "TGT_Plant_Intro",
+       "type": "EMPTY",
+       "parent": "Plant",
+       "data_name": null,
+       "selected": false,
+       "visible": true,
+       "hide_viewport": false
+      },
+      {
+       "name": "TGT_Plant_Wide",
+       "type": "EMPTY",
+       "parent": "Plant",
+       "data_name": null,
+       "selected": false,
+       "visible": true,
+       "hide_viewport": false
+      },
+      {
+       "name": "TGT_Roots",
+       "type": "EMPTY",
+       "parent": "Plant",
+       "data_name": null,
+       "selected": false,
+       "visible": true,
+       "hide_viewport": false
+      },
+      {
+       "name": "TGT_Stem_Cut",
+       "type": "EMPTY",
+       "parent": "Plant",
+       "data_name": null,
+       "selected": false,
+       "visible": true,
+       "hide_viewport": false
+      },
+      {
+       "name": "TGT_Stem_Intact",
+       "type": "EMPTY",
+       "parent": "StemSection",
+       "data_name": null,
+       "selected": false,
+       "visible": true,
+       "hide_viewport": false
+      },
+      {
+       "name": "TGT_Stem_Mid",
+       "type": "EMPTY",
+       "parent": "Plant",
+       "data_name": null,
+       "selected": false,
+       "visible": true,
+       "hide_viewport": false
+      },
+      {
+       "name": "TGT_Stem_OldXylem",
+       "type": "EMPTY",
+       "parent": "StemSection",
+       "data_name": null,
+       "selected": false,
+       "visible": true,
+       "hide_viewport": false
+      },
+      {
+       "name": "TGT_Stem_Top",
+       "type": "EMPTY",
+       "parent": "StemSection",
+       "data_name": null,
+       "selected": false,
+       "visible": true,
+       "hide_viewport": false
+      },
+      {
+       "name": "TGT_Tissue_Far",
+       "type": "EMPTY",
+       "parent": "PlantCell",
+       "data_name": null,
+       "selected": false,
+       "visible": true,
+       "hide_viewport": false
+      },
+      {
+       "name": "TGT_Tissue_Wide",
+       "type": "EMPTY",
+       "parent": "PlantCell",
+       "data_name": null,
+       "selected": false,
+       "visible": true,
+       "hide_viewport": false
+      },
+      {
+       "name": "TGT_Vacuole",
+       "type": "EMPTY",
+       "parent": "PlantCell",
+       "data_name": null,
+       "selected": false,
+       "visible": true,
+       "hide_viewport": false
+      }
+     ],
+     "children": []
+    },
+    {
+     "name": "CELL",
+     "exclude": false,
+     "hide_viewport": false,
+     "objects": [
+      {
+       "name": "ANCHOR_Tissue_Center",
+       "type": "EMPTY",
+       "parent": "PlantCell",
+       "data_name": null,
+       "selected": false,
+       "visible": true,
+       "hide_viewport": false
+      },
+      {
+       "name": "ANCHOR_Tissue_Top",
+       "type": "EMPTY",
+       "parent": "PlantCell",
+       "data_name": null,
+       "selected": false,
+       "visible": true,
+       "hide_viewport": false
+      },
+      {
+       "name": "Cell_Hero",
+       "type": "EMPTY",
+       "parent": "PlantCell",
+       "data_name": null,
+       "selected": false,
+       "visible": true,
+       "hide_viewport": false
+      },
+      {
+       "name": "PlantCell",
+       "type": "EMPTY",
+       "parent": null,
+       "data_name": null,
+       "selected": false,
+       "visible": true,
+       "hide_viewport": false
+      },
+      {
+       "name": "Tissue_Column_Cells",
+       "type": "MESH",
+       "parent": "PlantCell",
+       "data_name": "Tissue_Column_Cells",
+       "selected": false,
+       "visible": true,
+       "hide_viewport": false
+      },
+      {
+       "name": "Tissue_Round_Cells",
+       "type": "MESH",
+       "parent": "PlantCell",
+       "data_name": "Tissue_Round_Cells",
+       "selected": false,
+       "visible": true,
+       "hide_viewport": false
+      },
+      {
+       "name": "Tissue_Skin_Bottom",
+       "type": "MESH",
+       "parent": "PlantCell",
+       "data_name": "Tissue_Skin_Bottom",
+       "selected": false,
+       "visible": true,
+       "hide_viewport": false
+      },
+      {
+       "name": "Tissue_Skin_Top",
+       "type": "MESH",
+       "parent": "PlantCell",
+       "data_name": "Tissue_Skin_Top",
+       "selected": false,
+       "visible": true,
+       "hide_viewport": false
+      }
+     ],
+     "children": [
+      {
+       "name": "CELL_BOUNDARY",
+       "exclude": false,
+       "hide_viewport": false,
+       "objects": [
+        {
+         "name": "ANCHOR_Cell_Wall",
+         "type": "EMPTY",
+         "parent": "PlantCell",
+         "data_name": null,
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "Cell_Wall",
+         "type": "MESH",
+         "parent": "Cell_Hero",
+         "data_name": "Cell_Wall",
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        }
+       ],
+       "children": []
+      },
+      {
+       "name": "CYTOPLASM",
+       "exclude": false,
+       "hide_viewport": false,
+       "objects": [
+        {
+         "name": "ANCHOR_Chloroplast",
+         "type": "EMPTY",
+         "parent": "PlantCell",
+         "data_name": null,
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "ANCHOR_Cyto_Waste_Zone",
+         "type": "EMPTY",
+         "parent": "PlantCell",
+         "data_name": null,
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "ANCHOR_Cytoplasm",
+         "type": "EMPTY",
+         "parent": "PlantCell",
+         "data_name": null,
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "Chloroplasts",
+         "type": "MESH",
+         "parent": "Cell_Hero",
+         "data_name": "Chloroplasts",
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "Cytoplasm",
+         "type": "MESH",
+         "parent": "Cell_Hero",
+         "data_name": "Cytoplasm",
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        }
+       ],
+       "children": []
+      },
+      {
+       "name": "NUCLEUS",
+       "exclude": false,
+       "hide_viewport": false,
+       "objects": [
+        {
+         "name": "ANCHOR_Nucleus",
+         "type": "EMPTY",
+         "parent": "PlantCell",
+         "data_name": null,
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "Nucleus",
+         "type": "MESH",
+         "parent": "Cell_Hero",
+         "data_name": "Nucleus",
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        }
+       ],
+       "children": []
+      },
+      {
+       "name": "VACUOLE",
+       "exclude": false,
+       "hide_viewport": false,
+       "objects": [
+        {
+         "name": "ANCHOR_Vacuole",
+         "type": "EMPTY",
+         "parent": "PlantCell",
+         "data_name": null,
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "ANCHOR_Vacuole_Front",
+         "type": "EMPTY",
+         "parent": "PlantCell",
+         "data_name": null,
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "Vacuole",
+         "type": "MESH",
+         "parent": "Cell_Hero",
+         "data_name": "Vacuole",
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        }
+       ],
+       "children": []
+      }
+     ]
+    },
+    {
+     "name": "ENVIRONMENT",
+     "exclude": false,
+     "hide_viewport": false,
+     "objects": [],
+     "children": [
+      {
+       "name": "SOIL",
+       "exclude": false,
+       "hide_viewport": false,
+       "objects": [
+        {
+         "name": "ANCHOR_Soil_Cut_Face",
+         "type": "EMPTY",
+         "parent": "RootSoil",
+         "data_name": null,
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "ANCHOR_Soil_Surface",
+         "type": "EMPTY",
+         "parent": "Plant",
+         "data_name": null,
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "Diorama_Base",
+         "type": "MESH",
+         "parent": "RootSoil",
+         "data_name": "Diorama_Base",
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "RootSoil",
+         "type": "EMPTY",
+         "parent": null,
+         "data_name": null,
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "Soil_Back",
+         "type": "MESH",
+         "parent": "RootSoil",
+         "data_name": "Soil_Back",
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "Soil_Front",
+         "type": "MESH",
+         "parent": "RootSoil",
+         "data_name": "Soil_Front",
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "Soil_Pebbles",
+         "type": "MESH",
+         "parent": "RootSoil",
+         "data_name": "Soil_Pebbles",
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        }
+       ],
+       "children": []
+      }
+     ]
+    },
+    {
+     "name": "INTERNAL",
+     "exclude": false,
+     "hide_viewport": false,
+     "objects": [],
+     "children": [
+      {
+       "name": "STEM_CROSS_SECTION",
+       "exclude": false,
+       "hide_viewport": false,
+       "objects": [
+        {
+         "name": "ANCHOR_Bark",
+         "type": "EMPTY",
+         "parent": "StemSection",
+         "data_name": null,
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "ANCHOR_Phloem",
+         "type": "EMPTY",
+         "parent": "StemSection",
+         "data_name": null,
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "ANCHOR_Pith",
+         "type": "EMPTY",
+         "parent": "StemSection",
+         "data_name": null,
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "ANCHOR_Section_Top",
+         "type": "EMPTY",
+         "parent": "StemSection",
+         "data_name": null,
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "Bark",
+         "type": "MESH",
+         "parent": "StemSection",
+         "data_name": "Bark",
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "Phloem",
+         "type": "MESH",
+         "parent": "StemSection",
+         "data_name": "Phloem",
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "Pith",
+         "type": "MESH",
+         "parent": "StemSection",
+         "data_name": "Pith",
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "StemSection",
+         "type": "EMPTY",
+         "parent": null,
+         "data_name": null,
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "Stem_Continuation",
+         "type": "MESH",
+         "parent": "StemSection",
+         "data_name": "Stem_Continuation",
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "Stem_Cover",
+         "type": "MESH",
+         "parent": "StemSection",
+         "data_name": "Stem_Cover",
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        }
+       ],
+       "children": []
+      },
+      {
+       "name": "XYLEM",
+       "exclude": false,
+       "hide_viewport": false,
+       "objects": [
+        {
+         "name": "ANCHOR_Xylem_New",
+         "type": "EMPTY",
+         "parent": "StemSection",
+         "data_name": null,
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "ANCHOR_Xylem_Old",
+         "type": "EMPTY",
+         "parent": "StemSection",
+         "data_name": null,
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "ANCHOR_Xylem_Old_Face",
+         "type": "EMPTY",
+         "parent": "StemSection",
+         "data_name": null,
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "Xylem_New",
+         "type": "MESH",
+         "parent": "StemSection",
+         "data_name": "Xylem_New",
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "Xylem_Old",
+         "type": "MESH",
+         "parent": "StemSection",
+         "data_name": "Xylem_Old",
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "Xylem_Vessels",
+         "type": "MESH",
+         "parent": "StemSection",
+         "data_name": "Xylem_Vessels",
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        }
+       ],
+       "children": []
+      }
+     ]
+    },
+    {
+     "name": "LIGHTS",
+     "exclude": false,
+     "hide_viewport": false,
+     "objects": [
+      {
+       "name": "Light_Key",
+       "type": "LIGHT",
+       "parent": null,
+       "data_name": "Light_Key",
+       "selected": false,
+       "visible": true,
+       "hide_viewport": false
+      },
+      {
+       "name": "Light_Rim",
+       "type": "LIGHT",
+       "parent": null,
+       "data_name": "Light_Rim",
+       "selected": false,
+       "visible": true,
+       "hide_viewport": false
+      }
+     ],
+     "children": []
+    },
+    {
+     "name": "PLANT",
+     "exclude": false,
+     "hide_viewport": false,
+     "objects": [
+      {
+       "name": "Plant",
+       "type": "EMPTY",
+       "parent": null,
+       "data_name": null,
+       "selected": false,
+       "visible": true,
+       "hide_viewport": false
+      }
+     ],
+     "children": [
+      {
+       "name": "BRANCHES",
+       "exclude": false,
+       "hide_viewport": false,
+       "objects": [
+        {
+         "name": "Branch_01",
+         "type": "MESH",
+         "parent": "Plant",
+         "data_name": "Branch_01",
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "Branch_02",
+         "type": "MESH",
+         "parent": "Plant",
+         "data_name": "Branch_02",
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "Branch_03",
+         "type": "MESH",
+         "parent": "Plant",
+         "data_name": "Branch_03",
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "Branch_04",
+         "type": "MESH",
+         "parent": "Plant",
+         "data_name": "Branch_04",
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "Branch_05",
+         "type": "MESH",
+         "parent": "Plant",
+         "data_name": "Branch_05",
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "Branch_06",
+         "type": "MESH",
+         "parent": "Plant",
+         "data_name": "Branch_06",
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "Branch_07",
+         "type": "MESH",
+         "parent": "Plant",
+         "data_name": "Branch_07",
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        }
+       ],
+       "children": []
+      },
+      {
+       "name": "LEAVES",
+       "exclude": false,
+       "hide_viewport": false,
+       "objects": [
+        {
+         "name": "ANCHOR_Canopy_Top",
+         "type": "EMPTY",
+         "parent": "Plant",
+         "data_name": null,
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "ANCHOR_Leaf_Hero",
+         "type": "EMPTY",
+         "parent": "Plant",
+         "data_name": null,
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "ANCHOR_Leaf_Hero_Normal",
+         "type": "EMPTY",
+         "parent": "Plant",
+         "data_name": null,
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "ANCHOR_Leaf_Hero_Tip",
+         "type": "EMPTY",
+         "parent": "Plant",
+         "data_name": null,
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "ANCHOR_Leaf_Old",
+         "type": "EMPTY",
+         "parent": "Plant",
+         "data_name": null,
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "ANCHOR_Leaf_Old_Base",
+         "type": "EMPTY",
+         "parent": "Plant",
+         "data_name": null,
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "ANCHOR_Leaf_Old_Landing",
+         "type": "EMPTY",
+         "parent": "Plant",
+         "data_name": null,
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "Leaf_01",
+         "type": "MESH",
+         "parent": "Plant",
+         "data_name": "Leaf_01",
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "Leaf_02",
+         "type": "MESH",
+         "parent": "Plant",
+         "data_name": "Leaf_02",
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "Leaf_03",
+         "type": "MESH",
+         "parent": "Plant",
+         "data_name": "Leaf_03",
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "Leaf_04",
+         "type": "MESH",
+         "parent": "Plant",
+         "data_name": "Leaf_04",
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "Leaf_05",
+         "type": "MESH",
+         "parent": "Plant",
+         "data_name": "Leaf_05",
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "Leaf_06",
+         "type": "MESH",
+         "parent": "Plant",
+         "data_name": "Leaf_06",
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "Leaf_07",
+         "type": "MESH",
+         "parent": "Plant",
+         "data_name": "Leaf_07",
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "Leaf_08",
+         "type": "MESH",
+         "parent": "Plant",
+         "data_name": "Leaf_08",
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "Leaf_09",
+         "type": "MESH",
+         "parent": "Plant",
+         "data_name": "Leaf_09",
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "Leaf_10",
+         "type": "MESH",
+         "parent": "Plant",
+         "data_name": "Leaf_10",
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "Leaf_11",
+         "type": "MESH",
+         "parent": "Plant",
+         "data_name": "Leaf_11",
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "Leaf_12",
+         "type": "MESH",
+         "parent": "Plant",
+         "data_name": "Leaf_12",
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "Leaf_13",
+         "type": "MESH",
+         "parent": "Plant",
+         "data_name": "Leaf_13",
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "Leaf_14",
+         "type": "MESH",
+         "parent": "Plant",
+         "data_name": "Leaf_14",
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "Leaf_15",
+         "type": "MESH",
+         "parent": "Plant",
+         "data_name": "Leaf_15",
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "Leaf_16",
+         "type": "MESH",
+         "parent": "Plant",
+         "data_name": "Leaf_16",
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "Leaf_17",
+         "type": "MESH",
+         "parent": "Plant",
+         "data_name": "Leaf_17",
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "Leaf_18",
+         "type": "MESH",
+         "parent": "Plant",
+         "data_name": "Leaf_18",
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "Leaf_19",
+         "type": "MESH",
+         "parent": "Plant",
+         "data_name": "Leaf_19",
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "Leaf_20",
+         "type": "MESH",
+         "parent": "Plant",
+         "data_name": "Leaf_20",
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "Leaf_21",
+         "type": "MESH",
+         "parent": "Plant",
+         "data_name": "Leaf_21",
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "Leaf_22",
+         "type": "MESH",
+         "parent": "Plant",
+         "data_name": "Leaf_22",
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "Leaf_23",
+         "type": "MESH",
+         "parent": "Plant",
+         "data_name": "Leaf_23",
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "Leaf_24",
+         "type": "MESH",
+         "parent": "Plant",
+         "data_name": "Leaf_24",
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "Leaf_25",
+         "type": "MESH",
+         "parent": "Plant",
+         "data_name": "Leaf_25",
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "Leaf_26",
+         "type": "MESH",
+         "parent": "Plant",
+         "data_name": "Leaf_26",
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "Leaf_27",
+         "type": "MESH",
+         "parent": "Plant",
+         "data_name": "Leaf_27",
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "Leaf_28",
+         "type": "MESH",
+         "parent": "Plant",
+         "data_name": "Leaf_28",
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "Leaf_29",
+         "type": "MESH",
+         "parent": "Plant",
+         "data_name": "Leaf_29",
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "Leaf_30",
+         "type": "MESH",
+         "parent": "Plant",
+         "data_name": "Leaf_30",
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "Leaf_31",
+         "type": "MESH",
+         "parent": "Plant",
+         "data_name": "Leaf_31",
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "Leaf_Hero",
+         "type": "MESH",
+         "parent": "Plant",
+         "data_name": "Leaf_Hero",
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "Leaf_Old",
+         "type": "MESH",
+         "parent": "Plant",
+         "data_name": "Leaf_Old",
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        }
+       ],
+       "children": []
+      },
+      {
+       "name": "ROOTS",
+       "exclude": false,
+       "hide_viewport": false,
+       "objects": [
+        {
+         "name": "ANCHOR_Root_Zone",
+         "type": "EMPTY",
+         "parent": "Plant",
+         "data_name": null,
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "Roots",
+         "type": "MESH",
+         "parent": "Plant",
+         "data_name": "Roots",
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        }
+       ],
+       "children": []
+      },
+      {
+       "name": "STEM",
+       "exclude": false,
+       "hide_viewport": false,
+       "objects": [
+        {
+         "name": "ANCHOR_Plant_Center",
+         "type": "EMPTY",
+         "parent": "Plant",
+         "data_name": null,
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "ANCHOR_Stem_Cut",
+         "type": "EMPTY",
+         "parent": "Plant",
+         "data_name": null,
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "Stem_Main",
+         "type": "MESH",
+         "parent": "Plant",
+         "data_name": "Stem_Main",
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        }
+       ],
+       "children": []
+      }
+     ]
+    },
+    {
+     "name": "QA",
+     "exclude": false,
+     "hide_viewport": false,
+     "objects": [
+      {
+       "name": "QA_Scale_Reference_10cm",
+       "type": "MESH",
+       "parent": null,
+       "data_name": "QA_Scale_Reference_10cm",
+       "selected": false,
+       "visible": true,
+       "hide_viewport": false
+      }
+     ],
+     "children": []
+    },
+    {
+     "name": "WASTE_VISUALS",
+     "exclude": false,
+     "hide_viewport": false,
+     "objects": [
+      {
+       "name": "WasteVisuals",
+       "type": "EMPTY",
+       "parent": null,
+       "data_name": null,
+       "selected": false,
+       "visible": true,
+       "hide_viewport": false
+      }
+     ],
+     "children": [
+      {
+       "name": "OXYGEN",
+       "exclude": false,
+       "hide_viewport": false,
+       "objects": [
+        {
+         "name": "O2_Molecule",
+         "type": "MESH",
+         "parent": "WasteVisuals",
+         "data_name": "O2_Molecule",
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        }
+       ],
+       "children": []
+      },
+      {
+       "name": "RESIN_GUM",
+       "exclude": false,
+       "hide_viewport": false,
+       "objects": [
+        {
+         "name": "ANCHOR_Waste_Entry",
+         "type": "EMPTY",
+         "parent": "StemSection",
+         "data_name": null,
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "Resin_01",
+         "type": "MESH",
+         "parent": "StemSection",
+         "data_name": "Resin_01",
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "Resin_02",
+         "type": "MESH",
+         "parent": "StemSection",
+         "data_name": "Resin_02",
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "Resin_03",
+         "type": "MESH",
+         "parent": "StemSection",
+         "data_name": "Resin_03",
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "Resin_04",
+         "type": "MESH",
+         "parent": "StemSection",
+         "data_name": "Resin_04",
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "Resin_05",
+         "type": "MESH",
+         "parent": "StemSection",
+         "data_name": "Resin_05",
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "Resin_06",
+         "type": "MESH",
+         "parent": "StemSection",
+         "data_name": "Resin_06",
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "Resin_07",
+         "type": "MESH",
+         "parent": "StemSection",
+         "data_name": "Resin_07",
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "Resin_08",
+         "type": "MESH",
+         "parent": "StemSection",
+         "data_name": "Resin_08",
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "Resin_09",
+         "type": "MESH",
+         "parent": "StemSection",
+         "data_name": "Resin_09",
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "Resin_10",
+         "type": "MESH",
+         "parent": "StemSection",
+         "data_name": "Resin_10",
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "Resin_11",
+         "type": "MESH",
+         "parent": "StemSection",
+         "data_name": "Resin_11",
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "Resin_12",
+         "type": "MESH",
+         "parent": "StemSection",
+         "data_name": "Resin_12",
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "Resin_13",
+         "type": "MESH",
+         "parent": "StemSection",
+         "data_name": "Resin_13",
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "Resin_14",
+         "type": "MESH",
+         "parent": "StemSection",
+         "data_name": "Resin_14",
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "Resin_15",
+         "type": "MESH",
+         "parent": "StemSection",
+         "data_name": "Resin_15",
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "Resin_16",
+         "type": "MESH",
+         "parent": "StemSection",
+         "data_name": "Resin_16",
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "Resin_Drop",
+         "type": "MESH",
+         "parent": "WasteVisuals",
+         "data_name": "Resin_Drop",
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        }
+       ],
+       "children": []
+      },
+      {
+       "name": "SOIL_EXCRETION",
+       "exclude": false,
+       "hide_viewport": false,
+       "objects": [
+        {
+         "name": "Soil_Waste_Particle",
+         "type": "MESH",
+         "parent": "WasteVisuals",
+         "data_name": "Soil_Waste_Particle",
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        }
+       ],
+       "children": []
+      },
+      {
+       "name": "STORED_WASTE",
+       "exclude": false,
+       "hide_viewport": false,
+       "objects": [
+        {
+         "name": "PATH_OldLeaf_00",
+         "type": "EMPTY",
+         "parent": "Plant",
+         "data_name": null,
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "PATH_OldLeaf_01",
+         "type": "EMPTY",
+         "parent": "Plant",
+         "data_name": null,
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "PATH_OldLeaf_02",
+         "type": "EMPTY",
+         "parent": "Plant",
+         "data_name": null,
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "PATH_OldLeaf_03",
+         "type": "EMPTY",
+         "parent": "Plant",
+         "data_name": null,
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "PATH_OldLeaf_04",
+         "type": "EMPTY",
+         "parent": "Plant",
+         "data_name": null,
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "PATH_OldLeaf_05",
+         "type": "EMPTY",
+         "parent": "Plant",
+         "data_name": null,
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "PATH_OldLeaf_06",
+         "type": "EMPTY",
+         "parent": "Plant",
+         "data_name": null,
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "PATH_OldLeaf_07",
+         "type": "EMPTY",
+         "parent": "Plant",
+         "data_name": null,
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "PATH_OldLeaf_08",
+         "type": "EMPTY",
+         "parent": "Plant",
+         "data_name": null,
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "PATH_OldLeaf_09",
+         "type": "EMPTY",
+         "parent": "Plant",
+         "data_name": null,
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "PATH_OldLeaf_10",
+         "type": "EMPTY",
+         "parent": "Plant",
+         "data_name": null,
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "PATH_OldLeaf_11",
+         "type": "EMPTY",
+         "parent": "Plant",
+         "data_name": null,
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "Waste_Crystal",
+         "type": "MESH",
+         "parent": "WasteVisuals",
+         "data_name": "Waste_Crystal",
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        }
+       ],
+       "children": []
+      },
+      {
+       "name": "WATER",
+       "exclude": false,
+       "hide_viewport": false,
+       "objects": [
+        {
+         "name": "PATH_Water_00",
+         "type": "EMPTY",
+         "parent": "Plant",
+         "data_name": null,
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "PATH_Water_01",
+         "type": "EMPTY",
+         "parent": "Plant",
+         "data_name": null,
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "PATH_Water_02",
+         "type": "EMPTY",
+         "parent": "Plant",
+         "data_name": null,
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "PATH_Water_03",
+         "type": "EMPTY",
+         "parent": "Plant",
+         "data_name": null,
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "PATH_Water_04",
+         "type": "EMPTY",
+         "parent": "Plant",
+         "data_name": null,
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "PATH_Water_05",
+         "type": "EMPTY",
+         "parent": "Plant",
+         "data_name": null,
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "PATH_Water_06",
+         "type": "EMPTY",
+         "parent": "Plant",
+         "data_name": null,
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "PATH_Water_07",
+         "type": "EMPTY",
+         "parent": "Plant",
+         "data_name": null,
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "PATH_Water_08",
+         "type": "EMPTY",
+         "parent": "Plant",
+         "data_name": null,
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "PATH_Water_09",
+         "type": "EMPTY",
+         "parent": "Plant",
+         "data_name": null,
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "PATH_Water_10",
+         "type": "EMPTY",
+         "parent": "Plant",
+         "data_name": null,
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "PATH_Water_11",
+         "type": "EMPTY",
+         "parent": "Plant",
+         "data_name": null,
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "PATH_Water_12",
+         "type": "EMPTY",
+         "parent": "Plant",
+         "data_name": null,
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "PATH_Water_13",
+         "type": "EMPTY",
+         "parent": "Plant",
+         "data_name": null,
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "PATH_Water_14",
+         "type": "EMPTY",
+         "parent": "Plant",
+         "data_name": null,
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "PATH_Water_15",
+         "type": "EMPTY",
+         "parent": "Plant",
+         "data_name": null,
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "PATH_Water_16",
+         "type": "EMPTY",
+         "parent": "Plant",
+         "data_name": null,
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "PATH_Water_17",
+         "type": "EMPTY",
+         "parent": "Plant",
+         "data_name": null,
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "PATH_Water_18",
+         "type": "EMPTY",
+         "parent": "Plant",
+         "data_name": null,
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "PATH_Water_19",
+         "type": "EMPTY",
+         "parent": "Plant",
+         "data_name": null,
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "PATH_Water_20",
+         "type": "EMPTY",
+         "parent": "Plant",
+         "data_name": null,
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "PATH_Water_21",
+         "type": "EMPTY",
+         "parent": "Plant",
+         "data_name": null,
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "PATH_Water_22",
+         "type": "EMPTY",
+         "parent": "Plant",
+         "data_name": null,
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "PATH_Water_23",
+         "type": "EMPTY",
+         "parent": "Plant",
+         "data_name": null,
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "PATH_Water_24",
+         "type": "EMPTY",
+         "parent": "Plant",
+         "data_name": null,
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "PATH_Water_25",
+         "type": "EMPTY",
+         "parent": "Plant",
+         "data_name": null,
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "Vapour_Puff",
+         "type": "MESH",
+         "parent": "WasteVisuals",
+         "data_name": "Vapour_Puff",
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        },
+        {
+         "name": "Water_Droplet",
+         "type": "MESH",
+         "parent": "WasteVisuals",
+         "data_name": "Water_Droplet",
+         "selected": false,
+         "visible": true,
+         "hide_viewport": false
+        }
+       ],
+       "children": []
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
